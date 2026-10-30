@@ -28,6 +28,7 @@ python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in T
 python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the day as one entry
 python add_leg.py                                 # add several, one per line
 python add_leg.py --file pairs.txt --build        # a whole list; summary at the end, then rebuild
+python add_leg.py --file pairs.txt --new          # only lines not in legs.yaml yet (quick)
 python check_timetables.py  # needs internet; compares legs.yaml with live timetables
 ```
 

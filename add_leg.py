@@ -10,6 +10,7 @@ Write a leg as   A -> B : train
                                                             # your own times, not looked up
     python3 add_leg.py                                      # type legs one per line, empty line to stop
     python3 add_leg.py --file pairs.txt                     # a whole list, no questions, summary at the end
+    python3 add_leg.py --file pairs.txt --new               # only the lines not in legs.yaml yet
 
 The tool finds the train in Transitous on the travel date (default next Tuesday),
 shows what it found and asks before writing. Places it does not know are looked up
@@ -142,16 +143,28 @@ def resolve(name: str, auto: bool) -> tuple[str, dict]:
 BLOCK_RE = re.compile(r"(?ms)^  - \{.*?\}[ \t]*(?:#[^\n]*)?$")
 
 
-def existing(frm: str, to: str, service: str):
+def _norm(x) -> str:
+    return re.sub(r"\s+", "", str(x or "")).casefold()
+
+
+def existing(frm: str, to: str, service: str, query: str | None = None):
+    """The legs.yaml entry this leg would replace: same places and the same request
+    (`query`, e.g. '*' or 'FR*') or the same service name. Matching on the request
+    means you can rename a '*' entry by hand and a rerun still finds it."""
     text = LEGS.read_text()
-    norm = re.sub(r"\s+", "", service).casefold()
     for m in BLOCK_RE.finditer(text):
         try:
             d = yaml.safe_load(m.group(0).strip()[2:])
         except yaml.YAMLError:
             continue
-        if isinstance(d, dict) and d.get("from") == frm and d.get("to") == to \
-                and re.sub(r"\s+", "", str(d.get("service", ""))).casefold() == norm:
+        if not isinstance(d, dict) or d.get("from") != frm or d.get("to") != to:
+            continue
+        if query and _norm(d.get("query")) == _norm(query):
+            return m
+        if _norm(d.get("service")) == _norm(service):
+            return m
+        # '*' entries written before 'query' was stored
+        if query and "*" in query and "times" in d and d.get("source") == "transitous" and not d.get("query"):
             return m
     return None
 
@@ -170,6 +183,8 @@ def entry_text(e: dict) -> str:
         parts += [f'dep: "{e["dep"]}"', f'arr: "{e["arr"]}"', f"service: {q(e['service'])}", f"mode: {e['mode']}"]
         if e.get("night"):
             parts.append("night: true")
+    if e.get("query"):
+        parts.append(f"query: {q(e['query'])}")
     parts.append(f"checked: {e['checked']}")
     parts.append(f"source: {e['source']}")
     return "  - {" + ", ".join(parts) + "}"
@@ -310,7 +325,7 @@ def handle(line: str, args) -> bool:
         e = {"from": frm, "to": to, "service": name, "mode": mode_of([x[3] for x in deps]),
              "night": all(is_night(d, a) for d, a, _, _ in deps),
              "times": [f"{clock(d)}-{clock(a)}" for d, a, _, _ in deps],
-             "checked": today, "source": "transitous"}
+             "query": svc, "checked": today, "source": "transitous"}
         print(f"  {len(deps)} departures, {e['times'][0]} ... {e['times'][-1]}")
         return save(e, args)
 
@@ -341,7 +356,10 @@ def handle(line: str, args) -> bool:
 
 
 def save(e: dict, args) -> bool:
-    old = existing(e["from"], e["to"], e["service"])
+    old = existing(e["from"], e["to"], e["service"], e.get("query"))
+    if old is not None and e.get("query"):
+        prev = yaml.safe_load(old.group(0).strip()[2:])
+        e["service"] = str(prev.get("service") or e["service"])     # keep a name you gave it
     print("  " + entry_text(e).strip().replace("\n", "\n  "))
     what = (f"{len(e['times'])} departures {e['times'][0]} … {e['times'][-1]}" if "times" in e
             else f"{e['dep']}-{e['arr']}") + f"  {e['service']}" + (" (your own times)" if e["source"] == "manual" else "")
@@ -365,6 +383,8 @@ def main():
     ap.add_argument("--file", metavar="PAIRS.TXT",
                     help="read legs from a file, one per line ('#' starts a comment); implies --yes "
                          "and prints a summary at the end")
+    ap.add_argument("--new", action="store_true",
+                    help="with --file: only look up lines that are not in legs.yaml yet")
     ap.add_argument("--yes", action="store_true", help="don't ask, accept the first answer")
     ap.add_argument("--build", action="store_true", help="run build.py afterwards")
     ap.add_argument("--pause", type=float, default=1.0, help="seconds between Transitous requests")
@@ -412,12 +432,31 @@ def main():
         print("Run  python3 build.py  to rebuild the graph and map.")
 
 
+def already_there(line: str) -> bool:
+    """Is this line's leg in legs.yaml already? (Only places already known count.)"""
+    m = LINE_RE.match(line)
+    if not m:
+        return False
+    places, _ = load_places()
+    frm, to = find_place(m["a"], places), find_place(m["b"], places)
+    if not frm or not to:
+        return False
+    svc = " ".join(w for w in m["svc"].split() if w.lower() not in FLAGS)
+    svc = re.sub(r"@\s*\d{1,2}:\d{2}", "", svc)
+    svc = re.sub(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}\s*$", "", svc).strip()
+    return existing(frm, to, svc, svc if "*" in svc else None) is not None
+
+
 def run_file(lines: list[str], args) -> None:
     print(f"{len(lines)} legs from {args.file}, travel date {args.date:%a %-d.%-m.%Y}\n")
     results = []
     for n, ln in enumerate(lines, 1):
         print(f"[{n}/{len(lines)}] {ln}")
         LOG["status"] = None
+        if args.new and already_there(ln):
+            print("  already in legs.yaml - skipped (--new)\n")
+            results.append((ln, None, "already there"))
+            continue
         try:
             ok = handle(ln, args)
             results.append((ln, ok, LOG["status"] or ("added" if ok else "not added")))
@@ -429,10 +468,12 @@ def run_file(lines: list[str], args) -> None:
         print()
 
     good = [r for r in results if r[1]]
-    bad = [r for r in results if not r[1]]
+    bad = [r for r in results if r[1] is False]
+    kept = [r for r in results if r[1] is None]
     width = max(len(r[0]) for r in results)
     print("=" * 72)
-    print(f"Summary: {len(good)} added or updated, {len(bad)} not added, {len(LOG['places'])} new places")
+    print(f"Summary: {len(good)} added or updated, {len(bad)} not added, "
+          f"{len(kept)} already there, {len(LOG['places'])} new places")
     if good:
         print("\nAdded or updated:")
         for ln, _, st in good:
