@@ -21,37 +21,35 @@ defaults:
 
 legs:
   # --- Finland -> Sweden ---------------------------------------------------
-  - {from: Tampere,   to: Turku,     dep: "18:10", arr: "20:05", service: IC928,  mode: train}
-  - {from: Helsinki,  to: Turku,     dep: "17:36", arr: "19:50", service: IC959,  mode: train}
+  - {from: Tampere,   to: Turku,     dep: "18:10", arr: "20:05", service: IC928,  mode: train, checked: 2026-10-30}
+  - {from: Helsinki,  to: Turku,     dep: "17:35", arr: "19:49", service: IC 963,  mode: train, checked: 2026-10-30}
   - {from: Turku,     to: Stockholm, dep: "20:55", arr: "06:30", service: Viking Line, mode: ferry, night: true}
 
   # --- From Stockholm -------------------------------------------------------
-  - {from: Stockholm, to: Hamburg,   dep: "17:34", arr: "06:01", service: EN345, mode: train, night: true, highlight: sto-ham-night}
+  - {from: Stockholm, to: Hamburg,   dep: "17:29", arr: "05:53", service: EN 345, mode: train, night: true, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Stockholm, to: Berlin,    dep: "16:23", arr: "08:47", service: Snälltåget 301, mode: train, night: true,
      valid_from: 2023-03-30, valid_to: 2023-11-04, note: "Seasonal"}
-  - {from: Stockholm, to: Oslo,      dep: "10:51", arr: "16:14", service: "629",  mode: train}
-  - {from: Oslo,      to: Bergen,    dep: "16:25", arr: "23:18", service: R67,    mode: train}
+  - {from: Stockholm, to: Oslo,      dep: "10:29", arr: "16:08", service: "629",  mode: train, checked: 2026-10-30}
+  - {from: Oslo,      to: Bergen,    dep: "16:23", arr: "23:18", service: F4,    mode: train, checked: 2026-10-30}
   - {from: Oslo,      to: Trondheim, dep: "18:02", arr: "00:53", service: R51,    mode: train}
-  - {from: Stockholm, to: Copenhagen, dep: "08:21", arr: "13:35", service: SJ 525, mode: train}
-  - {from: Copenhagen, to: Hamburg,  dep: "15:04", arr: "20:02", service: IC397,  mode: train}
-  - {from: Hamburg,   to: Berlin,    dep: "20:34", arr: "22:23", service: ICE 609, mode: train}
-  - {from: Hamburg,   to: Berlin,    dep: "21:51", arr: "23:53", service: ICE 805, mode: train}
+  - {from: Stockholm, to: Copenhagen, dep: "08:23", arr: "13:44", service: SJ 525 + 1073, mode: train, checked: 2026-10-30}
+  - {from: Copenhagen, to: Hamburg,  dep: "14:22", arr: "19:01", service: ECE 397,  mode: train, checked: 2026-10-30}
+  - {from: Hamburg,   to: Berlin,    dep: "20:34", arr: "22:22", service: ICE 609, mode: train, checked: 2026-10-30}
+  - {from: Hamburg,   to: Berlin,    dep: "21:51", arr: "23:51", service: ICE 809, mode: train, checked: 2026-10-30}
 
   # --- Morning after the Stockholm-Hamburg night train (orange) -------------
   - {from: Hamburg,   to: Frankfurt, dep: "08:28", arr: "13:09", service: ICE1577, mode: train, highlight: sto-ham-night}
-  - {from: Frankfurt, to: Strasbourg, dep: "13:56", arr: "16:02", service: TGV9580, mode: train, highlight: sto-ham-night}
-  - {from: Strasbourg, to: Paris,    dep: "17:19", arr: "19:05", service: TGV9580, mode: train, highlight: sto-ham-night,
-     issue: "Same train number as Frankfurt-Strasbourg but departs 17:19 after arriving 16:02 - check"}
-  - {from: Strasbourg, to: Marseille, dep: "16:15", arr: "21:48", service: TGV9580, mode: train, highlight: sto-ham-night,
-     issue: "Train number TGV9580 repeated - check"}
+  - {from: Frankfurt, to: Strasbourg, dep: "14:02", arr: "16:05", service: ICE 9580, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
+  - {from: Strasbourg, to: Paris,    dep: "17:19", arr: "19:05", service: TGV INOUI 2362, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
+  - {from: Strasbourg, to: Marseille, dep: "16:15", arr: "21:49", service: ICE 9580, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Frankfurt, to: Luxembourg, dep: "13:42", arr: "17:48", service: ICE 228 + RE1, mode: train, highlight: sto-ham-night}
   - {from: Hamburg,   to: Munich,    dep: "07:01", arr: "13:01", service: ICE583, mode: train, highlight: sto-ham-night}
-  - {from: Munich,    to: Bologna,   dep: "13:34", arr: "20:16", service: EC87,   mode: train, highlight: sto-ham-night}
-  - {from: Hamburg,   to: Amsterdam, dep: "07:45", arr: "13:00", service: ICE 517 + IC 240, mode: train, highlight: sto-ham-night}
-  - {from: Amsterdam, to: London,    dep: "16:47", arr: "20:00", service: EST 9157, mode: train, highlight: sto-ham-night}
+  - {from: Munich,    to: Bologna,   dep: "13:22", arr: "20:16", service: EC 87,   mode: train, highlight: sto-ham-night, checked: 2026-10-30}
+  - {from: Hamburg,   to: Amsterdam, dep: "07:45", arr: "13:29", service: ICE 517 + RE1 + ICE 128, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
+  - {from: Amsterdam, to: London,    dep: "16:40", arr: "19:57", service: EST 9157, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Amsterdam, to: Brussels,  dep: "13:28", arr: "16:12", service: ICD 9240, mode: train, highlight: sto-ham-night}
-  - {from: Brussels,  to: London,    dep: "18:51", arr: "20:00", service: EST9157, mode: train, highlight: sto-ham-night}
-  - {from: Amsterdam, to: Paris,     dep: "15:11", arr: "18:35", service: THA9364, mode: train, highlight: sto-ham-night}
+  - {from: Brussels,  to: London,    dep: "18:52", arr: "19:57", service: EST 9157, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
+  - {from: Amsterdam, to: Paris,     dep: "15:10", arr: "18:48", service: EST 9364, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Amsterdam, to: The Hague, dep: "13:43", arr: "14:53", service: THA9364, mode: train, highlight: sto-ham-night,
      issue: "Same service id as Amsterdam-Paris 15:11 - probably a copy-paste"}
 
@@ -59,52 +57,52 @@ legs:
   - {from: Berlin,    to: Prague,    dep: "09:01", arr: "13:35", service: EC253,  mode: train}
   - {from: Prague,    to: Budapest,  dep: "15:24", arr: "22:28", service: EC281,  mode: train}
   - {from: Berlin,    to: Warsaw,    dep: "09:51", arr: "15:54", service: EC45,   mode: train}
-  - {from: Berlin,    to: Krakow,    dep: "10:52", arr: "18:02", service: EC57,   mode: train}
+  - {from: Berlin,    to: Krakow,    dep: "12:44", arr: "19:59", service: EC 57,   mode: train, checked: 2026-10-30}
 
   # --- Night train Hamburg -> Munich ---------------------------------------
-  - {from: Hamburg,   to: Munich,    dep: "20:24", arr: "07:06", service: NJ40491, mode: train, night: true}
-  - {from: Munich,    to: Innsbruck, dep: "07:34", arr: "09:24", service: EC81,   mode: train}
+  - {from: Hamburg,   to: Munich,    dep: "20:10", arr: "06:13", service: NJ 40491, mode: train, night: true, checked: 2026-10-30}
+  - {from: Munich,    to: Innsbruck, dep: "07:23", arr: "09:18", service: EC 81,   mode: train, checked: 2026-10-30}
   - {from: Innsbruck, to: Bologna,   dep: "09:24", arr: "14:10", service: EC81,   mode: train}
-  - {from: Bologna,   to: Venice,    dep: "15:01", arr: "16:34", service: FR9420, mode: train}
-  - {from: Bologna,   to: Rome,      dep: "14:27", arr: "16:49", service: FR9539, mode: train}
-  - {from: Bologna,   to: Florence,  dep: "15:02", arr: "15:39", service: FR 9421, mode: train}
-  - {from: Munich,    to: Vienna,    dep: "07:23", arr: "11:32", service: RJX61,  mode: train}
-  - {from: Vienna,    to: Budapest,  dep: "12:42", arr: "15:19", service: EC145,  mode: train}
-  - {from: Vienna,    to: Bratislava, dep: "12:45", arr: "13:44", service: REX6,  mode: train}
+  - {from: Bologna,   to: Venice,    dep: "15:01", arr: "16:34", service: FR9420, mode: train, checked: 2026-10-30}
+  - {from: Bologna,   to: Rome,      dep: "14:27", arr: "16:49", service: FR9539, mode: train, checked: 2026-10-30}
+  - {from: Bologna,   to: Florence,  dep: "15:02", arr: "15:39", service: FR 9421, mode: train, checked: 2026-10-30}
+  - {from: Munich,    to: Vienna,    dep: "07:09", arr: "11:32", service: RJX 61,  mode: train, checked: 2026-10-30}
+  - {from: Vienna,    to: Budapest,  dep: "12:40", arr: "15:35", service: EC 145,  mode: train, checked: 2026-10-30}
+  - {from: Vienna,    to: Bratislava, dep: "12:45", arr: "13:44", service: REX 7733,  mode: train, checked: 2026-10-30}
   - {from: Rome,      to: Vatican,   duration: "0:20", service: Metro line A, mode: local}
 
   # --- Night train Hamburg -> Basel ----------------------------------------
-  - {from: Hamburg,   to: Basel,     dep: "22:07", arr: "08:10", service: NJ471,  mode: train, night: true}
-  - {from: Basel,     to: Milan,     dep: "08:33", arr: "12:50", service: ICE563 + EC315, mode: train}
-  - {from: Milan,     to: Venice,    dep: "13:45", arr: "16:12", service: FR9731, mode: train}
-  - {from: Milan,     to: Rome,      dep: "13:00", arr: "16:15", service: FR 9631, mode: train}
-  - {from: Rome,      to: Naples,    dep: "16:25", arr: "17:33", service: FR 9631, mode: train}
-  - {from: Milan,     to: Florence,  dep: "13:10", arr: "15:04", service: FR 9539, mode: train}
-  - {from: Milan,     to: Ancona,    dep: "14:05", arr: "17:34", service: FR8813, mode: train}
-  - {from: Milan,     to: Bari,      dep: "14:05", arr: "21:30", service: FR 8813, mode: train}
-  - {from: Basel,     to: Bern,      dep: "08:28", arr: "09:26", service: ICE1063, mode: train}
-  - {from: Basel,     to: Paris,     dep: "10:34", arr: "13:40", service: TGV9210, mode: train}
-  - {from: Paris,     to: Barcelona, dep: "14:54", arr: "21:25", service: TGV 9210 + TGV 9715, mode: train}
-  - {from: Paris,     to: London,    dep: "15:13", arr: "16:30", service: ES9039, mode: train}
+  - {from: Hamburg,   to: Basel,     dep: "22:11", arr: "08:21", service: NJ 471,  mode: train, night: true, checked: 2026-10-30}
+  - {from: Basel,     to: Milan,     dep: "08:33", arr: "12:53", service: ICE563 + EC315, mode: train, checked: 2026-10-30}
+  - {from: Milan,     to: Venice,    dep: "13:45", arr: "16:14", service: FR9731, mode: train, checked: 2026-10-30}
+  - {from: Milan,     to: Rome,      dep: "13:00", arr: "16:15", service: FR 9631, mode: train, checked: 2026-10-30}
+  - {from: Rome,      to: Naples,    dep: "16:25", arr: "17:33", service: FR 9631, mode: train, checked: 2026-10-30}
+  - {from: Milan,     to: Florence,  dep: "13:10", arr: "15:04", service: FR 9539, mode: train, checked: 2026-10-30}
+  - {from: Milan,     to: Ancona,    dep: "14:35", arr: "17:34", service: FR 8813, mode: train, checked: 2026-10-30}
+  - {from: Milan,     to: Bari,      dep: "14:35", arr: "21:30", service: FR 8813, mode: train, checked: 2026-10-30}
+  - {from: Basel,     to: Bern,      dep: "08:30", arr: "09:26", service: ICE 271, mode: train, checked: 2026-10-30}
+  - {from: Basel,     to: Paris,     dep: "10:34", arr: "13:38", service: TGV9210, mode: train, checked: 2026-10-30}
+  - {from: Paris,     to: Barcelona, dep: "14:42", arr: "21:32", service: TGV INOUI 9715, mode: train, checked: 2026-10-30}
+  - {from: Paris,     to: London,    dep: "15:06", arr: "16:30", service: EST 9039, mode: train, checked: 2026-10-30}
   - {from: Paris,     to: Marseille, dep: "13:54", arr: "17:14", service: TGV6077, mode: train}
-  - {from: Marseille, to: Nice,      dep: "17:28", arr: "19:58", service: TGV6077, mode: train}
-  - {from: Paris,     to: Bordeaux,  dep: "12:08", arr: "14:15", service: TGV12259, mode: train}
+  - {from: Marseille, to: Nice,      dep: "17:28", arr: "20:04", service: TGV INOUI 6177, mode: train, checked: 2026-10-30}
+  - {from: Paris,     to: Bordeaux,  dep: "12:11", arr: "14:14", service: OUIGO 7681, mode: train, checked: 2026-10-30}
   - {from: Paris,     to: Toulouse,  dep: "15:08", arr: "19:26", service: TGV8509, mode: train}
   - {from: London,    to: Edinburgh, dep: "18:00", arr: "22:20", service: R, mode: train}
-  - {from: London,    to: Glasgow,   dep: "18:30", arr: "23:11", service: R, mode: train}
-  - {from: London,    to: Holyhead,  dep: "19:02", arr: "22:57", service: R, mode: train}
+  - {from: London,    to: Glasgow,   dep: "18:30", arr: "23:13", service: Avanti VT6300, mode: train, checked: 2026-10-30}
+  - {from: London,    to: Holyhead,  dep: "19:02", arr: "23:02", service: Avanti VT4390, mode: train, checked: 2026-10-30}
 
   # --- Italy and Malta ------------------------------------------------------
   - {from: Rome,      to: Palermo,   dep: "23:00", arr: "11:27", service: ICN1959, mode: train, night: true}
   - {from: Rome,      to: Syracuse,  dep: "23:00", arr: "11:29", service: ICN1959, mode: train, night: true}
-  - {from: Syracuse,  to: Pozzallo,  dep: "14:10", arr: "15:26", service: R12936, mode: train}
+  - {from: Syracuse,  to: Pozzallo,  dep: "14:45", arr: "15:58", service: R 12936, mode: train, checked: 2026-10-30}
   - {from: Pozzallo,  to: Valletta,  dep: "19:30", arr: "21:15", service: Virtu Ferries, mode: ferry}
 
   # --- Iberia ---------------------------------------------------------------
   - {from: Barcelona, to: Madrid,    dep: "06:20", arr: "08:50", service: AVE 3260, mode: train}
   - {from: Madrid,    to: Sevilla,   dep: "09:05", arr: "11:28", service: AVE2090, mode: train}
-  - {from: Sevilla,   to: Granada,   dep: "12:08", arr: "14:46", service: A8335, mode: train}
-  - {from: Madrid,    to: Malaga,    dep: "09:35", arr: "12:26", service: AVE2092, mode: train}
+  - {from: Sevilla,   to: Granada,   dep: "12:17", arr: "14:55", service: AVANT 8335, mode: train, checked: 2026-10-30}
+  - {from: Madrid,    to: Malaga,    dep: "09:35", arr: "12:33", service: AVE 2092, mode: train, checked: 2026-10-30}
   - {from: Madrid,    to: Badajoz,   dep: "10:55", arr: "16:11", service: MD, mode: train}
   - {from: Badajoz,   to: Abrantes,  dep: "19:41", arr: "20:52", service: R, mode: train}
   - {from: Abrantes,  to: Lisbon,    dep: "21:02", arr: "22:20", service: IC, mode: train}
@@ -116,7 +114,7 @@ legs:
   - {from: Dublin,    to: Galway,    dep: "15:35", arr: "17:39", service: IC708, mode: train}
 
   # --- Balkans, Greece, Turkey ---------------------------------------------
-  - {from: Budapest,  to: Bucharest, dep: "19:10", arr: "11:19", service: IC473, mode: train, night: true}
+  - {from: Budapest,  to: Bucharest, dep: "19:05", arr: "10:37", service: IC 473, mode: train, night: true, checked: 2026-10-30}
   - {from: Bucharest, to: Sofia,     dep: "10:55", arr: "20:10", service: "?", mode: train,
      issue: "Service marked 'Not sure' in the original"}
   - {from: Sofia,     to: Istanbul,  dep: "18:40", arr: "06:34", service: 493 / 12504, mode: train, night: true}
@@ -126,7 +124,7 @@ legs:
      issue: "Departs 11:55 but the Bari ferry arrives 13:30 - no same-day connection"}
   - {from: Ancona,    to: Split,     dep: "19:45", arr: "06:45", service: Croatia Ferry 53, mode: ferry, night: true,
      note: "Not all days every month"}
-  - {from: Split,     to: Zagreb,    dep: "08:20", arr: "14:55", service: IC520, mode: train}
+  - {from: Split,     to: Zagreb,    dep: "07:54", arr: "16:04", service: IC 520, mode: train, checked: 2026-10-30}
   - {from: Zagreb,    to: Ljubljana, dep: "18:10", arr: "20:59", service: EN40414 + R2276, mode: train}
   - {from: Bucharest, to: Chisinau,  dep: "19:20", arr: "08:10", service: "402", mode: train, night: true}
-  - {from: Sofia,     to: Varna,     dep: "20:15", arr: "05:41", service: R8657, mode: train, night: true}
+  - {from: Sofia,     to: Varna,     dep: "20:50", arr: "05:50", service: "8657", mode: train, night: true, checked: 2026-10-30}
