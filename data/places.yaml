@@ -83,10 +83,11 @@ places:
   Split:      {lat: 43.504, lon: 16.442, country: HR}
   Zagreb:     {lat: 45.805, lon: 15.979, capital: true, country: HR}
   Ljubljana:  {lat: 46.058, lon: 14.511, capital: true, country: SI}
+  Malmö: {lat: 55.609, lon: 13.001, country: "SE"}  # added by add_leg.py
+  Tallinn: {lat: 59.441, lon: 24.737, capital: true, country: "EE"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
-  Tallinn: {lat: 59.437, lon: 24.745, country: EE}
   Riga:    {lat: 56.947, lon: 24.106, country: LV}
   Vilnius: {lat: 54.670, lon: 25.284, country: LT}
   Reykjavik: {lat: 64.146, lon: -21.942, country: IS}

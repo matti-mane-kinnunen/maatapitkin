@@ -1,5 +1,5 @@
 digraph MaataPitkin {
-  "Helsinki" , "Stockholm" , "Oslo" , "Copenhagen" , "Berlin" , "Paris" , "Luxembourg" , "Amsterdam" , "Brussels" , "London" , "Belfast" , "Dublin" , "Prague" , "Warsaw" , "Vienna" , "Bratislava" , "Budapest" , "Bern" , "Rome" , "Vatican" , "Valletta" , "Madrid" , "Lisbon" , "Bucharest" , "Chisinau" , "Sofia" , "Ankara" , "Athens" , "Zagreb" , "Ljubljana" [shape="box" style="filled" color="grey" fontsize="20"];
+  "Helsinki" , "Stockholm" , "Oslo" , "Copenhagen" , "Berlin" , "Paris" , "Luxembourg" , "Amsterdam" , "Brussels" , "London" , "Belfast" , "Dublin" , "Prague" , "Warsaw" , "Vienna" , "Bratislava" , "Budapest" , "Bern" , "Rome" , "Vatican" , "Valletta" , "Madrid" , "Lisbon" , "Bucharest" , "Chisinau" , "Sofia" , "Ankara" , "Athens" , "Zagreb" , "Ljubljana" , "Tallinn" [shape="box" style="filled" color="grey" fontsize="20"];
   graph [
     label = "From Finland to European capitals by train and ferry\nFor somewhat direct travel; generated from data/legs.yaml\nMatti Kinnunen - travel date Mon 2.11.2026 · generated 30.10.2026" fontsize="50";
     rankdir=LR;
@@ -18,6 +18,9 @@ IC 963
     "Turku" -> "Stockholm" [label="20:55
 Viking Line
 06:30" color="turquoise3" style="dashed" penwidth="3"];
+    "Helsinki" -> "Tallinn" [label="07:30
+Megastar
+09:30" style="dashed" penwidth="3"];
   }
 
   subgraph cluster_day2 {
@@ -58,6 +61,13 @@ NJ 40491
     "Hamburg" -> "Basel" [label="22:11
 NJ 471
 08:21" color="turquoise3" penwidth="3"];
+    "Stockholm" -> "Malmö" [label="07:22
+X2 523
+11:53" penwidth="3"];
+    "Malmö" -> "Copenhagen" [label="6802
+81 departures
+01:35–23:43
+0:39 h" penwidth="3"];
   }
 
   subgraph cluster_day3 {
@@ -81,14 +91,17 @@ ICE 228 + RE1
 17:48" color="darkorange1" penwidth="3"];
     "Hamburg" -> "Munich" [label="07:01
 ICE583
-13:01" color="darkorange1" penwidth="3"];
+13:01" color="darkorange1"];
     "Munich" -> "Bologna" [label="13:22
 EC 87
-20:16" color="darkorange1" penwidth="3"];
+20:16" color="darkorange1"];
     "Hamburg" -> "Amsterdam" [label="07:45
 ICE 517 + RE1 + ICE 128
 13:29" color="darkorange1" penwidth="3"];
     "Amsterdam" -> "London" [label="16:40
+EST 9157
+19:57" color="darkorange1"];
+    "Brussels" -> "London" [label="18:52
 EST 9157
 19:57" color="darkorange1"];
     "Amsterdam" -> "Paris" [label="15:10
@@ -122,6 +135,8 @@ EC 145
     "Vienna" -> "Bratislava" [label="12:45
 REX 7733
 13:44" penwidth="3"];
+    "Rome" -> "Vatican" [label="Metro line A
+~0:20" style="dashed" penwidth="3"];
     "Basel" -> "Milan" [label="08:33
 ICE563 + EC315
 12:53" penwidth="3"];
@@ -158,6 +173,12 @@ Avanti VT6300
     "London" -> "Holyhead" [label="19:02
 Avanti VT4390
 23:02" penwidth="3"];
+    "Rome" -> "Palermo" [label="23:00
+ICN1959
+11:27" color="turquoise3"];
+    "Rome" -> "Syracuse" [label="23:00
+ICN1959
+11:29" color="turquoise3" penwidth="3"];
     "Holyhead" -> "Dublin" [label="Ferry
 ~3:15
 (!)" style="dashed" penwidth="3"];
@@ -168,6 +189,18 @@ IC 473
 Croatia Ferry 53
 06:45
 Not all days every month" color="turquoise3" style="dashed" penwidth="3"];
+    "Basel" -> "Bern" [label="IC61
+36 departures
+04:30–22:28
+0:58 h" penwidth="3"];
+    "Milan" -> "Rome" [label="FR
+30 departures
+05:20–20:35
+3:10 h" penwidth="3"];
+    "Amsterdam" -> "Brussels" [label="EST Eurostar
+14 departures
+06:10–21:10
+1:56 h" penwidth="3"];
   }
 
   subgraph cluster_day4 {
@@ -176,10 +209,7 @@ Not all days every month" color="turquoise3" style="dashed" penwidth="3"];
     node [fontsize="20" shape="box"];
     "Amsterdam" -> "Brussels" [label="13:28
 ICD 9240
-16:12" color="darkorange1" penwidth="3"];
-    "Brussels" -> "London" [label="18:52
-EST 9157
-19:57" color="darkorange1"];
+16:12" color="darkorange1"];
     "Innsbruck" -> "Bologna" [label="09:24
 EC81
 14:10"];
@@ -188,18 +218,19 @@ FR9420
 16:34"];
     "Bologna" -> "Rome" [label="14:27
 FR9539
-16:49" penwidth="3"];
+16:49"];
     "Bologna" -> "Florence" [label="15:02
 FR 9421
 15:39"];
-    "Rome" -> "Vatican" [label="Metro line A
-~0:20" style="dashed" penwidth="3"];
     "Milan" -> "Rome" [label="13:00
 FR 9631
-16:15" penwidth="3"];
+16:15"];
+    "Rome" -> "Naples" [label="16:25
+FR 9631
+17:33"];
     "Basel" -> "Bern" [label="08:30
 ICE 271
-09:26" penwidth="3"];
+09:26"];
     "Paris" -> "Marseille" [label="13:54
 TGV6077
 17:14"];
@@ -209,12 +240,12 @@ TGV INOUI 6177
     "Paris" -> "Bordeaux" [label="12:11
 OUIGO 7681
 14:14"];
-    "Rome" -> "Palermo" [label="23:00
-ICN1959
-11:27" color="turquoise3"];
-    "Rome" -> "Syracuse" [label="23:00
-ICN1959
-11:29" color="turquoise3" penwidth="3"];
+    "Syracuse" -> "Pozzallo" [label="14:45
+R 12936
+15:58" penwidth="3"];
+    "Pozzallo" -> "Valletta" [label="19:30
+Virtu Ferries
+21:15" style="dashed" penwidth="3"];
     "Barcelona" -> "Madrid" [label="06:20
 AVE 3260
 08:50" penwidth="3"];
@@ -261,15 +292,6 @@ EN40414 + R2276
     color=black; fontsize="30";
     label = "Day five";
     node [fontsize="20" shape="box"];
-    "Rome" -> "Naples" [label="16:25
-FR 9631
-17:33"];
-    "Syracuse" -> "Pozzallo" [label="14:45
-R 12936
-15:58" penwidth="3"];
-    "Pozzallo" -> "Valletta" [label="19:30
-Virtu Ferries
-21:15" style="dashed" penwidth="3"];
     "Madrid" -> "Sevilla" [label="09:05
 AVE2090
 11:28"];
