@@ -9,6 +9,7 @@ Write a leg as   A -> B : train
     python3 add_leg.py "Helsinki -> Tallinn : Megastar 07:30-09:30 ferry"
                                                             # your own times, not looked up
     python3 add_leg.py                                      # type legs one per line, empty line to stop
+    python3 add_leg.py --file pairs.txt                     # a whole list, no questions, summary at the end
 
 The tool finds the train in Transitous on the travel date (default next Tuesday),
 shows what it found and asks before writing. Places it does not know are looked up
@@ -43,6 +44,14 @@ FLAGS = {"ferry", "bus", "train", "night"}
 
 class Quit(Exception):
     pass
+
+
+LOG: dict = {"status": None, "places": []}       # what happened, for the --file summary
+
+
+def status(text: str) -> bool:
+    LOG["status"] = text
+    return False
 
 
 def ask(prompt: str, default: str = "", auto: bool = False) -> str:
@@ -123,6 +132,8 @@ def resolve(name: str, auto: bool) -> tuple[str, dict]:
     capital = bool(was_missing) or yes(f"  Is {stored} a capital?", auto, default=False)
     add_place(stored, m["lat"], m["lon"], country, capital)
     print(f"  Added {stored} to places.yaml.")
+    LOG["places"].append(f"{stored}: {m.get('name')} ({m['lat']:.3f}, {m['lon']:.3f}), country {country or '?'}"
+                         f"{', capital' if capital else ', not marked as capital'}")
     places, _ = load_places()
     return stored, places[stored]
 
@@ -258,7 +269,7 @@ def handle(line: str, args) -> bool:
     m = LINE_RE.match(line)
     if not m:
         print("  Write it as:  A -> B : train   (e.g. Stockholm -> Malmö : X2 523)")
-        return False
+        return status("not understood - write it as  A -> B : train")
     svc = m["svc"]
     flags = {w.lower() for w in svc.split() if w.lower() in FLAGS}
     svc = " ".join(w for w in svc.split() if w.lower() not in FLAGS)
@@ -288,7 +299,7 @@ def handle(line: str, args) -> bool:
         deps = find_all(pa, pb, svc, args.date, args)
         if not deps:
             print("  No direct trains found. Check the names with '*' alone, or give times yourself.")
-            return False
+            return status("no direct trains found")
         kinds = Counter(service_type(lab) for _, _, lab, _ in deps)
         show = deps if len(deps) <= 12 else deps[:6] + [None] + deps[-3:]
         for x in show:
@@ -309,7 +320,7 @@ def handle(line: str, args) -> bool:
         print(f"  {svc} was not found between {frm} and {to} that day.")
         print("  Try another date (--date), '*' to list the direct trains, or give the times yourself:")
         print(f"     {frm} -> {to} : {svc} HH:MM-HH:MM")
-        return False
+        return status(f"{svc} not found on {args.date:%-d.%-m.}")
     c, first, last, tz_a, tz_b = r
     for i, l in enumerate(c):
         mark = "*" if first <= i <= last else " "
@@ -332,14 +343,17 @@ def handle(line: str, args) -> bool:
 def save(e: dict, args) -> bool:
     old = existing(e["from"], e["to"], e["service"])
     print("  " + entry_text(e).strip().replace("\n", "\n  "))
+    what = (f"{len(e['times'])} departures {e['times'][0]} … {e['times'][-1]}" if "times" in e
+            else f"{e['dep']}-{e['arr']}") + f"  {e['service']}" + (" (your own times)" if e["source"] == "manual" else "")
     if old is not None:
         print("  This train is already in legs.yaml:\n  " + old.group(0).strip())
         if not yes("  Replace it?", args.yes):
-            return False
+            return status("kept the existing entry")
     elif not yes("  Add to legs.yaml?", args.yes):
-        return False
+        return status("skipped")
     write_entry(e, old)
     print("  Saved.")
+    LOG["status"] = ("updated: " if old is not None else "added: ") + what
     return True
 
 
@@ -348,13 +362,28 @@ def main():
                                  epilog=__doc__.split("\n", 2)[2], formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("leg", nargs="*", help='e.g. "Stockholm -> Malmö : X2 523"')
     ap.add_argument("--date", help="travel date to look the train up on, YYYY-MM-DD (default: next Tuesday)")
+    ap.add_argument("--file", metavar="PAIRS.TXT",
+                    help="read legs from a file, one per line ('#' starts a comment); implies --yes "
+                         "and prints a summary at the end")
     ap.add_argument("--yes", action="store_true", help="don't ask, accept the first answer")
     ap.add_argument("--build", action="store_true", help="run build.py afterwards")
     ap.add_argument("--pause", type=float, default=1.0, help="seconds between Transitous requests")
-    argv = [f"--{a}" if re.fullmatch(r"(date|pause)=.*", a) else a for a in sys.argv[1:]]
+    argv = [f"--{a}" if re.fullmatch(r"(date|pause|file)=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
     today = dt.date.today()
     args.date = dt.date.fromisoformat(args.date) if args.date else today + dt.timedelta(days=(1 - today.weekday()) % 7 or 7)
+
+    if args.file:
+        try:
+            raw = Path(args.file).read_text(encoding="utf-8").splitlines()
+        except OSError as ex:
+            sys.exit(f"Cannot read {args.file}: {ex}")
+        lines = [ln.split("#", 1)[0].strip() for ln in raw]
+        lines = [ln for ln in lines if ln]
+        if not lines:
+            sys.exit(f"{args.file} has no legs in it.")
+        args.yes = True
+        return run_file(lines, args)
 
     lines = [" ".join(args.leg)] if args.leg else None
     added = 0
@@ -381,6 +410,47 @@ def main():
         subprocess.run([sys.executable, str(ROOT / "build.py")], check=False)
     elif added:
         print("Run  python3 build.py  to rebuild the graph and map.")
+
+
+def run_file(lines: list[str], args) -> None:
+    print(f"{len(lines)} legs from {args.file}, travel date {args.date:%a %-d.%-m.%Y}\n")
+    results = []
+    for n, ln in enumerate(lines, 1):
+        print(f"[{n}/{len(lines)}] {ln}")
+        LOG["status"] = None
+        try:
+            ok = handle(ln, args)
+            results.append((ln, ok, LOG["status"] or ("added" if ok else "not added")))
+        except Quit:
+            break
+        except Exception as ex:                         # keep going with the rest of the list
+            results.append((ln, False, f"error: {ex}"))
+            print(f"  error: {ex}")
+        print()
+
+    good = [r for r in results if r[1]]
+    bad = [r for r in results if not r[1]]
+    width = max(len(r[0]) for r in results)
+    print("=" * 72)
+    print(f"Summary: {len(good)} added or updated, {len(bad)} not added, {len(LOG['places'])} new places")
+    if good:
+        print("\nAdded or updated:")
+        for ln, _, st in good:
+            print(f"  {ln:<{width}}  {st}")
+    if bad:
+        print("\nNot added - check by hand or give the times yourself (A -> B : name HH:MM-HH:MM):")
+        for ln, _, st in bad:
+            print(f"  {ln:<{width}}  {st}")
+    if LOG["places"]:
+        print("\nNew places in data/places.yaml - check the station, country and capital flag:")
+        for p in LOG["places"]:
+            print(f"  {p}")
+    if good:
+        if args.build:
+            print()
+            subprocess.run([sys.executable, str(ROOT / "build.py")], check=False)
+        else:
+            print("\nRun  python3 build.py  to rebuild the graph and map.")
 
 
 if __name__ == "__main__":

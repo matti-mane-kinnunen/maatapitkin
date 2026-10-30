@@ -1,0 +1,14 @@
+# Legs for:  python3 add_leg.py --file pairs.example.txt
+# One leg per line:  A -> B : train
+#   A -> B : X2 523             one train, looked up by its number
+#   A -> B : *                  every direct train that day, stored as one entry
+#   A -> B : EST*               every direct train whose name starts with EST
+#   A -> B : name HH:MM-HH:MM   your own times (ferries, places Transitous lacks); add 'ferry' or 'night'
+# '#' starts a comment. Running the file again later updates the entries.
+
+Stockholm -> Malmö : X2 523
+Malmö -> Copenhagen : *
+Basel -> Bern : *
+Milan -> Rome : FR*
+Amsterdam -> Brussels : *
+Helsinki -> Tallinn : Megastar 07:30-09:30 ferry
