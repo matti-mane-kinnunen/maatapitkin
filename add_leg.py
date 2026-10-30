@@ -6,6 +6,7 @@ Write a leg as   A -> B : train
     python3 add_leg.py "Basel -> Bern : ICE 271 @08:30"     # search from about 08:30 (quicker)
     python3 add_leg.py "Copenhagen -> Malmö : *"            # every direct train that day
     python3 add_leg.py "Paris -> London : EST*"             # every direct train whose name starts EST
+    python3 add_leg.py "Vienna -> Trieste : * bus"              # '*' skips buses unless you add 'bus'
     python3 add_leg.py "Helsinki -> Tallinn : Megastar 07:30-09:30 ferry"
                                                             # your own times, not looked up
     python3 add_leg.py                                      # type legs one per line, empty line to stop
@@ -21,6 +22,7 @@ with a list of times, so you type them once.
 from __future__ import annotations
 
 import argparse
+import difflib
 import datetime as dt
 import fnmatch
 import json
@@ -40,14 +42,14 @@ LEGS = ROOT / "data" / "legs.yaml"
 PLACES = ROOT / "data" / "places.yaml"
 SECTION = "  # --- Added with add_leg.py ----------------------------------------------"
 LINE_RE = re.compile(r"^\s*(?P<a>.+?)\s*->\s*(?P<b>.+?)\s*:\s*(?P<svc>.+?)\s*$")
-FLAGS = {"ferry", "bus", "train", "night"}
+FLAGS = {"ferry", "bus", "train", "night"}   # 'bus' also lets '*' include buses
 
 
 class Quit(Exception):
     pass
 
 
-LOG: dict = {"status": None, "places": []}       # what happened, for the --file summary
+LOG: dict = {"status": None, "places": [], "guesses": []}       # what happened, for the --file summary
 
 
 def status(text: str) -> bool:
@@ -83,11 +85,27 @@ def load_places() -> tuple[dict, dict]:
 
 
 def find_place(name: str, places: dict) -> str | None:
+    """Exact match on the name or one of its aliases, ignoring case and accents."""
     f = T.fold(name)
-    for k in places:
-        if T.fold(k) == f:
+    for k, v in places.items():
+        if T.fold(k) == f or any(T.fold(a) == f for a in (v or {}).get("aliases", []) or []):
             return k
     return None
+
+
+def similarity(a: str, b: str) -> float:
+    return difflib.SequenceMatcher(None, T.fold(a), T.fold(b)).ratio()
+
+
+def guess_place(name: str, places: dict) -> tuple[str, float] | None:
+    """The known place a misspelt name most likely means (Tallin -> Tallinn)."""
+    best = None
+    for k, v in places.items():
+        for cand in [k, *((v or {}).get("aliases", []) or [])]:
+            r = similarity(name, cand)
+            if T.fold(name)[:1] == T.fold(cand)[:1] and r >= 0.75 and (best is None or r > best[1]):
+                best = (k, r)
+    return best
 
 
 def add_place(name: str, lat: float, lon: float, country: str, capital: bool) -> None:
@@ -109,22 +127,49 @@ def add_place(name: str, lat: float, lon: float, country: str, capital: bool) ->
 
 
 def resolve(name: str, auto: bool) -> tuple[str, dict]:
+    name = name.strip()
+    if not re.search(r"[^\W\d_]", name) or name[0] in ":->":
+        raise ValueError(f"'{name}' is not a city name - write the line as  A -> B : train")
     places, missing = load_places()
     key = find_place(name, places)
     if key:
         return key, places[key]
+    if not find_place(name, missing):
+        g = guess_place(name, places) or guess_place(name, missing)
+        if g:
+            known = g[0]
+            if auto or yes(f"  '{name}' is not known. Did you mean {known}?", auto):
+                if auto:
+                    LOG["guesses"].append(f"{name} -> {known}")
+                    print(f"  '{name}' taken as {known}")
+                if known in places:
+                    return known, places[known]
+                name = known
     was_missing = find_place(name, missing)
     print(f"  '{name}' is not in places.yaml - looking it up in Transitous...")
     matches = [m for m in T.geocode(name) if "lat" in m and "lon" in m][:5]
     if not matches:
         raise ValueError(f"Transitous does not know '{name}'. Add it to places.yaml by hand.")
     stops = [m for m in matches if m.get("type") == "STOP"] or matches
+    if auto:
+        # without a person to check, only accept a station whose name looks like what was typed
+        ok = [m for m in stops if T.fold(name) in T.fold(m.get("name", "")) or
+              similarity(name, str(m.get("name", "")).split()[0]) >= 0.8]
+        if not ok:
+            raise ValueError(f"unknown place '{name}' - Transitous suggests "
+                             f"{', '.join(repr(m.get('name')) for m in stops[:3])}; check the spelling")
+        stops = ok
     for i, m in enumerate(stops, 1):
         area = ", ".join(a.get("name", "") for a in m.get("areas", [])[:3] if a.get("name"))
         print(f"    {i}. {m.get('name')}  ({m['lat']:.3f}, {m['lon']:.3f}){'  ' + area if area else ''}")
     pick = ask("  Which one is the station? [1] ", "1", auto)
     m = stops[max(0, min(len(stops) - 1, int(pick) - 1 if pick.isdigit() else 0))]
     stored = was_missing or name.strip()
+    station = str(m.get("name", ""))
+    if not was_missing and T.fold(stored) not in T.fold(station) and station.split():
+        stored = re.split(r"[\s,(/-]", station)[0]           # 'Genove' -> 'Genova' (from 'Genova Brignole')
+        LOG["guesses"].append(f"{name} -> {stored} (new place)")
+        print(f"  stored as {stored}")
     country = (m.get("country") or "").upper()
     if was_missing:
         country = country or missing[was_missing].get("country", "")
@@ -251,7 +296,7 @@ def find_train(pa: dict, pb: dict, service: str, date: dt.date, near: str | None
     return None
 
 
-def find_all(pa: dict, pb: dict, pattern: str, date: dt.date, args):
+def find_all(pa: dict, pb: dict, pattern: str, date: dt.date, args, buses: bool = False):
     tz_a, tz_b = T.tz_of(pa), T.tz_of(pb)
     start = dt.datetime.combine(date, dt.time(0, 0), tz_a)
     end = dt.datetime.combine(date, dt.time(23, 59), tz_a)
@@ -263,6 +308,8 @@ def find_all(pa: dict, pb: dict, pattern: str, date: dt.date, args):
         c = T.core(it.get("legs", []))
         if len(c) != 1:                       # direct trains only
             continue
+        if not buses and c[0].get("mode") in ("BUS", "COACH"):
+            continue
         lab = T.label(c[0])
         if not fnmatch.fnmatch(T.fold(lab), pat):
             continue
@@ -273,9 +320,14 @@ def find_all(pa: dict, pb: dict, pattern: str, date: dt.date, args):
 
 
 def service_type(label: str) -> str:
-    """'X2 523' -> 'X2', 'Øresundståg 1073' -> 'Øresundståg', 'EST 9039 ...' -> 'EST'."""
-    toks = label.split()
-    keep = [t for t in toks if not re.fullmatch(r"\d{3,}", t)]
+    """'X2 523' -> 'X2', 'ICE 27 ICE 1027' -> 'ICE', 'RS4 (87406)' -> 'RS4', 'Øresundståg 1073' -> 'Øresundståg'."""
+    keep = []
+    for t in label.split():
+        if re.fullmatch(r"\(?\d+\)?", t) or t in keep:
+            continue
+        keep.append(t if len(t) <= 15 else t.split("-")[0])
+        if len(keep) == 1 and len(t) > 3:
+            break
     return " ".join(keep[:2]) or label
 
 
@@ -311,7 +363,7 @@ def handle(line: str, args) -> bool:
 
     if "*" in svc:                                         # every direct train
         print(f"  Collecting direct trains {frm} -> {to} on {args.date:%a %-d.%-m.%Y} ...")
-        deps = find_all(pa, pb, svc, args.date, args)
+        deps = find_all(pa, pb, svc, args.date, args, buses="bus" in flags)
         if not deps:
             print("  No direct trains found. Check the names with '*' alone, or give times yourself.")
             return status("no direct trains found")
@@ -482,6 +534,10 @@ def run_file(lines: list[str], args) -> None:
         print("\nNot added - check by hand or give the times yourself (A -> B : name HH:MM-HH:MM):")
         for ln, _, st in bad:
             print(f"  {ln:<{width}}  {st}")
+    if LOG["guesses"]:
+        print("\nNames I guessed - fix pairs.txt if any of these is wrong:")
+        for g in LOG["guesses"]:
+            print(f"  {g}")
     if LOG["places"]:
         print("\nNew places in data/places.yaml - check the station, country and capital flag:")
         for p in LOG["places"]:

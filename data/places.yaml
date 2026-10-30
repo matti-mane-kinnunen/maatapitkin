@@ -12,52 +12,54 @@ settings:
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   # start_date: 2026-11-02   # travel date; default is next Monday (or use --date)
 
+# Each place may list other names it is known by (aliases), e.g. Vienna: [Wien].
+# add_leg.py accepts them in pairs files and they never create a second city.
 places:
-  Helsinki:   {lat: 60.172, lon: 24.941, capital: true, country: FI}
+  Helsinki:   {lat: 60.172, lon: 24.941, capital: true, country: FI, aliases: [Helsingfors]}
   Tampere:    {lat: 61.498, lon: 23.773, country: FI}
-  Turku:      {lat: 60.435, lon: 22.220, country: FI}
+  Turku:      {lat: 60.435, lon: 22.220, country: FI, aliases: [Åbo]}
   Stockholm:  {lat: 59.330, lon: 18.058, capital: true, country: SE}
   Oslo:       {lat: 59.911, lon: 10.753, capital: true, country: "NO"}
   Bergen:     {lat: 60.390, lon: 5.333, country: "NO"}
   Trondheim:  {lat: 63.436, lon: 10.399, country: "NO"}
-  Copenhagen: {lat: 55.673, lon: 12.565, capital: true, country: DK}
+  Copenhagen: {lat: 55.673, lon: 12.565, capital: true, country: DK, aliases: [København, Kopenhagen, Köpenhamn]}
   Hamburg:    {lat: 53.553, lon: 10.007, country: DE}
   Berlin:     {lat: 52.525, lon: 13.369, capital: true, country: DE}
   Frankfurt:  {lat: 50.107, lon: 8.663, country: DE}
-  Munich:     {lat: 48.140, lon: 11.558, country: DE}
-  Strasbourg: {lat: 48.585, lon: 7.735, country: FR}
+  Munich:     {lat: 48.140, lon: 11.558, country: DE, aliases: [München, Muenchen]}
+  Strasbourg: {lat: 48.585, lon: 7.735, country: FR, aliases: [Strassburg, Straßburg]}
   Paris:      {lat: 48.876, lon: 2.358, capital: true, country: FR, min_transfer: 60}  # change of station (Nord / Est / Lyon)
-  Marseille:  {lat: 43.303, lon: 5.380, country: FR}
+  Marseille:  {lat: 43.303, lon: 5.380, country: FR, aliases: [Marseilles]}
   Nice:       {lat: 43.704, lon: 7.262, country: FR}
   Bordeaux:   {lat: 44.826, lon: -0.556, country: FR}
   Toulouse:   {lat: 43.611, lon: 1.454, country: FR}
-  Luxembourg: {lat: 49.600, lon: 6.134, capital: true, country: LU}
+  Luxembourg: {lat: 49.600, lon: 6.134, capital: true, country: LU, aliases: [Luxemburg]}
   Amsterdam:  {lat: 52.379, lon: 4.900, capital: true, country: NL}
-  The Hague:  {lat: 52.080, lon: 4.325, country: NL, note: seat of government}
-  Brussels:   {lat: 50.836, lon: 4.336, capital: true, country: BE}
+  The Hague:  {lat: 52.080, lon: 4.325, country: NL, note: seat of government, aliases: [Den Haag, Haag]}
+  Brussels:   {lat: 50.836, lon: 4.336, capital: true, country: BE, aliases: [Bruxelles, Brussel, Bryssel, Brüssel]}
   London:     {lat: 51.532, lon: -0.126, capital: true, country: GB, min_transfer: 60}  # St Pancras -> Euston
   Edinburgh:  {lat: 55.952, lon: -3.189, country: GB}
   Glasgow:    {lat: 55.860, lon: -4.258, country: GB}
   Holyhead:   {lat: 53.308, lon: -4.631, country: GB}
   Belfast:    {lat: 54.596, lon: -5.917, capital: true, country: GB, note: capital of Northern Ireland}
-  Dublin:     {lat: 53.346, lon: -6.247, capital: true, country: IE}
+  Dublin:     {lat: 53.346, lon: -6.247, capital: true, country: IE, aliases: [Baile Átha Cliath]}
   Galway:     {lat: 53.274, lon: -9.047, country: IE}
-  Prague:     {lat: 50.083, lon: 14.435, capital: true, country: CZ}
-  Warsaw:     {lat: 52.229, lon: 21.003, capital: true, country: PL}
-  Krakow:     {lat: 50.068, lon: 19.947, country: PL}
-  Vienna:     {lat: 48.185, lon: 16.376, capital: true, country: AT}
+  Prague:     {lat: 50.083, lon: 14.435, capital: true, country: CZ, aliases: [Praha, Prag]}
+  Warsaw:     {lat: 52.229, lon: 21.003, capital: true, country: PL, aliases: [Warszawa, Warschau]}
+  Krakow:     {lat: 50.068, lon: 19.947, country: PL, aliases: [Kraków, Krakau]}
+  Vienna:     {lat: 48.185, lon: 16.376, capital: true, country: AT, aliases: [Wien, Wenen]}
   Innsbruck:  {lat: 47.263, lon: 11.401, country: AT}
   Bratislava: {lat: 48.159, lon: 17.106, capital: true, country: SK}
   Budapest:   {lat: 47.500, lon: 19.083, capital: true, country: HU}
-  Basel:      {lat: 47.547, lon: 7.590, country: CH}
-  Bern:       {lat: 46.949, lon: 7.439, capital: true, country: CH}
-  Milan:      {lat: 45.486, lon: 9.204, country: IT}
+  Basel:      {lat: 47.547, lon: 7.590, country: CH, aliases: [Bâle, Basle]}
+  Bern:       {lat: 46.949, lon: 7.439, capital: true, country: CH, aliases: [Berne]}
+  Milan:      {lat: 45.486, lon: 9.204, country: IT, aliases: [Milano, Mailand]}
   Bologna:    {lat: 44.506, lon: 11.343, country: IT}
-  Venice:     {lat: 45.441, lon: 12.321, country: IT}
-  Florence:   {lat: 43.776, lon: 11.248, country: IT}
-  Rome:       {lat: 41.901, lon: 12.501, capital: true, country: IT, min_transfer: 15}  # large station
-  Vatican:    {lat: 41.904, lon: 12.453, capital: true, country: VA}
-  Naples:     {lat: 40.853, lon: 14.272, country: IT}
+  Venice:     {lat: 45.441, lon: 12.321, country: IT, aliases: [Venezia, Venedig]}
+  Florence:   {lat: 43.776, lon: 11.248, country: IT, aliases: [Firenze, Florenz]}
+  Rome:       {lat: 41.901, lon: 12.501, capital: true, country: IT, min_transfer: 15, aliases: [Roma, Rom]}  # large station
+  Vatican:    {lat: 41.904, lon: 12.453, capital: true, country: VA, aliases: [Vatikan]}
+  Naples:     {lat: 40.853, lon: 14.272, country: IT, aliases: [Napoli, Neapel]}
   Ancona:     {lat: 43.607, lon: 13.498, country: IT}
   Bari:       {lat: 41.118, lon: 16.869, country: IT}
   Palermo:    {lat: 38.110, lon: 13.367, country: IT}
@@ -66,20 +68,20 @@ places:
   Valletta:   {lat: 35.898, lon: 14.514, capital: true, country: MT}
   Barcelona:  {lat: 41.379, lon: 2.140, country: ES}
   Madrid:     {lat: 40.407, lon: -3.691, capital: true, country: ES, min_transfer: 40}  # Chamartín <-> Atocha
-  Sevilla:    {lat: 37.392, lon: -5.975, country: ES}
+  Sevilla:    {lat: 37.392, lon: -5.975, country: ES, aliases: [Seville]}
   Granada:    {lat: 37.184, lon: -3.610, country: ES}
   Malaga:     {lat: 36.712, lon: -4.433, country: ES}
   Badajoz:    {lat: 38.888, lon: -6.968, country: ES}
   Abrantes:   {lat: 39.448, lon: -8.196, country: PT}
-  Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT}
-  Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO}
-  Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD}
-  Sofia:      {lat: 42.712, lon: 23.321, capital: true, country: BG}
+  Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT, aliases: [Lisboa, Lissabon]}
+  Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO, aliases: [București, Bucuresti, Bukarest]}
+  Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD, aliases: [Chișinău, Kishinev]}
+  Sofia:      {lat: 42.712, lon: 23.321, capital: true, country: BG, aliases: [Sofiya]}
   Varna:      {lat: 43.199, lon: 27.913, country: BG}
   Istanbul:   {lat: 41.015, lon: 28.977, country: TR, min_transfer: 60}  # Halkalı -> Söğütlüçeşme across the city
   Ankara:     {lat: 39.936, lon: 32.844, capital: true, country: TR}
   Patras:     {lat: 38.247, lon: 21.733, country: GR}
-  Athens:     {lat: 38.003, lon: 23.721, capital: true, country: GR}
+  Athens:     {lat: 38.003, lon: 23.721, capital: true, country: GR, aliases: [Athina, Athen]}
   Split:      {lat: 43.504, lon: 16.442, country: HR}
   Zagreb:     {lat: 45.805, lon: 15.979, capital: true, country: HR}
   Ljubljana:  {lat: 46.058, lon: 14.511, capital: true, country: SI}
