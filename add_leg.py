@@ -147,9 +147,17 @@ def resolve(name: str, auto: bool) -> tuple[str, dict]:
                 name = known
     was_missing = find_place(name, missing)
     print(f"  '{name}' is not in places.yaml - looking it up in Transitous...")
-    matches = [m for m in T.geocode(name) if "lat" in m and "lon" in m][:5]
+    found = [m for m in T.geocode(name) if "lat" in m and "lon" in m]
+    # only Europe and around the Mediterranean (Porto must not become Porto Alegre)
+    matches = [m for m in found if 27 <= m["lat"] <= 72 and -32 <= m["lon"] <= 45]
     if not matches:
-        raise ValueError(f"Transitous does not know '{name}'. Add it to places.yaml by hand.")
+        elsewhere = ", ".join(f"{m.get('name')} ({m['lat']:.1f}, {m['lon']:.1f})" for m in found[:2])
+        raise ValueError(f"Transitous does not know '{name}' in Europe"
+                         f"{' (only ' + elsewhere + ')' if elsewhere else ''}. Add it to places.yaml by hand.")
+
+    def in_town(m):   # a station in the town of that name beats a street stop called that elsewhere
+        return any(T.fold(a.get("name", "")) == T.fold(name) for a in m.get("areas", []) or [])
+    matches = sorted(matches, key=lambda m: (not in_town(m), not T.fold(m.get("name", "")).startswith(T.fold(name))))[:5]
     stops = [m for m in matches if m.get("type") == "STOP"] or matches
     if auto:
         # without a person to check, only accept a station whose name looks like what was typed

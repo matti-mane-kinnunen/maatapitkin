@@ -2,3 +2,4 @@ out/check_report.md
 __pycache__/
 *.pyc
 .DS_Store
+*.swp

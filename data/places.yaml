@@ -87,21 +87,57 @@ places:
   Ljubljana:  {lat: 46.058, lon: 14.511, capital: true, country: SI}
   Malmö: {lat: 55.609, lon: 13.001, country: "SE"}  # added by add_leg.py
   Tallinn: {lat: 59.441, lon: 24.737, capital: true, country: "EE"}  # added by add_leg.py
+  Göteborg: {lat: 57.729, lon: 12.014, country: "SE"}  # added by add_leg.py
+  Osnabrück: {lat: 52.273, lon: 8.062, country: "DE"}  # added by add_leg.py
+  Köln: {lat: 50.943, lon: 6.959, country: "DE"}  # added by add_leg.py
+  Offenburg: {lat: 48.476, lon: 7.947, country: "DE"}  # added by add_leg.py
+  Trieste: {lat: 45.657, lon: 13.771, country: "IT"}  # added by add_leg.py
+  Valga: {lat: 57.775, lon: 26.053, country: "EE"}  # added by add_leg.py
+  Riga: {lat: 56.945, lon: 24.114, capital: true, country: "LV"}  # added by add_leg.py
+  Vilnius: {lat: 54.670, lon: 25.285, capital: true, country: "LT"}  # added by add_leg.py
+  Torino: {lat: 45.070, lon: 7.688, country: "IT"}  # added by add_leg.py
+  Monaco: {lat: 43.739, lon: 7.420, capital: true, country: "MC"}  # corrected by hand 31.10.2026
+  Genoa: {lat: 44.417, lon: 8.921, country: "IT", aliases: [Genova, Gênes]}  # corrected by hand 31.10.2026
+  Belgrade: {lat: 44.818, lon: 20.457, capital: true, country: "RS"}  # added by add_leg.py
+  Szeged: {lat: 46.240, lon: 20.143, country: "HU"}  # added by add_leg.py
+  Subotica: {lat: 46.102, lon: 19.671, country: "RS"}  # added by add_leg.py
+  Aarhus: {lat: 56.150, lon: 10.205, country: "DK"}  # added by add_leg.py
+  Porto: {lat: 41.149, lon: -8.585, country: "PT"}  # corrected by hand 31.10.2026
+  Algeciras: {lat: 36.131, lon: -5.438, country: "ES"}  # added by add_leg.py
+  Tanger: {lat: 35.771, lon: -5.786, country: "MA"}  # added by add_leg.py
+  Casablanca: {lat: 33.590, lon: -7.591, country: "MA"}  # corrected by hand 31.10.2026
+  Marrakech: {lat: 31.631, lon: -8.017, country: "MA"}  # added by add_leg.py
+  Mockava: {lat: 54.328, lon: 23.356, country: "LT"}  # added by add_leg.py
+  Kaisiadorys: {lat: 54.863, lon: 24.461, country: "LT"}  # added by add_leg.py
+  Kaunas: {lat: 54.890, lon: 23.928, country: "LT"}  # added by add_leg.py
+  Ruše: {lat: 46.540, lon: 15.508, country: "SI"}  # added by add_leg.py
+  Durrës: {lat: 41.318, lon: 19.454, country: "AL", aliases: [Durres, Dürres, Durazzo]}  # corrected by hand 31.10.2026
+  Tirana: {lat: 41.328, lon: 19.818, capital: true, country: "AL", aliases: [Tirane, Tiranë]}  # corrected by hand 31.10.2026
+  Vitoria-Gasteiz: {lat: 42.842, lon: -2.673, country: "ES"}  # added by add_leg.py
+  Faro: {lat: 37.020, lon: -7.941, country: "PT"}  # added by add_leg.py
+  Travemünde: {lat: 53.959, lon: 10.866, country: "DE"}  # added by add_leg.py
+  Brest: {lat: 48.388, lon: -4.480, country: "FR"}  # added by add_leg.py
+  Penzance: {lat: 50.122, lon: -5.532, country: "GB"}  # added by add_leg.py
+  Nantes: {lat: 47.217, lon: -1.542, country: "FR"}  # added by add_leg.py
+  Manchester: {lat: 53.479, lon: -2.245, country: "GB"}  # added by add_leg.py
+  Montpellier: {lat: 43.605, lon: 3.881, country: "FR"}  # corrected by hand 31.10.2026
+  Lyon: {lat: 45.761, lon: 4.859, country: "FR"}  # added by add_leg.py
+  Zürich: {lat: 47.378, lon: 8.537, country: "CH"}  # added by add_leg.py
+  Santiago de Compostela: {lat: 42.878, lon: -8.544, country: "ES"}  # added by add_leg.py
+  Valencia: {lat: 39.441, lon: -0.411, country: "ES"}  # added by add_leg.py
+  Hendaye: {lat: 43.353, lon: -1.782, country: "FR"}  # added by add_leg.py
+  Irun: {lat: 43.340, lon: -1.801, country: "ES"}  # added by add_leg.py
+  Donostia: {lat: 43.317, lon: -1.977, country: "ES", aliases: [San Sebastian, San Sebastián]}  # corrected by hand 31.10.2026
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
-  Riga:    {lat: 56.947, lon: 24.106, country: LV}
-  Vilnius: {lat: 54.670, lon: 25.284, country: LT}
   Reykjavik: {lat: 64.146, lon: -21.942, country: IS}
-  Belgrade: {lat: 44.809, lon: 20.454, country: RS}
   Sarajevo: {lat: 43.859, lon: 18.413, country: BA}
   Podgorica: {lat: 42.430, lon: 19.259, country: ME}
   Skopje:  {lat: 41.996, lon: 21.431, country: MK}
-  Tirana:  {lat: 41.328, lon: 19.818, country: AL}
   Pristina: {lat: 42.663, lon: 21.164, country: XK}
   Kyiv:    {lat: 50.441, lon: 30.489, country: UA}
   Andorra la Vella: {lat: 42.507, lon: 1.522, country: AD}
-  Monaco:  {lat: 43.739, lon: 7.420, country: MC}
   San Marino: {lat: 43.936, lon: 12.447, country: SM}
   Vaduz:   {lat: 47.141, lon: 9.521, country: LI}
   Nicosia: {lat: 35.173, lon: 33.364, country: CY}

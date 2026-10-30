@@ -17,6 +17,7 @@ Stockholm -> Göteborg : *
 Göteborg -> Malmö : *
 Göteborg -> Copenhagen : *
 Copenhagen -> Hamburg : *
+Copenhagen -> Aarhus: *
 Hamburg -> Berlin : *
 Hamburg -> Osnabrück : *
 Hamburg -> Bryssel : *
@@ -35,10 +36,12 @@ Vilnius -> Warsaw : *
 Warsaw -> Krakow : *
 Warsaw -> Wien : *
 Warsaw -> Berlin : *
+Warsaw -> Gdansk: *
 Berlin -> Praha : *
 Berlin -> München : *
 Berlin -> Frankfurt : *
 Berlin -> Köln : *
+Berlin -> Warsaw: *
 Osnabrück -> Amsterdam : *
 Amsterdam -> Brussels : *
 Amsterdam -> Paris : *
@@ -53,3 +56,28 @@ Paris -> Strasbourg : *
 Strasbourg -> Paris : *
 Nice -> Monaco : *
 Nice -> Genoa : *
+München -> Bologna : * 
+Bologna -> Firenze : * 
+Bologna -> Milano : *
+Milano -> Genova : *
+Bologna -> Rome : *
+Rome -> Napoli : *
+
+Lisbon -> Porto : *
+Mardid -> San Sebastian: *
+Madrid -> Malaga : *
+Madrid -> Tarfica : * 
+Madrid -> Algeciras : *
+
+Algegiras -> Tanger : * 
+Tarifa -> Tanger : *
+Tanger -> Casablanca : *
+Tanger -> Marrakech : *
+
+Vilnius -> Mockava : *
+Mockava -> Warsaw : *
+
+RIga -> Kaisiadorys: * 
+Kaisiadorys -> Kaunas : *
+
+
