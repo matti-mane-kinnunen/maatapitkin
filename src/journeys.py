@@ -68,6 +68,8 @@ class Leg:
     note: str | None = None
     issue: str | None = None
     checked: str | None = None
+    group: int = -1                 # index of the legs.yaml entry this departure came from
+    group_size: int = 1             # number of departures in that entry
     weekdays: set[int] | None = None
     valid_from: dt.date | None = None
     valid_to: dt.date | None = None
@@ -115,21 +117,41 @@ def load(data_dir: Path) -> tuple[Network, list[str]]:
         for end in ("from", "to"):
             if r[end] not in places:
                 warnings.append(f"leg {i}: unknown place '{r[end]}' - add it to places.yaml")
-        leg = Leg(idx=i, frm=r["from"], to=r["to"], service=str(r.get("service", "")),
-                  mode=r.get("mode", "train"), night=bool(r.get("night")),
-                  highlight=r.get("highlight"), note=r.get("note"), issue=r.get("issue"),
-                  checked=str(r.get("checked", "")), weekdays=parse_weekdays(r.get("runs")),
-                  valid_from=_date(r.get("valid_from")), valid_to=_date(r.get("valid_to")))
-        if "dep" in r and "arr" in r:
-            leg.dep, leg.arr = hm(r["dep"]), hm(r["arr"])
-            leg.duration = (leg.arr - leg.dep) % DAY + DAY * int(r.get("days", 0))
+
+        # One entry can hold one departure (dep/arr), a list of departures
+        # (times: ["06:12-10:47", ...]) or a pattern (every: 30, first, last, duration).
+        if "times" in r:
+            slots = []
+            for t in r["times"]:
+                d, a_ = str(t).replace("–", "-").split("-")
+                slots.append((hm(d), hm(a_)))
+        elif "every" in r:
+            step, first, last = int(r["every"]), hm(r.get("first", "06:00")), hm(r.get("last", "22:00"))
+            dur = hm(r["duration"])
+            slots = [(t, (t + dur) % DAY) for t in range(first, last + 1, step)]
+        elif "dep" in r and "arr" in r:
+            slots = [(hm(r["dep"]), hm(r["arr"]))]
         elif "duration" in r:
-            leg.duration = hm(r["duration"])
+            slots = [None]
         else:
-            warnings.append(f"leg {i} {leg.frm}->{leg.to}: needs dep+arr or duration")
-        if leg.issue:
-            warnings.append(f"{leg.frm} -> {leg.to} ({leg.service}): {leg.issue}")
-        legs.append(leg)
+            warnings.append(f"leg {i} {r['from']}->{r['to']}: needs dep+arr, times, every or duration")
+            continue
+
+        for slot in slots:
+            leg = Leg(idx=len(legs), frm=r["from"], to=r["to"], service=str(r.get("service", "")),
+                      mode=r.get("mode", "train"), night=bool(r.get("night")),
+                      highlight=r.get("highlight"), note=r.get("note"), issue=r.get("issue"),
+                      checked=str(r.get("checked", "")), weekdays=parse_weekdays(r.get("runs")),
+                      valid_from=_date(r.get("valid_from")), valid_to=_date(r.get("valid_to")),
+                      group=i, group_size=len(slots))
+            if slot is None:
+                leg.duration = hm(r["duration"])
+            else:
+                leg.dep, leg.arr = slot
+                leg.duration = (leg.arr - leg.dep) % DAY + DAY * int(r.get("days", 0))
+            legs.append(leg)
+        if r.get("issue"):
+            warnings.append(f"{r['from']} -> {r['to']} ({r.get('service', '')}): {r['issue']}")
     return Network(places, legs, pl.get("settings", {}), pl.get("not_yet_covered", {})), warnings
 
 

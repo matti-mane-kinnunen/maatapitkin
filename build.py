@@ -45,10 +45,16 @@ def edge_label(leg, dep: int | None) -> str:
 
 
 def make_dot(net, router, fastest_legs: set[int], version: str, emphasis: bool) -> str:
-    by_day: dict[int, list] = {}
+    # one arrow per legs.yaml entry: an entry with many departures is drawn once
+    groups: dict[int, list] = {}
     for leg in net.legs:
-        day = router.leg_departure(leg) // DAY + 1
-        by_day.setdefault(day, []).append(leg)
+        groups.setdefault(leg.group, []).append(leg)
+    by_day: dict[int, list] = {}
+    for members in groups.values():
+        used = [l for l in members if l.idx in fastest_legs]
+        rep = min(used or members, key=router.leg_departure)
+        day = router.leg_departure(rep) // DAY + 1
+        by_day.setdefault(day, []).append((rep, members))
 
     capitals = [c for c in net.capitals]
     out = [f"digraph MaataPitkin {{",
@@ -62,14 +68,20 @@ def make_dot(net, router, fastest_legs: set[int], version: str, emphasis: bool) 
         name = DAY_NAMES[day - 1] if day <= len(DAY_NAMES) else str(day)
         out += [f"  subgraph cluster_day{day} {{", '    color=black; fontsize="30";',
                 f'    label = "Day {name}";', '    node [fontsize="20" shape="box"];']
-        for leg in by_day[day]:
-            attrs = [f"label={q(edge_label(leg, None))}"]
+        for leg, members in by_day[day]:
+            if len(members) > 1:
+                deps = sorted(l.dep for l in members)
+                lab = (f"{leg.service}\n{len(members)} departures\n{fmt_clock(deps[0])}–{fmt_clock(deps[-1])}"
+                       f"\n{leg.duration // 60}:{leg.duration % 60:02d} h")
+            else:
+                lab = edge_label(leg, None)
+            attrs = [f"label={q(lab)}"]
             color = HIGHLIGHT.get(leg.highlight) or (NIGHT if leg.night else None)
             if color:
                 attrs.append(f'color="{color}"')
             if leg.mode in ("ferry", "local"):
                 attrs.append('style="dashed"')
-            if emphasis and leg.idx in fastest_legs:
+            if emphasis and any(l.idx in fastest_legs for l in members):
                 attrs.append('penwidth="3"')
             out.append(f"    {q(leg.frm)} -> {q(leg.to)} [{' '.join(attrs)}];")
         out += ["  }", ""]

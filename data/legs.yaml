@@ -5,6 +5,9 @@
 # Fields
 #   from, to      place ids (see places.yaml)
 #   dep, arr      "HH:MM" local time. Omit both for untimed legs and give `duration` instead.
+#   times         many departures in one entry: ["06:00-06:39", "06:20-06:59", ...]
+#   every         or a pattern: every: 20, first: "06:00", last: "22:40", duration: "0:39"
+#   source        transitous (looked up by add_leg.py) or manual
 #   duration      "H:MM" for untimed / frequent legs (subway, ferries with unknown times)
 #   service       train number / operator as shown on the graph
 #   mode          train | ferry | bus | local

@@ -4,13 +4,15 @@ Overland journeys from Helsinki to the European capitals, by train, ferry and bu
 This replaces the hand-made Graphviz graph (MaataPitkin v1.9, April 2023) with data and code that build it.
 
 ```
-data/legs.yaml        every leg: from, to, dep, arr, service, mode, night, runs, valid_from/to
+data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs, valid_from/to
 data/places.yaml      coordinates, capitals, change times per station, routing settings
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
 build.py              builds everything in out/
 check_timetables.py   re-checks the legs against Transitous and writes a report
+add_leg.py            adds trains one at a time: "A -> B : train", looked up in Transitous
 src/journeys.py       loading, validation and the journey router
 src/make_map.py       interactive map page (out/map.html)
+src/transitous.py     talking to the Transitous API (used by the checker and add_leg.py)
 ```
 
 ## Use
@@ -22,6 +24,9 @@ python build.py --date 2026-11-17
 python build.py transfer=15        # minimum change time in minutes (default 10)
 python build.py night=01           # a wait past 01:00 counts as a hotel night (default 03)
 python build.py --help             # all options
+python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in Transitous
+python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the day as one entry
+python add_leg.py                                 # add several, one per line
 python check_timetables.py  # needs internet; compares legs.yaml with live timetables
 ```
 
