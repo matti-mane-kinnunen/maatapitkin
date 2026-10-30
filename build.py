@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Build everything from data/: Graphviz graph, route table, map data.
+"""Build everything from data/: route table (out/routes.md), map (out/map.html), data (out/network.json).
 
     python build.py                # writes out/
-    python build.py --no-emphasis  # draw the graph exactly like the hand-made one
     python build.py transfer=15    # minimum change time 15 min (stations with a longer
                                    # change time in places.yaml keep theirs)
     python build.py night=01       # a wait through 01:00 counts as a hotel night (default 03)
@@ -14,8 +13,6 @@ import argparse
 import re
 import datetime as dt
 import json
-import shutil
-import subprocess
 import sys
 from pathlib import Path
 
@@ -23,87 +20,11 @@ ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load  # noqa: E402
 
-NIGHT = "turquoise3"
-HIGHLIGHT = {"sto-ham-night": "darkorange1"}
-DAY_NAMES = ["one", "two", "three", "four", "five", "six", "seven", "eight"]
-
-
-def q(s: str) -> str:
-    return '"' + str(s).replace('"', r'\"') + '"'
-
-
-def edge_label(leg, dep: int | None) -> str:
-    if leg.timed:
-        lab = f"{fmt_clock(leg.dep)}\n{leg.service}\n{fmt_clock(leg.arr)}"
-    else:
-        lab = f"{leg.service}\n~{leg.duration // 60}:{leg.duration % 60:02d}"
-    if leg.note:
-        lab += f"\n{leg.note}"
-    if leg.issue:
-        lab += "\n(!)"
-    return lab
-
-
-def make_dot(net, router, fastest_legs: set[int], version: str, emphasis: bool) -> str:
-    # one arrow per legs.yaml entry: an entry with many departures is drawn once
-    groups: dict[int, list] = {}
-    for leg in net.legs:
-        groups.setdefault(leg.group, []).append(leg)
-    by_day: dict[int, list] = {}
-    for members in groups.values():
-        used = [l for l in members if l.idx in fastest_legs]
-        rep = min(used or members, key=router.leg_departure)
-        day = router.leg_departure(rep) // DAY + 1
-        by_day.setdefault(day, []).append((rep, members))
-
-    capitals = [c for c in net.capitals]
-    out = [f"digraph MaataPitkin {{",
-           f'  {" , ".join(q(c) for c in capitals)} [shape="box" style="filled" color="grey" fontsize="20"];',
-           "  graph [",
-           f'    label = "From Finland to European capitals by train and ferry\\n'
-           f'For somewhat direct travel; generated from data/legs.yaml\\n'
-           f'Matti Kinnunen - {version}" fontsize="50";',
-           "    rankdir=LR;", "  ]", ""]
-    for day in sorted(by_day):
-        name = DAY_NAMES[day - 1] if day <= len(DAY_NAMES) else str(day)
-        out += [f"  subgraph cluster_day{day} {{", '    color=black; fontsize="30";',
-                f'    label = "Day {name}";', '    node [fontsize="20" shape="box"];']
-        for leg, members in by_day[day]:
-            if len(members) > 1:
-                deps = sorted(l.dep for l in members)
-                lab = (f"{leg.service}\n{len(members)} departures\n{fmt_clock(deps[0])}–{fmt_clock(deps[-1])}"
-                       f"\n{leg.duration // 60}:{leg.duration % 60:02d} h")
-            else:
-                lab = edge_label(leg, None)
-            attrs = [f"label={q(lab)}"]
-            color = HIGHLIGHT.get(leg.highlight) or (NIGHT if leg.night else None)
-            if color:
-                attrs.append(f'color="{color}"')
-            if leg.mode in ("ferry", "local"):
-                attrs.append('style="dashed"')
-            if emphasis and any(l.idx in fastest_legs for l in members):
-                attrs.append('penwidth="3"')
-            out.append(f"    {q(leg.frm)} -> {q(leg.to)} [{' '.join(attrs)}];")
-        out += ["  }", ""]
-
-    legend = [("Day train", ""), ("Night train", f'color="{NIGHT}"'), ("Ferry", 'style="dashed"'),
-              ("Night ferry", f'style="dashed" color="{NIGHT}"'),
-              ("After the Stockholm-Hamburg\\nnight train", 'color="darkorange1"')]
-    if emphasis:
-        legend.append(("Fastest route\\nto a capital", 'penwidth="3"'))
-    out += ["  subgraph cluster_legend {", '    color=black; fontsize="30"; label="Legend";',
-            '    node [fontsize="20" shape="box"];']
-    out += [f'    From -> To [label="{lab}" {a}];' for lab, a in legend]
-    out += ['    Capital [shape="box" style="filled" color="grey" fontsize="20"];',
-            '    Issue [label="(!) = known data issue,\\nsee routes.md"];', "  }", "}"]
-    return "\n".join(out) + "\n"
-
-
 def main():
     ap = argparse.ArgumentParser(
         prog="build.py",
         description="Build the Maata pitkin journeys from data/legs.yaml and data/places.yaml:\n"
-                    "the Graphviz graph, out/routes.md and the interactive map out/map.html.",
+                    "out/routes.md, the interactive map out/map.html and out/network.json.",
         epilog="Every option can also be written as key=value without dashes, for example:\n"
                "  python3 build.py transfer=15\n"
                "  python3 build.py night=01\n"
@@ -117,8 +38,6 @@ def main():
                     help="minimum change time in minutes (default: settings.min_transfer, 10)")
     ap.add_argument("--night", metavar="T",
                     help="time the night begins, 24 h: 03, 3, 0300 or 03:00 (default: settings.night_point, 03:00)")
-    ap.add_argument("--no-emphasis", action="store_true", help="don't draw the fastest routes thicker in the graph")
-    ap.add_argument("--version", default=None, metavar="TEXT", help="text for the graph title (default: travel date and today)")
     # accept key=value as well as --key value
     argv = [f"--{a}" if re.fullmatch(r"[a-z][a-z-]*=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
@@ -140,7 +59,7 @@ def main():
                                            (today + dt.timedelta(days=(7 - today.weekday()) % 7 or 7))))
     router = Router(net, start_date)
     router.search(origin, hm(s.get("start_time", "00:00")))
-    version = args.version or f"travel date {start_date:%a %-d.%-m.%Y} · generated {today:%-d.%-m.%Y}"
+    version = f"travel date {start_date:%a %-d.%-m.%Y} · generated {today:%-d.%-m.%Y}"
 
     def when(t: int) -> str:
         return f"{router.date_of(t):%a %-d.%-m.} {fmt_clock(t)}"
@@ -184,7 +103,7 @@ def main():
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
     front = router.pareto(origin, start)
-    router.search(origin, start, "fastest")          # the graph and main table use the fastest
+    router.search(origin, start, "fastest")          # last: the main table uses the fastest search
 
     def journey_with_alternatives(place: str) -> dict | None:
         r = build_route(place)
@@ -206,7 +125,7 @@ def main():
                 seen.append(alt["signature"])
         return r
 
-    routes, city_routes, fastest_legs, unreached = [], [], set(), []
+    routes, city_routes, unreached = [], [], []
     for place in net.places:
         if place == origin:
             continue
@@ -216,22 +135,11 @@ def main():
                 unreached.append(place)
             continue
         if r["is_capital"]:
-            fastest_legs.update(x["i"] for x in r["steps"] if x["kind"] == "leg")
             routes.append(r)
         else:
             city_routes.append(r)
     routes.sort(key=lambda r: r["arrive"])
     city_routes.sort(key=lambda r: r["arrive"])
-
-    # --- Graphviz -----------------------------------------------------------
-    dot = make_dot(net, router, fastest_legs, version, not args.no_emphasis)
-    (outdir / "maatapitkin.dot").write_text(dot)
-    if shutil.which("dot"):
-        for fmt in ("svg", "png"):
-            subprocess.run(["dot", f"-T{fmt}", str(outdir / "maatapitkin.dot"),
-                            "-o", str(outdir / f"maatapitkin.{fmt}")], check=True)
-    else:
-        print("graphviz 'dot' not found - only the .dot file was written")
 
     # --- route table -----------------------------------------------------------
     md = [f"# Journeys from {origin}", "",

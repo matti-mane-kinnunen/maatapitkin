@@ -348,13 +348,3 @@ class Router:
             lid = parent
         legs.reverse()
         return self._steps(legs)
-
-    def leg_departure(self, leg: Leg) -> int:
-        """When this leg would be taken after reaching its start as early as possible."""
-        s = self._best.get(leg.frm)
-        if s is None:                                        # start not reachable from origin
-            return self.board(0, 0, leg, first_leg=True) or leg.dep or 0
-        inc = self.net.legs[s[1]] if s[1] >= 0 else None
-        arr = self._dist[s]
-        t = self.board(arr, arr + self.change_time(leg.frm, inc, leg), leg, first_leg=inc is None)
-        return t if t is not None else arr

@@ -1,7 +1,8 @@
 # Maata pitkin
 
 Overland journeys from Helsinki to the European capitals, by train, ferry and bus.
-This replaces the hand-made Graphviz graph (MaataPitkin v1.9, April 2023) with data and code that build it.
+This started from a hand-made Graphviz graph (MaataPitkin v1.9, April 2023, kept in data/) and replaces it
+with data, a journey router and an interactive map.
 
 ```
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs, valid_from/to
@@ -19,7 +20,7 @@ src/transitous.py     talking to the Transitous API (used by the checker and add
 ## Use
 
 ```
-pip install pyyaml          # graphviz ('dot') is needed for the .svg/.png
+pip install pyyaml
 python build.py             # travel date = next Monday
 python build.py --date 2026-11-17
 python build.py transfer=15        # minimum change time in minutes (default 10)
@@ -35,7 +36,6 @@ python check_timetables.py  # needs internet; compares legs.yaml with live timet
 
 Outputs in `out/`:
 
-- `maatapitkin.dot / .svg / .png` – the directed graph in the old style. Day clusters are now computed, not drawn by hand.
 - `routes.md` – the fastest journey to every capital, with full itineraries, waits and hotel nights.
 - `map.html` – an interactive map with the journeys.
 - `network.json` – everything above as data.
