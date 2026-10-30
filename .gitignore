@@ -1,0 +1,3 @@
+out/check_report.md
+__pycache__/
+*.pyc

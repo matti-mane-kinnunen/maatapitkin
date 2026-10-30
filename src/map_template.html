@@ -1,0 +1,260 @@
+<title>Maata pitkin</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: departure-board list of capitals on the left, overland map on the right,
+   itinerary for the selected capital below the map. */
+:root {
+  --bg: #eef1f0; --panel: #f9fbfa; --fg: #16212a; --muted: #5d6b73; --rule: #cfd8d8;
+  --sea: #dfe8ec; --land: #fbfcfb; --border: #b9c6ca;
+  --train: #2f4a63; --night: #0b8f9b; --ferry: #3d6fa8; --accent: #d9581f; --warn: #a86a00;
+  --missing: #9aa7ad;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f161b; --panel: #151e24; --fg: #e3eaec; --muted: #93a3aa; --rule: #26333b;
+  --sea: #0c1317; --land: #1a242b; --border: #2e3d46;
+  --train: #9db7cc; --night: #35c3cf; --ferry: #79a7dc; --accent: #ff7a3d; --warn: #e3a63b;
+  --missing: #5e6d74; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f161b; --panel: #151e24; --fg: #e3eaec; --muted: #93a3aa; --rule: #26333b;
+  --sea: #0c1317; --land: #1a242b; --border: #2e3d46;
+  --train: #9db7cc; --night: #35c3cf; --ferry: #79a7dc; --accent: #ff7a3d; --warn: #e3a63b;
+  --missing: #5e6d74; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px; }
+.wrap { max-width: 1320px; margin: 0 auto; display: grid; gap: 20px }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 8px 24px;
+  border-bottom: 2px solid var(--fg); padding-bottom: 10px }
+h1 { font: 700 clamp(2rem, 5vw, 3.2rem)/0.95 var(--display); letter-spacing: 0.01em; margin: 0; text-transform: uppercase }
+h1 small { display: block; font: 500 1rem/1.3 var(--body); text-transform: none; color: var(--muted); margin-top: 6px; letter-spacing: 0 }
+.meta { font: 400 12px/1.5 var(--mono); color: var(--muted); text-align: right }
+.grid { display: grid; grid-template-columns: minmax(280px, 360px) minmax(0, 1fr); gap: 20px; align-items: start }
+@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr) } .board { order: 2 } .meta { text-align: left } }
+
+/* Departure board */
+.board { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden }
+.board h2, .itin h2 { font: 600 13px/1 var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  margin: 0; padding: 12px 14px; border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: space-between }
+.board ol { list-style: none; margin: 0; padding: 0 }
+.board button { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: grid;
+  grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 8px 14px; border-bottom: 1px solid var(--rule) }
+.board button:hover { background: color-mix(in srgb, var(--accent) 7%, transparent) }
+.board button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px }
+.board button[aria-pressed="true"] { background: color-mix(in srgb, var(--accent) 14%, transparent); box-shadow: inset 3px 0 0 var(--accent) }
+.cap { font: 600 1.15rem/1.2 var(--display); letter-spacing: 0.02em }
+.cap .w { color: var(--warn); font-size: 0.9rem; margin-left: 4px }
+.when { font: 500 13px/1.6 var(--mono); font-variant-numeric: tabular-nums; text-align: right }
+.bar { grid-column: 1 / -1; height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden }
+.bar i { display: block; height: 100%; background: var(--train) }
+button[aria-pressed="true"] .bar i { background: var(--accent) }
+.sub { grid-column: 1 / -1; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums }
+.gaps { padding: 12px 14px; font-size: 13px; color: var(--muted) }
+.gaps b { color: var(--fg); font-weight: 600 }
+
+/* Map */
+.mapcol { display: grid; gap: 14px; min-width: 0 }
+.mapbox { background: var(--sea); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; position: relative }
+svg { display: block; width: 100%; height: auto }
+#land path { fill: var(--land); stroke: var(--border); stroke-width: 0.6 }
+.leg { fill: none; stroke-linecap: round }
+.leg.train { stroke: var(--train) } .leg.night { stroke: var(--night) } .leg.ferry, .leg.local { stroke: var(--ferry); stroke-dasharray: 4 4 }
+#base .leg { stroke-width: 1.3; opacity: 0.45 }
+#route .leg { stroke-width: 4.2; opacity: 1 }
+#route .leg.ferry, #route .leg.local { stroke-dasharray: 7 6 }
+#route .halo { fill: none; stroke: var(--land); stroke-width: 8; stroke-linecap: round; opacity: 0.9 }
+.node { fill: var(--panel); stroke: var(--fg); stroke-width: 1.2 }
+.node.capital { fill: var(--fg) }
+.node.missing { fill: none; stroke: var(--missing); stroke-dasharray: 2 2 }
+.node.on { stroke: var(--accent); stroke-width: 2.4 }
+.node.target { fill: var(--accent); stroke: var(--accent) }
+.lbl { font: 600 11px var(--display); letter-spacing: 0.03em; fill: var(--fg); paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round; cursor: pointer }
+.lbl.small { font-weight: 500; fill: var(--muted); font-size: 10px }
+.lbl.missing { fill: var(--missing); font-weight: 500 }
+.lbl.target { fill: var(--accent); font-size: 13px }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; color: var(--muted); padding: 0 2px }
+.legend span { display: inline-flex; align-items: center; gap: 6px }
+.legend svg { width: 28px; height: 10px }
+
+/* Itinerary */
+.itin { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px }
+.itin h2 span:last-child { font-family: var(--mono); letter-spacing: 0; text-transform: none; font-size: 12px }
+.steps { list-style: none; margin: 0; padding: 4px 0 }
+.steps li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 16px; padding: 8px 14px; border-bottom: 1px dashed var(--rule) }
+.steps li:last-child { border-bottom: 0 }
+@media (max-width: 520px) { .steps li { grid-template-columns: minmax(0, 1fr) } }
+.t { font: 13px/1.5 var(--mono); font-variant-numeric: tabular-nums }
+.t em { font-style: normal; color: var(--muted) }
+.what { min-width: 0 }
+.what b { font-weight: 600 }
+.chip { display: inline-block; font: 600 10px/1 var(--body); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 6px;
+  border-radius: 3px; margin-left: 6px; vertical-align: 2px; border: 1px solid currentColor }
+.chip.night { color: var(--night) } .chip.ferry, .chip.local { color: var(--ferry) }
+.svc { color: var(--muted); font-size: 13px }
+.issue { color: var(--warn); font-size: 13px }
+.wait { color: var(--muted); font-size: 13px; font-style: italic }
+.steps li.pause { padding-block: 4px }
+.steps li.stay { background: color-mix(in srgb, var(--warn) 9%, transparent) }
+.chip.hotel { color: var(--warn) }
+.bed { color: var(--warn) }
+footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px }
+@media (prefers-reduced-motion: no-preference) { #route .leg { transition: opacity .2s } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Maata pitkin<small>Helsinki to European capitals by train and ferry — fastest connection from the timetable data</small></h1>
+    <div class="meta" id="meta"></div>
+  </header>
+  <div class="grid">
+    <aside class="board" aria-label="Capitals by arrival time">
+      <h2><span>Arrivals from Helsinki</span><span>door to door</span></h2>
+      <ol id="list"></ol>
+      <div class="gaps" id="gaps"></div>
+    </aside>
+    <div class="mapcol">
+      <div class="mapbox">
+        <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="Map of rail and ferry legs across Europe">
+          <g id="land">__BASEMAP__</g>
+          <g id="base"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g>
+        </svg>
+      </div>
+      <div class="legend">
+        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>Day train</span>
+        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--night)" stroke-width="3"/></svg>Night train</span>
+        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>Ferry / local</span>
+        <span><svg viewBox="0 0 28 10"><rect x="9" y="0.5" width="9" height="9" fill="var(--fg)"/></svg>Capital</span>
+        <span><svg viewBox="0 0 28 10"><circle cx="14" cy="5" r="4" fill="none" stroke="var(--missing)" stroke-dasharray="2 2"/></svg>No legs yet</span>
+      </div>
+      <section class="itin" aria-live="polite">
+        <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
+        <ol class="steps" id="steps"></ol>
+      </section>
+    </div>
+  </div>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const NET = /*__DATA__*/null;
+const P = {...NET.places, ...NET.not_covered};
+const SVGNS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const slug = s => s.normalize("NFD").replace(/[^\w]/g, "").toLowerCase();
+const dur = m => `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")}`;
+const cls = l => l.mode === "ferry" || l.mode === "local" ? l.mode : (l.night ? "night" : "train");
+// label nudges for crowded spots: [dx, dy, anchor]
+const NUDGE = { Vatican: [-7, 10, "end"], Rome: [7, -4, "start"], Bratislava: [7, 10, "start"], Vienna: [-7, -5, "end"],
+  Brussels: [-7, 4, "end"], Amsterdam: [-7, -4, "end"], Luxembourg: [7, -4, "start"], Paris: [-7, 4, "end"], Ankara: [-7, -6, "end"], Nicosia: [-7, -6, "end"], "The Hague": [-7, -2, "end"],
+  Belfast: [-7, -4, "end"], Dublin: [-7, 8, "end"], Bern: [-7, 9, "end"], Ljubljana: [7, -5, "start"],
+  Zagreb: [7, 6, "start"], Copenhagen: [7, 9, "start"], Helsinki: [7, 9, "start"], Tallinn: [7, 4, "start"] };
+
+function curve(a, b) { // gentle arc so parallel and reverse legs separate
+  const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, dx = b.x - a.x, dy = b.y - a.y, k = 0.12;
+  return `M${a.x},${a.y}Q${mx - dy * k},${my + dx * k} ${b.x},${b.y}`;
+}
+
+const base = document.getElementById("base"), routeG = document.getElementById("route");
+const seen = new Set();
+for (const l of NET.legs) {
+  const key = l.from + ">" + l.to; if (seen.has(key)) continue; seen.add(key);
+  el("path", { d: curve(P[l.from], P[l.to]), class: `leg ${cls(l)}` }, base);
+}
+
+const nodesG = document.getElementById("nodes"), labelsG = document.getElementById("labels");
+const nodeEls = {}, labelEls = {};
+for (const [name, p] of Object.entries(P)) {
+  const kind = p.missing ? "missing" : p.capital ? "capital" : "place";
+  nodeEls[name] = kind === "capital"
+    ? el("rect", { x: p.x - 3.5, y: p.y - 3.5, width: 7, height: 7, class: `node ${kind}` }, nodesG)
+    : el("circle", { cx: p.x, cy: p.y, r: kind === "missing" ? 4 : 2.6, class: `node ${kind}` }, nodesG);
+  const [dx, dy, anchor] = NUDGE[name] || [7, 4, "start"];
+  const t = el("text", { x: p.x + dx, y: p.y + dy, "text-anchor": anchor,
+    class: `lbl ${kind === "place" ? "small" : kind === "missing" ? "missing" : ""}` }, labelsG);
+  t.textContent = name; labelEls[name] = t;
+  if (kind === "place") t.style.display = "none";
+  if (p.capital && !p.missing) t.addEventListener("click", () => select(name));
+}
+
+// Departure board
+const list = document.getElementById("list");
+const maxMin = Math.max(...NET.routes.map(r => r.door_to_door_min));
+const buttons = {};
+for (const r of NET.routes) {
+  const li = document.createElement("li"), b = document.createElement("button");
+  b.type = "button"; b.setAttribute("aria-pressed", "false");
+  b.innerHTML = `<span class="cap">${r.capital}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
+    <span class="when">${dur(r.door_to_door_min)}</span>
+    <span class="bar"><i style="width:${(100 * r.door_to_door_min / maxMin).toFixed(1)}%"></i></span>
+    <span class="sub">Arrive ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
+  b.addEventListener("click", () => select(r.capital));
+  li.appendChild(b); list.appendChild(li); buttons[r.capital] = b;
+}
+const missing = [...NET.unreached, ...Object.keys(NET.not_covered)];
+document.getElementById("gaps").innerHTML = `<b>${missing.length} capitals not covered yet:</b> ${missing.join(", ")}.`;
+document.getElementById("meta").innerHTML =
+  `${NET.routes.length} capitals reached · ${NET.legs.length} legs<br>${NET.version}`;
+document.getElementById("foot").textContent =
+  `Timetables are from the hand-built graph (checked 25.4.2023), applied to the travel date above. Changes take 10 min (up to 60 min where you change station, e.g. Paris, London), ferry check-in 30 min, Eurostar 45 min. ` +
+  `A wait that runs through the night is a hotel stay, with no departure before 06:00 the next morning. ` +
+  `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
+
+function select(cap) {
+  const r = NET.routes.find(x => x.capital === cap); if (!r) return;
+  for (const [c, b] of Object.entries(buttons)) b.setAttribute("aria-pressed", String(c === cap));
+  routeG.replaceChildren();
+  const legs = r.steps.filter(s => s.kind === "leg");
+  const stops = new Set([legs[0].from, ...legs.map(s => s.to)]);
+  for (const s of legs) {
+    const d = curve(P[s.from], P[s.to]);
+    el("path", { d, class: "halo" }, routeG);
+    const p = el("path", { d, class: `leg ${cls(s)}` }, routeG);
+    p.style.stroke = s.mode === "train" && !s.night ? "var(--accent)" : "";
+  }
+  for (const [name, n] of Object.entries(nodeEls)) {
+    n.classList.toggle("on", stops.has(name)); n.classList.toggle("target", name === cap);
+    const t = labelEls[name]; t.classList.toggle("target", name === cap);
+    if (!P[name].capital && !P[name].missing) t.style.display = stops.has(name) ? "" : "none";
+  }
+  document.getElementById("itin-title").textContent = `Helsinki → ${cap}`;
+  document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}`;
+  const ol = document.getElementById("steps"); ol.replaceChildren();
+  r.steps.forEach(s => {
+    const li = document.createElement("li");
+    if (s.kind === "stay") {
+      li.className = "stay";
+      li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>Overnight in ${s.place}</b><span class="chip hotel">Hotel</span><div class="svc">${dur(s.minutes)} between trains</div></div>`;
+      ol.appendChild(li); return;
+    }
+    if (s.kind === "change") {
+      if (s.minutes < 90) return;
+      li.className = "pause";
+      li.innerHTML = `<div class="t"></div><div class="wait">Wait ${dur(s.minutes)} in ${s.place}</div>`;
+      ol.appendChild(li); return;
+    }
+    const chip = s.mode === "ferry" || s.mode === "local" ? `<span class="chip ${s.mode}">${s.mode === "local" ? "Metro" : s.night ? "Night ferry" : "Ferry"}</span>`
+      : s.night ? `<span class="chip night">Night train</span>` : "";
+    li.innerHTML = `<div class="t">${s.timed ? s.dep_txt : `<em>any time</em>`}<br>${s.arr_txt}${s.timed ? "" : " <em>est.</em>"}</div>
+      <div class="what"><b>${s.from} → ${s.to}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}</div>
+      ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
+    ol.appendChild(li);
+  });
+  try { if (location.hash !== "#" + slug(cap)) history.replaceState(null, "", "#" + slug(cap)); } catch (e) {}
+}
+
+function fromHash() {
+  const h = location.hash.slice(1);
+  const r = NET.routes.find(x => slug(x.capital) === h);
+  select(r ? r.capital : "Paris");
+}
+window.addEventListener("hashchange", fromHash);
+fromHash();
+</script>
