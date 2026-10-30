@@ -486,10 +486,10 @@ def main():
     except (ValueError, OSError) as ex:
         print(f"  {ex}")
         sys.exit(1)
-    if added and (args.build or (not args.leg and not args.yes and yes("Rebuild the graph and map now?", False))):
+    if added and (args.build or (not args.leg and not args.yes and yes("Rebuild the map and routes now?", False))):
         subprocess.run([sys.executable, str(ROOT / "build.py")], check=False)
     elif added:
-        print("Run  python3 build.py  to rebuild the graph and map.")
+        print("Run  python3 build.py  to rebuild the map and routes.")
 
 
 def already_there(line: str) -> bool:
@@ -555,7 +555,7 @@ def run_file(lines: list[str], args) -> None:
             print()
             subprocess.run([sys.executable, str(ROOT / "build.py")], check=False)
         else:
-            print("\nRun  python3 build.py  to rebuild the graph and map.")
+            print("\nRun  python3 build.py  to rebuild the map and routes.")
 
 
 if __name__ == "__main__":
