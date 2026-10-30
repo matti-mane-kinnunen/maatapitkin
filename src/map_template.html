@@ -75,6 +75,16 @@ svg { display: block; width: 100%; height: auto }
 .node.missing { fill: none; stroke: var(--missing); stroke-dasharray: 2 2 }
 .node.on { stroke: var(--accent); stroke-width: 2.4 }
 .node.target { fill: var(--accent); stroke: var(--accent) }
+.hit { fill: transparent; stroke: none }
+.hit.go { cursor: pointer }
+.hit.go:hover, .hit.go:focus-visible { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); stroke-width: 1.5; outline: none }
+#preview .leg { stroke: var(--accent); stroke-width: 3; opacity: 0.55; stroke-dasharray: none }
+.tip { position: absolute; z-index: 2; pointer-events: none; max-width: 17rem; padding: 7px 10px; border-radius: 5px;
+  background: var(--panel); color: var(--fg); border: 1px solid var(--rule); box-shadow: 0 4px 14px rgb(0 0 0 / 0.14);
+  font-size: 12px; line-height: 1.45 }
+.tip b { font: 600 15px/1.2 var(--display); letter-spacing: 0.02em; display: block }
+.tip .t { font-family: var(--mono); font-variant-numeric: tabular-nums }
+.tip .hint { color: var(--muted) }
 .lbl { font: 600 11px var(--display); letter-spacing: 0.03em; fill: var(--fg); paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round; cursor: pointer }
 .lbl.small { font-weight: 500; fill: var(--muted); font-size: 10px }
 .lbl.missing { fill: var(--missing); font-weight: 500 }
@@ -133,8 +143,9 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="mapbox">
         <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="Map of rail and ferry legs across Europe">
           <g id="land">__BASEMAP__</g>
-          <g id="base"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g>
+          <g id="base"></g><g id="preview"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g><g id="hits"></g>
         </svg>
+        <div class="tip" id="tip" hidden></div>
       </div>
       <div class="legend">
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>Day train</span>
@@ -192,7 +203,64 @@ for (const [name, p] of Object.entries(P)) {
     class: `lbl ${kind === "place" ? "small" : kind === "missing" ? "missing" : ""}` }, labelsG);
   t.textContent = name; labelEls[name] = t;
   if (kind === "place") t.style.display = "none";
-  if (p.capital && !p.missing) t.addEventListener("click", () => select(name));
+}
+
+// Clickable capitals: hover previews the route, click opens the itinerary
+const svgEl = document.getElementById("map"), tip = document.getElementById("tip");
+const previewG = document.getElementById("preview"), hitsG = document.getElementById("hits");
+const VB = svgEl.viewBox.baseVal;
+const routeOf = name => NET.routes.find(r => r.capital === name);
+
+function hover(name) {
+  const p = P[name], r = routeOf(name);
+  previewG.replaceChildren();
+  if (r && !buttons[name]?.getAttribute("aria-pressed")?.includes("true"))
+    for (const s of r.steps.filter(s => s.kind === "leg")) el("path", { d: curve(P[s.from], P[s.to]), class: "leg" }, previewG);
+  tip.innerHTML = r
+    ? `<b>${name}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span> · arrive ${r.arrive_txt}<br>` +
+      `${r.changes} change${r.changes === 1 ? "" : "s"} · ${r.hotel_nights} hotel night${r.hotel_nights === 1 ? "" : "s"}` +
+      `${r.alternatives?.length ? ` · ${r.alternatives.length} alternative${r.alternatives.length > 1 ? "s" : ""}` : ""}` +
+      `<br><span class="hint">Click for the itinerary</span>`
+    : name === NET.origin ? `<b>${name}</b><span class="hint">Every journey starts here</span>`
+    : `<b>${name}</b><span class="hint">No connections yet</span>`;
+  const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
+  const x = p.x * k, y = p.y * k;
+  tip.hidden = false;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = `${Math.max(4, Math.min(box.width - w - 4, x > box.width / 2 ? x - w - 14 : x + 14))}px`;
+  tip.style.top = `${Math.max(4, Math.min(box.height - h - 4, y - h / 2))}px`;
+}
+function unhover() { tip.hidden = true; previewG.replaceChildren(); }
+
+const hitNames = Object.keys(P).filter(n => P[n].capital || P[n].missing || n === NET.origin);
+const placed = [];
+for (const name of hitNames) {
+  const p = P[name];
+  const r = routeOf(name);
+  // size the target to the space around it; a place sitting on top of an earlier one
+  // (the Vatican on Rome) gets its target on its name label instead
+  let cx = p.x, cy = p.y;
+  const near = q => Math.hypot(q.x - cx, q.y - cy);
+  if (placed.some(q => near(q) < 6)) {
+    const bb = labelEls[name].getBBox();
+    cx = bb.x + bb.width / 2; cy = bb.y + bb.height / 2;
+  }
+  const d = Math.min(24, ...placed.map(near), ...hitNames.filter(n => n !== name).map(n => Math.hypot(P[n].x - cx, P[n].y - cy)));
+  const h = el("circle", { cx, cy, r: Math.max(5, Math.min(12, d / 2)), class: r ? "hit go" : "hit" }, hitsG);
+  placed.push({ x: cx, y: cy });
+  if (r) {
+    h.setAttribute("tabindex", "0"); h.setAttribute("role", "button");
+    h.setAttribute("aria-label", `${name}: ${dur(r.door_to_door_min)}, show itinerary`);
+    h.addEventListener("click", () => { unhover(); select(name, 0, true); });
+    h.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(name, 0, true); } });
+    labelEls[name].addEventListener("click", () => { unhover(); select(name, 0, true); });
+  }
+  for (const t of [h, labelEls[name]]) {
+    t.addEventListener("mouseenter", () => hover(name));
+    t.addEventListener("mouseleave", unhover);
+  }
+  h.addEventListener("focus", () => hover(name));
+  h.addEventListener("blur", unhover);
 }
 
 // Departure board
@@ -220,7 +288,7 @@ document.getElementById("foot").textContent =
   `A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning. ` +
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
 
-function select(cap, opt = 0) {
+function select(cap, opt = 0, fromMap = false) {
   const r0 = NET.routes.find(x => x.capital === cap); if (!r0) return;
   const options = [r0, ...(r0.alternatives || [])];
   const r = options[Math.min(opt, options.length - 1)];
@@ -270,6 +338,12 @@ function select(cap, opt = 0) {
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
   });
+  if (fromMap) {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    buttons[cap]?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+    if (matchMedia("(max-width: 860px)").matches)
+      document.querySelector(".itin").scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+  }
   try { if (location.hash !== "#" + slug(cap)) history.replaceState(null, "", "#" + slug(cap)); } catch (e) {}
 }
 
