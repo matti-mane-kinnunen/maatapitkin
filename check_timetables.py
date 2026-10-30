@@ -90,15 +90,18 @@ def label(l: dict) -> str:
 
 
 def numbers(text: str) -> set[str]:
-    """Train numbers in a service name: digit groups of 3+ digits, leading zeros dropped.
-    'EN 000345' -> {'345'}, 'ICE 228 + RE1' -> {'228'}, '20N 060471' -> {'60471'}."""
-    return {d.lstrip("0") for d in re.findall(r"\d+", str(text)) if len(d.lstrip("0")) >= 3}
+    """Train numbers in a service name: digit groups of 2+ digits, leading zeros dropped.
+    'EN 000345' -> {'345'}, 'ICE 228 + RE1' -> {'228'}, '20N 060471' -> {'60471'}, 'EC87' -> {'87'}."""
+    return {d.lstrip("0") for d in re.findall(r"\d+", str(text)) if len(d.lstrip("0")) >= 2}
 
 
 def same_number(a: str, b: str) -> bool:
-    """NJ471 = 40471 = 060471: operators add prefixes, so compare as suffixes."""
+    """Equal numbers match. Night trains get operator prefixes (NJ471 = 40471 = 060471),
+    so a 3+ digit number may also match the end of a 5+ digit one - but 577 is not 1577."""
+    if a == b:
+        return True
     short, long_ = sorted((a, b), key=len)
-    return long_.endswith(short) and len(short) >= 3
+    return len(short) >= 3 and len(long_) >= 5 and long_.endswith(short)
 
 
 def core(legs: list[dict]) -> list[dict]:
