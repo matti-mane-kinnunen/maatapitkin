@@ -213,9 +213,11 @@ const missing = [...NET.unreached, ...Object.keys(NET.not_covered)];
 document.getElementById("gaps").innerHTML = `<b>${missing.length} capitals not covered yet:</b> ${missing.join(", ")}.`;
 document.getElementById("meta").innerHTML =
   `${NET.routes.length} capitals reached · ${NET.legs.length} legs<br>${NET.version}`;
+const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin: 45, night_point: "03:00", morning: "06:00"};
 document.getElementById("foot").textContent =
-  `Timetables are from the hand-built graph (checked 25.4.2023), applied to the travel date above. Changes take 10 min (up to 60 min where you change station, e.g. Paris, London), ferry check-in 30 min, Eurostar 45 min. ` +
-  `A wait that runs through the night is a hotel stay, with no departure before 06:00 the next morning. ` +
+  `Timetables from the hand-built graph, partly re-checked against Transitous, applied to the travel date above. ` +
+  `Changes take at least ${S.min_transfer} min (longer where you change station, e.g. Paris, London), ferry check-in ${S.ferry_checkin} min, Eurostar ${S.eurostar_checkin} min. ` +
+  `A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning. ` +
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
 
 function select(cap, opt = 0) {

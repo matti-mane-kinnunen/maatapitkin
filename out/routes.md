@@ -1,6 +1,6 @@
 # Journeys from Helsinki
 
-_travel date Mon 2.11.2026 · generated 30.10.2026. Change 10 min (more at some stations), ferry check-in 30 min, Eurostar 45 min. A wait through the night is a hotel stay; no departures before 06:00 after a hotel night._
+_travel date Mon 2.11.2026 · generated 30.10.2026. Change 10 min (more at some stations), ferry check-in 30 min, Eurostar 45 min. A wait past 03:00 is a hotel stay; no departures before 06:00 after a hotel night._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|

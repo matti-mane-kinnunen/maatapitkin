@@ -3,10 +3,15 @@
 
     python build.py                # writes out/
     python build.py --no-emphasis  # draw the graph exactly like the hand-made one
+    python build.py transfer=15    # minimum change time 15 min (stations with a longer
+                                   # change time in places.yaml keep theirs)
+    python build.py night=01       # a wait through 01:00 counts as a hotel night (default 03)
+    python build.py transfer=20 night=2:30 date=2026-11-17
 """
 from __future__ import annotations
 
 import argparse
+import re
 import datetime as dt
 import json
 import shutil
@@ -83,13 +88,39 @@ def make_dot(net, router, fastest_legs: set[int], version: str, emphasis: bool) 
 
 
 def main():
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(
+        prog="build.py",
+        description="Build the Maata pitkin journeys from data/legs.yaml and data/places.yaml:\n"
+                    "the Graphviz graph, out/routes.md and the interactive map out/map.html.",
+        epilog="Every option can also be written as key=value without dashes, for example:\n"
+               "  python3 build.py transfer=15\n"
+               "  python3 build.py night=01\n"
+               "  python3 build.py transfer=20 night=2:30 date=2026-11-17\n\n"
+               "transfer sets the normal change time. Stations with a longer change time in\n"
+               "places.yaml (Paris, London, Madrid, Istanbul) keep the longer one.\n"
+               "night sets the hour a wait must pass through to count as a hotel night.",
+        formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--date", help="travel date YYYY-MM-DD (default: settings.start_date or next Monday)")
-    ap.add_argument("--no-emphasis", action="store_true", help="don't thicken fastest routes")
-    ap.add_argument("--version", default=None)
-    args = ap.parse_args()
+    ap.add_argument("--transfer", type=int, metavar="N",
+                    help="minimum change time in minutes (default: settings.min_transfer, 10)")
+    ap.add_argument("--night", metavar="T",
+                    help="time the night begins, 24 h: 03, 3, 0300 or 03:00 (default: settings.night_point, 03:00)")
+    ap.add_argument("--no-emphasis", action="store_true", help="don't draw the fastest routes thicker in the graph")
+    ap.add_argument("--version", default=None, metavar="TEXT", help="text for the graph title (default: travel date and today)")
+    # accept key=value as well as --key value
+    argv = [f"--{a}" if re.fullmatch(r"[a-z][a-z-]*=.*", a) else a for a in sys.argv[1:]]
+    args = ap.parse_args(argv)
 
     net, warnings = load(ROOT / "data")
+    if args.transfer is not None:
+        if args.transfer < 0:
+            ap.error("transfer must be 0 or more minutes")
+        net.settings["min_transfer"] = args.transfer
+    if args.night is not None:
+        m = re.fullmatch(r"(\d{1,2})(?::?(\d{2}))?", args.night.strip())
+        if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
+            ap.error(f"night must be a time like 03, 3, 0300 or 03:00 (got {args.night!r})")
+        net.settings["night_point"] = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
     s = net.settings
     origin = s.get("origin", "Helsinki")
     today = dt.date.today()
@@ -180,8 +211,8 @@ def main():
     # --- route table -----------------------------------------------------------
     md = [f"# Journeys from {origin}", "",
           f"_{version}. Change {router.min_transfer} min (more at some stations), ferry check-in "
-          f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait through the night "
-          f"is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night._", "",
+          f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait "
+          f"past {fmt_clock(router.night_point)} is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night._", "",
           "| Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |",
           "|---|---|---|---|---|---|---|---|"]
     for r in routes:
@@ -225,7 +256,10 @@ def main():
                   "duration": l.duration} for l in net.legs]
     (outdir / "network.json").write_text(json.dumps({
         "origin": origin, "version": version, "places": net.places, "not_covered": net.not_covered,
-        "legs": legs_json, "routes": routes, "unreached": unreached, "warnings": warnings,
+        "legs": legs_json, "routes": routes,
+        "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
+                     "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
+                     "morning": fmt_clock(router.morning)}, "unreached": unreached, "warnings": warnings,
     }, ensure_ascii=False, indent=1))
 
     import make_map

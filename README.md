@@ -19,6 +19,9 @@ src/make_map.py       interactive map page (out/map.html)
 pip install pyyaml          # graphviz ('dot') is needed for the .svg/.png
 python build.py             # travel date = next Monday
 python build.py --date 2026-11-17
+python build.py transfer=15        # minimum change time in minutes (default 10)
+python build.py night=01           # a wait past 01:00 counts as a hotel night (default 03)
+python build.py --help             # all options
 python check_timetables.py  # needs internet; compares legs.yaml with live timetables
 ```
 

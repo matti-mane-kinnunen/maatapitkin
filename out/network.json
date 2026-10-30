@@ -8414,6 +8414,13 @@
    "alternatives": []
   }
  ],
+ "settings": {
+  "min_transfer": 10,
+  "ferry_checkin": 30,
+  "eurostar_checkin": 45,
+  "night_point": "03:00",
+  "morning": "06:00"
+ },
  "unreached": [],
  "warnings": [
   "Amsterdam -> The Hague (THA9364): Same service id as Amsterdam-Paris 15:11 - probably a copy-paste",

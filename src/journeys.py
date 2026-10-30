@@ -175,7 +175,8 @@ class Router:
             return self.ferry_checkin
         if norm_service(nxt.service).startswith(("EST", "ES")):
             return self.eurostar_checkin
-        return int(self.net.places.get(place, {}).get("min_transfer", self.min_transfer))
+        # a station's own change time is a minimum: it can lengthen, never shorten, the default
+        return max(self.min_transfer, int(self.net.places.get(place, {}).get("min_transfer", 0)))
 
     def is_stay(self, arrival: int, dep: int) -> bool:
         """Does the wait [arrival, dep] contain the night point (default 03:00)?"""
