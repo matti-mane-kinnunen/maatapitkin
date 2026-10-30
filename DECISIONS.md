@@ -26,6 +26,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-16 | Time zones in door-to-door times | – | Open |
 | D-17 | Trains that do not run every day | – | Open |
 | D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
+| D-19 | Capitals are coloured by arrival day | 31.10.2026 | Accepted |
 
 ---
 
@@ -253,6 +254,19 @@ Vienna/Bratislava).
   marker so every place stays clickable.
 
 **Why.** The map should stay readable as pairs.txt grows, without hand-tuning positions.
+
+## D-19 Capitals are coloured by arrival day
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Decision.** Each reached capital's marker is coloured by the day it is reached (day 1 =
+the travel date), like the day clusters of the original graph. Arrival day is ordered, so it
+uses one hue, light to dark (blue, so it does not clash with the orange route highlight);
+days 6 and later share the darkest step. Dark mode has its own steps, with later days
+brighter. Both ramps were checked with the dataviz validator (monotone lightness, visible
+steps, contrast with the map). The day is also written out – in the legend with its date,
+in the arrivals list and in the tooltip – so the colour is never the only cue.
+
+**Why.** Shows at a glance how far you get in one, two or three days.
 
 ---
 

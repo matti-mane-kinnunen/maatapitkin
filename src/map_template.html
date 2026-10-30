@@ -11,6 +11,8 @@
   --sea: #dfe8ec; --land: #fbfcfb; --border: #b9c6ca;
   --train: #2f4a63; --night: #0b8f9b; --ferry: #3d6fa8; --accent: #d9581f; --warn: #a86a00;
   --missing: #9aa7ad;
+  /* arrival day of a capital: one hue, light (day 1) to dark (day 6+); validated ordinal ramp */
+  --day1: #86b6ef; --day2: #5598e7; --day3: #2a78d6; --day4: #1c5cab; --day5: #104281; --day6: #0b2a52;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --body: "IBM Plex Sans", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -19,12 +21,12 @@
   --bg: #0f161b; --panel: #151e24; --fg: #e3eaec; --muted: #93a3aa; --rule: #26333b;
   --sea: #0c1317; --land: #1a242b; --border: #2e3d46;
   --train: #9db7cc; --night: #35c3cf; --ferry: #79a7dc; --accent: #ff7a3d; --warn: #e3a63b;
-  --missing: #5e6d74; color-scheme: dark } }
+  --missing: #5e6d74; --day1: #1c5cab; --day2: #2a78d6; --day3: #5598e7; --day4: #86b6ef; --day5: #b7d3f6; --day6: #e3effc; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0f161b; --panel: #151e24; --fg: #e3eaec; --muted: #93a3aa; --rule: #26333b;
   --sea: #0c1317; --land: #1a242b; --border: #2e3d46;
   --train: #9db7cc; --night: #35c3cf; --ferry: #79a7dc; --accent: #ff7a3d; --warn: #e3a63b;
-  --missing: #5e6d74; color-scheme: dark }
+  --missing: #5e6d74; --day1: #1c5cab; --day2: #2a78d6; --day3: #5598e7; --day4: #86b6ef; --day5: #b7d3f6; --day6: #e3effc; color-scheme: dark }
 
 * { box-sizing: border-box }
 body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--body);
@@ -72,9 +74,15 @@ svg { display: block; width: 100%; height: auto }
 #route .halo { fill: none; stroke: var(--land); stroke-width: 8; stroke-linecap: round; opacity: 0.9 }
 .node { fill: var(--panel); stroke: var(--fg); stroke-width: 1.2 }
 .node.capital { fill: var(--fg) }
+.d1 { --day: var(--day1) } .d2 { --day: var(--day2) } .d3 { --day: var(--day3) }
+.d4 { --day: var(--day4) } .d5 { --day: var(--day5) } .d6 { --day: var(--day6) }
+.node.capital.day { fill: var(--day); stroke: var(--fg); stroke-width: 1 }
+.swatch { display: inline-block; width: 0.7em; height: 0.7em; border: 1px solid var(--fg); background: var(--day); vertical-align: 0.05em; margin-right: 6px }
+.daylegend { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 10px }
+.daylegend b { font-weight: 500; color: var(--fg) }
 .node.missing { fill: none; stroke: var(--missing); stroke-dasharray: 2 2 }
 .node.on { stroke: var(--accent); stroke-width: 2.4 }
-.node.target { fill: var(--accent); stroke: var(--accent) }
+#nodes .node.target { fill: var(--accent); stroke: var(--accent) }
 .hit { fill: transparent; stroke: none }
 .hit.go { cursor: pointer }
 .hit.go:hover, .hit.go:focus-visible { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); stroke-width: 1.5; outline: none }
@@ -151,7 +159,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>Day train</span>
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--night)" stroke-width="3"/></svg>Night train</span>
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>Ferry / local</span>
-        <span><svg viewBox="0 0 28 10"><rect x="9" y="0.5" width="9" height="9" fill="var(--fg)"/></svg>Capital</span>
+        <span class="daylegend" id="daylegend"></span>
         <span><svg viewBox="0 0 28 10"><circle cx="14" cy="5" r="4" fill="none" stroke="var(--missing)" stroke-dasharray="2 2"/></svg>No legs yet</span>
       </div>
       <section class="itin" aria-live="polite">
@@ -173,6 +181,11 @@ const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(SVG
 const slug = s => s.normalize("NFD").replace(/[^\w]/g, "").toLowerCase();
 const dur = m => `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")}`;
 const cls = l => l.mode === "ferry" || l.mode === "local" ? l.mode : (l.night ? "night" : "train");
+// arrival day: day 1 is the travel date; days 6 and later share the darkest colour
+const dayOf = r => Math.floor(r.arrive / 1440) + 1;
+const dayClass = r => Math.min(dayOf(r), 6);
+const dayDate = d => { const t = new Date(NET.start_date + "T12:00:00"); t.setDate(t.getDate() + d - 1);
+  return `${t.toLocaleDateString("en-GB", { weekday: "short" })} ${t.getDate()}.${t.getMonth() + 1}.`; };
 // label nudges for crowded spots: [dx, dy, anchor]
 const NUDGE = { Vatican: [-7, 10, "end"], Rome: [7, -4, "start"], Bratislava: [7, 10, "start"], Vienna: [-7, -5, "end"],
   Brussels: [-7, 4, "end"], Amsterdam: [-7, -4, "end"], Luxembourg: [7, -4, "start"], Paris: [-7, 4, "end"], Ankara: [-7, -6, "end"], Nicosia: [-7, -6, "end"], "The Hague": [-7, -2, "end"],
@@ -195,8 +208,9 @@ const nodesG = document.getElementById("nodes"), labelsG = document.getElementBy
 const nodeEls = {}, labelEls = {};
 for (const [name, p] of Object.entries(P)) {
   const kind = p.missing ? "missing" : p.capital ? "capital" : "place";
+  const rt = kind === "capital" && name !== NET.origin ? NET.routes.find(r => r.capital === name) : null;
   nodeEls[name] = kind === "capital"
-    ? el("rect", { x: p.x - 3.5, y: p.y - 3.5, width: 7, height: 7, class: `node ${kind}` }, nodesG)
+    ? el("rect", { x: p.x - 3.5, y: p.y - 3.5, width: 7, height: 7, class: `node ${kind}${rt ? " day d" + dayClass(rt) : ""}` }, nodesG)
     : el("circle", { cx: p.x, cy: p.y, r: kind === "missing" ? 4 : 2.6, class: `node ${kind}` }, nodesG);
   const t = el("text", { x: p.x + 7, y: p.y + 4, class: `lbl ${kind === "place" ? "small" : kind === "missing" ? "missing" : ""}` }, labelsG);
   t.textContent = name; labelEls[name] = t;
@@ -271,7 +285,7 @@ function hover(name) {
   if (r && !buttons[name]?.getAttribute("aria-pressed")?.includes("true"))
     for (const s of r.steps.filter(s => s.kind === "leg")) el("path", { d: curve(P[s.from], P[s.to]), class: "leg" }, previewG);
   tip.innerHTML = r
-    ? `<b>${name}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span> · arrive ${r.arrive_txt}<br>` +
+    ? `<b>${name}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span> · day ${dayOf(r)}, ${r.arrive_txt}<br>` +
       `${r.changes} change${r.changes === 1 ? "" : "s"} · ${r.hotel_nights} hotel night${r.hotel_nights === 1 ? "" : "s"}` +
       `${r.alternatives?.length ? ` · ${r.alternatives.length} alternative${r.alternatives.length > 1 ? "s" : ""}` : ""}` +
       `<br><span class="hint">Click for the itinerary</span>`
@@ -348,13 +362,16 @@ const buttons = {};
 for (const r of NET.routes) {
   const li = document.createElement("li"), b = document.createElement("button");
   b.type = "button"; b.setAttribute("aria-pressed", "false");
-  b.innerHTML = `<span class="cap">${r.capital}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
+  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="Arrives on day ${dayOf(r)}"></i>${r.capital}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
     <span class="when">${dur(r.door_to_door_min)}</span>
     <span class="bar"><i style="width:${(100 * r.door_to_door_min / maxMin).toFixed(1)}%"></i></span>
-    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Arrive ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
+    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Day ${dayOf(r)} · ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
   b.addEventListener("click", () => select(r.capital));
   li.appendChild(b); list.appendChild(li); buttons[r.capital] = b;
 }
+const maxDay = Math.min(6, Math.max(...NET.routes.map(dayClass)));
+document.getElementById("daylegend").innerHTML = `<b>Capital, arrives on</b>` + Array.from({ length: maxDay }, (_, i) => i + 1)
+  .map(d => `<span><i class="swatch d${d}"></i>day ${d}${d === 6 ? "+" : ""} <span class="dd">${d === 6 ? "" : dayDate(d)}</span></span>`).join("");
 const missing = [...NET.unreached, ...Object.keys(NET.not_covered)];
 document.getElementById("gaps").innerHTML = `<b>${missing.length} capitals not covered yet:</b> ${missing.join(", ")}.`;
 document.getElementById("meta").innerHTML =

@@ -192,7 +192,7 @@ def main():
                   "arr": fmt_clock(l.arr) if l.timed else None,
                   "duration": l.duration} for l in net.legs]
     (outdir / "network.json").write_text(json.dumps({
-        "origin": origin, "version": version, "places": net.places, "not_covered": net.not_covered,
+        "origin": origin, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "routes": routes, "city_routes": city_routes,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
                      "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
