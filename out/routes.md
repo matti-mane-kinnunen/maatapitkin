@@ -25,6 +25,7 @@ _travel date Mon 2.11.2026 · generated 30.10.2026. Change 10 min (more at some 
 | Rome | Mon 2.11. 17:35 | Wed 4.11. 16:40 | 47 h 05 min | 6 | 2 | 0 | fewest changes: 53 h 35 min, 5 ch., 0 hotel |
 | Ljubljana | Mon 2.11. 17:35 | Wed 4.11. 16:40 | 47 h 05 min | 5 | 2 | 0 |  |
 | Vatican | Mon 2.11. 17:35 | Wed 4.11. 17:15 | 47 h 40 min | 7 | 2 | 0 | fewest changes: 54 h 10 min, 6 ch., 0 hotel |
+| Monaco | Mon 2.11. 17:35 | Wed 4.11. 20:48 | 51 h 13 min | 8 | 1 | 0 | fewest changes: 61 h 08 min, 7 ch., 1 hotel |
 | Zagreb | Mon 2.11. 17:35 | Wed 4.11. 22:20 | 52 h 45 min | 6 | 2 | 0 |  |
 | Belgrade | Mon 2.11. 17:35 | Thu 5.11. 07:15 | 61 h 40 min | 9 | 2 | 1 (Subotica) | fewest changes: 69 h 40 min, 8 ch., 0 hotel |
 | Madrid | Mon 2.11. 17:35 | Thu 5.11. 08:50 | 63 h 15 min | 7 | 2 | 1 (Barcelona) |  |
@@ -67,11 +68,13 @@ _travel date Mon 2.11.2026 · generated 30.10.2026. Change 10 min (more at some 
 | Lyon | Wed 4.11. 12:56 | 43 h 21 min | 7 | 0 |
 | Marseille | Wed 4.11. 13:59 | 44 h 24 min | 7 | 0 |
 | Torino | Wed 4.11. 14:08 | 44 h 33 min | 6 | 0 |
+| Montpellier | Wed 4.11. 14:08 | 44 h 33 min | 7 | 0 |
 | Bordeaux | Wed 4.11. 14:14 | 44 h 39 min | 7 | 0 |
+| Genoa | Wed 4.11. 14:39 | 45 h 04 min | 6 | 0 |
 | Brest | Wed 4.11. 14:48 | 45 h 13 min | 7 | 0 |
-| The Hague | Wed 4.11. 14:53 | 45 h 18 min | 4 | 0 |
 | Florence | Wed 4.11. 15:04 | 45 h 29 min | 6 | 0 |
 | Bologna | Wed 4.11. 16:08 | 46 h 33 min | 5 | 0 |
+| Gdansk | Wed 4.11. 16:12 | 56 h 42 min | 6 | 2 |
 | Venice | Wed 4.11. 16:14 | 46 h 39 min | 6 | 0 |
 | Krakow | Wed 4.11. 16:27 | 56 h 57 min | 6 | 2 |
 | Hendaye | Wed 4.11. 17:04 | 47 h 29 min | 7 | 0 |
@@ -104,6 +107,7 @@ _travel date Mon 2.11.2026 · generated 30.10.2026. Change 10 min (more at some 
 | Algeciras | Thu 5.11. 16:54 | 71 h 19 min | 8 | 1 |
 | Galway | Thu 5.11. 17:39 | 72 h 04 min | 9 | 1 |
 | Abrantes | Thu 5.11. 20:52 | 75 h 17 min | 9 | 1 |
+| Porto | Fri 6.11. 01:43 | 80 h 08 min | 11 | 1 |
 | Faro | Fri 6.11. 11:27 | 89 h 52 min | 11 | 2 |
 | Sevilla | Fri 6.11. 11:28 | 89 h 53 min | 8 | 2 |
 | Patras | Fri 6.11. 13:30 | 91 h 55 min | 7 | 1 |
@@ -487,6 +491,39 @@ _Fewest changes: 54 h 10 min, arrive Wed 4.11. 23:45, 6 changes, 0 hotel nights_
 - Wed 4.11. 20:27 → Wed 4.11. 23:10  **Bologna → Rome**  FR
 - Wed 4.11. 23:25 → Wed 4.11. 23:45  **Rome → Vatican**  Metro line A
 
+### Monaco
+_Fastest: 51 h 13 min, arrive Wed 4.11. 20:48, 8 changes, 0 hotel nights_
+
+- Mon 2.11. 17:35 → Mon 2.11. 19:49  **Helsinki → Turku**  IC 963
+- Mon 2.11. 20:55 → Tue 3.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
+- Wait 1 h 53 min in Stockholm
+- Tue 3.11. 08:23 → Tue 3.11. 13:44  **Stockholm → Copenhagen**  SJ 525 + 1073
+- Tue 3.11. 14:22 → Tue 3.11. 19:01  **Copenhagen → Hamburg**  ECE 397
+- Wait 3 h 10 min in Hamburg
+- Tue 3.11. 22:11 → Wed 4.11. 06:39  **Hamburg → Offenburg**  ICE
+- Wed 4.11. 07:05 → Wed 4.11. 07:34  **Offenburg → Strasbourg**  RS4
+- Wed 4.11. 07:49 → Wed 4.11. 09:35  **Strasbourg → Paris**  TGV INOUI
+- Wait 4 h 35 min in Paris
+- Wed 4.11. 14:10 → Wed 4.11. 20:04  **Paris → Nice**  TGV INOUI
+- Wed 4.11. 20:23 → Wed 4.11. 20:48  **Nice → Monaco**  TER C3
+
+### Monaco — fewest changes
+_Fewest changes: 61 h 08 min, arrive Thu 5.11. 06:43, 7 changes, 1 hotel nights_
+
+- Mon 2.11. 17:35 → Mon 2.11. 19:49  **Helsinki → Turku**  IC 963
+- Mon 2.11. 20:55 → Tue 3.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
+- Wait 1 h 53 min in Stockholm
+- Tue 3.11. 08:23 → Tue 3.11. 13:44  **Stockholm → Copenhagen**  SJ 525 + 1073
+- Tue 3.11. 14:22 → Tue 3.11. 19:01  **Copenhagen → Hamburg**  ECE 397
+- Wait 3 h 10 min in Hamburg
+- Tue 3.11. 22:11 → Wed 4.11. 08:21  **Hamburg → Basel**  NJ 471  (night)
+- Wait 2 h 13 min in Basel
+- Wed 4.11. 10:34 → Wed 4.11. 13:38  **Basel → Paris**  TGV9210
+- Wait 2 h 32 min in Paris
+- Wed 4.11. 16:10 → Wed 4.11. 22:13  **Paris → Nice**  TGV INOUI
+- 🛏 Overnight in Nice (Wed 4.11. 22:13 → Thu 5.11. 06:18)
+- Thu 5.11. 06:18 → Thu 5.11. 06:43  **Nice → Monaco**  TER C3
+
 ### Zagreb
 _Fastest: 52 h 45 min, arrive Wed 4.11. 22:20, 6 changes, 0 hotel nights_
 
@@ -730,7 +767,6 @@ _Fastest: 139 h 41 min, arrive Sun 8.11. 13:16, 11 changes, 2 hotel nights_
 
 ## Capitals not reachable with the current legs
 
-- Monaco
 - Reykjavik
 - Sarajevo
 - Podgorica
@@ -744,5 +780,4 @@ _Fastest: 139 h 41 min, arrive Sun 8.11. 13:16, 11 changes, 2 hotel nights_
 
 ## Data issues
 
-- Amsterdam -> The Hague (THA9364): Same service id as Amsterdam-Paris 15:11 - probably a copy-paste
-- Patras -> Athens (C111E 1319): Departs 11:55 but the Bari ferry arrives 13:30 - no same-day connection
+- none

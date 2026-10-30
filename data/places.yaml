@@ -104,7 +104,6 @@ places:
   Aarhus: {lat: 56.150, lon: 10.205, country: "DK"}  # added by add_leg.py
   Porto: {lat: 41.149, lon: -8.585, country: "PT"}  # corrected by hand 31.10.2026
   Algeciras: {lat: 36.131, lon: -5.438, country: "ES"}  # added by add_leg.py
-  Tanger: {lat: 35.771, lon: -5.786, country: "MA"}  # added by add_leg.py
   Casablanca: {lat: 33.590, lon: -7.591, country: "MA"}  # corrected by hand 31.10.2026
   Marrakech: {lat: 31.631, lon: -8.017, country: "MA"}  # added by add_leg.py
   Mockava: {lat: 54.328, lon: 23.356, country: "LT"}  # added by add_leg.py
@@ -128,6 +127,7 @@ places:
   Hendaye: {lat: 43.353, lon: -1.782, country: "FR"}  # added by add_leg.py
   Irun: {lat: 43.340, lon: -1.801, country: "ES"}  # added by add_leg.py
   Donostia: {lat: 43.317, lon: -1.977, country: "ES", aliases: [San Sebastian, San Sebastián]}  # corrected by hand 31.10.2026
+  Gdansk: {lat: 54.410, lon: 18.572, country: "PL"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
