@@ -4,6 +4,8 @@ Overland journeys from Helsinki to the European capitals, by train, ferry and bu
 This started from a hand-made Graphviz graph (MaataPitkin v1.9, April 2023, kept in data/) and replaces it
 with data, a journey router and an interactive map.
 
+See DECISIONS.md for what was decided and why.
+
 ```
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs, valid_from/to
 data/places.yaml      coordinates, capitals, change times per station, routing settings
