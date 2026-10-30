@@ -9,6 +9,7 @@ data/places.yaml      coordinates, capitals, change times per station, routing s
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
 build.py              builds everything in out/
 check_timetables.py   re-checks the legs against Transitous and writes a report
+coverage_check.py     which European countries, links and ferries Transitous has timetables for
 add_leg.py            adds trains one at a time: "A -> B : train", looked up in Transitous
 src/journeys.py       loading, validation and the journey router
 src/make_map.py       interactive map page (out/map.html)
