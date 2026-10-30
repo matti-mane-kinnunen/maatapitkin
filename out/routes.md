@@ -35,6 +35,51 @@ _travel date Mon 2.11.2026 · generated 30.10.2026. Change 10 min (more at some 
 | Ankara ⚠ | Mon 2.11. 17:35 | Sat 7.11. 13:16 | 115 h 41 min | 10 | 4 | 1 (Sofia) |  |
 | Athens ⚠ | Mon 2.11. 17:35 | Sat 7.11. 15:19 | 117 h 44 min | 8 | 3 | 2 (Bari, Patras) |  |
 
+## Other cities
+
+| City | Arrive | Door to door | Changes | Hotel nights |
+|---|---|---|---|---|
+| Turku | Mon 2.11. 19:49 | 2 h 14 min | 0 | 0 |
+| Malmö | Tue 3.11. 11:53 | 18 h 18 min | 2 | 0 |
+| Hamburg | Tue 3.11. 19:01 | 25 h 26 min | 3 | 0 |
+| Bergen | Tue 3.11. 23:18 | 29 h 43 min | 3 | 0 |
+| Trondheim | Wed 4.11. 00:53 | 31 h 18 min | 3 | 0 |
+| Munich | Wed 4.11. 06:13 | 36 h 38 min | 4 | 0 |
+| Basel | Wed 4.11. 08:21 | 38 h 46 min | 4 | 0 |
+| Innsbruck | Wed 4.11. 09:18 | 39 h 43 min | 5 | 0 |
+| Milan | Wed 4.11. 12:53 | 43 h 18 min | 5 | 0 |
+| Frankfurt | Wed 4.11. 13:09 | 43 h 34 min | 3 | 0 |
+| The Hague | Wed 4.11. 14:53 | 45 h 18 min | 4 | 0 |
+| Florence | Wed 4.11. 15:04 | 45 h 29 min | 6 | 0 |
+| Strasbourg | Wed 4.11. 16:05 | 46 h 30 min | 4 | 0 |
+| Venice | Wed 4.11. 16:14 | 46 h 39 min | 6 | 0 |
+| Ancona | Wed 4.11. 17:34 | 47 h 59 min | 6 | 0 |
+| Toulouse | Wed 4.11. 19:26 | 49 h 51 min | 6 | 0 |
+| Krakow | Wed 4.11. 19:59 | 50 h 24 min | 5 | 1 |
+| Bologna | Wed 4.11. 20:16 | 50 h 41 min | 4 | 0 |
+| Bari | Wed 4.11. 21:30 | 51 h 55 min | 6 | 0 |
+| Barcelona | Wed 4.11. 21:32 | 51 h 57 min | 6 | 0 |
+| Marseille | Wed 4.11. 21:49 | 52 h 14 min | 5 | 0 |
+| Edinburgh | Wed 4.11. 22:20 | 52 h 45 min | 7 | 0 |
+| Holyhead | Wed 4.11. 23:02 | 53 h 27 min | 7 | 0 |
+| Glasgow | Wed 4.11. 23:13 | 53 h 38 min | 7 | 0 |
+| Split | Thu 5.11. 06:45 | 61 h 10 min | 7 | 0 |
+| Palermo | Thu 5.11. 11:27 | 65 h 52 min | 7 | 0 |
+| Syracuse | Thu 5.11. 11:29 | 65 h 54 min | 7 | 0 |
+| Malaga | Thu 5.11. 12:33 | 66 h 58 min | 8 | 1 |
+| Bordeaux | Thu 5.11. 14:14 | 68 h 39 min | 5 | 1 |
+| Pozzallo | Thu 5.11. 15:58 | 70 h 23 min | 8 | 0 |
+| Badajoz | Thu 5.11. 16:11 | 70 h 36 min | 8 | 1 |
+| Naples | Thu 5.11. 17:33 | 71 h 58 min | 7 | 1 |
+| Galway | Thu 5.11. 17:39 | 72 h 04 min | 9 | 1 |
+| Nice | Thu 5.11. 20:04 | 74 h 29 min | 6 | 1 |
+| Abrantes | Thu 5.11. 20:52 | 75 h 17 min | 9 | 1 |
+| Varna | Fri 6.11. 05:50 | 84 h 15 min | 9 | 0 |
+| Sevilla | Fri 6.11. 11:28 | 89 h 53 min | 8 | 2 |
+| Patras | Fri 6.11. 13:30 | 91 h 55 min | 7 | 1 |
+| Granada | Fri 6.11. 14:55 | 93 h 20 min | 9 | 2 |
+| Istanbul | Sat 7.11. 06:34 | 108 h 59 min | 9 | 1 |
+
 ## Itineraries
 
 ### Tallinn

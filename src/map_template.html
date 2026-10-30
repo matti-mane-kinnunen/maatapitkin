@@ -209,7 +209,9 @@ for (const [name, p] of Object.entries(P)) {
 const svgEl = document.getElementById("map"), tip = document.getElementById("tip");
 const previewG = document.getElementById("preview"), hitsG = document.getElementById("hits");
 const VB = svgEl.viewBox.baseVal;
-const routeOf = name => NET.routes.find(r => r.capital === name);
+const ALL_ROUTES = [...NET.routes, ...(NET.city_routes || [])];
+const routeOf = name => ALL_ROUTES.find(r => r.capital === name);
+let curStops = new Set();
 
 function hover(name) {
   const p = P[name], r = routeOf(name);
@@ -222,7 +224,9 @@ function hover(name) {
       `${r.alternatives?.length ? ` · ${r.alternatives.length} alternative${r.alternatives.length > 1 ? "s" : ""}` : ""}` +
       `<br><span class="hint">Click for the itinerary</span>`
     : name === NET.origin ? `<b>${name}</b><span class="hint">Every journey starts here</span>`
-    : `<b>${name}</b><span class="hint">No connections yet</span>`;
+    : P[name].missing ? `<b>${name}</b><span class="hint">No connections yet</span>`
+    : `<b>${name}</b><span class="hint">No journey from ${NET.origin} in the data</span>`;
+  if (!P[name].capital && !P[name].missing) labelEls[name].style.display = "";
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
   const x = p.x * k, y = p.y * k;
   tip.hidden = false;
@@ -230,9 +234,15 @@ function hover(name) {
   tip.style.left = `${Math.max(4, Math.min(box.width - w - 4, x > box.width / 2 ? x - w - 14 : x + 14))}px`;
   tip.style.top = `${Math.max(4, Math.min(box.height - h - 4, y - h / 2))}px`;
 }
-function unhover() { tip.hidden = true; previewG.replaceChildren(); }
+let hovered = null;
+function unhover() {
+  tip.hidden = true; previewG.replaceChildren();
+  for (const [n, t] of Object.entries(labelEls))
+    if (!P[n].capital && !P[n].missing) t.style.display = curStops.has(n) ? "" : "none";
+}
 
-const hitNames = Object.keys(P).filter(n => P[n].capital || P[n].missing || n === NET.origin);
+const isMain = n => P[n].capital || P[n].missing || n === NET.origin;
+const hitNames = [...Object.keys(P).filter(isMain), ...Object.keys(P).filter(n => !isMain(n))];
 const placed = [];
 for (const name of hitNames) {
   const p = P[name];
@@ -241,19 +251,21 @@ for (const name of hitNames) {
   // (the Vatican on Rome) gets its target on its name label instead
   let cx = p.x, cy = p.y;
   const near = q => Math.hypot(q.x - cx, q.y - cy);
-  if (placed.some(q => near(q) < 6)) {
+  if (isMain(name) && placed.some(q => near(q) < 6)) {
     const bb = labelEls[name].getBBox();
     cx = bb.x + bb.width / 2; cy = bb.y + bb.height / 2;
   }
   const d = Math.min(24, ...placed.map(near), ...hitNames.filter(n => n !== name).map(n => Math.hypot(P[n].x - cx, P[n].y - cy)));
-  const h = el("circle", { cx, cy, r: Math.max(5, Math.min(12, d / 2)), class: r ? "hit go" : "hit" }, hitsG);
+  const size = isMain(name) ? [5, 12] : [4, 9];
+  const h = el("circle", { cx, cy, r: Math.max(size[0], Math.min(size[1], d / 2)),
+                           class: (r ? "hit go" : "hit") + (isMain(name) ? "" : " city") }, hitsG);
   placed.push({ x: cx, y: cy });
   if (r) {
     h.setAttribute("tabindex", "0"); h.setAttribute("role", "button");
     h.setAttribute("aria-label", `${name}: ${dur(r.door_to_door_min)}, show itinerary`);
     h.addEventListener("click", () => { unhover(); select(name, 0, true); });
     h.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(name, 0, true); } });
-    labelEls[name].addEventListener("click", () => { unhover(); select(name, 0, true); });
+    if (isMain(name)) labelEls[name].addEventListener("click", () => { unhover(); select(name, 0, true); });
   }
   for (const t of [h, labelEls[name]]) {
     t.addEventListener("mouseenter", () => hover(name));
@@ -289,7 +301,7 @@ document.getElementById("foot").textContent =
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
 
 function select(cap, opt = 0, fromMap = false) {
-  const r0 = NET.routes.find(x => x.capital === cap); if (!r0) return;
+  const r0 = routeOf(cap); if (!r0) return;
   const options = [r0, ...(r0.alternatives || [])];
   const r = options[Math.min(opt, options.length - 1)];
   const optsEl = document.getElementById("opts"); optsEl.replaceChildren();
@@ -304,6 +316,7 @@ function select(cap, opt = 0, fromMap = false) {
   routeG.replaceChildren();
   const legs = r.steps.filter(s => s.kind === "leg");
   const stops = new Set([legs[0].from, ...legs.map(s => s.to)]);
+  curStops = stops;
   for (const s of legs) {
     const d = curve(P[s.from], P[s.to]);
     el("path", { d, class: "halo" }, routeG);
@@ -349,7 +362,7 @@ function select(cap, opt = 0, fromMap = false) {
 
 function fromHash() {
   const h = location.hash.slice(1);
-  const r = NET.routes.find(x => slug(x.capital) === h);
+  const r = ALL_ROUTES.find(x => slug(x.capital) === h);
   select(r ? r.capital : "Paris");
 }
 window.addEventListener("hashchange", fromHash);

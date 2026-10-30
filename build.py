@@ -186,29 +186,42 @@ def main():
     front = router.pareto(origin, start)
     router.search(origin, start, "fastest")          # the graph and main table use the fastest
 
-    routes, fastest_legs, unreached = [], set(), []
-    for cap in net.capitals:
-        if cap == origin:
-            continue
-        r = build_route(cap)
+    def journey_with_alternatives(place: str) -> dict | None:
+        r = build_route(place)
         if not r:
-            unreached.append(cap)
-            continue
-        fastest_legs.update(x["i"] for x in r["steps"] if x["kind"] == "leg")
+            return None
         r["label"] = "Fastest"
+        r["capital"] = place                     # the destination's name (capital or not)
+        r["is_capital"] = bool(net.places[place].get("capital"))
         r["alternatives"], seen = [], [r["signature"]]
         for name, field_, order in ALTERNATIVES:
-            ok = [l for l in front.get(cap, []) if l[2] <= r["arrive"] + max_extra]
+            ok = [l for l in front.get(place, []) if l[2] <= r["arrive"] + max_extra]
             if not ok:
                 continue
             c, h, t, lid = min(ok, key=lambda l: order(*l[:3]))
-            alt = build_route(cap, router.pareto_journey(lid))
+            alt = build_route(place, router.pareto_journey(lid))
             if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
                 alt["label"] = name
                 r["alternatives"].append(alt)
                 seen.append(alt["signature"])
-        routes.append(r)
+        return r
+
+    routes, city_routes, fastest_legs, unreached = [], [], set(), []
+    for place in net.places:
+        if place == origin:
+            continue
+        r = journey_with_alternatives(place)
+        if r is None:
+            if net.places[place].get("capital"):
+                unreached.append(place)
+            continue
+        if r["is_capital"]:
+            fastest_legs.update(x["i"] for x in r["steps"] if x["kind"] == "leg")
+            routes.append(r)
+        else:
+            city_routes.append(r)
     routes.sort(key=lambda r: r["arrive"])
+    city_routes.sort(key=lambda r: r["arrive"])
 
     # --- Graphviz -----------------------------------------------------------
     dot = make_dot(net, router, fastest_legs, version, not args.no_emphasis)
@@ -234,6 +247,10 @@ def main():
                   f"{fmt_dur(r['door_to_door_min'])} | {r['changes']} | {r['nights_on_board']} | {where} | "
                   + "; ".join(f"{a['label'].lower()}: {fmt_dur(a['door_to_door_min'])}, {a['changes']} ch., "
                               f"{a['hotel_nights']} hotel" for a in r["alternatives"]) + " |")
+    md += ["", "## Other cities", "", "| City | Arrive | Door to door | Changes | Hotel nights |", "|---|---|---|---|---|"]
+    for r in city_routes:
+        md.append(f"| {r['capital']} | {r['arrive_txt']} | {fmt_dur(r['door_to_door_min'])} | "
+                  f"{r['changes']} | {r['hotel_nights']} |")
     md += ["", "## Itineraries", ""]
 
     def summary(x):
@@ -268,7 +285,7 @@ def main():
                   "duration": l.duration} for l in net.legs]
     (outdir / "network.json").write_text(json.dumps({
         "origin": origin, "version": version, "places": net.places, "not_covered": net.not_covered,
-        "legs": legs_json, "routes": routes,
+        "legs": legs_json, "routes": routes, "city_routes": city_routes,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
                      "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
                      "morning": fmt_clock(router.morning)}, "unreached": unreached, "warnings": warnings,

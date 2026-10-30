@@ -3962,6 +3962,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -4029,6 +4030,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -4152,6 +4154,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": [
     {
      "capital": "Copenhagen",
@@ -4342,6 +4345,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -4493,6 +4497,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -4672,6 +4677,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -4851,6 +4857,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -4974,6 +4981,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -5155,6 +5163,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -5334,6 +5343,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": [
     {
      "capital": "Paris",
@@ -5692,6 +5702,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -5899,6 +5910,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -6080,6 +6092,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -6287,6 +6300,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": [
     {
      "capital": "London",
@@ -6645,6 +6659,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -6796,6 +6811,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -7031,6 +7047,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -7182,6 +7199,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -7445,6 +7463,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -7682,6 +7701,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -7917,6 +7937,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -8180,6 +8201,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -8473,6 +8495,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -8736,6 +8759,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -9027,6 +9051,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -9318,6 +9343,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -9639,6 +9665,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -9902,6 +9929,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -10223,6 +10251,7 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
    "alternatives": []
   },
   {
@@ -10489,6 +10518,8405 @@
     }
    ],
    "label": "Fastest",
+   "is_capital": true,
+   "alternatives": []
+  }
+ ],
+ "city_routes": [
+  {
+   "capital": "Turku",
+   "depart": 1055,
+   "arrive": 1189,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Mon 2.11. 19:49",
+   "door_to_door_min": 134,
+   "changes": 0,
+   "nights_on_board": 0,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Malmö",
+   "depart": 1055,
+   "arrive": 2153,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Tue 3.11. 11:53",
+   "door_to_door_min": 1098,
+   "changes": 2,
+   "nights_on_board": 1,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     83,
+     1882
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 07:22",
+     "minutes": 52,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 83,
+     "from": "Stockholm",
+     "to": "Malmö",
+     "service": "X2 523",
+     "mode": "train",
+     "night": false,
+     "dep": 1882,
+     "arr": 2153,
+     "dep_txt": "Tue 3.11. 07:22",
+     "arr_txt": "Tue 3.11. 11:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Hamburg",
+   "depart": 1055,
+   "arrive": 2581,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Tue 3.11. 19:01",
+   "door_to_door_min": 1526,
+   "changes": 3,
+   "nights_on_board": 1,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": [
+    {
+     "capital": "Hamburg",
+     "depart": 1055,
+     "arrive": 3233,
+     "depart_txt": "Mon 2.11. 17:35",
+     "arrive_txt": "Wed 4.11. 05:53",
+     "door_to_door_min": 2178,
+     "changes": 2,
+     "nights_on_board": 2,
+     "hotel_nights": 0,
+     "stays": [],
+     "has_issue": false,
+     "signature": [
+      [
+       1,
+       1055
+      ],
+      [
+       2,
+       1255
+      ],
+      [
+       3,
+       2489
+      ]
+     ],
+     "steps": [
+      {
+       "kind": "leg",
+       "i": 1,
+       "from": "Helsinki",
+       "to": "Turku",
+       "service": "IC 963",
+       "mode": "train",
+       "night": false,
+       "dep": 1055,
+       "arr": 1189,
+       "dep_txt": "Mon 2.11. 17:35",
+       "arr_txt": "Mon 2.11. 19:49",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Turku",
+       "from_t": "Mon 2.11. 19:49",
+       "to_t": "Mon 2.11. 20:55",
+       "minutes": 66,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 2,
+       "from": "Turku",
+       "to": "Stockholm",
+       "service": "Viking Line",
+       "mode": "ferry",
+       "night": true,
+       "dep": 1255,
+       "arr": 1830,
+       "dep_txt": "Mon 2.11. 20:55",
+       "arr_txt": "Tue 3.11. 06:30",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Stockholm",
+       "from_t": "Tue 3.11. 06:30",
+       "to_t": "Tue 3.11. 17:29",
+       "minutes": 659,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 3,
+       "from": "Stockholm",
+       "to": "Hamburg",
+       "service": "EN 345",
+       "mode": "train",
+       "night": true,
+       "dep": 2489,
+       "arr": 3233,
+       "dep_txt": "Tue 3.11. 17:29",
+       "arr_txt": "Wed 4.11. 05:53",
+       "timed": true,
+       "issue": null,
+       "note": null
+      }
+     ],
+     "label": "Fewest changes"
+    }
+   ]
+  },
+  {
+   "capital": "Bergen",
+   "depart": 1055,
+   "arrive": 2838,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Tue 3.11. 23:18",
+   "door_to_door_min": 1783,
+   "changes": 3,
+   "nights_on_board": 1,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     5,
+     2069
+    ],
+    [
+     6,
+     2423
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 10:29",
+     "minutes": 239,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 5,
+     "from": "Stockholm",
+     "to": "Oslo",
+     "service": "629",
+     "mode": "train",
+     "night": false,
+     "dep": 2069,
+     "arr": 2408,
+     "dep_txt": "Tue 3.11. 10:29",
+     "arr_txt": "Tue 3.11. 16:08",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Oslo",
+     "from_t": "Tue 3.11. 16:08",
+     "to_t": "Tue 3.11. 16:23",
+     "minutes": 15,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 6,
+     "from": "Oslo",
+     "to": "Bergen",
+     "service": "F4",
+     "mode": "train",
+     "night": false,
+     "dep": 2423,
+     "arr": 2838,
+     "dep_txt": "Tue 3.11. 16:23",
+     "arr_txt": "Tue 3.11. 23:18",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Trondheim",
+   "depart": 1055,
+   "arrive": 2933,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 00:53",
+   "door_to_door_min": 1878,
+   "changes": 3,
+   "nights_on_board": 1,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     5,
+     2069
+    ],
+    [
+     7,
+     2522
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 10:29",
+     "minutes": 239,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 5,
+     "from": "Stockholm",
+     "to": "Oslo",
+     "service": "629",
+     "mode": "train",
+     "night": false,
+     "dep": 2069,
+     "arr": 2408,
+     "dep_txt": "Tue 3.11. 10:29",
+     "arr_txt": "Tue 3.11. 16:08",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Oslo",
+     "from_t": "Tue 3.11. 16:08",
+     "to_t": "Tue 3.11. 18:02",
+     "minutes": 114,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 7,
+     "from": "Oslo",
+     "to": "Trondheim",
+     "service": "R51",
+     "mode": "train",
+     "night": false,
+     "dep": 2522,
+     "arr": 2933,
+     "dep_txt": "Tue 3.11. 18:02",
+     "arr_txt": "Wed 4.11. 00:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Munich",
+   "depart": 1055,
+   "arrive": 3253,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 06:13",
+   "door_to_door_min": 2198,
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     29,
+     2650
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 20:10",
+     "minutes": 69,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 29,
+     "from": "Hamburg",
+     "to": "Munich",
+     "service": "NJ 40491",
+     "mode": "train",
+     "night": true,
+     "dep": 2650,
+     "arr": 3253,
+     "dep_txt": "Tue 3.11. 20:10",
+     "arr_txt": "Wed 4.11. 06:13",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": [
+    {
+     "capital": "Munich",
+     "depart": 1055,
+     "arrive": 3661,
+     "depart_txt": "Mon 2.11. 17:35",
+     "arrive_txt": "Wed 4.11. 13:01",
+     "door_to_door_min": 2606,
+     "changes": 3,
+     "nights_on_board": 2,
+     "hotel_nights": 0,
+     "stays": [],
+     "has_issue": false,
+     "signature": [
+      [
+       1,
+       1055
+      ],
+      [
+       2,
+       1255
+      ],
+      [
+       3,
+       2489
+      ],
+      [
+       17,
+       3301
+      ]
+     ],
+     "steps": [
+      {
+       "kind": "leg",
+       "i": 1,
+       "from": "Helsinki",
+       "to": "Turku",
+       "service": "IC 963",
+       "mode": "train",
+       "night": false,
+       "dep": 1055,
+       "arr": 1189,
+       "dep_txt": "Mon 2.11. 17:35",
+       "arr_txt": "Mon 2.11. 19:49",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Turku",
+       "from_t": "Mon 2.11. 19:49",
+       "to_t": "Mon 2.11. 20:55",
+       "minutes": 66,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 2,
+       "from": "Turku",
+       "to": "Stockholm",
+       "service": "Viking Line",
+       "mode": "ferry",
+       "night": true,
+       "dep": 1255,
+       "arr": 1830,
+       "dep_txt": "Mon 2.11. 20:55",
+       "arr_txt": "Tue 3.11. 06:30",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Stockholm",
+       "from_t": "Tue 3.11. 06:30",
+       "to_t": "Tue 3.11. 17:29",
+       "minutes": 659,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 3,
+       "from": "Stockholm",
+       "to": "Hamburg",
+       "service": "EN 345",
+       "mode": "train",
+       "night": true,
+       "dep": 2489,
+       "arr": 3233,
+       "dep_txt": "Tue 3.11. 17:29",
+       "arr_txt": "Wed 4.11. 05:53",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Hamburg",
+       "from_t": "Wed 4.11. 05:53",
+       "to_t": "Wed 4.11. 07:01",
+       "minutes": 68,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 17,
+       "from": "Hamburg",
+       "to": "Munich",
+       "service": "ICE583",
+       "mode": "train",
+       "night": false,
+       "dep": 3301,
+       "arr": 3661,
+       "dep_txt": "Wed 4.11. 07:01",
+       "arr_txt": "Wed 4.11. 13:01",
+       "timed": true,
+       "issue": null,
+       "note": null
+      }
+     ],
+     "label": "Fewest changes"
+    }
+   ]
+  },
+  {
+   "capital": "Basel",
+   "depart": 1055,
+   "arrive": 3381,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 08:21",
+   "door_to_door_min": 2326,
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Innsbruck",
+   "depart": 1055,
+   "arrive": 3438,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 09:18",
+   "door_to_door_min": 2383,
+   "changes": 5,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     29,
+     2650
+    ],
+    [
+     30,
+     3323
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 20:10",
+     "minutes": 69,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 29,
+     "from": "Hamburg",
+     "to": "Munich",
+     "service": "NJ 40491",
+     "mode": "train",
+     "night": true,
+     "dep": 2650,
+     "arr": 3253,
+     "dep_txt": "Tue 3.11. 20:10",
+     "arr_txt": "Wed 4.11. 06:13",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Munich",
+     "from_t": "Wed 4.11. 06:13",
+     "to_t": "Wed 4.11. 07:23",
+     "minutes": 70,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 30,
+     "from": "Munich",
+     "to": "Innsbruck",
+     "service": "EC 81",
+     "mode": "train",
+     "night": false,
+     "dep": 3323,
+     "arr": 3438,
+     "dep_txt": "Wed 4.11. 07:23",
+     "arr_txt": "Wed 4.11. 09:18",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Milan",
+   "depart": 1055,
+   "arrive": 3653,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 12:53",
+   "door_to_door_min": 2598,
+   "changes": 5,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Frankfurt",
+   "depart": 1055,
+   "arrive": 3669,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 13:09",
+   "door_to_door_min": 2614,
+   "changes": 3,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     12,
+     3388
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 08:28",
+     "minutes": 155,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 12,
+     "from": "Hamburg",
+     "to": "Frankfurt",
+     "service": "ICE1577",
+     "mode": "train",
+     "night": false,
+     "dep": 3388,
+     "arr": 3669,
+     "dep_txt": "Wed 4.11. 08:28",
+     "arr_txt": "Wed 4.11. 13:09",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "The Hague",
+   "depart": 1055,
+   "arrive": 3773,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 14:53",
+   "door_to_door_min": 2718,
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": true,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     19,
+     3345
+    ],
+    [
+     24,
+     3703
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 07:45",
+     "minutes": 112,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 19,
+     "from": "Hamburg",
+     "to": "Amsterdam",
+     "service": "ICE 517 + RE1 + ICE 128",
+     "mode": "train",
+     "night": false,
+     "dep": 3345,
+     "arr": 3689,
+     "dep_txt": "Wed 4.11. 07:45",
+     "arr_txt": "Wed 4.11. 13:29",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Amsterdam",
+     "from_t": "Wed 4.11. 13:29",
+     "to_t": "Wed 4.11. 13:43",
+     "minutes": 14,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 24,
+     "from": "Amsterdam",
+     "to": "The Hague",
+     "service": "THA9364",
+     "mode": "train",
+     "night": false,
+     "dep": 3703,
+     "arr": 3773,
+     "dep_txt": "Wed 4.11. 13:43",
+     "arr_txt": "Wed 4.11. 14:53",
+     "timed": true,
+     "issue": "Same service id as Amsterdam-Paris 15:11 - probably a copy-paste",
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Florence",
+   "depart": 1055,
+   "arrive": 3784,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 15:04",
+   "door_to_door_min": 2729,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     44,
+     3670
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 13:10",
+     "minutes": 17,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 44,
+     "from": "Milan",
+     "to": "Florence",
+     "service": "FR 9539",
+     "mode": "train",
+     "night": false,
+     "dep": 3670,
+     "arr": 3784,
+     "dep_txt": "Wed 4.11. 13:10",
+     "arr_txt": "Wed 4.11. 15:04",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Strasbourg",
+   "depart": 1055,
+   "arrive": 3845,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 16:05",
+   "door_to_door_min": 2790,
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     12,
+     3388
+    ],
+    [
+     13,
+     3722
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 08:28",
+     "minutes": 155,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 12,
+     "from": "Hamburg",
+     "to": "Frankfurt",
+     "service": "ICE1577",
+     "mode": "train",
+     "night": false,
+     "dep": 3388,
+     "arr": 3669,
+     "dep_txt": "Wed 4.11. 08:28",
+     "arr_txt": "Wed 4.11. 13:09",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Frankfurt",
+     "from_t": "Wed 4.11. 13:09",
+     "to_t": "Wed 4.11. 14:02",
+     "minutes": 53,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 13,
+     "from": "Frankfurt",
+     "to": "Strasbourg",
+     "service": "ICE 9580",
+     "mode": "train",
+     "night": false,
+     "dep": 3722,
+     "arr": 3845,
+     "dep_txt": "Wed 4.11. 14:02",
+     "arr_txt": "Wed 4.11. 16:05",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Venice",
+   "depart": 1055,
+   "arrive": 3854,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 16:14",
+   "door_to_door_min": 2799,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     41,
+     3705
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 13:45",
+     "minutes": 52,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 41,
+     "from": "Milan",
+     "to": "Venice",
+     "service": "FR9731",
+     "mode": "train",
+     "night": false,
+     "dep": 3705,
+     "arr": 3854,
+     "dep_txt": "Wed 4.11. 13:45",
+     "arr_txt": "Wed 4.11. 16:14",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Ancona",
+   "depart": 1055,
+   "arrive": 3934,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 17:34",
+   "door_to_door_min": 2879,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     45,
+     3755
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 14:35",
+     "minutes": 102,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 45,
+     "from": "Milan",
+     "to": "Ancona",
+     "service": "FR 8813",
+     "mode": "train",
+     "night": false,
+     "dep": 3755,
+     "arr": 3934,
+     "dep_txt": "Wed 4.11. 14:35",
+     "arr_txt": "Wed 4.11. 17:34",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Toulouse",
+   "depart": 1055,
+   "arrive": 4046,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 19:26",
+   "door_to_door_min": 2991,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     54,
+     3788
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 15:08",
+     "minutes": 90,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 54,
+     "from": "Paris",
+     "to": "Toulouse",
+     "service": "TGV8509",
+     "mode": "train",
+     "night": false,
+     "dep": 3788,
+     "arr": 4046,
+     "dep_txt": "Wed 4.11. 15:08",
+     "arr_txt": "Wed 4.11. 19:26",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Krakow",
+   "depart": 1055,
+   "arrive": 4079,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 19:59",
+   "door_to_door_min": 3024,
+   "changes": 5,
+   "nights_on_board": 1,
+   "hotel_nights": 1,
+   "stays": [
+    "Berlin"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     10,
+     2674
+    ],
+    [
+     28,
+     3644
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 20:34",
+     "minutes": 93,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 10,
+     "from": "Hamburg",
+     "to": "Berlin",
+     "service": "ICE 609",
+     "mode": "train",
+     "night": false,
+     "dep": 2674,
+     "arr": 2782,
+     "dep_txt": "Tue 3.11. 20:34",
+     "arr_txt": "Tue 3.11. 22:22",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Berlin",
+     "from_t": "Tue 3.11. 22:22",
+     "to_t": "Wed 4.11. 12:44",
+     "minutes": 862,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 28,
+     "from": "Berlin",
+     "to": "Krakow",
+     "service": "EC 57",
+     "mode": "train",
+     "night": false,
+     "dep": 3644,
+     "arr": 4079,
+     "dep_txt": "Wed 4.11. 12:44",
+     "arr_txt": "Wed 4.11. 19:59",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Bologna",
+   "depart": 1055,
+   "arrive": 4096,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 20:16",
+   "door_to_door_min": 3041,
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     17,
+     3301
+    ],
+    [
+     18,
+     3682
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 07:01",
+     "minutes": 68,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 17,
+     "from": "Hamburg",
+     "to": "Munich",
+     "service": "ICE583",
+     "mode": "train",
+     "night": false,
+     "dep": 3301,
+     "arr": 3661,
+     "dep_txt": "Wed 4.11. 07:01",
+     "arr_txt": "Wed 4.11. 13:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Munich",
+     "from_t": "Wed 4.11. 13:01",
+     "to_t": "Wed 4.11. 13:22",
+     "minutes": 21,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 18,
+     "from": "Munich",
+     "to": "Bologna",
+     "service": "EC 87",
+     "mode": "train",
+     "night": false,
+     "dep": 3682,
+     "arr": 4096,
+     "dep_txt": "Wed 4.11. 13:22",
+     "arr_txt": "Wed 4.11. 20:16",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Bari",
+   "depart": 1055,
+   "arrive": 4170,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 21:30",
+   "door_to_door_min": 3115,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     46,
+     3755
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 14:35",
+     "minutes": 102,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 46,
+     "from": "Milan",
+     "to": "Bari",
+     "service": "FR 8813",
+     "mode": "train",
+     "night": false,
+     "dep": 3755,
+     "arr": 4170,
+     "dep_txt": "Wed 4.11. 14:35",
+     "arr_txt": "Wed 4.11. 21:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Barcelona",
+   "depart": 1055,
+   "arrive": 4172,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 21:32",
+   "door_to_door_min": 3117,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3762
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 14:42",
+     "minutes": 64,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 49,
+     "from": "Paris",
+     "to": "Barcelona",
+     "service": "TGV INOUI 9715",
+     "mode": "train",
+     "night": false,
+     "dep": 3762,
+     "arr": 4172,
+     "dep_txt": "Wed 4.11. 14:42",
+     "arr_txt": "Wed 4.11. 21:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Marseille",
+   "depart": 1055,
+   "arrive": 4189,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 21:49",
+   "door_to_door_min": 3134,
+   "changes": 5,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     12,
+     3388
+    ],
+    [
+     13,
+     3722
+    ],
+    [
+     15,
+     3855
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 08:28",
+     "minutes": 155,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 12,
+     "from": "Hamburg",
+     "to": "Frankfurt",
+     "service": "ICE1577",
+     "mode": "train",
+     "night": false,
+     "dep": 3388,
+     "arr": 3669,
+     "dep_txt": "Wed 4.11. 08:28",
+     "arr_txt": "Wed 4.11. 13:09",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Frankfurt",
+     "from_t": "Wed 4.11. 13:09",
+     "to_t": "Wed 4.11. 14:02",
+     "minutes": 53,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 13,
+     "from": "Frankfurt",
+     "to": "Strasbourg",
+     "service": "ICE 9580",
+     "mode": "train",
+     "night": false,
+     "dep": 3722,
+     "arr": 3845,
+     "dep_txt": "Wed 4.11. 14:02",
+     "arr_txt": "Wed 4.11. 16:05",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Strasbourg",
+     "from_t": "Wed 4.11. 16:05",
+     "to_t": "Wed 4.11. 16:15",
+     "minutes": 10,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 15,
+     "from": "Strasbourg",
+     "to": "Marseille",
+     "service": "ICE 9580",
+     "mode": "train",
+     "night": false,
+     "dep": 3855,
+     "arr": 4189,
+     "dep_txt": "Wed 4.11. 16:15",
+     "arr_txt": "Wed 4.11. 21:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Edinburgh",
+   "depart": 1055,
+   "arrive": 4220,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 22:20",
+   "door_to_door_min": 3165,
+   "changes": 7,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3786
+    ],
+    [
+     55,
+     3960
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 15:06",
+     "minutes": 88,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 50,
+     "from": "Paris",
+     "to": "London",
+     "service": "EST 9039",
+     "mode": "train",
+     "night": false,
+     "dep": 3786,
+     "arr": 3870,
+     "dep_txt": "Wed 4.11. 15:06",
+     "arr_txt": "Wed 4.11. 16:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "London",
+     "from_t": "Wed 4.11. 16:30",
+     "to_t": "Wed 4.11. 18:00",
+     "minutes": 90,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 55,
+     "from": "London",
+     "to": "Edinburgh",
+     "service": "R",
+     "mode": "train",
+     "night": false,
+     "dep": 3960,
+     "arr": 4220,
+     "dep_txt": "Wed 4.11. 18:00",
+     "arr_txt": "Wed 4.11. 22:20",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Holyhead",
+   "depart": 1055,
+   "arrive": 4262,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 23:02",
+   "door_to_door_min": 3207,
+   "changes": 7,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3786
+    ],
+    [
+     57,
+     4022
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 15:06",
+     "minutes": 88,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 50,
+     "from": "Paris",
+     "to": "London",
+     "service": "EST 9039",
+     "mode": "train",
+     "night": false,
+     "dep": 3786,
+     "arr": 3870,
+     "dep_txt": "Wed 4.11. 15:06",
+     "arr_txt": "Wed 4.11. 16:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "London",
+     "from_t": "Wed 4.11. 16:30",
+     "to_t": "Wed 4.11. 19:02",
+     "minutes": 152,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 57,
+     "from": "London",
+     "to": "Holyhead",
+     "service": "Avanti VT4390",
+     "mode": "train",
+     "night": false,
+     "dep": 4022,
+     "arr": 4262,
+     "dep_txt": "Wed 4.11. 19:02",
+     "arr_txt": "Wed 4.11. 23:02",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Glasgow",
+   "depart": 1055,
+   "arrive": 4273,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Wed 4.11. 23:13",
+   "door_to_door_min": 3218,
+   "changes": 7,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3786
+    ],
+    [
+     56,
+     3990
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 15:06",
+     "minutes": 88,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 50,
+     "from": "Paris",
+     "to": "London",
+     "service": "EST 9039",
+     "mode": "train",
+     "night": false,
+     "dep": 3786,
+     "arr": 3870,
+     "dep_txt": "Wed 4.11. 15:06",
+     "arr_txt": "Wed 4.11. 16:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "London",
+     "from_t": "Wed 4.11. 16:30",
+     "to_t": "Wed 4.11. 18:30",
+     "minutes": 120,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 56,
+     "from": "London",
+     "to": "Glasgow",
+     "service": "Avanti VT6300",
+     "mode": "train",
+     "night": false,
+     "dep": 3990,
+     "arr": 4273,
+     "dep_txt": "Wed 4.11. 18:30",
+     "arr_txt": "Wed 4.11. 23:13",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Split",
+   "depart": 1055,
+   "arrive": 4725,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 06:45",
+   "door_to_door_min": 3670,
+   "changes": 7,
+   "nights_on_board": 3,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     45,
+     3755
+    ],
+    [
+     78,
+     4065
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 14:35",
+     "minutes": 102,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 45,
+     "from": "Milan",
+     "to": "Ancona",
+     "service": "FR 8813",
+     "mode": "train",
+     "night": false,
+     "dep": 3755,
+     "arr": 3934,
+     "dep_txt": "Wed 4.11. 14:35",
+     "arr_txt": "Wed 4.11. 17:34",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Ancona",
+     "from_t": "Wed 4.11. 17:34",
+     "to_t": "Wed 4.11. 19:45",
+     "minutes": 131,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 78,
+     "from": "Ancona",
+     "to": "Split",
+     "service": "Croatia Ferry 53",
+     "mode": "ferry",
+     "night": true,
+     "dep": 4065,
+     "arr": 4725,
+     "dep_txt": "Wed 4.11. 19:45",
+     "arr_txt": "Thu 5.11. 06:45",
+     "timed": true,
+     "issue": null,
+     "note": "Not all days every month"
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Palermo",
+   "depart": 1055,
+   "arrive": 5007,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 11:27",
+   "door_to_door_min": 3952,
+   "changes": 7,
+   "nights_on_board": 3,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     217,
+     3690
+    ],
+    [
+     58,
+     4260
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 13:30",
+     "minutes": 37,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 217,
+     "from": "Milan",
+     "to": "Rome",
+     "service": "FR",
+     "mode": "train",
+     "night": false,
+     "dep": 3690,
+     "arr": 3880,
+     "dep_txt": "Wed 4.11. 13:30",
+     "arr_txt": "Wed 4.11. 16:40",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Rome",
+     "from_t": "Wed 4.11. 16:40",
+     "to_t": "Wed 4.11. 23:00",
+     "minutes": 380,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 58,
+     "from": "Rome",
+     "to": "Palermo",
+     "service": "ICN1959",
+     "mode": "train",
+     "night": true,
+     "dep": 4260,
+     "arr": 5007,
+     "dep_txt": "Wed 4.11. 23:00",
+     "arr_txt": "Thu 5.11. 11:27",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Syracuse",
+   "depart": 1055,
+   "arrive": 5009,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 11:29",
+   "door_to_door_min": 3954,
+   "changes": 7,
+   "nights_on_board": 3,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     217,
+     3690
+    ],
+    [
+     59,
+     4260
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 13:30",
+     "minutes": 37,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 217,
+     "from": "Milan",
+     "to": "Rome",
+     "service": "FR",
+     "mode": "train",
+     "night": false,
+     "dep": 3690,
+     "arr": 3880,
+     "dep_txt": "Wed 4.11. 13:30",
+     "arr_txt": "Wed 4.11. 16:40",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Rome",
+     "from_t": "Wed 4.11. 16:40",
+     "to_t": "Wed 4.11. 23:00",
+     "minutes": 380,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 59,
+     "from": "Rome",
+     "to": "Syracuse",
+     "service": "ICN1959",
+     "mode": "train",
+     "night": true,
+     "dep": 4260,
+     "arr": 5009,
+     "dep_txt": "Wed 4.11. 23:00",
+     "arr_txt": "Thu 5.11. 11:29",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Malaga",
+   "depart": 1055,
+   "arrive": 5073,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 12:33",
+   "door_to_door_min": 4018,
+   "changes": 8,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Barcelona"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3762
+    ],
+    [
+     62,
+     4700
+    ],
+    [
+     65,
+     4895
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 14:42",
+     "minutes": 64,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 49,
+     "from": "Paris",
+     "to": "Barcelona",
+     "service": "TGV INOUI 9715",
+     "mode": "train",
+     "night": false,
+     "dep": 3762,
+     "arr": 4172,
+     "dep_txt": "Wed 4.11. 14:42",
+     "arr_txt": "Wed 4.11. 21:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Barcelona",
+     "from_t": "Wed 4.11. 21:32",
+     "to_t": "Thu 5.11. 06:20",
+     "minutes": 528,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 62,
+     "from": "Barcelona",
+     "to": "Madrid",
+     "service": "AVE 3260",
+     "mode": "train",
+     "night": false,
+     "dep": 4700,
+     "arr": 4850,
+     "dep_txt": "Thu 5.11. 06:20",
+     "arr_txt": "Thu 5.11. 08:50",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Madrid",
+     "from_t": "Thu 5.11. 08:50",
+     "to_t": "Thu 5.11. 09:35",
+     "minutes": 45,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 65,
+     "from": "Madrid",
+     "to": "Malaga",
+     "service": "AVE 2092",
+     "mode": "train",
+     "night": false,
+     "dep": 4895,
+     "arr": 5073,
+     "dep_txt": "Thu 5.11. 09:35",
+     "arr_txt": "Thu 5.11. 12:33",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Bordeaux",
+   "depart": 1055,
+   "arrive": 5174,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 14:14",
+   "door_to_door_min": 4119,
+   "changes": 5,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Paris"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     19,
+     3345
+    ],
+    [
+     23,
+     3790
+    ],
+    [
+     53,
+     5051
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 07:45",
+     "minutes": 112,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 19,
+     "from": "Hamburg",
+     "to": "Amsterdam",
+     "service": "ICE 517 + RE1 + ICE 128",
+     "mode": "train",
+     "night": false,
+     "dep": 3345,
+     "arr": 3689,
+     "dep_txt": "Wed 4.11. 07:45",
+     "arr_txt": "Wed 4.11. 13:29",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Amsterdam",
+     "from_t": "Wed 4.11. 13:29",
+     "to_t": "Wed 4.11. 15:10",
+     "minutes": 101,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 23,
+     "from": "Amsterdam",
+     "to": "Paris",
+     "service": "EST 9364",
+     "mode": "train",
+     "night": false,
+     "dep": 3790,
+     "arr": 4008,
+     "dep_txt": "Wed 4.11. 15:10",
+     "arr_txt": "Wed 4.11. 18:48",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 18:48",
+     "to_t": "Thu 5.11. 12:11",
+     "minutes": 1043,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 53,
+     "from": "Paris",
+     "to": "Bordeaux",
+     "service": "OUIGO 7681",
+     "mode": "train",
+     "night": false,
+     "dep": 5051,
+     "arr": 5174,
+     "dep_txt": "Thu 5.11. 12:11",
+     "arr_txt": "Thu 5.11. 14:14",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Pozzallo",
+   "depart": 1055,
+   "arrive": 5278,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 15:58",
+   "door_to_door_min": 4223,
+   "changes": 8,
+   "nights_on_board": 3,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     217,
+     3690
+    ],
+    [
+     59,
+     4260
+    ],
+    [
+     60,
+     5205
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 13:30",
+     "minutes": 37,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 217,
+     "from": "Milan",
+     "to": "Rome",
+     "service": "FR",
+     "mode": "train",
+     "night": false,
+     "dep": 3690,
+     "arr": 3880,
+     "dep_txt": "Wed 4.11. 13:30",
+     "arr_txt": "Wed 4.11. 16:40",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Rome",
+     "from_t": "Wed 4.11. 16:40",
+     "to_t": "Wed 4.11. 23:00",
+     "minutes": 380,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 59,
+     "from": "Rome",
+     "to": "Syracuse",
+     "service": "ICN1959",
+     "mode": "train",
+     "night": true,
+     "dep": 4260,
+     "arr": 5009,
+     "dep_txt": "Wed 4.11. 23:00",
+     "arr_txt": "Thu 5.11. 11:29",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Syracuse",
+     "from_t": "Thu 5.11. 11:29",
+     "to_t": "Thu 5.11. 14:45",
+     "minutes": 196,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 60,
+     "from": "Syracuse",
+     "to": "Pozzallo",
+     "service": "R 12936",
+     "mode": "train",
+     "night": false,
+     "dep": 5205,
+     "arr": 5278,
+     "dep_txt": "Thu 5.11. 14:45",
+     "arr_txt": "Thu 5.11. 15:58",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Badajoz",
+   "depart": 1055,
+   "arrive": 5291,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 16:11",
+   "door_to_door_min": 4236,
+   "changes": 8,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Barcelona"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3762
+    ],
+    [
+     62,
+     4700
+    ],
+    [
+     66,
+     4975
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 14:42",
+     "minutes": 64,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 49,
+     "from": "Paris",
+     "to": "Barcelona",
+     "service": "TGV INOUI 9715",
+     "mode": "train",
+     "night": false,
+     "dep": 3762,
+     "arr": 4172,
+     "dep_txt": "Wed 4.11. 14:42",
+     "arr_txt": "Wed 4.11. 21:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Barcelona",
+     "from_t": "Wed 4.11. 21:32",
+     "to_t": "Thu 5.11. 06:20",
+     "minutes": 528,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 62,
+     "from": "Barcelona",
+     "to": "Madrid",
+     "service": "AVE 3260",
+     "mode": "train",
+     "night": false,
+     "dep": 4700,
+     "arr": 4850,
+     "dep_txt": "Thu 5.11. 06:20",
+     "arr_txt": "Thu 5.11. 08:50",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Madrid",
+     "from_t": "Thu 5.11. 08:50",
+     "to_t": "Thu 5.11. 10:55",
+     "minutes": 125,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 66,
+     "from": "Madrid",
+     "to": "Badajoz",
+     "service": "MD",
+     "mode": "train",
+     "night": false,
+     "dep": 4975,
+     "arr": 5291,
+     "dep_txt": "Thu 5.11. 10:55",
+     "arr_txt": "Thu 5.11. 16:11",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Naples",
+   "depart": 1055,
+   "arrive": 5373,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 17:33",
+   "door_to_door_min": 4318,
+   "changes": 7,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Rome"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     217,
+     3690
+    ],
+    [
+     43,
+     5305
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 13:30",
+     "minutes": 37,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 217,
+     "from": "Milan",
+     "to": "Rome",
+     "service": "FR",
+     "mode": "train",
+     "night": false,
+     "dep": 3690,
+     "arr": 3880,
+     "dep_txt": "Wed 4.11. 13:30",
+     "arr_txt": "Wed 4.11. 16:40",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Rome",
+     "from_t": "Wed 4.11. 16:40",
+     "to_t": "Thu 5.11. 16:25",
+     "minutes": 1425,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 43,
+     "from": "Rome",
+     "to": "Naples",
+     "service": "FR 9631",
+     "mode": "train",
+     "night": false,
+     "dep": 5305,
+     "arr": 5373,
+     "dep_txt": "Thu 5.11. 16:25",
+     "arr_txt": "Thu 5.11. 17:33",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Galway",
+   "depart": 1055,
+   "arrive": 5379,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 17:39",
+   "door_to_door_min": 4324,
+   "changes": 9,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Dublin"
+   ],
+   "has_issue": true,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3786
+    ],
+    [
+     57,
+     4022
+    ],
+    [
+     69,
+     4292
+    ],
+    [
+     71,
+     5255
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 15:06",
+     "minutes": 88,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 50,
+     "from": "Paris",
+     "to": "London",
+     "service": "EST 9039",
+     "mode": "train",
+     "night": false,
+     "dep": 3786,
+     "arr": 3870,
+     "dep_txt": "Wed 4.11. 15:06",
+     "arr_txt": "Wed 4.11. 16:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "London",
+     "from_t": "Wed 4.11. 16:30",
+     "to_t": "Wed 4.11. 19:02",
+     "minutes": 152,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 57,
+     "from": "London",
+     "to": "Holyhead",
+     "service": "Avanti VT4390",
+     "mode": "train",
+     "night": false,
+     "dep": 4022,
+     "arr": 4262,
+     "dep_txt": "Wed 4.11. 19:02",
+     "arr_txt": "Wed 4.11. 23:02",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Holyhead",
+     "from_t": "Wed 4.11. 23:02",
+     "to_t": "Wed 4.11. 23:32",
+     "minutes": 30,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 69,
+     "from": "Holyhead",
+     "to": "Dublin",
+     "service": "Ferry",
+     "mode": "ferry",
+     "night": false,
+     "dep": 4292,
+     "arr": 4487,
+     "dep_txt": "Wed 4.11. 23:32",
+     "arr_txt": "Thu 5.11. 02:47",
+     "timed": false,
+     "issue": "No times in the original ('by ferry'); duration is an estimate",
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Dublin",
+     "from_t": "Thu 5.11. 02:47",
+     "to_t": "Thu 5.11. 15:35",
+     "minutes": 768,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 71,
+     "from": "Dublin",
+     "to": "Galway",
+     "service": "IC708",
+     "mode": "train",
+     "night": false,
+     "dep": 5255,
+     "arr": 5379,
+     "dep_txt": "Thu 5.11. 15:35",
+     "arr_txt": "Thu 5.11. 17:39",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Nice",
+   "depart": 1055,
+   "arrive": 5524,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 20:04",
+   "door_to_door_min": 4469,
+   "changes": 6,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Marseille"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2489
+    ],
+    [
+     12,
+     3388
+    ],
+    [
+     13,
+     3722
+    ],
+    [
+     15,
+     3855
+    ],
+    [
+     52,
+     5368
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 17:29",
+     "minutes": 659,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 3,
+     "from": "Stockholm",
+     "to": "Hamburg",
+     "service": "EN 345",
+     "mode": "train",
+     "night": true,
+     "dep": 2489,
+     "arr": 3233,
+     "dep_txt": "Tue 3.11. 17:29",
+     "arr_txt": "Wed 4.11. 05:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 05:53",
+     "to_t": "Wed 4.11. 08:28",
+     "minutes": 155,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 12,
+     "from": "Hamburg",
+     "to": "Frankfurt",
+     "service": "ICE1577",
+     "mode": "train",
+     "night": false,
+     "dep": 3388,
+     "arr": 3669,
+     "dep_txt": "Wed 4.11. 08:28",
+     "arr_txt": "Wed 4.11. 13:09",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Frankfurt",
+     "from_t": "Wed 4.11. 13:09",
+     "to_t": "Wed 4.11. 14:02",
+     "minutes": 53,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 13,
+     "from": "Frankfurt",
+     "to": "Strasbourg",
+     "service": "ICE 9580",
+     "mode": "train",
+     "night": false,
+     "dep": 3722,
+     "arr": 3845,
+     "dep_txt": "Wed 4.11. 14:02",
+     "arr_txt": "Wed 4.11. 16:05",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Strasbourg",
+     "from_t": "Wed 4.11. 16:05",
+     "to_t": "Wed 4.11. 16:15",
+     "minutes": 10,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 15,
+     "from": "Strasbourg",
+     "to": "Marseille",
+     "service": "ICE 9580",
+     "mode": "train",
+     "night": false,
+     "dep": 3855,
+     "arr": 4189,
+     "dep_txt": "Wed 4.11. 16:15",
+     "arr_txt": "Wed 4.11. 21:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Marseille",
+     "from_t": "Wed 4.11. 21:49",
+     "to_t": "Thu 5.11. 17:28",
+     "minutes": 1179,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 52,
+     "from": "Marseille",
+     "to": "Nice",
+     "service": "TGV INOUI 6177",
+     "mode": "train",
+     "night": false,
+     "dep": 5368,
+     "arr": 5524,
+     "dep_txt": "Thu 5.11. 17:28",
+     "arr_txt": "Thu 5.11. 20:04",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Abrantes",
+   "depart": 1055,
+   "arrive": 5572,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Thu 5.11. 20:52",
+   "door_to_door_min": 4517,
+   "changes": 9,
+   "nights_on_board": 2,
+   "hotel_nights": 1,
+   "stays": [
+    "Barcelona"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3762
+    ],
+    [
+     62,
+     4700
+    ],
+    [
+     66,
+     4975
+    ],
+    [
+     67,
+     5501
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 14:42",
+     "minutes": 64,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 49,
+     "from": "Paris",
+     "to": "Barcelona",
+     "service": "TGV INOUI 9715",
+     "mode": "train",
+     "night": false,
+     "dep": 3762,
+     "arr": 4172,
+     "dep_txt": "Wed 4.11. 14:42",
+     "arr_txt": "Wed 4.11. 21:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Barcelona",
+     "from_t": "Wed 4.11. 21:32",
+     "to_t": "Thu 5.11. 06:20",
+     "minutes": 528,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 62,
+     "from": "Barcelona",
+     "to": "Madrid",
+     "service": "AVE 3260",
+     "mode": "train",
+     "night": false,
+     "dep": 4700,
+     "arr": 4850,
+     "dep_txt": "Thu 5.11. 06:20",
+     "arr_txt": "Thu 5.11. 08:50",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Madrid",
+     "from_t": "Thu 5.11. 08:50",
+     "to_t": "Thu 5.11. 10:55",
+     "minutes": 125,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 66,
+     "from": "Madrid",
+     "to": "Badajoz",
+     "service": "MD",
+     "mode": "train",
+     "night": false,
+     "dep": 4975,
+     "arr": 5291,
+     "dep_txt": "Thu 5.11. 10:55",
+     "arr_txt": "Thu 5.11. 16:11",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Badajoz",
+     "from_t": "Thu 5.11. 16:11",
+     "to_t": "Thu 5.11. 19:41",
+     "minutes": 210,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 67,
+     "from": "Badajoz",
+     "to": "Abrantes",
+     "service": "R",
+     "mode": "train",
+     "night": false,
+     "dep": 5501,
+     "arr": 5572,
+     "dep_txt": "Thu 5.11. 19:41",
+     "arr_txt": "Thu 5.11. 20:52",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Varna",
+   "depart": 1055,
+   "arrive": 6110,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Fri 6.11. 05:50",
+   "door_to_door_min": 5055,
+   "changes": 9,
+   "nights_on_board": 4,
+   "hotel_nights": 0,
+   "stays": [],
+   "has_issue": true,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     29,
+     2650
+    ],
+    [
+     35,
+     3309
+    ],
+    [
+     36,
+     3640
+    ],
+    [
+     72,
+     4025
+    ],
+    [
+     73,
+     4975
+    ],
+    [
+     82,
+     5570
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 20:10",
+     "minutes": 69,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 29,
+     "from": "Hamburg",
+     "to": "Munich",
+     "service": "NJ 40491",
+     "mode": "train",
+     "night": true,
+     "dep": 2650,
+     "arr": 3253,
+     "dep_txt": "Tue 3.11. 20:10",
+     "arr_txt": "Wed 4.11. 06:13",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Munich",
+     "from_t": "Wed 4.11. 06:13",
+     "to_t": "Wed 4.11. 07:09",
+     "minutes": 56,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 35,
+     "from": "Munich",
+     "to": "Vienna",
+     "service": "RJX 61",
+     "mode": "train",
+     "night": false,
+     "dep": 3309,
+     "arr": 3572,
+     "dep_txt": "Wed 4.11. 07:09",
+     "arr_txt": "Wed 4.11. 11:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Vienna",
+     "from_t": "Wed 4.11. 11:32",
+     "to_t": "Wed 4.11. 12:40",
+     "minutes": 68,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 36,
+     "from": "Vienna",
+     "to": "Budapest",
+     "service": "EC 145",
+     "mode": "train",
+     "night": false,
+     "dep": 3640,
+     "arr": 3815,
+     "dep_txt": "Wed 4.11. 12:40",
+     "arr_txt": "Wed 4.11. 15:35",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Budapest",
+     "from_t": "Wed 4.11. 15:35",
+     "to_t": "Wed 4.11. 19:05",
+     "minutes": 210,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 72,
+     "from": "Budapest",
+     "to": "Bucharest",
+     "service": "IC 473",
+     "mode": "train",
+     "night": true,
+     "dep": 4025,
+     "arr": 4957,
+     "dep_txt": "Wed 4.11. 19:05",
+     "arr_txt": "Thu 5.11. 10:37",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Bucharest",
+     "from_t": "Thu 5.11. 10:37",
+     "to_t": "Thu 5.11. 10:55",
+     "minutes": 18,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 73,
+     "from": "Bucharest",
+     "to": "Sofia",
+     "service": "?",
+     "mode": "train",
+     "night": false,
+     "dep": 4975,
+     "arr": 5530,
+     "dep_txt": "Thu 5.11. 10:55",
+     "arr_txt": "Thu 5.11. 20:10",
+     "timed": true,
+     "issue": "Service marked 'Not sure' in the original",
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Sofia",
+     "from_t": "Thu 5.11. 20:10",
+     "to_t": "Thu 5.11. 20:50",
+     "minutes": 40,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 82,
+     "from": "Sofia",
+     "to": "Varna",
+     "service": "8657",
+     "mode": "train",
+     "night": true,
+     "dep": 5570,
+     "arr": 6110,
+     "dep_txt": "Thu 5.11. 20:50",
+     "arr_txt": "Fri 6.11. 05:50",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Sevilla",
+   "depart": 1055,
+   "arrive": 6448,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Fri 6.11. 11:28",
+   "door_to_door_min": 5393,
+   "changes": 8,
+   "nights_on_board": 2,
+   "hotel_nights": 2,
+   "stays": [
+    "Barcelona",
+    "Madrid"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3762
+    ],
+    [
+     62,
+     4700
+    ],
+    [
+     63,
+     6305
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 14:42",
+     "minutes": 64,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 49,
+     "from": "Paris",
+     "to": "Barcelona",
+     "service": "TGV INOUI 9715",
+     "mode": "train",
+     "night": false,
+     "dep": 3762,
+     "arr": 4172,
+     "dep_txt": "Wed 4.11. 14:42",
+     "arr_txt": "Wed 4.11. 21:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Barcelona",
+     "from_t": "Wed 4.11. 21:32",
+     "to_t": "Thu 5.11. 06:20",
+     "minutes": 528,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 62,
+     "from": "Barcelona",
+     "to": "Madrid",
+     "service": "AVE 3260",
+     "mode": "train",
+     "night": false,
+     "dep": 4700,
+     "arr": 4850,
+     "dep_txt": "Thu 5.11. 06:20",
+     "arr_txt": "Thu 5.11. 08:50",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Madrid",
+     "from_t": "Thu 5.11. 08:50",
+     "to_t": "Fri 6.11. 09:05",
+     "minutes": 1455,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 63,
+     "from": "Madrid",
+     "to": "Sevilla",
+     "service": "AVE2090",
+     "mode": "train",
+     "night": false,
+     "dep": 6305,
+     "arr": 6448,
+     "dep_txt": "Fri 6.11. 09:05",
+     "arr_txt": "Fri 6.11. 11:28",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Patras",
+   "depart": 1055,
+   "arrive": 6570,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Fri 6.11. 13:30",
+   "door_to_door_min": 5515,
+   "changes": 7,
+   "nights_on_board": 3,
+   "hotel_nights": 1,
+   "stays": [
+    "Bari"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     46,
+     3755
+    ],
+    [
+     76,
+     5490
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 08:33",
+     "minutes": 12,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 40,
+     "from": "Basel",
+     "to": "Milan",
+     "service": "ICE563 + EC315",
+     "mode": "train",
+     "night": false,
+     "dep": 3393,
+     "arr": 3653,
+     "dep_txt": "Wed 4.11. 08:33",
+     "arr_txt": "Wed 4.11. 12:53",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Milan",
+     "from_t": "Wed 4.11. 12:53",
+     "to_t": "Wed 4.11. 14:35",
+     "minutes": 102,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 46,
+     "from": "Milan",
+     "to": "Bari",
+     "service": "FR 8813",
+     "mode": "train",
+     "night": false,
+     "dep": 3755,
+     "arr": 4170,
+     "dep_txt": "Wed 4.11. 14:35",
+     "arr_txt": "Wed 4.11. 21:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Bari",
+     "from_t": "Wed 4.11. 21:30",
+     "to_t": "Thu 5.11. 19:30",
+     "minutes": 1320,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 76,
+     "from": "Bari",
+     "to": "Patras",
+     "service": "Anek Superfast",
+     "mode": "ferry",
+     "night": true,
+     "dep": 5490,
+     "arr": 6570,
+     "dep_txt": "Thu 5.11. 19:30",
+     "arr_txt": "Fri 6.11. 13:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Granada",
+   "depart": 1055,
+   "arrive": 6655,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Fri 6.11. 14:55",
+   "door_to_door_min": 5600,
+   "changes": 9,
+   "nights_on_board": 2,
+   "hotel_nights": 2,
+   "stays": [
+    "Barcelona",
+    "Madrid"
+   ],
+   "has_issue": false,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     39,
+     2771
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3762
+    ],
+    [
+     62,
+     4700
+    ],
+    [
+     63,
+     6305
+    ],
+    [
+     64,
+     6497
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 22:11",
+     "minutes": 190,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 39,
+     "from": "Hamburg",
+     "to": "Basel",
+     "service": "NJ 471",
+     "mode": "train",
+     "night": true,
+     "dep": 2771,
+     "arr": 3381,
+     "dep_txt": "Tue 3.11. 22:11",
+     "arr_txt": "Wed 4.11. 08:21",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Basel",
+     "from_t": "Wed 4.11. 08:21",
+     "to_t": "Wed 4.11. 10:34",
+     "minutes": 133,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 48,
+     "from": "Basel",
+     "to": "Paris",
+     "service": "TGV9210",
+     "mode": "train",
+     "night": false,
+     "dep": 3514,
+     "arr": 3698,
+     "dep_txt": "Wed 4.11. 10:34",
+     "arr_txt": "Wed 4.11. 13:38",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Paris",
+     "from_t": "Wed 4.11. 13:38",
+     "to_t": "Wed 4.11. 14:42",
+     "minutes": 64,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 49,
+     "from": "Paris",
+     "to": "Barcelona",
+     "service": "TGV INOUI 9715",
+     "mode": "train",
+     "night": false,
+     "dep": 3762,
+     "arr": 4172,
+     "dep_txt": "Wed 4.11. 14:42",
+     "arr_txt": "Wed 4.11. 21:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Barcelona",
+     "from_t": "Wed 4.11. 21:32",
+     "to_t": "Thu 5.11. 06:20",
+     "minutes": 528,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 62,
+     "from": "Barcelona",
+     "to": "Madrid",
+     "service": "AVE 3260",
+     "mode": "train",
+     "night": false,
+     "dep": 4700,
+     "arr": 4850,
+     "dep_txt": "Thu 5.11. 06:20",
+     "arr_txt": "Thu 5.11. 08:50",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Madrid",
+     "from_t": "Thu 5.11. 08:50",
+     "to_t": "Fri 6.11. 09:05",
+     "minutes": 1455,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 63,
+     "from": "Madrid",
+     "to": "Sevilla",
+     "service": "AVE2090",
+     "mode": "train",
+     "night": false,
+     "dep": 6305,
+     "arr": 6448,
+     "dep_txt": "Fri 6.11. 09:05",
+     "arr_txt": "Fri 6.11. 11:28",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Sevilla",
+     "from_t": "Fri 6.11. 11:28",
+     "to_t": "Fri 6.11. 12:17",
+     "minutes": 49,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 64,
+     "from": "Sevilla",
+     "to": "Granada",
+     "service": "AVANT 8335",
+     "mode": "train",
+     "night": false,
+     "dep": 6497,
+     "arr": 6655,
+     "dep_txt": "Fri 6.11. 12:17",
+     "arr_txt": "Fri 6.11. 14:55",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
+   "alternatives": []
+  },
+  {
+   "capital": "Istanbul",
+   "depart": 1055,
+   "arrive": 7594,
+   "depart_txt": "Mon 2.11. 17:35",
+   "arrive_txt": "Sat 7.11. 06:34",
+   "door_to_door_min": 6539,
+   "changes": 9,
+   "nights_on_board": 4,
+   "hotel_nights": 1,
+   "stays": [
+    "Sofia"
+   ],
+   "has_issue": true,
+   "signature": [
+    [
+     1,
+     1055
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1943
+    ],
+    [
+     9,
+     2302
+    ],
+    [
+     29,
+     2650
+    ],
+    [
+     35,
+     3309
+    ],
+    [
+     36,
+     3640
+    ],
+    [
+     72,
+     4025
+    ],
+    [
+     73,
+     4975
+    ],
+    [
+     74,
+     6880
+    ]
+   ],
+   "steps": [
+    {
+     "kind": "leg",
+     "i": 1,
+     "from": "Helsinki",
+     "to": "Turku",
+     "service": "IC 963",
+     "mode": "train",
+     "night": false,
+     "dep": 1055,
+     "arr": 1189,
+     "dep_txt": "Mon 2.11. 17:35",
+     "arr_txt": "Mon 2.11. 19:49",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Turku",
+     "from_t": "Mon 2.11. 19:49",
+     "to_t": "Mon 2.11. 20:55",
+     "minutes": 66,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 2,
+     "from": "Turku",
+     "to": "Stockholm",
+     "service": "Viking Line",
+     "mode": "ferry",
+     "night": true,
+     "dep": 1255,
+     "arr": 1830,
+     "dep_txt": "Mon 2.11. 20:55",
+     "arr_txt": "Tue 3.11. 06:30",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Stockholm",
+     "from_t": "Tue 3.11. 06:30",
+     "to_t": "Tue 3.11. 08:23",
+     "minutes": 113,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 8,
+     "from": "Stockholm",
+     "to": "Copenhagen",
+     "service": "SJ 525 + 1073",
+     "mode": "train",
+     "night": false,
+     "dep": 1943,
+     "arr": 2264,
+     "dep_txt": "Tue 3.11. 08:23",
+     "arr_txt": "Tue 3.11. 13:44",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Copenhagen",
+     "from_t": "Tue 3.11. 13:44",
+     "to_t": "Tue 3.11. 14:22",
+     "minutes": 38,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 9,
+     "from": "Copenhagen",
+     "to": "Hamburg",
+     "service": "ECE 397",
+     "mode": "train",
+     "night": false,
+     "dep": 2302,
+     "arr": 2581,
+     "dep_txt": "Tue 3.11. 14:22",
+     "arr_txt": "Tue 3.11. 19:01",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Hamburg",
+     "from_t": "Tue 3.11. 19:01",
+     "to_t": "Tue 3.11. 20:10",
+     "minutes": 69,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 29,
+     "from": "Hamburg",
+     "to": "Munich",
+     "service": "NJ 40491",
+     "mode": "train",
+     "night": true,
+     "dep": 2650,
+     "arr": 3253,
+     "dep_txt": "Tue 3.11. 20:10",
+     "arr_txt": "Wed 4.11. 06:13",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Munich",
+     "from_t": "Wed 4.11. 06:13",
+     "to_t": "Wed 4.11. 07:09",
+     "minutes": 56,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 35,
+     "from": "Munich",
+     "to": "Vienna",
+     "service": "RJX 61",
+     "mode": "train",
+     "night": false,
+     "dep": 3309,
+     "arr": 3572,
+     "dep_txt": "Wed 4.11. 07:09",
+     "arr_txt": "Wed 4.11. 11:32",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Vienna",
+     "from_t": "Wed 4.11. 11:32",
+     "to_t": "Wed 4.11. 12:40",
+     "minutes": 68,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 36,
+     "from": "Vienna",
+     "to": "Budapest",
+     "service": "EC 145",
+     "mode": "train",
+     "night": false,
+     "dep": 3640,
+     "arr": 3815,
+     "dep_txt": "Wed 4.11. 12:40",
+     "arr_txt": "Wed 4.11. 15:35",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Budapest",
+     "from_t": "Wed 4.11. 15:35",
+     "to_t": "Wed 4.11. 19:05",
+     "minutes": 210,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 72,
+     "from": "Budapest",
+     "to": "Bucharest",
+     "service": "IC 473",
+     "mode": "train",
+     "night": true,
+     "dep": 4025,
+     "arr": 4957,
+     "dep_txt": "Wed 4.11. 19:05",
+     "arr_txt": "Thu 5.11. 10:37",
+     "timed": true,
+     "issue": null,
+     "note": null
+    },
+    {
+     "kind": "change",
+     "place": "Bucharest",
+     "from_t": "Thu 5.11. 10:37",
+     "to_t": "Thu 5.11. 10:55",
+     "minutes": 18,
+     "nights": 0
+    },
+    {
+     "kind": "leg",
+     "i": 73,
+     "from": "Bucharest",
+     "to": "Sofia",
+     "service": "?",
+     "mode": "train",
+     "night": false,
+     "dep": 4975,
+     "arr": 5530,
+     "dep_txt": "Thu 5.11. 10:55",
+     "arr_txt": "Thu 5.11. 20:10",
+     "timed": true,
+     "issue": "Service marked 'Not sure' in the original",
+     "note": null
+    },
+    {
+     "kind": "stay",
+     "place": "Sofia",
+     "from_t": "Thu 5.11. 20:10",
+     "to_t": "Fri 6.11. 18:40",
+     "minutes": 1350,
+     "nights": 1
+    },
+    {
+     "kind": "leg",
+     "i": 74,
+     "from": "Sofia",
+     "to": "Istanbul",
+     "service": "493 / 12504",
+     "mode": "train",
+     "night": true,
+     "dep": 6880,
+     "arr": 7594,
+     "dep_txt": "Fri 6.11. 18:40",
+     "arr_txt": "Sat 7.11. 06:34",
+     "timed": true,
+     "issue": null,
+     "note": null
+    }
+   ],
+   "label": "Fastest",
+   "is_capital": false,
    "alternatives": []
   }
  ],
