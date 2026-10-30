@@ -106,14 +106,12 @@ def main():
     outdir.mkdir(exist_ok=True)
 
     # --- journeys to capitals ---------------------------------------------
-    routes, fastest_legs, unreached = [], set(), []
-    for cap in net.capitals:
-        if cap == origin:
-            continue
-        j = router.journey(cap)
+    start = hm(s.get("start_time", "00:00"))
+
+    def build_route(cap: str, j: list | None = None) -> dict | None:
+        j = j if j is not None else router.journey(cap)
         if not j:
-            unreached.append(cap)
-            continue
+            return None
         legs = [x for x in j if x["kind"] == "leg"]
         first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
         steps = []
@@ -124,21 +122,49 @@ def main():
                               "nights": st.get("nights", 0)})
                 continue
             leg = st["leg"]
-            fastest_legs.add(leg.idx)
-            steps.append({"kind": "leg", "from": leg.frm, "to": leg.to, "service": leg.service,
+            steps.append({"kind": "leg", "i": leg.idx, "from": leg.frm, "to": leg.to, "service": leg.service,
                           "mode": leg.mode, "night": leg.night, "dep": st["dep"], "arr": st["arr"],
                           "dep_txt": when(st["dep"]), "arr_txt": when(st["arr"]),
                           "timed": leg.timed, "issue": leg.issue, "note": leg.note})
-        hotel = sum(x["nights"] for x in steps if x["kind"] == "stay")
-        routes.append({"capital": cap, "depart": first_dep, "arrive": arr,
-                       "depart_txt": when(first_dep), "arrive_txt": when(arr),
-                       "door_to_door_min": arr - first_dep,
-                       "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
-                       "nights_on_board": sum(1 for x in legs if x["leg"].night),
-                       "hotel_nights": hotel,
-                       "stays": [x["place"] for x in steps if x["kind"] == "stay"],
-                       "has_issue": any(x.get("issue") for x in steps),
-                       "steps": steps})
+        return {"capital": cap, "depart": first_dep, "arrive": arr,
+                "depart_txt": when(first_dep), "arrive_txt": when(arr),
+                "door_to_door_min": arr - first_dep,
+                "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
+                "nights_on_board": sum(1 for x in legs if x["leg"].night),
+                "hotel_nights": sum(x["nights"] for x in steps if x["kind"] == "stay"),
+                "stays": [x["place"] for x in steps if x["kind"] == "stay"],
+                "has_issue": any(x.get("issue") for x in steps),
+                "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
+                "steps": steps}
+
+    ALTERNATIVES = [("Fewest changes", "changes", lambda c, h, t: (c, t, h)),
+                    ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
+    max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
+    front = router.pareto(origin, start)
+    router.search(origin, start, "fastest")          # the graph and main table use the fastest
+
+    routes, fastest_legs, unreached = [], set(), []
+    for cap in net.capitals:
+        if cap == origin:
+            continue
+        r = build_route(cap)
+        if not r:
+            unreached.append(cap)
+            continue
+        fastest_legs.update(x["i"] for x in r["steps"] if x["kind"] == "leg")
+        r["label"] = "Fastest"
+        r["alternatives"], seen = [], [r["signature"]]
+        for name, field_, order in ALTERNATIVES:
+            ok = [l for l in front.get(cap, []) if l[2] <= r["arrive"] + max_extra]
+            if not ok:
+                continue
+            c, h, t, lid = min(ok, key=lambda l: order(*l[:3]))
+            alt = build_route(cap, router.pareto_journey(lid))
+            if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
+                alt["label"] = name
+                r["alternatives"].append(alt)
+                seen.append(alt["signature"])
+        routes.append(r)
     routes.sort(key=lambda r: r["arrive"])
 
     # --- Graphviz -----------------------------------------------------------
@@ -156,16 +182,27 @@ def main():
           f"_{version}. Change {router.min_transfer} min (more at some stations), ferry check-in "
           f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait through the night "
           f"is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night._", "",
-          "| Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) |",
-          "|---|---|---|---|---|---|---|"]
+          "| Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |",
+          "|---|---|---|---|---|---|---|---|"]
     for r in routes:
         flag = " ⚠" if r["has_issue"] else ""
         where = f"{r['hotel_nights']} ({', '.join(r['stays'])})" if r["stays"] else "0"
         md.append(f"| {r['capital']}{flag} | {r['depart_txt']} | {r['arrive_txt']} | "
-                  f"{fmt_dur(r['door_to_door_min'])} | {r['changes']} | {r['nights_on_board']} | {where} |")
+                  f"{fmt_dur(r['door_to_door_min'])} | {r['changes']} | {r['nights_on_board']} | {where} | "
+                  + "; ".join(f"{a['label'].lower()}: {fmt_dur(a['door_to_door_min'])}, {a['changes']} ch., "
+                              f"{a['hotel_nights']} hotel" for a in r["alternatives"]) + " |")
     md += ["", "## Itineraries", ""]
-    for r in routes:
-        md.append(f"### {r['capital']}{' ⚠' if r['has_issue'] else ''}")
+
+    def summary(x):
+        return (f"{fmt_dur(x['door_to_door_min'])}, arrive {x['arrive_txt']}, {x['changes']} changes, "
+                f"{x['hotel_nights']} hotel nights")
+
+    for r0 in routes:
+      for r in [r0] + r0["alternatives"]:
+        title = r0["capital"] if r is r0 else f"{r0['capital']} — {r['label'].lower()}"
+        md.append(f"### {title}{' ⚠' if r['has_issue'] else ''}")
+        md.append(f"_{r['label']}: {summary(r)}_")
+        md.append("")
         for x in r["steps"]:
             if x["kind"] == "leg":
                 md.append(f"- {x['dep_txt']} → {x['arr_txt']}  **{x['from']} → {x['to']}**  {x['service']}"

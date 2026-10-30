@@ -1649,9 +1649,20 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -1675,6 +1686,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -1688,7 +1700,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Copenhagen",
@@ -1702,9 +1716,24 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -1728,6 +1757,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -1751,6 +1781,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -1764,7 +1795,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Oslo",
@@ -1778,9 +1811,24 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     5,
+     2091
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -1804,6 +1852,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -1827,6 +1876,7 @@
     },
     {
      "kind": "leg",
+     "i": 5,
      "from": "Stockholm",
      "to": "Oslo",
      "service": "629",
@@ -1840,7 +1890,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Berlin",
@@ -1854,9 +1906,32 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     10,
+     2674
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -1880,6 +1955,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -1903,6 +1979,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -1926,6 +2003,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -1949,6 +2027,7 @@
     },
     {
      "kind": "leg",
+     "i": 10,
      "from": "Hamburg",
      "to": "Berlin",
      "service": "ICE 609",
@@ -1962,7 +2041,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Bern",
@@ -1976,9 +2057,36 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     47,
+     3388
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2002,6 +2110,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2025,6 +2134,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -2048,6 +2158,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -2071,6 +2182,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -2094,6 +2206,7 @@
     },
     {
      "kind": "leg",
+     "i": 47,
      "from": "Basel",
      "to": "Bern",
      "service": "ICE1063",
@@ -2107,7 +2220,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Vienna",
@@ -2121,9 +2236,36 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2147,6 +2289,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2170,6 +2313,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -2193,6 +2337,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -2216,6 +2361,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -2239,6 +2385,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -2252,7 +2399,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Amsterdam",
@@ -2261,16 +2410,33 @@
    "depart_txt": "Mon 2.11. 17:36",
    "arrive_txt": "Wed 4.11. 13:00",
    "door_to_door_min": 2604,
-   "changes": 4,
-   "nights_on_board": 1,
-   "hotel_nights": 1,
-   "stays": [
-    "Hamburg"
-   ],
+   "changes": 3,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2494
+    ],
+    [
+     19,
+     3345
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2294,6 +2460,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2311,58 +2478,37 @@
      "kind": "change",
      "place": "Stockholm",
      "from_t": "Tue 3.11. 06:30",
-     "to_t": "Tue 3.11. 08:21",
-     "minutes": 111,
+     "to_t": "Tue 3.11. 17:34",
+     "minutes": 664,
      "nights": 0
     },
     {
      "kind": "leg",
+     "i": 3,
      "from": "Stockholm",
-     "to": "Copenhagen",
-     "service": "SJ 525",
+     "to": "Hamburg",
+     "service": "EN345",
      "mode": "train",
-     "night": false,
-     "dep": 1941,
-     "arr": 2255,
-     "dep_txt": "Tue 3.11. 08:21",
-     "arr_txt": "Tue 3.11. 13:35",
+     "night": true,
+     "dep": 2494,
+     "arr": 3241,
+     "dep_txt": "Tue 3.11. 17:34",
+     "arr_txt": "Wed 4.11. 06:01",
      "timed": true,
      "issue": null,
      "note": null
     },
     {
      "kind": "change",
-     "place": "Copenhagen",
-     "from_t": "Tue 3.11. 13:35",
-     "to_t": "Tue 3.11. 15:04",
-     "minutes": 89,
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 06:01",
+     "to_t": "Wed 4.11. 07:45",
+     "minutes": 104,
      "nights": 0
     },
     {
      "kind": "leg",
-     "from": "Copenhagen",
-     "to": "Hamburg",
-     "service": "IC397",
-     "mode": "train",
-     "night": false,
-     "dep": 2344,
-     "arr": 2642,
-     "dep_txt": "Tue 3.11. 15:04",
-     "arr_txt": "Tue 3.11. 20:02",
-     "timed": true,
-     "issue": null,
-     "note": null
-    },
-    {
-     "kind": "stay",
-     "place": "Hamburg",
-     "from_t": "Tue 3.11. 20:02",
-     "to_t": "Wed 4.11. 07:45",
-     "minutes": 703,
-     "nights": 1
-    },
-    {
-     "kind": "leg",
+     "i": 19,
      "from": "Hamburg",
      "to": "Amsterdam",
      "service": "ICE 517 + IC 240",
@@ -2376,7 +2522,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Prague",
@@ -2392,9 +2540,36 @@
     "Berlin"
    ],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     10,
+     2674
+    ],
+    [
+     25,
+     3421
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2418,6 +2593,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2441,6 +2617,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -2464,6 +2641,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -2487,6 +2665,7 @@
     },
     {
      "kind": "leg",
+     "i": 10,
      "from": "Hamburg",
      "to": "Berlin",
      "service": "ICE 609",
@@ -2510,6 +2689,7 @@
     },
     {
      "kind": "leg",
+     "i": 25,
      "from": "Berlin",
      "to": "Prague",
      "service": "EC253",
@@ -2523,7 +2703,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Paris",
@@ -2537,9 +2719,36 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     48,
+     3514
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2563,6 +2772,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2586,6 +2796,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -2609,6 +2820,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -2632,6 +2844,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -2655,6 +2868,7 @@
     },
     {
      "kind": "leg",
+     "i": 48,
      "from": "Basel",
      "to": "Paris",
      "service": "TGV9210",
@@ -2667,6 +2881,159 @@
      "timed": true,
      "issue": null,
      "note": null
+    }
+   ],
+   "label": "Fastest",
+   "alternatives": [
+    {
+     "capital": "Paris",
+     "depart": 1056,
+     "arrive": 3995,
+     "depart_txt": "Mon 2.11. 17:36",
+     "arrive_txt": "Wed 4.11. 18:35",
+     "door_to_door_min": 2939,
+     "changes": 4,
+     "nights_on_board": 2,
+     "hotel_nights": 0,
+     "stays": [],
+     "has_issue": false,
+     "signature": [
+      [
+       1,
+       1056
+      ],
+      [
+       2,
+       1255
+      ],
+      [
+       3,
+       2494
+      ],
+      [
+       19,
+       3345
+      ],
+      [
+       23,
+       3791
+      ]
+     ],
+     "steps": [
+      {
+       "kind": "leg",
+       "i": 1,
+       "from": "Helsinki",
+       "to": "Turku",
+       "service": "IC959",
+       "mode": "train",
+       "night": false,
+       "dep": 1056,
+       "arr": 1190,
+       "dep_txt": "Mon 2.11. 17:36",
+       "arr_txt": "Mon 2.11. 19:50",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Turku",
+       "from_t": "Mon 2.11. 19:50",
+       "to_t": "Mon 2.11. 20:55",
+       "minutes": 65,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 2,
+       "from": "Turku",
+       "to": "Stockholm",
+       "service": "Viking Line",
+       "mode": "ferry",
+       "night": true,
+       "dep": 1255,
+       "arr": 1830,
+       "dep_txt": "Mon 2.11. 20:55",
+       "arr_txt": "Tue 3.11. 06:30",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Stockholm",
+       "from_t": "Tue 3.11. 06:30",
+       "to_t": "Tue 3.11. 17:34",
+       "minutes": 664,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 3,
+       "from": "Stockholm",
+       "to": "Hamburg",
+       "service": "EN345",
+       "mode": "train",
+       "night": true,
+       "dep": 2494,
+       "arr": 3241,
+       "dep_txt": "Tue 3.11. 17:34",
+       "arr_txt": "Wed 4.11. 06:01",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Hamburg",
+       "from_t": "Wed 4.11. 06:01",
+       "to_t": "Wed 4.11. 07:45",
+       "minutes": 104,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 19,
+       "from": "Hamburg",
+       "to": "Amsterdam",
+       "service": "ICE 517 + IC 240",
+       "mode": "train",
+       "night": false,
+       "dep": 3345,
+       "arr": 3660,
+       "dep_txt": "Wed 4.11. 07:45",
+       "arr_txt": "Wed 4.11. 13:00",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Amsterdam",
+       "from_t": "Wed 4.11. 13:00",
+       "to_t": "Wed 4.11. 15:11",
+       "minutes": 131,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 23,
+       "from": "Amsterdam",
+       "to": "Paris",
+       "service": "THA9364",
+       "mode": "train",
+       "night": false,
+       "dep": 3791,
+       "arr": 3995,
+       "dep_txt": "Wed 4.11. 15:11",
+       "arr_txt": "Wed 4.11. 18:35",
+       "timed": true,
+       "issue": null,
+       "note": null
+      }
+     ],
+     "label": "Fewest changes"
     }
    ]
   },
@@ -2682,9 +3049,40 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ],
+    [
+     37,
+     3645
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2708,6 +3106,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2731,6 +3130,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -2754,6 +3154,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -2777,6 +3178,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -2800,6 +3202,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -2823,6 +3226,7 @@
     },
     {
      "kind": "leg",
+     "i": 37,
      "from": "Vienna",
      "to": "Bratislava",
      "service": "REX6",
@@ -2836,7 +3240,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Budapest",
@@ -2850,9 +3256,40 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ],
+    [
+     36,
+     3642
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -2876,6 +3313,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -2899,6 +3337,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -2922,6 +3361,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -2945,6 +3385,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -2968,6 +3409,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -2991,6 +3433,7 @@
     },
     {
      "kind": "leg",
+     "i": 36,
      "from": "Vienna",
      "to": "Budapest",
      "service": "EC145",
@@ -3004,7 +3447,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Warsaw",
@@ -3020,9 +3465,36 @@
     "Berlin"
    ],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     10,
+     2674
+    ],
+    [
+     27,
+     3471
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -3046,6 +3518,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -3069,6 +3542,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -3092,6 +3566,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -3115,6 +3590,7 @@
     },
     {
      "kind": "leg",
+     "i": 10,
      "from": "Hamburg",
      "to": "Berlin",
      "service": "ICE 609",
@@ -3138,6 +3614,7 @@
     },
     {
      "kind": "leg",
+     "i": 27,
      "from": "Berlin",
      "to": "Warsaw",
      "service": "EC45",
@@ -3151,7 +3628,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Brussels",
@@ -3160,16 +3639,37 @@
    "depart_txt": "Mon 2.11. 17:36",
    "arrive_txt": "Wed 4.11. 16:12",
    "door_to_door_min": 2796,
-   "changes": 5,
-   "nights_on_board": 1,
-   "hotel_nights": 1,
-   "stays": [
-    "Hamburg"
-   ],
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2494
+    ],
+    [
+     19,
+     3345
+    ],
+    [
+     21,
+     3688
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -3193,6 +3693,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -3210,58 +3711,37 @@
      "kind": "change",
      "place": "Stockholm",
      "from_t": "Tue 3.11. 06:30",
-     "to_t": "Tue 3.11. 08:21",
-     "minutes": 111,
+     "to_t": "Tue 3.11. 17:34",
+     "minutes": 664,
      "nights": 0
     },
     {
      "kind": "leg",
+     "i": 3,
      "from": "Stockholm",
-     "to": "Copenhagen",
-     "service": "SJ 525",
+     "to": "Hamburg",
+     "service": "EN345",
      "mode": "train",
-     "night": false,
-     "dep": 1941,
-     "arr": 2255,
-     "dep_txt": "Tue 3.11. 08:21",
-     "arr_txt": "Tue 3.11. 13:35",
+     "night": true,
+     "dep": 2494,
+     "arr": 3241,
+     "dep_txt": "Tue 3.11. 17:34",
+     "arr_txt": "Wed 4.11. 06:01",
      "timed": true,
      "issue": null,
      "note": null
     },
     {
      "kind": "change",
-     "place": "Copenhagen",
-     "from_t": "Tue 3.11. 13:35",
-     "to_t": "Tue 3.11. 15:04",
-     "minutes": 89,
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 06:01",
+     "to_t": "Wed 4.11. 07:45",
+     "minutes": 104,
      "nights": 0
     },
     {
      "kind": "leg",
-     "from": "Copenhagen",
-     "to": "Hamburg",
-     "service": "IC397",
-     "mode": "train",
-     "night": false,
-     "dep": 2344,
-     "arr": 2642,
-     "dep_txt": "Tue 3.11. 15:04",
-     "arr_txt": "Tue 3.11. 20:02",
-     "timed": true,
-     "issue": null,
-     "note": null
-    },
-    {
-     "kind": "stay",
-     "place": "Hamburg",
-     "from_t": "Tue 3.11. 20:02",
-     "to_t": "Wed 4.11. 07:45",
-     "minutes": 703,
-     "nights": 1
-    },
-    {
-     "kind": "leg",
+     "i": 19,
      "from": "Hamburg",
      "to": "Amsterdam",
      "service": "ICE 517 + IC 240",
@@ -3285,6 +3765,7 @@
     },
     {
      "kind": "leg",
+     "i": 21,
      "from": "Amsterdam",
      "to": "Brussels",
      "service": "ICD 9240",
@@ -3298,7 +3779,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Rome",
@@ -3312,9 +3795,40 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     42,
+     3660
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -3338,6 +3852,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -3361,6 +3876,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -3384,6 +3900,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -3407,6 +3924,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -3430,6 +3948,7 @@
     },
     {
      "kind": "leg",
+     "i": 40,
      "from": "Basel",
      "to": "Milan",
      "service": "ICE563 + EC315",
@@ -3453,6 +3972,7 @@
     },
     {
      "kind": "leg",
+     "i": 42,
      "from": "Milan",
      "to": "Rome",
      "service": "FR 9631",
@@ -3466,7 +3986,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "London",
@@ -3480,9 +4002,40 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3793
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -3506,6 +4059,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -3529,6 +4083,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -3552,6 +4107,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -3575,6 +4131,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -3598,6 +4155,7 @@
     },
     {
      "kind": "leg",
+     "i": 48,
      "from": "Basel",
      "to": "Paris",
      "service": "TGV9210",
@@ -3621,6 +4179,7 @@
     },
     {
      "kind": "leg",
+     "i": 50,
      "from": "Paris",
      "to": "London",
      "service": "ES9039",
@@ -3633,6 +4192,159 @@
      "timed": true,
      "issue": null,
      "note": null
+    }
+   ],
+   "label": "Fastest",
+   "alternatives": [
+    {
+     "capital": "London",
+     "depart": 1056,
+     "arrive": 4080,
+     "depart_txt": "Mon 2.11. 17:36",
+     "arrive_txt": "Wed 4.11. 20:00",
+     "door_to_door_min": 3024,
+     "changes": 4,
+     "nights_on_board": 2,
+     "hotel_nights": 0,
+     "stays": [],
+     "has_issue": false,
+     "signature": [
+      [
+       1,
+       1056
+      ],
+      [
+       2,
+       1255
+      ],
+      [
+       3,
+       2494
+      ],
+      [
+       19,
+       3345
+      ],
+      [
+       20,
+       3887
+      ]
+     ],
+     "steps": [
+      {
+       "kind": "leg",
+       "i": 1,
+       "from": "Helsinki",
+       "to": "Turku",
+       "service": "IC959",
+       "mode": "train",
+       "night": false,
+       "dep": 1056,
+       "arr": 1190,
+       "dep_txt": "Mon 2.11. 17:36",
+       "arr_txt": "Mon 2.11. 19:50",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Turku",
+       "from_t": "Mon 2.11. 19:50",
+       "to_t": "Mon 2.11. 20:55",
+       "minutes": 65,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 2,
+       "from": "Turku",
+       "to": "Stockholm",
+       "service": "Viking Line",
+       "mode": "ferry",
+       "night": true,
+       "dep": 1255,
+       "arr": 1830,
+       "dep_txt": "Mon 2.11. 20:55",
+       "arr_txt": "Tue 3.11. 06:30",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Stockholm",
+       "from_t": "Tue 3.11. 06:30",
+       "to_t": "Tue 3.11. 17:34",
+       "minutes": 664,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 3,
+       "from": "Stockholm",
+       "to": "Hamburg",
+       "service": "EN345",
+       "mode": "train",
+       "night": true,
+       "dep": 2494,
+       "arr": 3241,
+       "dep_txt": "Tue 3.11. 17:34",
+       "arr_txt": "Wed 4.11. 06:01",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Hamburg",
+       "from_t": "Wed 4.11. 06:01",
+       "to_t": "Wed 4.11. 07:45",
+       "minutes": 104,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 19,
+       "from": "Hamburg",
+       "to": "Amsterdam",
+       "service": "ICE 517 + IC 240",
+       "mode": "train",
+       "night": false,
+       "dep": 3345,
+       "arr": 3660,
+       "dep_txt": "Wed 4.11. 07:45",
+       "arr_txt": "Wed 4.11. 13:00",
+       "timed": true,
+       "issue": null,
+       "note": null
+      },
+      {
+       "kind": "change",
+       "place": "Amsterdam",
+       "from_t": "Wed 4.11. 13:00",
+       "to_t": "Wed 4.11. 16:47",
+       "minutes": 227,
+       "nights": 0
+      },
+      {
+       "kind": "leg",
+       "i": 20,
+       "from": "Amsterdam",
+       "to": "London",
+       "service": "EST 9157",
+       "mode": "train",
+       "night": false,
+       "dep": 3887,
+       "arr": 4080,
+       "dep_txt": "Wed 4.11. 16:47",
+       "arr_txt": "Wed 4.11. 20:00",
+       "timed": true,
+       "issue": null,
+       "note": null
+      }
+     ],
+     "label": "Fewest changes"
     }
    ]
   },
@@ -3648,9 +4360,44 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     42,
+     3660
+    ],
+    [
+     38,
+     3870
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -3674,6 +4421,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -3697,6 +4445,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -3720,6 +4469,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -3743,6 +4493,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -3766,6 +4517,7 @@
     },
     {
      "kind": "leg",
+     "i": 40,
      "from": "Basel",
      "to": "Milan",
      "service": "ICE563 + EC315",
@@ -3789,6 +4541,7 @@
     },
     {
      "kind": "leg",
+     "i": 42,
      "from": "Milan",
      "to": "Rome",
      "service": "FR 9631",
@@ -3812,6 +4565,7 @@
     },
     {
      "kind": "leg",
+     "i": 38,
      "from": "Rome",
      "to": "Vatican",
      "service": "Metro line A",
@@ -3825,7 +4579,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Luxembourg",
@@ -3834,16 +4590,37 @@
    "depart_txt": "Mon 2.11. 17:36",
    "arrive_txt": "Wed 4.11. 17:48",
    "door_to_door_min": 2892,
-   "changes": 5,
-   "nights_on_board": 1,
-   "hotel_nights": 1,
-   "stays": [
-    "Hamburg"
-   ],
+   "changes": 4,
+   "nights_on_board": 2,
+   "hotel_nights": 0,
+   "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     3,
+     2494
+    ],
+    [
+     12,
+     3388
+    ],
+    [
+     16,
+     3702
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -3867,6 +4644,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -3884,58 +4662,37 @@
      "kind": "change",
      "place": "Stockholm",
      "from_t": "Tue 3.11. 06:30",
-     "to_t": "Tue 3.11. 08:21",
-     "minutes": 111,
+     "to_t": "Tue 3.11. 17:34",
+     "minutes": 664,
      "nights": 0
     },
     {
      "kind": "leg",
+     "i": 3,
      "from": "Stockholm",
-     "to": "Copenhagen",
-     "service": "SJ 525",
+     "to": "Hamburg",
+     "service": "EN345",
      "mode": "train",
-     "night": false,
-     "dep": 1941,
-     "arr": 2255,
-     "dep_txt": "Tue 3.11. 08:21",
-     "arr_txt": "Tue 3.11. 13:35",
+     "night": true,
+     "dep": 2494,
+     "arr": 3241,
+     "dep_txt": "Tue 3.11. 17:34",
+     "arr_txt": "Wed 4.11. 06:01",
      "timed": true,
      "issue": null,
      "note": null
     },
     {
      "kind": "change",
-     "place": "Copenhagen",
-     "from_t": "Tue 3.11. 13:35",
-     "to_t": "Tue 3.11. 15:04",
-     "minutes": 89,
+     "place": "Hamburg",
+     "from_t": "Wed 4.11. 06:01",
+     "to_t": "Wed 4.11. 08:28",
+     "minutes": 147,
      "nights": 0
     },
     {
      "kind": "leg",
-     "from": "Copenhagen",
-     "to": "Hamburg",
-     "service": "IC397",
-     "mode": "train",
-     "night": false,
-     "dep": 2344,
-     "arr": 2642,
-     "dep_txt": "Tue 3.11. 15:04",
-     "arr_txt": "Tue 3.11. 20:02",
-     "timed": true,
-     "issue": null,
-     "note": null
-    },
-    {
-     "kind": "stay",
-     "place": "Hamburg",
-     "from_t": "Tue 3.11. 20:02",
-     "to_t": "Wed 4.11. 08:28",
-     "minutes": 746,
-     "nights": 1
-    },
-    {
-     "kind": "leg",
+     "i": 12,
      "from": "Hamburg",
      "to": "Frankfurt",
      "service": "ICE1577",
@@ -3959,6 +4716,7 @@
     },
     {
      "kind": "leg",
+     "i": 16,
      "from": "Frankfurt",
      "to": "Luxembourg",
      "service": "ICE 228 + RE1",
@@ -3972,7 +4730,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Dublin",
@@ -3986,9 +4746,48 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": true,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3793
+    ],
+    [
+     57,
+     4022
+    ],
+    [
+     69,
+     4287
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -4012,6 +4811,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -4035,6 +4835,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -4058,6 +4859,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -4081,6 +4883,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -4104,6 +4907,7 @@
     },
     {
      "kind": "leg",
+     "i": 48,
      "from": "Basel",
      "to": "Paris",
      "service": "TGV9210",
@@ -4127,6 +4931,7 @@
     },
     {
      "kind": "leg",
+     "i": 50,
      "from": "Paris",
      "to": "London",
      "service": "ES9039",
@@ -4150,6 +4955,7 @@
     },
     {
      "kind": "leg",
+     "i": 57,
      "from": "London",
      "to": "Holyhead",
      "service": "R",
@@ -4173,6 +4979,7 @@
     },
     {
      "kind": "leg",
+     "i": 69,
      "from": "Holyhead",
      "to": "Dublin",
      "service": "Ferry",
@@ -4186,7 +4993,9 @@
      "issue": "No times in the original ('by ferry'); duration is an estimate",
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Madrid",
@@ -4202,9 +5011,44 @@
     "Barcelona"
    ],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3774
+    ],
+    [
+     62,
+     4700
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -4228,6 +5072,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -4251,6 +5096,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -4274,6 +5120,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -4297,6 +5144,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -4320,6 +5168,7 @@
     },
     {
      "kind": "leg",
+     "i": 48,
      "from": "Basel",
      "to": "Paris",
      "service": "TGV9210",
@@ -4343,6 +5192,7 @@
     },
     {
      "kind": "leg",
+     "i": 49,
      "from": "Paris",
      "to": "Barcelona",
      "service": "TGV 9210 + TGV 9715",
@@ -4366,6 +5216,7 @@
     },
     {
      "kind": "leg",
+     "i": 62,
      "from": "Barcelona",
      "to": "Madrid",
      "service": "AVE 3260",
@@ -4379,7 +5230,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Bucharest",
@@ -4393,9 +5246,44 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ],
+    [
+     36,
+     3642
+    ],
+    [
+     72,
+     4030
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -4419,6 +5307,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -4442,6 +5331,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -4465,6 +5355,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -4488,6 +5379,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -4511,6 +5403,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -4534,6 +5427,7 @@
     },
     {
      "kind": "leg",
+     "i": 36,
      "from": "Vienna",
      "to": "Budapest",
      "service": "EC145",
@@ -4557,6 +5451,7 @@
     },
     {
      "kind": "leg",
+     "i": 72,
      "from": "Budapest",
      "to": "Bucharest",
      "service": "IC473",
@@ -4570,7 +5465,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Zagreb",
@@ -4584,9 +5481,48 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     45,
+     3725
+    ],
+    [
+     78,
+     4065
+    ],
+    [
+     79,
+     4820
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -4610,6 +5546,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -4633,6 +5570,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -4656,6 +5594,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -4679,6 +5618,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -4702,6 +5642,7 @@
     },
     {
      "kind": "leg",
+     "i": 40,
      "from": "Basel",
      "to": "Milan",
      "service": "ICE563 + EC315",
@@ -4725,6 +5666,7 @@
     },
     {
      "kind": "leg",
+     "i": 45,
      "from": "Milan",
      "to": "Ancona",
      "service": "FR8813",
@@ -4748,6 +5690,7 @@
     },
     {
      "kind": "leg",
+     "i": 78,
      "from": "Ancona",
      "to": "Split",
      "service": "Croatia Ferry 53",
@@ -4771,6 +5714,7 @@
     },
     {
      "kind": "leg",
+     "i": 79,
      "from": "Split",
      "to": "Zagreb",
      "service": "IC520",
@@ -4784,7 +5728,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Belfast",
@@ -4800,9 +5746,52 @@
     "Dublin"
    ],
    "has_issue": true,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     50,
+     3793
+    ],
+    [
+     57,
+     4022
+    ],
+    [
+     69,
+     4287
+    ],
+    [
+     70,
+     5240
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -4826,6 +5815,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -4849,6 +5839,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -4872,6 +5863,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -4895,6 +5887,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -4918,6 +5911,7 @@
     },
     {
      "kind": "leg",
+     "i": 48,
      "from": "Basel",
      "to": "Paris",
      "service": "TGV9210",
@@ -4941,6 +5935,7 @@
     },
     {
      "kind": "leg",
+     "i": 50,
      "from": "Paris",
      "to": "London",
      "service": "ES9039",
@@ -4964,6 +5959,7 @@
     },
     {
      "kind": "leg",
+     "i": 57,
      "from": "London",
      "to": "Holyhead",
      "service": "R",
@@ -4987,6 +5983,7 @@
     },
     {
      "kind": "leg",
+     "i": 69,
      "from": "Holyhead",
      "to": "Dublin",
      "service": "Ferry",
@@ -5010,6 +6007,7 @@
     },
     {
      "kind": "leg",
+     "i": 70,
      "from": "Dublin",
      "to": "Belfast",
      "service": "IC130",
@@ -5023,7 +6021,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Ljubljana",
@@ -5037,9 +6037,52 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     45,
+     3725
+    ],
+    [
+     78,
+     4065
+    ],
+    [
+     79,
+     4820
+    ],
+    [
+     80,
+     5410
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -5063,6 +6106,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -5086,6 +6130,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -5109,6 +6154,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -5132,6 +6178,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -5155,6 +6202,7 @@
     },
     {
      "kind": "leg",
+     "i": 40,
      "from": "Basel",
      "to": "Milan",
      "service": "ICE563 + EC315",
@@ -5178,6 +6226,7 @@
     },
     {
      "kind": "leg",
+     "i": 45,
      "from": "Milan",
      "to": "Ancona",
      "service": "FR8813",
@@ -5201,6 +6250,7 @@
     },
     {
      "kind": "leg",
+     "i": 78,
      "from": "Ancona",
      "to": "Split",
      "service": "Croatia Ferry 53",
@@ -5224,6 +6274,7 @@
     },
     {
      "kind": "leg",
+     "i": 79,
      "from": "Split",
      "to": "Zagreb",
      "service": "IC520",
@@ -5247,6 +6298,7 @@
     },
     {
      "kind": "leg",
+     "i": 80,
      "from": "Zagreb",
      "to": "Ljubljana",
      "service": "EN40414 + R2276",
@@ -5260,7 +6312,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Valletta",
@@ -5274,9 +6328,52 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     42,
+     3660
+    ],
+    [
+     59,
+     4260
+    ],
+    [
+     60,
+     5170
+    ],
+    [
+     61,
+     5490
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -5300,6 +6397,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -5323,6 +6421,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -5346,6 +6445,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -5369,6 +6469,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -5392,6 +6493,7 @@
     },
     {
      "kind": "leg",
+     "i": 40,
      "from": "Basel",
      "to": "Milan",
      "service": "ICE563 + EC315",
@@ -5415,6 +6517,7 @@
     },
     {
      "kind": "leg",
+     "i": 42,
      "from": "Milan",
      "to": "Rome",
      "service": "FR 9631",
@@ -5438,6 +6541,7 @@
     },
     {
      "kind": "leg",
+     "i": 59,
      "from": "Rome",
      "to": "Syracuse",
      "service": "ICN1959",
@@ -5461,6 +6565,7 @@
     },
     {
      "kind": "leg",
+     "i": 60,
      "from": "Syracuse",
      "to": "Pozzallo",
      "service": "R12936",
@@ -5484,6 +6589,7 @@
     },
     {
      "kind": "leg",
+     "i": 61,
      "from": "Pozzallo",
      "to": "Valletta",
      "service": "Virtu Ferries",
@@ -5497,7 +6603,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Lisbon",
@@ -5513,9 +6621,56 @@
     "Barcelona"
    ],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     48,
+     3514
+    ],
+    [
+     49,
+     3774
+    ],
+    [
+     62,
+     4700
+    ],
+    [
+     66,
+     4975
+    ],
+    [
+     67,
+     5501
+    ],
+    [
+     68,
+     5582
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -5539,6 +6694,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -5562,6 +6718,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -5585,6 +6742,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -5608,6 +6766,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -5631,6 +6790,7 @@
     },
     {
      "kind": "leg",
+     "i": 48,
      "from": "Basel",
      "to": "Paris",
      "service": "TGV9210",
@@ -5654,6 +6814,7 @@
     },
     {
      "kind": "leg",
+     "i": 49,
      "from": "Paris",
      "to": "Barcelona",
      "service": "TGV 9210 + TGV 9715",
@@ -5677,6 +6838,7 @@
     },
     {
      "kind": "leg",
+     "i": 62,
      "from": "Barcelona",
      "to": "Madrid",
      "service": "AVE 3260",
@@ -5700,6 +6862,7 @@
     },
     {
      "kind": "leg",
+     "i": 66,
      "from": "Madrid",
      "to": "Badajoz",
      "service": "MD",
@@ -5723,6 +6886,7 @@
     },
     {
      "kind": "leg",
+     "i": 67,
      "from": "Badajoz",
      "to": "Abrantes",
      "service": "R",
@@ -5746,6 +6910,7 @@
     },
     {
      "kind": "leg",
+     "i": 68,
      "from": "Abrantes",
      "to": "Lisbon",
      "service": "IC",
@@ -5759,7 +6924,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Chisinau",
@@ -5773,9 +6940,48 @@
    "hotel_nights": 0,
    "stays": [],
    "has_issue": false,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ],
+    [
+     36,
+     3642
+    ],
+    [
+     72,
+     4030
+    ],
+    [
+     81,
+     5480
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -5799,6 +7005,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -5822,6 +7029,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -5845,6 +7053,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -5868,6 +7077,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -5891,6 +7101,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -5914,6 +7125,7 @@
     },
     {
      "kind": "leg",
+     "i": 36,
      "from": "Vienna",
      "to": "Budapest",
      "service": "EC145",
@@ -5937,6 +7149,7 @@
     },
     {
      "kind": "leg",
+     "i": 72,
      "from": "Budapest",
      "to": "Bucharest",
      "service": "IC473",
@@ -5960,6 +7173,7 @@
     },
     {
      "kind": "leg",
+     "i": 81,
      "from": "Bucharest",
      "to": "Chisinau",
      "service": "402",
@@ -5973,7 +7187,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Sofia",
@@ -5989,9 +7205,48 @@
     "Bucharest"
    ],
    "has_issue": true,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ],
+    [
+     36,
+     3642
+    ],
+    [
+     72,
+     4030
+    ],
+    [
+     73,
+     6415
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -6015,6 +7270,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -6038,6 +7294,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -6061,6 +7318,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -6084,6 +7342,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -6107,6 +7366,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -6130,6 +7390,7 @@
     },
     {
      "kind": "leg",
+     "i": 36,
      "from": "Vienna",
      "to": "Budapest",
      "service": "EC145",
@@ -6153,6 +7414,7 @@
     },
     {
      "kind": "leg",
+     "i": 72,
      "from": "Budapest",
      "to": "Bucharest",
      "service": "IC473",
@@ -6176,6 +7438,7 @@
     },
     {
      "kind": "leg",
+     "i": 73,
      "from": "Bucharest",
      "to": "Sofia",
      "service": "?",
@@ -6189,7 +7452,9 @@
      "issue": "Service marked 'Not sure' in the original",
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Athens",
@@ -6206,9 +7471,48 @@
     "Patras"
    ],
    "has_issue": true,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     39,
+     2767
+    ],
+    [
+     40,
+     3393
+    ],
+    [
+     46,
+     3725
+    ],
+    [
+     76,
+     5490
+    ],
+    [
+     77,
+     7915
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -6232,6 +7536,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -6255,6 +7560,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -6278,6 +7584,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -6301,6 +7608,7 @@
     },
     {
      "kind": "leg",
+     "i": 39,
      "from": "Hamburg",
      "to": "Basel",
      "service": "NJ471",
@@ -6324,6 +7632,7 @@
     },
     {
      "kind": "leg",
+     "i": 40,
      "from": "Basel",
      "to": "Milan",
      "service": "ICE563 + EC315",
@@ -6347,6 +7656,7 @@
     },
     {
      "kind": "leg",
+     "i": 46,
      "from": "Milan",
      "to": "Bari",
      "service": "FR 8813",
@@ -6370,6 +7680,7 @@
     },
     {
      "kind": "leg",
+     "i": 76,
      "from": "Bari",
      "to": "Patras",
      "service": "Anek Superfast",
@@ -6393,6 +7704,7 @@
     },
     {
      "kind": "leg",
+     "i": 77,
      "from": "Patras",
      "to": "Athens",
      "service": "C111E 1319",
@@ -6406,7 +7718,9 @@
      "issue": "Departs 11:55 but the Bari ferry arrives 13:30 - no same-day connection",
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   },
   {
    "capital": "Ankara",
@@ -6423,9 +7737,56 @@
     "Sofia"
    ],
    "has_issue": true,
+   "signature": [
+    [
+     1,
+     1056
+    ],
+    [
+     2,
+     1255
+    ],
+    [
+     8,
+     1941
+    ],
+    [
+     9,
+     2344
+    ],
+    [
+     29,
+     2664
+    ],
+    [
+     35,
+     3323
+    ],
+    [
+     36,
+     3642
+    ],
+    [
+     72,
+     4030
+    ],
+    [
+     73,
+     6415
+    ],
+    [
+     74,
+     8320
+    ],
+    [
+     75,
+     9160
+    ]
+   ],
    "steps": [
     {
      "kind": "leg",
+     "i": 1,
      "from": "Helsinki",
      "to": "Turku",
      "service": "IC959",
@@ -6449,6 +7810,7 @@
     },
     {
      "kind": "leg",
+     "i": 2,
      "from": "Turku",
      "to": "Stockholm",
      "service": "Viking Line",
@@ -6472,6 +7834,7 @@
     },
     {
      "kind": "leg",
+     "i": 8,
      "from": "Stockholm",
      "to": "Copenhagen",
      "service": "SJ 525",
@@ -6495,6 +7858,7 @@
     },
     {
      "kind": "leg",
+     "i": 9,
      "from": "Copenhagen",
      "to": "Hamburg",
      "service": "IC397",
@@ -6518,6 +7882,7 @@
     },
     {
      "kind": "leg",
+     "i": 29,
      "from": "Hamburg",
      "to": "Munich",
      "service": "NJ40491",
@@ -6541,6 +7906,7 @@
     },
     {
      "kind": "leg",
+     "i": 35,
      "from": "Munich",
      "to": "Vienna",
      "service": "RJX61",
@@ -6564,6 +7930,7 @@
     },
     {
      "kind": "leg",
+     "i": 36,
      "from": "Vienna",
      "to": "Budapest",
      "service": "EC145",
@@ -6587,6 +7954,7 @@
     },
     {
      "kind": "leg",
+     "i": 72,
      "from": "Budapest",
      "to": "Bucharest",
      "service": "IC473",
@@ -6610,6 +7978,7 @@
     },
     {
      "kind": "leg",
+     "i": 73,
      "from": "Bucharest",
      "to": "Sofia",
      "service": "?",
@@ -6633,6 +8002,7 @@
     },
     {
      "kind": "leg",
+     "i": 74,
      "from": "Sofia",
      "to": "Istanbul",
      "service": "493 / 12504",
@@ -6656,6 +8026,7 @@
     },
     {
      "kind": "leg",
+     "i": 75,
      "from": "Istanbul",
      "to": "Ankara",
      "service": "IC81006",
@@ -6669,7 +8040,9 @@
      "issue": null,
      "note": null
     }
-   ]
+   ],
+   "label": "Fastest",
+   "alternatives": []
   }
  ],
  "unreached": [],

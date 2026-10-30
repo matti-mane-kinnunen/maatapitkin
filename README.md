@@ -38,6 +38,11 @@ Each journey is built for a real travel date, not just by adding up leg duration
 - A wait that runs through 03:00 counts as a **hotel night**. After a hotel night, nothing departs before 06:00. No one waits more than 2 nights at one place.
 - Night trains and night ferries count as nights on board, not hotel nights.
 
+- Besides the fastest journey, each capital can get two alternatives: **fewest changes** and
+  **fewest hotel nights**. They are shown only when they really save a change or a night and are at most
+  `alternative_max_extra_hours` (12 h) slower. The router keeps every journey that is not beaten on all
+  of arrival time, changes and hotel nights, and picks the alternatives from those.
+
 All of these settings are in `places.yaml` → `settings`.
 
 ## Next steps

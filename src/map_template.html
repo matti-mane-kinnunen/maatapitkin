@@ -87,6 +87,16 @@ svg { display: block; width: 100%; height: auto }
 .itin { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px }
 .itin h2 span:last-child { font-family: var(--mono); letter-spacing: 0; text-transform: none; font-size: 12px }
 .steps { list-style: none; margin: 0; padding: 4px 0 }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 14px 6px }
+.opts:empty { display: none }
+.opts button { all: unset; cursor: pointer; border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px;
+  display: grid; gap: 1px; min-width: 9rem }
+.opts button b { font: 600 12px/1.2 var(--body); letter-spacing: 0.04em; text-transform: uppercase }
+.opts button span { font: 12px/1.4 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums }
+.opts button:hover { border-color: var(--accent) }
+.opts button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.opts button[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent) }
+.alt { color: var(--accent) }
 .steps li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 16px; padding: 8px 14px; border-bottom: 1px dashed var(--rule) }
 .steps li:last-child { border-bottom: 0 }
 @media (max-width: 520px) { .steps li { grid-template-columns: minmax(0, 1fr) } }
@@ -135,6 +145,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       </div>
       <section class="itin" aria-live="polite">
         <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
+        <div class="opts" id="opts" role="tablist" aria-label="Journey options"></div>
         <ol class="steps" id="steps"></ol>
       </section>
     </div>
@@ -194,7 +205,7 @@ for (const r of NET.routes) {
   b.innerHTML = `<span class="cap">${r.capital}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
     <span class="when">${dur(r.door_to_door_min)}</span>
     <span class="bar"><i style="width:${(100 * r.door_to_door_min / maxMin).toFixed(1)}%"></i></span>
-    <span class="sub">Arrive ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
+    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Arrive ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
   b.addEventListener("click", () => select(r.capital));
   li.appendChild(b); list.appendChild(li); buttons[r.capital] = b;
 }
@@ -207,8 +218,18 @@ document.getElementById("foot").textContent =
   `A wait that runs through the night is a hotel stay, with no departure before 06:00 the next morning. ` +
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
 
-function select(cap) {
-  const r = NET.routes.find(x => x.capital === cap); if (!r) return;
+function select(cap, opt = 0) {
+  const r0 = NET.routes.find(x => x.capital === cap); if (!r0) return;
+  const options = [r0, ...(r0.alternatives || [])];
+  const r = options[Math.min(opt, options.length - 1)];
+  const optsEl = document.getElementById("opts"); optsEl.replaceChildren();
+  if (options.length > 1) options.forEach((o, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", String(o === r));
+    b.innerHTML = `<b>${o.label}</b><span>${dur(o.door_to_door_min)} · ${o.changes} changes · ${o.hotel_nights} hotel</span>`;
+    b.addEventListener("click", () => select(cap, i));
+    optsEl.appendChild(b);
+  });
   for (const [c, b] of Object.entries(buttons)) b.setAttribute("aria-pressed", String(c === cap));
   routeG.replaceChildren();
   const legs = r.steps.filter(s => s.kind === "leg");

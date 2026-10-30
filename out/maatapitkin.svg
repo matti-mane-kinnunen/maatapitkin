@@ -134,8 +134,8 @@
 <!-- Stockholm&#45;&gt;Hamburg -->
 <g id="edge4" class="edge">
 <title>Stockholm&#45;&gt;Hamburg</title>
-<path fill="none" stroke="#ff7f00" d="M790.75,-643.21C805.2,-659.53 828.8,-682.48 855,-693 992.02,-748.02 1041.39,-729.46 1187,-705 1196.05,-703.48 1205.44,-701.07 1214.49,-698.28"/>
-<polygon fill="#ff7f00" stroke="#ff7f00" points="1215.71,-701.56 1224.13,-695.13 1213.54,-694.91 1215.71,-701.56"/>
+<path fill="none" stroke="#ff7f00" stroke-width="3" d="M790.75,-643.21C805.2,-659.53 828.8,-682.48 855,-693 992.02,-748.02 1041.39,-729.46 1187,-705 1196.05,-703.48 1205.44,-701.07 1214.49,-698.28"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" stroke-width="3" points="1215.71,-701.56 1224.13,-695.13 1213.54,-694.91 1215.71,-701.56"/>
 <text text-anchor="middle" x="991.5" y="-761.8" font-family="Times,serif" font-size="14.00">17:34</text>
 <text text-anchor="middle" x="991.5" y="-746.8" font-family="Times,serif" font-size="14.00">EN345</text>
 <text text-anchor="middle" x="991.5" y="-731.8" font-family="Times,serif" font-size="14.00">06:01</text>

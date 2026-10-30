@@ -202,35 +202,69 @@ class Router:
         return None
 
     # -- search ----------------------------------------------------------------
-    def search(self, origin: str, start: int = 0):
-        """Dijkstra over states (place, incoming leg)."""
-        dist = {(origin, -1): start}
+    OBJECTIVES = {
+        "fastest":        lambda c, h, t: (t, c, h),
+        "fewest_changes": lambda c, h, t: (c, t, h),
+        "fewest_hotels":  lambda c, h, t: (h, t, c),
+    }
+
+    def nights_between(self, a: int, b: int) -> int:
+        """How many night points (03:00) lie in the wait (a, b]."""
+        first = (a - self.night_point) // DAY * DAY + self.night_point + DAY
+        return 0 if first > b else (b - first) // DAY + 1
+
+    def search(self, origin: str, start: int = 0, objective: str = "fastest"):
+        """Dijkstra over states (place, incoming leg).
+
+        Each state carries (changes, hotel nights, arrival time); `objective` decides
+        which of them is minimised first (the others break ties)."""
+        key = self.OBJECTIVES[objective]
+        lab = {(origin, -1): (0, 0, start)}
         parent: dict = {(origin, -1): None}
-        pq = [(start, origin, -1)]
+        pq = [(key(0, 0, start), origin, -1)]
         while pq:
-            t, node, inc = heapq.heappop(pq)
-            if dist.get((node, inc), 1e18) < t:
+            k, node, inc = heapq.heappop(pq)
+            c, h, t = lab[(node, inc)]
+            if key(c, h, t) < k:
                 continue
             inc_leg = self.net.legs[inc] if inc >= 0 else None
             for leg in self.out.get(node, []):
                 dep = self.board(t, t + self.change_time(node, inc_leg, leg), leg, first_leg=inc_leg is None)
                 if dep is None:
                     continue
-                arr = dep + leg.duration
-                key = (leg.to, leg.idx)
-                if arr < dist.get(key, 1e18):
-                    dist[key] = arr
-                    parent[key] = ((node, inc), dep)
-                    heapq.heappush(pq, (arr, leg.to, leg.idx))
+                same_train = inc_leg is not None and self.change_time(node, inc_leg, leg) == 0 and dep == t
+                nc = c + (0 if inc_leg is None or same_train else 1)
+                nh = h + (self.nights_between(t, dep) if inc_leg is not None else 0)
+                nt = dep + leg.duration
+                st = (leg.to, leg.idx)
+                if st not in lab or key(nc, nh, nt) < key(*lab[st]):
+                    lab[st] = (nc, nh, nt)
+                    parent[st] = ((node, inc), dep)
+                    heapq.heappush(pq, (key(nc, nh, nt), leg.to, leg.idx))
         best: dict[str, tuple] = {}
-        for (node, inc), t in dist.items():
-            if node not in best or t < dist[best[node]]:
-                best[node] = (node, inc)
-        self._dist, self._parent, self._best = dist, parent, best
+        for st, l in lab.items():
+            if st[0] not in best or key(*l) < key(*lab[best[st[0]]]):
+                best[st[0]] = st
+        self._lab, self._parent, self._best = lab, parent, best
+        self._dist = {st: l[2] for st, l in lab.items()}
         return best
 
+    def _steps(self, legs: list[dict]) -> list[dict]:
+        steps = []
+        for i, s in enumerate(legs):
+            if i:
+                prev = legs[i - 1]
+                n = self.nights_between(prev["arr"], s["dep"])
+                if n:
+                    steps.append({"kind": "stay", "place": s["leg"].frm, "from": prev["arr"],
+                                  "to": s["dep"], "nights": n})
+                elif s["dep"] - prev["arr"] > 0 or s["leg"].service != prev["leg"].service:
+                    steps.append({"kind": "change", "place": s["leg"].frm, "from": prev["arr"], "to": s["dep"]})
+            steps.append({"kind": "leg", **s})
+        return steps
+
     def journey(self, place: str) -> list[dict] | None:
-        """Ordered list of steps: {'kind': 'leg'|'stay'|'change', ...}."""
+        """Ordered list of steps: {'kind': 'leg'|'stay'|'change', ...} for the last search."""
         if place not in self._best:
             return None
         legs = []
@@ -240,18 +274,57 @@ class Router:
             legs.append({"leg": self.net.legs[state[1]], "dep": dep, "arr": self._dist[state]})
             state = prev
         legs.reverse()
-        steps = []
-        for i, s in enumerate(legs):
-            if i:
-                prev = legs[i - 1]
-                if self.is_stay(prev["arr"], s["dep"]):
-                    steps.append({"kind": "stay", "place": s["leg"].frm, "from": prev["arr"], "to": s["dep"],
-                                  "nights": len({d for d in range(prev["arr"], s["dep"])
-                                                 if (d - self.night_point) % DAY == 0})})
-                elif s["dep"] - prev["arr"] > 0:
-                    steps.append({"kind": "change", "place": s["leg"].frm, "from": prev["arr"], "to": s["dep"]})
-            steps.append({"kind": "leg", **s})
-        return steps
+        return self._steps(legs)
+
+    # -- all sensible trade-offs ------------------------------------------------
+    def pareto(self, origin: str, start: int = 0, horizon_days: int = 10):
+        """Keep every journey that is not beaten on all three of arrival time, changes
+        and hotel nights. Returns {place: [label, ...]}; use pareto_journey(label)."""
+        labels = [(0, 0, start, (origin, -1), None, None)]      # c, h, t, state, parent id, dep
+        at_state: dict = {(origin, -1): [0]}
+        pq = [(start, 0)]
+        limit = start + horizon_days * DAY
+        while pq:
+            t, lid = heapq.heappop(pq)
+            c, h, _, (node, inc), _, _ = labels[lid]
+            if lid not in at_state.get((node, inc), []):
+                continue                                         # dominated after it was queued
+            inc_leg = self.net.legs[inc] if inc >= 0 else None
+            for leg in self.out.get(node, []):
+                ct = self.change_time(node, inc_leg, leg)
+                dep = self.board(t, t + ct, leg, first_leg=inc_leg is None)
+                if dep is None:
+                    continue
+                same_train = inc_leg is not None and ct == 0 and dep == t
+                nc = c + (0 if inc_leg is None or same_train else 1)
+                nh = h + (self.nights_between(t, dep) if inc_leg is not None else 0)
+                nt = dep + leg.duration
+                if nt > limit:
+                    continue
+                st = (leg.to, leg.idx)
+                cur = at_state.setdefault(st, [])
+                if any(labels[o][0] <= nc and labels[o][1] <= nh and labels[o][2] <= nt for o in cur):
+                    continue
+                cur[:] = [o for o in cur if not (nc <= labels[o][0] and nh <= labels[o][1] and nt <= labels[o][2])]
+                labels.append((nc, nh, nt, st, lid, dep))
+                cur.append(len(labels) - 1)
+                heapq.heappush(pq, (nt, len(labels) - 1))
+        self._plabels = labels
+        out: dict[str, list] = {}
+        for st, ids in at_state.items():
+            for i in ids:
+                out.setdefault(st[0], []).append(i)
+        return {p: [(labels[i][0], labels[i][1], labels[i][2], i) for i in ids] for p, ids in out.items()}
+
+    def pareto_journey(self, label_id: int) -> list[dict]:
+        legs = []
+        lid = label_id
+        while self._plabels[lid][4] is not None:
+            c, h, t, st, parent, dep = self._plabels[lid]
+            legs.append({"leg": self.net.legs[st[1]], "dep": dep, "arr": t})
+            lid = parent
+        legs.reverse()
+        return self._steps(legs)
 
     def leg_departure(self, leg: Leg) -> int:
         """When this leg would be taken after reaching its start as early as possible."""

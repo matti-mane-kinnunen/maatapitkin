@@ -9,6 +9,7 @@ settings:
   night_point: "03:00"       # a wait that includes this time is an overnight (hotel) stay
   morning_departure: "06:00" # earliest departure after a hotel night
   max_stay_nights: 2         # never wait longer than this at one place
+  alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   # start_date: 2026-11-02   # travel date; default is next Monday (or use --date)
 
 places:

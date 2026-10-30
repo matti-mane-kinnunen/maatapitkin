@@ -26,7 +26,7 @@ Viking Line
     node [fontsize="20" shape="box"];
     "Stockholm" -> "Hamburg" [label="17:34
 EN345
-06:01" color="darkorange1"];
+06:01" color="darkorange1" penwidth="3"];
     "Stockholm" -> "Berlin" [label="16:23
 Snälltåget 301
 08:47
