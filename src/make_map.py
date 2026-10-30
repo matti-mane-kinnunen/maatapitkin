@@ -9,9 +9,31 @@ import json
 import math
 from pathlib import Path
 
-LAT0 = 52.0
-BBOX = (-12.5, 34.0, 35.5, 64.5)          # lon_min, lat_min, lon_max, lat_max
 SCALE = 22.0                              # px per degree latitude
+# The map area is fitted to the places in the data (see fit()); these are the defaults
+BBOX = (-12.5, 34.0, 35.5, 64.5)          # lon_min, lat_min, lon_max, lat_max
+LAT0 = 52.0                               # latitude where east-west distances are true
+PAD = (1.5, 1.0, 3.5, 1.0)                # margin in degrees: west, south, east (labels), north
+NEAR = 4.0                                # capitals without connections are shown if this close
+
+
+def fit(places: dict, not_covered: dict, extent=(-32, 25, 50, 72)) -> list[str]:
+    """Fit BBOX to all places with data, plus nearby capitals without connections.
+    Returns the names left outside the map."""
+    global BBOX, LAT0
+    lons = [p["lon"] for p in places.values()]
+    lats = [p["lat"] for p in places.values()]
+    w, s_, e, n = min(lons), min(lats), max(lons), max(lats)
+    outside = []
+    for name, p in not_covered.items():
+        if w - NEAR <= p["lon"] <= e + NEAR and s_ - NEAR <= p["lat"] <= n + NEAR:
+            lons.append(p["lon"]); lats.append(p["lat"])
+        else:
+            outside.append(name)
+    BBOX = (max(extent[0], min(lons) - PAD[0]), max(extent[1], min(lats) - PAD[1]),
+            min(extent[2], max(lons) + PAD[2]), min(extent[3], max(lats) + PAD[3]))
+    LAT0 = (BBOX[1] + BBOX[3]) / 2
+    return outside
 
 
 def project(lon: float, lat: float) -> tuple[float, float]:
@@ -43,6 +65,7 @@ def basemap_paths(geojson: dict) -> str:
 def build(root: Path):
     net = json.loads((root / "out" / "network.json").read_text())
     base = json.loads((root / "data" / "basemap.geojson").read_text())
+    net["off_map"] = fit(net["places"], net["not_covered"], tuple(base.get("extent", (-32, 25, 50, 72))))
     for name, p in {**net["places"], **net["not_covered"]}.items():
         p["x"], p["y"] = project(p["lon"], p["lat"])
     for p in net["not_covered"].values():

@@ -88,7 +88,7 @@ svg { display: block; width: 100%; height: auto }
 .lbl { font: 600 11px var(--display); letter-spacing: 0.03em; fill: var(--fg); paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round; cursor: pointer }
 .lbl.small { font-weight: 500; fill: var(--muted); font-size: 10px }
 .lbl.missing { fill: var(--missing); font-weight: 500 }
-.lbl.target { fill: var(--accent); font-size: 13px }
+.lbl.target { fill: var(--accent); font-weight: 700 }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; color: var(--muted); padding: 0 2px }
 .legend span { display: inline-flex; align-items: center; gap: 6px }
 .legend svg { width: 28px; height: 10px }
@@ -198,12 +198,64 @@ for (const [name, p] of Object.entries(P)) {
   nodeEls[name] = kind === "capital"
     ? el("rect", { x: p.x - 3.5, y: p.y - 3.5, width: 7, height: 7, class: `node ${kind}` }, nodesG)
     : el("circle", { cx: p.x, cy: p.y, r: kind === "missing" ? 4 : 2.6, class: `node ${kind}` }, nodesG);
-  const [dx, dy, anchor] = NUDGE[name] || [7, 4, "start"];
-  const t = el("text", { x: p.x + dx, y: p.y + dy, "text-anchor": anchor,
-    class: `lbl ${kind === "place" ? "small" : kind === "missing" ? "missing" : ""}` }, labelsG);
+  const t = el("text", { x: p.x + 7, y: p.y + 4, class: `lbl ${kind === "place" ? "small" : kind === "missing" ? "missing" : ""}` }, labelsG);
   t.textContent = name; labelEls[name] = t;
   if (kind === "place") t.style.display = "none";
 }
+
+// --- Labels: each tries a few spots around its marker and takes the first free one ---
+const VBOX = document.getElementById("map").viewBox.baseVal;
+const isMain = n => P[n].capital || P[n].missing || n === NET.origin;
+const CAND = [[7, 4, "start"], [-7, 4, "end"], [0, -8, "middle"], [0, 15, "middle"],
+              [6, -5, "start"], [6, 12, "start"], [-6, -5, "end"], [-6, 12, "end"]];
+const nodeBoxes = Object.entries(P).map(([n, p]) => ({ x: p.x - 4, y: p.y - 4, w: 8, h: 8, n }));
+const labelBox = t => { const b = t.getBBox(); return { x: b.x - 1.5, y: b.y - 1, w: b.width + 3, h: b.height + 2 }; };
+const overlap = (a, b) => {
+  const w = Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x), h = Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y);
+  return w > 0 && h > 0 ? w * h : 0;
+};
+function cost(b, taken, own) {
+  let c = 0;
+  for (const o of taken) c += overlap(b, o);
+  for (const nb of nodeBoxes) if (nb.n !== own) c += 2 * overlap(b, nb);
+  return c + 50 * (Math.max(0, -b.x) + Math.max(0, b.x + b.w - VBOX.width) + Math.max(0, -b.y) + Math.max(0, b.y + b.h - VBOX.height));
+}
+function placeLabel(name, taken, mustShow) {
+  const t = labelEls[name], p = P[name];
+  t.style.display = "";
+  let best = null;
+  for (const [dx, dy, a] of (NUDGE[name] ? [NUDGE[name], ...CAND] : CAND)) {
+    t.setAttribute("x", p.x + dx); t.setAttribute("y", p.y + dy); t.setAttribute("text-anchor", a);
+    const b = labelBox(t), c = cost(b, taken, name);
+    if (c === 0) { taken.push(b); return true; }
+    if (!best || c < best.c) best = { c, dx, dy, a, b };
+  }
+  if (!mustShow) { t.style.display = "none"; return false; }
+  t.setAttribute("x", p.x + best.dx); t.setAttribute("y", p.y + best.dy); t.setAttribute("text-anchor", best.a);
+  taken.push(best.b);
+  return true;
+}
+let mainTaken = [];
+function layoutMain() {
+  // Helsinki and the capitals always get a label (earliest arrivals first);
+  // capitals without connections only where there is room
+  mainTaken = [];
+  const arrival = n => (NET.routes.find(r => r.capital === n) || { arrive: 1e9 }).arrive;
+  const caps = Object.keys(P).filter(n => P[n].capital && !P[n].missing && n !== NET.origin).sort((a, b) => arrival(a) - arrival(b));
+  placeLabel(NET.origin, mainTaken, true);
+  for (const n of caps) placeLabel(n, mainTaken, true);
+  for (const n of Object.keys(P).filter(n => P[n].missing)) placeLabel(n, mainTaken, false);
+}
+let cityStops = new Set();
+function layoutCities(extra = null) {
+  // other cities are labelled only along the selected route, and while hovered
+  const taken = [...mainTaken];
+  for (const n of Object.keys(P).filter(n => !isMain(n))) {
+    if (cityStops.has(n) || n === extra) placeLabel(n, taken, true);
+    else labelEls[n].style.display = "none";
+  }
+}
+layoutMain();
 
 // Clickable capitals: hover previews the route, click opens the itinerary
 const svgEl = document.getElementById("map"), tip = document.getElementById("tip");
@@ -226,7 +278,7 @@ function hover(name) {
     : name === NET.origin ? `<b>${name}</b><span class="hint">Every journey starts here</span>`
     : P[name].missing ? `<b>${name}</b><span class="hint">No connections yet</span>`
     : `<b>${name}</b><span class="hint">No journey from ${NET.origin} in the data</span>`;
-  if (!P[name].capital && !P[name].missing) labelEls[name].style.display = "";
+  if (!isMain(name)) layoutCities(name);
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
   const x = p.x * k, y = p.y * k;
   tip.hidden = false;
@@ -237,12 +289,12 @@ function hover(name) {
 let hovered = null;
 function unhover() {
   tip.hidden = true; previewG.replaceChildren();
-  for (const [n, t] of Object.entries(labelEls))
-    if (!P[n].capital && !P[n].missing) t.style.display = curStops.has(n) ? "" : "none";
+  layoutCities();
 }
 
-const isMain = n => P[n].capital || P[n].missing || n === NET.origin;
 const hitNames = [...Object.keys(P).filter(isMain), ...Object.keys(P).filter(n => !isMain(n))];
+function placeHits() {
+hitsG.replaceChildren();
 const placed = [];
 for (const name of hitNames) {
   const p = P[name];
@@ -251,15 +303,27 @@ for (const name of hitNames) {
   // (the Vatican on Rome) gets its target on its name label instead
   let cx = p.x, cy = p.y;
   const near = q => Math.hypot(q.x - cx, q.y - cy);
-  if (isMain(name) && placed.some(q => near(q) < 6)) {
+  if (isMain(name) && placed.some(q => near(q) < 6) && labelEls[name].style.display !== "none") {
     const bb = labelEls[name].getBBox();
     cx = bb.x + bb.width / 2; cy = bb.y + bb.height / 2;
   }
   const d = Math.min(24, ...placed.map(near), ...hitNames.filter(n => n !== name).map(n => Math.hypot(P[n].x - cx, P[n].y - cy)));
   const size = isMain(name) ? [5, 12] : [4, 9];
-  const h = el("circle", { cx, cy, r: Math.max(size[0], Math.min(size[1], d / 2)),
-                           class: (r ? "hit go" : "hit") + (isMain(name) ? "" : " city") }, hitsG);
-  placed.push({ x: cx, y: cy });
+  let rad = Math.max(size[0], Math.min(size[1], d / 2));
+  if (!isMain(name)) {
+    // a city right next to a place that already has a target (Nice next to Monaco)
+    // gets its target just beside its marker, so both stay clickable
+    for (let k = 0; k < 4; k++) {
+      const c = placed.find(q => Math.hypot(q.x - cx, q.y - cy) < q.r + rad + 1);
+      if (!c) break;
+      rad = 4;
+      let vx = cx - c.x, vy = cy - c.y, L = Math.hypot(vx, vy);
+      if (L < 0.01) { vx = 1; vy = 0; L = 1; }
+      cx = c.x + vx / L * (c.r + rad + 1); cy = c.y + vy / L * (c.r + rad + 1);
+    }
+  }
+  const h = el("circle", { cx, cy, r: rad, class: (r ? "hit go" : "hit") + (isMain(name) ? "" : " city") }, hitsG);
+  placed.push({ x: cx, y: cy, r: rad });
   if (r) {
     h.setAttribute("tabindex", "0"); h.setAttribute("role", "button");
     h.setAttribute("aria-label", `${name}: ${dur(r.door_to_door_min)}, show itinerary`);
@@ -274,6 +338,8 @@ for (const name of hitNames) {
   h.addEventListener("focus", () => hover(name));
   h.addEventListener("blur", unhover);
 }
+}
+placeHits();
 
 // Departure board
 const list = document.getElementById("list");
@@ -317,6 +383,7 @@ function select(cap, opt = 0, fromMap = false) {
   const legs = r.steps.filter(s => s.kind === "leg");
   const stops = new Set([legs[0].from, ...legs.map(s => s.to)]);
   curStops = stops;
+  cityStops = stops;
   for (const s of legs) {
     const d = curve(P[s.from], P[s.to]);
     el("path", { d, class: "halo" }, routeG);
@@ -326,8 +393,8 @@ function select(cap, opt = 0, fromMap = false) {
   for (const [name, n] of Object.entries(nodeEls)) {
     n.classList.toggle("on", stops.has(name)); n.classList.toggle("target", name === cap);
     const t = labelEls[name]; t.classList.toggle("target", name === cap);
-    if (!P[name].capital && !P[name].missing) t.style.display = stops.has(name) ? "" : "none";
   }
+  layoutCities();
   document.getElementById("itin-title").textContent = `Helsinki → ${cap}`;
   document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}`;
   const ol = document.getElementById("steps"); ol.replaceChildren();
@@ -367,4 +434,6 @@ function fromHash() {
 }
 window.addEventListener("hashchange", fromHash);
 fromHash();
+// label widths change once the web fonts arrive: lay out again
+document.fonts?.ready.then(() => { layoutMain(); layoutCities(); placeHits(); });
 </script>

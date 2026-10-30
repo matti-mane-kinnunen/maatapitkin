@@ -25,6 +25,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-15 | Which places count as capitals | 30.10.2026 | Accepted |
 | D-16 | Time zones in door-to-door times | – | Open |
 | D-17 | Trains that do not run every day | – | Open |
+| D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
 
 ---
 
@@ -231,6 +232,27 @@ Europe). Options: store a time zone per place and convert, or accept it for now.
 `add_leg.py` looks trains up on one travel date and stores them as if they ran daily. Seasonal
 trains (Snälltåget) and weekday-only services can be wrong. Options: query several dates and
 derive `runs:`, or keep adding `runs:` / `valid_from/to` by hand.
+
+## D-18 The map fits itself to the data; labels never overlap
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** With the network grown to 113 places, Casablanca and Marrakech fell outside the
+fixed map area, and labels ran into each other (Pristina/Sofia, Strasbourg/Offenburg,
+Vienna/Bratislava).
+
+**Decision.**
+- The map area is fitted to all places in the data plus a margin (wider on the east for
+  labels). Capitals without connections are included if they lie within 4° of the network;
+  farther ones (Reykjavik) do not stretch the map and stay in the "not covered" list. The
+  country outlines (`data/basemap.geojson`) now cover lat 25–72, lon −32–50.
+- Each label tries up to eight spots around its marker and takes the first that overlaps no
+  other label or marker. Helsinki and the capitals always get a label (earliest arrivals
+  first); capitals without connections only where there is room; other cities only along the
+  selected route and while hovered.
+- Click targets of places that sit almost on top of each other are moved just beside the
+  marker so every place stays clickable.
+
+**Why.** The map should stay readable as pairs.txt grows, without hand-tuning positions.
 
 ---
 
