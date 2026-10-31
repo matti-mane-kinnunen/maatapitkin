@@ -191,21 +191,21 @@ Paris -> Bordeaux : *
 Paris -> Toulouse : *
 London -> Glasgow : *
 London -> Holyhead : *
-Rome -> Syracuse : *
+Rome -> Syracuse : ICN1959 night 23:00-11:29   # 2023 times - Transitous has no trains here; check by hand
 Syracuse -> Pozzallo : *
 Barcelona -> Madrid : *
 Madrid -> Sevilla : *
 Sevilla -> Granada : *
-Madrid -> Badajoz : *
-Badajoz -> Abrantes : *
-Abrantes -> Lisbon : *
+Madrid -> Badajoz : MD 10:55-16:11   # 2023 times - Transitous has no trains here; check by hand
+Badajoz -> Abrantes : R 19:41-20:52   # 2023 times - Transitous has no trains here; check by hand
+Abrantes -> Lisbon : IC 21:02-22:20   # 2023 times - Transitous has no trains here; check by hand
 Dublin -> Belfast : *
 Dublin -> Galway : *
 Budapest -> Bucharest : *
-Sofia -> Istanbul : *
-Istanbul -> Ankara : *
+Sofia -> Istanbul : 493 / 12504 night 18:40-06:34   # 2023 times - Transitous has no trains here; check by hand
+Istanbul -> Ankara : IC81006 08:40-13:16   # 2023 times - Transitous has no trains here; check by hand
 Split -> Zagreb : *
-Bucharest -> Chisinau : *
+Bucharest -> Chisinau : 402 night 19:20-08:10   # 2023 times - Transitous has no trains here; check by hand
 Sofia -> Varna : *
 
 # Connections stored as one leg, and ferries, from the original graph (your own times)
