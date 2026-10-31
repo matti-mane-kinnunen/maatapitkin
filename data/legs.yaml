@@ -25,14 +25,13 @@ defaults:
 legs:
   # --- Finland -> Sweden ---------------------------------------------------
   - {from: Tampere,   to: Turku,     dep: "18:10", arr: "20:05", service: IC928,  mode: train, checked: 2026-10-30}
-  - {from: Turku,     to: Stockholm, dep: "20:55", arr: "06:30", service: Viking Line, mode: ferry, night: true}
+  - {from: Turku, to: Stockholm, dep: "20:55", arr: "06:30", service: "Viking Line", mode: ferry, night: true, checked: 2026-10-31, source: manual}
 
   # --- From Stockholm -------------------------------------------------------
   - {from: Stockholm, to: Hamburg,   dep: "17:29", arr: "05:53", service: EN 345, mode: train, night: true, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Stockholm, to: Oslo,      dep: "10:29", arr: "16:08", service: "629",  mode: train, checked: 2026-10-30}
   - {from: Oslo,      to: Bergen,    dep: "16:23", arr: "23:18", service: F4,    mode: train, checked: 2026-10-30}
   - {from: Oslo,      to: Trondheim, dep: "18:02", arr: "00:53", service: R51,    mode: train}
-  - {from: Stockholm, to: Copenhagen, dep: "08:23", arr: "13:44", service: SJ 525 + 1073, mode: train, checked: 2026-10-30}
   - {from: Hamburg,   to: Berlin,    dep: "20:34", arr: "22:22", service: ICE 609, mode: train, checked: 2026-10-30}
 
   # --- Morning after the Stockholm-Hamburg night train (orange) -------------
@@ -40,7 +39,6 @@ legs:
   - {from: Frankfurt, to: Strasbourg, dep: "14:02", arr: "16:05", service: ICE 9580, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Strasbourg, to: Paris,    dep: "17:19", arr: "19:05", service: TGV INOUI 2362, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Strasbourg, to: Marseille, dep: "16:15", arr: "21:49", service: ICE 9580, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
-  - {from: Frankfurt, to: Luxembourg, dep: "13:42", arr: "17:48", service: ICE 228 + RE1, mode: train, highlight: sto-ham-night}
   - {from: Hamburg,   to: Amsterdam, dep: "07:45", arr: "13:29", service: ICE 517 + RE1 + ICE 128, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Amsterdam, to: London,    dep: "16:40", arr: "19:57", service: EST 9157, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Amsterdam, to: Paris,     dep: "15:10", arr: "18:48", service: EST 9364, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
@@ -58,7 +56,6 @@ legs:
 
   # --- Night train Hamburg -> Basel ----------------------------------------
   - {from: Hamburg,   to: Basel,     dep: "22:11", arr: "08:21", service: NJ 471,  mode: train, night: true, checked: 2026-10-30}
-  - {from: Basel,     to: Milan,     dep: "08:33", arr: "12:53", service: ICE563 + EC315, mode: train, checked: 2026-10-30}
   - {from: Milan,     to: Rome,      dep: "13:00", arr: "16:15", service: FR 9631, mode: train, checked: 2026-10-30}
   - {from: Rome,      to: Naples,    dep: "16:25", arr: "17:33", service: FR 9631, mode: train, checked: 2026-10-30}
   - {from: Milan,     to: Florence,  dep: "13:10", arr: "15:04", service: FR 9539, mode: train, checked: 2026-10-30}
@@ -94,11 +91,9 @@ legs:
   - {from: Budapest,  to: Bucharest, dep: "19:05", arr: "10:37", service: IC 473, mode: train, night: true, checked: 2026-10-30}
   - {from: Sofia,     to: Istanbul,  dep: "18:40", arr: "06:34", service: 493 / 12504, mode: train, night: true}
   - {from: Istanbul,  to: Ankara,    dep: "08:40", arr: "13:16", service: IC81006, mode: train}
-  - {from: Bari,      to: Patras,    dep: "19:30", arr: "13:30", service: Anek Superfast, mode: ferry, night: true}
-  - {from: Ancona,    to: Split,     dep: "19:45", arr: "06:45", service: "Croatia Ferries 53", mode: ferry, night: true,
-     note: "Not all days every month"}
+  - {from: Bari, to: Patras, dep: "19:30", arr: "13:00", service: "Anek Superfast", mode: ferry, night: true, runs: "mon-sat", checked: 2026-10-31, source: manual}
+  - {from: Ancona, to: Split, dep: "19:45", arr: "07:00", service: "Jadrolinija 53", mode: ferry, night: true, runs: "tue,fri", checked: 2026-10-31, source: manual}
   - {from: Split,     to: Zagreb,    dep: "07:54", arr: "16:04", service: IC 520, mode: train, checked: 2026-10-30}
-  - {from: Zagreb,    to: Ljubljana, dep: "18:10", arr: "20:59", service: EN40414 + R2276, mode: train}
   - {from: Bucharest, to: Chisinau,  dep: "19:20", arr: "08:10", service: "402", mode: train, night: true}
   - {from: Sofia,     to: Varna,     dep: "20:50", arr: "05:50", service: "8657", mode: train, night: true, checked: 2026-10-30}
 

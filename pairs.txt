@@ -89,6 +89,7 @@ London -> Penzance : *
 Paris -> Nantes : *
 London -> Manchester : *
 Ljubljana -> Zagreb : *
+Zagreb -> Ljubljana : *
 Vienna -> Zagreb : *
 Paris -> Lyon : *
 Strasbourg -> Lyon : *
@@ -209,10 +210,6 @@ Sofia -> Varna : *
 
 # Connections stored as one leg, and ferries, from the original graph (your own times)
 Turku -> Stockholm : Viking Line ferry night 20:55-06:30
-Stockholm -> Copenhagen : SJ 525 + 1073 08:23-13:44
-Frankfurt -> Luxembourg : ICE 228 + RE1 13:42-17:48
 Hamburg -> Amsterdam : ICE 517 + RE1 + ICE 128 07:45-13:29
-Basel -> Milan : ICE563 + EC315 08:33-12:53
-Bari -> Patras : Anek Superfast ferry night 19:30-13:30
-Ancona -> Split : Croatia Ferries 53 ferry night 19:45-06:45
-Zagreb -> Ljubljana : EN40414 + R2276 18:10-20:59
+Bari -> Patras : Anek Superfast ferry night 19:30-13:00 mon-sat
+Ancona -> Split : Jadrolinija 53 ferry night 19:45-07:00 tue,fri
