@@ -36,6 +36,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-26 | Journeys leave Helsinki with the evening train | 31.10.2026 | Accepted |
 | D-27 | Journeys with or without night trains | 31.10.2026 | Accepted |
 | D-28 | Several travel dates on the map | 31.10.2026 | Accepted |
+| D-29 | Weekly automatic update, published on GitHub Pages | 31.10.2026 | Accepted |
 
 ---
 
@@ -422,6 +423,34 @@ filters follow it, and the choice is remembered per browser.
 
 **Consequences.** The map page grows with each date (about 1 MB per date with both modes);
 four dates give about 4 MB.
+
+## D-29 Weekly automatic update, published on GitHub Pages
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** The map is embedded in Matti's blog; copying it by hand after every timetable
+change is tedious and easy to forget.
+
+**Decision.**
+- A GitHub Actions workflow (`.github/workflows/update-map.yml`) runs every Monday at 01:00
+  UTC (03:00 Finnish winter time): it looks up next week's trains for every line in
+  pairs.txt (Tue, Fri, Sat, Sun), builds the map for those four days, checks it, commits the
+  timetable data and publishes the map on GitHub Pages
+  (https://matti-mane-kinnunen.github.io/maatapitkin/). The blog embeds that page.
+- It also runs when pairs.txt changes (only the new lines are looked up, so new connections
+  appear within minutes) and by hand ("Run workflow", with options to refresh everything or
+  to publish despite a failed check).
+- `check_build.py` holds the update back – the old map stays online – if departures drop by
+  more than 15 %, fewer capitals are reached, or warnings grow; the workflow then opens an
+  issue (GitHub e-mails it).
+- Generated map files are not committed any more (they would grow the repository by ~10 MB
+  a week); only the data, routes.md and a small summary.json are.
+
+**Why GitHub Actions.** It reaches Transitous (Claude's environments cannot), does not
+depend on the Mac being awake, and every update is a reviewable, revertible commit.
+
+**Consequences.** Pull before editing locally (`git pull`), since the workflow commits too.
+A full lookup takes a few hours; the job limit is six hours – if the network grows past
+that, drop Friday from the sample days or split the run.
 
 ---
 

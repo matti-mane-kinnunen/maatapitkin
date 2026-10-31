@@ -49,6 +49,22 @@ Outputs in `out/`:
 - `map.html` – an interactive map with the journeys.
 - `network.json` – everything above as data.
 
+## Automatic weekly update
+
+Every Monday at 03:00 (Finnish winter time) GitHub Actions looks up next week's trains,
+rebuilds the map for Tue, Fri, Sat and Sun, checks it and publishes it at
+https://matti-mane-kinnunen.github.io/maatapitkin/ – embed it with
+
+```html
+<iframe src="https://matti-mane-kinnunen.github.io/maatapitkin/" style="width:100%;height:1600px;border:0"></iframe>
+```
+
+- Add a connection: edit `pairs.txt` (on github.com or locally + push); the map is updated
+  within minutes.
+- Run it now: Actions → *Update map* → *Run workflow*.
+- If an update looks broken (far fewer trains), it is not published and an issue is opened.
+- `git pull` before editing locally – the workflow commits the new timetable data.
+
 ## How journeys are built
 
 Each journey is built for a real travel date, not just by adding up leg durations:
