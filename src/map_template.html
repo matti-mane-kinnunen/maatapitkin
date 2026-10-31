@@ -143,6 +143,16 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .wait { color: var(--muted); font-size: 13px; font-style: italic }
 .steps li.pause { padding-block: 4px }
 .steps li.stay { background: color-mix(in srgb, var(--warn) 9%, transparent) }
+.steps li.dayhead { display: flex; align-items: center; gap: 8px; padding: 12px 14px 4px; border-bottom: 0;
+  font: 600 12px/1 var(--display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted) }
+.steps li.dayhead:first-child { padding-top: 8px }
+.steps li.dayhead .swatch { margin: 0 }
+/* marks on the selected journey: day boundaries and hotel nights (drawn at screen size) */
+.mark rect { fill: var(--panel); stroke-width: 2; vector-effect: non-scaling-stroke }
+.mark.day rect { stroke: var(--day) }
+.mark.day text { font: 700 10px var(--body); fill: var(--fg); text-anchor: middle; dominant-baseline: central }
+.mark.hotel rect { stroke: var(--warn) }
+.mark path { fill: none; stroke: var(--fg); stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round }
 .chip.hotel { color: var(--warn) }
 .bed { color: var(--warn) }
 footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px }
@@ -164,7 +174,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="mapbox">
         <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="Map of rail and ferry legs across Europe">
           <g id="land">__BASEMAP__</g>
-          <g id="base"></g><g id="preview"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g><g id="hits"></g>
+          <g id="base"></g><g id="preview"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g><g id="marks"></g><g id="hits"></g>
         </svg>
         <div class="tip" id="tip" hidden></div>
         <div class="zoombar" role="group" aria-label="Zoom the map">
@@ -179,6 +189,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>Ferry / local</span>
         <span class="daylegend" id="daylegend"></span>
         <span><svg viewBox="0 0 28 10"><circle cx="14" cy="5" r="4" fill="none" stroke="var(--missing)" stroke-dasharray="2 2"/></svg>No legs yet</span>
+        <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark day d3"><rect x="-9" y="-7" width="18" height="14" rx="4"/><text>3</text></g></svg>Day 3 begins here</span>
+        <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark hotel"><rect x="-10" y="-7" width="20" height="14" rx="4"/><path d="M-6 3.5V-3.5 M-6 1.5h12v2 M6 1.5v-1.5a1.5 1.5 0 0 0-1.5-1.5H-1v3 M-3.4 -1.3a0.01 0.01 0 1 0 0.02 0"/></g></svg>Hotel night</span>
       </div>
       <section class="itin" aria-live="polite">
         <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
@@ -240,7 +252,8 @@ const VBOX = document.getElementById("map").viewBox.baseVal;
 let Z = 1;                       // zoom factor; sizes below are divided by it to stay constant on screen
 const isMain = n => P[n].capital || P[n].missing || n === NET.origin;
 const CAND = [[7, 4, "start"], [-7, 4, "end"], [0, -8, "middle"], [0, 15, "middle"],
-              [6, -5, "start"], [6, 12, "start"], [-6, -5, "end"], [-6, 12, "end"]];
+              [6, -5, "start"], [6, 12, "start"], [-6, -5, "end"], [-6, 12, "end"],
+              [0, -20, "middle"], [0, 27, "middle"], [12, -16, "start"], [-12, -16, "end"], [12, 23, "start"], [-12, 23, "end"]];
 let nodeBoxes = [];
 const labelBox = t => { const b = t.getBBox(); return { x: b.x - 1.5, y: b.y - 1, w: b.width + 3, h: b.height + 2 }; };
 const overlap = (a, b) => {
@@ -251,6 +264,7 @@ function cost(b, taken, own) {
   let c = 0;
   for (const o of taken) c += overlap(b, o);
   for (const nb of nodeBoxes) if (nb.n !== own) c += 2 * overlap(b, nb);
+  for (const mb of markBoxes) c += 4 * overlap(b, mb);          // never hide a day or hotel badge
   // keep labels inside the visible part of the map
   return c + 50 * (Math.max(0, VBOX.x - b.x) + Math.max(0, b.x + b.w - VBOX.x - VBOX.width) +
                    Math.max(0, VBOX.y - b.y) + Math.max(0, b.y + b.h - VBOX.y - VBOX.height));
@@ -293,6 +307,71 @@ function layoutCities(extra = null) {
     if (cityStops.has(n) || n === extra) continue;
     if (Z >= 2) placeLabel(n, taken, false);
     else labelEls[n].style.display = "none";
+  }
+}
+// --- Marks along the selected journey: where each new day begins, and hotel nights ---
+const marksG = document.getElementById("marks");
+const NIGHT_POINT = (([h, m]) => h * 60 + m)((NET.settings?.night_point || "03:00").split(":").map(Number));
+let curRoute = null, markBoxes = [];
+function curvePoint(a, b, t) {      // a point on the same arc as curve()
+  const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, dx = b.x - a.x, dy = b.y - a.y, k = 0.12;
+  const cx = mx - dy * k, cy = my + dx * k, u = 1 - t;
+  return { x: u * u * a.x + 2 * u * t * cx + t * t * b.x, y: u * u * a.y + 2 * u * t * cy + t * t * b.y };
+}
+const nightsBetween = (a, b) => { let n = 0; for (let m = Math.floor((a - NIGHT_POINT) / 1440) * 1440 + NIGHT_POINT + 1440; m <= b; m += 1440) n++; return n; };
+const vehicle = s => s.mode === "ferry" ? (s.night ? "night ferry" : "ferry") : s.mode === "bus" ? "bus" : (s.night ? "night train" : "train");
+function routeMarks(r) {
+  const legs = r.steps.filter(s => s.kind === "leg"), marks = [];
+  legs.forEach((s, i) => {
+    for (let m = (Math.floor(s.dep / 1440) + 1) * 1440; m < s.arr; m += 1440) {   // midnight on board
+      const d = m / 1440 + 1, t = (m - s.dep) / Math.max(1, s.arr - s.dep);
+      marks.push({ kind: "day", day: d, leg: s, t, title: `Day ${d} (${dayDate(d)}) begins on the ${vehicle(s)} ${s.from} → ${s.to}` });
+    }
+    const next = legs[i + 1];
+    if (!next) return;
+    const place = next.from;
+    if (nightsBetween(s.arr, next.dep))
+      marks.push({ kind: "hotel", place, title: `Hotel night in ${place}: arrive ${s.arr_txt}, leave ${next.dep_txt}` });
+    for (let m = Math.ceil(s.arr / 1440) * 1440; m <= next.dep; m += 1440) {          // midnight at a station
+      const d = m / 1440 + 1;
+      marks.push({ kind: "day", day: d, place, title: `Day ${d} (${dayDate(d)}) begins in ${place}` });
+    }
+  });
+  return marks;
+}
+function drawMarks() {
+  marksG.replaceChildren(); markBoxes = [];
+  if (!curRoute) return;
+  const atPlace = {};
+  const box = (x, y) => ({ x: x - 12 / Z, y: y - 8 / Z, w: 24 / Z, h: 16 / Z });
+  const clash = b => [...markBoxes, ...nodeBoxes.filter(n => curStops.has(n.n))].some(o => overlap(b, o) > 0);
+  // badges at stations first (they have fixed spots), then the ones on lines
+  const all = routeMarks(curRoute).sort((a, b) => !!b.place - !!a.place);
+  nodeBoxes = Object.entries(P).map(([n, p]) => ({ x: p.x - 5 / Z, y: p.y - 5 / Z, w: 10 / Z, h: 10 / Z, n }));
+  for (const mk of all) {
+    let x, y;
+    if (mk.place) {             // badges at a station sit under its marker, side by side
+      const k = atPlace[mk.place] = (atPlace[mk.place] || 0) + 1, p = P[mk.place];
+      x = p.x + (k - 1) * 22 / Z; y = p.y + 14 / Z;
+    } else {                    // on a line: at the moment midnight passes, or slid along the line until clear
+      const a = P[mk.leg.from], b = P[mk.leg.to];
+      const tries = [0, 0.08, -0.08, 0.16, -0.16, 0.24, -0.24, 0.32, -0.32].map(d => mk.t + d).filter(t => t > 0.05 && t < 0.95);
+      let q = curvePoint(a, b, Math.min(0.9, Math.max(0.1, mk.t)));
+      for (const t of tries) { const c = curvePoint(a, b, t); if (!clash(box(c.x, c.y))) { q = c; break; } }
+      x = q.x; y = q.y;
+    }
+    const g = el("g", { class: `mark ${mk.kind}${mk.kind === "day" ? " d" + Math.min(mk.day, 6) : ""}`,
+                        transform: `translate(${x} ${y}) scale(${1 / Z})` }, marksG);
+    el("title", {}, g).textContent = mk.title;
+    if (mk.kind === "day") {
+      const w = mk.day > 9 ? 22 : 18;
+      el("rect", { x: -w / 2, y: -7, width: w, height: 14, rx: 4 }, g);
+      el("text", {}, g).textContent = mk.day;
+    } else {
+      el("rect", { x: -10, y: -7, width: 20, height: 14, rx: 4 }, g);
+      el("path", { d: "M-6 3.5V-3.5 M-6 1.5h12v2 M6 1.5v-1.5a1.5 1.5 0 0 0-1.5-1.5H-1v3 M-3.4 -1.3a0.01 0.01 0 1 0 0.02 0" }, g);
+    }
+    markBoxes.push(box(x, y));
   }
 }
 layoutMain();
@@ -437,11 +516,22 @@ function select(cap, opt = 0, fromMap = false) {
     n.classList.toggle("on", stops.has(name)); n.classList.toggle("target", name === cap);
     const t = labelEls[name]; t.classList.toggle("target", name === cap);
   }
-  layoutCities();
+  curRoute = r;
+  drawMarks(); layoutMain(); layoutCities(); placeHits();
   document.getElementById("itin-title").textContent = `Helsinki → ${cap}`;
   document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}`;
   const ol = document.getElementById("steps"); ol.replaceChildren();
+  let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   r.steps.forEach(s => {
+    // a heading whenever the journey enters a new day
+    const day = Math.floor((s.kind === "leg" ? s.dep : lastArr) / 1440) + 1;
+    if (s.kind === "leg") lastArr = s.arr;
+    if (day > shownDay && !(s.kind === "change" && s.minutes < 90)) {
+      const h = document.createElement("li");
+      h.className = "dayhead";
+      h.innerHTML = `<i class="swatch d${Math.min(day, 6)}"></i>Day ${day} · ${dayDate(day)}`;
+      ol.appendChild(h); shownDay = day;
+    }
     const li = document.createElement("li");
     if (s.kind === "stay") {
       li.className = "stay";
@@ -503,7 +593,7 @@ function applyView(relayout) {
   zoomOut.disabled = zoomFit.disabled = Z <= 1.001; zoomIn.disabled = Z >= ZMAX - 0.001;
   if (relayout && !relayoutQueued) {
     relayoutQueued = true;
-    requestAnimationFrame(() => { relayoutQueued = false; sizeNodes(); layoutMain(); layoutCities(); placeHits(); });
+    requestAnimationFrame(() => { relayoutQueued = false; sizeNodes(); drawMarks(); layoutMain(); layoutCities(); placeHits(); });
   }
 }
 function zoomAt(factor, cx, cy) {
@@ -565,5 +655,5 @@ svgEl.addEventListener("click", e => { if (moved) { e.stopPropagation(); e.preve
 applyView(false);
 
 // label widths change once the web fonts arrive: lay out again
-document.fonts?.ready.then(() => { layoutMain(); layoutCities(); placeHits(); });
+document.fonts?.ready.then(() => { drawMarks(); layoutMain(); layoutCities(); placeHits(); });
 </script>

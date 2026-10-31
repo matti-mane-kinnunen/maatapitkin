@@ -28,6 +28,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
 | D-19 | Capitals are coloured by arrival day | 31.10.2026 | Accepted |
 | D-20 | Zoom and pan on the map | 31.10.2026 | Accepted |
+| D-21 | Show day boundaries and hotel nights on the selected journey | 31.10.2026 | Accepted |
 
 ---
 
@@ -281,6 +282,19 @@ where there is room. A drag that starts on a city pans – it never opens an iti
 
 **Why.** Central Europe and Italy were too dense to read at one scale. Zooming the drawing
 itself (no map tiles) keeps the page self-contained and sharp at any zoom.
+
+## D-21 Show day boundaries and hotel nights on the selected journey
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Decision.** On the selected journey, a numbered badge marks where each new day begins: on
+the line where midnight passes on board (night train or ferry), or under the station if it
+passes while waiting there. A bed badge marks each hotel night. Badges on a line slide along
+it to stay clear of other badges; labels move out of the way of badges. Hovering a badge
+explains it ("Day 3 begins on the night train Hamburg → Basel"). The itinerary below the map
+is split into the same days with headings ("Day 2 · Tue 3.11.").
+
+**Why.** The journey reads as daily stages, like the day clusters of the original graph, and
+shows at a glance where the nights are spent.
 
 ---
 
