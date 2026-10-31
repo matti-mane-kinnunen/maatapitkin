@@ -80,6 +80,46 @@ _Night trains and night buses left out; night ferries still used._
 
 Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 
+## Leaving from 06:00 instead of 17:00
+
+| Capital | Leave | Arrive | Door to door | Compared with 17:00 |
+|---|---|---|---|---|
+| Stockholm | – | – | – | no gain: take the 17:00 journey |
+| Tallinn | Tue 3.11. 07:30 | Tue 3.11. 09:30 | 2 h 00 min | arrives 24 h 00 min earlier |
+| Copenhagen | – | – | – | no gain: take the 17:00 journey |
+| Oslo | – | – | – | no gain: take the 17:00 journey |
+| Riga | Tue 3.11. 07:30 | Tue 3.11. 16:44 | 9 h 14 min | arrives 24 h 00 min earlier |
+| Vilnius | Tue 3.11. 07:30 | Tue 3.11. 21:28 | 13 h 58 min | arrives 24 h 00 min earlier |
+| Berlin | Tue 3.11. 07:30 | Wed 4.11. 20:13 | 37 h 43 min | arrives 1 h 10 min earlier |
+| Luxembourg | – | – | – | no gain: take the 17:00 journey |
+| Paris | – | – | – | no gain: take the 17:00 journey |
+| Bern | – | – | – | no gain: take the 17:00 journey |
+| Amsterdam | – | – | – | no gain: take the 17:00 journey |
+| Prague | Tue 3.11. 07:30 | Thu 5.11. 06:58 | 48 h 28 min | arrives 3 h 24 min earlier |
+| Vienna | Tue 3.11. 07:30 | Thu 5.11. 05:25 | 46 h 55 min | arrives 6 h 07 min earlier |
+| Brussels | – | – | – | no gain: take the 17:00 journey |
+| Warsaw | Tue 3.11. 07:30 | Wed 4.11. 13:07 | 30 h 37 min | arrives 24 h 00 min earlier |
+| Bratislava | – | – | – | no gain: take the 17:00 journey |
+| Budapest | Tue 3.11. 07:30 | Thu 5.11. 09:29 | 50 h 59 min | arrives 6 h 06 min earlier |
+| Rome | – | – | – | no gain: take the 17:00 journey |
+| Ljubljana | Tue 3.11. 07:30 | Thu 5.11. 13:53 | 55 h 23 min | arrives 2 h 47 min earlier |
+| London | – | – | – | no gain: take the 17:00 journey |
+| Vatican | – | – | – | no gain: take the 17:00 journey |
+| Monaco | – | – | – | no gain: take the 17:00 journey |
+| Zagreb | Tue 3.11. 07:30 | Thu 5.11. 19:20 | 60 h 50 min | arrives 3 h 00 min earlier |
+| Belgrade | Tue 3.11. 07:30 | Thu 5.11. 18:35 | 60 h 05 min | arrives 12 h 40 min earlier |
+| Madrid | – | – | – | no gain: take the 17:00 journey |
+| Bucharest | – | – | – | no gain: take the 17:00 journey |
+| Dublin | – | – | – | no gain: take the 17:00 journey |
+| Tirana | – | – | – | no gain: take the 17:00 journey |
+| Belfast | – | – | – | no gain: take the 17:00 journey |
+| Valletta | – | – | – | no gain: take the 17:00 journey |
+| Lisbon | – | – | – | no gain: take the 17:00 journey |
+| Chisinau | – | – | – | no gain: take the 17:00 journey |
+| Athens | – | – | – | no gain: take the 17:00 journey |
+| Sofia | – | – | – | no gain: take the 17:00 journey |
+| Ankara | – | – | – | no gain: take the 17:00 journey |
+
 ## Other cities
 
 | City | Arrive | Door to door | Changes | Hotel nights |
@@ -157,7 +197,6 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Syracuse | Fri 6.11. 10:37 | 66 h 02 min | 9 | 1 |
 | Vitoria-Gasteiz | Fri 6.11. 10:39 | 66 h 04 min | 8 | 1 |
 | Malaga | Fri 6.11. 12:33 | 67 h 58 min | 8 | 1 |
-| Tarifa | Fri 6.11. 12:33 | 67 h 58 min | 8 | 1 |
 | Cairnryan | Fri 6.11. 14:02 | 70 h 27 min | 5 | 1 |
 | Pozzallo | Fri 6.11. 15:58 | 71 h 23 min | 8 | 0 |
 | Badajoz | Fri 6.11. 16:11 | 71 h 36 min | 8 | 1 |
