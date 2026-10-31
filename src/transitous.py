@@ -6,6 +6,7 @@ request rate low and identify yourself with the User-Agent below.
 from __future__ import annotations
 
 import datetime as dt
+import math
 import json
 import re
 import time
@@ -95,6 +96,35 @@ def core(legs: list[dict]) -> list[dict]:
     while legs and legs[-1].get("mode") in URBAN and len(legs) > 1:
         legs = legs[:-1]
     return legs
+
+
+def km_between(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    la1, lo1, la2, lo2 = map(math.radians, (lat1, lon1, lat2, lon2))
+    h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(h))
+
+
+def near_km(pa: dict, pb: dict) -> float:
+    """How close to A and B a train must start and end: 40 % of the A-B distance, 8-25 km
+    (Istanbul Halkalı is 22 km out; Malmö -> Copenhagen is only 28 km in all)."""
+    return min(25.0, max(8.0, 0.4 * km_between(pa["lat"], pa["lon"], pb["lat"], pb["lon"])))
+
+
+def stop_km(stop: dict, place: dict) -> float | None:
+    """Distance from a leg's stop to a place, or None if the answer has no coordinates."""
+    if not stop or stop.get("lat") is None or stop.get("lon") is None:
+        return None
+    return km_between(stop["lat"], stop["lon"], place["lat"], place["lon"])
+
+
+def reaches(legs: list[dict], pa: dict, pb: dict, km: float | None = None) -> bool:
+    """Do these legs really run from A to B? Trimming city transport (core) can leave e.g.
+    an AVE Madrid -> Málaga from an answer that ends with a bus to Algeciras (D-33)."""
+    if not legs:
+        return False
+    km = km if km is not None else near_km(pa, pb)
+    d_a, d_b = stop_km(legs[0].get("from"), pa), stop_km(legs[-1].get("to"), pb)
+    return (d_a is None or d_a <= km) and (d_b is None or d_b <= km)
 
 
 def clock_diff(found: dt.datetime, stored_min: int) -> int:
