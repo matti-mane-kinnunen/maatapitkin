@@ -524,6 +524,35 @@ ferry to Stockholm) is the obvious missing piece.
 
 ---
 
+## D-33 A "direct train" must really run from A to B
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** Before deciding whether an answer is one direct train, the lookup drops walks and
+city transport at both ends – and buses counted as city transport. So "AVE Madrid → Málaga,
+then a bus to Algeciras" was stored as an AVE Madrid → Algeciras arriving at Málaga's time,
+and the same mechanism produced the Tarifa trains, Helsinki → Tampere in 3 minutes, Madrid →
+Santiago by Madrid commuter train and about 100 other impossible departures.
+
+**Decision.**
+- A train counts for A → B only if its first stop is near A and its last stop near B: within
+  40 % of the A–B distance, at least 8 and at most 25 km (Istanbul Halkalı is 22 km out;
+  Malmö → Copenhagen is 28 km in all). Applies to `*` lookups, single trains and
+  check_timetables.py.
+- The lookup says which answers it left out and where they really end
+  ("Not counted … Málaga María Zambrano (3×)").
+- When a `*` lookup gets answers from Transitous but none is a real direct train, the old
+  entries for that line are removed (they were wrong, or the train is gone). If Transitous
+  gives no answers at all, the old entries are kept.
+
+**Why.** The stations' coordinates are in every answer, so this check is exact where a speed
+or name rule would only guess.
+
+**Consequences.** The next full lookup replaces the wrong departures. Lines that only ever
+had wrong data get removed; the job summary lists them. Madrid → Algeciras should keep the
+real Alvia 08:30–13:59; if it doesn't, give it by hand in pairs.txt.
+
+---
+
 ## Template for a new decision
 
 ```

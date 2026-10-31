@@ -31,7 +31,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import fmt_clock, load  # noqa: E402
-from transitous import (NO_GO, clock_diff, core, label, numbers, parse_t,  # noqa: E402
+from transitous import (NO_GO, clock_diff, core, label, numbers, parse_t, reaches,  # noqa: E402
                         plan, same_number, tz_of)
 
 def main():
@@ -87,7 +87,7 @@ def main():
         best = None                                  # (rank, itinerary core legs, matched?)
         for it in its:
             c = core(it.get("legs", []))
-            if not c:
+            if not c or not reaches(c, a, b):          # must really run from A to B (D-33)
                 continue
             matched = any(same_number(w, f) for x in c for w in want for f in numbers(label(x)))
             dep = parse_t(c[0]["startTime"]).astimezone(tz_a)
@@ -96,6 +96,10 @@ def main():
             rank = (not matched, len(c), off)
             if best is None or rank < best[0]:
                 best = (rank, c, matched, dep, arr)
+        if best is None:
+            rows.append((leg, "no data", "no answer runs from the one place to the other", "", ""))
+            time.sleep(args.pause)
+            continue
         _, c, matched, dep, arr = best
         dd, da = clock_diff(dep, leg.dep), clock_diff(arr, leg.arr)
         if matched and abs(dd) <= 5 and abs(da) <= 5:

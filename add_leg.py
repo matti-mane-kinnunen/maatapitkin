@@ -58,7 +58,7 @@ class Quit(Exception):
     pass
 
 
-LOG: dict = {"status": None, "places": [], "guesses": []}       # what happened, for the --file summary
+LOG: dict = {"status": None, "places": [], "guesses": [], "answers": 0, "elsewhere": Counter()}       # what happened, for the --file summary
 
 
 def status(text: str) -> bool:
@@ -284,7 +284,7 @@ def write_entries(entries: list[dict], olds: list) -> None:
         for m in reversed(olds):
             end = m.end() + (1 if text[m.end():m.end() + 1] == "\n" else 0)
             text = text[:m.start()] + text[end:]
-        text = text[:pos] + lines + "\n" + text[pos:]
+        text = text[:pos] + (lines + "\n" if lines else "") + text[pos:]
     else:
         if SECTION not in text:
             text = text.rstrip("\n") + "\n\n" + SECTION + "\n"
@@ -367,7 +367,8 @@ def find_train(pa: dict, pb: dict, service: str, date: dt.date, near: str | None
         return any(T.fold(w) in T.fold(lab) for w in words)
 
     def hit(it):
-        return any(matches(l) for l in T.core(it.get("legs", [])))
+        c = T.core(it.get("legs", []))
+        return any(matches(l) for l in c) and T.reaches(c, pa, pb)
 
     for it in T.day_itineraries(params, start, end, pause=args.pause, stop=hit):
         if hit(it):
@@ -391,6 +392,12 @@ def find_all(pa: dict, pb: dict, pattern: str, date: dt.date, args, buses: bool 
         if len(c) != 1:                       # direct trains only
             continue
         if not buses and c[0].get("mode") in ("BUS", "COACH"):
+            continue
+        LOG["answers"] += 1
+        if not T.reaches(c, pa, pb):                  # e.g. AVE to Málaga + bus to Algeciras (D-33)
+            d_a = T.stop_km(c[0].get("from"), pa)
+            far = c[0].get("from") if d_a is not None and d_a > T.near_km(pa, pb) else c[0].get("to")
+            LOG["elsewhere"][(far or {}).get("name", "?")] += 1
             continue
         lab = T.label(c[0])
         if not fnmatch.fnmatch(T.fold(lab), pat):
@@ -478,6 +485,7 @@ def handle(line: str, args) -> bool:
     if "*" in svc:                                         # every direct train, on each sample day
         print(f"  Collecting direct trains {frm} -> {to} on {when} ...")
         obs, kinds, legs_seen, nights = {}, Counter(), [], []
+        LOG["answers"], LOG["elsewhere"] = 0, Counter()
         for key, day in samples:
             deps = find_all(pa, pb, svc, day, args, buses="bus" in flags)
             print(f"    {day:%a %-d.%-m.}: {len(deps)} direct train{'' if len(deps) == 1 else 's'}")
@@ -485,8 +493,17 @@ def handle(line: str, args) -> bool:
                 obs.setdefault(f"{clock(d)}-{clock(a)}", set()).add(key)
                 kinds[service_type(lab)] += 1
                 legs_seen.append(leg); nights.append(is_night(d, a))
+        if LOG["elsewhere"]:
+            where = ", ".join(f"{n} ({k}×)" for n, k in LOG["elsewhere"].most_common(3))
+            print(f"  Not counted - they don't start in {frm} or don't end in {to}: {where}")
         if not obs:
             print("  No direct trains found. Check the names with '*' alone, or give times yourself.")
+            olds = existing_all(frm, to, svc, svc)
+            if olds and LOG["answers"]:
+                # Transitous answered, but no train runs directly: old entries are wrong or gone
+                write_entries([], olds)
+                print(f"  Removed {len(olds)} old entr{'y' if len(olds) == 1 else 'ies'} for this line from legs.yaml.")
+                return status(f"no direct trains - removed {len(olds)} old entr{'y' if len(olds) == 1 else 'ies'}")
             return status("no direct trains found")
         print("  " + ", ".join(f"{k}: {n}" for k, n in kinds.most_common(4)))
         name = kinds.most_common(1)[0][0]
