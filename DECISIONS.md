@@ -574,6 +574,36 @@ summary warning is the safety net there.
 
 ---
 
+## D-35 Every leg comes from a pairs.txt line
+**Date:** 1.11.2026 · **Status:** Accepted
+
+**Context.** 256 of 564 entries in legs.yaml had no pairs.txt line: 66 `*` lines and 18
+own-time lines added with add_leg.py, and 78 single trains from the original v1.9 graph
+(2023 times). The weekly run only refreshes pairs.txt lines, so these silently went stale.
+
+**Decision.**
+- pairs.txt is the list of everything: the add_leg.py lines were copied in, the original
+  graph's pairs got `*` lines, and its connections stored as one leg ("ICE 228 + RE1") and
+  ferries got own-time lines. Rome → Vatican (metro, no timetable) stays only in legs.yaml.
+- `tidy_legs.py` lists entries no line looks after and, with `--apply`, removes old single
+  trains that a `*` line covers (same time and days), that have moved (the `*` line has the
+  pair's current trains, none at that time), or that have expired. 21 removed now; 8 changed
+  arrivals in the comparison, all from TGV 6077 Paris – Marseille, which now leaves at 14:10
+  and not on Sundays.
+- "Partial" trains (the `*` line has them, but not on every day they claim, e.g. NJ 471 not
+  on Sunday) are kept until checked by hand: removing them made 28 arrivals later, and a
+  missing day can be a gap in Transitous rather than a real change.
+- When add_leg.py replaces an entry, a hand-written note is kept. Service names must not
+  contain the words ferry, bus, train or night (they are read as flags): "Croatia Ferry 53"
+  became "Croatia Ferries 53".
+
+**Consequences.** After the next lookup has added the 39 new `*` lines, run
+`python3 tidy_legs.py --apply` again to drop the old trains they cover. pairs.txt now has
+about 190 lines; the weekly time budget (D-31) spreads the lookups over more than one week
+if needed.
+
+---
+
 ## Template for a new decision
 
 ```

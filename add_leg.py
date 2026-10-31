@@ -285,6 +285,8 @@ def entry_text(e: dict) -> str:
             parts.append(f"runs: {q(e['runs'])}")
     if e.get("query"):
         parts.append(f"query: {q(e['query'])}")
+    if e.get("note"):
+        parts.append(f"note: {q(e['note'])}")
     parts.append(f"checked: {e['checked']}")
     parts.append(f"source: {e['source']}")
     return "  - {" + ", ".join(parts) + "}"
@@ -618,6 +620,11 @@ def save_entries(entries: list[dict], args) -> bool:
         prev = yaml.safe_load(olds[0].group(0).strip()[2:])
         for e in entries:
             e["service"] = str(prev.get("service") or e["service"])   # keep a name you gave it
+    if olds:
+        prev = yaml.safe_load(olds[0].group(0).strip()[2:])
+        for e in entries:
+            if prev.get("note") and not e.get("note"):
+                e["note"] = prev["note"]                              # keep a note written by hand
     for e in entries:
         print("  " + entry_text(e).strip().replace("\n", "\n  "))
     n = sum(len(e["times"]) if "times" in e else 1 for e in entries)

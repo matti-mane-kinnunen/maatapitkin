@@ -43,6 +43,7 @@ python add_leg.py "A -> B : name every 30 06:00-22:30 0:45 mon-fri"  # ...only o
 python add_leg.py --file pairs.txt --date 2026-12-03 --days tue,fri,sat,sun
                                                   # sample week and days (default: next week, tue,sat,sun)
 python check_timetables.py  # needs internet; compares legs.yaml with live timetables
+python tidy_legs.py         # legs.yaml entries no pairs.txt line looks after; --apply removes covered old trains
 ```
 
 Outputs in `out/`:

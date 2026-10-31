@@ -161,3 +161,54 @@ Cairnryan -> Belfast : Stenaline ferry 19:05-22:07
 Budapest -> Zagreb : IC 15:35-22:03
 Villa San Giovanni -> Messina : Bluejet (evening) ferry 18:10-18:30
 Villa San Giovanni -> Messina : Bluejet (late) ferry 23:30-23:40
+
+# --- From the original v1.9 graph (D-35): pairs that only had one old train ---
+Tampere -> Turku : *
+Stockholm -> Hamburg : *
+Oslo -> Bergen : *
+Oslo -> Trondheim : *
+Frankfurt -> Strasbourg : *
+Strasbourg -> Marseille : *
+Amsterdam -> London : *
+Berlin -> Krakow : *
+Munich -> Innsbruck : *
+Innsbruck -> Bologna : *
+Bologna -> Venice : *
+Munich -> Vienna : *
+Vienna -> Bratislava : *
+Milan -> Florence : *
+Milan -> Ancona : *
+Milan -> Bari : *
+Basel -> Paris : *
+Paris -> London : *
+Marseille -> Nice : *
+Paris -> Bordeaux : *
+Paris -> Toulouse : *
+London -> Glasgow : *
+London -> Holyhead : *
+Rome -> Syracuse : *
+Syracuse -> Pozzallo : *
+Barcelona -> Madrid : *
+Madrid -> Sevilla : *
+Sevilla -> Granada : *
+Madrid -> Badajoz : *
+Badajoz -> Abrantes : *
+Abrantes -> Lisbon : *
+Dublin -> Belfast : *
+Dublin -> Galway : *
+Budapest -> Bucharest : *
+Sofia -> Istanbul : *
+Istanbul -> Ankara : *
+Split -> Zagreb : *
+Bucharest -> Chisinau : *
+Sofia -> Varna : *
+
+# Connections stored as one leg, and ferries, from the original graph (your own times)
+Turku -> Stockholm : Viking Line ferry night 20:55-06:30
+Stockholm -> Copenhagen : SJ 525 + 1073 08:23-13:44
+Frankfurt -> Luxembourg : ICE 228 + RE1 13:42-17:48
+Hamburg -> Amsterdam : ICE 517 + RE1 + ICE 128 07:45-13:29
+Basel -> Milan : ICE563 + EC315 08:33-12:53
+Bari -> Patras : Anek Superfast ferry night 19:30-13:30
+Ancona -> Split : Croatia Ferries 53 ferry night 19:45-06:45
+Zagreb -> Ljubljana : EN40414 + R2276 18:10-20:59
