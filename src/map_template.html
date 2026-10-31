@@ -207,6 +207,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
         <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
         <div class="seg" id="f-date" role="group" aria-label="Leave Helsinki on"><span>Leave</span></div>
+        <div class="seg" id="f-start" role="group" aria-label="Leave Helsinki from"><span>From</span></div>
         <div class="seg" id="f-night" role="group" aria-label="Night trains">
           <span>Night trains</span><button type="button" data-n="1">allowed</button><button type="button" data-n="0">avoid</button>
         </div>
@@ -257,6 +258,19 @@ const NET = /*__DATA__*/null;
 // journeys exist per travel date and with/without night trains; start with the first date
 const VARS = NET.variants || null;
 let curDate = NET.dates ? NET.dates[0] : null;
+// departure times: the default (evening) journeys, and e.g. "from 06:00" in variants[date].starts
+const DEF_START = NET.default_start || null, STARTS = NET.starts || [];
+let curStart = DEF_START;
+const varOf = (date, t) => { const b = VARS[date]; return (t && t !== DEF_START && b.starts && b.starts[t]) || b; };
+const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";
+// fill in the journeys stored only as "same as the default start"
+if (VARS) for (const v of Object.values(VARS)) for (const sv of Object.values(v.starts || {}))
+  for (const key of ["yes", "no"]) {
+    if (!sv[key] || !v[key]) continue;
+    const base = Object.fromEntries([...v[key].routes, ...(v[key].city_routes || [])].map(r => [r.capital, r]));
+    for (const list of ["routes", "city_routes"])
+      sv[key][list] = (sv[key][list] || []).map(r => r.same_as_default && base[r.capital] ? { ...base[r.capital], same_as_default: true } : r);
+  }
 if (VARS) {
   const v0 = VARS[curDate];
   Object.assign(NET, { routes: v0.yes.routes, city_routes: v0.yes.city_routes, unreached: v0.yes.unreached,
@@ -621,7 +635,7 @@ const qEl = document.getElementById("q"), noHotelEl = document.getElementById("f
 const dayGroup = document.getElementById("f-day"), countEl = document.getElementById("count");
 const F = { day: 0, noHotel: false, cities: false };
 try { Object.assign(F, JSON.parse(localStorage.getItem("maatapitkin-filters") || "{}")); } catch (e) {}
-const allVariantRoutes = VARS ? Object.values(VARS).flatMap(v => [...v.yes.routes, ...v.no.routes]) : [...V.yes.routes, ...(V.no ? V.no.routes : [])];
+const allVariantRoutes = VARS ? Object.values(VARS).flatMap(v => [v, ...Object.values(v.starts || {})]).flatMap(v => [...v.yes.routes, ...v.no.routes]) : [...V.yes.routes, ...(V.no ? V.no.routes : [])];
 const lastDay = Math.max(...allVariantRoutes.map(dayOf));
 for (const d of [0, ...Array.from({ length: Math.max(0, Math.min(lastDay, 6) - 2) }, (_, i) => i + 2)]) {
   const bt = document.createElement("button");
@@ -708,13 +722,17 @@ function updateNodeDays() {
 }
 // switch between journeys with and without night trains
 function setNightTrains(allowed) { setVariant(curDate, allowed); }
-function setVariant(date, allowed) {
+function setVariant(date, allowed, start = curStart) {
   F.nightTrains = allowed;
   if (VARS && VARS[date]) {
     curDate = date; F.date = date;
-    V = { yes: VARS[date].yes, no: VARS[date].no };
-    NET.start_date = date; NET.version = VARS[date].version;
+    curStart = start && (start === DEF_START || STARTS.includes(start)) ? start : DEF_START; F.start = curStart;
+    const sv = varOf(date, curStart);
+    V = { yes: sv.yes, no: sv.no };
+    NET.start_date = date; NET.version = sv.version;
   }
+  for (const bt of document.querySelectorAll("#f-start button")) bt.setAttribute("aria-pressed", String(bt.dataset.t === curStart));
+  updateFoot();
   for (const bt of document.querySelectorAll("#f-date button")) bt.setAttribute("aria-pressed", String(bt.dataset.date === curDate));
   const v = allowed || !V.no ? V.yes : V.no;
   NET.routes = v.routes; NET.city_routes = v.city_routes || []; NET.unreached = v.unreached || [];
@@ -736,15 +754,28 @@ if (VARS && NET.dates.length > 1) {
     dateGroup.appendChild(bt);
   }
 } else dateGroup.hidden = true;
+// one button per departure time (morning / evening)
+const startGroup = document.getElementById("f-start");
+if (VARS && STARTS.length > 1) {
+  for (const t of STARTS) {
+    const bt = document.createElement("button");
+    bt.type = "button"; bt.dataset.t = t; bt.textContent = partOfDay(t); bt.title = `Leave ${NET.origin} from ${t}`;
+    bt.setAttribute("aria-label", `${partOfDay(t)}, from ${t}`);
+    bt.setAttribute("aria-pressed", String(t === curStart));
+    bt.addEventListener("click", () => setVariant(curDate, F.nightTrains !== false, t));
+    startGroup.appendChild(bt);
+  }
+} else startGroup.hidden = true;
 if (!V.no) document.getElementById("f-night").hidden = true;
 updateSummary();
 const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin: 45, night_point: "03:00", morning: "06:00"};
-document.getElementById("foot").textContent =
+function updateFoot() { document.getElementById("foot").textContent =
   `Timetables from the hand-built graph, partly re-checked against Transitous, applied to the travel date above. ` +
   `Changes take at least ${S.min_transfer} min (longer where you change station, e.g. Paris, London), ferry check-in ${S.ferry_checkin} min, Eurostar ${S.eurostar_checkin} min. ` +
-  `Clock times are local; durations are corrected for time zones. Journeys leave ${NET.origin} from ${S.start || "00:00"}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
+  `Clock times are local; durations are corrected for time zones. Journeys leave ${NET.origin} from ${curStart || S.start || "00:00"}${curStart && curStart !== DEF_START ? ` (on the latest departure that still arrives as early; where that doesn't arrive sooner, the ${DEF_START} journey is shown)` : ""}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
   `between ${S.quiet || "00:00–05:00"} only night trains and night ferries run. ` +
-  `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
+  `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`; }
+updateFoot();
 
 function select(cap, opt = 0, fromMap = false) {
   const r0 = routeOf(cap); if (!r0) return;
@@ -778,7 +809,8 @@ function select(cap, opt = 0, fromMap = false) {
   drawMarks(); layoutMain(); layoutCities(); placeHits();
   document.getElementById("itin-title").textContent = `Helsinki → ${cap}`;
   document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}` +
-    (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "");
+    (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "") +
+    (curStart !== DEF_START ? (r0.same_as_default ? ` · leaving earlier doesn't help: the ${partOfDay(DEF_START)} journey` : ` · from ${curStart}`) : "");
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   r.steps.forEach(s => {
@@ -827,6 +859,7 @@ function hashFor(cap, opt) {
   const parts = [slug(cap)];
   if (VARS && NET.dates.length > 1) parts.push(weekdayOf(curDate));
   if (F.nightTrains === false && V.no) parts.push("no-night");
+  if (curStart && curStart !== DEF_START) parts.push(partOfDay(curStart));
   const r0 = routeOf(cap), o = opt > 0 && r0 && r0.alternatives && r0.alternatives[opt - 1];
   if (o) parts.push(slug(o.label));
   return "#" + parts.join("/");
@@ -837,6 +870,8 @@ function parseHash() {
   for (const x of rest) {
     if (x === "no-night") want.night = false;
     else if (x === "night") want.night = true;
+    else if (STARTS.some(t => partOfDay(t) === x)) want.start = STARTS.find(t => partOfDay(t) === x);
+    else if (/^\d{4}$/.test(x) && STARTS.includes(x.slice(0, 2) + ":" + x.slice(2))) want.start = x.slice(0, 2) + ":" + x.slice(2);
     else if (WD.includes(x)) want.date = (NET.dates || []).find(d => weekdayOf(d) === x);
     else if (/^\d{4}-\d\d-\d\d$/.test(x)) want.date = (NET.dates || []).find(d => d === x) || (NET.dates || []).find(d => weekdayOf(d) === weekdayOf(x));
     else want.opt = x;
@@ -845,9 +880,11 @@ function parseHash() {
 }
 function fromHash(first = false) {
   const want = parseHash();
-  const night = want.night ?? F.nightTrains !== false;
+  const night = want.night ?? (want.place ? true : F.nightTrains !== false);   // a link describes the whole view
   const date = want.date || (first && VARS && F.date && VARS[F.date] ? F.date : curDate);
-  if ((VARS && date !== curDate) || (night === false) !== (F.nightTrains === false)) setVariant(date, night);
+  // a link without a time means the default (evening); on first load without a link, the remembered choice
+  const start = want.start || (!want.place && F.start && STARTS.includes(F.start) ? F.start : DEF_START);
+  if ((VARS && (date !== curDate || start !== curStart)) || (night === false) !== (F.nightTrains === false)) setVariant(date, night, start);
   const r = ALL_ROUTES.find(x => slug(x.capital) === want.place);
   const cap = r ? r.capital : (curRoute && routeOf(curRoute.capital) ? curRoute.capital : routeOf("Paris") ? "Paris" : NET.routes[0].capital);
   let opt = 0;

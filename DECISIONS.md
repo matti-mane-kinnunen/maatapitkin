@@ -499,6 +499,31 @@ quickly.
 
 ---
 
+## D-32 Morning or evening departure from Helsinki
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** Every journey starts from 17:00 (D-26). Some readers would rather leave in the
+morning, and for some destinations a morning start arrives a day earlier.
+
+**Decision.** The map has a "From: morning / evening" switch (and `morning` in links). The
+morning journeys allow leaving from 06:00 and give, for each place, the earliest arrival on
+the latest departure that still makes it – no one is sent off at 06:26 to wait all day for
+the same evening ferry. Where leaving in the morning doesn't arrive sooner, the evening
+journey is shown and says so. Times are set with `build.py starts=06:00,17:00` or
+`start_times` in places.yaml; the default start (17:00) stays the main one in routes.md,
+summary.json and the weekly check.
+
+**Why.** "Earliest arrival" alone picks the first train of the day even when it gains
+nothing. The latest departure is found by moving the start later as long as the arrival
+stays the same – a few extra searches per place rather than one per Helsinki departure.
+
+**Consequences.** The build takes about 30 s instead of 5 s. Unchanged journeys are stored
+as references, so the page stays about the same size. With today's data, only Tallinn, Riga
+and Vilnius gain from a morning start; a morning Helsinki → Turku train (for the 08:45 day
+ferry to Stockholm) is the obvious missing piece.
+
+---
+
 ## Template for a new decision
 
 ```

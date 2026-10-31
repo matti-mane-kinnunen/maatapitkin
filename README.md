@@ -29,6 +29,7 @@ python build.py transfer=15        # minimum change time in minutes (default 10)
 python build.py night=01           # a wait past 01:00 counts as a hotel night (default 03)
 python build.py start=08:00        # leave Helsinki in the morning (default 17:00, the evening train)
 python build.py dates=2026-12-08,2026-12-11,2026-12-12   # travel dates to switch between on the map
+python build.py starts=06:00,17:00  # morning / evening switch on the map (default 06:00 and the start time)
 python build.py --help             # all options
 python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in Transitous
 python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the day as one entry
@@ -70,7 +71,7 @@ https://matti-mane-kinnunen.github.io/maatapitkin/ – embed it with
   week's data and are looked up first next time.
 
 Links to a journey: `…/maatapitkin/#lisbon/sat/no-night/fewestchanges` – place, then
-optionally the day (`tue`, `fri`, `sat`, `sun`), `no-night`, and the journey option. The
+optionally the day (`tue`, `fri`, `sat`, `sun`), `no-night`, `morning`, and the journey option. The
 map's *Copy link* button gives the link for whatever is on screen.
 
 ## How journeys are built
