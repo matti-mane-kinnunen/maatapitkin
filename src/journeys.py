@@ -16,9 +16,25 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import yaml
+from zoneinfo import ZoneInfo
 
 DAY = 1440
 WEEKDAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+
+
+# time zone per country; everything not listed uses Central European Time
+TZ = {"FI": "Europe/Helsinki", "EE": "Europe/Tallinn", "LV": "Europe/Riga", "LT": "Europe/Vilnius",
+      "RO": "Europe/Bucharest", "MD": "Europe/Chisinau", "BG": "Europe/Sofia", "GR": "Europe/Athens",
+      "UA": "Europe/Kyiv", "TR": "Europe/Istanbul", "CY": "Asia/Nicosia",
+      "GB": "Europe/London", "IE": "Europe/Dublin", "PT": "Europe/Lisbon", "IS": "Atlantic/Reykjavik",
+      "MA": "Africa/Casablanca"}
+
+
+def utc_offset(place: dict, date: dt.date, clock: int) -> int:
+    """Minutes ahead of UTC at a place, on a date at a local clock time (handles summer time)."""
+    z = ZoneInfo(TZ.get(str(place.get("country", "")).upper(), "Europe/Berlin"))
+    t = dt.datetime.combine(date, dt.time((clock // 60) % 24, clock % 60), z)
+    return int(t.utcoffset().total_seconds() // 60)
 
 
 def hm(s: str) -> int:

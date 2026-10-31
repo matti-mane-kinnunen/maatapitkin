@@ -23,7 +23,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-13 | Remove the Graphviz graph | 31.10.2026 | Accepted |
 | D-14 | Git workflow: Claude commits on the Mac, Matti pushes | 30.10.2026 | Accepted |
 | D-15 | Which places count as capitals | 30.10.2026 | Accepted |
-| D-16 | Time zones in door-to-door times | – | Open |
+| D-16 | Time zones in door-to-door times | 31.10.2026 | Accepted |
 | D-17 | Trains that do not run every day | – | Superseded by D-24 |
 | D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
 | D-19 | Capitals are coloured by arrival day | 31.10.2026 | Accepted |
@@ -35,6 +35,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-25 | No ordinary travel at night (quiet hours 00:00–05:00) | 31.10.2026 | Accepted |
 | D-26 | Journeys leave Helsinki with the evening train | 31.10.2026 | Accepted |
 | D-27 | Journeys with or without night trains | 31.10.2026 | Accepted |
+| D-28 | Several travel dates on the map | 31.10.2026 | Accepted |
 
 ---
 
@@ -231,11 +232,16 @@ Belfast and the Vatican are included. Capitals with no connections yet are liste
 automatically.
 
 ## D-16 Time zones in door-to-door times
-**Status:** Open
+**Date:** 31.10.2026 · **Status:** Accepted
 
-Journey times are computed from local clock times, so connections are right but door-to-door
-totals ignore time-zone changes (London −1 h, Bucharest/Sofia/Athens +1 h from Central
-Europe). Options: store a time zone per place and convert, or accept it for now.
+**Decision.** All clock times stay local, as on tickets and timetables. Door-to-door times and
+the journey times in the departures box are corrected for time zones (each place gets its
+country's zone, Central European Time unless listed; summer time is handled). The arrivals
+list is sorted by the real arrival moment.
+
+**Effect.** Stockholm 12 h 55 → 13 h 55, London and Lisbon +2 h, Ankara −1 h; the Turku–
+Stockholm night ferry takes 10 h 35, not 9 h 35. The routing itself was already right:
+connections compare times at the same place, in that place's zone.
 
 ## D-17 Trains that do not run every day
 **Status:** Superseded by D-24
@@ -401,6 +407,21 @@ later with a hotel night (Paris +30 min via Köln, Rome +5 h 50 via Hamburg); Br
 Ljubljana and Tirana +24 h; Bern, Valletta, Bucharest, Chișinău, Sofia and Ankara not
 reachable – their key links (Hamburg–Basel, Rome–Sicily, Budapest–Bucharest) exist only as
 night trains in the data. Adding day trains to pairs.txt fixes that.
+
+## D-28 Several travel dates on the map
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Decision.** `build.py` computes the journeys for several departure days – by default the
+travel date and the Friday, Saturday and Sunday after it; `dates=…` or `travel_dates` in
+places.yaml choose others – each with and without night trains. The map has a "Leave"
+selector next to the night-train switch; the list, map, legend dates, itineraries and
+filters follow it, and the choice is remembered per browser.
+
+**Why.** With run days in the data (D-24), journeys really differ by departure day
+(e.g. Paris 41 h on Tuesday, 45 h leaving on Saturday).
+
+**Consequences.** The map page grows with each date (about 1 MB per date with both modes);
+four dates give about 4 MB.
 
 ---
 

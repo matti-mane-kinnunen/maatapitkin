@@ -200,6 +200,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="tools">
         <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
         <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
+        <div class="seg" id="f-date" role="group" aria-label="Leave Helsinki on"><span>Leave</span></div>
         <div class="seg" id="f-night" role="group" aria-label="Night trains">
           <span>Night trains</span><button type="button" data-n="1">allowed</button><button type="button" data-n="0">avoid</button>
         </div>
@@ -246,6 +247,14 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
 <script>
 const NET = /*__DATA__*/null;
+// journeys exist per travel date and with/without night trains; start with the first date
+const VARS = NET.variants || null;
+let curDate = NET.dates ? NET.dates[0] : null;
+if (VARS) {
+  const v0 = VARS[curDate];
+  Object.assign(NET, { routes: v0.yes.routes, city_routes: v0.yes.city_routes, unreached: v0.yes.unreached,
+                       no_night_trains: v0.no, start_date: curDate, version: v0.version });
+}
 const P = {...NET.places, ...NET.not_covered};
 const SVGNS = "http://www.w3.org/2000/svg";
 const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(SVGNS, tag);
@@ -437,8 +446,8 @@ const previewG = document.getElementById("preview"), hitsG = document.getElement
 const VB = svgEl.viewBox.baseVal;
 let ALL_ROUTES = [...NET.routes, ...(NET.city_routes || [])];
 // the two versions of every journey: with night trains, and without (night ferries stay)
-const V = { yes: { routes: NET.routes, city_routes: NET.city_routes || [], unreached: NET.unreached || [] },
-            no: NET.no_night_trains || null };
+let V = { yes: { routes: NET.routes, city_routes: NET.city_routes || [], unreached: NET.unreached || [] },
+          no: NET.no_night_trains || null };
 const reachableWithNight = n => [...V.yes.routes, ...V.yes.city_routes].some(r => r.capital === n);
 const routeOf = name => ALL_ROUTES.find(r => r.capital === name);
 let curStops = new Set();
@@ -482,8 +491,8 @@ function pairHtml(pr) {
     const kind = ls[0].mode === "ferry" ? (ls[0].night ? "night ferry" : "ferry") : ls[0].mode === "bus" ? "bus"
                : ls[0].mode === "local" ? "metro" : ls[0].night ? "night train" : "";
     const note = kind ? ` <span class="chipnote">${kind}</span>` : "";
-    if (!timed.length) return { first: 1e9, html: `<div class="svc-row"><b>${svc}</b>${note} · about ${durTxt(ls[0].duration)}, no timetable</div>` };
-    const typical = durTxt(median(timed.map(l => l.duration)));
+    if (!timed.length) return { first: 1e9, html: `<div class="svc-row"><b>${svc}</b>${note} · about ${durTxt(ls[0].duration_true ?? ls[0].duration)}, no timetable</div>` };
+    const typical = durTxt(median(timed.map(l => l.duration_true ?? l.duration)));
     const nextDay = l => hm(l.arr) < hm(l.dep) ? "+1" : "";
     if (timed.length === 1) {
       const l = timed[0];
@@ -580,7 +589,8 @@ const buttons = {};
 let rows = [];
 function buildRows() {
 for (const k in buttons) delete buttons[k];
-const maxMin = Math.max(...[...V.yes.routes, ...V.yes.city_routes, ...(V.no ? [...V.no.routes, ...V.no.city_routes] : [])].map(r => r.door_to_door_min));
+const maxMin = Math.max(...(VARS ? Object.values(VARS).flatMap(v => [...v.yes.routes, ...v.yes.city_routes, ...v.no.routes, ...v.no.city_routes])
+                                  : [...V.yes.routes, ...V.yes.city_routes]).map(r => r.door_to_door_min));
 rows = ALL_ROUTES.map(r => {
   const li = document.createElement("li"), b = document.createElement("button");
   const isCap = r.is_capital !== false;
@@ -593,7 +603,7 @@ rows = ALL_ROUTES.map(r => {
   const row = { r, li, b, isCap };
   b.addEventListener("click", () => select(r.capital, pickOption(r)));
   return row;
-}).sort((a, b) => a.r.arrive - b.r.arrive);
+}).sort((a, b) => (a.r.arrive_abs ?? a.r.arrive) - (b.r.arrive_abs ?? b.r.arrive));
 }
 buildRows();
 
@@ -604,7 +614,8 @@ const qEl = document.getElementById("q"), noHotelEl = document.getElementById("f
 const dayGroup = document.getElementById("f-day"), countEl = document.getElementById("count");
 const F = { day: 0, noHotel: false, cities: false };
 try { Object.assign(F, JSON.parse(localStorage.getItem("maatapitkin-filters") || "{}")); } catch (e) {}
-const lastDay = Math.max(...[...V.yes.routes, ...(V.no ? V.no.routes : [])].map(dayOf));
+const allVariantRoutes = VARS ? Object.values(VARS).flatMap(v => [...v.yes.routes, ...v.no.routes]) : [...V.yes.routes, ...(V.no ? V.no.routes : [])];
+const lastDay = Math.max(...allVariantRoutes.map(dayOf));
 for (const d of [0, ...Array.from({ length: Math.max(0, Math.min(lastDay, 6) - 2) }, (_, i) => i + 2)]) {
   const bt = document.createElement("button");
   bt.type = "button"; bt.dataset.day = d; bt.textContent = d ? `day ${d}` : "any";
@@ -689,8 +700,15 @@ function updateNodeDays() {
   }
 }
 // switch between journeys with and without night trains
-function setNightTrains(allowed) {
+function setNightTrains(allowed) { setVariant(curDate, allowed); }
+function setVariant(date, allowed) {
   F.nightTrains = allowed;
+  if (VARS && VARS[date]) {
+    curDate = date; F.date = date;
+    V = { yes: VARS[date].yes, no: VARS[date].no };
+    NET.start_date = date; NET.version = VARS[date].version;
+  }
+  for (const bt of document.querySelectorAll("#f-date button")) bt.setAttribute("aria-pressed", String(bt.dataset.date === curDate));
   const v = allowed || !V.no ? V.yes : V.no;
   NET.routes = v.routes; NET.city_routes = v.city_routes || []; NET.unreached = v.unreached || [];
   ALL_ROUTES = [...NET.routes, ...NET.city_routes];
@@ -700,13 +718,24 @@ function setNightTrains(allowed) {
 }
 for (const bt of document.querySelectorAll("#f-night button"))
   bt.addEventListener("click", () => setNightTrains(bt.dataset.n === "1"));
+// one button per travel date
+const dateGroup = document.getElementById("f-date");
+if (VARS && NET.dates.length > 1) {
+  for (const d of NET.dates) {
+    const bt = document.createElement("button");
+    bt.type = "button"; bt.dataset.date = d; bt.textContent = VARS[d].label;
+    bt.setAttribute("aria-pressed", String(d === curDate));
+    bt.addEventListener("click", () => setVariant(d, F.nightTrains !== false));
+    dateGroup.appendChild(bt);
+  }
+} else dateGroup.hidden = true;
 if (!V.no) document.getElementById("f-night").hidden = true;
 updateSummary();
 const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin: 45, night_point: "03:00", morning: "06:00"};
 document.getElementById("foot").textContent =
   `Timetables from the hand-built graph, partly re-checked against Transitous, applied to the travel date above. ` +
   `Changes take at least ${S.min_transfer} min (longer where you change station, e.g. Paris, London), ferry check-in ${S.ferry_checkin} min, Eurostar ${S.eurostar_checkin} min. ` +
-  `Journeys leave ${NET.origin} from ${S.start || "00:00"}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
+  `Clock times are local; durations are corrected for time zones. Journeys leave ${NET.origin} from ${S.start || "00:00"}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
   `between ${S.quiet || "00:00–05:00"} only night trains and night ferries run. ` +
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
 
@@ -790,7 +819,8 @@ function fromHash() {
 }
 window.addEventListener("hashchange", fromHash);
 fromHash();
-if (F.nightTrains === false && V.no) setNightTrains(false);
+if (VARS && F.date && VARS[F.date] && F.date !== curDate) setVariant(F.date, F.nightTrains !== false);
+else if (F.nightTrains === false && V.no) setNightTrains(false);
 // --- Zoom and pan: mouse wheel / pinch zooms around the pointer, drag pans -------------
 const W0 = VBOX.width, H0 = VBOX.height, ZMAX = 8;
 let viewX = 0, viewY = 0;                     // top-left corner of the visible part (map units)

@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
-from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load  # noqa: E402
+from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser(
@@ -29,12 +29,16 @@ def main():
                "  python3 build.py transfer=15\n"
                "  python3 build.py night=01\n"
                "  python3 build.py start=08:00     # leave Helsinki in the morning\n"
+               "  python3 build.py dates=2026-12-08,2026-12-11   # travel dates to switch between on the map\n"
                "  python3 build.py transfer=20 night=2:30 date=2026-11-17\n\n"
                "transfer sets the normal change time. Stations with a longer change time in\n"
                "places.yaml (Paris, London, Madrid, Istanbul) keep the longer one.\n"
                "night sets the hour a wait must pass through to count as a hotel night.",
         formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--date", help="travel date YYYY-MM-DD (default: settings.start_date or next Monday)")
+    ap.add_argument("--dates", metavar="D1,D2,...",
+                    help="travel dates to offer on the map, YYYY-MM-DD,... (default: settings.travel_dates, or the "
+                         "travel date and the Friday, Saturday and Sunday after it)")
     ap.add_argument("--transfer", type=int, metavar="N",
                     help="minimum change time in minutes (default: settings.min_transfer, 10)")
     ap.add_argument("--start", metavar="T",
@@ -75,9 +79,9 @@ def main():
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
 
-    def compute(night_trains: bool):
-        """All journeys (fastest + alternatives) with or without night trains."""
-        router = Router(net, start_date, night_trains=night_trains)
+    def compute(night_trains: bool, date: dt.date):
+        """All journeys (fastest + alternatives) leaving on `date`, with or without night trains."""
+        router = Router(net, date, night_trains=night_trains)
 
         def when(t: int) -> str:
             return f"{router.date_of(t):%a %-d.%-m.} {fmt_clock(t)}"
@@ -88,6 +92,9 @@ def main():
                 return None
             legs = [x for x in j if x["kind"] == "leg"]
             first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
+            # clock times are local; door to door is corrected for the time-zone difference
+            shift = (utc_offset(net.places[cap], router.date_of(arr), arr % DAY)
+                     - utc_offset(net.places[origin], router.date_of(first_dep), first_dep % DAY))
             steps = []
             for st in j:
                 if st["kind"] != "leg":
@@ -102,7 +109,9 @@ def main():
                               "timed": leg.timed, "issue": leg.issue, "note": leg.note})
             return {"capital": cap, "depart": first_dep, "arrive": arr,
                     "depart_txt": when(first_dep), "arrive_txt": when(arr),
-                    "door_to_door_min": arr - first_dep,
+                    "door_to_door_min": arr - first_dep - shift,
+                    "arrive_abs": arr - shift,              # arrival in the origin's clock, for sorting
+                    "tz_shift": shift,
                     "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
                     "nights_on_board": sum(1 for x in legs if x["leg"].night),
                     "hotel_nights": sum(x["nights"] for x in steps if x["kind"] == "stay"),
@@ -143,19 +152,38 @@ def main():
                 (unreached if net.places[place].get("capital") else unreached_cities).append(place)
                 continue
             (routes if r["is_capital"] else city_routes).append(r)
-        routes.sort(key=lambda r: r["arrive"])
-        city_routes.sort(key=lambda r: r["arrive"])
+        routes.sort(key=lambda r: r["arrive_abs"])
+        city_routes.sort(key=lambda r: r["arrive_abs"])
         return router, routes, city_routes, unreached, unreached_cities
 
-    router, routes, city_routes, unreached, _ = compute(True)
-    _, day_routes, day_city_routes, day_unreached, day_unreached_cities = compute(False)
+    # travel dates to offer on the map: the travel date first
+    if args.dates:
+        dates = [dt.date.fromisoformat(x.strip()) for x in args.dates.split(",") if x.strip()]
+    elif s.get("travel_dates"):
+        dates = [dt.date.fromisoformat(str(x)) for x in s["travel_dates"]]
+    else:
+        dates = [start_date] + [start_date + dt.timedelta(days=k) for k in range(1, 7)
+                                if (start_date + dt.timedelta(days=k)).weekday() in (4, 5, 6)]
+    dates = [start_date] + [d for d in dict.fromkeys(dates) if d != start_date]
+    start_time = s.get("start_time", "00:00")
+    variants = {}
+    for d in dates:
+        v = {"label": f"{d:%a %-d.%-m.}", "version": f"leave {origin} {d:%a %-d.%-m.%Y} from {start_time} · generated {today:%-d.%-m.%Y}"}
+        for key, nt in (("yes", True), ("no", False)):
+            _, rs, crs, un, unc = compute(nt, d)
+            v[key] = {"routes": rs, "city_routes": crs, "unreached": un, "unreached_cities": unc}
+        variants[d.isoformat()] = v
+    router, routes, city_routes, unreached, _ = compute(True, start_date)
+    day_routes, day_city_routes, day_unreached = (variants[start_date.isoformat()]["no"][k]
+                                                  for k in ("routes", "city_routes", "unreached"))
 
     # --- route table -----------------------------------------------------------
     md = [f"# Journeys from {origin}", "",
           f"_{version}. Change {router.min_transfer} min (more at some stations), ferry check-in "
           f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait "
           f"past {fmt_clock(router.night_point)} is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night. "
-          f"Between {fmt_clock(router.quiet[0])} and {fmt_clock(router.quiet[1])} only night trains and ferries run._", "",
+          f"Between {fmt_clock(router.quiet[0])} and {fmt_clock(router.quiet[1])} only night trains and ferries run. "
+          f"Clock times are local; door-to-door times are corrected for time zones._", "",
           "| Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |",
           "|---|---|---|---|---|---|---|---|"]
     for r in routes:
@@ -213,17 +241,19 @@ def main():
                   "night": l.night, "highlight": l.highlight, "issue": l.issue, "note": l.note,
                   "dep": fmt_clock(l.dep) if l.timed else None,
                   "arr": fmt_clock(l.arr) if l.timed else None,
-                  "duration": l.duration, "checked": l.checked} for l in net.legs]
+                  "duration": l.duration, "checked": l.checked,
+                  "duration_true": l.duration - (
+                      (utc_offset(net.places[l.to], start_date, ((l.dep or 0) + l.duration) % DAY)
+                       - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
+                      if l.frm in net.places and l.to in net.places else 0)} for l in net.legs]
     (outdir / "network.json").write_text(json.dumps({
         "origin": origin, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
-        "legs": legs_json, "routes": routes, "city_routes": city_routes,
-        "no_night_trains": {"routes": day_routes, "city_routes": day_city_routes,
-                            "unreached": day_unreached, "unreached_cities": day_unreached_cities},
+        "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": variants,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
                      "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
                      "quiet": f"{fmt_clock(router.quiet[0])}–{fmt_clock(router.quiet[1])}",
                      "start": s.get("start_time", "00:00"),
-                     "morning": fmt_clock(router.morning)}, "unreached": unreached, "warnings": warnings,
+                     "morning": fmt_clock(router.morning)}, "warnings": warnings,
     }, ensure_ascii=False, indent=1))
 
     import make_map
