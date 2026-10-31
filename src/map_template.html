@@ -200,6 +200,9 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="tools">
         <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
         <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
+        <div class="seg" id="f-night" role="group" aria-label="Night trains">
+          <span>Night trains</span><button type="button" data-n="1">allowed</button><button type="button" data-n="0">avoid</button>
+        </div>
         <div class="togs">
           <label><input type="checkbox" id="f-nohotel"> No hotel nights</label>
           <label><input type="checkbox" id="f-cities"> Include other cities</label>
@@ -432,7 +435,11 @@ layoutMain();
 const svgEl = document.getElementById("map"), tip = document.getElementById("tip");
 const previewG = document.getElementById("preview"), hitsG = document.getElementById("hits");
 const VB = svgEl.viewBox.baseVal;
-const ALL_ROUTES = [...NET.routes, ...(NET.city_routes || [])];
+let ALL_ROUTES = [...NET.routes, ...(NET.city_routes || [])];
+// the two versions of every journey: with night trains, and without (night ferries stay)
+const V = { yes: { routes: NET.routes, city_routes: NET.city_routes || [], unreached: NET.unreached || [] },
+            no: NET.no_night_trains || null };
+const reachableWithNight = n => [...V.yes.routes, ...V.yes.city_routes].some(r => r.capital === n);
 const routeOf = name => ALL_ROUTES.find(r => r.capital === name);
 let curStops = new Set();
 
@@ -448,6 +455,7 @@ function hover(name) {
       `<br><span class="hint">Click for the itinerary</span>`
     : name === NET.origin ? `<b>${name}</b><span class="hint">Every journey starts here</span>`
     : P[name].missing ? `<b>${name}</b><span class="hint">No connections yet</span>`
+    : reachableWithNight(name) ? `<b>${name}</b><span class="hint">Not reachable without night trains</span>`
     : `<b>${name}</b><span class="hint">No journey from ${NET.origin} in the data</span>`;
   if (!isMain(name)) layoutCities(name);
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
@@ -568,9 +576,12 @@ placeHits();
 
 // Arrivals list: one row per destination (capitals, and other cities on request)
 const list = document.getElementById("list");
-const maxMin = Math.max(...ALL_ROUTES.map(r => r.door_to_door_min));
 const buttons = {};
-const rows = ALL_ROUTES.map(r => {
+let rows = [];
+function buildRows() {
+for (const k in buttons) delete buttons[k];
+const maxMin = Math.max(...[...V.yes.routes, ...V.yes.city_routes, ...(V.no ? [...V.no.routes, ...V.no.city_routes] : [])].map(r => r.door_to_door_min));
+rows = ALL_ROUTES.map(r => {
   const li = document.createElement("li"), b = document.createElement("button");
   const isCap = r.is_capital !== false;
   b.type = "button"; b.setAttribute("aria-pressed", "false");
@@ -583,6 +594,8 @@ const rows = ALL_ROUTES.map(r => {
   b.addEventListener("click", () => select(r.capital, pickOption(r)));
   return row;
 }).sort((a, b) => a.r.arrive - b.r.arrive);
+}
+buildRows();
 
 // --- Search and filters ---
 const fold = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -591,7 +604,7 @@ const qEl = document.getElementById("q"), noHotelEl = document.getElementById("f
 const dayGroup = document.getElementById("f-day"), countEl = document.getElementById("count");
 const F = { day: 0, noHotel: false, cities: false };
 try { Object.assign(F, JSON.parse(localStorage.getItem("maatapitkin-filters") || "{}")); } catch (e) {}
-const lastDay = Math.max(...NET.routes.map(dayOf));
+const lastDay = Math.max(...[...V.yes.routes, ...(V.no ? V.no.routes : [])].map(dayOf));
 for (const d of [0, ...Array.from({ length: Math.max(0, Math.min(lastDay, 6) - 2) }, (_, i) => i + 2)]) {
   const bt = document.createElement("button");
   bt.type = "button"; bt.dataset.day = d; bt.textContent = d ? `day ${d}` : "any";
@@ -627,8 +640,9 @@ function applyFilters() {
     li.querySelector("button").addEventListener("click", () => { qEl.value = ""; Object.assign(F, { day: 0, noHotel: false }); applyFilters(); qEl.focus(); });
     list.appendChild(li);
   }
-  const caps = shown.filter(x => x.isCap).length, cities = shown.length - caps, totalCaps = rows.filter(x => x.isCap).length;
+  const caps = shown.filter(x => x.isCap).length, cities = shown.length - caps, totalCaps = V.yes.routes.length;
   countEl.textContent = `${caps} of ${totalCaps} capitals` + (cities ? ` · ${cities} other cit${cities === 1 ? "y" : "ies"}` : "") +
+    (F.nightTrains === false ? " · without night trains" : "") +
     (F.day || F.noHotel ? " · faded on the map: the others" : "");
   // the map agrees with the filters: places that do not pass are faded
   for (const { r } of rows) {
@@ -636,6 +650,11 @@ function applyFilters() {
     nodeEls[r.capital]?.classList.toggle("dim", dim);
     labelEls[r.capital]?.classList.toggle("dim", dim);
   }
+  for (const n of Object.keys(P)) if (!P[n].missing && n !== NET.origin && !routeOf(n)) {
+    nodeEls[n]?.classList.add("dim"); labelEls[n]?.classList.add("dim");       // no journey in this mode
+  }
+  for (const bt of document.querySelectorAll("#f-night button"))
+    bt.setAttribute("aria-pressed", String((bt.dataset.n === "1") === (F.nightTrains !== false)));
   try { localStorage.setItem("maatapitkin-filters", JSON.stringify(F)); } catch (e) {}
 }
 qEl.addEventListener("input", applyFilters);
@@ -649,13 +668,40 @@ document.addEventListener("keydown", e => {
   if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) { e.preventDefault(); qEl.focus(); }
 });
 applyFilters();
-const maxDay = Math.min(6, Math.max(...NET.routes.map(dayClass)));
-document.getElementById("daylegend").innerHTML = `<b>Capital, arrives on</b>` + Array.from({ length: maxDay }, (_, i) => i + 1)
-  .map(d => `<span><i class="swatch d${d}"></i>day ${d}${d === 6 ? "+" : ""} <span class="dd">${d === 6 ? "" : dayDate(d)}</span></span>`).join("");
-const missing = [...NET.unreached, ...Object.keys(NET.not_covered)];
-document.getElementById("gaps").innerHTML = `<b>${missing.length} capitals not covered yet:</b> ${missing.join(", ")}.`;
-document.getElementById("meta").innerHTML =
-  `${NET.routes.length} capitals reached · ${NET.legs.length} legs<br>${NET.version}`;
+function updateSummary() {
+  const maxDay = Math.min(6, Math.max(...NET.routes.map(dayClass)));
+  document.getElementById("daylegend").innerHTML = `<b>Capital, arrives on</b>` + Array.from({ length: maxDay }, (_, i) => i + 1)
+    .map(d => `<span><i class="swatch d${d}"></i>day ${d}${d === 6 ? "+" : ""} <span class="dd">${d === 6 ? "" : dayDate(d)}</span></span>`).join("");
+  const noNight = F.nightTrains === false && V.no ? V.no.unreached.filter(reachableWithNight) : [];
+  const missing = [...V.yes.unreached, ...Object.keys(NET.not_covered)];
+  document.getElementById("gaps").innerHTML =
+    (noNight.length ? `<b>Not reachable without night trains:</b> ${noNight.join(", ")}.<br><br>` : "") +
+    `<b>${missing.length} capitals not covered yet:</b> ${missing.join(", ")}.`;
+  document.getElementById("meta").innerHTML =
+    `${NET.routes.length} capitals reached${F.nightTrains === false ? " without night trains" : ""} · ${NET.legs.length} legs<br>${NET.version}`;
+}
+function updateNodeDays() {
+  for (const [name, n] of Object.entries(nodeEls)) {
+    if (n.tagName !== "rect") continue;
+    n.classList.remove("day", "d1", "d2", "d3", "d4", "d5", "d6");
+    const r = name !== NET.origin && NET.routes.find(x => x.capital === name);
+    if (r) n.classList.add("day", "d" + dayClass(r));
+  }
+}
+// switch between journeys with and without night trains
+function setNightTrains(allowed) {
+  F.nightTrains = allowed;
+  const v = allowed || !V.no ? V.yes : V.no;
+  NET.routes = v.routes; NET.city_routes = v.city_routes || []; NET.unreached = v.unreached || [];
+  ALL_ROUTES = [...NET.routes, ...NET.city_routes];
+  buildRows(); updateNodeDays(); updateSummary(); placeHits(); applyFilters();
+  const cur = curRoute && curRoute.capital;
+  select(cur && routeOf(cur) ? cur : routeOf("Paris") ? "Paris" : NET.routes[0].capital);
+}
+for (const bt of document.querySelectorAll("#f-night button"))
+  bt.addEventListener("click", () => setNightTrains(bt.dataset.n === "1"));
+if (!V.no) document.getElementById("f-night").hidden = true;
+updateSummary();
 const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin: 45, night_point: "03:00", morning: "06:00"};
 document.getElementById("foot").textContent =
   `Timetables from the hand-built graph, partly re-checked against Transitous, applied to the travel date above. ` +
@@ -695,7 +741,8 @@ function select(cap, opt = 0, fromMap = false) {
   curRoute = r;
   drawMarks(); layoutMain(); layoutCities(); placeHits();
   document.getElementById("itin-title").textContent = `Helsinki → ${cap}`;
-  document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}`;
+  document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}` +
+    (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "");
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   r.steps.forEach(s => {
@@ -743,6 +790,7 @@ function fromHash() {
 }
 window.addEventListener("hashchange", fromHash);
 fromHash();
+if (F.nightTrains === false && V.no) setNightTrains(false);
 // --- Zoom and pan: mouse wheel / pinch zooms around the pointer, drag pans -------------
 const W0 = VBOX.width, H0 = VBOX.height, ZMAX = 8;
 let viewX = 0, viewY = 0;                     // top-left corner of the visible part (map units)

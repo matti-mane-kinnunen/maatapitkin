@@ -34,6 +34,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-24 | Look trains up on sample days and record the days they run | 31.10.2026 | Accepted |
 | D-25 | No ordinary travel at night (quiet hours 00:00–05:00) | 31.10.2026 | Accepted |
 | D-26 | Journeys leave Helsinki with the evening train | 31.10.2026 | Accepted |
+| D-27 | Journeys with or without night trains | 31.10.2026 | Accepted |
 
 ---
 
@@ -379,6 +380,27 @@ did not match how the trip is actually planned.
 **Decision.** Journeys leave Helsinki from 17:00 (`start_time` in places.yaml), i.e. with the
 evening train and the night ferry, as in the original v1.9 graph. `build.py start=HH:MM`
 chooses another start time.
+
+## D-27 Journeys with or without night trains
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** Not everyone wants to sleep on a train: they can be noisy, private space is
+limited and the beds are short.
+
+**Decision.** `build.py` computes every journey twice – with night trains, and without night
+trains and night buses. Night ferries are always allowed (a cabin is close to a hotel room,
+and Helsinki–Stockholm depends on it). The map has a switch "Night trains: allowed / avoid";
+fastest, fewest changes and fewest hotel nights work in both modes, together with the
+filters. Destinations that need a night train are faded and listed as "Not reachable without
+night trains"; routes.md has a "Without night trains" table comparing the two.
+A departure now counts as a night service on its own (runs through 01:00–05:00 and takes at
+least 3 h), so a night train inside a `*` list of day trains is recognised too.
+
+**Consequences.** On 31.10.2026, without night trains: most capitals the same or a few hours
+later with a hotel night (Paris +30 min via Köln, Rome +5 h 50 via Hamburg); Bratislava,
+Ljubljana and Tirana +24 h; Bern, Valletta, Bucharest, Chișinău, Sofia and Ankara not
+reachable – their key links (Hamburg–Basel, Rome–Sicily, Budapest–Bucharest) exist only as
+night trains in the data. Adding day trains to pairs.txt fixes that.
 
 ---
 

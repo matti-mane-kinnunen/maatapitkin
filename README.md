@@ -43,7 +43,8 @@ python check_timetables.py  # needs internet; compares legs.yaml with live timet
 
 Outputs in `out/`:
 
-- `routes.md` – the fastest journey to every capital, with full itineraries, waits and hotel nights.
+- `routes.md` – the fastest journey to every capital, with full itineraries, waits and hotel nights,
+  and a table of the journeys without night trains.
 - `map.html` – an interactive map with the journeys.
 - `network.json` – everything above as data.
 

@@ -39,6 +39,18 @@ def norm_service(s: str) -> str:
     return re.sub(r"\s+", "", str(s or "")).upper()
 
 
+def overnight(dep: int, duration: int) -> bool:
+    """A departure counts as a night service when it runs through 01:00-05:00 and takes at
+    least 3 hours (22:11-08:21 yes; 23:13-00:43 no; a 02:35 local train no)."""
+    if duration < 180:
+        return False
+    a, b = dep, dep + duration
+    for d in range(a // DAY - 1, b // DAY + 1):
+        if max(a, d * DAY + 60) < min(b, d * DAY + 300):
+            return True
+    return False
+
+
 def parse_weekdays(spec) -> set[int] | None:
     """'mon-fri', 'daily', 'sat,sun', 'tue-thu,sat' -> {0..6}. None = every day."""
     if not spec or str(spec).lower() in ("daily", "all"):
@@ -149,6 +161,8 @@ def load(data_dir: Path) -> tuple[Network, list[str]]:
             else:
                 leg.dep, leg.arr = slot
                 leg.duration = (leg.arr - leg.dep) % DAY + DAY * int(r.get("days", 0))
+                if not leg.night and overnight(leg.dep, leg.duration):
+                    leg.night = True          # a night train hidden in a list of day trains
             legs.append(leg)
         if r.get("issue"):
             warnings.append(f"{r['from']} -> {r['to']} ({r.get('service', '')}): {r['issue']}")
@@ -172,8 +186,9 @@ class Router:
         hotel night too
     """
 
-    def __init__(self, net: Network, start_date: dt.date):
+    def __init__(self, net: Network, start_date: dt.date, night_trains: bool = True):
         self.net = net
+        self.night_trains = night_trains      # False: no night trains or night buses (night ferries stay)
         self.start_date = start_date
         s = net.settings
         self.min_transfer = int(s.get("min_transfer", 10))
@@ -186,6 +201,8 @@ class Router:
         self.quiet = (hm(q0), hm(q1))
         self.out: dict[str, list[Leg]] = {}
         for leg in net.legs:
+            if not night_trains and leg.night and leg.mode != "ferry":
+                continue
             self.out.setdefault(leg.frm, []).append(leg)
 
     def date_of(self, t: int) -> dt.date:

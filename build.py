@@ -65,90 +65,90 @@ def main():
     today = dt.date.today()
     start_date = dt.date.fromisoformat(str(args.date or s.get("start_date") or
                                            (today + dt.timedelta(days=(7 - today.weekday()) % 7 or 7))))
-    router = Router(net, start_date)
-    router.search(origin, hm(s.get("start_time", "00:00")))
     version = (f"leave {origin} {start_date:%a %-d.%-m.%Y} from {s.get('start_time', '00:00')}"
                f" · generated {today:%-d.%-m.%Y}")
 
-    def when(t: int) -> str:
-        return f"{router.date_of(t):%a %-d.%-m.} {fmt_clock(t)}"
-
     outdir = ROOT / "out"
     outdir.mkdir(exist_ok=True)
-
-    # --- journeys to capitals ---------------------------------------------
     start = hm(s.get("start_time", "00:00"))
-
-    def build_route(cap: str, j: list | None = None) -> dict | None:
-        j = j if j is not None else router.journey(cap)
-        if not j:
-            return None
-        legs = [x for x in j if x["kind"] == "leg"]
-        first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
-        steps = []
-        for st in j:
-            if st["kind"] != "leg":
-                steps.append({"kind": st["kind"], "place": st["place"], "from_t": when(st["from"]),
-                              "to_t": when(st["to"]), "minutes": st["to"] - st["from"],
-                              "nights": st.get("nights", 0)})
-                continue
-            leg = st["leg"]
-            steps.append({"kind": "leg", "i": leg.idx, "from": leg.frm, "to": leg.to, "service": leg.service,
-                          "mode": leg.mode, "night": leg.night, "dep": st["dep"], "arr": st["arr"],
-                          "dep_txt": when(st["dep"]), "arr_txt": when(st["arr"]),
-                          "timed": leg.timed, "issue": leg.issue, "note": leg.note})
-        return {"capital": cap, "depart": first_dep, "arrive": arr,
-                "depart_txt": when(first_dep), "arrive_txt": when(arr),
-                "door_to_door_min": arr - first_dep,
-                "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
-                "nights_on_board": sum(1 for x in legs if x["leg"].night),
-                "hotel_nights": sum(x["nights"] for x in steps if x["kind"] == "stay"),
-                "stays": [x["place"] for x in steps if x["kind"] == "stay"],
-                "has_issue": any(x.get("issue") for x in steps),
-                "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
-                "steps": steps}
-
     ALTERNATIVES = [("Fewest changes", "changes", lambda c, h, t: (c, t, h)),
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
-    front = router.pareto(origin, start)
-    router.search(origin, start, "fastest")          # last: the main table uses the fastest search
 
-    def journey_with_alternatives(place: str) -> dict | None:
-        r = build_route(place)
-        if not r:
-            return None
-        r["label"] = "Fastest"
-        r["capital"] = place                     # the destination's name (capital or not)
-        r["is_capital"] = bool(net.places[place].get("capital"))
-        r["alternatives"], seen = [], [r["signature"]]
-        for name, field_, order in ALTERNATIVES:
-            ok = [l for l in front.get(place, []) if l[2] <= r["arrive"] + max_extra]
-            if not ok:
+    def compute(night_trains: bool):
+        """All journeys (fastest + alternatives) with or without night trains."""
+        router = Router(net, start_date, night_trains=night_trains)
+
+        def when(t: int) -> str:
+            return f"{router.date_of(t):%a %-d.%-m.} {fmt_clock(t)}"
+
+        def build_route(cap: str, j: list | None = None) -> dict | None:
+            j = j if j is not None else router.journey(cap)
+            if not j:
+                return None
+            legs = [x for x in j if x["kind"] == "leg"]
+            first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
+            steps = []
+            for st in j:
+                if st["kind"] != "leg":
+                    steps.append({"kind": st["kind"], "place": st["place"], "from_t": when(st["from"]),
+                                  "to_t": when(st["to"]), "minutes": st["to"] - st["from"],
+                                  "nights": st.get("nights", 0)})
+                    continue
+                leg = st["leg"]
+                steps.append({"kind": "leg", "i": leg.idx, "from": leg.frm, "to": leg.to, "service": leg.service,
+                              "mode": leg.mode, "night": leg.night, "dep": st["dep"], "arr": st["arr"],
+                              "dep_txt": when(st["dep"]), "arr_txt": when(st["arr"]),
+                              "timed": leg.timed, "issue": leg.issue, "note": leg.note})
+            return {"capital": cap, "depart": first_dep, "arrive": arr,
+                    "depart_txt": when(first_dep), "arrive_txt": when(arr),
+                    "door_to_door_min": arr - first_dep,
+                    "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
+                    "nights_on_board": sum(1 for x in legs if x["leg"].night),
+                    "hotel_nights": sum(x["nights"] for x in steps if x["kind"] == "stay"),
+                    "stays": [x["place"] for x in steps if x["kind"] == "stay"],
+                    "has_issue": any(x.get("issue") for x in steps),
+                    "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
+                    "steps": steps}
+
+        front = router.pareto(origin, start)
+        router.search(origin, start, "fastest")          # last: the main table uses the fastest search
+
+        def journey_with_alternatives(place: str) -> dict | None:
+            r = build_route(place)
+            if not r:
+                return None
+            r["label"] = "Fastest"
+            r["capital"] = place                     # the destination's name (capital or not)
+            r["is_capital"] = bool(net.places[place].get("capital"))
+            r["alternatives"], seen = [], [r["signature"]]
+            for name, field_, order in ALTERNATIVES:
+                ok = [l for l in front.get(place, []) if l[2] <= r["arrive"] + max_extra]
+                if not ok:
+                    continue
+                c, h, t, lid = min(ok, key=lambda l: order(*l[:3]))
+                alt = build_route(place, router.pareto_journey(lid))
+                if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
+                    alt["label"] = name
+                    r["alternatives"].append(alt)
+                    seen.append(alt["signature"])
+            return r
+
+        routes, city_routes, unreached, unreached_cities = [], [], [], []
+        for place in net.places:
+            if place == origin:
                 continue
-            c, h, t, lid = min(ok, key=lambda l: order(*l[:3]))
-            alt = build_route(place, router.pareto_journey(lid))
-            if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
-                alt["label"] = name
-                r["alternatives"].append(alt)
-                seen.append(alt["signature"])
-        return r
+            r = journey_with_alternatives(place)
+            if r is None:
+                (unreached if net.places[place].get("capital") else unreached_cities).append(place)
+                continue
+            (routes if r["is_capital"] else city_routes).append(r)
+        routes.sort(key=lambda r: r["arrive"])
+        city_routes.sort(key=lambda r: r["arrive"])
+        return router, routes, city_routes, unreached, unreached_cities
 
-    routes, city_routes, unreached = [], [], []
-    for place in net.places:
-        if place == origin:
-            continue
-        r = journey_with_alternatives(place)
-        if r is None:
-            if net.places[place].get("capital"):
-                unreached.append(place)
-            continue
-        if r["is_capital"]:
-            routes.append(r)
-        else:
-            city_routes.append(r)
-    routes.sort(key=lambda r: r["arrive"])
-    city_routes.sort(key=lambda r: r["arrive"])
+    router, routes, city_routes, unreached, _ = compute(True)
+    _, day_routes, day_city_routes, day_unreached, day_unreached_cities = compute(False)
 
     # --- route table -----------------------------------------------------------
     md = [f"# Journeys from {origin}", "",
@@ -165,6 +165,19 @@ def main():
                   f"{fmt_dur(r['door_to_door_min'])} | {r['changes']} | {r['nights_on_board']} | {where} | "
                   + "; ".join(f"{a['label'].lower()}: {fmt_dur(a['door_to_door_min'])}, {a['changes']} ch., "
                               f"{a['hotel_nights']} hotel" for a in r["alternatives"]) + " |")
+    md += ["", "## Without night trains", "",
+           "_Night trains and night buses left out; night ferries still used._", "",
+           "| Capital | Arrive | Door to door | Changes | Hotel nights (where) | Compared with night trains |",
+           "|---|---|---|---|---|---|"]
+    fast = {r["capital"]: r for r in routes}
+    for r in day_routes:
+        where = f"{r['hotel_nights']} ({', '.join(r['stays'])})" if r["stays"] else "0"
+        f = fast.get(r["capital"])
+        diff = (r["door_to_door_min"] - f["door_to_door_min"]) if f else None
+        md.append(f"| {r['capital']} | {r['arrive_txt']} | {fmt_dur(r['door_to_door_min'])} | {r['changes']} | {where} | "
+                  + ("same" if diff == 0 else f"+{fmt_dur(diff)}" if diff and diff > 0 else "–") + " |")
+    if day_unreached:
+        md += ["", "Not reachable without night trains: " + ", ".join(day_unreached)]
     md += ["", "## Other cities", "", "| City | Arrive | Door to door | Changes | Hotel nights |", "|---|---|---|---|---|"]
     for r in city_routes:
         md.append(f"| {r['capital']} | {r['arrive_txt']} | {fmt_dur(r['door_to_door_min'])} | "
@@ -204,6 +217,8 @@ def main():
     (outdir / "network.json").write_text(json.dumps({
         "origin": origin, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "routes": routes, "city_routes": city_routes,
+        "no_night_trains": {"routes": day_routes, "city_routes": day_city_routes,
+                            "unreached": day_unreached, "unreached_cities": day_unreached_cities},
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
                      "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
                      "quiet": f"{fmt_clock(router.quiet[0])}–{fmt_clock(router.quiet[1])}",
