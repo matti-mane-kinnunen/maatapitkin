@@ -806,12 +806,6 @@ legs:
   - {from: Naples, to: Bari, service: "FR", mode: train, times: ["06:45-10:19", "18:54-22:50"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Stockholm, to: Göteborg, service: "2023", mode: train, runs: "sat", times: ["16:21-20:20"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Stockholm, to: Göteborg, service: "2023", mode: train, runs: "sun", times: ["10:23-10:36", "10:32-10:38"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Tarifa, service: "AVE", mode: train, times: ["08:30-13:59", "18:35-21:50"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Tarifa, service: "AVE", mode: train, runs: "fri", times: ["21:20-00:10"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Tarifa, service: "AVE", mode: train, runs: "fri,sat", times: ["21:05-23:57"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Tarifa, service: "AVE", mode: train, runs: "mon-fri,sat", times: ["09:35-12:33"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Tarifa, service: "AVE", mode: train, runs: "mon-fri,sun", times: ["19:41-23:55"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Tarifa, service: "AVE", mode: train, runs: "sat", times: ["16:30-19:41", "16:38-19:58"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Hamburg, to: Basel, service: "ICE", mode: train, times: ["06:29-13:21", "08:29-15:21", "10:29-17:21", "12:29-19:21", "14:29-21:21", "16:29-23:10"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Hamburg, to: Basel, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["04:41-12:48", "06:45-14:48", "08:42-16:48", "10:45-18:48", "12:45-20:48", "14:45-22:48",
       "18:29-01:10", "22:11-08:21"], query: "*", checked: 2026-10-31, source: transitous}

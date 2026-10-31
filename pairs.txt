@@ -28,6 +28,7 @@ Offenburg -> Strasbourg : *
 Wien -> Budapest : *
 Wien -> Venice : *
 Wien -> Trieste : *
+Tallinn -> Valga : *
 Valga -> Riga : *
 Riga -> Vilnius : *
 Warsaw -> Krakow : *
@@ -62,7 +63,6 @@ Rome -> Napoli : *
 Lisbon -> Porto : *
 Madrid -> San Sebastian: *
 Madrid -> Malaga : *
-Madrid -> Tarica : * 
 Madrid -> Algeciras : *
 
 
