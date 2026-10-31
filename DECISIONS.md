@@ -29,6 +29,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-19 | Capitals are coloured by arrival day | 31.10.2026 | Accepted |
 | D-20 | Zoom and pan on the map | 31.10.2026 | Accepted |
 | D-21 | Show day boundaries and hotel nights on the selected journey | 31.10.2026 | Accepted |
+| D-22 | A connection's departures on hover | 31.10.2026 | Accepted |
 
 ---
 
@@ -295,6 +296,20 @@ is split into the same days with headings ("Day 2 · Tue 3.11.").
 
 **Why.** The journey reads as daily stages, like the day clusters of the original graph, and
 shows at a glance where the nights are spent.
+
+## D-22 A connection's departures on hover
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Decision.** Hovering a line between two places (tapping it on a phone) shows its trains:
+per service the number of departures, how often it runs (rounded, e.g. "every 30 min"), the
+typical journey time, the departure times (shortened when there are many), "+1" for arrival
+the next day, and when the timetable was last checked. Where lines lie on top of each other,
+the box lists all of them (at most three) and all of them are highlighted. An invisible
+12 px strip along each line makes thin lines easy to hit; places and labels stay on top, so
+a click on a place still opens its itinerary.
+
+**Why.** The map should show not only the fastest journey but what each connection offers –
+the information that is in legs.yaml.
 
 ---
 

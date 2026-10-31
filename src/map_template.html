@@ -67,7 +67,16 @@ button[aria-pressed="true"] .bar i { background: var(--accent) }
 svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none }
 #map.zoomed { cursor: grab } #map.panning, #map.panning .hit.go { cursor: grabbing }
 /* lines and outlines keep their width on screen when zoomed */
-#land path, .leg, .halo, .node, .hit { vector-effect: non-scaling-stroke }
+#land path, .leg, .halo, .node, .hit, .leghit { vector-effect: non-scaling-stroke }
+#land, #base, #preview, #route, #nodes { pointer-events: none }
+/* an invisible wide strip along each line, so a thin line is easy to hover or tap */
+.leghit { fill: none; stroke: transparent; stroke-width: 12; pointer-events: stroke; cursor: help }
+#base .leg.hot { stroke-width: 3.2; opacity: 1 }
+.tip .svcs { display: grid; gap: 6px; margin-top: 4px }
+.tip .svc-row b { font: 600 12px var(--body); display: inline; letter-spacing: 0 }
+.tip .times { font: 11px/1.4 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; word-spacing: 2px }
+.tip .chipnote { font-size: 11px; color: var(--night) }
+.tip hr.tipsep { border: 0; border-top: 1px solid var(--rule); margin: 8px 0 }
 .zoombar { position: absolute; z-index: 3; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 4px }
 .zoombar button { all: unset; box-sizing: border-box; width: 32px; height: 32px; display: grid; place-items: center; cursor: pointer;
   background: var(--panel); color: var(--fg); border: 1px solid var(--rule); border-radius: 4px;
@@ -174,7 +183,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="mapbox">
         <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="Map of rail and ferry legs across Europe">
           <g id="land">__BASEMAP__</g>
-          <g id="base"></g><g id="preview"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g><g id="marks"></g><g id="hits"></g>
+          <g id="base"></g><g id="preview"></g><g id="route"></g><g id="leghits"></g><g id="nodes"></g><g id="labels"></g><g id="marks"></g><g id="hits"></g>
         </svg>
         <div class="tip" id="tip" hidden></div>
         <div class="zoombar" role="group" aria-label="Zoom the map">
@@ -228,10 +237,23 @@ function curve(a, b) { // gentle arc so parallel and reverse legs separate
 }
 
 const base = document.getElementById("base"), routeG = document.getElementById("route");
-const seen = new Set();
+// one drawn line per pair of places; all departures between them are kept for the hover box
+const pairs = new Map();
 for (const l of NET.legs) {
-  const key = l.from + ">" + l.to; if (seen.has(key)) continue; seen.add(key);
-  el("path", { d: curve(P[l.from], P[l.to]), class: `leg ${cls(l)}` }, base);
+  const key = l.from + ">" + l.to;
+  if (!pairs.has(key)) pairs.set(key, { from: l.from, to: l.to, legs: [] });
+  pairs.get(key).legs.push(l);
+}
+const legHitsG = document.getElementById("leghits");
+for (const pr of pairs.values()) {
+  const d = curve(P[pr.from], P[pr.to]);
+  pr.line = el("path", { d, class: `leg ${cls(pr.legs[0])}` }, base);
+  pr.hit = el("path", { d, class: "leghit" }, legHitsG);
+  pr.hit.pair = pr;
+  pr.hit.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") showPair(pr, e); });
+  pr.hit.addEventListener("pointermove", e => { if (e.pointerType === "mouse") showPair(pr, e, true); });
+  pr.hit.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") unhover(); });
+  pr.hit.addEventListener("click", e => { showPair(pr, e); e.stopPropagation(); });   // tap on a phone
 }
 
 const nodesG = document.getElementById("nodes"), labelsG = document.getElementById("labels");
@@ -405,8 +427,62 @@ function hover(name) {
   tip.style.left = `${Math.max(4, Math.min(box.width - w - 4, x > box.width / 2 ? x - w - 14 : x + 14))}px`;
   tip.style.top = `${Math.max(4, Math.min(box.height - h - 4, y - h / 2))}px`;
 }
+function placeTip(clientX, clientY) {
+  const box = svgEl.getBoundingClientRect(), x = clientX - box.left, y = clientY - box.top;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = `${Math.max(4, Math.min(box.width - w - 4, x > box.width / 2 ? x - w - 16 : x + 16))}px`;
+  tip.style.top = `${Math.max(4, Math.min(box.height - h - 4, y - h / 2))}px`;
+}
+const hm = t => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+const median = a => { const b = [...a].sort((x, y) => x - y); return b[Math.floor(b.length / 2)]; };
+const durTxt = m => m >= 60 ? `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")}` : `${m} min`;
+function pairHtml(pr) {
+  const groups = new Map();
+  for (const l of pr.legs) { const k = l.service || "?"; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(l); }
+  const rows = [...groups.entries()].map(([svc, ls]) => {
+    const timed = ls.filter(l => l.dep).sort((a, b) => hm(a.dep) - hm(b.dep));
+    const kind = ls[0].mode === "ferry" ? (ls[0].night ? "night ferry" : "ferry") : ls[0].mode === "bus" ? "bus"
+               : ls[0].mode === "local" ? "metro" : ls[0].night ? "night train" : "";
+    const note = kind ? ` <span class="chipnote">${kind}</span>` : "";
+    if (!timed.length) return { first: 1e9, html: `<div class="svc-row"><b>${svc}</b>${note} · about ${durTxt(ls[0].duration)}, no timetable</div>` };
+    const typical = durTxt(median(timed.map(l => l.duration)));
+    const nextDay = l => hm(l.arr) < hm(l.dep) ? "+1" : "";
+    if (timed.length === 1) {
+      const l = timed[0];
+      return { first: hm(l.dep), html: `<div class="svc-row"><b>${svc}</b>${note} · <span class="t">${l.dep}–${l.arr}${nextDay(l)}</span> · ${typical}</div>` };
+    }
+    const deps = timed.map(l => l.dep);
+    const gaps = deps.slice(1).map((d, i) => hm(d) - hm(deps[i]));
+    const g = median(gaps), regular = gaps.filter(x => Math.abs(x - g) <= 10).length >= gaps.length * 0.6;
+    const gr = g < 60 ? Math.round(g / 5) * 5 : Math.round(g / 15) * 15;      // 32 min -> "every 30 min"
+    const every = regular && g <= 120 ? ` · every ${gr < 60 ? gr + " min" : durTxt(gr)}` : "";
+    const times = deps.length <= 14 ? deps.join(" ") : [...deps.slice(0, 6), "…", ...deps.slice(-3)].join(" ");
+    return { first: hm(deps[0]), html: `<div class="svc-row"><b>${svc}</b>${note} · ${deps.length} departures${every} · ${typical}` +
+             `<div class="times">${times}</div></div>` };
+  }).sort((a, b) => a.first - b.first);
+  const more = rows.length > 6 ? `<div class="hint">and ${rows.length - 6} more services</div>` : "";
+  const checked = pr.legs.map(l => l.checked).filter(Boolean).sort().pop();
+  return `<b>${pr.from} → ${pr.to}</b><div class="svcs">${rows.slice(0, 6).map(r => r.html).join("")}</div>${more}` +
+         (checked ? `<span class="hint">Timetable checked ${checked.split("-").reverse().map(Number).join(".")}</span>` : "");
+}
+let hotPairs = [];
+function showPair(pr, e, moving = false) {
+  // every line under the pointer (lines can lie on top of each other), at most three
+  const under = document.elementsFromPoint(e.clientX, e.clientY).filter(x => x.pair).map(x => x.pair);
+  const list = [...new Set([pr, ...under])].slice(0, 3);
+  const same = list.length === hotPairs.length && list.every((x, i) => x === hotPairs[i]);
+  if (!(moving && same)) {
+    unhover();
+    hotPairs = list; for (const x of list) x.line.classList.add("hot");
+    tip.innerHTML = list.map(pairHtml).join('<hr class="tipsep">');
+    tip.hidden = false;
+  }
+  placeTip(e.clientX, e.clientY);
+}
 let hovered = null;
 function unhover() {
+  for (const x of hotPairs) x.line.classList.remove("hot");
+  hotPairs = [];
   tip.hidden = true; previewG.replaceChildren();
   layoutCities();
 }
@@ -451,8 +527,8 @@ for (const name of hitNames) {
     if (isMain(name)) labelEls[name].addEventListener("click", () => { unhover(); select(name, 0, true); });
   }
   for (const t of [h, labelEls[name]]) {
-    t.addEventListener("mouseenter", () => hover(name));
-    t.addEventListener("mouseleave", unhover);
+    t.addEventListener("pointerenter", () => hover(name));
+    t.addEventListener("pointerleave", unhover);
   }
   h.addEventListener("focus", () => hover(name));
   h.addEventListener("blur", unhover);
@@ -652,6 +728,7 @@ const endPointer = e => {
 window.addEventListener("pointerup", endPointer);
 window.addEventListener("pointercancel", endPointer);
 svgEl.addEventListener("click", e => { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);
+svgEl.addEventListener("click", e => { if (hotPairs.length && !e.target.classList.contains("leghit")) unhover(); });   // tap elsewhere closes the box
 applyView(false);
 
 // label widths change once the web fonts arrive: lay out again

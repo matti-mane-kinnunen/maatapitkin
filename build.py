@@ -190,7 +190,7 @@ def main():
                   "night": l.night, "highlight": l.highlight, "issue": l.issue, "note": l.note,
                   "dep": fmt_clock(l.dep) if l.timed else None,
                   "arr": fmt_clock(l.arr) if l.timed else None,
-                  "duration": l.duration} for l in net.legs]
+                  "duration": l.duration, "checked": l.checked} for l in net.legs]
     (outdir / "network.json").write_text(json.dumps({
         "origin": origin, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "routes": routes, "city_routes": city_routes,
