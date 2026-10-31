@@ -64,7 +64,18 @@ button[aria-pressed="true"] .bar i { background: var(--accent) }
 /* Map */
 .mapcol { display: grid; gap: 14px; min-width: 0 }
 .mapbox { background: var(--sea); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; position: relative }
-svg { display: block; width: 100%; height: auto }
+svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none }
+#map.zoomed { cursor: grab } #map.panning, #map.panning .hit.go { cursor: grabbing }
+/* lines and outlines keep their width on screen when zoomed */
+#land path, .leg, .halo, .node, .hit { vector-effect: non-scaling-stroke }
+.zoombar { position: absolute; z-index: 3; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 4px }
+.zoombar button { all: unset; box-sizing: border-box; width: 32px; height: 32px; display: grid; place-items: center; cursor: pointer;
+  background: var(--panel); color: var(--fg); border: 1px solid var(--rule); border-radius: 4px;
+  font: 600 18px/1 var(--body); box-shadow: 0 1px 3px rgb(0 0 0 / 0.12) }
+.zoombar button.fit { font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase }
+.zoombar button:hover { border-color: var(--accent) }
+.zoombar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.zoombar button:disabled { opacity: 0.4; cursor: default; border-color: var(--rule) }
 #land path { fill: var(--land); stroke: var(--border); stroke-width: 0.6 }
 .leg { fill: none; stroke-linecap: round }
 .leg.train { stroke: var(--train) } .leg.night { stroke: var(--night) } .leg.ferry, .leg.local { stroke: var(--ferry); stroke-dasharray: 4 4 }
@@ -93,8 +104,10 @@ svg { display: block; width: 100%; height: auto }
 .tip b { font: 600 15px/1.2 var(--display); letter-spacing: 0.02em; display: block }
 .tip .t { font-family: var(--mono); font-variant-numeric: tabular-nums }
 .tip .hint { color: var(--muted) }
-.lbl { font: 600 11px var(--display); letter-spacing: 0.03em; fill: var(--fg); paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round; cursor: pointer }
-.lbl.small { font-weight: 500; fill: var(--muted); font-size: 10px }
+/* labels keep their size on screen when zoomed (--z is the zoom factor) */
+.lbl { font-family: var(--display); font-weight: 600; font-size: calc(11px / var(--z, 1)); letter-spacing: 0.03em; fill: var(--fg);
+  paint-order: stroke; stroke: var(--land); stroke-width: calc(3px / var(--z, 1)); stroke-linejoin: round; cursor: pointer }
+.lbl.small { font-weight: 500; fill: var(--muted); font-size: calc(10px / var(--z, 1)) }
 .lbl.missing { fill: var(--missing); font-weight: 500 }
 .lbl.target { fill: var(--accent); font-weight: 700 }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; color: var(--muted); padding: 0 2px }
@@ -154,6 +167,11 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
           <g id="base"></g><g id="preview"></g><g id="route"></g><g id="nodes"></g><g id="labels"></g><g id="hits"></g>
         </svg>
         <div class="tip" id="tip" hidden></div>
+        <div class="zoombar" role="group" aria-label="Zoom the map">
+          <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+          <button type="button" id="zoom-fit" class="fit" aria-label="Show the whole map">Fit</button>
+        </div>
       </div>
       <div class="legend">
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>Day train</span>
@@ -219,10 +237,11 @@ for (const [name, p] of Object.entries(P)) {
 
 // --- Labels: each tries a few spots around its marker and takes the first free one ---
 const VBOX = document.getElementById("map").viewBox.baseVal;
+let Z = 1;                       // zoom factor; sizes below are divided by it to stay constant on screen
 const isMain = n => P[n].capital || P[n].missing || n === NET.origin;
 const CAND = [[7, 4, "start"], [-7, 4, "end"], [0, -8, "middle"], [0, 15, "middle"],
               [6, -5, "start"], [6, 12, "start"], [-6, -5, "end"], [-6, 12, "end"]];
-const nodeBoxes = Object.entries(P).map(([n, p]) => ({ x: p.x - 4, y: p.y - 4, w: 8, h: 8, n }));
+let nodeBoxes = [];
 const labelBox = t => { const b = t.getBBox(); return { x: b.x - 1.5, y: b.y - 1, w: b.width + 3, h: b.height + 2 }; };
 const overlap = (a, b) => {
   const w = Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x), h = Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y);
@@ -232,20 +251,22 @@ function cost(b, taken, own) {
   let c = 0;
   for (const o of taken) c += overlap(b, o);
   for (const nb of nodeBoxes) if (nb.n !== own) c += 2 * overlap(b, nb);
-  return c + 50 * (Math.max(0, -b.x) + Math.max(0, b.x + b.w - VBOX.width) + Math.max(0, -b.y) + Math.max(0, b.y + b.h - VBOX.height));
+  // keep labels inside the visible part of the map
+  return c + 50 * (Math.max(0, VBOX.x - b.x) + Math.max(0, b.x + b.w - VBOX.x - VBOX.width) +
+                   Math.max(0, VBOX.y - b.y) + Math.max(0, b.y + b.h - VBOX.y - VBOX.height));
 }
 function placeLabel(name, taken, mustShow) {
   const t = labelEls[name], p = P[name];
   t.style.display = "";
   let best = null;
   for (const [dx, dy, a] of (NUDGE[name] ? [NUDGE[name], ...CAND] : CAND)) {
-    t.setAttribute("x", p.x + dx); t.setAttribute("y", p.y + dy); t.setAttribute("text-anchor", a);
+    t.setAttribute("x", p.x + dx / Z); t.setAttribute("y", p.y + dy / Z); t.setAttribute("text-anchor", a);
     const b = labelBox(t), c = cost(b, taken, name);
     if (c === 0) { taken.push(b); return true; }
     if (!best || c < best.c) best = { c, dx, dy, a, b };
   }
   if (!mustShow) { t.style.display = "none"; return false; }
-  t.setAttribute("x", p.x + best.dx); t.setAttribute("y", p.y + best.dy); t.setAttribute("text-anchor", best.a);
+  t.setAttribute("x", p.x + best.dx / Z); t.setAttribute("y", p.y + best.dy / Z); t.setAttribute("text-anchor", best.a);
   taken.push(best.b);
   return true;
 }
@@ -254,6 +275,7 @@ function layoutMain() {
   // Helsinki and the capitals always get a label (earliest arrivals first);
   // capitals without connections only where there is room
   mainTaken = [];
+  nodeBoxes = Object.entries(P).map(([n, p]) => ({ x: p.x - 4 / Z, y: p.y - 4 / Z, w: 8 / Z, h: 8 / Z, n }));
   const arrival = n => (NET.routes.find(r => r.capital === n) || { arrive: 1e9 }).arrive;
   const caps = Object.keys(P).filter(n => P[n].capital && !P[n].missing && n !== NET.origin).sort((a, b) => arrival(a) - arrival(b));
   placeLabel(NET.origin, mainTaken, true);
@@ -263,9 +285,13 @@ function layoutMain() {
 let cityStops = new Set();
 function layoutCities(extra = null) {
   // other cities are labelled only along the selected route, and while hovered
+  // zoomed in to 2x or more, the other cities are labelled too where there is room
   const taken = [...mainTaken];
-  for (const n of Object.keys(P).filter(n => !isMain(n))) {
-    if (cityStops.has(n) || n === extra) placeLabel(n, taken, true);
+  const others = Object.keys(P).filter(n => !isMain(n));
+  for (const n of others) if (cityStops.has(n) || n === extra) placeLabel(n, taken, true);
+  for (const n of others) {
+    if (cityStops.has(n) || n === extra) continue;
+    if (Z >= 2) placeLabel(n, taken, false);
     else labelEls[n].style.display = "none";
   }
 }
@@ -294,7 +320,7 @@ function hover(name) {
     : `<b>${name}</b><span class="hint">No journey from ${NET.origin} in the data</span>`;
   if (!isMain(name)) layoutCities(name);
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
-  const x = p.x * k, y = p.y * k;
+  const x = (p.x - VB.x) * k, y = (p.y - VB.y) * k;
   tip.hidden = false;
   const w = tip.offsetWidth, h = tip.offsetHeight;
   tip.style.left = `${Math.max(4, Math.min(box.width - w - 4, x > box.width / 2 ? x - w - 14 : x + 14))}px`;
@@ -317,23 +343,23 @@ for (const name of hitNames) {
   // (the Vatican on Rome) gets its target on its name label instead
   let cx = p.x, cy = p.y;
   const near = q => Math.hypot(q.x - cx, q.y - cy);
-  if (isMain(name) && placed.some(q => near(q) < 6) && labelEls[name].style.display !== "none") {
+  if (isMain(name) && placed.some(q => near(q) < 6 / Z) && labelEls[name].style.display !== "none") {
     const bb = labelEls[name].getBBox();
     cx = bb.x + bb.width / 2; cy = bb.y + bb.height / 2;
   }
-  const d = Math.min(24, ...placed.map(near), ...hitNames.filter(n => n !== name).map(n => Math.hypot(P[n].x - cx, P[n].y - cy)));
+  const d = Math.min(24 / Z, ...placed.map(near), ...hitNames.filter(n => n !== name).map(n => Math.hypot(P[n].x - cx, P[n].y - cy)));
   const size = isMain(name) ? [5, 12] : [4, 9];
-  let rad = Math.max(size[0], Math.min(size[1], d / 2));
+  let rad = Math.max(size[0], Math.min(size[1], d * Z / 2)) / Z;
   if (!isMain(name)) {
     // a city right next to a place that already has a target (Nice next to Monaco)
     // gets its target just beside its marker, so both stay clickable
     for (let k = 0; k < 4; k++) {
-      const c = placed.find(q => Math.hypot(q.x - cx, q.y - cy) < q.r + rad + 1);
+      const c = placed.find(q => Math.hypot(q.x - cx, q.y - cy) < q.r + rad + 1 / Z);
       if (!c) break;
-      rad = 4;
+      rad = 4 / Z;
       let vx = cx - c.x, vy = cy - c.y, L = Math.hypot(vx, vy);
       if (L < 0.01) { vx = 1; vy = 0; L = 1; }
-      cx = c.x + vx / L * (c.r + rad + 1); cy = c.y + vy / L * (c.r + rad + 1);
+      cx = c.x + vx / L * (c.r + rad + 1 / Z); cy = c.y + vy / L * (c.r + rad + 1 / Z);
     }
   }
   const h = el("circle", { cx, cy, r: rad, class: (r ? "hit go" : "hit") + (isMain(name) ? "" : " city") }, hitsG);
@@ -451,6 +477,93 @@ function fromHash() {
 }
 window.addEventListener("hashchange", fromHash);
 fromHash();
+// --- Zoom and pan: mouse wheel / pinch zooms around the pointer, drag pans -------------
+const W0 = VBOX.width, H0 = VBOX.height, ZMAX = 8;
+let viewX = 0, viewY = 0;                     // top-left corner of the visible part (map units)
+const zoomIn = document.getElementById("zoom-in"), zoomOut = document.getElementById("zoom-out"),
+      zoomFit = document.getElementById("zoom-fit");
+function sizeNodes() {
+  for (const [n, e] of Object.entries(nodeEls)) {
+    const p = P[n];
+    if (e.tagName === "rect") {
+      const sz = 7 / Z;
+      e.setAttribute("x", p.x - sz / 2); e.setAttribute("y", p.y - sz / 2);
+      e.setAttribute("width", sz); e.setAttribute("height", sz);
+    } else e.setAttribute("r", (p.missing ? 4 : 2.6) / Z);
+  }
+}
+let relayoutQueued = false;
+function applyView(relayout) {
+  const w = W0 / Z, h = H0 / Z;
+  viewX = Math.min(Math.max(0, viewX), W0 - w); viewY = Math.min(Math.max(0, viewY), H0 - h);
+  svgEl.setAttribute("viewBox", `${viewX} ${viewY} ${w} ${h}`);
+  svgEl.style.setProperty("--z", Z);
+  svgEl.style.touchAction = Z > 1.001 ? "none" : "pan-y";     // at full view, one finger scrolls the page
+  svgEl.classList.toggle("zoomed", Z > 1.001);
+  zoomOut.disabled = zoomFit.disabled = Z <= 1.001; zoomIn.disabled = Z >= ZMAX - 0.001;
+  if (relayout && !relayoutQueued) {
+    relayoutQueued = true;
+    requestAnimationFrame(() => { relayoutQueued = false; sizeNodes(); layoutMain(); layoutCities(); placeHits(); });
+  }
+}
+function zoomAt(factor, cx, cy) {
+  const nz = Math.min(ZMAX, Math.max(1, Z * factor));
+  if (Math.abs(nz - Z) < 1e-4) return;
+  const r = svgEl.getBoundingClientRect();
+  if (cx == null) { cx = r.left + r.width / 2; cy = r.top + r.height / 2; }
+  const fx = (cx - r.left) / r.width, fy = (cy - r.top) / r.height;
+  const mx = viewX + fx * W0 / Z, my = viewY + fy * H0 / Z;      // the map point under the pointer stays put
+  Z = nz;
+  viewX = mx - fx * W0 / Z; viewY = my - fy * H0 / Z;
+  unhover(); applyView(true);
+}
+zoomIn.addEventListener("click", () => zoomAt(2));
+zoomOut.addEventListener("click", () => zoomAt(0.5));
+zoomFit.addEventListener("click", () => { Z = 1; viewX = viewY = 0; unhover(); applyView(true); });
+svgEl.addEventListener("wheel", e => {
+  if (!e.ctrlKey && e.deltaY > 0 && Z <= 1.001) return;          // nothing to zoom out: let the page scroll
+  e.preventDefault();
+  zoomAt(Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0015)), e.clientX, e.clientY);
+}, { passive: false });
+svgEl.addEventListener("dblclick", e => { e.preventDefault(); zoomAt(2, e.clientX, e.clientY); });
+const pointers = new Map();
+let drag = null, pinch = null, moved = false;
+svgEl.addEventListener("pointerdown", e => {
+  if (e.pointerType === "mouse" && e.button !== 0) return;
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  moved = false;
+  if (pointers.size === 1) drag = { x: e.clientX, y: e.clientY, vx: viewX, vy: viewY };
+  if (pointers.size === 2) {
+    const [a, b] = [...pointers.values()];
+    pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, z: Z }; drag = null;
+  }
+});
+window.addEventListener("pointermove", e => {
+  if (!pointers.has(e.pointerId)) return;
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pinch && pointers.size >= 2) {
+    const [a, b] = [...pointers.values()];
+    zoomAt(pinch.z * Math.hypot(a.x - b.x, a.y - b.y) / pinch.d / Z, (a.x + b.x) / 2, (a.y + b.y) / 2);
+    moved = true; return;
+  }
+  if (!drag || Z <= 1.001) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!moved && Math.hypot(dx, dy) < 4) return;                 // a click, not a drag (yet)
+  moved = true;
+  const r = svgEl.getBoundingClientRect();
+  viewX = drag.vx - dx / r.width * W0 / Z; viewY = drag.vy - dy / r.height * H0 / Z;
+  svgEl.classList.add("panning"); unhover(); applyView(false);
+});
+const endPointer = e => {
+  pointers.delete(e.pointerId);
+  if (pointers.size < 2) pinch = null;
+  if (!pointers.size) { drag = null; svgEl.classList.remove("panning"); }
+};
+window.addEventListener("pointerup", endPointer);
+window.addEventListener("pointercancel", endPointer);
+svgEl.addEventListener("click", e => { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);
+applyView(false);
+
 // label widths change once the web fonts arrive: lay out again
 document.fonts?.ready.then(() => { layoutMain(); layoutCities(); placeHits(); });
 </script>

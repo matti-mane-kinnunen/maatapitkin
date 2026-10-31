@@ -27,6 +27,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-17 | Trains that do not run every day | – | Open |
 | D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
 | D-19 | Capitals are coloured by arrival day | 31.10.2026 | Accepted |
+| D-20 | Zoom and pan on the map | 31.10.2026 | Accepted |
 
 ---
 
@@ -267,6 +268,19 @@ steps, contrast with the map). The day is also written out – in the legend wit
 in the arrivals list and in the tooltip – so the colour is never the only cue.
 
 **Why.** Shows at a glance how far you get in one, two or three days.
+
+## D-20 Zoom and pan on the map
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Decision.** The map zooms (mouse wheel or trackpad pinch around the pointer, double-click,
++ / − buttons, up to 8×) and pans by dragging; "Fit" shows the whole map again. On a phone,
+pinch zooms; one finger pans once zoomed in, and at full view it scrolls the page as before.
+Labels, markers and lines keep their size on screen, so zooming in spreads crowded areas
+out; labels are laid out again for the visible part, and from 2× the other cities get labels
+where there is room. A drag that starts on a city pans – it never opens an itinerary.
+
+**Why.** Central Europe and Italy were too dense to read at one scale. Zooming the drawing
+itself (no map tiles) keeps the page self-contained and sharp at any zoom.
 
 ---
 
