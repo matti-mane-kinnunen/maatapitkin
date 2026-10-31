@@ -11,7 +11,7 @@ settings:
   quiet_hours: "00:00-05:00" # only night trains and night ferries run then; a wait touching them is a hotel night
   max_stay_nights: 2         # never wait longer than this at one place
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
-  # start_date: 2026-11-02   # travel date; default is next Monday (or use --date)
+  start_date: 2026-12-08   # travel date; default is next Monday (or use --date)
 
 # Each place may list other names it is known by (aliases), e.g. Vienna: [Wien].
 # add_leg.py accepts them in pairs files and they never create a second city.
@@ -115,7 +115,6 @@ places:
   Tirana: {lat: 41.328, lon: 19.818, capital: true, country: "AL", aliases: [Tirane, Tiranë]}  # corrected by hand 31.10.2026
   Vitoria-Gasteiz: {lat: 42.842, lon: -2.673, country: "ES"}  # added by add_leg.py
   Faro: {lat: 37.020, lon: -7.941, country: "PT"}  # added by add_leg.py
-  Travemünde: {lat: 53.959, lon: 10.866, country: "DE"}  # added by add_leg.py
   Brest: {lat: 48.388, lon: -4.480, country: "FR"}  # added by add_leg.py
   Penzance: {lat: 50.122, lon: -5.532, country: "GB"}  # added by add_leg.py
   Nantes: {lat: 47.217, lon: -1.542, country: "FR"}  # added by add_leg.py
@@ -131,6 +130,18 @@ places:
   Gdansk: {lat: 54.410, lon: 18.572, country: "PL"}  # added by add_leg.py
   Tanger: {lat: 35.771, lon: -5.786, country: "MA"}  # added by add_leg.py
   Tarifa: {lat: 36.019, lon: -5.609, country: "ES"}  # added by add_leg.py
+  Newcastle: {lat: 54.968, lon: -1.616, country: "GB"}  # added by add_leg.py
+  Cairnryan: {lat: 54.963, lon: -5.016, country: "GB"}  # added by add_leg.py
+  Östersund: {lat: 63.176, lon: 14.639, country: "SE"}  # added by add_leg.py
+  Storlien: {lat: 63.316, lon: 12.099, country: "SE"}  # added by add_leg.py
+  Narvik: {lat: 68.441, lon: 17.441, country: "NO"}  # added by add_leg.py
+  Boden: {lat: 65.829, lon: 21.708, country: "SE", aliases: [Boden Centralstation, Boden C]}  # corrected by hand 31.10.2026
+  Oulu: {lat: 65.012, lon: 25.486, country: "FI"}  # added by add_leg.py
+  Rovaniemi: {lat: 66.498, lon: 25.705, country: "FI"}  # added by add_leg.py
+  Rostock: {lat: 54.078, lon: 12.132, country: "DE"}  # added by add_leg.py
+  Wroclaw: {lat: 51.098, lon: 17.037, country: "PL"}  # added by add_leg.py
+  Ventimiglia: {lat: 43.792, lon: 7.604, country: "IT"}  # added by add_leg.py
+  Taormina: {lat: 37.851, lon: 15.284, country: "IT"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
