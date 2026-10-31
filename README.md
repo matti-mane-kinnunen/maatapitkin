@@ -29,12 +29,15 @@ python build.py transfer=15        # minimum change time in minutes (default 10)
 python build.py night=01           # a wait past 01:00 counts as a hotel night (default 03)
 python build.py start=08:00        # leave Helsinki in the morning (default 17:00, the evening train)
 python build.py dates=2026-12-08,2026-12-11,2026-12-12   # travel dates to switch between on the map
+python build.py starts=06:00,17:00  # morning / evening switch on the map (default 06:00 and the start time)
 python build.py --help             # all options
 python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in Transitous
 python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the day as one entry
 python add_leg.py                                 # add several, one per line
 python add_leg.py --file pairs.txt --build        # a whole list; summary at the end, then rebuild
 python add_leg.py --file pairs.txt --new          # only lines not in legs.yaml yet (quick)
+python add_leg.py --file pairs.txt --oldest-first --budget 240
+                                                  # oldest data first, stop starting lines after 240 min
 python add_leg.py "A -> B : name every 60 07:00-21:00 2:17"          # your own regular departures
 python add_leg.py "A -> B : name every 30 06:00-22:30 0:45 mon-fri"  # ...only on weekdays
 python add_leg.py --file pairs.txt --date 2026-12-03 --days tue,fri,sat,sun
@@ -64,6 +67,12 @@ https://matti-mane-kinnunen.github.io/maatapitkin/ – embed it with
 - Run it now: Actions → *Update map* → *Run workflow*.
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
 - `git pull` before editing locally – the workflow commits the new timetable data.
+- A full run stops starting new lines after 4 hours; the lines it didn't reach keep last
+  week's data and are looked up first next time.
+
+Links to a journey: `…/maatapitkin/#lisbon/sat/no-night/fewestchanges` – place, then
+optionally the day (`tue`, `fri`, `sat`, `sun`), `no-night`, `morning`, and the journey option. The
+map's *Copy link* button gives the link for whatever is on screen.
 
 ## How journeys are built
 
