@@ -824,8 +824,8 @@ legs:
   - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, runs: "sat,sun", times: ["23:25-07:25"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, runs: "sun", times: ["07:30-12:46", "08:58-14:29", "09:26-16:46", "13:00-18:40", "15:10-21:15", "16:40-21:47",
       "17:53-22:52", "20:14-02:50"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Villa San Giovanni, to: Messina, dep: "18:10", arr: "18:30", service: "Bluejet", mode: ferry, checked: 2026-10-31, source: manual}
-  - {from: Villa San Giovanni, to: Messina, dep: "23:30", arr: "23:40", service: "Bluejet", mode: ferry, checked: 2026-10-31, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "18:10", arr: "18:30", service: "Bluejet (evening)", mode: ferry, checked: 2026-10-31, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "23:30", arr: "23:40", service: "Bluejet (late)", mode: ferry, checked: 2026-10-31, source: manual}
   - {from: Messina, to: Palermo, service: "REG", mode: train, times: ["19:55-22:58"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Messina, to: Palermo, service: "REG", mode: train, runs: "mon-fri", times: ["05:10-06:33", "07:37-10:55", "14:36-17:30", "17:06-19:55", "18:57-21:57", "21:31-23:23"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Messina, to: Palermo, service: "REG", mode: train, runs: "mon-fri,sat", times: ["16:00-19:13"], query: "*", checked: 2026-10-31, source: transitous}

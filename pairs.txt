@@ -73,3 +73,91 @@ RIga -> Kaisiadorys: *
 Kaisiadorys -> Kaunas : *
 
 Tallinn -> Valga : Elron 10:22-14:14    
+
+# --- Added with add_leg.py before 1.11.2026, copied here so the weekly run keeps them fresh ---
+Budapest -> Szeged : *
+Szeged -> Subotica : *
+Subotica -> Belgrade : *
+Kaunas -> Mockava : *
+Stockholm -> Malmö : *
+Madrid -> Vitoria-Gasteiz : *
+Lisbon -> Faro : *
+Vienna -> Ljubljana : *
+Berlin -> Vienna : *
+Paris -> Brest : *
+London -> Penzance : *
+Paris -> Nantes : *
+London -> Manchester : *
+Ljubljana -> Zagreb : *
+Vienna -> Zagreb : *
+Paris -> Lyon : *
+Strasbourg -> Lyon : *
+Lyon -> Paris : *
+Lyon -> Barcelona : *
+Basel -> Zürich : *
+Zürich -> Milan : *
+Milan -> Venice : *
+Krakow -> Prague : *
+Prague -> Budapest : *
+Munich -> Ljubljana : *
+Munich -> Zürich : *
+Milan -> Torino : *
+Madrid -> Santiago de Compostela : *
+Madrid -> Valencia : *
+Bordeaux -> Hendaye : *
+Paris -> Hendaye : *
+Hendaye -> Irun : *
+Irun -> Donostia : *
+Vitoria-Gasteiz -> Donostia : *
+Paris -> Montpellier : *
+Helsinki -> Turku : *
+Köln -> Paris : *
+Newcastle -> Edinburgh : *
+London -> Edinburgh : *
+London -> Cairnryan : *
+Stockholm -> Östersund : *
+Östersund -> Storlien : *
+Storlien -> Trondheim : *
+Boden -> Narvik : *
+Stockholm -> Boden : *
+Helsinki -> Oulu : *
+Helsinki -> Rovaniemi : *
+Helsinki -> Tampere : *
+Barcelona -> Valencia : *
+Berlin -> Rostock : *
+Warsaw -> Wroclaw : *
+Hamburg -> Rostock : *
+Milan -> Trieste : *
+Bologna -> Trieste : *
+Nice -> Ventimiglia : *
+Ventimiglia -> Genoa : *
+Genoa -> Rome : *
+Rome -> Bari : *
+Naples -> Bari : *
+Hamburg -> Basel : *
+Rome -> Palermo : *
+Rome -> Taormina : *
+Rome -> Villa San Giovanni : *
+Messina -> Palermo : *
+Messina -> Taormina : *
+Messina -> Syracuse : *
+
+# Your own times (not looked up; the run just keeps them)
+Pozzallo -> Valletta : VirtuFerries ferry 21:30-23:15
+Bucharest -> Ruse : 1095 10:46-13:40
+Ruse -> Sofia : IC463 14:25-20:41
+Holyhead -> Dublin : IrishFerry ferry 07:30-11:00
+Patras -> Athens : ? bus 14:30-17:30
+Bari -> Durrës : ? ferry night 22:00-07:00
+Durrës -> Tirana : ? bus 10:00-12:40
+Algeciras -> Tanger : Balearia ferry 20:30-21:00
+Tanger -> Casablanca : TGV every 60 07:00-21:00 2:17
+Casablanca -> Marrakech : IC every 60 09:54-20:54 2:43
+Algeciras -> Tanger : AML ferry every 180 06:00-21:00 1:30
+Turku -> Stockholm : Viking ferry 08:45-18:55
+Stockholm -> Göteborg : X2 every 60 08:17-20:17 3:30
+Amsterdam -> Newcastle : DFDS ferry night 17:30-09:15
+Cairnryan -> Belfast : Stenaline ferry 19:05-22:07
+Budapest -> Zagreb : IC 15:35-22:03
+Villa San Giovanni -> Messina : Bluejet (evening) ferry 18:10-18:30
+Villa San Giovanni -> Messina : Bluejet (late) ferry 23:30-23:40
