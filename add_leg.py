@@ -625,6 +625,16 @@ def save_entries(entries: list[dict], args) -> bool:
         for e in entries:
             if prev.get("note") and not e.get("note"):
                 e["note"] = prev["note"]                              # keep a note written by hand
+    if olds and e0.get("source") == "manual":
+        def same(a, b):
+            skip = {"checked", "source"}
+            return {k: str(v) for k, v in a.items() if k not in skip and v not in (None, False, "")} == \
+                   {k: str(v) for k, v in b.items() if k not in skip and v not in (None, False, "")}
+        prev = [yaml.safe_load(m.group(0).strip()[2:]) for m in olds]
+        if len(prev) == len(entries) and all(same(a, b) for a, b in zip(entries, prev)):
+            print("  unchanged in legs.yaml")
+            LOG["status"] = "unchanged"
+            return None
     for e in entries:
         print("  " + entry_text(e).strip().replace("\n", "\n  "))
     n = sum(len(e["times"]) if "times" in e else 1 for e in entries)
@@ -702,7 +712,7 @@ def main():
     try:
         if lines:
             for ln in lines:
-                added += handle(ln, args)
+                added += bool(handle(ln, args))
         else:
             print("Type a leg as  A -> B : train   (empty line to finish)")
             while True:
@@ -710,7 +720,7 @@ def main():
                 if not ln:
                     break
                 try:
-                    added += handle(ln, args)
+                    added += bool(handle(ln, args))
                 except (ValueError, OSError) as ex:
                     print(f"  {ex}")
     except Quit:
@@ -743,8 +753,24 @@ def line_entries(line: str, places: dict | None = None) -> list:
     return existing_all(frm, to, svc, svc if "*" in svc else None)
 
 
+def own_times(line: str) -> bool:
+    """Does the line give its own times (HH:MM-HH:MM or 'every ...')? Those need no lookup."""
+    m = LINE_RE.match(line)
+    if not m:
+        return False
+    words = [w for w in m["svc"].split() if w.lower() not in FLAGS]
+    if words and RUNS_WORD.match(words[-1]):
+        words = words[:-1]
+    svc = " ".join(words)
+    return bool(EVERY_RE.search(svc) or re.search(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}\s*$", svc))
+
+
 def already_there(line: str) -> bool:
-    """Is this line's leg in legs.yaml already? (Only places already known count.)"""
+    """Is this line's leg in legs.yaml already? (Only places already known count.)
+    Lines with your own times always count as new: handling them asks nothing from Transitous,
+    and a changed time is applied at once (an unchanged one is not rewritten)."""
+    if own_times(line):
+        return False
     return bool(line_entries(line))
 
 
