@@ -30,6 +30,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-20 | Zoom and pan on the map | 31.10.2026 | Accepted |
 | D-21 | Show day boundaries and hotel nights on the selected journey | 31.10.2026 | Accepted |
 | D-22 | A connection's departures on hover | 31.10.2026 | Accepted |
+| D-23 | Search and filter the destinations | 31.10.2026 | Accepted |
 
 ---
 
@@ -310,6 +311,24 @@ a click on a place still opens its itinerary.
 
 **Why.** The map should show not only the fastest journey but what each connection offers –
 the information that is in legs.yaml.
+
+## D-23 Search and filter the destinations
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Decision.** Above the arrivals list: a search box (any place, also by alias – "Wien" finds
+Vienna – ignoring accents; `/` focuses it, Enter opens the first match, Esc clears), "Arrive
+by" day buttons, "No hotel nights" and "Include other cities". The list is capitals only by
+default; a search also lists other cities, and places without a journey with the reason
+("trains leave from here, none arrive"). "No hotel nights" also accepts a destination whose
+fewest-hotel-nights alternative has none, and clicking it opens that alternative. Places
+that do not pass the filters fade on the map. Filter settings are remembered per browser
+(localStorage); nothing is shared or stored elsewhere.
+
+**Why.** With 35 capitals and 70 other places the list and map needed a quick way to answer
+"what can I reach in three days without a hotel?" and "is Gothenburg in the data?".
+
+**Consequence noticed.** Göteborg has trains out but none in (`Stockholm -> Göteborg : *`
+found nothing); the search now makes such gaps visible.
 
 ---
 

@@ -59,6 +59,27 @@ h1 small { display: block; font: 500 1rem/1.3 var(--body); text-transform: none;
 button[aria-pressed="true"] .bar i { background: var(--accent) }
 .sub { grid-column: 1 / -1; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums }
 .gaps { padding: 12px 14px; font-size: 13px; color: var(--muted) }
+/* search and filters above the arrivals list */
+.tools { display: grid; gap: 8px; padding: 10px 14px 12px; border-bottom: 1px solid var(--rule) }
+.tools input[type=search] { width: 100%; box-sizing: border-box; font: 14px var(--body); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 7px 10px }
+.tools input[type=search]:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent }
+.seg { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 12px; color: var(--muted) }
+.seg > span { margin-right: 4px }
+.seg button { all: unset; cursor: pointer; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 999px; font-size: 12px; color: var(--fg) }
+.seg button:hover { border-color: var(--accent) }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--panel); border-color: var(--fg) }
+.togs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--fg) }
+.togs label { display: inline-flex; align-items: center; gap: 5px; cursor: pointer }
+.togs input { accent-color: var(--accent); margin: 0 }
+.count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums }
+.board .citytag { font: 500 10px var(--body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-left: 6px; vertical-align: 2px }
+.board li.empty { padding: 14px; font-size: 13px; color: var(--muted) }
+.board li.noroute { padding: 8px 14px; border-bottom: 1px solid var(--rule); font-size: 12px; color: var(--muted) }
+.board li.noroute b { font: 600 1.05rem/1.2 var(--display); color: var(--fg); letter-spacing: 0.02em; display: block }
+.board li.empty button { all: unset; cursor: pointer; color: var(--accent); text-decoration: underline; margin-left: 4px }
+#nodes .dim, #labels .dim { opacity: 0.22 }
 .gaps b { color: var(--fg); font-weight: 600 }
 
 /* Map */
@@ -176,6 +197,15 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
   <div class="grid">
     <aside class="board" aria-label="Capitals by arrival time">
       <h2><span>Arrivals from Helsinki</span><span>door to door</span></h2>
+      <div class="tools">
+        <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
+        <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
+        <div class="togs">
+          <label><input type="checkbox" id="f-nohotel"> No hotel nights</label>
+          <label><input type="checkbox" id="f-cities"> Include other cities</label>
+        </div>
+        <div class="count" id="count" aria-live="polite"></div>
+      </div>
       <ol id="list"></ol>
       <div class="gaps" id="gaps"></div>
     </aside>
@@ -536,20 +566,89 @@ for (const name of hitNames) {
 }
 placeHits();
 
-// Departure board
+// Arrivals list: one row per destination (capitals, and other cities on request)
 const list = document.getElementById("list");
-const maxMin = Math.max(...NET.routes.map(r => r.door_to_door_min));
+const maxMin = Math.max(...ALL_ROUTES.map(r => r.door_to_door_min));
 const buttons = {};
-for (const r of NET.routes) {
+const rows = ALL_ROUTES.map(r => {
   const li = document.createElement("li"), b = document.createElement("button");
+  const isCap = r.is_capital !== false;
   b.type = "button"; b.setAttribute("aria-pressed", "false");
-  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="Arrives on day ${dayOf(r)}"></i>${r.capital}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
+  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="Arrives on day ${dayOf(r)}"></i>${r.capital}${isCap ? "" : '<span class="citytag">city</span>'}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
     <span class="when">${dur(r.door_to_door_min)}</span>
     <span class="bar"><i style="width:${(100 * r.door_to_door_min / maxMin).toFixed(1)}%"></i></span>
     <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Day ${dayOf(r)} · ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
-  b.addEventListener("click", () => select(r.capital));
-  li.appendChild(b); list.appendChild(li); buttons[r.capital] = b;
+  li.appendChild(b); buttons[r.capital] = b;
+  const row = { r, li, b, isCap };
+  b.addEventListener("click", () => select(r.capital, pickOption(r)));
+  return row;
+}).sort((a, b) => a.r.arrive - b.r.arrive);
+
+// --- Search and filters ---
+const fold = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const namesOf = n => [n, ...((P[n] && P[n].aliases) || [])].map(fold);
+const qEl = document.getElementById("q"), noHotelEl = document.getElementById("f-nohotel"), citiesEl = document.getElementById("f-cities");
+const dayGroup = document.getElementById("f-day"), countEl = document.getElementById("count");
+const F = { day: 0, noHotel: false, cities: false };
+try { Object.assign(F, JSON.parse(localStorage.getItem("maatapitkin-filters") || "{}")); } catch (e) {}
+const lastDay = Math.max(...NET.routes.map(dayOf));
+for (const d of [0, ...Array.from({ length: Math.max(0, Math.min(lastDay, 6) - 2) }, (_, i) => i + 2)]) {
+  const bt = document.createElement("button");
+  bt.type = "button"; bt.dataset.day = d; bt.textContent = d ? `day ${d}` : "any";
+  bt.addEventListener("click", () => { F.day = d; applyFilters(); });
+  dayGroup.appendChild(bt);
 }
+// the journey options a filter accepts: the fastest, or an alternative without hotel nights
+const okOption = (o) => (!F.day || dayOf(o) <= F.day) && (!F.noHotel || o.hotel_nights === 0);
+function pickOption(r) {
+  const opts = [r, ...(r.alternatives || [])];
+  const i = opts.findIndex(okOption);
+  return i < 0 ? 0 : i;
+}
+const passes = r => [r, ...(r.alternatives || [])].some(okOption);
+function applyFilters() {
+  noHotelEl.checked = F.noHotel; citiesEl.checked = F.cities;
+  for (const bt of dayGroup.querySelectorAll("button")) bt.setAttribute("aria-pressed", String(+bt.dataset.day === F.day));
+  const q = fold(qEl.value.trim());
+  const shown = rows.filter(({ r, isCap }) =>
+    (isCap || F.cities || q) && passes(r) && (!q || namesOf(r.capital).some(n => n.includes(q))));
+  list.replaceChildren(...shown.map(x => x.li));
+  // a search also finds places that have no journey yet, and says why
+  const noRoute = q ? Object.keys(P).filter(n => n !== NET.origin && !routeOf(n) && namesOf(n).some(x => x.includes(q))) : [];
+  for (const n of noRoute) {
+    const li = document.createElement("li"); li.className = "noroute";
+    li.innerHTML = `<b>${n}</b>` + (P[n].missing ? "Capital without connections yet – add legs to pairs.txt"
+      : `No journey from ${NET.origin} in the data yet` + (NET.legs.some(l => l.from === n) ? " (trains leave from here, none arrive)" : ""));
+    list.appendChild(li);
+  }
+  if (!shown.length && !noRoute.length) {
+    const li = document.createElement("li"); li.className = "empty";
+    li.innerHTML = `No destination matches.<button type="button">Clear filters</button>`;
+    li.querySelector("button").addEventListener("click", () => { qEl.value = ""; Object.assign(F, { day: 0, noHotel: false }); applyFilters(); qEl.focus(); });
+    list.appendChild(li);
+  }
+  const caps = shown.filter(x => x.isCap).length, cities = shown.length - caps, totalCaps = rows.filter(x => x.isCap).length;
+  countEl.textContent = `${caps} of ${totalCaps} capitals` + (cities ? ` · ${cities} other cit${cities === 1 ? "y" : "ies"}` : "") +
+    (F.day || F.noHotel ? " · faded on the map: the others" : "");
+  // the map agrees with the filters: places that do not pass are faded
+  for (const { r } of rows) {
+    const dim = !passes(r);
+    nodeEls[r.capital]?.classList.toggle("dim", dim);
+    labelEls[r.capital]?.classList.toggle("dim", dim);
+  }
+  try { localStorage.setItem("maatapitkin-filters", JSON.stringify(F)); } catch (e) {}
+}
+qEl.addEventListener("input", applyFilters);
+qEl.addEventListener("keydown", e => {
+  if (e.key === "Enter") { const first = list.querySelector("li:not(.empty) button"); if (first) { first.click(); first.focus(); } }
+  if (e.key === "Escape") { qEl.value = ""; applyFilters(); }
+});
+noHotelEl.addEventListener("change", () => { F.noHotel = noHotelEl.checked; applyFilters(); });
+citiesEl.addEventListener("change", () => { F.cities = citiesEl.checked; applyFilters(); });
+document.addEventListener("keydown", e => {
+  if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) { e.preventDefault(); qEl.focus(); }
+});
+applyFilters();
 const maxDay = Math.min(6, Math.max(...NET.routes.map(dayClass)));
 document.getElementById("daylegend").innerHTML = `<b>Capital, arrives on</b>` + Array.from({ length: maxDay }, (_, i) => i + 1)
   .map(d => `<span><i class="swatch d${d}"></i>day ${d}${d === 6 ? "+" : ""} <span class="dd">${d === 6 ? "" : dayDate(d)}</span></span>`).join("");
