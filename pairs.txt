@@ -96,6 +96,8 @@ Lyon -> Paris : *
 Lyon -> Barcelona : *
 Basel -> Zürich : *
 Zürich -> Milan : *
+Basel -> Lugano : *
+Lugano -> Milan : *
 Milan -> Venice : *
 Krakow -> Prague : *
 Prague -> Budapest : *
