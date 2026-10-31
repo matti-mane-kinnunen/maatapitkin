@@ -150,6 +150,12 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .steps { list-style: none; margin: 0; padding: 4px 0 }
 .opts { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 14px 6px }
 .opts:empty { display: none }
+.share { display: flex; align-items: center; gap: 10px; padding: 4px 14px 2px; font-size: 12px; color: var(--muted) }
+.share button { all: unset; cursor: pointer; font: 600 11px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid var(--rule); border-radius: 4px; padding: 5px 8px; color: var(--ink) }
+.share button:hover { border-color: var(--accent) }
+.share button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.share input { flex: 1; min-width: 0; font: 12px var(--mono); color: var(--ink); background: transparent; border: 1px solid var(--rule); border-radius: 4px; padding: 4px 6px }
 .opts button { all: unset; cursor: pointer; border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px;
   display: grid; gap: 1px; min-width: 9rem }
 .opts button b { font: 600 12px/1.2 var(--body); letter-spacing: 0.04em; text-transform: uppercase }
@@ -238,6 +244,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <section class="itin" aria-live="polite">
         <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
         <div class="opts" id="opts" role="tablist" aria-label="Journey options"></div>
+        <div class="share"><button type="button" id="share">Copy link</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
     </div>
@@ -809,18 +816,58 @@ function select(cap, opt = 0, fromMap = false) {
     if (matchMedia("(max-width: 860px)").matches)
       document.querySelector(".itin").scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
   }
-  try { if (location.hash !== "#" + slug(cap)) history.replaceState(null, "", "#" + slug(cap)); } catch (e) {}
+  try { const h = hashFor(cap, options.indexOf(r)); if (location.hash !== h) history.replaceState(null, "", h); } catch (e) {}
 }
 
-function fromHash() {
-  const h = location.hash.slice(1);
-  const r = ALL_ROUTES.find(x => slug(x.capital) === h);
-  select(r ? r.capital : "Paris");
+// Shareable links: #lisbon/sat/no-night/fewestchanges
+// The day is a weekday, not a date, so a link keeps working after the weekly update.
+const WD = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+const weekdayOf = d => WD[new Date(d + "T12:00:00Z").getUTCDay()];
+function hashFor(cap, opt) {
+  const parts = [slug(cap)];
+  if (VARS && NET.dates.length > 1) parts.push(weekdayOf(curDate));
+  if (F.nightTrains === false && V.no) parts.push("no-night");
+  const r0 = routeOf(cap), o = opt > 0 && r0 && r0.alternatives && r0.alternatives[opt - 1];
+  if (o) parts.push(slug(o.label));
+  return "#" + parts.join("/");
 }
-window.addEventListener("hashchange", fromHash);
-fromHash();
-if (VARS && F.date && VARS[F.date] && F.date !== curDate) setVariant(F.date, F.nightTrains !== false);
-else if (F.nightTrains === false && V.no) setNightTrains(false);
+function parseHash() {
+  const [place, ...rest] = location.hash.slice(1).split("/").map(x => decodeURIComponent(x).toLowerCase());
+  const want = { place };
+  for (const x of rest) {
+    if (x === "no-night") want.night = false;
+    else if (x === "night") want.night = true;
+    else if (WD.includes(x)) want.date = (NET.dates || []).find(d => weekdayOf(d) === x);
+    else if (/^\d{4}-\d\d-\d\d$/.test(x)) want.date = (NET.dates || []).find(d => d === x) || (NET.dates || []).find(d => weekdayOf(d) === weekdayOf(x));
+    else want.opt = x;
+  }
+  return want;
+}
+function fromHash(first = false) {
+  const want = parseHash();
+  const night = want.night ?? F.nightTrains !== false;
+  const date = want.date || (first && VARS && F.date && VARS[F.date] ? F.date : curDate);
+  if ((VARS && date !== curDate) || (night === false) !== (F.nightTrains === false)) setVariant(date, night);
+  const r = ALL_ROUTES.find(x => slug(x.capital) === want.place);
+  const cap = r ? r.capital : (curRoute && routeOf(curRoute.capital) ? curRoute.capital : routeOf("Paris") ? "Paris" : NET.routes[0].capital);
+  let opt = 0;
+  if (r && want.opt) { const i = (r.alternatives || []).findIndex(a => slug(a.label) === want.opt); if (i >= 0) opt = i + 1; }
+  else if (r) opt = pickOption(r);
+  select(cap, opt);
+}
+window.addEventListener("hashchange", () => fromHash());
+fromHash(true);
+// copy a link to the journey on screen (works inside the blog's iframe too: it copies the map's own address)
+const shareBt = document.getElementById("share"), shareMsg = document.getElementById("share-msg");
+shareBt.addEventListener("click", async () => {
+  const url = location.href.split("#")[0] + location.hash;
+  try { await navigator.clipboard.writeText(url); shareMsg.textContent = "Link copied"; setTimeout(() => shareMsg.textContent = "", 2500); }
+  catch (e) {
+    // clipboard blocked (e.g. iframe without permission): show the link to copy by hand
+    const inp = document.createElement("input"); inp.readOnly = true; inp.value = url; inp.setAttribute("aria-label", "Link to this journey");
+    shareMsg.replaceChildren(inp); inp.focus(); inp.select();
+  }
+});
 // --- Zoom and pan: mouse wheel / pinch zooms around the pointer, drag pans -------------
 const W0 = VBOX.width, H0 = VBOX.height, ZMAX = 8;
 let viewX = 0, viewY = 0;                     // top-left corner of the visible part (map units)

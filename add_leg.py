@@ -33,6 +33,7 @@ import fnmatch
 import json
 import re
 import subprocess
+import time
 import sys
 from collections import Counter
 from pathlib import Path
@@ -588,10 +589,15 @@ def main():
                          "and prints a summary at the end")
     ap.add_argument("--new", action="store_true",
                     help="with --file: only look up lines that are not in legs.yaml yet")
+    ap.add_argument("--oldest-first", action="store_true",
+                    help="with --file: look up first the lines that are new or were checked longest ago")
+    ap.add_argument("--budget", type=float, metavar="MINUTES",
+                    help="with --file: start no new line after this many minutes; the rest keep their "
+                         "earlier data and come first next time with --oldest-first")
     ap.add_argument("--yes", action="store_true", help="don't ask, accept the first answer")
     ap.add_argument("--build", action="store_true", help="run build.py afterwards")
     ap.add_argument("--pause", type=float, default=1.0, help="seconds between Transitous requests")
-    argv = [f"--{a}" if re.fullmatch(r"(date|pause|file|days)=.*", a) else a for a in sys.argv[1:]]
+    argv = [f"--{a}" if re.fullmatch(r"(date|pause|file|days|budget)=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
     today = dt.date.today()
     args.date = dt.date.fromisoformat(args.date) if args.date else today + dt.timedelta(days=7)
@@ -643,29 +649,66 @@ def main():
         print("Run  python3 build.py  to rebuild the map and routes.")
 
 
-def already_there(line: str) -> bool:
-    """Is this line's leg in legs.yaml already? (Only places already known count.)"""
+def line_entries(line: str, places: dict | None = None) -> list:
+    """The legs.yaml entries this pairs.txt line looked up last time (empty if none or places unknown)."""
     m = LINE_RE.match(line)
     if not m:
-        return False
-    places, _ = load_places()
+        return []
+    if places is None:
+        places, _ = load_places()
     frm, to = find_place(m["a"], places), find_place(m["b"], places)
     if not frm or not to:
-        return False
+        return []
     svc = " ".join(w for w in m["svc"].split() if w.lower() not in FLAGS)
     svc = re.sub(r"@\s*\d{1,2}:\d{2}", "", svc)
     if svc.split() and RUNS_WORD.match(svc.split()[-1]):
         svc = " ".join(svc.split()[:-1])
     svc = EVERY_RE.sub("", svc).strip()
     svc = re.sub(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}\s*$", "", svc).strip()
-    return existing(frm, to, svc, svc if "*" in svc else None) is not None
+    return existing_all(frm, to, svc, svc if "*" in svc else None)
+
+
+def already_there(line: str) -> bool:
+    """Is this line's leg in legs.yaml already? (Only places already known count.)"""
+    return bool(line_entries(line))
+
+
+def last_checked(line: str, places: dict) -> dt.date:
+    """When this line was last looked up: the oldest 'checked' of its entries; never = date.min."""
+    dates = []
+    for m in line_entries(line, places):
+        try:
+            c = (yaml.safe_load(m.group(0).strip()[2:]) or {}).get("checked")
+        except yaml.YAMLError:
+            c = None
+        if isinstance(c, dt.date):
+            dates.append(c)
+        elif c:
+            try:
+                dates.append(dt.date.fromisoformat(str(c)[:10]))
+            except ValueError:
+                pass
+    return min(dates) if dates else dt.date.min
 
 
 def run_file(lines: list[str], args) -> None:
     print(f"{len(lines)} legs from {args.file}, sample days "
-          f"{', '.join(f'{d:%a %-d.%-m.%Y}' for _, d in sample_dates(args.date, args.days))}\n")
-    results = []
+          f"{', '.join(f'{d:%a %-d.%-m.%Y}' for _, d in sample_dates(args.date, args.days))}")
+    if args.oldest_first:
+        places, _ = load_places()
+        when = {ln: last_checked(ln, places) for ln in lines}
+        lines = sorted(lines, key=lambda ln: when[ln])        # stable: same age keeps the file order
+        never = sum(1 for d in when.values() if d == dt.date.min)
+        print(f"Oldest first: {never} new line{'s' if never != 1 else ''}, then by date last checked")
+    if args.budget:
+        print(f"Time budget {args.budget:g} min: lines not reached keep their earlier data")
+    print()
+    results, started = [], time.monotonic()
     for n, ln in enumerate(lines, 1):
+        if args.budget and (time.monotonic() - started) / 60 > args.budget:
+            print(f"Time budget used up after {n - 1} line{'s' if n != 2 else ''}; {len(lines) - n + 1} left for next time.\n")
+            results += [(x, None, "not reached (time budget)") for x in lines[n - 1:]]
+            break
         print(f"[{n}/{len(lines)}] {ln}")
         LOG["status"] = None
         if args.new and already_there(ln):
@@ -684,11 +727,13 @@ def run_file(lines: list[str], args) -> None:
 
     good = [r for r in results if r[1]]
     bad = [r for r in results if r[1] is False]
-    kept = [r for r in results if r[1] is None]
+    later = [r for r in results if r[2] == "not reached (time budget)"]
+    kept = [r for r in results if r[1] is None and r not in later]
     width = max(len(r[0]) for r in results)
     print("=" * 72)
     print(f"Summary: {len(good)} added or updated, {len(bad)} not added, "
-          f"{len(kept)} already there, {len(LOG['places'])} new places")
+          f"{len(kept)} already there, {len(LOG['places'])} new places"
+          + (f", {len(later)} left for next time (time budget, {(time.monotonic() - started) / 60:.0f} min used)" if later else ""))
     if good:
         print("\nAdded or updated:")
         for ln, _, st in good:

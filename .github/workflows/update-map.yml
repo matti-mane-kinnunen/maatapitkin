@@ -56,11 +56,14 @@ jobs:
           print("dates=" + ",".join(str(tue + d.timedelta(days=k)) for k in (0, 3, 4, 5)))
           EOF
 
+      # Full runs go oldest first and stop starting new lines after 240 minutes, so the job always
+      # ends well inside GitHub's 6-hour limit. Lines not reached keep last week's data and come
+      # first next time, so as the network grows every line is still refreshed every week or two.
       - name: Look up trains in Transitous
         run: |
           mode="--new"
-          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.full }}" = "true" ]; then mode=""; fi
-          python3 add_leg.py --file pairs.txt $mode --date "${{ steps.dates.outputs.tue }}" --days tue,fri,sat,sun 2>&1 | tee lookup.log
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.full }}" = "true" ]; then mode="--oldest-first"; fi
+          python3 add_leg.py --file pairs.txt $mode --budget 240 --date "${{ steps.dates.outputs.tue }}" --days tue,fri,sat,sun 2>&1 | tee lookup.log
 
       - name: Build the map
         run: python3 build.py "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee build.log

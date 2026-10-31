@@ -454,6 +454,51 @@ that, drop Friday from the sample days or split the run.
 
 ---
 
+## D-30 Shareable links to a journey
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** Blog readers want to send each other a specific journey, e.g. "Lisbon, leaving
+on Saturday, without night trains".
+
+**Decision.** The address after `#` holds the whole view: destination, travel day, night-train
+mode and journey option – `#lisbon/sat/no-night/fewestchanges`. Everything after the place is
+optional. The map keeps the address up to date as you click, and a "Copy link" button copies
+it (inside the blog's iframe it copies the map's own address; if the browser blocks the
+clipboard, the link is shown for copying by hand). A link given in the address wins over the
+filters remembered in the browser.
+
+**Why a weekday, not a date.** The dates move every week; `sat` keeps working after each
+update and still means "the Saturday shown on the map". A full date (`2026-12-12`) is
+accepted too and falls back to the same weekday.
+
+**Consequences.** Old `#lisbon` links still work. The blog's iframe can point straight at a
+journey, e.g. `.../maatapitkin/#rome/fri`.
+
+---
+
+## D-31 Weekly lookup within a time budget, oldest first
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** A full lookup takes hours and grows with pairs.txt; a GitHub job is killed
+after six hours and then commits nothing.
+
+**Decision.** `add_leg.py --file pairs.txt --oldest-first --budget 240` looks up new lines
+first, then the ones checked longest ago (by the `checked:` date in legs.yaml), and starts no
+new line after 240 minutes. Lines not reached keep their earlier data. The weekly and the
+full manual runs use this; runs started by a pairs.txt change still look up only new lines.
+
+**Why.** Timetables change little from week to week, so a leg checked two weeks ago is
+nearly always right; a run that always finishes is worth more than one that is complete but
+sometimes killed. Considered: dropping Friday from the sample days (loses data), or splitting
+the run into parallel jobs (more requests at once to a free community service).
+
+**Consequences.** The job summary says how many lines were left for next time. If that number
+stays high week after week, raise the budget (up to ~300) or trim pairs.txt. After the big
+timetable change in December, start one or two extra manual runs so every line is refreshed
+quickly.
+
+---
+
 ## Template for a new decision
 
 ```

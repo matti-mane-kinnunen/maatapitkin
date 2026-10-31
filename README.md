@@ -35,6 +35,8 @@ python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the da
 python add_leg.py                                 # add several, one per line
 python add_leg.py --file pairs.txt --build        # a whole list; summary at the end, then rebuild
 python add_leg.py --file pairs.txt --new          # only lines not in legs.yaml yet (quick)
+python add_leg.py --file pairs.txt --oldest-first --budget 240
+                                                  # oldest data first, stop starting lines after 240 min
 python add_leg.py "A -> B : name every 60 07:00-21:00 2:17"          # your own regular departures
 python add_leg.py "A -> B : name every 30 06:00-22:30 0:45 mon-fri"  # ...only on weekdays
 python add_leg.py --file pairs.txt --date 2026-12-03 --days tue,fri,sat,sun
@@ -64,6 +66,12 @@ https://matti-mane-kinnunen.github.io/maatapitkin/ – embed it with
 - Run it now: Actions → *Update map* → *Run workflow*.
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
 - `git pull` before editing locally – the workflow commits the new timetable data.
+- A full run stops starting new lines after 4 hours; the lines it didn't reach keep last
+  week's data and are looked up first next time.
+
+Links to a journey: `…/maatapitkin/#lisbon/sat/no-night/fewestchanges` – place, then
+optionally the day (`tue`, `fri`, `sat`, `sun`), `no-night`, and the journey option. The
+map's *Copy link* button gives the link for whatever is on screen.
 
 ## How journeys are built
 
