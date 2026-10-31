@@ -128,6 +128,8 @@ places:
   Irun: {lat: 43.340, lon: -1.801, country: "ES"}  # added by add_leg.py
   Donostia: {lat: 43.317, lon: -1.977, country: "ES", aliases: [San Sebastian, San Sebastián]}  # corrected by hand 31.10.2026
   Gdansk: {lat: 54.410, lon: 18.572, country: "PL"}  # added by add_leg.py
+  Tanger: {lat: 35.771, lon: -5.786, country: "MA"}  # added by add_leg.py
+  Tarifa: {lat: 36.019, lon: -5.609, country: "ES"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
