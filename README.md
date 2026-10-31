@@ -1,6 +1,12 @@
 # Maata pitkin
 
 Overland journeys from Helsinki to the European capitals, by train, ferry and bus.
+
+**Purpose.** To help people wondering how to plan an Interrail trip get over the first fear
+that train travel is difficult and slow: a map that shows it can be done, how long it takes,
+and a sensible way to do it. It is not a journey planner – for booking, use the operators,
+bahn.de or Transitous. So the network is a curated backbone of good trains, journeys are
+realistic rather than optimal to the minute, and the map has to stay readable on a phone.
 This started from a hand-made Graphviz graph (MaataPitkin v1.9, April 2023, kept in data/) and replaces it
 with data, a journey router and an interactive map.
 
@@ -44,6 +50,7 @@ python add_leg.py --file pairs.txt --date 2026-12-03 --days tue,fri,sat,sun
                                                   # sample week and days (default: next week, tue,sat,sun)
 python check_timetables.py  # needs internet; compares legs.yaml with live timetables
 python tidy_legs.py         # legs.yaml entries no pairs.txt line looks after; --apply removes covered old trains
+python routes_to_pairs.py routes.txt   # route lists ('Madrid – Zaragoza – Barcelona') -> pairs.txt lines; --append adds them
 ```
 
 Outputs in `out/`:

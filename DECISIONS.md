@@ -628,6 +628,31 @@ normal change time but not at stations with their own.
 
 ---
 
+## D-37 Purpose: an encouraging map, not a journey planner
+**Date:** 1.11.2026 · **Status:** Accepted
+
+**Context.** Growing the network from published route lists (e.g. Interrail's AVE routes)
+raised the question of how big pairs.txt and the map should get, and whether to go
+"every city to every city".
+
+**Decision.** The map's purpose is to help people wondering how to plan an Interrail trip
+get over the first fear that train travel is difficult and slow. It is not a journey planner
+(that would be re-implementing Transitous or bahn.de). Choices follow from that:
+- pairs.txt is a curated backbone of good trains, not complete coverage.
+- Journeys are realistic, with comfortable margins (D-36), not optimal to the minute.
+- The map must stay readable and light enough for a phone and a blog iframe.
+- `routes_to_pairs.py` turns route lists into pairs.txt lines: neighbouring stops plus the
+  whole way (so through trains count as one train), one direction unless `--both`, and it
+  only prints suggestions unless `--append`.
+
+**Limits to keep in mind.** About 47 s of lookup per `*` line: up to ~300 lines are refreshed
+every week, ~600 within two weeks; Transitous is a free community service, so stay below
+roughly 500–600 lines. The page (3.9 MB at 127 places) should stay under ~8 MB; beyond about
+200 places, load each travel day's data on demand. A second origin (e.g. London) needs lines
+in both directions and its own page; a few origins are fine, all-to-all is out of scope.
+
+---
+
 ## Template for a new decision
 
 ```
