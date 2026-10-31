@@ -210,6 +210,5 @@ Sofia -> Varna : *
 
 # Connections stored as one leg, and ferries, from the original graph (your own times)
 Turku -> Stockholm : Viking Line ferry night 20:55-06:30
-Hamburg -> Amsterdam : ICE 517 + RE1 + ICE 128 07:45-13:29
 Bari -> Patras : Anek Superfast ferry night 19:30-13:00 mon-sat
 Ancona -> Split : Jadrolinija 53 ferry night 19:45-07:00 tue,fri

@@ -39,7 +39,6 @@ legs:
   - {from: Frankfurt, to: Strasbourg, dep: "14:02", arr: "16:05", service: ICE 9580, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Strasbourg, to: Paris,    dep: "17:19", arr: "19:05", service: TGV INOUI 2362, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Strasbourg, to: Marseille, dep: "16:15", arr: "21:49", service: ICE 9580, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
-  - {from: Hamburg,   to: Amsterdam, dep: "07:45", arr: "13:29", service: ICE 517 + RE1 + ICE 128, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Amsterdam, to: London,    dep: "16:40", arr: "19:57", service: EST 9157, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
   - {from: Amsterdam, to: Paris,     dep: "15:10", arr: "18:48", service: EST 9364, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
 
