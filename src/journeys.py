@@ -167,6 +167,9 @@ class Router:
         hotel stay: the next departure must be at or after `morning_departure` (07:00)
         unless it is a night train/ferry you board the same evening
       * `max_stay_nights`: never wait more than this many nights at one place
+      * `quiet_hours` (00:00-05:00): nobody travels then except on night trains and
+        night ferries; a wait that touches these hours before an ordinary train is a
+        hotel night too
     """
 
     def __init__(self, net: Network, start_date: dt.date):
@@ -179,6 +182,8 @@ class Router:
         self.night_point = hm(s.get("night_point", "03:00"))
         self.morning = hm(s.get("morning_departure", "07:00"))
         self.max_nights = int(s.get("max_stay_nights", 2))
+        q0, q1 = str(s.get("quiet_hours", "00:00-05:00")).replace("–", "-").split("-")
+        self.quiet = (hm(q0), hm(q1))
         self.out: dict[str, list[Leg]] = {}
         for leg in net.legs:
             self.out.setdefault(leg.frm, []).append(leg)
@@ -200,23 +205,44 @@ class Router:
         # a station's own change time is a minimum: it can lengthen, never shorten, the default
         return max(self.min_transfer, int(self.net.places.get(place, {}).get("min_transfer", 0)))
 
-    def is_stay(self, arrival: int, dep: int) -> bool:
-        """Does the wait [arrival, dep] contain the night point (default 03:00)?"""
-        first = (arrival - self.night_point + DAY - 1) // DAY * DAY + self.night_point
-        return arrival < first <= dep
+    def in_quiet(self, t: int) -> bool:
+        """Is clock time t inside the quiet hours (default 00:00-05:00)?"""
+        return self.quiet[0] <= t % DAY < self.quiet[1]
+
+    def overlaps_quiet(self, a: int, b: int) -> bool:
+        for d in range(a // DAY - 1, b // DAY + 1):
+            if max(a, d * DAY + self.quiet[0]) < min(b, d * DAY + self.quiet[1]):
+                return True
+        return False
+
+    def stay_nights(self, a: int, b: int, nxt: Leg | None = None) -> int:
+        """Hotel nights in a wait from a to b before leg `nxt`: each 03:00 (night_point)
+        passed counts one; a wait touching the quiet hours before an ordinary train
+        counts one even without passing 03:00 (arrive 01:10, leave 06:20)."""
+        n = self.nights_between(a, b)
+        if n == 0 and b > a and not (nxt is not None and nxt.night) and self.overlaps_quiet(a, b):
+            n = 1
+        return n
+
+    def is_stay(self, arrival: int, dep: int, nxt: Leg | None = None) -> bool:
+        return self.stay_nights(arrival, dep, nxt) > 0
 
     def board(self, arrival: int, ready: int, leg: Leg, first_leg: bool = False) -> int | None:
         """First departure of `leg` the traveller can realistically take."""
         if not leg.timed:
             t = ready
-            if not first_leg and self.is_stay(arrival, t):
+            if not leg.night and self.in_quiet(t):                # nothing ordinary runs at night
+                t = (t // DAY) * DAY + self.quiet[1]
+            if not first_leg and self.is_stay(arrival, t, leg):
                 t = max(t, (t // DAY) * DAY + self.morning)
             return t
         for k in range(0, self.max_nights + 2):
             t = (ready // DAY + k) * DAY + leg.dep
             if t < ready or not leg.runs_on(self.date_of(t)):
                 continue
-            if not first_leg and self.is_stay(arrival, t):
+            if not leg.night and self.in_quiet(t):               # no ordinary trains in the quiet hours
+                continue
+            if not first_leg and self.is_stay(arrival, t, leg):
                 if (t - arrival) // DAY >= self.max_nights:
                     return None
                 if t % DAY < self.morning:                     # no 05:00 starts after a hotel night
@@ -257,7 +283,7 @@ class Router:
                     continue
                 same_train = inc_leg is not None and self.change_time(node, inc_leg, leg) == 0 and dep == t
                 nc = c + (0 if inc_leg is None or same_train else 1)
-                nh = h + (self.nights_between(t, dep) if inc_leg is not None else 0)
+                nh = h + (self.stay_nights(t, dep, leg) if inc_leg is not None else 0)
                 nt = dep + leg.duration
                 st = (leg.to, leg.idx)
                 if st not in lab or key(nc, nh, nt) < key(*lab[st]):
@@ -277,7 +303,7 @@ class Router:
         for i, s in enumerate(legs):
             if i:
                 prev = legs[i - 1]
-                n = self.nights_between(prev["arr"], s["dep"])
+                n = self.stay_nights(prev["arr"], s["dep"], s["leg"])
                 if n:
                     steps.append({"kind": "stay", "place": s["leg"].frm, "from": prev["arr"],
                                   "to": s["dep"], "nights": n})
@@ -320,7 +346,7 @@ class Router:
                     continue
                 same_train = inc_leg is not None and ct == 0 and dep == t
                 nc = c + (0 if inc_leg is None or same_train else 1)
-                nh = h + (self.nights_between(t, dep) if inc_leg is not None else 0)
+                nh = h + (self.stay_nights(t, dep, leg) if inc_leg is not None else 0)
                 nt = dep + leg.duration
                 if nt > limit:
                     continue

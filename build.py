@@ -28,6 +28,7 @@ def main():
         epilog="Every option can also be written as key=value without dashes, for example:\n"
                "  python3 build.py transfer=15\n"
                "  python3 build.py night=01\n"
+               "  python3 build.py start=08:00     # leave Helsinki in the morning\n"
                "  python3 build.py transfer=20 night=2:30 date=2026-11-17\n\n"
                "transfer sets the normal change time. Stations with a longer change time in\n"
                "places.yaml (Paris, London, Madrid, Istanbul) keep the longer one.\n"
@@ -36,6 +37,8 @@ def main():
     ap.add_argument("--date", help="travel date YYYY-MM-DD (default: settings.start_date or next Monday)")
     ap.add_argument("--transfer", type=int, metavar="N",
                     help="minimum change time in minutes (default: settings.min_transfer, 10)")
+    ap.add_argument("--start", metavar="T",
+                    help="leave Helsinki from this time on the travel date, 24 h (default: settings.start_time, 17:00)")
     ap.add_argument("--night", metavar="T",
                     help="time the night begins, 24 h: 03, 3, 0300 or 03:00 (default: settings.night_point, 03:00)")
     # accept key=value as well as --key value
@@ -52,6 +55,11 @@ def main():
         if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
             ap.error(f"night must be a time like 03, 3, 0300 or 03:00 (got {args.night!r})")
         net.settings["night_point"] = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
+    if args.start is not None:
+        m = re.fullmatch(r"(\d{1,2})(?::?(\d{2}))?", args.start.strip())
+        if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
+            ap.error(f"start must be a time like 17, 0800 or 08:00 (got {args.start!r})")
+        net.settings["start_time"] = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
     s = net.settings
     origin = s.get("origin", "Helsinki")
     today = dt.date.today()
@@ -59,7 +67,8 @@ def main():
                                            (today + dt.timedelta(days=(7 - today.weekday()) % 7 or 7))))
     router = Router(net, start_date)
     router.search(origin, hm(s.get("start_time", "00:00")))
-    version = f"travel date {start_date:%a %-d.%-m.%Y} · generated {today:%-d.%-m.%Y}"
+    version = (f"leave {origin} {start_date:%a %-d.%-m.%Y} from {s.get('start_time', '00:00')}"
+               f" · generated {today:%-d.%-m.%Y}")
 
     def when(t: int) -> str:
         return f"{router.date_of(t):%a %-d.%-m.} {fmt_clock(t)}"
@@ -145,7 +154,8 @@ def main():
     md = [f"# Journeys from {origin}", "",
           f"_{version}. Change {router.min_transfer} min (more at some stations), ferry check-in "
           f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait "
-          f"past {fmt_clock(router.night_point)} is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night._", "",
+          f"past {fmt_clock(router.night_point)} is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night. "
+          f"Between {fmt_clock(router.quiet[0])} and {fmt_clock(router.quiet[1])} only night trains and ferries run._", "",
           "| Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |",
           "|---|---|---|---|---|---|---|---|"]
     for r in routes:
@@ -196,6 +206,8 @@ def main():
         "legs": legs_json, "routes": routes, "city_routes": city_routes,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
                      "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
+                     "quiet": f"{fmt_clock(router.quiet[0])}–{fmt_clock(router.quiet[1])}",
+                     "start": s.get("start_time", "00:00"),
                      "morning": fmt_clock(router.morning)}, "unreached": unreached, "warnings": warnings,
     }, ensure_ascii=False, indent=1))
 

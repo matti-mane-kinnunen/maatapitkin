@@ -32,6 +32,8 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-22 | A connection's departures on hover | 31.10.2026 | Accepted |
 | D-23 | Search and filter the destinations | 31.10.2026 | Accepted |
 | D-24 | Look trains up on sample days and record the days they run | 31.10.2026 | Accepted |
+| D-25 | No ordinary travel at night (quiet hours 00:00–05:00) | 31.10.2026 | Accepted |
+| D-26 | Journeys leave Helsinki with the evening train | 31.10.2026 | Accepted |
 
 ---
 
@@ -113,6 +115,8 @@ Istanbul 60, Madrid 40. A station's time is a minimum (since 30.10.2026): a larg
 is a hotel night. After a hotel night nothing departs before 06:00. Nobody waits more than 2
 nights in one place. Night trains and night ferries count as nights on board, not hotel
 nights.
+
+**See also** D-25 (quiet hours).
 
 **Why / history.** First set to 07:00; changed to 06:00 the same day because the 06:20 AVE
 from Barcelona made Madrid and Lisbon unreachable – 06:00 is still a realistic start after a
@@ -350,6 +354,31 @@ to run daily.
 holidays and seasons are not detected (a second run with a `--date` in another season
 would be needed). Mind the timetable change in mid-December when choosing `--date`.
 A full pairs.txt run makes about three times as many requests.
+
+## D-25 No ordinary travel at night (quiet hours 00:00–05:00)
+**Date:** 31.10.2026 · **Status:** Accepted (extends D-06)
+
+**Context.** With the run-day data, the router found journeys that rode ordinary trains in
+the middle of the night (Malmö 23:53 → a 02:35 local train → Copenhagen 03:10 → wait until
+06:22) without counting a hotel night, because the Copenhagen wait started after 03:00.
+
+**Decision.** Between 00:00 and 05:00 (`quiet_hours` in places.yaml) only night trains and
+night ferries may depart. A wait that touches the quiet hours before an ordinary train is a
+hotel night, even if it does not pass 03:00. The map's hotel badges come from the router's
+own count, so they always match.
+
+**Why.** Nobody plans a trip through stations at night; the map must not suggest it.
+
+## D-26 Journeys leave Helsinki with the evening train
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** Once the data had all Helsinki–Turku trains, journeys started with the first
+train of the day (05:26) and the day ferry, which made door-to-door times look longer and
+did not match how the trip is actually planned.
+
+**Decision.** Journeys leave Helsinki from 17:00 (`start_time` in places.yaml), i.e. with the
+evening train and the night ferry, as in the original v1.9 graph. `build.py start=HH:MM`
+chooses another start time.
 
 ---
 

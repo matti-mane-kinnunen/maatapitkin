@@ -374,6 +374,8 @@ const nightsBetween = (a, b) => { let n = 0; for (let m = Math.floor((a - NIGHT_
 const vehicle = s => s.mode === "ferry" ? (s.night ? "night ferry" : "ferry") : s.mode === "bus" ? "bus" : (s.night ? "night train" : "train");
 function routeMarks(r) {
   const legs = r.steps.filter(s => s.kind === "leg"), marks = [];
+  for (const st of r.steps)            // hotel nights exactly as the router counted them
+    if (st.kind === "stay") marks.push({ kind: "hotel", place: st.place, title: `Hotel night in ${st.place}: arrive ${st.from_t}, leave ${st.to_t}` });
   legs.forEach((s, i) => {
     for (let m = (Math.floor(s.dep / 1440) + 1) * 1440; m < s.arr; m += 1440) {   // midnight on board
       const d = m / 1440 + 1, t = (m - s.dep) / Math.max(1, s.arr - s.dep);
@@ -382,8 +384,6 @@ function routeMarks(r) {
     const next = legs[i + 1];
     if (!next) return;
     const place = next.from;
-    if (nightsBetween(s.arr, next.dep))
-      marks.push({ kind: "hotel", place, title: `Hotel night in ${place}: arrive ${s.arr_txt}, leave ${next.dep_txt}` });
     for (let m = Math.ceil(s.arr / 1440) * 1440; m <= next.dep; m += 1440) {          // midnight at a station
       const d = m / 1440 + 1;
       marks.push({ kind: "day", day: d, place, title: `Day ${d} (${dayDate(d)}) begins in ${place}` });
@@ -660,7 +660,8 @@ const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin
 document.getElementById("foot").textContent =
   `Timetables from the hand-built graph, partly re-checked against Transitous, applied to the travel date above. ` +
   `Changes take at least ${S.min_transfer} min (longer where you change station, e.g. Paris, London), ferry check-in ${S.ferry_checkin} min, Eurostar ${S.eurostar_checkin} min. ` +
-  `A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning. ` +
+  `Journeys leave ${NET.origin} from ${S.start || "00:00"}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
+  `between ${S.quiet || "00:00–05:00"} only night trains and night ferries run. ` +
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`;
 
 function select(cap, opt = 0, fromMap = false) {

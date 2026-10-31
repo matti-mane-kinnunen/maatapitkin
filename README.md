@@ -27,6 +27,7 @@ python build.py             # travel date = next Monday
 python build.py --date 2026-11-17
 python build.py transfer=15        # minimum change time in minutes (default 10)
 python build.py night=01           # a wait past 01:00 counts as a hotel night (default 03)
+python build.py start=08:00        # leave Helsinki in the morning (default 17:00, the evening train)
 python build.py --help             # all options
 python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in Transitous
 python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the day as one entry

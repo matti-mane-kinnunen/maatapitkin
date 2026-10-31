@@ -2,12 +2,13 @@
 # connection time in minutes at that place (default from settings).
 settings:
   origin: Helsinki
-  start_time: "00:00"        # earliest departure on day 1
+  start_time: "17:00"        # leave Helsinki from this time on day 1 (17:00 = the evening train)
   min_transfer: 10           # minutes, train -> train
   ferry_checkin: 30          # minutes before a ferry departs
   eurostar_checkin: 45       # minutes before Eurostar (service starting EST/ES)
   night_point: "03:00"       # a wait that includes this time is an overnight (hotel) stay
   morning_departure: "06:00" # earliest departure after a hotel night
+  quiet_hours: "00:00-05:00" # only night trains and night ferries run then; a wait touching them is a hotel night
   max_stay_nights: 2         # never wait longer than this at one place
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   # start_date: 2026-11-02   # travel date; default is next Monday (or use --date)
