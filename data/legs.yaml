@@ -973,3 +973,4 @@ legs:
   - {from: Sofia, to: Varna, service: "БВ", mode: train, runs: "fri,sat,sun", times: ["07:15-14:50"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Sofia, to: Varna, service: "БВ", mode: train, runs: "mon-fri", times: ["10:21-17:52"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Sofia, to: Varna, service: "БВ", mode: train, runs: "mon-thu", times: ["13:20-20:56"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Zagreb, to: Ljubljana, service: "D", mode: train, times: ["05:11-07:37", "08:16-10:57"], query: "*", checked: 2026-10-31, source: transitous}
