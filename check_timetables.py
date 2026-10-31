@@ -58,7 +58,10 @@ def main():
     for n, leg in enumerate(legs, 1):
         a, b = net.places[leg.frm], net.places[leg.to]
         tz_a, tz_b = tz_of(a), tz_of(b)
-        stored = dt.datetime.combine(date, dt.time(leg.dep // 60, leg.dep % 60), tz_a)
+        day = date
+        while not leg.runs_on(day) and (day - date).days < 7:      # check a Sat-only train on a Saturday
+            day += dt.timedelta(days=1)
+        stored = dt.datetime.combine(day, dt.time(leg.dep // 60, leg.dep % 60), tz_a)
         params = {"fromPlace": f"{a['lat']},{a['lon']}", "toPlace": f"{b['lat']},{b['lon']}",
                   "time": (stored - dt.timedelta(minutes=args.window)).isoformat(),
                   "arriveBy": "false", "numItineraries": 8}

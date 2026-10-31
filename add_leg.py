@@ -13,7 +13,9 @@ Write a leg as   A -> B : train
     python3 add_leg.py --file pairs.txt                     # a whole list, no questions, summary at the end
     python3 add_leg.py --file pairs.txt --new               # only the lines not in legs.yaml yet
 
-The tool finds the train in Transitous on the travel date (default next Tuesday),
+The tool looks each line up on sample days of one week (Tuesday for Mon-Fri, Saturday,
+Sunday; --days tue,fri,sat,sun adds Friday; --date picks the week) and stores which days
+each train runs (runs: mon-fri, sat ...). It finds the train in Transitous,
 shows what it found and asks before writing. Places it does not know are looked up
 and added to data/places.yaml. Run `python3 build.py` afterwards (or use --build).
 Trains with many departures (Eurostar, Öresundståg, X2...) are stored as one entry
@@ -200,11 +202,13 @@ def _norm(x) -> str:
     return re.sub(r"\s+", "", str(x or "")).casefold()
 
 
-def existing(frm: str, to: str, service: str, query: str | None = None):
-    """The legs.yaml entry this leg would replace: same places and the same request
-    (`query`, e.g. '*' or 'FR*') or the same service name. Matching on the request
-    means you can rename a '*' entry by hand and a rerun still finds it."""
+def existing_all(frm: str, to: str, service: str, query: str | None = None) -> list:
+    """The legs.yaml entries a lookup replaces: same places and the same request (`query`,
+    e.g. '*' or 'FR*'), or - for a single train - the same service name. One request can
+    have several entries (daily, Mon-Fri, Sat ...). Matching on the request means you can
+    rename a '*' entry by hand and a rerun still finds it."""
     text = LEGS.read_text()
+    found = []
     for m in BLOCK_RE.finditer(text):
         try:
             d = yaml.safe_load(m.group(0).strip()[2:])
@@ -212,14 +216,18 @@ def existing(frm: str, to: str, service: str, query: str | None = None):
             continue
         if not isinstance(d, dict) or d.get("from") != frm or d.get("to") != to:
             continue
-        if query and _norm(d.get("query")) == _norm(query):
-            return m
-        if _norm(d.get("service")) == _norm(service):
-            return m
-        # '*' entries written before 'query' was stored
-        if query and "*" in query and "times" in d and d.get("source") == "transitous" and not d.get("query"):
-            return m
-    return None
+        if query:
+            if _norm(d.get("query")) == _norm(query) or \
+               ("*" in query and "times" in d and d.get("source") == "transitous" and not d.get("query")):
+                found.append(m)                       # (the second case: '*' entries from before 'query' existed)
+        elif _norm(d.get("service")) == _norm(service):
+            found.append(m)
+    return found
+
+
+def existing(frm: str, to: str, service: str, query: str | None = None):
+    m = existing_all(frm, to, service, query)
+    return m[0] if m else None
 
 
 def entry_text(e: dict) -> str:
@@ -229,6 +237,8 @@ def entry_text(e: dict) -> str:
         parts.append(f"mode: {e['mode']}")
         if e.get("night"):
             parts.append("night: true")
+        if e.get("runs"):
+            parts.append(f"runs: {q(e['runs'])}")
         times = [q(t) for t in e["times"]]
         rows = [", ".join(times[i:i + 6]) for i in range(0, len(times), 6)]
         parts.append("times: [" + (",\n      ".join(rows)) + "]")
@@ -236,6 +246,8 @@ def entry_text(e: dict) -> str:
         parts += [f'dep: "{e["dep"]}"', f'arr: "{e["arr"]}"', f"service: {q(e['service'])}", f"mode: {e['mode']}"]
         if e.get("night"):
             parts.append("night: true")
+        if e.get("runs"):
+            parts.append(f"runs: {q(e['runs'])}")
     if e.get("query"):
         parts.append(f"query: {q(e['query'])}")
     parts.append(f"checked: {e['checked']}")
@@ -243,17 +255,59 @@ def entry_text(e: dict) -> str:
     return "  - {" + ", ".join(parts) + "}"
 
 
-def write_entry(e: dict, replace=None) -> None:
+def write_entries(entries: list[dict], olds: list) -> None:
+    """Replace the old entries (if any) with the new ones, at the place of the first old one."""
     text = LEGS.read_text()
-    line = entry_text(e)
-    if replace is not None:
-        text = text[:replace.start()] + line + text[replace.end():]
+    lines = "\n".join(entry_text(e) for e in entries)
+    if olds:
+        pos = olds[0].start()
+        for m in reversed(olds):
+            end = m.end() + (1 if text[m.end():m.end() + 1] == "\n" else 0)
+            text = text[:m.start()] + text[end:]
+        text = text[:pos] + lines + "\n" + text[pos:]
     else:
         if SECTION not in text:
             text = text.rstrip("\n") + "\n\n" + SECTION + "\n"
-        text = text.rstrip("\n") + "\n" + line + "\n"
+        text = text.rstrip("\n") + "\n" + lines + "\n"
     yaml.safe_load(text)                         # never write a broken file
     LEGS.write_text(text)
+
+
+# --- which days a train runs ------------------------------------------------------
+WEEKDAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+
+
+def sample_dates(seed: dt.date, days: list[str]) -> list[tuple[str, dt.date]]:
+    """The sample days in the week (Mon-Sun) that contains `seed`."""
+    monday = seed - dt.timedelta(days=seed.weekday())
+    return [(d, monday + dt.timedelta(days=WEEKDAYS.index(d))) for d in days]
+
+
+def runs_spec(found: set[str], sampled: list[str]) -> str | None:
+    """Days a train was found on -> legs.yaml 'runs'. Tuesday stands for Mon-Fri
+    (Mon-Thu when Friday is sampled too). None = every sampled day = daily."""
+    if set(found) >= set(sampled):
+        return None
+    parts = []
+    for d in WEEKDAYS:
+        if d in found:
+            parts.append(("mon-thu" if "fri" in sampled else "mon-fri") if d == "tue" else d)
+    spec = ",".join(parts).replace("mon-thu,fri", "mon-fri").replace("mon-fri,sat,sun", "daily")
+    return None if spec == "daily" else spec
+
+
+def group_by_days(obs: dict[str, set[str]], sampled: list[str]) -> list[tuple[str | None, list[str]]]:
+    """{"06:12-06:51": {"tue", "sat"}, ...} -> [(runs, [times]), ...], daily first."""
+    groups: dict = {}
+    for t, ds in obs.items():
+        groups.setdefault(runs_spec(ds, sampled), []).append(t)
+    keys = sorted(groups, key=lambda k: (k is not None, k or ""))
+    return [(k, sorted(groups[k])) for k in keys]
+
+
+def runs_text(runs: str | None) -> str:
+    return "daily" if not runs else runs.replace("mon-fri", "Mon–Fri").replace("mon-thu", "Mon–Thu") \
+        .replace("fri", "Fri").replace("sat", "Sat").replace("sun", "Sun").replace(",", ", ")
 
 
 # --- looking up trains -----------------------------------------------------------
@@ -367,71 +421,105 @@ def handle(line: str, args) -> bool:
              "mode": next((f for f in ("ferry", "bus") if f in flags), "train"),
              "night": "night" in flags or (dur >= 300 and a < d), "checked": today, "source": "manual"}
         print(f"  {frm} -> {to}  {d}-{a}  {e['service']}  ({e['mode']}{', night' if e['night'] else ''}) - not looked up")
-        return save(e, args)
+        return save_entries([e], args)
 
-    if "*" in svc:                                         # every direct train
-        print(f"  Collecting direct trains {frm} -> {to} on {args.date:%a %-d.%-m.%Y} ...")
-        deps = find_all(pa, pb, svc, args.date, args, buses="bus" in flags)
-        if not deps:
+    samples = sample_dates(args.date, args.days)
+    when = ", ".join(f"{d:%a %-d.%-m.}" for _, d in samples)
+
+    if "*" in svc:                                         # every direct train, on each sample day
+        print(f"  Collecting direct trains {frm} -> {to} on {when} ...")
+        obs, kinds, legs_seen, nights = {}, Counter(), [], []
+        for key, day in samples:
+            deps = find_all(pa, pb, svc, day, args, buses="bus" in flags)
+            print(f"    {day:%a %-d.%-m.}: {len(deps)} direct train{'' if len(deps) == 1 else 's'}")
+            for d, a, lab, leg in deps:
+                obs.setdefault(f"{clock(d)}-{clock(a)}", set()).add(key)
+                kinds[service_type(lab)] += 1
+                legs_seen.append(leg); nights.append(is_night(d, a))
+        if not obs:
             print("  No direct trains found. Check the names with '*' alone, or give times yourself.")
             return status("no direct trains found")
-        kinds = Counter(service_type(lab) for _, _, lab, _ in deps)
-        show = deps if len(deps) <= 12 else deps[:6] + [None] + deps[-3:]
-        for x in show:
-            print("    ..." if x is None else f"    {clock(x[0])}-{clock(x[1])}  {x[2]}")
-        print("  " + ", ".join(f"{k}: {n}" for k, n in kinds.most_common()))
+        print("  " + ", ".join(f"{k}: {n}" for k, n in kinds.most_common(4)))
         name = kinds.most_common(1)[0][0]
         name = ask(f"  Name for these trains [{name}]: ", name, args.yes)
-        e = {"from": frm, "to": to, "service": name, "mode": mode_of([x[3] for x in deps]),
-             "night": all(is_night(d, a) for d, a, _, _ in deps),
-             "times": [f"{clock(d)}-{clock(a)}" for d, a, _, _ in deps],
-             "query": svc, "checked": today, "source": "transitous"}
-        print(f"  {len(deps)} departures, {e['times'][0]} ... {e['times'][-1]}")
-        return save(e, args)
+        entries = [{"from": frm, "to": to, "service": name, "mode": mode_of(legs_seen), "night": all(nights),
+                    "times": times, "runs": runs, "query": svc, "checked": today, "source": "transitous"}
+                   for runs, times in group_by_days(obs, args.days)]
+        for e in entries:
+            ts = e["times"]
+            print(f"  {runs_text(e['runs'])}: {len(ts)} departure{'' if len(ts) == 1 else 's'}, "
+                  + (ts[0] if len(ts) == 1 else f"{ts[0]} … {ts[-1]}"))
+        return save_entries(entries, args)
 
-    print(f"  Looking for {svc} {frm} -> {to} on {args.date:%a %-d.%-m.%Y} ...")
-    r = find_train(pa, pb, svc, args.date, near, args)
-    if not r:
-        print(f"  {svc} was not found between {frm} and {to} that day.")
-        print("  Try another date (--date), '*' to list the direct trains, or give the times yourself:")
+    print(f"  Looking for {svc} {frm} -> {to} on {when} ...")
+    obs, info, whole = {}, None, None
+    for key, day in samples:
+        r = find_train(pa, pb, svc, day, near, args)
+        if not r:
+            print(f"    {day:%a %-d.%-m.}: not running")
+            continue
+        c, first, last, tz_a, tz_b = r
+        if info is None:                                    # show the first find in full
+            for i, l in enumerate(c):
+                mark = "*" if first <= i <= last else " "
+                print(f"   {mark} {T.parse_t(l['startTime']).astimezone(tz_a):%H:%M}-"
+                      f"{T.parse_t(l['endTime']).astimezone(tz_b):%H:%M}  {T.label(l)}"
+                      f"  ({l.get('from', {}).get('name', '?')} -> {l.get('to', {}).get('name', '?')})")
+            if first > 0 or last < len(c) - 1:
+                print(f"  Note: {svc} does not cover the whole way; the lines without * are other trains.")
+                whole = yes("  Store the whole chain as one leg?", args.yes, default=True)
+        span = c if (whole and (first > 0 or last < len(c) - 1)) else c[first:last + 1]
+        d = T.parse_t(span[0]["startTime"]).astimezone(tz_a)
+        a = T.parse_t(span[-1]["endTime"]).astimezone(tz_b)
+        t = f"{clock(d)}-{clock(a)}"
+        obs.setdefault(t, set()).add(key)
+        print(f"    {day:%a %-d.%-m.}: {t}")
+        if info is None:
+            info = {"name": svc if len(span) == last - first + 1 and span[0] is c[first] else " + ".join(T.label(l) for l in span),
+                    "mode": mode_of(span), "night": is_night(d, a)}
+    if not obs:
+        print(f"  {svc} was not found between {frm} and {to} on {when}.")
+        print("  Try another week (--date), '*' to list the direct trains, or give the times yourself:")
         print(f"     {frm} -> {to} : {svc} HH:MM-HH:MM")
-        return status(f"{svc} not found on {args.date:%-d.%-m.}")
-    c, first, last, tz_a, tz_b = r
-    for i, l in enumerate(c):
-        mark = "*" if first <= i <= last else " "
-        print(f"   {mark} {T.parse_t(l['startTime']).astimezone(tz_a):%H:%M}-"
-              f"{T.parse_t(l['endTime']).astimezone(tz_b):%H:%M}  {T.label(l)}"
-              f"  ({l.get('from', {}).get('name', '?')} -> {l.get('to', {}).get('name', '?')})")
-    span = c[first:last + 1]
-    if first > 0 or last < len(c) - 1:
-        print(f"  Note: {svc} does not cover the whole way; the lines without * are other trains.")
-        if yes("  Store the whole chain as one leg?", args.yes, default=True):
-            span = c
-    d = T.parse_t(span[0]["startTime"]).astimezone(tz_a)
-    a = T.parse_t(span[-1]["endTime"]).astimezone(tz_b)
-    name = svc if span == c[first:last + 1] else " + ".join(T.label(l) for l in span)
-    e = {"from": frm, "to": to, "dep": clock(d), "arr": clock(a), "service": name,
-         "mode": mode_of(span), "night": is_night(d, a), "checked": today, "source": "transitous"}
-    return save(e, args)
+        return status(f"{svc} not found in the week of {args.date:%-d.%-m.}")
+    entries = []
+    for runs, times in group_by_days(obs, args.days):
+        e = {"from": frm, "to": to, "service": info["name"], "mode": info["mode"], "night": info["night"],
+             "runs": runs, "checked": today, "source": "transitous"}
+        if len(times) == 1:
+            e["dep"], e["arr"] = times[0].split("-")
+        else:
+            e["times"] = times
+        entries.append(e)
+    return save_entries(entries, args)
 
 
-def save(e: dict, args) -> bool:
-    old = existing(e["from"], e["to"], e["service"], e.get("query"))
-    if old is not None and e.get("query"):
-        prev = yaml.safe_load(old.group(0).strip()[2:])
-        e["service"] = str(prev.get("service") or e["service"])     # keep a name you gave it
-    print("  " + entry_text(e).strip().replace("\n", "\n  "))
-    what = (f"{len(e['times'])} departures {e['times'][0]} … {e['times'][-1]}" if "times" in e
-            else f"{e['dep']}-{e['arr']}") + f"  {e['service']}" + (" (your own times)" if e["source"] == "manual" else "")
-    if old is not None:
-        print("  This train is already in legs.yaml:\n  " + old.group(0).strip())
-        if not yes("  Replace it?", args.yes):
+def save_entries(entries: list[dict], args) -> bool:
+    e0 = entries[0]
+    olds = existing_all(e0["from"], e0["to"], e0["service"], e0.get("query"))
+    if olds and e0.get("query"):
+        prev = yaml.safe_load(olds[0].group(0).strip()[2:])
+        for e in entries:
+            e["service"] = str(prev.get("service") or e["service"])   # keep a name you gave it
+    for e in entries:
+        print("  " + entry_text(e).strip().replace("\n", "\n  "))
+    n = sum(len(e["times"]) if "times" in e else 1 for e in entries)
+    if len(entries) == 1 and "times" not in e0:
+        what = f"{e0['dep']}-{e0['arr']}"
+    else:
+        what = f"{n} departure{'' if n == 1 else 's'}"
+    if len(entries) > 1 or e0.get("runs"):
+        what += " (" + ", ".join(f"{runs_text(e.get('runs'))} {len(e['times']) if 'times' in e else 1}" for e in entries) + ")"
+    what += f"  {e0['service']}" + (" (your own times)" if e0["source"] == "manual" else "")
+    if olds:
+        print("  Already in legs.yaml:\n  " + "\n  ".join(m.group(0).strip().split("\n")[0][:110] for m in olds))
+        if not yes("  Replace?", args.yes):
             return status("kept the existing entry")
     elif not yes("  Add to legs.yaml?", args.yes):
         return status("skipped")
-    write_entry(e, old)
+    write_entries(entries, olds)
     print("  Saved.")
-    LOG["status"] = ("updated: " if old is not None else "added: ") + what
+    LOG["status"] = ("updated: " if olds else "added: ") + what
     return True
 
 
@@ -439,7 +527,10 @@ def main():
     ap = argparse.ArgumentParser(prog="add_leg.py", description=__doc__.split("\n\n")[0],
                                  epilog=__doc__.split("\n", 2)[2], formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("leg", nargs="*", help='e.g. "Stockholm -> Malmö : X2 523"')
-    ap.add_argument("--date", help="travel date to look the train up on, YYYY-MM-DD (default: next Tuesday)")
+    ap.add_argument("--date", help="a day in the week to look trains up in, YYYY-MM-DD (default: next week)")
+    ap.add_argument("--days", default="tue,sat,sun",
+                    help="sample days in that week: tue,sat,sun (default) or tue,fri,sat,sun. Tuesday stands for "
+                         "Mon-Fri; a train missing on some of them is stored with 'runs' (e.g. mon-fri)")
     ap.add_argument("--file", metavar="PAIRS.TXT",
                     help="read legs from a file, one per line ('#' starts a comment); implies --yes "
                          "and prints a summary at the end")
@@ -448,10 +539,18 @@ def main():
     ap.add_argument("--yes", action="store_true", help="don't ask, accept the first answer")
     ap.add_argument("--build", action="store_true", help="run build.py afterwards")
     ap.add_argument("--pause", type=float, default=1.0, help="seconds between Transitous requests")
-    argv = [f"--{a}" if re.fullmatch(r"(date|pause|file)=.*", a) else a for a in sys.argv[1:]]
+    argv = [f"--{a}" if re.fullmatch(r"(date|pause|file|days)=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
     today = dt.date.today()
-    args.date = dt.date.fromisoformat(args.date) if args.date else today + dt.timedelta(days=(1 - today.weekday()) % 7 or 7)
+    args.date = dt.date.fromisoformat(args.date) if args.date else today + dt.timedelta(days=7)
+    args.days = [d.strip().lower()[:3] for d in args.days.split(",") if d.strip()]
+    if not args.days or "tue" not in args.days or any(d not in ("tue", "fri", "sat", "sun") for d in args.days):
+        ap.error("--days takes tue (required) and any of fri, sat, sun - e.g. tue,sat,sun")
+    args.days = [d for d in WEEKDAYS if d in args.days]
+    past = [d for _, d in sample_dates(args.date, args.days) if d < today]
+    if past:
+        print(f"Note: {', '.join(f'{d:%a %-d.%-m.}' for d in past)} already passed - Transitous may have no data for "
+              f"{'it' if len(past) == 1 else 'them'}. Use --date with a day in a later week.")
 
     if args.file:
         try:
@@ -508,7 +607,8 @@ def already_there(line: str) -> bool:
 
 
 def run_file(lines: list[str], args) -> None:
-    print(f"{len(lines)} legs from {args.file}, travel date {args.date:%a %-d.%-m.%Y}\n")
+    print(f"{len(lines)} legs from {args.file}, sample days "
+          f"{', '.join(f'{d:%a %-d.%-m.%Y}' for _, d in sample_dates(args.date, args.days))}\n")
     results = []
     for n, ln in enumerate(lines, 1):
         print(f"[{n}/{len(lines)}] {ln}")

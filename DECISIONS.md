@@ -24,13 +24,14 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-14 | Git workflow: Claude commits on the Mac, Matti pushes | 30.10.2026 | Accepted |
 | D-15 | Which places count as capitals | 30.10.2026 | Accepted |
 | D-16 | Time zones in door-to-door times | – | Open |
-| D-17 | Trains that do not run every day | – | Open |
+| D-17 | Trains that do not run every day | – | Superseded by D-24 |
 | D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
 | D-19 | Capitals are coloured by arrival day | 31.10.2026 | Accepted |
 | D-20 | Zoom and pan on the map | 31.10.2026 | Accepted |
 | D-21 | Show day boundaries and hotel nights on the selected journey | 31.10.2026 | Accepted |
 | D-22 | A connection's departures on hover | 31.10.2026 | Accepted |
 | D-23 | Search and filter the destinations | 31.10.2026 | Accepted |
+| D-24 | Look trains up on sample days and record the days they run | 31.10.2026 | Accepted |
 
 ---
 
@@ -232,7 +233,7 @@ totals ignore time-zone changes (London −1 h, Bucharest/Sofia/Athens +1 h from
 Europe). Options: store a time zone per place and convert, or accept it for now.
 
 ## D-17 Trains that do not run every day
-**Status:** Open
+**Status:** Superseded by D-24
 
 `add_leg.py` looks trains up on one travel date and stores them as if they ran daily. Seasonal
 trains (Snälltåget) and weekday-only services can be wrong. Options: query several dates and
@@ -329,6 +330,26 @@ that do not pass the filters fade on the map. Filter settings are remembered per
 
 **Consequence noticed.** Göteborg has trains out but none in (`Stockholm -> Göteborg : *`
 found nothing); the search now makes such gaps visible.
+
+## D-24 Look trains up on sample days and record the days they run
+**Date:** 31.10.2026 · **Status:** Accepted (settles D-17)
+
+**Decision.** `add_leg.py` looks every line up on sample days of one week – Tuesday
+(standing for Mon–Fri), Saturday and Sunday by default; `--days tue,fri,sat,sun` adds Friday
+(Tuesday then stands for Mon–Thu); `--date` picks the week (default: next week). A train
+found on every sample day is stored as daily; otherwise the entry gets `runs`
+(`mon-fri`, `sat`, `mon-fri,sat` …). One request can therefore become several legs.yaml
+entries (daily / Mon–Fri / Sat …); a rerun replaces all of them and keeps a name given by
+hand. A train that runs at different times on different days gets one entry per time.
+`check_timetables.py` checks each leg on a day it runs.
+
+**Why.** Journeys should differ by travel date for real; until now every train was assumed
+to run daily.
+
+**Limits.** Fridays and Mondays are assumed to be like Tuesday unless Friday is sampled;
+holidays and seasons are not detected (a second run with a `--date` in another season
+would be needed). Mind the timetable change in mid-December when choosing `--date`.
+A full pairs.txt run makes about three times as many requests.
 
 ---
 
