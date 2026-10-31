@@ -8,6 +8,9 @@ Write a leg as   A -> B : train
     python3 add_leg.py "Paris -> London : EST*"             # every direct train whose name starts EST
     python3 add_leg.py "Vienna -> Trieste : * bus"              # '*' skips buses unless you add 'bus'
     python3 add_leg.py "Helsinki -> Tallinn : Megastar 07:30-09:30 ferry"
+    python3 add_leg.py "A -> B : name every 60 07:00-21:00 2:17"   # a departure every 60 min 07:00-21:00,
+                                                            # 2 h 17 each (your own times, not looked up)
+    python3 add_leg.py "A -> B : name every 30 06:00-22:30 0:45 mon-fri"  # only on weekdays
                                                             # your own times, not looked up
     python3 add_leg.py                                      # type legs one per line, empty line to stop
     python3 add_leg.py --file pairs.txt                     # a whole list, no questions, summary at the end
@@ -44,7 +47,10 @@ LEGS = ROOT / "data" / "legs.yaml"
 PLACES = ROOT / "data" / "places.yaml"
 SECTION = "  # --- Added with add_leg.py ----------------------------------------------"
 LINE_RE = re.compile(r"^\s*(?P<a>.+?)\s*->\s*(?P<b>.+?)\s*:\s*(?P<svc>.+?)\s*$")
-FLAGS = {"ferry", "bus", "train", "night"}   # 'bus' also lets '*' include buses
+FLAGS = {"ferry", "bus", "train", "night"}
+RUNS_WORD = re.compile(r"(?i)^(daily|(mon|tue|wed|thu|fri|sat|sun)(-(mon|tue|wed|thu|fri|sat|sun))?"
+                       r"(,(mon|tue|wed|thu|fri|sat|sun)(-(mon|tue|wed|thu|fri|sat|sun))?)*)$")
+EVERY_RE = re.compile(r"(?i)\bevery\s+(\d+)\s+(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s+(\d{1,2}:\d{2})\s*$")   # 'bus' also lets '*' include buses
 
 
 class Quit(Exception):
@@ -232,7 +238,14 @@ def existing(frm: str, to: str, service: str, query: str | None = None):
 
 def entry_text(e: dict) -> str:
     parts = [f"from: {e['from']}", f"to: {e['to']}"]
-    if "times" in e:
+    if "every" in e:
+        parts += [f"service: {q(e['service'])}", f"mode: {e['mode']}"]
+        if e.get("night"):
+            parts.append("night: true")
+        if e.get("runs"):
+            parts.append(f"runs: {q(e['runs'])}")
+        parts += [f"every: {e['every']}", f'first: "{e["first"]}"', f'last: "{e["last"]}"', f'duration: "{e["duration"]}"']
+    elif "times" in e:
         parts.append(f"service: {q(e['service'])}")
         parts.append(f"mode: {e['mode']}")
         if e.get("night"):
@@ -406,7 +419,17 @@ def handle(line: str, args) -> bool:
     nm = re.search(r"@\s*(\d{1,2}:\d{2})", svc)
     if nm:
         near, svc = nm.group(1), (svc[:nm.start()] + svc[nm.end():]).strip()
-    manual = re.search(r"(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s*$", svc)
+    words = svc.split()
+    runs = None
+    if words and RUNS_WORD.match(words[-1]) and (EVERY_RE.search(" ".join(words[:-1])) or
+                                                  re.search(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}$", " ".join(words[:-1]))):
+        runs = words[-1].lower()                            # e.g. "mon-fri" after your own times
+        runs = None if runs == "daily" else runs
+        svc = " ".join(words[:-1])
+    every = EVERY_RE.search(svc)
+    if every:
+        svc = svc[:every.start()].strip()
+    manual = None if every else re.search(r"(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s*$", svc)
     if manual:
         svc = svc[:manual.start()].strip()
 
@@ -414,12 +437,31 @@ def handle(line: str, args) -> bool:
     to, pb = resolve(m["b"], args.yes)
     today = dt.date.today().isoformat()
 
+    if every:                                              # your own regular departures
+        step = int(every.group(1))
+        first, last, dur = (f"{int(x.split(':')[0]):02d}:{x.split(':')[1]}" for x in every.groups()[1:])
+        mins = lambda x: int(x[:2]) * 60 + int(x[3:])
+        if not 5 <= step <= 720:
+            print('  ' + "'every' takes minutes between 5 and 720, e.g. every 60"); return status("'every' takes minutes between 5 and 720, e.g. every 60")
+        if mins(last) < mins(first):
+            print('  ' + "the last departure must be after the first, e.g. 07:00-21:00"); return status("the last departure must be after the first, e.g. 07:00-21:00")
+        if mins(dur) == 0:
+            print('  ' + "give the journey time as H:MM, e.g. 2:17"); return status("give the journey time as H:MM, e.g. 2:17")
+        n = (mins(last) - mins(first)) // step + 1
+        e = {"from": frm, "to": to, "service": svc or "?", "every": step, "first": first, "last": last,
+             "duration": f"{mins(dur) // 60}:{mins(dur) % 60:02d}", "runs": runs,
+             "mode": next((f for f in ("ferry", "bus") if f in flags), "train"),
+             "night": "night" in flags, "checked": today, "source": "manual"}
+        print(f"  {frm} -> {to}  {e['service']}: {n} departures, every {step} min {first}-{last}, "
+              f"{e['duration']} each{' (' + runs_text(runs) + ')' if runs else ''} - not looked up")
+        return save_entries([e], args)
+
     if manual:                                             # the user's own times
         d, a = (f"{int(x.split(':')[0]):02d}:{x.split(':')[1]}" for x in manual.groups())
         dur = (int(a[:2]) * 60 + int(a[3:]) - int(d[:2]) * 60 - int(d[3:])) % 1440
         e = {"from": frm, "to": to, "dep": d, "arr": a, "service": svc or "?",
              "mode": next((f for f in ("ferry", "bus") if f in flags), "train"),
-             "night": "night" in flags or (dur >= 300 and a < d), "checked": today, "source": "manual"}
+             "night": "night" in flags or (dur >= 300 and a < d), "runs": runs, "checked": today, "source": "manual"}
         print(f"  {frm} -> {to}  {d}-{a}  {e['service']}  ({e['mode']}{', night' if e['night'] else ''}) - not looked up")
         return save_entries([e], args)
 
@@ -504,11 +546,15 @@ def save_entries(entries: list[dict], args) -> bool:
     for e in entries:
         print("  " + entry_text(e).strip().replace("\n", "\n  "))
     n = sum(len(e["times"]) if "times" in e else 1 for e in entries)
-    if len(entries) == 1 and "times" not in e0:
+    if "every" in e0:
+        what = f"every {e0['every']} min {e0['first']}-{e0['last']}, {e0['duration']}"
+    elif len(entries) == 1 and "times" not in e0:
         what = f"{e0['dep']}-{e0['arr']}"
     else:
         what = f"{n} departure{'' if n == 1 else 's'}"
-    if len(entries) > 1 or e0.get("runs"):
+    if "every" in e0:
+        what += f" ({runs_text(e0.get('runs'))})" if e0.get("runs") else ""
+    elif len(entries) > 1 or e0.get("runs"):
         what += " (" + ", ".join(f"{runs_text(e.get('runs'))} {len(e['times']) if 'times' in e else 1}" for e in entries) + ")"
     what += f"  {e0['service']}" + (" (your own times)" if e0["source"] == "manual" else "")
     if olds:
@@ -602,6 +648,9 @@ def already_there(line: str) -> bool:
         return False
     svc = " ".join(w for w in m["svc"].split() if w.lower() not in FLAGS)
     svc = re.sub(r"@\s*\d{1,2}:\d{2}", "", svc)
+    if svc.split() and RUNS_WORD.match(svc.split()[-1]):
+        svc = " ".join(svc.split()[:-1])
+    svc = EVERY_RE.sub("", svc).strip()
     svc = re.sub(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}\s*$", "", svc).strip()
     return existing(frm, to, svc, svc if "*" in svc else None) is not None
 

@@ -4,6 +4,8 @@
 #   A -> B : *                  every direct train that day, stored as one entry
 #   A -> B : EST*               every direct train whose name starts with EST
 #   A -> B : name HH:MM-HH:MM   your own times (ferries, places Transitous lacks); add 'ferry' or 'night'
+#   A -> B : name every 60 07:00-21:00 2:17   your own regular departures: every 60 min from 07:00 to 21:00, 2 h 17 each
+#   ... mon-fri / sat,sun at the end of your own times: the days it runs
 # '#' starts a comment. Running the file again later updates the entries.
 
 Stockholm -> Malmö : X2 523

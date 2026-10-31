@@ -33,6 +33,8 @@ python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the da
 python add_leg.py                                 # add several, one per line
 python add_leg.py --file pairs.txt --build        # a whole list; summary at the end, then rebuild
 python add_leg.py --file pairs.txt --new          # only lines not in legs.yaml yet (quick)
+python add_leg.py "A -> B : name every 60 07:00-21:00 2:17"          # your own regular departures
+python add_leg.py "A -> B : name every 30 06:00-22:30 0:45 mon-fri"  # ...only on weekdays
 python add_leg.py --file pairs.txt --date 2026-12-03 --days tue,fri,sat,sun
                                                   # sample week and days (default: next week, tue,sat,sun)
 python check_timetables.py  # needs internet; compares legs.yaml with live timetables
