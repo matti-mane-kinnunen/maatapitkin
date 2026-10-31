@@ -110,7 +110,7 @@ places:
   Mockava: {lat: 54.328, lon: 23.356, country: "LT"}  # added by add_leg.py
   Kaisiadorys: {lat: 54.863, lon: 24.461, country: "LT"}  # added by add_leg.py
   Kaunas: {lat: 54.890, lon: 23.928, country: "LT"}  # added by add_leg.py
-  Ruše: {lat: 46.540, lon: 15.508, country: "SI"}  # added by add_leg.py
+  Ruse: {lat: 43.821, lon: 25.955, country: "BG", aliases: [Русе]}  # main station; corrected by hand 31.10.2026 (was Ruše, Slovenia)
   Durrës: {lat: 41.318, lon: 19.454, country: "AL", aliases: [Durres, Dürres, Durazzo]}  # corrected by hand 31.10.2026
   Tirana: {lat: 41.328, lon: 19.818, capital: true, country: "AL", aliases: [Tirane, Tiranë]}  # corrected by hand 31.10.2026
   Vitoria-Gasteiz: {lat: 42.842, lon: -2.673, country: "ES"}  # added by add_leg.py

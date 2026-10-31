@@ -58,7 +58,7 @@ class Quit(Exception):
     pass
 
 
-LOG: dict = {"status": None, "places": [], "guesses": [], "answers": 0, "elsewhere": Counter()}       # what happened, for the --file summary
+LOG: dict = {"status": None, "places": [], "guesses": [], "fast": [], "answers": 0, "elsewhere": Counter()}       # what happened, for the --file summary
 
 
 def status(text: str) -> bool:
@@ -139,7 +139,9 @@ def add_place(name: str, lat: float, lon: float, country: str, capital: bool, al
     PLACES.write_text(text)
 
 
-def resolve(name: str, auto: bool) -> tuple[str, dict]:
+def resolve(name: str, auto: bool, near: dict | None = None) -> tuple[str, dict]:
+    """Find a place by name; unknown names are looked up in Transitous. `near` (the other end
+    of the leg) decides between namesakes: Ruse next to Bucharest, not Ruše in Slovenia."""
     name = name.strip()
     if not re.search(r"[^\W\d_]", name) or name[0] in ":->":
         raise ValueError(f"'{name}' is not a city name - write the line as  A -> B : train")
@@ -170,7 +172,20 @@ def resolve(name: str, auto: bool) -> tuple[str, dict]:
 
     def in_town(m):   # a station in the town of that name beats a street stop called that elsewhere
         return any(T.fold(a.get("name", "")) == T.fold(name) for a in m.get("areas", []) or [])
-    matches = sorted(matches, key=lambda m: (not in_town(m), not T.fold(m.get("name", "")).startswith(T.fold(name))))[:5]
+    def dist(m):
+        return T.km_between(m["lat"], m["lon"], near["lat"], near["lon"]) if near else 0
+    matches = sorted(matches, key=lambda m: (not in_town(m), not T.fold(m.get("name", "")).startswith(T.fold(name)),
+                                             dist(m)))
+    # namesakes far apart (Ruse, BG / Ruše, SI): say which one was taken
+    alike = [m for m in matches if T.fold(m.get("name", "")).startswith(T.fold(name)) or in_town(m)]
+    others = {(m.get("country") or "?").upper() for m in alike[1:]
+              if T.km_between(m["lat"], m["lon"], alike[0]["lat"], alike[0]["lon"]) > 100}
+    others.discard((alike[0].get("country") or "?").upper() if alike else None)
+    if alike and others:
+        LOG["guesses"].append(f"{name}: took {alike[0].get('name')} ({(alike[0].get('country') or '?').upper()}"
+                              f"{', nearest to the other end' if near else ''}); there is also a {name} in "
+                              f"{', '.join(sorted(others))}")
+    matches = matches[:5]
     stops = [m for m in matches if m.get("type") == "STOP"] or matches
     if auto:
         # without a person to check, only accept a station whose name looks like what was typed
@@ -447,8 +462,15 @@ def handle(line: str, args) -> bool:
     if manual:
         svc = svc[:manual.start()].strip()
 
-    frm, pa = resolve(m["a"], args.yes)
-    to, pb = resolve(m["b"], args.yes)
+    places, _ = load_places()
+    ka, kb = find_place(m["a"], places), find_place(m["b"], places)
+    # resolve a known end first, so the unknown one can be chosen near it
+    if kb and not ka:
+        to, pb = resolve(m["b"], args.yes)
+        frm, pa = resolve(m["a"], args.yes, near=pb)
+    else:
+        frm, pa = resolve(m["a"], args.yes)
+        to, pb = resolve(m["b"], args.yes, near=pa)
     today = dt.date.today().isoformat()
 
     if every:                                              # your own regular departures
@@ -560,8 +582,37 @@ def handle(line: str, args) -> bool:
     return save_entries(entries, args)
 
 
+def too_fast(e: dict) -> str | None:
+    """A leg faster than any train (over 300 km/h in a straight line) usually means a wrong
+    place, e.g. 'Ruse' geocoded to Ruše in Slovenia instead of Ruse in Bulgaria."""
+    places, _ = load_places()
+    pa, pb = places.get(e["from"]), places.get(e["to"])
+    if not pa or not pb or e.get("mode") == "ferry":
+        return None
+    pairs = [e["times"][0].split("-")] if e.get("times") else [(e["dep"], e["arr"])] if e.get("dep") else []
+    if e.get("every") and e.get("duration"):
+        h, m = map(int, str(e["duration"]).split(":"))
+        mins = [h * 60 + m]
+    else:
+        mins = []
+        for d, a in pairs:
+            day = dt.date.today()
+            t0 = dt.datetime.combine(day, dt.time(*map(int, d.split(":"))), T.tz_of(pa))
+            t1 = dt.datetime.combine(day, dt.time(*map(int, a.split(":"))), T.tz_of(pb))
+            mins.append(((t1 - t0).total_seconds() / 60) % 1440)
+    km = T.km_between(pa["lat"], pa["lon"], pb["lat"], pb["lon"])
+    for m in mins:
+        if km > 20 and km / max(m, 1) * 60 > 300:
+            return f"{e['from']} -> {e['to']}: {km:.0f} km in {int(m) // 60}:{int(m) % 60:02d} – is one of the places wrong?"
+    return None
+
+
 def save_entries(entries: list[dict], args) -> bool:
     e0 = entries[0]
+    warn = too_fast(e0)
+    if warn:
+        print(f"  ⚠ {warn}")
+        LOG["fast"].append(warn)
     olds = existing_all(e0["from"], e0["to"], e0["service"], e0.get("query"))
     if olds and e0.get("query"):
         prev = yaml.safe_load(olds[0].group(0).strip()[2:])
@@ -763,6 +814,10 @@ def run_file(lines: list[str], args) -> None:
         print("\nNames I guessed - fix pairs.txt if any of these is wrong:")
         for g in LOG["guesses"]:
             print(f"  {g}")
+    if LOG["fast"]:
+        print("\nImpossibly fast - check the place names and coordinates in data/places.yaml:")
+        for w in LOG["fast"]:
+            print(f"  {w}")
     if LOG["places"]:
         print("\nNew places in data/places.yaml - check the station, country and capital flag:")
         for p in LOG["places"]:

@@ -503,8 +503,8 @@ legs:
       "10:23-14:53", "10:43-15:41", "11:20-15:53", "12:23-16:53", "13:25-17:53", "14:20-18:53",
       "15:20-19:53", "16:19-20:53", "16:25-21:30", "17:22-21:53", "18:23-22:53", "19:20-23:53",
       "23:17-06:59"], query: "*", checked: 2026-10-30, source: transitous}
-  - {from: Bucharest, to: Ruše, dep: "10:46", arr: "13:40", service: "1095", mode: train, checked: 2026-10-30, source: manual}
-  - {from: Ruše, to: Sofia, dep: "14:25", arr: "20:41", service: "IC463", mode: train, checked: 2026-10-30, source: manual}
+  - {from: Bucharest, to: Ruse, dep: "10:46", arr: "13:40", service: "1095", mode: train, checked: 2026-10-30, source: manual}
+  - {from: Ruse, to: Sofia, dep: "14:25", arr: "20:41", service: "IC463", mode: train, checked: 2026-10-30, source: manual}
   - {from: Holyhead, to: Dublin, dep: "07:30", arr: "11:00", service: "IrishFerry", mode: ferry, checked: 2026-10-30, source: manual}
   - {from: Patras, to: Athens, dep: "14:30", arr: "17:30", service: "?", mode: bus, checked: 2026-10-30, source: manual}
   - {from: Bari, to: Durrës, dep: "22:00", arr: "07:00", service: "?", mode: ferry, night: true, checked: 2026-10-30, source: manual}

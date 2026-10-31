@@ -553,6 +553,27 @@ real Alvia 08:30–13:59; if it doesn't, give it by hand in pairs.txt.
 
 ---
 
+## D-34 Namesakes and impossible speeds when adding legs
+**Date:** 31.10.2026 · **Status:** Accepted
+
+**Context.** "Bucharest -> Ruse" put Ruse at Ruše in Slovenia (the same letters without
+accents): wrong map position and wrong time zone. Nothing warned about it.
+
+**Decision.**
+- A new place is looked up with the other end of the leg in mind: of namesakes, the one
+  nearest to it wins (Ruse, Bulgaria, 65 km from Bucharest).
+- When namesakes are far apart, the summary says which one was taken and where the others
+  are ("Names I guessed").
+- A leg that would need more than 300 km/h in a straight line (time zones corrected) is
+  flagged in the summary as "Impossibly fast" – usually a wrong place.
+- Data: Ruše → Ruse (BG, main station 43.821, 25.955) for the Bucharest – Ruse – Sofia legs
+  (1095 10:46–13:40, IC 463 14:25–20:41, checked against BDŽ and Seat61).
+
+**Consequences.** Lines whose both places are new still have nothing to compare with; the
+summary warning is the safety net there.
+
+---
+
 ## Template for a new decision
 
 ```
