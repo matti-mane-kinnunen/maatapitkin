@@ -841,3 +841,4 @@ legs:
   - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "mon-fri", times: ["05:10-06:47", "05:24-07:22", "18:32-20:43", "20:15-22:18", "21:31-23:23"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "mon-fri,sat", times: ["09:15-10:37", "17:15-18:46"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "sat", times: ["05:10-06:35", "07:20-08:46", "13:10-14:33", "18:30-20:15", "20:15-22:26", "22:17-00:02"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Tallinn, to: Valga, dep: "10:22", arr: "14:14", service: "Elron", mode: train, checked: 2026-10-31, source: manual}
