@@ -814,3 +814,5 @@ legs:
   - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "mon-fri,sat", times: ["09:15-10:37", "17:15-18:46"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "sat", times: ["05:10-06:35", "07:20-08:46", "13:10-14:33", "18:30-20:15", "20:15-22:26", "22:17-00:02"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Tallinn, to: Valga, dep: "10:22", arr: "14:14", service: "Elron", mode: train, checked: 2026-10-31, source: manual}
+  - {from: Algeciras, to: Tarifa, service: "FRS shuttle", mode: bus, every: 120, first: "07:45", last: "19:45", duration: "1:00", checked: 2026-10-31, source: manual}
+  - {from: Tarifa, to: Tanger, service: "FRS", mode: ferry, every: 120, first: "09:00", last: "21:00", duration: "1:00", checked: 2026-10-31, source: manual}

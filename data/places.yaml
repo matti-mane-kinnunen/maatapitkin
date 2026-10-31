@@ -105,6 +105,7 @@ places:
   Aarhus: {lat: 56.150, lon: 10.205, country: "DK"}  # added by add_leg.py
   Porto: {lat: 41.149, lon: -8.585, country: "PT"}  # corrected by hand 31.10.2026
   Algeciras: {lat: 36.131, lon: -5.438, country: "ES"}  # added by add_leg.py
+  Tarifa:     {lat: 36.008, lon: -5.604, country: ES, ferry_checkin: 15}  # port; the FRS shuttle bus from Algeciras brings you to the boat (D-37)
   Casablanca: {lat: 33.590, lon: -7.591, country: "MA"}  # corrected by hand 31.10.2026
   Marrakech: {lat: 31.631, lon: -8.017, country: "MA"}  # added by add_leg.py
   Mockava:    {lat: 54.328, lon: 23.356, country: "LT", min_transfer: 10}  # small border/junction station, planned connections (D-36)

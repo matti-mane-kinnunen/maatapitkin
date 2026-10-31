@@ -156,6 +156,8 @@ Algeciras -> Tanger : Balearia ferry 20:30-21:00
 Tanger -> Casablanca : TGV every 60 07:00-21:00 2:17
 Casablanca -> Marrakech : IC every 60 09:54-20:54 2:43
 Algeciras -> Tanger : AML ferry every 180 06:00-21:00 1:30
+Algeciras -> Tarifa : FRS shuttle bus every 120 07:45-19:45 1:00
+Tarifa -> Tanger : FRS ferry every 120 09:00-21:00 1:00
 Turku -> Stockholm : Viking ferry 08:45-18:55
 Stockholm -> Göteborg : X2 every 60 08:17-20:17 3:30
 Amsterdam -> Newcastle : DFDS ferry night 17:30-09:15
