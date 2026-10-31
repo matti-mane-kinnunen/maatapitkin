@@ -73,7 +73,7 @@ places:
   Granada:    {lat: 37.184, lon: -3.610, country: ES}
   Malaga:     {lat: 36.712, lon: -4.433, country: ES}
   Badajoz:    {lat: 38.888, lon: -6.968, country: ES}
-  Abrantes:   {lat: 39.448, lon: -8.196, country: PT}
+  Abrantes:   {lat: 39.448, lon: -8.196, country: PT, min_transfer: 10}  # small border/junction station, planned connections (D-36)
   Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT, aliases: [Lisboa, Lissabon]}
   Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO, aliases: [București, Bucuresti, Bukarest]}
   Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD, aliases: [Chișinău, Kishinev]}
@@ -93,8 +93,8 @@ places:
   Köln: {lat: 50.943, lon: 6.959, country: "DE"}  # added by add_leg.py
   Offenburg: {lat: 48.476, lon: 7.947, country: "DE"}  # added by add_leg.py
   Trieste: {lat: 45.657, lon: 13.771, country: "IT"}  # added by add_leg.py
-  Valga: {lat: 57.775, lon: 26.053, country: "EE"}  # added by add_leg.py
-  Riga: {lat: 56.945, lon: 24.114, capital: true, country: "LV"}  # added by add_leg.py
+  Valga:      {lat: 57.775, lon: 26.053, country: "EE", min_transfer: 10}  # small border/junction station, planned connections (D-36)
+  Riga:       {lat: 56.945, lon: 24.114, capital: true, country: "LV", min_transfer: 10}  # planned connection to Vilnius, 11 min (D-36)
   Vilnius: {lat: 54.670, lon: 25.285, capital: true, country: "LT"}  # added by add_leg.py
   Torino: {lat: 45.070, lon: 7.688, country: "IT"}  # added by add_leg.py
   Monaco: {lat: 43.739, lon: 7.420, capital: true, country: "MC"}  # corrected by hand 31.10.2026
@@ -107,7 +107,7 @@ places:
   Algeciras: {lat: 36.131, lon: -5.438, country: "ES"}  # added by add_leg.py
   Casablanca: {lat: 33.590, lon: -7.591, country: "MA"}  # corrected by hand 31.10.2026
   Marrakech: {lat: 31.631, lon: -8.017, country: "MA"}  # added by add_leg.py
-  Mockava: {lat: 54.328, lon: 23.356, country: "LT"}  # added by add_leg.py
+  Mockava:    {lat: 54.328, lon: 23.356, country: "LT", min_transfer: 10}  # small border/junction station, planned connections (D-36)
   Kaisiadorys: {lat: 54.863, lon: 24.461, country: "LT"}  # added by add_leg.py
   Kaunas: {lat: 54.890, lon: 23.928, country: "LT"}  # added by add_leg.py
   Ruse: {lat: 43.821, lon: 25.955, country: "BG", aliases: [Русе]}  # main station; corrected by hand 31.10.2026 (was Ruše, Slovenia)
@@ -142,7 +142,7 @@ places:
   Ventimiglia: {lat: 43.792, lon: 7.604, country: "IT"}  # added by add_leg.py
   Taormina: {lat: 37.851, lon: 15.284, country: "IT"}  # added by add_leg.py
   Messina: {lat: 38.186, lon: 15.561, country: "IT"}  # added by add_leg.py
-  Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"]}  # corrected by hand 31.10.2026
+  Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"], ferry_checkin: 30}  # foot-passenger boats leave next to the station (D-36)
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

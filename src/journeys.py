@@ -231,12 +231,14 @@ class Router:
         if (incoming.timed and nxt.timed and norm_service(incoming.service) == norm_service(nxt.service)
                 and incoming.arr == nxt.dep):
             return 0                                          # stay on the same train
-        if nxt.mode == "ferry":
-            return self.ferry_checkin
+        here = self.net.places.get(place, {})
+        if nxt.mode == "ferry":                       # a port next to the station may have its own (D-36)
+            return int(here.get("ferry_checkin", self.ferry_checkin))
         if norm_service(nxt.service).startswith(("EST", "ES")):
             return self.eurostar_checkin
-        # a station's own change time is a minimum: it can lengthen, never shorten, the default
-        return max(self.min_transfer, int(self.net.places.get(place, {}).get("min_transfer", 0)))
+        # a station's own change time wins: longer where you change station (Paris), shorter at
+        # small border stations with planned same-platform connections (Valga, Mockava) (D-36)
+        return int(here["min_transfer"]) if "min_transfer" in here else self.min_transfer
 
     def in_quiet(self, t: int) -> bool:
         """Is clock time t inside the quiet hours (default 00:00-05:00)?"""

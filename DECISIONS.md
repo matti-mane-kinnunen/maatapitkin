@@ -604,6 +604,30 @@ if needed.
 
 ---
 
+## D-36 More time for changes, with exceptions at small stations
+**Date:** 1.11.2026 · **Status:** Accepted
+
+**Context.** Matti wants journeys with comfortable margins: 10 min changes and 30 min ferry
+check-in were tight, and Eurostar's passport control is unpredictable.
+
+**Decision.**
+- Settings: change 20 min (was 10), ferry check-in 45 min (was 30; includes getting from the
+  station to the port), Eurostar 60 min (was 45), a wait past 01:00 is a hotel night (was
+  03:00). No departure before 06:00 after a hotel night (unchanged).
+- A station's own `min_transfer` now wins in both directions (before it could only lengthen):
+  longer where you change station (Paris, London, Madrid, Istanbul), shorter at small border
+  stations whose connections are planned and often on the same platform: Valga, Riga,
+  Mockava, Abrantes 10 min. Rome's 15 min was dropped (20 applies).
+- A port may have its own `ferry_checkin`: Villa San Giovanni 30 min (the foot-passenger
+  boats leave next to the station). Bari stays 45 (the port is a few km away).
+
+**Consequences.** No destination is lost; 141 of 962 arrivals are later. Tirana and Durrës
+are a day later (the Bari ferry 30 min after the train), Messina 19 h later and Florence
+later (NJ 471 – Milan at Basel was a 12 min change). `build.py transfer=N` now sets the
+normal change time but not at stations with their own.
+
+---
+
 ## Template for a new decision
 
 ```

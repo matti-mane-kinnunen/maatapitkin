@@ -80,8 +80,8 @@ map's *Copy link* button gives the link for whatever is on screen.
 Each journey is built for a real travel date, not just by adding up leg durations:
 
 - A leg runs only on its `runs` weekdays and inside `valid_from`/`valid_to`.
-- A change takes `min_transfer` minutes, or longer where you change station (Paris 60 min, London 60, Madrid 40, Istanbul 60). Staying on the same train needs no change time. Ferries need 30 min check-in and Eurostar 45 min.
-- A wait that runs through 03:00 counts as a **hotel night**. After a hotel night, nothing departs before 06:00. No one waits more than 2 nights at one place.
+- A change takes `min_transfer` minutes (20), or a station's own time: longer where you change station (Paris 60 min, London 60, Madrid 40, Istanbul 60), shorter at small border stations with planned connections (Valga, Riga, Mockava, Abrantes 10). Staying on the same train needs no change time. Ferries need 45 min check-in (30 at Villa San Giovanni) and Eurostar 60 min.
+- A wait that runs through 01:00 counts as a **hotel night**. After a hotel night, nothing departs before 06:00. No one waits more than 2 nights at one place.
 - Night trains and night ferries count as nights on board, not hotel nights.
 
 - Besides the fastest journey, each capital can get two alternatives: **fewest changes** and

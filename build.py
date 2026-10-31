@@ -33,7 +33,7 @@ def main():
                "  python3 build.py starts=06:00,17:00   # departure times to switch between on the map\n"
                "  python3 build.py transfer=20 night=2:30 date=2026-11-17\n\n"
                "transfer sets the normal change time. Stations with a longer change time in\n"
-               "places.yaml (Paris, London, Madrid, Istanbul) keep the longer one.\n"
+               "places.yaml keep their own (longer at Paris, London, Madrid, Istanbul; shorter at small border stations).\n"
                "night sets the hour a wait must pass through to count as a hotel night.",
         formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--date", help="travel date YYYY-MM-DD (default: settings.start_date or next Monday)")
