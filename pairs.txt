@@ -80,4 +80,4 @@ Mockava -> Warsaw : *
 RIga -> Kaisiadorys: * 
 Kaisiadorys -> Kaunas : *
 
-
+Tallinn -> Valga : Elron 10:22-14:14    
