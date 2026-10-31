@@ -140,10 +140,11 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Ventimiglia | Thu 10.12. 21:21 | 52 h 46 min | 7 | 0 |
 | Bari | Thu 10.12. 21:30 | 52 h 55 min | 6 | 0 |
 | Edinburgh | Thu 10.12. 21:34 | 53 h 59 min | 8 | 1 |
-| Villa | Thu 10.12. 22:55 | 54 h 20 min | 7 | 0 |
+| Villa San Giovanni | Thu 10.12. 22:55 | 54 h 20 min | 7 | 0 |
 | Subotica | Thu 10.12. 23:18 | 54 h 43 min | 8 | 0 |
 | Penzance | Thu 10.12. 22:24 | 54 h 49 min | 8 | 1 |
 | Valencia | Thu 10.12. 23:34 | 54 h 59 min | 8 | 0 |
+| Messina | Thu 10.12. 23:40 | 55 h 05 min | 8 | 0 |
 | Holyhead | Thu 10.12. 23:02 | 55 h 27 min | 7 | 0 |
 | Glasgow | Thu 10.12. 23:13 | 55 h 38 min | 7 | 0 |
 | Taormina | Fri 11.12. 05:15 | 60 h 40 min | 7 | 0 |
@@ -153,15 +154,14 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Palermo | Fri 11.12. 09:13 | 64 h 38 min | 7 | 0 |
 | Santiago de Compostela | Fri 11.12. 09:51 | 65 h 16 min | 8 | 1 |
 | Newcastle | Fri 11.12. 09:15 | 65 h 40 min | 4 | 0 |
+| Syracuse | Fri 11.12. 10:37 | 66 h 02 min | 9 | 1 |
 | Vitoria-Gasteiz | Fri 11.12. 10:39 | 66 h 04 min | 8 | 1 |
-| Syracuse | Fri 11.12. 11:29 | 66 h 54 min | 7 | 0 |
 | Malaga | Fri 11.12. 12:33 | 67 h 58 min | 8 | 1 |
 | Tarifa | Fri 11.12. 12:33 | 67 h 58 min | 8 | 1 |
 | Cairnryan | Fri 11.12. 14:02 | 70 h 27 min | 5 | 1 |
 | Pozzallo | Fri 11.12. 15:58 | 71 h 23 min | 8 | 0 |
 | Badajoz | Fri 11.12. 16:11 | 71 h 36 min | 8 | 1 |
 | Algeciras | Fri 11.12. 16:54 | 72 h 19 min | 8 | 1 |
-| Messina | Fri 11.12. 18:30 | 73 h 55 min | 7 | 0 |
 | Galway | Fri 11.12. 17:39 | 74 h 04 min | 9 | 1 |
 | Tanger | Fri 11.12. 19:30 | 75 h 55 min | 9 | 1 |
 | Abrantes | Fri 11.12. 20:52 | 77 h 17 min | 9 | 1 |

@@ -142,6 +142,8 @@ places:
   Wroclaw: {lat: 51.098, lon: 17.037, country: "PL"}  # added by add_leg.py
   Ventimiglia: {lat: 43.792, lon: 7.604, country: "IT"}  # added by add_leg.py
   Taormina: {lat: 37.851, lon: 15.284, country: "IT"}  # added by add_leg.py
+  Messina: {lat: 38.186, lon: 15.561, country: "IT"}  # added by add_leg.py
+  Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"]}  # corrected by hand 31.10.2026
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

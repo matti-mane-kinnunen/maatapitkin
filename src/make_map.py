@@ -75,7 +75,14 @@ def build(root: Path):
     page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h)))
-    (root / "out" / "map.html").write_text(page)
+    (root / "out" / "map.html").write_text(page)          # fragment: paste into a page or publish as is
+    site = root / "out" / "site"                             # a complete page for GitHub Pages
+    site.mkdir(exist_ok=True)
+    (site / "index.html").write_text(
+        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+        '<meta name="description" content="Overland journeys from Helsinki to the European capitals by train, ferry and bus.">\n'
+        '</head>\n<body>\n' + page + '\n</body>\n</html>\n')
     return root / "out" / "map.html"
 
 

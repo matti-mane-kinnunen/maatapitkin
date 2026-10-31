@@ -116,10 +116,14 @@ def guess_place(name: str, places: dict) -> tuple[str, float] | None:
     return best
 
 
-def add_place(name: str, lat: float, lon: float, country: str, capital: bool) -> None:
+def add_place(name: str, lat: float, lon: float, country: str, capital: bool, aliases: list[str] | None = None) -> None:
     text = PLACES.read_text()
+    if re.search(rf"(?m)^  {re.escape(name)}:", text.split("not_yet_covered:")[0]):
+        return                                   # already there: never write a place twice
+    al = [a for a in (aliases or []) if a and T.fold(a) != T.fold(name)]
     line = (f"  {name}: {{lat: {lat:.3f}, lon: {lon:.3f}{', capital: true' if capital else ''}, "
-            f"country: {q(country.upper()) if country else q('')}}}  # added by add_leg.py\n")
+            f"country: {q(country.upper()) if country else q('')}"
+            f"{', aliases: [' + ', '.join(q(a) for a in al) + ']' if al else ''}}}  # added by add_leg.py\n")
     # drop it from the "not yet covered" list if it is there
     nyc = re.search(r"(?m)^not_yet_covered:", text)
     if nyc:
@@ -180,19 +184,21 @@ def resolve(name: str, auto: bool) -> tuple[str, dict]:
         print(f"    {i}. {m.get('name')}  ({m['lat']:.3f}, {m['lon']:.3f}){'  ' + area if area else ''}")
     pick = ask("  Which one is the station? [1] ", "1", auto)
     m = stops[max(0, min(len(stops) - 1, int(pick) - 1 if pick.isdigit() else 0))]
-    stored = was_missing or name.strip()
+    stored = was_missing or name.strip()          # keep the name as you wrote it
     station = str(m.get("name", ""))
-    if not was_missing and T.fold(stored) not in T.fold(station) and station.split():
-        stored = re.split(r"[\s,(/-]", station)[0]           # 'Genove' -> 'Genova' (from 'Genova Brignole')
-        LOG["guesses"].append(f"{name} -> {stored} (new place)")
-        print(f"  stored as {stored}")
+    aliases = [station] if station and T.fold(station) != T.fold(stored) else []
+    places_now, _ = load_places()
+    same = find_place(stored, places_now) or (find_place(station, places_now) if station else None)
+    if same:                                       # the station is already known under another name
+        print(f"  '{name}' is {same}, already in places.yaml")
+        return same, places_now[same]
     country = (m.get("country") or "").upper()
     if was_missing:
         country = country or missing[was_missing].get("country", "")
     if not country:
         country = ask("  Country code (e.g. SE, EE) - needed for the time zone: ", "", auto)
     capital = bool(was_missing) or yes(f"  Is {stored} a capital?", auto, default=False)
-    add_place(stored, m["lat"], m["lon"], country, capital)
+    add_place(stored, m["lat"], m["lon"], country, capital, aliases)
     print(f"  Added {stored} to places.yaml.")
     LOG["places"].append(f"{stored}: {m.get('name')} ({m['lat']:.3f}, {m['lon']:.3f}), country {country or '?'}"
                          f"{', capital' if capital else ', not marked as capital'}")

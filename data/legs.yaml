@@ -97,7 +97,7 @@ legs:
   - {from: Rome,      to: Palermo,   dep: "23:00", arr: "11:27", service: ICN1959, mode: train, night: true}
   - {from: Rome,      to: Syracuse,  dep: "23:00", arr: "11:29", service: ICN1959, mode: train, night: true}
   - {from: Syracuse,  to: Pozzallo,  dep: "14:45", arr: "15:58", service: R 12936, mode: train, checked: 2026-10-30}
-  - {from: Pozzallo,  to: Valletta,  dep: "19:30", arr: "21:15", service: Virtu Ferries, mode: ferry}
+  - {from: Pozzallo, to: Valletta, dep: "21:30", arr: "23:15", service: "VirtuFerries", mode: ferry, checked: 2026-10-31, source: manual}
 
   # --- Iberia ---------------------------------------------------------------
   - {from: Barcelona, to: Madrid,    dep: "06:20", arr: "08:50", service: AVE 3260, mode: train}
@@ -734,3 +734,21 @@ legs:
   - {from: Rome, to: Taormina, service: "ICN", mode: train, runs: "mon-fri", times: ["20:16-05:15"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Rome, to: Taormina, service: "ICN", mode: train, runs: "sat,sun", times: ["23:25-09:13"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Rome, to: Taormina, service: "ICN", mode: train, runs: "sun", times: ["11:26-19:40", "20:14-05:15"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, times: ["11:26-18:10"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, runs: "mon-fri", times: ["20:16-03:30", "23:26-08:29"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, runs: "mon-fri,sat", times: ["07:30-12:47", "08:58-14:38", "09:26-16:47", "13:00-18:45", "14:25-20:04", "15:05-21:14",
+      "16:35-21:46", "17:53-22:55"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, runs: "sat,sun", times: ["23:25-07:25"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Rome, to: Villa San Giovanni, service: "FR", mode: train, runs: "sun", times: ["07:30-12:46", "08:58-14:29", "09:26-16:46", "13:00-18:40", "15:10-21:15", "16:40-21:47",
+      "17:53-22:52", "20:14-02:50"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Villa San Giovanni, to: Messina, dep: "18:10", arr: "18:30", service: "Bluejet", mode: ferry, checked: 2026-10-31, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "23:30", arr: "23:40", service: "Bluejet", mode: ferry, checked: 2026-10-31, source: manual}
+  - {from: Messina, to: Palermo, service: "REG", mode: train, times: ["19:55-22:58"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Palermo, service: "REG", mode: train, runs: "mon-fri", times: ["05:10-06:33", "07:37-10:55", "14:36-17:30", "17:06-19:55", "18:57-21:57", "21:31-23:23"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Palermo, service: "REG", mode: train, runs: "mon-fri,sat", times: ["16:00-19:13"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Palermo, service: "REG", mode: train, runs: "sat", times: ["04:52-07:49", "06:36-09:33", "07:56-10:55", "10:43-13:35", "12:27-15:29", "14:35-17:31",
+      "17:14-20:04", "22:17-00:02"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Taormina, service: "REG", mode: train, runs: "sat", times: ["05:39-06:18", "07:20-08:46", "09:15-10:08", "16:18-17:16"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "mon-fri", times: ["05:10-06:47", "05:24-07:22", "18:32-20:43", "20:15-22:18", "21:31-23:23"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "mon-fri,sat", times: ["09:15-10:37", "17:15-18:46"], query: "*", checked: 2026-10-31, source: transitous}
+  - {from: Messina, to: Syracuse, service: "REG", mode: train, runs: "sat", times: ["05:10-06:35", "07:20-08:46", "13:10-14:33", "18:30-20:15", "20:15-22:26", "22:17-00:02"], query: "*", checked: 2026-10-31, source: transitous}

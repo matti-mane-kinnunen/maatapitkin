@@ -259,6 +259,15 @@ def main():
     import make_map
     make_map.build(ROOT)
 
+    # a small summary, committed every week, so the next run can tell if something broke
+    (outdir / "summary.json").write_text(json.dumps({
+        "generated": today.isoformat(), "dates": [d.isoformat() for d in dates],
+        "departures": len(net.legs), "warnings": len(warnings),
+        "capitals": {k: {"with_night_trains": len(v["yes"]["routes"]), "without": len(v["no"]["routes"])}
+                     for k, v in variants.items()},
+        "places_reached": {k: len(v["yes"]["routes"]) + len(v["yes"]["city_routes"]) for k, v in variants.items()},
+    }, indent=1) + "\n")
+
     print(f"{len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
           f"{len(warnings)} warnings -> {outdir}/")
     for w in warnings:

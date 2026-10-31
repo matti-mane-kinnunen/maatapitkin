@@ -1,0 +1,109 @@
+# Weekly: look up next week's trains in Transitous, rebuild the map, check it, publish it.
+# Also runs when pairs.txt changes (only the new lines are looked up) and by hand
+# (Actions → Update map → Run workflow).
+name: Update map
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"          # Mondays 01:00 UTC = 03:00 in Finland in winter (04:00 in summer)
+  push:
+    branches: [main]
+    paths: [pairs.txt]
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Look up all lines again (not only new ones)"
+        type: boolean
+        default: true
+      force:
+        description: "Publish even if the check finds problems"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: update-map
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    outputs:
+      ok: ${{ steps.check.outputs.ok }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Next week's travel dates (Tue, Fri, Sat, Sun)
+        id: dates
+        run: |
+          python3 - >> "$GITHUB_OUTPUT" <<'EOF'
+          import datetime as d
+          t = d.date.today()
+          tue = t + d.timedelta(days=7 - t.weekday() + 1)        # Tuesday of next week
+          print(f"tue={tue}")
+          print("dates=" + ",".join(str(tue + d.timedelta(days=k)) for k in (0, 3, 4, 5)))
+          EOF
+
+      - name: Look up trains in Transitous
+        run: |
+          mode="--new"
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.full }}" = "true" ]; then mode=""; fi
+          python3 add_leg.py --file pairs.txt $mode --date "${{ steps.dates.outputs.tue }}" --days tue,fri,sat,sun 2>&1 | tee lookup.log
+
+      - name: Build the map
+        run: python3 build.py "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee build.log
+
+      - name: Check before publishing
+        id: check
+        run: |
+          if python3 check_build.py > check.md; then echo "ok=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ inputs.force }}" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
+          else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+          cat check.md >> "$GITHUB_STEP_SUMMARY"
+          { echo; echo "## Lookup"; echo '```'; sed -n '/^=====/,$p' lookup.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the new timetable data
+        if: steps.check.outputs.ok == 'true'
+        run: |
+          git config user.name "maatapitkin-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ out/summary.json out/routes.md
+          git commit -m "Weekly update: trains for the week of ${{ steps.dates.outputs.tue }}" || echo "nothing to commit"
+          git pull --rebase
+          git push
+
+      - name: Prepare the web page
+        if: steps.check.outputs.ok == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/site
+
+      - name: Report a held-back update
+        if: steps.check.outputs.ok != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Map update held back (week of ${{ steps.dates.outputs.tue }})" --body-file check.md
+
+  publish:
+    needs: update
+    if: needs.update.outputs.ok == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
