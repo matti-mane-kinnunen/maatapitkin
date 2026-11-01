@@ -1097,3 +1097,7 @@ legs:
   - {from: Algeciras, to: Tanger Med, dep: "20:30", arr: "21:00", service: "Balearia", mode: ferry, checked: 2026-11-01, source: manual}
   - {from: Algeciras, to: Tanger Med, service: "AML", mode: ferry, every: 180, first: "06:00", last: "21:00", duration: "1:30", checked: 2026-11-01, source: manual}
   - {from: Tanger Med, to: Tanger, service: "Port shuttle", mode: bus, every: 60, first: "09:00", last: "21:00", duration: "1:00", checked: 2026-11-01, source: manual}
+  - {from: Stockholm, to: Helsinki, dep: "16:00", arr: "10:10", service: "Viking Line", mode: ferry, night: true, checked: 2026-11-01, source: manual}
+  - {from: Stockholm, to: Helsinki, dep: "16:30", arr: "10:30", service: "Silja Line", mode: ferry, night: true, checked: 2026-11-01, source: manual}
+  - {from: Stockholm, to: Turku, dep: "20:00", arr: "07:35", service: "Viking Line", mode: ferry, night: true, checked: 2026-11-01, source: manual}
+  - {from: Stockholm, to: Tallinn, dep: "17:30", arr: "11:00", service: "Tallink", mode: ferry, night: true, runs: "sun", checked: 2026-11-01, source: manual}
