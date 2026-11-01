@@ -2,6 +2,9 @@
 
 Overland journeys from Helsinki to the European capitals, by train, ferry and bus.
 
+**Maps.** One page per origin, listed under `origins` in places.yaml: `index.html` (Helsinki),
+`stockholm.html`, `copenhagen.html`; each links to the others at the top.
+
 **Purpose.** To help people wondering how to plan an Interrail trip get over the first fear
 that train travel is difficult and slow: a map that shows it can be done, how long it takes,
 and a sensible way to do it. It is not a journey planner – for booking, use the operators,
@@ -36,6 +39,7 @@ python build.py night=01           # a wait past 01:00 counts as a hotel night (
 python build.py start=08:00        # leave Helsinki in the morning (default 17:00, the evening train)
 python build.py dates=2026-12-08,2026-12-11,2026-12-12   # travel dates to switch between on the map
 python build.py starts=06:00,17:00  # morning / evening switch on the map (default 06:00 and the start time)
+python build.py only=Copenhagen     # build just one origin's map (quick test; summary.json not written)
 python build.py --help             # all options
 python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in Transitous
 python add_leg.py "Copenhagen -> Malmö : *"       # all direct trains of the day as one entry

@@ -47,6 +47,8 @@ def main():
     ap.add_argument("--starts", metavar="T1,T2",
                     help="departure times to switch between on the map, e.g. 06:00,17:00 (default: "
                          "settings.start_times, or 06:00 and the start time)")
+    ap.add_argument("--only", metavar="ORIGIN",
+                    help="build only the map from this origin (quicker for testing; summary.json is not written)")
     ap.add_argument("--night", metavar="T",
                     help="time the night begins, 24 h: 03, 3, 0300 or 03:00 (default: settings.night_point, 03:00)")
     # accept key=value as well as --key value
@@ -71,12 +73,19 @@ def main():
     # one map page per origin (IDEA-04): the first is index.html, the others e.g. stockholm.html
     origins = net.settings.get("origins") or {net.settings.get("origin", "Helsinki"): {"page": "index.html"}}
     pages = [{"name": o, "page": c.get("page") or f"{slugify(o)}.html"} for o, c in origins.items()]
+    if args.only and args.only not in origins:
+        ap.error(f"only: {args.only!r} is not one of the origins ({', '.join(origins)})")
     summaries = {}
     for k, (origin, cfg) in enumerate(origins.items()):
         if origin not in net.places:
             ap.error(f"origin {origin!r} is not in places.yaml")
+        if args.only and origin != args.only:
+            continue
         cfg = dict(cfg or {}, page=pages[k]["page"])
         summaries[origin] = build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
+    if args.only:
+        print("Built one map only - out/summary.json not written.")
+        return
     # a small summary, committed every week, so the next run can tell if something broke;
     # the first origin at the top level (as before), the others under "origins"
     first, *others = summaries
