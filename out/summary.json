@@ -6,24 +6,24 @@
   "2026-11-07",
   "2026-11-08"
  ],
- "departures": 3210,
+ "departures": 3367,
  "warnings": 0,
  "capitals": {
   "2026-11-03": {
    "with_night_trains": 35,
-   "without": 31
+   "without": 30
   },
   "2026-11-06": {
    "with_night_trains": 35,
-   "without": 31
+   "without": 30
   },
   "2026-11-07": {
    "with_night_trains": 35,
-   "without": 31
+   "without": 30
   },
   "2026-11-08": {
    "with_night_trains": 35,
-   "without": 31
+   "without": 30
   }
  },
  "places_reached": {
@@ -96,7 +96,6 @@
    "Stockholm",
    "Tallinn",
    "Tirana",
-   "Valletta",
    "Vatican",
    "Vienna",
    "Vilnius",
