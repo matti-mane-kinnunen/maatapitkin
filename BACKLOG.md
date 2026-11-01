@@ -31,6 +31,7 @@ if it led to a decision, the D-number in DECISIONS.md. Purpose and scope: see D-
 | DATA-06 | 1.11.2026 | Transitous is thin on Renfe long-distance trains from Madrid. | Madrid → Valencia has only 2 departures (in reality many more); Algeciras, Santiago, Vitoria, San Sebastián needed own times. Consider own times for the most important Spanish lines. | open |
 | DATA-07 | 1.11.2026 | Baleària Algeciras → Tanger Med is set to 20:30 → 21:00 (30 min). | The crossing takes about 1.5 h; check the real time and sailings. | open |
 | DATA-08 | 1.11.2026 | Cairnryan → Belfast has only one sailing (Stena Line 19:05 → 22:07). | Stena Line runs about six a day; add more once the Glasgow – Stranraer – Cairnryan route works (FIX-04). | open |
+| DATA-09 | 1.11.2026 | Stockholm → Tallinn (Tallink 17:30 → 11:00) is entered for Sundays only. | aferry says 3 sailings a week but lists only Sunday; find the other two days. Also check whether Stockholm → Riga sails again. | open |
 
 ## Ideas
 

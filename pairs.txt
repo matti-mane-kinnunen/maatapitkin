@@ -226,3 +226,9 @@ Paris -> Luxembourg : *
 Frankfurt -> Koblenz : *
 Köln -> Koblenz : *
 Koblenz -> Luxembourg : *
+
+# --- Ferries east from Stockholm, for the Stockholm map (IDEA-04); times local, from aferry.com, Nov 2026 ---
+Stockholm -> Helsinki : Viking Line ferry night 16:00-10:10
+Stockholm -> Helsinki : Silja Line ferry night 16:30-10:30
+Stockholm -> Turku : Viking Line ferry night 20:00-07:35
+Stockholm -> Tallinn : Tallink ferry night 17:30-11:00 sun   # 3 sailings a week, only Sunday known (DATA-09)
