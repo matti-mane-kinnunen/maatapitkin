@@ -16,7 +16,7 @@ if it led to a decision, the D-number in DECISIONS.md. Purpose and scope: see D-
 | FIX-02 | 1.11.2026 | GitHub warns that the Node 20 actions are deprecated. | Update `actions/checkout`, `setup-python`, `upload-pages-artifact`, `deploy-pages` to current versions and pin each to a commit SHA (supply-chain hygiene). | open |
 | FIX-03 | 1.11.2026 | Run-day text is clumsy: "mon-fri,sat" instead of "mon-sat"; summary shows "(mon-Sat 1)". | Cosmetic, in add_leg.py (`runs_spec`, `runs_text`). | open |
 | FIX-04 | 1.11.2026 | The Hague and Cairnryan have no incoming journey. | Cairnryan: no train exists (bus from Stranraer/Ayr); The Hague: no line to it. Add a line or remove the place. | The Hague removed 1.11.2026 (not needed for the map). Cairnryan: Glasgow → Stranraer train + Stranraer → Cairnryan bus added 1.11.2026 – check the next run's issue |
-| FIX-05 | 1.11.2026 | "Tanger" mixes two ports. | Algeciras ferries land at Tanger Med, ~40 km from the city; the Tarifa ferry lands in Tanger Ville. Make Tanger Med a place of its own with a bus/train to Tanger. | open |
+| FIX-05 | 1.11.2026 | "Tanger" mixes two ports. | Algeciras ferries land at Tanger Med, ~40 km from the city; the Tarifa ferry lands in Tanger Ville. Make Tanger Med a place of its own with a bus/train to Tanger. | done 1.11.2026: Tanger Med is its own place; Algeciras ferries land there; port shuttle bus to Tanger hourly 09–21, 1 h (in reality unreliable – a taxi may be needed). Casablanca/Marrakech now go via Tarifa. |
 | FIX-06 | 1.11.2026 | 21 "partial" trains from the 2023 graph remain. | The `*` line has them, but not on every day they claim (e.g. NJ 471 Hamburg–Basel on Sundays). `python3 tidy_legs.py` lists them; check by hand, then remove or give the missing days as own times. | open |
 
 ## Data to check by hand
@@ -29,6 +29,8 @@ if it led to a decision, the D-number in DECISIONS.md. Purpose and scope: see D-
 | DATA-04 | 1.11.2026 | Madrid → Santiago / Vitoria: run days approximate. | Trainline and Rome2Rio disagree a little on how many trains run each day. | open |
 | DATA-05 | 1.11.2026 | Tallinn → Valga has only one train (Elron 10:22). | The `*` line found no direct trains in run #7; check whether Elron runs more direct Tallinn–Valga trains and add them as own times. | open |
 | DATA-06 | 1.11.2026 | Transitous is thin on Renfe long-distance trains from Madrid. | Madrid → Valencia has only 2 departures (in reality many more); Algeciras, Santiago, Vitoria, San Sebastián needed own times. Consider own times for the most important Spanish lines. | open |
+| DATA-07 | 1.11.2026 | Baleària Algeciras → Tanger Med is set to 20:30 → 21:00 (30 min). | The crossing takes about 1.5 h; check the real time and sailings. | open |
+| DATA-08 | 1.11.2026 | Cairnryan → Belfast has only one sailing (Stena Line 19:05 → 22:07). | Stena Line runs about six a day; add more once the Glasgow – Stranraer – Cairnryan route works (FIX-04). | open |
 
 ## Ideas
 
