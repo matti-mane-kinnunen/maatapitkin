@@ -74,6 +74,8 @@ https://matti-mane-kinnunen.github.io/maatapitkin/ – embed it with
   within minutes.
 - Run it now: Actions → *Update map* → *Run workflow*.
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
+- If the lookup finds something that needs you (a line lost its trains, an impossibly fast leg,
+  a new place), an issue lists just that; GitHub emails it. No email means nothing to do.
 - `git pull` before editing locally – the workflow commits the new timetable data.
 - A full run stops starting new lines after 4 hours; the lines it didn't reach keep last
   week's data and are looked up first next time.

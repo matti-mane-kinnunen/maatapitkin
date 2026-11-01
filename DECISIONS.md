@@ -653,6 +653,27 @@ in both directions and its own page; a few origins are fine, all-to-all is out o
 
 ---
 
+## D-38 An issue only when the lookup needs a person
+**Date:** 1.11.2026 · **Status:** Accepted
+
+**Context.** Transitous data is uneven (Spanish long-distance trains were missing as direct
+trains; wrong stations slipped through before D-33). Reading the full lookup log every Monday
+is too much to do reliably.
+
+**Decision.** `lookup_report.py` reduces the log to what needs a person: lines that lost their
+trains ("removed N old entries") or failed with an error, "Impossibly fast" legs, new places,
+guessed names, and lines left for next time. The workflow opens a GitHub issue with that list
+(GitHub emails it) and adds it to the job summary. A quiet week opens nothing. Lines that never
+find direct trains and had nothing to lose are not reported. A held-back map still gets its
+own issue (D-29), now naming the capitals and places it would lose.
+
+**Why an issue.** It needs no extra secrets or services (the workflow's own GITHUB_TOKEN with
+`issues: write`), it emails the owner, and it can be closed when handled – a small to-do list.
+The report text comes from timetable data, so it is passed to `gh` as a file, never pasted
+into the shell script.
+
+---
+
 ## Template for a new decision
 
 ```

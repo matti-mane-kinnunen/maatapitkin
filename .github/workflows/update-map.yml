@@ -93,6 +93,28 @@ jobs:
         with:
           path: out/site
 
+      # Only what needs a person (lines that lost their trains, impossibly fast legs, new places,
+      # guessed names) - opened as an issue, so GitHub emails it. A quiet week sends nothing (D-38).
+      - name: Report lookup results that need attention
+        if: always() && hashFiles('lookup.log') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 lookup_report.py lookup.log > attention.md
+          if [ -s attention.md ]; then
+            {
+              echo "Timetable lookup for the week of ${{ steps.dates.outputs.tue }}. Map published: ${{ steps.check.outputs.ok == 'true' && 'yes' || 'no (see the held-back issue)' }}."
+              echo
+              cat attention.md
+              echo
+              echo "Full log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            } > issue.md
+            { echo "## Needs attention"; echo; cat attention.md; } >> "$GITHUB_STEP_SUMMARY"
+            gh issue create --title "Check the timetable lookup (week of ${{ steps.dates.outputs.tue }})" --body-file issue.md
+          else
+            echo "Nothing needs attention." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Report a held-back update
         if: steps.check.outputs.ok != 'true'
         env:
