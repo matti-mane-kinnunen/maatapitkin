@@ -145,6 +145,7 @@ places:
   Messina: {lat: 38.186, lon: 15.561, country: "IT"}  # added by add_leg.py
   Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"], ferry_checkin: 30}  # foot-passenger boats leave next to the station (D-36)
   Lugano: {lat: 46.005, lon: 8.947, country: "CH"}  # station; corrected by hand 1.11.2026 (was the Resega stop)
+  Koblenz: {lat: 50.349, lon: 7.590, country: "DE"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

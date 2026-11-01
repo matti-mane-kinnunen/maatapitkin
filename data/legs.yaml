@@ -959,3 +959,43 @@ legs:
   - {from: Sofia, to: Varna, service: "БВ", mode: train, runs: "mon-thu", times: ["13:20-20:56"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Zagreb, to: Ljubljana, service: "D", mode: train, times: ["05:11-07:37", "08:16-10:57"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Madrid, to: Algeciras, dep: "08:30", arr: "13:59", service: "Alvia", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Brussels, to: Luxembourg, service: "IC", mode: train, runs: "mon-fri", times: ["05:32-08:43", "06:32-09:43", "06:56-09:43", "07:33-10:43", "09:32-12:43", "09:56-12:43",
+      "10:32-13:43", "10:56-13:43", "11:32-14:43", "12:32-15:43", "12:56-15:43", "13:32-16:43",
+      "13:56-16:43", "14:32-17:43", "18:32-21:43", "18:56-21:43", "20:56-23:43"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Brussels, to: Luxembourg, service: "IC", mode: train, runs: "mon-thu", times: ["11:56-14:43", "19:32-22:43", "19:52-22:43", "20:32-23:43"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Brussels, to: Luxembourg, service: "IC", mode: train, runs: "sat", times: ["13:18-16:43", "14:18-17:43", "18:18-21:43"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Brussels, to: Luxembourg, service: "IC", mode: train, runs: "sat,sun", times: ["06:18-09:43", "07:18-10:43", "08:18-11:43", "09:18-12:43", "10:18-13:43", "11:18-14:43",
+      "12:18-15:43", "15:18-18:43", "16:18-19:43", "17:18-20:43"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, times: ["10:40-12:51", "13:39-15:51", "17:40-19:53"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, runs: "mon-fri", times: ["07:28-09:45"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, runs: "mon-fri,sat", times: ["08:14-10:33"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, runs: "mon-fri,sun", times: ["19:40-21:53"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, runs: "sat", times: ["19:38-21:53"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, runs: "sat,sun", times: ["20:40-22:53"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Paris, to: Luxembourg, service: "TGV INOUI", mode: train, runs: "sun", times: ["15:24-17:36"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Frankfurt, to: Koblenz, service: "ICE", mode: train, times: ["03:11-04:41", "06:43-08:11", "07:43-09:11", "08:12-08:56", "09:09-10:54", "09:43-11:10",
+      "10:11-10:56", "11:09-12:54", "11:43-13:10", "12:11-12:56", "13:09-14:54", "13:41-15:10",
+      "14:11-14:56", "15:09-16:54", "15:41-17:10", "16:11-16:56", "17:03-17:50", "17:09-18:56",
+      "17:41-19:10", "18:11-18:56", "19:09-20:54", "19:43-21:10"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Frankfurt, to: Koblenz, service: "ICE", mode: train, runs: "fri,sat", times: ["23:11-23:55"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Frankfurt, to: Koblenz, service: "ICE", mode: train, runs: "mon-fri", times: ["04:55-06:38", "16:24-18:09", "18:24-20:04", "21:42-23:11", "23:22-00:55"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Frankfurt, to: Koblenz, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["05:41-06:25"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Frankfurt, to: Koblenz, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["06:59-08:38", "21:09-23:09"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Frankfurt, to: Koblenz, service: "ICE", mode: train, runs: "sat", times: ["06:59-08:51"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, times: ["05:53-06:46", "05:56-07:27", "06:56-08:28", "07:32-08:42", "07:53-08:46", "07:56-09:27",
+      "08:32-09:42", "08:53-09:46", "08:56-10:27", "09:32-10:42", "09:53-10:46", "09:56-11:27",
+      "10:32-11:42", "10:53-11:46", "10:56-12:26", "11:32-12:42", "11:53-12:46", "11:56-13:27",
+      "12:32-13:42", "12:53-13:46", "12:57-14:29", "13:32-14:42", "13:53-14:46", "13:56-15:27",
+      "14:32-15:42", "14:53-15:46", "14:56-16:27", "15:32-16:42", "15:56-17:27", "16:32-17:42",
+      "16:53-17:46", "16:56-18:27", "17:32-18:42", "17:53-18:46", "17:56-19:27", "18:32-19:42",
+      "18:53-19:46", "18:56-20:27", "19:32-20:42", "19:53-20:46", "19:56-21:29", "20:32-21:42",
+      "20:53-21:46", "21:56-23:32"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "fri", times: ["04:01-05:46", "04:08-05:22", "05:04-06:28", "23:56-00:49"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-fri", times: ["05:32-06:42", "21:32-22:42"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-fri,sat", times: ["06:32-07:42", "06:53-07:46", "15:53-16:46"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-fri,sun", times: ["20:56-22:36", "22:56-00:26"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-thu", times: ["23:56-01:30"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-thu,sat", times: ["04:56-06:28", "22:32-23:42"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-thu,sat,sun", times: ["23:53-00:47"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "sat", times: ["00:56-02:32", "03:36-04:38", "20:56-22:31"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "sun", times: ["03:53-05:01", "22:18-22:56"], query: "*", checked: 2026-11-01, source: transitous}
