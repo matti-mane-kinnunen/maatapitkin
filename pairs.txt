@@ -232,3 +232,12 @@ Stockholm -> Helsinki : Viking Line ferry night 16:00-10:10
 Stockholm -> Helsinki : Silja Line ferry night 16:30-10:30
 Stockholm -> Turku : Viking Line ferry night 20:00-07:35
 Stockholm -> Tallinn : Tallink ferry night 17:30-11:00 sun   # 3 sailings a week, only Sunday known (DATA-09)
+
+# --- North and east from Copenhagen, for the Copenhagen map (IDEA-04) ---
+Copenhagen -> Malmö : *
+Copenhagen -> Göteborg : *
+Copenhagen -> Stockholm : *
+Malmö -> Göteborg : *
+Malmö -> Stockholm : *
+Göteborg -> Stockholm : *
+Göteborg -> Oslo : *
