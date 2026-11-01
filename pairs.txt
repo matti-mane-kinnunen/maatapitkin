@@ -79,7 +79,9 @@ Szeged -> Subotica : *
 Subotica -> Belgrade : *
 Kaunas -> Mockava : *
 Stockholm -> Malmö : *
-Madrid -> Vitoria-Gasteiz : *
+Madrid -> Vitoria-Gasteiz : Alvia 06:55 06:55-10:38   # Transitous has no direct trains here; times from Rome2Rio (Nov 2026)
+Madrid -> Vitoria-Gasteiz : Alvia 14:50 14:50-17:57 mon-fri
+Madrid -> Vitoria-Gasteiz : Alvia 17:48 17:48-21:13
 Lisbon -> Faro : *
 Vienna -> Ljubljana : *
 Berlin -> Vienna : *
@@ -104,7 +106,11 @@ Prague -> Budapest : *
 Munich -> Ljubljana : *
 Munich -> Zürich : *
 Milan -> Torino : *
-Madrid -> Santiago de Compostela : *
+Madrid -> Santiago de Compostela : AVE 06:30 06:30-09:56   # Transitous has no direct trains here; times from Trainline (Nov 2026)
+Madrid -> Santiago de Compostela : AVE 08:26 08:26-11:32
+Madrid -> Santiago de Compostela : AVE 14:40 14:40-17:42
+Madrid -> Santiago de Compostela : AVE 17:10 17:10-20:18
+Madrid -> Santiago de Compostela : AVE 19:17 19:17-22:19
 Madrid -> Valencia : *
 Bordeaux -> Hendaye : *
 Paris -> Hendaye : *

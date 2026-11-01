@@ -448,7 +448,6 @@ legs:
   - {from: Patras, to: Athens, dep: "14:30", arr: "17:30", service: "?", mode: bus, checked: 2026-10-30, source: manual}
   - {from: Bari, to: Durrës, dep: "22:00", arr: "07:00", service: "?", mode: ferry, night: true, checked: 2026-10-30, source: manual}
   - {from: Durrës, to: Tirana, dep: "10:00", arr: "12:40", service: "?", mode: bus, checked: 2026-10-30, source: manual}
-  - {from: Madrid, to: Vitoria-Gasteiz, service: "C5", mode: train, times: ["10:13-10:39", "14:54-14:56", "17:32-21:15", "23:30-23:32", "23:51-00:17"], query: "*", checked: 2026-10-30, source: transitous}
   - {from: Lisbon, to: Faro, service: "IC", mode: train, times: ["08:31-11:27", "10:14-13:31", "14:14-17:39", "17:31-20:23", "18:44-22:02"], query: "*", checked: 2026-10-30, source: transitous}
   - {from: Vienna, to: Ljubljana, service: "EC", mode: train, times: ["07:53-13:53"], query: "*", checked: 2026-10-30, source: transitous}
   - {from: Berlin, to: Vienna, service: "IC", mode: train, times: ["06:12-14:54", "15:28-23:49", "20:11-07:00"], query: "*", checked: 2026-10-30, source: transitous}
@@ -514,14 +513,6 @@ legs:
   - {from: Paris, to: Torino, service: "TGV INOUI", mode: train, times: ["06:46-12:23", "14:48-20:23", "15:25-21:20"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Paris, to: Torino, service: "TGV INOUI", mode: train, runs: "mon-fri", times: ["12:46-18:15"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Paris, to: Torino, service: "TGV INOUI", mode: train, runs: "sat,sun", times: ["07:30-13:20", "09:46-15:23"], query: "*", checked: 2026-10-31, source: transitous}
-  - {from: Madrid, to: Santiago de Compostela, service: "C3", mode: train, times: ["05:43-06:28", "06:11-06:56", "06:16-06:18", "06:44-07:29", "06:46-06:48", "07:10-07:48",
-      "07:27-08:12", "07:58-08:43", "08:10-08:55", "08:16-08:18", "08:39-09:24", "08:46-08:48",
-      "09:16-09:59", "09:42-10:27", "09:49-09:51", "10:10-10:55", "10:34-11:19", "10:48-10:57",
-      "11:01-11:46", "11:31-12:16", "12:01-12:46", "12:31-13:16", "13:11-13:44", "13:45-14:30",
-      "14:14-14:59", "14:37-15:15", "14:58-15:43", "15:22-15:24", "15:28-16:13", "15:58-16:34",
-      "16:14-16:59", "16:34-17:19", "16:58-17:43", "17:27-18:12", "17:32-17:41", "17:48-18:33",
-      "18:27-19:12", "18:49-19:30", "19:13-19:58", "19:39-20:24", "19:42-19:44", "19:59-20:44",
-      "20:29-21:14", "21:14-21:59", "21:50-21:52", "22:28-23:13"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Madrid, to: Valencia, service: "AVE", mode: train, times: ["09:42-11:43", "19:40-21:40"], query: "*", checked: 2026-10-31, source: transitous}
   - {from: Bordeaux, to: Hendaye, service: "TER", mode: train, times: ["06:16-09:12", "09:20-11:48", "10:20-12:51", "12:20-14:48", "13:29-16:03", "14:20-17:04",
       "15:19-18:11", "17:19-20:00", "18:18-20:48", "18:44-21:23", "20:53-23:24"], query: "*", checked: 2026-10-31, source: transitous}
@@ -999,3 +990,11 @@ legs:
   - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "mon-thu,sat,sun", times: ["23:53-00:47"], query: "*", checked: 2026-11-01, source: transitous}
   - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "sat", times: ["00:56-02:32", "03:36-04:38", "20:56-22:31"], query: "*", checked: 2026-11-01, source: transitous}
   - {from: Köln, to: Koblenz, service: "RB26", mode: train, runs: "sun", times: ["03:53-05:01", "22:18-22:56"], query: "*", checked: 2026-11-01, source: transitous}
+  - {from: Madrid, to: Vitoria-Gasteiz, dep: "06:55", arr: "10:38", service: "Alvia 06:55", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Vitoria-Gasteiz, dep: "14:50", arr: "17:57", service: "Alvia 14:50", mode: train, runs: "mon-fri", checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Vitoria-Gasteiz, dep: "17:48", arr: "21:13", service: "Alvia 17:48", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Santiago de Compostela, dep: "06:30", arr: "09:56", service: "AVE 06:30", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Santiago de Compostela, dep: "08:26", arr: "11:32", service: "AVE 08:26", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Santiago de Compostela, dep: "14:40", arr: "17:42", service: "AVE 14:40", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Santiago de Compostela, dep: "17:10", arr: "20:18", service: "AVE 17:10", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Madrid, to: Santiago de Compostela, dep: "19:17", arr: "22:19", service: "AVE 19:17", mode: train, checked: 2026-11-01, source: manual}
