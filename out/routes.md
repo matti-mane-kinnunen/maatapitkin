@@ -79,43 +79,43 @@ _Night trains and night buses left out; night ferries still used._
 
 Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 
-## Leaving from 06:00 instead of 17:00
+## Leaving from 05:00 instead of 17:00
 
 | Capital | Leave | Arrive | Door to door | Compared with 17:00 |
 |---|---|---|---|---|
-| Stockholm | – | – | – | no gain: take the 17:00 journey |
+| Stockholm | Tue 3.11. 05:32 | Tue 3.11. 18:55 | 14 h 23 min | arrives 11 h 35 min earlier |
 | Tallinn | Tue 3.11. 07:30 | Tue 3.11. 09:30 | 2 h 00 min | arrives 24 h 00 min earlier |
-| Copenhagen | – | – | – | no gain: take the 17:00 journey |
-| Oslo | – | – | – | no gain: take the 17:00 journey |
+| Copenhagen | Tue 3.11. 05:32 | Wed 4.11. 06:44 | 26 h 12 min | arrives 6 h 14 min earlier |
+| Oslo | Tue 3.11. 05:32 | Wed 4.11. 13:16 | 32 h 44 min | arrives 0 h 07 min earlier |
 | Riga | Tue 3.11. 07:30 | Tue 3.11. 16:44 | 9 h 14 min | arrives 24 h 00 min earlier |
 | Vilnius | Tue 3.11. 07:30 | Tue 3.11. 21:28 | 13 h 58 min | arrives 24 h 00 min earlier |
-| Berlin | Tue 3.11. 07:30 | Wed 4.11. 20:13 | 37 h 43 min | arrives 1 h 10 min earlier |
-| Bern | – | – | – | no gain: take the 17:00 journey |
-| Amsterdam | – | – | – | no gain: take the 17:00 journey |
-| Paris | – | – | – | no gain: take the 17:00 journey |
-| Prague | Tue 3.11. 07:30 | Thu 5.11. 06:58 | 48 h 28 min | arrives 3 h 24 min earlier |
+| Berlin | Tue 3.11. 05:32 | Wed 4.11. 15:23 | 34 h 51 min | arrives 6 h 00 min earlier |
+| Bern | Tue 3.11. 05:32 | Wed 4.11. 22:56 | 42 h 24 min | arrives 11 h 00 min earlier |
+| Amsterdam | Tue 3.11. 05:32 | Wed 4.11. 20:01 | 39 h 29 min | arrives 14 h 01 min earlier |
+| Paris | Tue 3.11. 05:32 | Thu 5.11. 08:05 | 51 h 33 min | arrives 2 h 00 min earlier |
+| Prague | Tue 3.11. 05:32 | Wed 4.11. 21:25 | 40 h 53 min | arrives 12 h 57 min earlier |
 | Vienna | Tue 3.11. 07:30 | Thu 5.11. 05:25 | 46 h 55 min | arrives 6 h 07 min earlier |
-| Brussels | – | – | – | no gain: take the 17:00 journey |
+| Brussels | Tue 3.11. 05:32 | Wed 4.11. 23:06 | 42 h 34 min | arrives 14 h 00 min earlier |
 | Warsaw | Tue 3.11. 07:30 | Wed 4.11. 13:07 | 30 h 37 min | arrives 24 h 00 min earlier |
 | Bratislava | Tue 3.11. 07:30 | Thu 5.11. 07:10 | 48 h 40 min | arrives 6 h 00 min earlier |
-| London | – | – | – | no gain: take the 17:00 journey |
-| Budapest | Tue 3.11. 07:30 | Thu 5.11. 09:29 | 50 h 59 min | arrives 6 h 06 min earlier |
-| Luxembourg | – | – | – | no gain: take the 17:00 journey |
+| London | Tue 3.11. 05:32 | Thu 5.11. 08:57 | 53 h 25 min | arrives 5 h 33 min earlier |
+| Budapest | Tue 3.11. 05:32 | Thu 5.11. 08:29 | 51 h 57 min | arrives 7 h 06 min earlier |
+| Luxembourg | Tue 3.11. 05:32 | Thu 5.11. 09:43 | 53 h 11 min | arrives 6 h 08 min earlier |
 | Ljubljana | Tue 3.11. 07:30 | Thu 5.11. 13:53 | 55 h 23 min | arrives 2 h 47 min earlier |
-| Rome | – | – | – | no gain: take the 17:00 journey |
-| Vatican | – | – | – | no gain: take the 17:00 journey |
-| Monaco | – | – | – | no gain: take the 17:00 journey |
+| Rome | Tue 3.11. 05:32 | Thu 5.11. 14:10 | 57 h 38 min | arrives 3 h 30 min earlier |
+| Vatican | Tue 3.11. 05:32 | Thu 5.11. 14:50 | 58 h 18 min | arrives 3 h 30 min earlier |
+| Monaco | Tue 3.11. 05:32 | Thu 5.11. 15:59 | 59 h 27 min | arrives 3 h 28 min earlier |
 | Zagreb | Tue 3.11. 07:30 | Thu 5.11. 19:20 | 60 h 50 min | arrives 3 h 00 min earlier |
 | Madrid | – | – | – | no gain: take the 17:00 journey |
-| Belgrade | Tue 3.11. 07:30 | Thu 5.11. 18:35 | 60 h 05 min | arrives 12 h 40 min earlier |
+| Belgrade | Tue 3.11. 05:32 | Thu 5.11. 15:15 | 58 h 43 min | arrives 16 h 00 min earlier |
 | Bucharest | Tue 3.11. 07:30 | Fri 6.11. 08:23 | 72 h 53 min | arrives 2 h 14 min earlier |
 | Dublin | – | – | – | no gain: take the 17:00 journey |
 | Belfast | – | – | – | no gain: take the 17:00 journey |
 | Valletta | – | – | – | no gain: take the 17:00 journey |
 | Lisbon | – | – | – | no gain: take the 17:00 journey |
 | Chisinau | – | – | – | no gain: take the 17:00 journey |
-| Tirana | – | – | – | no gain: take the 17:00 journey |
-| Athens | – | – | – | no gain: take the 17:00 journey |
+| Tirana | Tue 3.11. 05:32 | Fri 6.11. 12:40 | 80 h 08 min | arrives 24 h 00 min earlier |
+| Athens | Tue 3.11. 05:32 | Fri 6.11. 17:30 | 83 h 58 min | arrives 24 h 00 min earlier |
 | Sofia | Tue 3.11. 07:30 | Fri 6.11. 20:41 | 85 h 11 min | arrives 24 h 00 min earlier |
 | Ankara | Tue 3.11. 07:30 | Sun 8.11. 13:16 | 124 h 46 min | arrives 24 h 00 min earlier |
 
@@ -201,11 +201,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Pozzallo | Fri 6.11. 15:58 | 71 h 23 min | 7 | 0 |
 | Badajoz | Fri 6.11. 16:11 | 71 h 36 min | 7 | 2 |
 | Tarifa | Fri 6.11. 16:45 | 72 h 10 min | 9 | 2 |
-| Tanger | Fri 6.11. 16:30 | 72 h 55 min | 9 | 2 |
+| Tanger Med | Fri 6.11. 16:30 | 72 h 55 min | 9 | 2 |
 | Messina | Fri 6.11. 18:30 | 73 h 55 min | 6 | 1 |
-| Casablanca | Fri 6.11. 19:17 | 75 h 42 min | 10 | 2 |
+| Tanger | Fri 6.11. 18:00 | 74 h 25 min | 10 | 2 |
 | Abrantes | Fri 6.11. 20:52 | 77 h 17 min | 8 | 2 |
-| Marrakech | Fri 6.11. 22:37 | 79 h 02 min | 11 | 2 |
+| Casablanca | Fri 6.11. 21:17 | 77 h 42 min | 11 | 2 |
 | Split | Sat 7.11. 07:00 | 86 h 25 min | 6 | 1 |
 | Durrës | Sat 7.11. 07:00 | 86 h 25 min | 6 | 1 |
 | Taormina | Sat 7.11. 10:08 | 89 h 33 min | 7 | 2 |
@@ -213,6 +213,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Patras | Sat 7.11. 13:00 | 91 h 25 min | 6 | 1 |
 | Faro | Sat 7.11. 11:27 | 91 h 52 min | 10 | 3 |
 | Ruse | Sat 7.11. 13:40 | 92 h 05 min | 7 | 0 |
+| Marrakech | Sat 7.11. 12:37 | 93 h 02 min | 12 | 3 |
 | Varna | Sun 8.11. 06:50 | 109 h 15 min | 9 | 0 |
 | Istanbul | Mon 9.11. 06:34 | 131 h 59 min | 9 | 1 |
 
