@@ -35,7 +35,7 @@ if it led to a decision, the D-number in DECISIONS.md. Purpose and scope: see D-
 | ID | Added | What | Notes | Status |
 |---|---|---|---|---|
 | IDEA-01 | 1.11.2026 | High-speed backbone from route lists. | `routes_to_pairs.py` gives 31 lines from Interrail's AVE list (~24 min more per weekly run); then TGV, ICE, Frecciarossa. Add one list at a time and watch run time and page size (D-37). | open |
-| IDEA-02 | 31.10.2026 | Morning train Helsinki → Turku for the 08:45 Viking day ferry. | Would make the morning option (D-32) useful westwards; today only the Baltic capitals gain from leaving in the morning. | open |
+| IDEA-02 | 31.10.2026 | Morning train Helsinki → Turku for the 08:45 Viking day ferry. | Would make the morning option (D-32) useful westwards; today only the Baltic capitals gain from leaving in the morning. | done 1.11.2026: morning start 05:00 (IC 941 05:26), see D-32 update |
 | IDEA-03 | 31.10.2026 | Day trains for the no-night-train mode. | E.g. Hamburg/Offenburg → Basel, Rome → Sicily, Budapest → Bucharest, so more capitals are reachable without night trains. | open |
 | IDEA-04 | 1.11.2026 | A second origin, e.g. London. | Needs lines in both directions (`routes_to_pairs.py --both`) and its own page (`…/maatapitkin/london/`). A few origins at most (D-37). | open |
 | IDEA-05 | 31.10.2026 | Compare travel days side by side. | E.g. "Lisbon: Tue 52 h, Sat 61 h" – which weekday to travel. | open |

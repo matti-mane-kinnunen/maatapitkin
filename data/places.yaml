@@ -3,6 +3,7 @@
 settings:
   origin: Helsinki
   start_time: "17:00"        # leave Helsinki from this time on day 1 (17:00 = the evening train)
+  start_times: ["05:00", "17:00"]  # morning / evening switch on the map; 05:00 catches IC 941 05:26 to the Turku day ferry (IDEA-02)
   min_transfer: 20           # minutes, train -> train
   ferry_checkin: 45          # minutes before a ferry departs (check-in and getting from the station to the port)
   eurostar_checkin: 60       # minutes before Eurostar (service starting EST/ES); passport control is unpredictable

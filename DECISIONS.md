@@ -522,6 +522,8 @@ as references, so the page stays about the same size. With today's data, only Ta
 and Vilnius gain from a morning start; a morning Helsinki → Turku train (for the 08:45 day
 ferry to Stockholm) is the obvious missing piece.
 
+**Update 1.11.2026 (IDEA-02).** The morning option starts at 05:00 instead of 06:00 (`start_times` in places.yaml), so IC 941 Helsinki 05:26 → Turku 07:39 reaches the 08:45 Viking day ferry: Stockholm the same evening (18:55) and most of western Europe 2–14 h sooner. The latest-departure rule keeps everyone else on later trains.
+
 ---
 
 ## D-33 A "direct train" must really run from A to B
