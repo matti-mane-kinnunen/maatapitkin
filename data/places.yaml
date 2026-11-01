@@ -129,7 +129,8 @@ places:
   Irun: {lat: 43.340, lon: -1.801, country: "ES"}  # added by add_leg.py
   Donostia: {lat: 43.317, lon: -1.977, country: "ES", aliases: [San Sebastian, San Sebastián]}  # corrected by hand 31.10.2026
   Gdansk: {lat: 54.410, lon: 18.572, country: "PL"}  # added by add_leg.py
-  Tanger: {lat: 35.771, lon: -5.786, country: "MA"}  # added by add_leg.py
+  Tanger: {lat: 35.771, lon: -5.786, country: "MA", aliases: [Tangier, Tanger Ville]}  # city and Tanger Ville port (Tarifa ferry)
+  Tanger Med: {lat: 35.887, lon: -5.503, country: "MA", aliases: [Tangier Med]}  # port 40 km east of Tangier; Algeciras ferries land here (FIX-05)
   Newcastle: {lat: 54.968, lon: -1.616, country: "GB"}  # added by add_leg.py
   Cairnryan: {lat: 54.963, lon: -5.016, country: "GB"}  # added by add_leg.py
   Östersund: {lat: 63.176, lon: 14.639, country: "SE"}  # added by add_leg.py

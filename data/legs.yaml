@@ -668,10 +668,8 @@ legs:
   - {from: Paris, to: Montpellier, service: "TGV INOUI", mode: train, runs: "fri,sun", times: ["21:25-06:25"], query: "*", checked: 2026-11-01, source: transitous}
   - {from: Paris, to: Montpellier, service: "TGV INOUI", mode: train, runs: "mon-fri", times: ["06:42-10:11"], query: "*", checked: 2026-11-01, source: transitous}
   - {from: Paris, to: Montpellier, service: "TGV INOUI", mode: train, runs: "mon-fri,sun", times: ["19:42-23:11"], query: "*", checked: 2026-11-01, source: transitous}
-  - {from: Algeciras, to: Tanger, dep: "20:30", arr: "21:00", service: "Balearia", mode: ferry, checked: 2026-10-31, source: manual}
   - {from: Tanger, to: Casablanca, service: "TGV", mode: train, every: 60, first: "07:00", last: "21:00", duration: "2:17", checked: 2026-10-31, source: manual}
   - {from: Casablanca, to: Marrakech, service: "IC", mode: train, every: 60, first: "09:54", last: "20:54", duration: "2:43", checked: 2026-10-31, source: manual}
-  - {from: Algeciras, to: Tanger, service: "AML", mode: ferry, every: 180, first: "06:00", last: "21:00", duration: "1:30", checked: 2026-10-31, source: manual}
   - {from: Helsinki, to: Turku, service: "IC", mode: train, times: ["05:26-07:39", "08:35-10:39", "11:35-13:39", "13:35-15:39", "14:35-16:39", "17:35-19:49"], query: "*", checked: 2026-11-01, source: transitous}
   - {from: Helsinki, to: Turku, service: "IC", mode: train, runs: "fri,sat", times: ["10:35-12:39", "22:52-00:59"], query: "*", checked: 2026-11-01, source: transitous}
   - {from: Helsinki, to: Turku, service: "IC", mode: train, runs: "fri,sat,sun", times: ["19:35-21:39"], query: "*", checked: 2026-11-01, source: transitous}
@@ -1096,3 +1094,6 @@ legs:
   - {from: Madrid, to: Santiago de Compostela, dep: "14:40", arr: "17:42", service: "AVE 14:40", mode: train, checked: 2026-11-01, source: manual}
   - {from: Madrid, to: Santiago de Compostela, dep: "17:10", arr: "20:18", service: "AVE 17:10", mode: train, checked: 2026-11-01, source: manual}
   - {from: Madrid, to: Santiago de Compostela, dep: "19:17", arr: "22:19", service: "AVE 19:17", mode: train, checked: 2026-11-01, source: manual}
+  - {from: Algeciras, to: Tanger Med, dep: "20:30", arr: "21:00", service: "Balearia", mode: ferry, checked: 2026-11-01, source: manual}
+  - {from: Algeciras, to: Tanger Med, service: "AML", mode: ferry, every: 180, first: "06:00", last: "21:00", duration: "1:30", checked: 2026-11-01, source: manual}
+  - {from: Tanger Med, to: Tanger, service: "Port shuttle", mode: bus, every: 60, first: "09:00", last: "21:00", duration: "1:00", checked: 2026-11-01, source: manual}

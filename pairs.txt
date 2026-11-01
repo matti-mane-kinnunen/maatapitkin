@@ -157,10 +157,11 @@ Holyhead -> Dublin : IrishFerry ferry 07:30-11:00
 Patras -> Athens : ? bus 14:30-17:30
 Bari -> Durrës : ? ferry night 22:00-07:00
 Durrës -> Tirana : ? bus 10:00-12:40
-Algeciras -> Tanger : Balearia ferry 20:30-21:00
+Algeciras -> Tanger Med : Balearia ferry 20:30-21:00
 Tanger -> Casablanca : TGV every 60 07:00-21:00 2:17
 Casablanca -> Marrakech : IC every 60 09:54-20:54 2:43
-Algeciras -> Tanger : AML ferry every 180 06:00-21:00 1:30
+Algeciras -> Tanger Med : AML ferry every 180 06:00-21:00 1:30
+Tanger Med -> Tanger : Port shuttle bus every 60 09:00-21:00 1:00   # buses meet the ferries but are unreliable; a taxi may be needed (Matti, Feb 2026)
 Algeciras -> Tarifa : FRS shuttle bus every 120 07:45-19:45 1:00
 Tarifa -> Tanger : FRS ferry every 120 09:00-21:00 1:00
 Turku -> Stockholm : Viking ferry 08:45-18:55
