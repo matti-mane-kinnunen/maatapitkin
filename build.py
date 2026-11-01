@@ -68,8 +68,59 @@ def main():
         if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
             ap.error(f"start must be a time like 17, 0800 or 08:00 (got {args.start!r})")
         net.settings["start_time"] = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
-    s = net.settings
-    origin = s.get("origin", "Helsinki")
+    # one map page per origin (IDEA-04): the first is index.html, the others e.g. stockholm.html
+    origins = net.settings.get("origins") or {net.settings.get("origin", "Helsinki"): {"page": "index.html"}}
+    pages = [{"name": o, "page": c.get("page") or f"{slugify(o)}.html"} for o, c in origins.items()]
+    summaries = {}
+    for k, (origin, cfg) in enumerate(origins.items()):
+        if origin not in net.places:
+            ap.error(f"origin {origin!r} is not in places.yaml")
+        cfg = dict(cfg or {}, page=pages[k]["page"])
+        summaries[origin] = build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
+    # a small summary, committed every week, so the next run can tell if something broke;
+    # the first origin at the top level (as before), the others under "origins"
+    first, *others = summaries
+    summary = dict(summaries[first], origins={o: summaries[o] for o in others})
+    (ROOT / "out" / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
+
+
+def compact_route(r: dict) -> dict:
+    """The map's copy of a journey, without what the page can rebuild from the timetable
+    (station names, services, dates as text): a leg is ["l", leg, dep, arr], a hotel night or
+    a change ["s"/"c", place, from, to, nights]. Keeps the page small (FIX: 9 MB -> ~4 MB)."""
+    if r.get("same_as_default"):
+        return r
+    out = {k: v for k, v in r.items() if k not in ("steps", "depart_txt", "arrive_txt", "signature", "alternatives")}
+    out["steps"] = [["l", x["i"], x["dep"], x["arr"]] if x["kind"] == "leg"
+                    else [x["kind"][0], x["place"], x["t0"], x["t1"], x.get("nights", 0)] for x in r["steps"]]
+    if r.get("alternatives"):
+        out["alternatives"] = [compact_route(a) for a in r["alternatives"]]
+    return out
+
+
+def compact_variants(variants: dict) -> dict:
+    def one(v):
+        o = {k: x for k, x in v.items() if k not in ("yes", "no", "starts")}
+        for key in ("yes", "no"):
+            if key in v:
+                o[key] = {**v[key], "routes": [compact_route(r) for r in v[key]["routes"]],
+                          "city_routes": [compact_route(r) for r in v[key]["city_routes"]]}
+        if "starts" in v:
+            o["starts"] = {t: one(sv) for t, sv in v["starts"].items()}
+        return o
+    return {d: one(v) for d, v in variants.items()}
+
+
+def slugify(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, main_origin: bool) -> dict:
+    """Journeys, route table and map page for one origin (IDEA-04). Returns its summary."""
+    s = dict(net.settings)
+    for k in ("start_time", "start_times"):                # an origin may have its own start times
+        if k in cfg and not (k == "start_time" and args.start is not None) and not (k == "start_times" and args.starts):
+            s[k] = cfg[k]
     today = dt.date.today()
     start_date = dt.date.fromisoformat(str(args.date or s.get("start_date") or
                                            (today + dt.timedelta(days=(7 - today.weekday()) % 7 or 7))))
@@ -78,6 +129,7 @@ def main():
 
     outdir = ROOT / "out"
     outdir.mkdir(exist_ok=True)
+    suffix = "" if main_origin else "-" + slugify(origin)    # routes-stockholm.md, network-stockholm.json
     start = hm(s.get("start_time", "00:00"))
     ALTERNATIVES = [("Fewest changes", "changes", lambda c, h, t: (c, t, h)),
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
@@ -104,7 +156,7 @@ def main():
                 if st["kind"] != "leg":
                     steps.append({"kind": st["kind"], "place": st["place"], "from_t": when(st["from"]),
                                   "to_t": when(st["to"]), "minutes": st["to"] - st["from"],
-                                  "nights": st.get("nights", 0)})
+                                  "nights": st.get("nights", 0), "t0": st["from"], "t1": st["to"]})
                     continue
                 leg = st["leg"]
                 steps.append({"kind": "leg", "i": leg.idx, "from": leg.frm, "to": leg.to, "service": leg.service,
@@ -323,7 +375,7 @@ def main():
     md += ["## Capitals not reachable with the current legs", ""]
     md += [f"- {c}" for c in unreached + list(net.not_covered)] or ["- none"]
     md += ["", "## Data issues", ""] + ([f"- {w}" for w in warnings] or ["- none"])
-    (outdir / "routes.md").write_text("\n".join(md) + "\n")
+    (outdir / f"routes{suffix}.md").write_text("\n".join(md) + "\n")
 
     # --- data for the map ---------------------------------------------------------
     legs_json = [{"i": l.idx, "from": l.frm, "to": l.to, "service": l.service, "mode": l.mode,
@@ -335,9 +387,9 @@ def main():
                       (utc_offset(net.places[l.to], start_date, ((l.dep or 0) + l.duration) % DAY)
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in net.legs]
-    (outdir / "network.json").write_text(json.dumps({
-        "origin": origin, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
-        "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": variants,
+    (outdir / f"network{suffix}.json").write_text(json.dumps({
+        "origin": origin, "pages": pages, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
                      "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
@@ -347,10 +399,10 @@ def main():
     }, ensure_ascii=False, indent=1))
 
     import make_map
-    make_map.build(ROOT)
+    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin)
 
     # a small summary, committed every week, so the next run can tell if something broke
-    (outdir / "summary.json").write_text(json.dumps({
+    summary = {
         "generated": today.isoformat(), "dates": [d.isoformat() for d in dates],
         "departures": len(net.legs), "warnings": len(warnings),
         "capitals": {k: {"with_night_trains": len(v["yes"]["routes"]), "without": len(v["no"]["routes"])}
@@ -361,12 +413,14 @@ def main():
                     "capitals_without_night_trains": sorted(r["capital"] for r in variants[dates[0].isoformat()]["no"]["routes"]),
                     "places": sorted(r["capital"] for r in variants[dates[0].isoformat()]["yes"]["routes"]
                                      + variants[dates[0].isoformat()]["yes"]["city_routes"])},
-    }, indent=1) + "\n")
+    }
 
-    print(f"{len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
+    print(f"From {origin}: {len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
           f"{len(warnings)} warnings -> {outdir}/")
-    for w in warnings:
-        print("  !", w)
+    if main_origin:
+        for w in warnings:
+            print("  !", w)
+    return summary
 
 
 if __name__ == "__main__":

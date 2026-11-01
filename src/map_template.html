@@ -38,6 +38,9 @@ header { display: flex; flex-wrap: wrap; align-items: end; justify-content: spac
 h1 { font: 700 clamp(2rem, 5vw, 3.2rem)/0.95 var(--display); letter-spacing: 0.01em; margin: 0; text-transform: uppercase }
 h1 small { display: block; font: 500 1rem/1.3 var(--body); text-transform: none; color: var(--muted); margin-top: 6px; letter-spacing: 0 }
 .meta { font: 400 12px/1.5 var(--mono); color: var(--muted); text-align: right }
+.origins { order: 3; flex-basis: 100%; font: 500 14px/1.4 var(--body); color: var(--muted) }
+.origins a { color: var(--accent); text-underline-offset: 2px }
+.origins b { color: var(--fg) }
 .grid { display: grid; grid-template-columns: minmax(280px, 360px) minmax(0, 1fr); gap: 20px; align-items: start }
 @media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr) } .board { order: 2 } .meta { text-align: left } }
 
@@ -197,17 +200,18 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
 <div class="wrap">
   <header>
-    <h1>Maata pitkin<small>Helsinki to European capitals by train and ferry — fastest connection from the timetable data</small></h1>
+    <h1>Maata pitkin<small>__ORIGIN__ to European capitals by train and ferry — fastest connection from the timetable data</small></h1>
+    <nav class="origins" id="origins" aria-label="Maps from other cities"></nav>
     <div class="meta" id="meta"></div>
   </header>
   <div class="grid">
     <aside class="board" aria-label="Capitals by arrival time">
-      <h2><span>Arrivals from Helsinki</span><span>door to door</span></h2>
+      <h2><span>Arrivals from __ORIGIN__</span><span>door to door</span></h2>
       <div class="tools">
         <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
         <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
-        <div class="seg" id="f-date" role="group" aria-label="Leave Helsinki on"><span>Leave</span></div>
-        <div class="seg" id="f-start" role="group" aria-label="Leave Helsinki from"><span>From</span></div>
+        <div class="seg" id="f-date" role="group" aria-label="Leave __ORIGIN__ on"><span>Leave</span></div>
+        <div class="seg" id="f-start" role="group" aria-label="Leave __ORIGIN__ from"><span>From</span></div>
         <div class="seg" id="f-night" role="group" aria-label="Night trains">
           <span>Night trains</span><button type="button" data-n="1">allowed</button><button type="button" data-n="0">avoid</button>
         </div>
@@ -263,6 +267,34 @@ const DEF_START = NET.default_start || null, STARTS = NET.starts || [];
 let curStart = DEF_START;
 const varOf = (date, t) => { const b = VARS[date]; return (t && t !== DEF_START && b.starts && b.starts[t]) || b; };
 const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";
+// journeys are stored compactly (build.py compact_route): rebuild the full steps from the timetable
+const LEG_BY_I = Object.fromEntries((NET.legs || []).map(l => [l.i, l]));
+const WDAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+function whenTxt(date, t) {                       // like build.py: "Tue 3.11. 17:35"
+  const d = new Date(date + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + Math.floor(t / 1440));
+  const m = ((t % 1440) + 1440) % 1440;
+  return `${WDAY[d.getUTCDay()]} ${d.getUTCDate()}.${d.getUTCMonth() + 1}. ${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
+}
+function expandRoute(r, date) {
+  if (!r || r.same_as_default || !Array.isArray(r.steps) || !Array.isArray(r.steps[0])) return r;
+  r.steps = r.steps.map(x => {
+    if (x[0] === "l") {
+      const l = LEG_BY_I[x[1]] || {};
+      return { kind: "leg", i: x[1], from: l.from, to: l.to, service: l.service, mode: l.mode, night: l.night,
+               dep: x[2], arr: x[3], dep_txt: whenTxt(date, x[2]), arr_txt: whenTxt(date, x[3]),
+               timed: l.dep != null, issue: l.issue, note: l.note };
+    }
+    return { kind: x[0] === "s" ? "stay" : "change", place: x[1], from_t: whenTxt(date, x[2]), to_t: whenTxt(date, x[3]),
+             minutes: x[3] - x[2], nights: x[4] };
+  });
+  r.depart_txt = whenTxt(date, r.depart); r.arrive_txt = whenTxt(date, r.arrive);
+  (r.alternatives || []).forEach(a => expandRoute(a, date));
+  return r;
+}
+if (VARS) for (const [date, v] of Object.entries(VARS))
+  for (const sv of [v, ...Object.values(v.starts || {})])
+    for (const key of ["yes", "no"]) if (sv[key])
+      for (const list of ["routes", "city_routes"]) (sv[key][list] || []).forEach(r => expandRoute(r, date));
 // fill in the journeys stored only as "same as the default start"
 if (VARS) for (const v of Object.values(VARS)) for (const sv of Object.values(v.starts || {}))
   for (const key of ["yes", "no"]) {
@@ -277,6 +309,17 @@ if (VARS) {
                        no_night_trains: v0.no, start_date: curDate, version: v0.version });
 }
 const P = {...NET.places, ...NET.not_covered};
+// links to the maps from other origins (IDEA-04): "Also from: Stockholm · London"
+(function () {
+  const nav = document.getElementById("origins"), pages = NET.pages || [];
+  if (pages.length < 2) { nav.hidden = true; return; }
+  nav.append("Maps from: ");
+  pages.forEach((p, i) => {
+    if (i) nav.append(" · ");
+    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = p.name; b.setAttribute("aria-current", "page"); nav.append(b); }
+    else { const a = document.createElement("a"); a.href = p.page; a.textContent = p.name; nav.append(a); }
+  });
+})();
 const SVGNS = "http://www.w3.org/2000/svg";
 const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(SVGNS, tag);
   for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
@@ -807,7 +850,7 @@ function select(cap, opt = 0, fromMap = false) {
   }
   curRoute = r;
   drawMarks(); layoutMain(); layoutCities(); placeHits();
-  document.getElementById("itin-title").textContent = `Helsinki → ${cap}`;
+  document.getElementById("itin-title").textContent = `${NET.origin} → ${cap}`;
   document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}` +
     (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "") +
     (curStart !== DEF_START ? (r0.same_as_default ? ` · leaving earlier doesn't help: the ${partOfDay(DEF_START)} journey` : ` · from ${curStart}`) : "");

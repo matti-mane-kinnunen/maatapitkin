@@ -58,6 +58,18 @@ def main():
             problems.append(f"fewer capitals reached ({oc['with_night_trains']} → {nc['with_night_trains']})")
         if nc["without"] < oc["without"] - 2:
             problems.append(f"fewer capitals reached without night trains ({oc['without']} → {nc['without']})")
+        # the other origins' maps (IDEA-04): no capital may go missing there either
+        for o, sn in (new.get("origins") or {}).items():
+            so = (old.get("origins") or {}).get(o)
+            if not so:
+                lines.append(f"From {o}: first run, nothing to compare.")
+                continue
+            a_, b_ = first(so["capitals"]), first(sn["capitals"])
+            lines.append(f"From {o}: {b_['with_night_trains']} capitals (last run {a_['with_night_trains']}).")
+            if b_["with_night_trains"] < a_["with_night_trains"]:
+                lost = sorted(set(so.get("reached", {}).get("capitals", [])) - set(sn.get("reached", {}).get("capitals", [])))
+                problems.append(f"from {o}: fewer capitals reached ({a_['with_night_trains']} → {b_['with_night_trains']})"
+                                + (f": {', '.join(lost)}" if lost else ""))
         if new["warnings"] > old["warnings"]:
             problems.append(f"more data warnings ({old['warnings']} → {new['warnings']})")
         # which ones (the summary has names since 1.11.2026)

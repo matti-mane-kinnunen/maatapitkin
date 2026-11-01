@@ -9,3 +9,4 @@ out/site/
 lookup.log
 build.log
 check.md
+out/network-*.json

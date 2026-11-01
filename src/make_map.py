@@ -5,6 +5,7 @@ data/basemap.geojson and are projected here into SVG paths.
 """
 from __future__ import annotations
 
+import html
 import json
 import math
 from pathlib import Path
@@ -62,8 +63,9 @@ def basemap_paths(geojson: dict) -> str:
     return "".join(out)
 
 
-def build(root: Path):
-    net = json.loads((root / "out" / "network.json").read_text())
+def build(root: Path, net_file: str = "network.json", page_name: str = "index.html", fragment: bool = True):
+    """Write the map page for one origin: out/site/<page_name> (and out/map.html for the first origin)."""
+    net = json.loads((root / "out" / net_file).read_text())
     base = json.loads((root / "data" / "basemap.geojson").read_text())
     net["off_map"] = fit(net["places"], net["not_covered"], tuple(base.get("extent", (-32, 25, 50, 72))))
     for name, p in {**net["places"], **net["not_covered"]}.items():
@@ -74,16 +76,18 @@ def build(root: Path):
     tpl = (root / "src" / "map_template.html").read_text()
     page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
-               .replace("__W__", str(w)).replace("__H__", str(h)))
-    (root / "out" / "map.html").write_text(page)          # fragment: paste into a page or publish as is
+               .replace("__W__", str(w)).replace("__H__", str(h))
+               .replace("__ORIGIN__", html.escape(net["origin"])))
+    if fragment:
+        (root / "out" / "map.html").write_text(page)      # fragment: paste into a page or publish as is
     site = root / "out" / "site"                             # a complete page for GitHub Pages
     site.mkdir(exist_ok=True)
-    (site / "index.html").write_text(
+    (site / page_name).write_text(
         '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        '<meta name="description" content="Overland journeys from Helsinki to the European capitals by train, ferry and bus.">\n'
+        f'<meta name="description" content="Overland journeys from {html.escape(net["origin"])} to the European capitals by train, ferry and bus.">\n'
         '</head>\n<body>\n' + page + '\n</body>\n</html>\n')
-    return root / "out" / "map.html"
+    return site / page_name
 
 
 if __name__ == "__main__":
