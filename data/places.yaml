@@ -37,7 +37,6 @@ places:
   Toulouse:   {lat: 43.611, lon: 1.454, country: FR}
   Luxembourg: {lat: 49.600, lon: 6.134, capital: true, country: LU, aliases: [Luxemburg]}
   Amsterdam:  {lat: 52.379, lon: 4.900, capital: true, country: NL}
-  The Hague:  {lat: 52.080, lon: 4.325, country: NL, note: seat of government, aliases: [Den Haag, Haag]}
   Brussels:   {lat: 50.836, lon: 4.336, capital: true, country: BE, aliases: [Bruxelles, Brussel, Bryssel, Brüssel]}
   London:     {lat: 51.532, lon: -0.126, capital: true, country: GB, min_transfer: 60}  # St Pancras -> Euston
   Edinburgh:  {lat: 55.952, lon: -3.189, country: GB}
