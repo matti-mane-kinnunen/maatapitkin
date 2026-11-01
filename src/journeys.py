@@ -195,7 +195,8 @@ class Router:
       * ferry: `ferry_checkin` before departure; Eurostar: `eurostar_checkin`
       * if the wait at a place spans the night (contains `night_point`, 03:00), it is a
         hotel stay: the next departure must be at or after `morning_departure` (07:00)
-        unless it is a night train/ferry you board the same evening
+        and at least `min_hotel_stay` after arriving (8 h: arrive 01:00, leave 09:00 at
+        the earliest), unless it is a night train/ferry you board the same evening
       * `max_stay_nights`: never wait more than this many nights at one place
       * `quiet_hours` (00:00-05:00): nobody travels then except on night trains and
         night ferries; a wait that touches these hours before an ordinary train is a
@@ -212,6 +213,7 @@ class Router:
         self.eurostar_checkin = int(s.get("eurostar_checkin", 45))
         self.night_point = hm(s.get("night_point", "03:00"))
         self.morning = hm(s.get("morning_departure", "07:00"))
+        self.min_stay = hm(s.get("min_hotel_stay", "0:00"))    # FIX-07: at least this long in the hotel
         self.max_nights = int(s.get("max_stay_nights", 2))
         q0, q1 = str(s.get("quiet_hours", "00:00-05:00")).replace("–", "-").split("-")
         self.quiet = (hm(q0), hm(q1))
@@ -269,7 +271,7 @@ class Router:
             if not leg.night and self.in_quiet(t):                # nothing ordinary runs at night
                 t = (t // DAY) * DAY + self.quiet[1]
             if not first_leg and self.is_stay(arrival, t, leg):
-                t = max(t, (t // DAY) * DAY + self.morning)
+                t = max(t, (t // DAY) * DAY + self.morning, arrival + self.min_stay)
             return t
         for k in range(0, self.max_nights + 2):
             t = (ready // DAY + k) * DAY + leg.dep
@@ -281,6 +283,8 @@ class Router:
                 if (t - arrival) // DAY >= self.max_nights:
                     return None
                 if t % DAY < self.morning:                     # no 05:00 starts after a hotel night
+                    continue
+                if t - arrival < self.min_stay:                # arrive 01:00 -> not before 09:00 (FIX-07)
                     continue
             return t
         return None

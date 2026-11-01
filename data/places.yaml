@@ -13,6 +13,7 @@ settings:
   eurostar_checkin: 60       # minutes before Eurostar (service starting EST/ES); passport control is unpredictable
   night_point: "01:00"       # a wait that includes this time is an overnight (hotel) stay
   morning_departure: "06:00" # earliest departure after a hotel night
+  min_hotel_stay: "8:00"     # and at least this long after arriving: arrive 01:00, leave 09:00 at the earliest (FIX-07)
   quiet_hours: "00:00-05:00" # only night trains and night ferries run then; a wait touching them is a hotel night
   max_stay_nights: 2         # never wait longer than this at one place
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower

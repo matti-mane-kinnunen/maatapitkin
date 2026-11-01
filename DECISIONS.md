@@ -676,6 +676,22 @@ into the shell script.
 
 ---
 
+## D-39 A hotel night lasts at least 8 hours
+**Date:** 1.11.2026 · **Status:** Accepted
+
+**Context.** Journeys sometimes arrived in the middle of the night and counted a short wait as
+a hotel night, e.g. Köln 03:14 → 06:39 (3 h 25) on the way to Lisbon (FIX-07).
+
+**Decision.** After a hotel night the next departure must be at least `min_hotel_stay` (8 h)
+after arriving, as well as no earlier than `morning_departure` (06:00): arrive 01:00, leave 09:00
+at the earliest; arrive 21:00, leave 06:00. Matti's rule: enough for at least a short sleep.
+
+**Consequences.** No destination lost; 87 of 976 arrivals later (Helsinki map, 3.11.), the
+largest in the no-night-train mode (Lisbon, Porto, Faro +1 day). With night trains the router
+now prefers a night on board over a short hotel stop where one exists.
+
+---
+
 ## Template for a new decision
 
 ```
