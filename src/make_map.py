@@ -77,7 +77,8 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
     page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h))
-               .replace("__ORIGIN__", html.escape(net["origin"])))
+               .replace("__ORIGIN__", html.escape(net["origin"]))
+               .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin")))
     if fragment:
         (root / "out" / "map.html").write_text(page)      # fragment: paste into a page or publish as is
     site = root / "out" / "site"                             # a complete page for GitHub Pages
