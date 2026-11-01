@@ -28,7 +28,7 @@ _leave Helsinki Tue 3.11.2026 from 17:00 · generated 1.11.2026. Change 20 min (
 | Monaco | Tue 3.11. 17:35 | Thu 5.11. 19:27 | 50 h 52 min | 7 | 2 | 1 (Köln) | fewest changes: 52 h 43 min, 6 ch., 1 hotel; fewest hotel nights: 50 h 52 min, 9 ch., 0 hotel |
 | Zagreb | Tue 3.11. 17:35 | Thu 5.11. 22:20 | 53 h 45 min | 5 | 2 | 0 |  |
 | Madrid | Tue 3.11. 17:35 | Thu 5.11. 23:44 | 55 h 09 min | 7 | 2 | 1 (Köln) | fewest changes: 64 h 15 min, 6 ch., 2 hotel; fewest hotel nights: 55 h 09 min, 9 ch., 0 hotel |
-| Belgrade | Tue 3.11. 17:35 | Fri 6.11. 07:15 | 62 h 40 min | 8 | 2 | 1 (Subotica) | fewest hotel nights: 70 h 40 min, 8 ch., 0 hotel |
+| Belgrade | Tue 3.11. 17:35 | Fri 6.11. 07:15 | 62 h 40 min | 8 | 2 | 1 (Subotica) | fewest hotel nights: 74 h 00 min, 8 ch., 0 hotel |
 | Bucharest | Tue 3.11. 17:35 | Fri 6.11. 10:37 | 65 h 02 min | 6 | 3 | 0 |  |
 | Dublin | Tue 3.11. 17:35 | Fri 6.11. 11:00 | 67 h 25 min | 7 | 2 | 2 (Köln, Holyhead) | fewest hotel nights: 67 h 25 min, 9 ch., 1 hotel |
 | Belfast | Tue 3.11. 17:35 | Fri 6.11. 15:58 | 72 h 23 min | 8 | 2 | 2 (Köln, Holyhead) | fewest hotel nights: 72 h 23 min, 10 ch., 1 hotel |
@@ -76,9 +76,8 @@ _Night trains and night buses left out; night ferries still used._
 | Lisbon | Fri 6.11. 22:20 | 78 h 45 min | 12 | 2 (Frankfurt, Barcelona) | same |
 | Tirana | Sat 7.11. 12:40 | 92 h 05 min | 7 | 2 (Hamburg, Bologna) | same |
 | Athens | Sat 7.11. 17:30 | 95 h 55 min | 7 | 2 (Hamburg, Bologna) | same |
-| Valletta | Sat 7.11. 23:15 | 102 h 40 min | 10 | 3 (Hamburg, Rome, Syracuse) | +24 h 00 min |
 
-Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
+Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 
 ## Leaving from 06:00 instead of 17:00
 
@@ -174,12 +173,12 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Irun | Thu 5.11. 17:37 | 49 h 02 min | 6 | 1 |
 | Wroclaw | Thu 5.11. 17:44 | 35 h 14 min | 6 | 1 |
 | Nice | Thu 5.11. 18:39 | 50 h 04 min | 6 | 1 |
+| Donostia | Thu 5.11. 18:43 | 50 h 08 min | 7 | 1 |
 | Manchester | Thu 5.11. 17:44 | 50 h 09 min | 6 | 1 |
 | Naples | Thu 5.11. 19:13 | 50 h 38 min | 9 | 0 |
 | Szeged | Thu 5.11. 19:16 | 50 h 41 min | 8 | 0 |
 | Barcelona | Thu 5.11. 19:23 | 50 h 48 min | 6 | 1 |
 | Trieste | Thu 5.11. 19:27 | 50 h 52 min | 8 | 0 |
-| Donostia | Thu 5.11. 20:05 | 51 h 30 min | 7 | 1 |
 | Ventimiglia | Thu 5.11. 20:21 | 51 h 46 min | 7 | 1 |
 | Edinburgh | Thu 5.11. 19:37 | 52 h 02 min | 6 | 1 |
 | Glasgow | Thu 5.11. 20:02 | 52 h 27 min | 6 | 1 |
@@ -189,7 +188,6 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Subotica | Thu 5.11. 23:18 | 54 h 43 min | 7 | 0 |
 | Valencia | Thu 5.11. 23:34 | 54 h 59 min | 7 | 1 |
 | Villa San Giovanni | Fri 6.11. 03:30 | 58 h 55 min | 5 | 0 |
-| Taormina | Fri 6.11. 05:15 | 60 h 40 min | 6 | 0 |
 | Palermo | Fri 6.11. 09:13 | 64 h 38 min | 6 | 0 |
 | Sevilla | Fri 6.11. 09:35 | 65 h 00 min | 8 | 2 |
 | Santiago de Compostela | Fri 6.11. 09:56 | 65 h 21 min | 8 | 2 |
@@ -210,6 +208,7 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Marrakech | Fri 6.11. 22:37 | 79 h 02 min | 11 | 2 |
 | Split | Sat 7.11. 07:00 | 86 h 25 min | 6 | 1 |
 | Durrës | Sat 7.11. 07:00 | 86 h 25 min | 6 | 1 |
+| Taormina | Sat 7.11. 10:08 | 89 h 33 min | 7 | 2 |
 | Porto | Sat 7.11. 09:43 | 90 h 08 min | 10 | 3 |
 | Patras | Sat 7.11. 13:00 | 91 h 25 min | 6 | 1 |
 | Faro | Sat 7.11. 11:27 | 91 h 52 min | 10 | 3 |
@@ -736,20 +735,19 @@ _Fastest: 62 h 40 min, arrive Fri 6.11. 07:15, 8 changes, 1 hotel nights_
 - Fri 6.11. 06:00 → Fri 6.11. 07:15  **Subotica → Belgrade**  IC
 
 ### Belgrade — fewest hotel nights
-_Fewest hotel nights: 70 h 40 min, arrive Fri 6.11. 15:15, 8 changes, 0 hotel nights_
+_Fewest hotel nights: 74 h 00 min, arrive Fri 6.11. 18:35, 8 changes, 0 hotel nights_
 
 - Tue 3.11. 17:35 → Tue 3.11. 19:49  **Helsinki → Turku**  IC
 - Tue 3.11. 20:55 → Wed 4.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
 - Wait 10 h 59 min in Stockholm
 - Wed 4.11. 17:29 → Thu 5.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
 - Thu 5.11. 06:34 → Thu 5.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 5 h 06 min in Berlin
-- Thu 5.11. 13:28 → Thu 5.11. 17:15  **Berlin → Prague**  RJ
-- Wait 7 h 21 min in Prague
-- Fri 6.11. 00:36 → Fri 6.11. 08:29  **Prague → Budapest**  rj  (night)
-- Fri 6.11. 08:50 → Fri 6.11. 11:16  **Budapest → Szeged**  InterCity
-- Fri 6.11. 12:04 → Fri 6.11. 13:24  **Szeged → Subotica**  SZ
-- Fri 6.11. 14:00 → Fri 6.11. 15:15  **Subotica → Belgrade**  IC
+- Wait 11 h 49 min in Berlin
+- Thu 5.11. 20:11 → Fri 6.11. 07:00  **Berlin → Vienna**  IC  (night)
+- Fri 6.11. 07:40 → Fri 6.11. 10:35  **Vienna → Budapest**  xpress
+- Fri 6.11. 11:48 → Fri 6.11. 14:16  **Budapest → Szeged**  InterCity
+- Fri 6.11. 15:04 → Fri 6.11. 16:24  **Szeged → Subotica**  SZ
+- Fri 6.11. 17:00 → Fri 6.11. 18:35  **Subotica → Belgrade**  IC
 
 ### Bucharest
 _Fastest: 65 h 02 min, arrive Fri 6.11. 10:37, 6 changes, 0 hotel nights_
@@ -942,10 +940,10 @@ _Fewest hotel nights: 92 h 05 min, arrive Sat 7.11. 12:40, 8 changes, 0 hotel ni
 - Wait 4 h 13 min in Stockholm
 - Wed 4.11. 10:43 → Wed 4.11. 21:57  **Stockholm → Hamburg**  IC
 - Wed 4.11. 22:28 → Thu 5.11. 06:57  **Hamburg → Munich**  ICE  (night)
-- Wait 3 h 55 min in Munich
-- Thu 5.11. 10:52 → Thu 5.11. 12:28  **Munich → Zürich**  EC
-- Thu 5.11. 13:33 → Thu 5.11. 16:53  **Zürich → Milan**  EC
-- Wait 2 h 52 min in Milan
+- Wait 2 h 26 min in Munich
+- Thu 5.11. 09:23 → Thu 5.11. 16:08  **Munich → Bologna**  ICE
+- Thu 5.11. 16:36 → Thu 5.11. 17:50  **Bologna → Milan**  FR
+- Wait 1 h 55 min in Milan
 - Thu 5.11. 19:45 → Fri 6.11. 07:00  **Milan → Bari**  FR  (night)
 - Wait 15 h 00 min in Bari
 - Fri 6.11. 22:00 → Sat 7.11. 07:00  **Bari → Durrës**  ?  (night)
@@ -977,10 +975,10 @@ _Fewest hotel nights: 95 h 55 min, arrive Sat 7.11. 17:30, 8 changes, 0 hotel ni
 - Wait 4 h 13 min in Stockholm
 - Wed 4.11. 10:43 → Wed 4.11. 21:57  **Stockholm → Hamburg**  IC
 - Wed 4.11. 22:28 → Thu 5.11. 06:57  **Hamburg → Munich**  ICE  (night)
-- Wait 3 h 55 min in Munich
-- Thu 5.11. 10:52 → Thu 5.11. 12:28  **Munich → Zürich**  EC
-- Thu 5.11. 13:33 → Thu 5.11. 16:53  **Zürich → Milan**  EC
-- Wait 2 h 52 min in Milan
+- Wait 2 h 26 min in Munich
+- Thu 5.11. 09:23 → Thu 5.11. 16:08  **Munich → Bologna**  ICE
+- Thu 5.11. 16:36 → Thu 5.11. 17:50  **Bologna → Milan**  FR
+- Wait 1 h 55 min in Milan
 - Thu 5.11. 19:45 → Fri 6.11. 07:00  **Milan → Bari**  FR  (night)
 - Wait 12 h 30 min in Bari
 - Fri 6.11. 19:30 → Sat 7.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
@@ -995,11 +993,10 @@ _Fastest: 99 h 06 min, arrive Sat 7.11. 20:41, 8 changes, 0 hotel nights_
 - Wait 10 h 59 min in Stockholm
 - Wed 4.11. 17:29 → Thu 5.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
 - Thu 5.11. 06:34 → Thu 5.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 5 h 06 min in Berlin
-- Thu 5.11. 13:28 → Thu 5.11. 17:15  **Berlin → Prague**  RJ
-- Wait 7 h 21 min in Prague
-- Fri 6.11. 00:36 → Fri 6.11. 08:29  **Prague → Budapest**  rj  (night)
-- Wait 6 h 41 min in Budapest
+- Wait 11 h 49 min in Berlin
+- Thu 5.11. 20:11 → Fri 6.11. 07:00  **Berlin → Vienna**  IC  (night)
+- Fri 6.11. 07:40 → Fri 6.11. 10:35  **Vienna → Budapest**  xpress
+- Wait 4 h 35 min in Budapest
 - Fri 6.11. 15:10 → Sat 7.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 2 h 23 min in Bucharest
 - Sat 7.11. 10:46 → Sat 7.11. 13:40  **Bucharest → Ruse**  1095
@@ -1013,11 +1010,10 @@ _Fastest: 138 h 41 min, arrive Mon 9.11. 13:16, 10 changes, 1 hotel nights_
 - Wait 10 h 59 min in Stockholm
 - Wed 4.11. 17:29 → Thu 5.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
 - Thu 5.11. 06:34 → Thu 5.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 5 h 06 min in Berlin
-- Thu 5.11. 13:28 → Thu 5.11. 17:15  **Berlin → Prague**  RJ
-- Wait 7 h 21 min in Prague
-- Fri 6.11. 00:36 → Fri 6.11. 08:29  **Prague → Budapest**  rj  (night)
-- Wait 6 h 41 min in Budapest
+- Wait 11 h 49 min in Berlin
+- Thu 5.11. 20:11 → Fri 6.11. 07:00  **Berlin → Vienna**  IC  (night)
+- Fri 6.11. 07:40 → Fri 6.11. 10:35  **Vienna → Budapest**  xpress
+- Wait 4 h 35 min in Budapest
 - Fri 6.11. 15:10 → Sat 7.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 2 h 23 min in Bucharest
 - Sat 7.11. 10:46 → Sat 7.11. 13:40  **Bucharest → Ruse**  1095
