@@ -45,7 +45,6 @@ Amsterdam -> Brussels : *
 Amsterdam -> Paris : *
 Brussels -> Paris : *
 Brussels -> London : *
-Frankfurt -> Luxemburg : *
 Paris -> Barcelona : *
 Paris -> Nice : *
 Paris -> Marseille : *
@@ -63,7 +62,7 @@ Rome -> Napoli : *
 Lisbon -> Porto : *
 Madrid -> San Sebastian: *
 Madrid -> Malaga : *
-Madrid -> Algeciras : *
+Madrid -> Algeciras : Alvia 08:30-13:59   # daily direct Alvia (Rome2Rio); Transitous does not offer it as direct
 
 
 Vilnius -> Mockava : *
@@ -117,7 +116,6 @@ Helsinki -> Turku : *
 Köln -> Paris : *
 Newcastle -> Edinburgh : *
 London -> Edinburgh : *
-London -> Cairnryan : *
 Stockholm -> Östersund : *
 Östersund -> Storlien : *
 Storlien -> Trondheim : *
@@ -212,3 +210,10 @@ Sofia -> Varna : *
 Turku -> Stockholm : Viking Line ferry night 20:55-06:30
 Bari -> Patras : Anek Superfast ferry night 19:30-13:00 mon-sat
 Ancona -> Split : Jadrolinija 53 ferry night 19:45-07:00 tue,fri
+
+# --- Luxembourg: real direct trains (Frankfurt -> Luxembourg has none) ---
+Brussels -> Luxembourg : *
+Paris -> Luxembourg : *
+Frankfurt -> Koblenz : *
+Köln -> Koblenz : *
+Koblenz -> Luxembourg : *

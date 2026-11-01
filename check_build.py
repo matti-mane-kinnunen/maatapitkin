@@ -60,6 +60,18 @@ def main():
             problems.append(f"fewer capitals reached without night trains ({oc['without']} → {nc['without']})")
         if new["warnings"] > old["warnings"]:
             problems.append(f"more data warnings ({old['warnings']} → {new['warnings']})")
+        # which ones (the summary has names since 1.11.2026)
+        o, n = old.get("reached"), new.get("reached")
+        if o and n:
+            for key, what in (("capitals", "Capitals no longer reached"),
+                              ("capitals_without_night_trains", "Capitals no longer reached without night trains"),
+                              ("places", "Places no longer reached")):
+                lost = sorted(set(o.get(key, [])) - set(n.get(key, [])))
+                gained = sorted(set(n.get(key, [])) - set(o.get(key, [])))
+                if lost:
+                    lines.append(f"{what}: {', '.join(lost)}")
+                if gained and key == "places":
+                    lines.append(f"Newly reached: {', '.join(gained)}")
 
     lines.append("")
     if problems:

@@ -356,6 +356,11 @@ def main():
         "capitals": {k: {"with_night_trains": len(v["yes"]["routes"]), "without": len(v["no"]["routes"])}
                      for k, v in variants.items()},
         "places_reached": {k: len(v["yes"]["routes"]) + len(v["yes"]["city_routes"]) for k, v in variants.items()},
+        # names too, so the weekly check can say what went missing (first travel date)
+        "reached": {"capitals": sorted(r["capital"] for r in variants[dates[0].isoformat()]["yes"]["routes"]),
+                    "capitals_without_night_trains": sorted(r["capital"] for r in variants[dates[0].isoformat()]["no"]["routes"]),
+                    "places": sorted(r["capital"] for r in variants[dates[0].isoformat()]["yes"]["routes"]
+                                     + variants[dates[0].isoformat()]["yes"]["city_routes"])},
     }, indent=1) + "\n")
 
     print(f"{len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
