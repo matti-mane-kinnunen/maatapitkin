@@ -18,10 +18,10 @@ _leave Copenhagen Tue 3.11.2026 from 06:00 · generated 1.11.2026. Change 20 min
 | Budapest | Tue 3.11. 06:22 | Wed 4.11. 08:29 | 26 h 07 min | 3 | 1 | 0 |  |
 | Helsinki | Tue 3.11. 06:03 | Wed 4.11. 10:10 | 27 h 07 min | 2 | 1 | 0 |  |
 | London | Tue 3.11. 06:22 | Wed 4.11. 08:30 | 27 h 08 min | 3 | 0 | 1 (Paris) | fewest hotel nights: 33 h 08 min, 4 ch., 0 hotel |
-| Luxembourg | Tue 3.11. 06:22 | Wed 4.11. 09:43 | 27 h 21 min | 4 | 0 | 1 (Brussels) | fewest changes: 27 h 23 min, 3 ch., 1 hotel; fewest hotel nights: 33 h 29 min, 3 ch., 0 hotel |
-| Rome | Tue 3.11. 06:22 | Wed 4.11. 11:10 | 28 h 48 min | 4 | 0 | 1 (Lugano) | fewest changes: 36 h 18 min, 3 ch., 0 hotel; fewest hotel nights: 35 h 18 min, 4 ch., 0 hotel |
-| Vatican | Tue 3.11. 06:22 | Wed 4.11. 11:50 | 29 h 28 min | 5 | 0 | 1 (Lugano) | fewest changes: 36 h 58 min, 4 ch., 0 hotel; fewest hotel nights: 35 h 58 min, 5 ch., 0 hotel |
-| Monaco | Tue 3.11. 06:22 | Wed 4.11. 13:28 | 31 h 06 min | 5 | 0 | 1 (Paris) | fewest changes: 32 h 37 min, 4 ch., 1 hotel; fewest hotel nights: 37 h 05 min, 5 ch., 0 hotel |
+| Luxembourg | Tue 3.11. 06:22 | Wed 4.11. 09:45 | 27 h 23 min | 3 | 0 | 1 (Paris) | fewest hotel nights: 33 h 29 min, 3 ch., 0 hotel |
+| Rome | Tue 3.11. 06:22 | Wed 4.11. 13:10 | 30 h 48 min | 4 | 0 | 1 (Lugano) | fewest changes: 36 h 18 min, 3 ch., 0 hotel; fewest hotel nights: 35 h 18 min, 4 ch., 0 hotel |
+| Monaco | Tue 3.11. 06:22 | Wed 4.11. 13:48 | 31 h 26 min | 5 | 0 | 1 (Paris) | fewest changes: 32 h 37 min, 4 ch., 1 hotel; fewest hotel nights: 37 h 05 min, 5 ch., 0 hotel |
+| Vatican | Tue 3.11. 06:22 | Wed 4.11. 13:50 | 31 h 28 min | 5 | 0 | 1 (Lugano) | fewest changes: 36 h 58 min, 4 ch., 0 hotel; fewest hotel nights: 35 h 58 min, 5 ch., 0 hotel |
 | Ljubljana | Tue 3.11. 06:22 | Wed 4.11. 13:53 | 31 h 31 min | 3 | 1 | 0 | fewest changes: 34 h 18 min, 2 ch., 0 hotel |
 | Belgrade | Tue 3.11. 06:22 | Wed 4.11. 15:15 | 32 h 53 min | 6 | 1 | 0 |  |
 | Madrid | Tue 3.11. 06:22 | Wed 4.11. 18:17 | 35 h 55 min | 4 | 0 | 1 (Paris) | fewest hotel nights: 41 h 22 min, 5 ch., 0 hotel |
@@ -58,12 +58,12 @@ _Night trains and night buses left out; night ferries still used._
 | Vienna | Tue 3.11. 23:16 | 16 h 54 min | 2 | 0 | same |
 | Bratislava | Wed 4.11. 00:44 | 18 h 22 min | 3 | 0 | same |
 | Helsinki | Wed 4.11. 10:10 | 27 h 07 min | 2 | 0 | same |
-| Budapest | Wed 4.11. 09:29 | 27 h 07 min | 3 | 1 (Vienna) | +1 h 00 min |
 | London | Wed 4.11. 08:30 | 27 h 08 min | 3 | 1 (Paris) | same |
-| Luxembourg | Wed 4.11. 09:43 | 27 h 21 min | 4 | 1 (Brussels) | same |
-| Rome | Wed 4.11. 11:10 | 28 h 48 min | 4 | 1 (Lugano) | same |
-| Vatican | Wed 4.11. 11:50 | 29 h 28 min | 5 | 1 (Lugano) | same |
-| Monaco | Wed 4.11. 13:28 | 31 h 06 min | 5 | 1 (Paris) | same |
+| Luxembourg | Wed 4.11. 09:45 | 27 h 23 min | 3 | 1 (Paris) | same |
+| Budapest | Wed 4.11. 10:35 | 28 h 13 min | 3 | 1 (Vienna) | +2 h 06 min |
+| Rome | Wed 4.11. 13:10 | 30 h 48 min | 4 | 1 (Lugano) | same |
+| Monaco | Wed 4.11. 13:48 | 31 h 26 min | 5 | 1 (Paris) | same |
+| Vatican | Wed 4.11. 13:50 | 31 h 28 min | 5 | 1 (Lugano) | same |
 | Ljubljana | Wed 4.11. 13:53 | 31 h 31 min | 3 | 1 (Vienna) | same |
 | Madrid | Wed 4.11. 18:17 | 35 h 55 min | 4 | 1 (Paris) | same |
 | Belgrade | Wed 4.11. 18:35 | 36 h 13 min | 6 | 1 (Vienna) | +3 h 20 min |
@@ -97,10 +97,10 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Budapest | Wed 4.11. 06:22 | Thu 5.11. 08:29 | 26 h 07 min | arrives 24 h 00 min later |
 | Helsinki | Wed 4.11. 03:27 | Thu 5.11. 10:10 | 29 h 43 min | arrives 24 h 00 min later |
 | London | Wed 4.11. 06:22 | Thu 5.11. 08:30 | 27 h 08 min | arrives 24 h 00 min later |
-| Luxembourg | Wed 4.11. 06:22 | Thu 5.11. 09:43 | 27 h 21 min | arrives 24 h 00 min later |
-| Rome | Wed 4.11. 06:22 | Thu 5.11. 11:10 | 28 h 48 min | arrives 24 h 00 min later |
-| Vatican | Wed 4.11. 06:22 | Thu 5.11. 11:50 | 29 h 28 min | arrives 24 h 00 min later |
-| Monaco | Wed 4.11. 06:22 | Thu 5.11. 13:28 | 31 h 06 min | arrives 24 h 00 min later |
+| Luxembourg | Wed 4.11. 06:22 | Thu 5.11. 09:45 | 27 h 23 min | arrives 24 h 00 min later |
+| Rome | Wed 4.11. 06:22 | Thu 5.11. 13:10 | 30 h 48 min | arrives 24 h 00 min later |
+| Monaco | Wed 4.11. 06:22 | Thu 5.11. 13:48 | 31 h 26 min | arrives 24 h 00 min later |
+| Vatican | Wed 4.11. 06:22 | Thu 5.11. 13:50 | 31 h 28 min | arrives 24 h 00 min later |
 | Ljubljana | Wed 4.11. 06:22 | Thu 5.11. 13:53 | 31 h 31 min | arrives 24 h 00 min later |
 | Belgrade | Wed 4.11. 06:22 | Thu 5.11. 15:15 | 32 h 53 min | arrives 24 h 00 min later |
 | Madrid | Wed 4.11. 06:22 | Thu 5.11. 18:17 | 35 h 55 min | arrives 24 h 00 min later |
@@ -145,45 +145,45 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Boden | Wed 4.11. 05:42 | 23 h 39 min | 2 | 0 |
 | Bergen | Wed 4.11. 06:23 | 24 h 20 min | 3 | 0 |
 | Turku | Wed 4.11. 07:35 | 24 h 32 min | 2 | 0 |
-| Milan | Wed 4.11. 07:17 | 24 h 55 min | 3 | 1 |
 | Toulouse | Wed 4.11. 07:44 | 25 h 22 min | 3 | 0 |
-| Bordeaux | Wed 4.11. 08:14 | 25 h 52 min | 3 | 1 |
 | Lyon | Wed 4.11. 08:22 | 26 h 00 min | 3 | 1 |
-| Torino | Wed 4.11. 08:43 | 26 h 21 min | 4 | 1 |
+| Bordeaux | Wed 4.11. 08:48 | 26 h 26 min | 3 | 1 |
 | Nantes | Wed 4.11. 08:54 | 26 h 32 min | 3 | 1 |
 | Gdansk | Wed 4.11. 09:12 | 26 h 50 min | 3 | 1 |
 | Storlien | Wed 4.11. 09:17 | 27 h 14 min | 3 | 0 |
-| Marseille | Wed 4.11. 09:24 | 27 h 02 min | 3 | 1 |
-| Genoa | Wed 4.11. 09:44 | 27 h 22 min | 4 | 1 |
-| Florence | Wed 4.11. 10:04 | 27 h 42 min | 4 | 1 |
+| Milan | Wed 4.11. 09:20 | 26 h 58 min | 3 | 1 |
+| Marseille | Wed 4.11. 09:57 | 27 h 35 min | 3 | 1 |
 | Montpellier | Wed 4.11. 10:11 | 27 h 49 min | 3 | 1 |
 | Brest | Wed 4.11. 10:32 | 28 h 10 min | 3 | 1 |
-| Venice | Wed 4.11. 10:44 | 28 h 22 min | 4 | 1 |
+| Torino | Wed 4.11. 10:48 | 28 h 26 min | 4 | 1 |
 | Szeged | Wed 4.11. 11:16 | 28 h 54 min | 4 | 0 |
-| Ancona | Wed 4.11. 11:31 | 29 h 09 min | 4 | 1 |
 | Hendaye | Wed 4.11. 11:48 | 29 h 26 min | 3 | 1 |
 | Tampere | Wed 4.11. 12:53 | 29 h 50 min | 3 | 0 |
-| Trieste | Wed 4.11. 12:05 | 29 h 43 min | 4 | 1 |
+| Florence | Wed 4.11. 12:04 | 29 h 42 min | 4 | 1 |
+| Venice | Wed 4.11. 12:14 | 29 h 52 min | 4 | 1 |
 | Irun | Wed 4.11. 12:37 | 30 h 15 min | 4 | 1 |
 | Narvik | Wed 4.11. 12:37 | 30 h 34 min | 3 | 0 |
-| Nice | Wed 4.11. 12:38 | 30 h 16 min | 4 | 1 |
+| Genoa | Wed 4.11. 12:44 | 30 h 22 min | 4 | 1 |
 | Manchester | Wed 4.11. 11:44 | 30 h 22 min | 4 | 1 |
-| Naples | Wed 4.11. 12:48 | 30 h 26 min | 5 | 1 |
+| Nice | Wed 4.11. 13:04 | 30 h 42 min | 4 | 1 |
 | Donostia | Wed 4.11. 13:22 | 31 h 00 min | 5 | 1 |
 | Subotica | Wed 4.11. 13:24 | 31 h 02 min | 5 | 0 |
+| Ancona | Wed 4.11. 13:34 | 31 h 12 min | 4 | 1 |
+| Trieste | Wed 4.11. 14:20 | 31 h 58 min | 3 | 0 |
 | Ventimiglia | Wed 4.11. 14:22 | 32 h 00 min | 5 | 1 |
 | Barcelona | Wed 4.11. 14:32 | 32 h 10 min | 3 | 1 |
 | Edinburgh | Wed 4.11. 13:38 | 32 h 16 min | 4 | 1 |
 | Trondheim | Wed 4.11. 14:40 | 32 h 37 min | 3 | 1 |
 | Glasgow | Wed 4.11. 14:02 | 32 h 40 min | 4 | 1 |
-| Bari | Wed 4.11. 15:29 | 33 h 07 min | 4 | 1 |
+| Naples | Wed 4.11. 15:03 | 32 h 41 min | 5 | 1 |
 | Penzance | Wed 4.11. 15:03 | 33 h 41 min | 4 | 1 |
 | Bologna | Wed 4.11. 16:08 | 33 h 46 min | 2 | 0 |
 | Oulu | Wed 4.11. 17:48 | 34 h 45 min | 3 | 0 |
-| Villa San Giovanni | Wed 4.11. 18:45 | 36 h 23 min | 5 | 1 |
+| Bari | Wed 4.11. 17:27 | 35 h 05 min | 4 | 1 |
 | Valencia | Wed 4.11. 19:02 | 36 h 40 min | 4 | 1 |
 | Rovaniemi | Wed 4.11. 20:23 | 37 h 20 min | 3 | 0 |
 | Holyhead | Wed 4.11. 18:54 | 37 h 32 min | 4 | 1 |
+| Villa San Giovanni | Wed 4.11. 20:04 | 37 h 42 min | 5 | 1 |
 | Sevilla | Wed 4.11. 21:39 | 39 h 17 min | 5 | 1 |
 | Santiago de Compostela | Wed 4.11. 22:19 | 39 h 57 min | 5 | 1 |
 | Malaga | Wed 4.11. 22:45 | 40 h 23 min | 5 | 1 |
@@ -353,18 +353,7 @@ _Fewest hotel nights: 33 h 08 min, arrive Wed 4.11. 14:30, 4 changes, 0 hotel ni
 - Wed 4.11. 12:53 → Wed 4.11. 14:30  **Paris → London**  EST FRPNO
 
 ### Luxembourg
-_Fastest: 27 h 21 min, arrive Wed 4.11. 09:43, 4 changes, 1 hotel nights_
-
-- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Tue 3.11. 11:45 → Tue 3.11. 13:34  **Hamburg → Osnabrück**  ICE
-- Wait 3 h 32 min in Osnabrück
-- Tue 3.11. 17:06 → Tue 3.11. 20:01  **Osnabrück → Amsterdam**  ICE
-- Tue 3.11. 21:10 → Tue 3.11. 23:06  **Amsterdam → Brussels**  EST Eurostar
-- 🛏 Overnight in Brussels (Tue 3.11. 23:06 → Wed 4.11. 06:32)
-- Wed 4.11. 06:32 → Wed 4.11. 09:43  **Brussels → Luxembourg**  IC
-
-### Luxembourg — fewest changes
-_Fewest changes: 27 h 23 min, arrive Wed 4.11. 09:45, 3 changes, 1 hotel nights_
+_Fastest: 27 h 23 min, arrive Wed 4.11. 09:45, 3 changes, 1 hotel nights_
 
 - Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
 - Tue 3.11. 12:09 → Tue 3.11. 15:48  **Hamburg → Köln**  ICE
@@ -385,16 +374,16 @@ _Fewest hotel nights: 33 h 29 min, arrive Wed 4.11. 15:51, 3 changes, 0 hotel ni
 - Wed 4.11. 13:39 → Wed 4.11. 15:51  **Paris → Luxembourg**  TGV INOUI
 
 ### Rome
-_Fastest: 28 h 48 min, arrive Wed 4.11. 11:10, 4 changes, 1 hotel nights_
+_Fastest: 30 h 48 min, arrive Wed 4.11. 13:10, 4 changes, 1 hotel nights_
 
 - Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
 - Wait 1 h 41 min in Hamburg
 - Tue 3.11. 12:29 → Tue 3.11. 19:21  **Hamburg → Basel**  ICE
 - Wait 1 h 43 min in Basel
 - Tue 3.11. 21:04 → Tue 3.11. 23:58  **Basel → Lugano**  IC21
-- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 06:02)
-- Wed 4.11. 06:02 → Wed 4.11. 07:17  **Lugano → Milan**  RE80
-- Wed 4.11. 08:00 → Wed 4.11. 11:10  **Milan → Rome**  FR
+- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 08:02)
+- Wed 4.11. 08:02 → Wed 4.11. 09:20  **Lugano → Milan**  RE80
+- Wed 4.11. 09:58 → Wed 4.11. 13:10  **Milan → Rome**  FR
 
 ### Rome — fewest changes
 _Fewest changes: 36 h 18 min, arrive Wed 4.11. 18:40, 3 changes, 0 hotel nights_
@@ -416,52 +405,17 @@ _Fewest hotel nights: 35 h 18 min, arrive Wed 4.11. 17:40, 4 changes, 0 hotel ni
 - Wed 4.11. 10:33 → Wed 4.11. 13:55  **Zürich → Milan**  EC
 - Wed 4.11. 14:30 → Wed 4.11. 17:40  **Milan → Rome**  FR
 
-### Vatican
-_Fastest: 29 h 28 min, arrive Wed 4.11. 11:50, 5 changes, 1 hotel nights_
-
-- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 1 h 41 min in Hamburg
-- Tue 3.11. 12:29 → Tue 3.11. 19:21  **Hamburg → Basel**  ICE
-- Wait 1 h 43 min in Basel
-- Tue 3.11. 21:04 → Tue 3.11. 23:58  **Basel → Lugano**  IC21
-- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 06:02)
-- Wed 4.11. 06:02 → Wed 4.11. 07:17  **Lugano → Milan**  RE80
-- Wed 4.11. 08:00 → Wed 4.11. 11:10  **Milan → Rome**  FR
-- Wed 4.11. 11:30 → Wed 4.11. 11:50  **Rome → Vatican**  Metro line A
-
-### Vatican — fewest changes
-_Fewest changes: 36 h 58 min, arrive Wed 4.11. 19:20, 4 changes, 0 hotel nights_
-
-- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 9 h 22 min in Hamburg
-- Tue 3.11. 20:10 → Wed 4.11. 06:13  **Hamburg → Munich**  ICE  (night)
-- Wait 3 h 10 min in Munich
-- Wed 4.11. 09:23 → Wed 4.11. 16:08  **Munich → Bologna**  ICE
-- Wed 4.11. 16:37 → Wed 4.11. 18:40  **Bologna → Rome**  FR
-- Wed 4.11. 19:00 → Wed 4.11. 19:20  **Rome → Vatican**  Metro line A
-
-### Vatican — fewest hotel nights
-_Fewest hotel nights: 35 h 58 min, arrive Wed 4.11. 18:20, 5 changes, 0 hotel nights_
-
-- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 11 h 23 min in Hamburg
-- Tue 3.11. 22:11 → Wed 4.11. 08:21  **Hamburg → Basel**  NJ 471  (night)
-- Wed 4.11. 08:43 → Wed 4.11. 09:52  **Basel → Zürich**  IC3
-- Wed 4.11. 10:33 → Wed 4.11. 13:55  **Zürich → Milan**  EC
-- Wed 4.11. 14:30 → Wed 4.11. 17:40  **Milan → Rome**  FR
-- Wed 4.11. 18:00 → Wed 4.11. 18:20  **Rome → Vatican**  Metro line A
-
 ### Monaco
-_Fastest: 31 h 06 min, arrive Wed 4.11. 13:28, 5 changes, 1 hotel nights_
+_Fastest: 31 h 26 min, arrive Wed 4.11. 13:48, 5 changes, 1 hotel nights_
 
 - Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
 - Tue 3.11. 12:09 → Tue 3.11. 15:48  **Hamburg → Köln**  ICE
 - Wait 2 h 56 min in Köln
 - Tue 3.11. 18:44 → Tue 3.11. 22:19  **Köln → Paris**  EST DEKOH
-- 🛏 Overnight in Paris (Tue 3.11. 22:19 → Wed 4.11. 06:03)
-- Wed 4.11. 06:03 → Wed 4.11. 09:24  **Paris → Marseille**  TGV INOUI
-- Wed 4.11. 09:57 → Wed 4.11. 12:38  **Marseille → Nice**  TER SUD_IV15
-- Wed 4.11. 13:03 → Wed 4.11. 13:28  **Nice → Monaco**  TER C3
+- 🛏 Overnight in Paris (Tue 3.11. 22:19 → Wed 4.11. 06:38)
+- Wed 4.11. 06:38 → Wed 4.11. 09:57  **Paris → Marseille**  TGV INOUI
+- Wed 4.11. 10:18 → Wed 4.11. 13:04  **Marseille → Nice**  TER SUD_IV15
+- Wed 4.11. 13:24 → Wed 4.11. 13:48  **Nice → Monaco**  TER C3
 
 ### Monaco — fewest changes
 _Fewest changes: 32 h 37 min, arrive Wed 4.11. 14:59, 4 changes, 1 hotel nights_
@@ -485,6 +439,41 @@ _Fewest hotel nights: 37 h 05 min, arrive Wed 4.11. 19:27, 5 changes, 0 hotel ni
 - Wed 4.11. 09:04 → Wed 4.11. 15:04  **Strasbourg → Marseille**  TGV INOUI
 - Wed 4.11. 15:57 → Wed 4.11. 18:39  **Marseille → Nice**  TER SUD_IV15
 - Wed 4.11. 19:03 → Wed 4.11. 19:27  **Nice → Monaco**  TER C3
+
+### Vatican
+_Fastest: 31 h 28 min, arrive Wed 4.11. 13:50, 5 changes, 1 hotel nights_
+
+- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 1 h 41 min in Hamburg
+- Tue 3.11. 12:29 → Tue 3.11. 19:21  **Hamburg → Basel**  ICE
+- Wait 1 h 43 min in Basel
+- Tue 3.11. 21:04 → Tue 3.11. 23:58  **Basel → Lugano**  IC21
+- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 08:02)
+- Wed 4.11. 08:02 → Wed 4.11. 09:20  **Lugano → Milan**  RE80
+- Wed 4.11. 09:58 → Wed 4.11. 13:10  **Milan → Rome**  FR
+- Wed 4.11. 13:30 → Wed 4.11. 13:50  **Rome → Vatican**  Metro line A
+
+### Vatican — fewest changes
+_Fewest changes: 36 h 58 min, arrive Wed 4.11. 19:20, 4 changes, 0 hotel nights_
+
+- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 9 h 22 min in Hamburg
+- Tue 3.11. 20:10 → Wed 4.11. 06:13  **Hamburg → Munich**  ICE  (night)
+- Wait 3 h 10 min in Munich
+- Wed 4.11. 09:23 → Wed 4.11. 16:08  **Munich → Bologna**  ICE
+- Wed 4.11. 16:37 → Wed 4.11. 18:40  **Bologna → Rome**  FR
+- Wed 4.11. 19:00 → Wed 4.11. 19:20  **Rome → Vatican**  Metro line A
+
+### Vatican — fewest hotel nights
+_Fewest hotel nights: 35 h 58 min, arrive Wed 4.11. 18:20, 5 changes, 0 hotel nights_
+
+- Tue 3.11. 06:22 → Tue 3.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 11 h 23 min in Hamburg
+- Tue 3.11. 22:11 → Wed 4.11. 08:21  **Hamburg → Basel**  NJ 471  (night)
+- Wed 4.11. 08:43 → Wed 4.11. 09:52  **Basel → Zürich**  IC3
+- Wed 4.11. 10:33 → Wed 4.11. 13:55  **Zürich → Milan**  EC
+- Wed 4.11. 14:30 → Wed 4.11. 17:40  **Milan → Rome**  FR
+- Wed 4.11. 18:00 → Wed 4.11. 18:20  **Rome → Vatican**  Metro line A
 
 ### Ljubljana
 _Fastest: 31 h 31 min, arrive Wed 4.11. 13:53, 3 changes, 0 hotel nights_
@@ -607,10 +596,10 @@ _Fastest: 54 h 18 min, arrive Thu 5.11. 12:40, 6 changes, 1 hotel nights_
 - Tue 3.11. 12:29 → Tue 3.11. 19:21  **Hamburg → Basel**  ICE
 - Wait 1 h 43 min in Basel
 - Tue 3.11. 21:04 → Tue 3.11. 23:58  **Basel → Lugano**  IC21
-- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 06:02)
-- Wed 4.11. 06:02 → Wed 4.11. 07:17  **Lugano → Milan**  RE80
-- Wed 4.11. 07:50 → Wed 4.11. 15:29  **Milan → Bari**  FR
-- Wait 6 h 31 min in Bari
+- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 08:02)
+- Wed 4.11. 08:02 → Wed 4.11. 09:20  **Lugano → Milan**  RE80
+- Wed 4.11. 10:45 → Wed 4.11. 17:27  **Milan → Bari**  FR
+- Wait 4 h 33 min in Bari
 - Wed 4.11. 22:00 → Thu 5.11. 07:00  **Bari → Durrës**  ?  (night)
 - Wait 3 h 00 min in Durrës
 - Thu 5.11. 10:00 → Thu 5.11. 12:40  **Durrës → Tirana**  ?
@@ -635,10 +624,10 @@ _Fastest: 58 h 08 min, arrive Thu 5.11. 17:30, 6 changes, 1 hotel nights_
 - Tue 3.11. 12:29 → Tue 3.11. 19:21  **Hamburg → Basel**  ICE
 - Wait 1 h 43 min in Basel
 - Tue 3.11. 21:04 → Tue 3.11. 23:58  **Basel → Lugano**  IC21
-- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 06:02)
-- Wed 4.11. 06:02 → Wed 4.11. 07:17  **Lugano → Milan**  RE80
-- Wed 4.11. 07:50 → Wed 4.11. 15:29  **Milan → Bari**  FR
-- Wait 4 h 01 min in Bari
+- 🛏 Overnight in Lugano (Tue 3.11. 23:58 → Wed 4.11. 08:02)
+- Wed 4.11. 08:02 → Wed 4.11. 09:20  **Lugano → Milan**  RE80
+- Wed 4.11. 10:45 → Wed 4.11. 17:27  **Milan → Bari**  FR
+- Wait 2 h 03 min in Bari
 - Wed 4.11. 19:30 → Thu 5.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
 - Wait 1 h 30 min in Patras
 - Thu 5.11. 14:30 → Thu 5.11. 17:30  **Patras → Athens**  ?

@@ -21,7 +21,7 @@ _leave Stockholm Tue 3.11.2026 from 16:00 · generated 1.11.2026. Change 20 min 
 | Rome | Tue 3.11. 17:29 | Wed 4.11. 22:39 | 29 h 10 min | 4 | 1 | 0 |  |
 | Vatican | Tue 3.11. 17:29 | Wed 4.11. 23:19 | 29 h 50 min | 5 | 1 | 0 |  |
 | Budapest | Tue 3.11. 17:29 | Wed 4.11. 23:35 | 30 h 06 min | 3 | 1 | 0 |  |
-| Monaco | Tue 3.11. 17:29 | Thu 5.11. 06:43 | 37 h 14 min | 4 | 1 | 1 (Nice) | fewest hotel nights: 40 h 27 min, 4 ch., 0 hotel |
+| Monaco | Tue 3.11. 17:29 | Thu 5.11. 07:47 | 38 h 18 min | 4 | 1 | 1 (Nice) | fewest hotel nights: 40 h 27 min, 4 ch., 0 hotel |
 | Tallinn | Tue 3.11. 16:00 | Thu 5.11. 09:30 | 40 h 30 min | 1 | 1 | 1 (Helsinki) |  |
 | Ljubljana | Tue 3.11. 17:29 | Thu 5.11. 13:53 | 44 h 24 min | 3 | 2 | 0 | fewest changes: 47 h 11 min, 2 ch., 0 hotel |
 | Belgrade | Tue 3.11. 17:29 | Thu 5.11. 15:15 | 45 h 46 min | 6 | 2 | 0 |  |
@@ -59,22 +59,22 @@ _Night trains and night buses left out; night ferries still used._
 | Vienna | Wed 4.11. 23:16 | 30 h 57 min | 4 | 1 (Copenhagen) | +4 h 54 min |
 | Bratislava | Thu 5.11. 00:44 | 32 h 25 min | 5 | 1 (Copenhagen) | +4 h 44 min |
 | Tallinn | Thu 5.11. 09:30 | 40 h 30 min | 1 | 1 (Helsinki) | same |
-| Budapest | Thu 5.11. 09:29 | 41 h 10 min | 5 | 2 (Copenhagen, Vienna) | +11 h 04 min |
 | London | Thu 5.11. 08:30 | 41 h 11 min | 5 | 2 (Copenhagen, Paris) | +14 h 02 min |
-| Luxembourg | Thu 5.11. 09:43 | 41 h 24 min | 6 | 2 (Copenhagen, Brussels) | +15 h 00 min |
-| Rome | Thu 5.11. 11:10 | 42 h 51 min | 6 | 2 (Copenhagen, Lugano) | +13 h 41 min |
-| Vatican | Thu 5.11. 11:50 | 43 h 31 min | 7 | 2 (Copenhagen, Lugano) | +13 h 41 min |
-| Monaco | Thu 5.11. 13:28 | 45 h 09 min | 7 | 2 (Copenhagen, Paris) | +7 h 55 min |
+| Luxembourg | Thu 5.11. 09:45 | 41 h 26 min | 5 | 2 (Copenhagen, Paris) | +15 h 02 min |
+| Budapest | Thu 5.11. 10:35 | 42 h 16 min | 5 | 2 (Copenhagen, Vienna) | +12 h 10 min |
+| Rome | Thu 5.11. 13:10 | 44 h 51 min | 6 | 2 (Copenhagen, Lugano) | +15 h 41 min |
+| Monaco | Thu 5.11. 13:48 | 45 h 29 min | 7 | 2 (Copenhagen, Paris) | +7 h 11 min |
+| Vatican | Thu 5.11. 13:50 | 45 h 31 min | 7 | 2 (Copenhagen, Lugano) | +15 h 41 min |
 | Ljubljana | Thu 5.11. 13:53 | 45 h 34 min | 5 | 2 (Copenhagen, Vienna) | +1 h 10 min |
 | Riga | Thu 5.11. 16:44 | 47 h 44 min | 3 | 1 (Helsinki) | same |
 | Madrid | Thu 5.11. 18:17 | 49 h 58 min | 6 | 2 (Copenhagen, Paris) | +1 h 10 min |
 | Belgrade | Thu 5.11. 18:35 | 50 h 16 min | 8 | 2 (Copenhagen, Vienna) | +4 h 30 min |
 | Zagreb | Thu 5.11. 19:20 | 51 h 01 min | 6 | 2 (Copenhagen, Vienna) | +1 h 10 min |
 | Vilnius | Thu 5.11. 21:28 | 52 h 28 min | 4 | 1 (Helsinki) | same |
-| Dublin | Fri 6.11. 11:00 | 49 h 17 min | 5 | 2 (Osnabrück, Holyhead) | – |
+| Dublin | Fri 6.11. 11:00 | 54 h 53 min | 7 | 2 (Köln, Holyhead) | – |
 | Tirana | Fri 6.11. 12:40 | 68 h 21 min | 8 | 2 (Copenhagen, Lugano) | +1 h 10 min |
 | Athens | Fri 6.11. 17:30 | 72 h 11 min | 8 | 2 (Copenhagen, Lugano) | +1 h 10 min |
-| Belfast | Fri 6.11. 15:58 | 54 h 15 min | 6 | 2 (Osnabrück, Holyhead) | – |
+| Belfast | Fri 6.11. 15:58 | 59 h 51 min | 8 | 2 (Köln, Holyhead) | – |
 | Lisbon | Fri 6.11. 22:20 | 66 h 13 min | 9 | 2 (Köln, Barcelona) | – |
 
 Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
@@ -87,35 +87,35 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Oslo | Tue 3.11. 07:23 | Tue 3.11. 13:23 | 6 h 00 min | arrives 10 h 39 min earlier |
 | Berlin | Tue 3.11. 06:20 | Tue 3.11. 19:23 | 13 h 03 min | arrives 12 h 59 min earlier |
 | Helsinki | – | – | – | no gain: take the 16:00 journey |
-| Amsterdam | Tue 3.11. 10:43 | Wed 4.11. 10:02 | 23 h 19 min | arrives 3 h 59 min earlier |
-| Bern | Tue 3.11. 06:20 | Wed 4.11. 07:26 | 25 h 06 min | arrives 7 h 30 min earlier |
-| Paris | Tue 3.11. 06:20 | Wed 4.11. 09:35 | 27 h 15 min | arrives 6 h 35 min earlier |
-| Brussels | Tue 3.11. 10:43 | Wed 4.11. 13:06 | 26 h 23 min | arrives 4 h 00 min earlier |
+| Amsterdam | Tue 3.11. 08:23 | Wed 4.11. 10:02 | 25 h 39 min | arrives 3 h 59 min earlier |
+| Bern | Tue 3.11. 08:23 | Wed 4.11. 09:56 | 25 h 33 min | arrives 5 h 00 min earlier |
+| Paris | Tue 3.11. 08:23 | Wed 4.11. 10:05 | 25 h 42 min | arrives 6 h 05 min earlier |
+| Brussels | Tue 3.11. 08:23 | Wed 4.11. 13:06 | 28 h 43 min | arrives 4 h 00 min earlier |
 | Prague | Tue 3.11. 06:20 | Wed 4.11. 00:26 | 18 h 06 min | arrives 16 h 49 min earlier |
 | Vienna | Tue 3.11. 06:20 | Wed 4.11. 07:00 | 24 h 40 min | arrives 12 h 32 min earlier |
-| Luxembourg | Tue 3.11. 06:20 | Wed 4.11. 12:51 | 30 h 31 min | arrives 7 h 02 min earlier |
-| London | Tue 3.11. 06:20 | Wed 4.11. 12:30 | 31 h 10 min | arrives 7 h 08 min earlier |
+| Luxembourg | Tue 3.11. 08:23 | Wed 4.11. 15:51 | 31 h 28 min | arrives 4 h 02 min earlier |
+| London | Tue 3.11. 08:23 | Wed 4.11. 14:30 | 31 h 07 min | arrives 5 h 08 min earlier |
 | Warsaw | – | – | – | no gain: take the 16:00 journey |
 | Bratislava | Tue 3.11. 06:20 | Wed 4.11. 08:44 | 26 h 24 min | arrives 12 h 26 min earlier |
-| Rome | Tue 3.11. 06:20 | Wed 4.11. 14:43 | 32 h 23 min | arrives 7 h 56 min earlier |
-| Vatican | Tue 3.11. 06:20 | Wed 4.11. 15:23 | 33 h 03 min | arrives 7 h 56 min earlier |
+| Rome | Tue 3.11. 08:23 | Wed 4.11. 17:40 | 33 h 17 min | arrives 4 h 59 min earlier |
+| Vatican | Tue 3.11. 08:23 | Wed 4.11. 18:20 | 33 h 57 min | arrives 4 h 59 min earlier |
 | Budapest | Tue 3.11. 06:20 | Wed 4.11. 10:35 | 28 h 15 min | arrives 13 h 00 min earlier |
-| Monaco | Tue 3.11. 06:20 | Wed 4.11. 18:29 | 36 h 09 min | arrives 12 h 14 min earlier |
+| Monaco | Tue 3.11. 08:23 | Wed 4.11. 19:27 | 35 h 04 min | arrives 12 h 20 min earlier |
 | Tallinn | – | – | – | no gain: take the 16:00 journey |
 | Ljubljana | Tue 3.11. 06:20 | Wed 4.11. 13:53 | 31 h 33 min | arrives 24 h 00 min earlier |
 | Belgrade | Tue 3.11. 06:20 | Wed 4.11. 18:35 | 36 h 15 min | arrives 20 h 40 min earlier |
 | Riga | – | – | – | no gain: take the 16:00 journey |
-| Madrid | Tue 3.11. 10:43 | Wed 4.11. 23:44 | 37 h 01 min | arrives 18 h 33 min earlier |
+| Madrid | Tue 3.11. 08:23 | Wed 4.11. 23:44 | 39 h 21 min | arrives 18 h 33 min earlier |
 | Zagreb | Tue 3.11. 06:20 | Wed 4.11. 19:20 | 37 h 00 min | arrives 24 h 00 min earlier |
 | Vilnius | – | – | – | no gain: take the 16:00 journey |
 | Valletta | – | – | – | no gain: take the 16:00 journey |
 | Bucharest | Tue 3.11. 06:20 | Thu 5.11. 08:23 | 49 h 03 min | arrives 24 h 00 min earlier |
-| Dublin | Tue 3.11. 10:43 | Thu 5.11. 11:00 | 49 h 17 min | arrives 24 h 00 min earlier |
-| Tirana | Tue 3.11. 06:20 | Thu 5.11. 12:40 | 54 h 20 min | arrives 24 h 00 min earlier |
-| Athens | Tue 3.11. 06:20 | Thu 5.11. 17:30 | 58 h 10 min | arrives 24 h 00 min earlier |
-| Belfast | Tue 3.11. 10:43 | Thu 5.11. 15:58 | 54 h 15 min | arrives 24 h 00 min earlier |
+| Dublin | Tue 3.11. 08:23 | Thu 5.11. 11:00 | 51 h 37 min | arrives 24 h 00 min earlier |
+| Tirana | – | – | – | no gain: take the 16:00 journey |
+| Athens | – | – | – | no gain: take the 16:00 journey |
+| Belfast | Tue 3.11. 08:23 | Thu 5.11. 15:58 | 56 h 35 min | arrives 24 h 00 min earlier |
 | Sofia | Tue 3.11. 06:20 | Thu 5.11. 20:41 | 61 h 21 min | arrives 24 h 00 min earlier |
-| Lisbon | Tue 3.11. 10:43 | Thu 5.11. 22:20 | 60 h 37 min | arrives 24 h 00 min earlier |
+| Lisbon | Tue 3.11. 08:23 | Thu 5.11. 22:20 | 62 h 57 min | arrives 24 h 00 min earlier |
 | Chisinau | Tue 3.11. 10:43 | Fri 6.11. 08:10 | 68 h 27 min | arrives 24 h 00 min earlier |
 | Ankara | Tue 3.11. 06:20 | Sat 7.11. 13:16 | 100 h 56 min | arrives 24 h 00 min earlier |
 
@@ -140,11 +140,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Narvik | Wed 4.11. 12:37 | 18 h 25 min | 1 | 0 |
 | Koblenz | Wed 4.11. 12:42 | 19 h 13 min | 2 | 0 |
 | Strasbourg | Wed 4.11. 12:51 | 19 h 22 min | 2 | 0 |
-| Bergen | Wed 4.11. 13:12 | 18 h 53 min | 1 | 1 |
 | Basel | Wed 4.11. 13:21 | 19 h 52 min | 1 | 0 |
 | Munich | Wed 4.11. 14:05 | 20 h 36 min | 1 | 0 |
 | Trondheim | Wed 4.11. 14:40 | 20 h 21 min | 1 | 1 |
 | Zürich | Wed 4.11. 14:52 | 21 h 23 min | 2 | 0 |
+| Bergen | Wed 4.11. 15:00 | 20 h 41 min | 1 | 1 |
 | Krakow | Wed 4.11. 16:00 | 22 h 31 min | 2 | 0 |
 | Oulu | Wed 4.11. 17:48 | 24 h 48 min | 1 | 0 |
 | Innsbruck | Wed 4.11. 17:18 | 23 h 49 min | 2 | 0 |
@@ -168,18 +168,18 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Trieste | Wed 4.11. 23:45 | 30 h 16 min | 4 | 0 |
 | Manchester | Wed 4.11. 23:48 | 31 h 19 min | 4 | 0 |
 | Wroclaw | Thu 5.11. 04:15 | 34 h 46 min | 3 | 0 |
-| Irun | Thu 5.11. 06:07 | 36 h 38 min | 4 | 1 |
 | Villa San Giovanni | Thu 5.11. 06:10 | 36 h 41 min | 5 | 0 |
 | Bari | Thu 5.11. 07:00 | 37 h 31 min | 4 | 0 |
-| Donostia | Thu 5.11. 07:11 | 37 h 42 min | 5 | 1 |
-| Ventimiglia | Thu 5.11. 07:52 | 38 h 23 min | 4 | 1 |
+| Irun | Thu 5.11. 07:37 | 38 h 08 min | 4 | 1 |
 | Naples | Thu 5.11. 08:12 | 38 h 43 min | 5 | 1 |
+| Donostia | Thu 5.11. 08:21 | 38 h 52 min | 5 | 1 |
+| Ventimiglia | Thu 5.11. 08:21 | 38 h 52 min | 4 | 1 |
 | Edinburgh | Thu 5.11. 07:30 | 39 h 01 min | 4 | 0 |
 | Glasgow | Thu 5.11. 07:30 | 39 h 01 min | 4 | 0 |
 | Penzance | Thu 5.11. 07:55 | 39 h 26 min | 4 | 0 |
 | Gdansk | Thu 5.11. 09:12 | 39 h 43 min | 3 | 1 |
-| Szeged | Thu 5.11. 09:16 | 39 h 47 min | 4 | 1 |
 | Newcastle | Thu 5.11. 09:15 | 40 h 46 min | 3 | 0 |
+| Szeged | Thu 5.11. 10:16 | 40 h 47 min | 4 | 1 |
 | Syracuse | Thu 5.11. 11:29 | 42 h 00 min | 5 | 0 |
 | Palermo | Thu 5.11. 11:55 | 42 h 26 min | 5 | 0 |
 | Holyhead | Thu 5.11. 11:52 | 43 h 23 min | 4 | 1 |
@@ -355,15 +355,15 @@ _Fastest: 30 h 06 min, arrive Wed 4.11. 23:35, 3 changes, 0 hotel nights_
 - Wed 4.11. 20:37 → Wed 4.11. 23:35  **Vienna → Budapest**  xpress
 
 ### Monaco
-_Fastest: 37 h 14 min, arrive Thu 5.11. 06:43, 4 changes, 1 hotel nights_
+_Fastest: 38 h 18 min, arrive Thu 5.11. 07:47, 4 changes, 1 hotel nights_
 
 - Tue 3.11. 17:29 → Wed 4.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
 - Wed 4.11. 06:45 → Wed 4.11. 10:48  **Hamburg → Köln**  ICE
 - Wait 1 h 51 min in Köln
 - Wed 4.11. 12:39 → Wed 4.11. 16:10  **Köln → Paris**  EST DEKOH
 - Wed 4.11. 17:22 → Wed 4.11. 23:04  **Paris → Nice**  TGV INOUI
-- 🛏 Overnight in Nice (Wed 4.11. 23:04 → Thu 5.11. 06:18)
-- Thu 5.11. 06:18 → Thu 5.11. 06:43  **Nice → Monaco**  TER C3
+- 🛏 Overnight in Nice (Wed 4.11. 23:04 → Thu 5.11. 07:23)
+- Thu 5.11. 07:23 → Thu 5.11. 07:47  **Nice → Monaco**  TER C3
 
 ### Monaco — fewest hotel nights
 _Fewest hotel nights: 40 h 27 min, arrive Thu 5.11. 09:56, 4 changes, 0 hotel nights_
