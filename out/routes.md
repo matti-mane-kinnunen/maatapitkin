@@ -190,12 +190,12 @@ Not reachable without night trains: Bucharest, Chisinau, Sofia, Ankara
 | Valencia | Thu 5.11. 23:34 | 54 h 59 min | 7 | 1 |
 | Villa San Giovanni | Fri 6.11. 03:30 | 58 h 55 min | 5 | 0 |
 | Taormina | Fri 6.11. 05:15 | 60 h 40 min | 6 | 0 |
-| Santiago de Compostela | Fri 6.11. 06:18 | 61 h 43 min | 8 | 2 |
 | Palermo | Fri 6.11. 09:13 | 64 h 38 min | 6 | 0 |
 | Sevilla | Fri 6.11. 09:35 | 65 h 00 min | 8 | 2 |
+| Santiago de Compostela | Fri 6.11. 09:56 | 65 h 21 min | 8 | 2 |
 | Newcastle | Fri 6.11. 09:15 | 65 h 40 min | 5 | 0 |
 | Malaga | Fri 6.11. 10:35 | 66 h 00 min | 8 | 2 |
-| Vitoria-Gasteiz | Fri 6.11. 10:39 | 66 h 04 min | 7 | 2 |
+| Vitoria-Gasteiz | Fri 6.11. 10:38 | 66 h 03 min | 8 | 2 |
 | Syracuse | Fri 6.11. 11:29 | 66 h 54 min | 6 | 0 |
 | Granada | Fri 6.11. 12:35 | 68 h 00 min | 9 | 2 |
 | Algeciras | Fri 6.11. 13:59 | 69 h 24 min | 8 | 2 |
