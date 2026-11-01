@@ -194,6 +194,8 @@ Marseille -> Nice : *
 Paris -> Bordeaux : *
 Paris -> Toulouse : *
 London -> Glasgow : *
+Glasgow -> Stranraer : *
+Stranraer -> Cairnryan : * bus   # local bus to the Stena Line port (FIX-04)
 London -> Holyhead : *
 Rome -> Syracuse : ICN1959 night 23:00-11:29   # 2023 times - Transitous has no trains here; check by hand
 Syracuse -> Pozzallo : *

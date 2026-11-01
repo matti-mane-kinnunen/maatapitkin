@@ -801,6 +801,8 @@ def run_file(lines: list[str], args) -> None:
         lines = sorted(lines, key=lambda ln: when[ln])        # stable: same age keeps the file order
         never = sum(1 for d in when.values() if d == dt.date.min)
         print(f"Oldest first: {never} new line{'s' if never != 1 else ''}, then by date last checked")
+    if args.new:
+        print("Only new lines (--new)")
     if args.budget:
         print(f"Time budget {args.budget:g} min: lines not reached keep their earlier data")
     print()

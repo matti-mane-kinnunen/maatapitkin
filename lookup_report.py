@@ -6,8 +6,9 @@
 
 Reported: lines that lost their trains ("removed N old entries") or failed with an error,
 "Impossibly fast" legs, new places and guessed names, and lines left for next time.
-Not reported: lines that never find direct trains and had nothing to lose - they are in
-the full log every week and would only be noise.
+Not reported in weekly runs: lines that never find direct trains and had nothing to lose -
+they are in the full log every week and would only be noise. In a quick run after a push
+(only new lines), every line that found nothing is reported: you just added it.
 """
 from __future__ import annotations
 
@@ -16,7 +17,7 @@ import sys
 from pathlib import Path
 
 SECTIONS = {                      # heading in the add_leg.py summary -> title in the report
-    "Not added": "Lines that lost their trains or failed",
+    "Not added": "Lines that lost their trains, failed, or (new lines) found nothing",
     "Impossibly fast": "Impossibly fast – probably a wrong place",
     "New places": "New places – check the station, country and capital flag",
     "Names I guessed": "Names guessed – fix pairs.txt if wrong",
@@ -25,6 +26,7 @@ SECTIONS = {                      # heading in the add_leg.py summary -> title i
 
 def report(log: str) -> str:
     text = log.split("=" * 72, 1)[-1]                 # the summary at the end of the log
+    new_only = "Only new lines (--new)" in log        # after a push: every line is new, report all failures
     found: dict[str, list[str]] = {}
     current = None
     for line in text.splitlines():
@@ -33,7 +35,7 @@ def report(log: str) -> str:
             continue
         if current and line.strip():
             item = line.strip()
-            if current == "Not added" and not re.search(r"removed \d+ old entr|error", item):
+            if current == "Not added" and not new_only and not re.search(r"removed \d+ old entr|error", item):
                 continue                              # never had trains: nothing lost
             found.setdefault(current, []).append(re.sub(r"\s{2,}", " — ", item))
     later = re.search(r"(\d+) left for next time", text)
