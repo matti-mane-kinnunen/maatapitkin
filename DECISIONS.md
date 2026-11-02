@@ -718,7 +718,7 @@ and Baltic capitals and Bern, because many German, Baltic and Hamburg lines exis
 over the step to travel by train. It must not pretend to a precision the data lacks.
 
 **Decision.**
-- Factors from the UK government's GHG conversion factors (DESNZ 2025, condensed set), kept in
+- Factors from the UK government's GHG conversion factors (DESNZ 2026, full set), kept in
   `places.yaml` → `settings.co2` with the rows they come from. Train: national rail; Eurostar:
   international rail; bus: coach; ferry: foot passenger; flight: short-haul economy *with* the non-CO₂
   effects (+70 %) – DESNZ counts all of Europe and North Africa as short-haul.

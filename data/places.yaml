@@ -21,13 +21,13 @@ settings:
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   start_date: 2026-12-08   # travel date; default is next Monday (or use --date)
   co2:                       # rough CO2 per journey vs a direct flight (IDEA-07, D-41); remove to switch off
-    source: "UK DESNZ GHG conversion factors 2025, condensed set (gov.uk), kg CO2e total per passenger-km"
+    source: "UK DESNZ GHG conversion factors 2026, full set (gov.uk), kg CO2e total per passenger-km"
     factors:
-      rail: 0.03546          # Business travel- land: Rail, National rail
-      international_rail: 0.00446  # Rail, International rail - used for Eurostar only
-      coach: 0.02776         # Coach
-      ferry: 0.01871         # Business travel- sea: Ferry, Foot passenger
-      flight: 0.12576        # Business travel- air: Short-haul, Economy class, with RF (non-CO2 effects, +70 %);
+      rail: 0.03092          # Business travel- land: Rail, National rail (renewed 2026 from ORR data)
+      international_rail: 0.01135  # Rail, International rail - used for Eurostar only
+      coach: 0.03948         # Coach
+      ferry: 0.01871         # Business travel- sea: Ferry, Foot passenger (not updated in 2026)
+      flight: 0.12576        # Business travel- air: Short-haul, Economy class, with RF (non-CO2 effects, +70 %; not updated in 2026);
                              # DESNZ counts all of Europe and North Africa as short-haul
     route_factor: 1.2        # tracks, roads and sea routes are about 20 % longer than the straight line
     flight_uplift: 1.08      # flights: straight line + 8 % (indirect routes, holding), as DESNZ does

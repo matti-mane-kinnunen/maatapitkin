@@ -121,15 +121,16 @@ Each journey on the map shows a rough CO₂ figure and compares it with flying, 
 *"CO₂ about 110 kg – roughly 65 % less than flying (about 300 kg)"*. It is meant to reassure, not to
 account: the numbers are rounded (kg to 5 or 10, percentages to 5 %).
 
-**Source.** The UK government's greenhouse gas conversion factors (DESNZ, 2025, condensed set), in kg CO₂e
-per passenger-km. They are open, documented and updated every year; the values and the rows they come
+**Source.** The UK government's greenhouse gas conversion factors (DESNZ, 2026, full set), in kg CO₂e
+per passenger-km. They are open, documented and published every year (not every factor is renewed every
+year: in 2026 rail and coach were, flights and ferries were not); the values and the rows they come
 from are in `places.yaml` → `settings` → `co2`.
 
 | Mode | kg CO₂e per passenger-km | DESNZ row |
 |---|---|---|
-| Train | 0.035 | Rail, national rail |
-| Eurostar | 0.004 | Rail, international rail |
-| Bus | 0.028 | Coach |
+| Train | 0.031 | Rail, national rail |
+| Eurostar | 0.011 | Rail, international rail |
+| Bus | 0.039 | Coach |
 | Ferry | 0.019 | Ferry, foot passenger |
 | Flight | 0.126 | Short-haul, economy, with the non-CO₂ effects at altitude (+70 %) |
 
@@ -154,7 +155,7 @@ from are in `places.yaml` → `settings` → `co2`.
   21–23 h) on big cruise ferries probably emit more per passenger-km.
 - Getting to and from airports and stations is left out on both sides.
 
-To update the factors (once a year, DATA-12), download the new condensed set from
+To update the factors (once a year, DATA-12), download the new set (2026 came only as the full set) from
 [gov.uk](https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting),
 read the same rows and change the numbers in `places.yaml`.
 
