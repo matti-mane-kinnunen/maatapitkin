@@ -16,7 +16,7 @@ _leave Helsinki Tue 10.11.2026 from 17:00 · generated 2.11.2026. Change 20 min 
 | Paris | Tue 10.11. 17:35 | Thu 12.11. 10:05 | 41 h 30 min | 7 | 2 | 0 | fewest changes: 47 h 32 min, 4 ch., 0 hotel |
 | Prague | Tue 10.11. 17:35 | Thu 12.11. 10:22 | 41 h 47 min | 6 | 1 | 1 (Berlin) | fewest changes: 48 h 40 min, 4 ch., 0 hotel |
 | Vienna | Tue 10.11. 17:35 | Thu 12.11. 11:32 | 42 h 57 min | 4 | 2 | 0 |  |
-| Brussels | Tue 10.11. 17:35 | Thu 12.11. 13:06 | 44 h 31 min | 7 | 1 | 1 (Osnabrück) | fewest changes: 48 h 31 min, 5 ch., 0 hotel |
+| Brussels | Tue 10.11. 17:35 | Thu 12.11. 12:47 | 44 h 12 min | 8 | 2 | 0 | fewest changes: 48 h 31 min, 5 ch., 0 hotel |
 | Warsaw | Wed 11.11. 07:30 | Thu 12.11. 13:07 | 30 h 37 min | 5 | 0 | 1 (Vilnius) | fewest changes: 52 h 25 min, 4 ch., 0 hotel |
 | Bratislava | Tue 10.11. 17:35 | Thu 12.11. 13:10 | 44 h 35 min | 5 | 2 | 0 |  |
 | London | Tue 10.11. 17:35 | Thu 12.11. 12:30 | 44 h 55 min | 8 | 2 | 0 | fewest changes: 50 h 55 min, 5 ch., 0 hotel |
@@ -55,7 +55,7 @@ _Night trains and night buses left out; night ferries still used._
 | Berlin | Wed 11.11. 21:23 | 28 h 48 min | 5 | 0 | same |
 | Amsterdam | Thu 12.11. 10:02 | 41 h 27 min | 6 | 1 (Osnabrück) | same |
 | Prague | Thu 12.11. 10:22 | 41 h 47 min | 6 | 1 (Berlin) | same |
-| Brussels | Thu 12.11. 13:06 | 44 h 31 min | 7 | 1 (Osnabrück) | same |
+| Brussels | Thu 12.11. 13:06 | 44 h 31 min | 7 | 1 (Osnabrück) | +0 h 19 min |
 | Warsaw | Thu 12.11. 13:07 | 30 h 37 min | 5 | 1 (Vilnius) | same |
 | Paris | Thu 12.11. 14:35 | 46 h 00 min | 7 | 1 (Osnabrück) | +4 h 30 min |
 | Vienna | Thu 12.11. 14:54 | 46 h 19 min | 6 | 1 (Berlin) | +3 h 22 min |
@@ -95,7 +95,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Paris | Tue 10.11. 05:32 | Thu 12.11. 08:21 | 51 h 49 min | arrives 1 h 44 min earlier |
 | Prague | Tue 10.11. 05:32 | Wed 11.11. 21:25 | 40 h 53 min | arrives 12 h 57 min earlier |
 | Vienna | Tue 10.11. 07:30 | Thu 12.11. 05:25 | 46 h 55 min | arrives 6 h 07 min earlier |
-| Brussels | Tue 10.11. 05:32 | Wed 11.11. 23:06 | 42 h 34 min | arrives 14 h 00 min earlier |
+| Brussels | Tue 10.11. 05:32 | Wed 11.11. 23:06 | 42 h 34 min | arrives 13 h 41 min earlier |
 | Warsaw | Tue 10.11. 07:30 | Wed 11.11. 13:07 | 30 h 37 min | arrives 24 h 00 min earlier |
 | Bratislava | Tue 10.11. 07:30 | Thu 12.11. 07:10 | 48 h 40 min | arrives 6 h 00 min earlier |
 | London | Tue 10.11. 05:32 | Thu 12.11. 08:57 | 53 h 25 min | arrives 3 h 33 min earlier |
@@ -147,6 +147,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Offenburg | Thu 12.11. 06:39 | 38 h 04 min | 5 | 0 |
 | Strasbourg | Thu 12.11. 07:34 | 38 h 59 min | 6 | 0 |
 | Koblenz | Thu 12.11. 07:46 | 39 h 11 min | 6 | 0 |
+| Liège | Thu 12.11. 07:46 | 39 h 11 min | 6 | 0 |
 | Mockava | Thu 12.11. 08:52 | 25 h 22 min | 4 | 1 |
 | Basel | Thu 12.11. 08:21 | 39 h 46 min | 5 | 0 |
 | Innsbruck | Thu 12.11. 08:49 | 40 h 14 min | 6 | 0 |
@@ -155,6 +156,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Narvik | Thu 12.11. 12:37 | 44 h 02 min | 3 | 0 |
 | Lyon | Thu 12.11. 12:59 | 44 h 24 min | 7 | 0 |
 | Bordeaux | Thu 12.11. 13:14 | 44 h 39 min | 8 | 0 |
+| Lille | Thu 12.11. 13:51 | 45 h 16 min | 9 | 0 |
 | Milan | Thu 12.11. 13:55 | 45 h 20 min | 7 | 0 |
 | Nantes | Thu 12.11. 14:20 | 45 h 45 min | 8 | 0 |
 | Marseille | Thu 12.11. 14:48 | 46 h 13 min | 8 | 0 |
@@ -382,17 +384,18 @@ _Fastest: 42 h 57 min, arrive Thu 12.11. 11:32, 4 changes, 0 hotel nights_
 - Thu 12.11. 07:09 → Thu 12.11. 11:32  **Munich → Vienna**  IC
 
 ### Brussels
-_Fastest: 44 h 31 min, arrive Thu 12.11. 13:06, 7 changes, 1 hotel nights_
+_Fastest: 44 h 12 min, arrive Thu 12.11. 12:47, 8 changes, 0 hotel nights_
 
 - Tue 10.11. 17:35 → Tue 10.11. 19:49  **Helsinki → Turku**  IC
 - Tue 10.11. 20:55 → Wed 11.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
 - Wed 11.11. 07:22 → Wed 11.11. 11:53  **Stockholm → Malmö**  X2 523
 - Wed 11.11. 12:20 → Wed 11.11. 12:58  **Malmö → Copenhagen**  6802
 - Wed 11.11. 14:22 → Wed 11.11. 19:01  **Copenhagen → Hamburg**  ECE
-- Wed 11.11. 19:45 → Wed 11.11. 21:34  **Hamburg → Osnabrück**  ICE
-- 🛏 Overnight in Osnabrück (Wed 11.11. 21:34 → Thu 12.11. 07:06)
-- Thu 12.11. 07:06 → Thu 12.11. 10:02  **Osnabrück → Amsterdam**  ICE
-- Thu 12.11. 11:10 → Thu 12.11. 13:06  **Amsterdam → Brussels**  EST Eurostar
+- Wait 3 h 10 min in Hamburg
+- Wed 11.11. 22:11 → Thu 12.11. 06:39  **Hamburg → Offenburg**  ICE  (night)
+- Thu 12.11. 07:05 → Thu 12.11. 07:34  **Offenburg → Strasbourg**  RS4
+- Thu 12.11. 08:22 → Thu 12.11. 10:05  **Strasbourg → Paris**  TGV INOUI
+- Thu 12.11. 11:18 → Thu 12.11. 12:47  **Paris → Brussels**  EST FRPNO
 
 ### Brussels — fewest changes
 _Fewest changes: 48 h 31 min, arrive Thu 12.11. 17:06, 5 changes, 0 hotel nights_

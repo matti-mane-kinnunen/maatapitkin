@@ -132,6 +132,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Köln | Tue 10.11. 15:48 | 9 h 26 min | 1 | 0 |
 | Frankfurt | Tue 10.11. 16:14 | 9 h 52 min | 1 | 0 |
 | Koblenz | Tue 10.11. 17:42 | 11 h 20 min | 2 | 0 |
+| Liège | Tue 10.11. 17:46 | 11 h 24 min | 2 | 0 |
 | Offenburg | Tue 10.11. 17:58 | 11 h 36 min | 1 | 0 |
 | Munich | Tue 10.11. 18:04 | 11 h 42 min | 1 | 0 |
 | Östersund | Tue 10.11. 18:18 | 12 h 15 min | 2 | 0 |
@@ -146,6 +147,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Bergen | Wed 11.11. 06:23 | 24 h 20 min | 3 | 0 |
 | Turku | Wed 11.11. 07:35 | 24 h 32 min | 2 | 0 |
 | Toulouse | Wed 11.11. 07:44 | 25 h 22 min | 3 | 0 |
+| Lille | Wed 11.11. 07:51 | 25 h 29 min | 4 | 1 |
 | Bordeaux | Wed 11.11. 08:14 | 25 h 52 min | 3 | 1 |
 | Lyon | Wed 11.11. 08:26 | 26 h 04 min | 3 | 1 |
 | Nantes | Wed 11.11. 08:54 | 26 h 32 min | 3 | 1 |

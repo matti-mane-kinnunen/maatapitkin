@@ -153,6 +153,8 @@ places:
   Lugano: {lat: 46.005, lon: 8.947, country: "CH"}  # station; corrected by hand 1.11.2026 (was the Resega stop)
   Koblenz: {lat: 50.349, lon: 7.590, country: "DE"}  # added by add_leg.py
   Stranraer: {lat: 54.906, lon: -5.003, country: "GB", aliases: ["Stranraer Academy"]}  # added by add_leg.py
+  Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"]}  # added by add_leg.py
+  Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"]}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

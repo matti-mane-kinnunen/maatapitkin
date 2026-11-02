@@ -1152,3 +1152,117 @@ legs:
   - {from: Göteborg, to: Oslo, service: "30", mode: train, times: ["09:16-13:16"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Göteborg, to: Oslo, service: "30", mode: train, runs: "sun", times: ["16:10-19:46"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Tallinn, to: Valga, service: "E35 Tallinn", mode: train, times: ["07:15-11:13", "10:22-14:14", "13:27-17:12", "14:31-18:32", "18:25-22:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, times: ["08:01-11:32", "09:31-12:51", "10:31-13:51", "12:31-15:51", "13:31-16:51", "14:31-17:51",
+      "16:31-19:51", "18:01-21:21", "19:01-22:22", "20:01-23:21"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "fri", times: ["12:01-15:21"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "fri,sat", times: ["07:31-10:51"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "fri,sat,sun", times: ["11:31-14:51"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "fri,sun", times: ["16:01-19:21"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "mon-fri", times: ["06:01-09:22", "07:01-10:21", "15:31-19:01", "17:31-20:53"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "sat", times: ["06:31-09:51", "15:31-18:54"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Paris, service: "EST GBSPX", mode: train, runs: "sun", times: ["14:01-17:21", "15:31-18:50", "17:31-20:58", "20:31-23:51"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Lille, service: "EST GBSPX", mode: train, times: ["09:01-11:23", "11:04-13:26", "13:01-15:26", "15:04-17:25", "17:04-19:26", "19:34-21:56"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Lille, service: "EST GBSPX", mode: train, runs: "mon-fri,sat", times: ["07:04-09:26"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Lille, service: "EST GBSPX", mode: train, runs: "mon-fri,sun", times: ["18:04-20:27"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Lille, service: "EST GBSPX", mode: train, runs: "sat", times: ["10:01-12:27", "12:04-14:26"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: Brussels, service: "TGV INOUI", mode: train, times: ["09:09-09:43", "10:27-11:01", "11:27-12:05", "11:37-12:11", "13:30-14:05", "14:52-15:26",
+      "15:30-16:06", "17:09-17:43", "17:30-18:05", "19:30-20:05", "20:09-20:43", "20:27-21:01",
+      "22:00-22:35", "22:09-22:43"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: Brussels, service: "TGV INOUI", mode: train, runs: "mon-fri", times: ["07:18-07:55"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: Brussels, service: "TGV INOUI", mode: train, runs: "mon-fri,sat", times: ["09:30-10:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: Brussels, service: "TGV INOUI", mode: train, runs: "mon-fri,sun", times: ["20:31-21:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: Brussels, service: "TGV INOUI", mode: train, runs: "sat", times: ["12:31-13:05", "14:30-15:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Brussels, service: "EST GBSPX", mode: train, times: ["08:16-11:13", "09:01-12:05", "11:04-14:05", "13:01-16:06", "15:04-18:05", "17:04-20:05",
+      "19:34-22:35"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Brussels, service: "EST GBSPX", mode: train, runs: "mon-fri", times: ["06:16-09:13"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Brussels, service: "EST GBSPX", mode: train, runs: "mon-fri,sat", times: ["07:04-10:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Brussels, service: "EST GBSPX", mode: train, runs: "mon-fri,sun", times: ["18:04-21:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Brussels, service: "EST GBSPX", mode: train, runs: "sat", times: ["10:01-13:05", "12:04-15:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, times: ["09:35-09:57", "13:35-13:57", "18:37-19:00", "19:33-19:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "fri", times: ["12:05-12:27"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "mon-fri", times: ["08:36-08:57", "15:35-15:57", "16:35-16:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "mon-fri,sun", times: ["21:35-21:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "mon-thu,sat,sun", times: ["11:36-11:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "sat", times: ["08:35-08:57", "21:05-21:27"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "sat,sun", times: ["15:30-15:57", "17:35-17:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Lille, to: London, service: "EST BEBMI", mode: train, runs: "sun", times: ["12:35-12:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, times: ["07:17-07:51", "08:17-08:51", "13:17-13:51", "15:03-15:38", "16:17-16:51", "16:52-17:26",
+      "17:56-18:30"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "fri", times: ["11:26-12:00", "18:02-18:34"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "mon-fri", times: ["06:37-07:12", "07:57-08:31", "14:52-15:28", "15:52-16:30"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "mon-fri,sun", times: ["10:09-10:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "mon-thu", times: ["18:09-18:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "mon-thu,sat,sun", times: ["10:56-11:31"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "sat", times: ["07:56-08:30", "10:17-10:51", "14:51-15:26", "19:00-19:35", "20:26-21:00"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "sat,sun", times: ["06:27-07:12", "08:51-09:26", "12:56-13:30", "16:56-17:30", "18:52-19:28"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Lille, service: "TGV INOUI", mode: train, runs: "sun", times: ["11:56-12:30", "14:52-15:26", "18:00-18:34", "20:56-21:30"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "fri", times: ["06:49-08:56", "11:49-13:56", "12:49-14:56", "13:22-15:20", "14:49-16:56", "16:53-18:50",
+      "21:53-23:50"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "mon-fri", times: ["05:53-07:50", "08:53-10:50", "09:53-11:50", "10:53-12:50", "12:22-14:20", "13:53-15:50",
+      "15:53-17:50", "17:53-19:50", "18:53-20:50", "19:53-21:50", "20:53-22:50"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "mon-thu", times: ["06:49-08:54", "07:53-09:50", "11:49-13:54", "12:49-14:54", "14:49-16:54", "16:49-18:54",
+      "21:49-23:56"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sat", times: ["06:53-09:19", "08:53-11:19", "14:22-16:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sat,sun", times: ["09:53-12:19", "11:22-13:57", "13:53-16:19", "15:53-18:19", "17:53-20:19", "18:22-20:57",
+      "20:53-23:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sun", times: ["11:53-14:19", "18:53-21:19", "19:53-22:19", "21:22-23:57", "21:53-00:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "fri", times: ["11:04-16:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "mon-fri", times: ["06:16-11:20", "08:16-13:20", "15:04-20:20", "18:04-23:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "mon-thu", times: ["11:04-16:22"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sat", times: ["11:04-16:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sat,sun", times: ["08:16-13:57", "15:04-20:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: London, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sun", times: ["18:04-23:57"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, times: ["09:54-11:17", "11:53-13:17", "14:22-15:44", "15:47-17:17", "16:25-17:47", "17:53-19:17",
+      "19:25-20:47"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "fri", times: ["15:22-16:44", "18:53-20:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "fri,sat,sun", times: ["20:53-22:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "fri,sun", times: ["16:47-18:17", "20:22-21:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "mon-fri", times: ["06:22-07:44", "09:24-10:47", "10:55-12:17", "21:23-22:47"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "mon-fri,sat", times: ["07:23-08:45", "07:52-09:17", "08:25-09:47", "08:53-10:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "mon-fri,sun", times: ["12:22-13:44", "17:25-18:47", "18:25-19:47"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "mon-thu", times: ["06:48-08:14", "11:18-12:47", "20:19-21:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "mon-thu,sat,sun", times: ["12:54-14:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "mon-thu,sun", times: ["18:53-20:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "sat", times: ["10:52-12:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "sat,sun", times: ["12:21-13:44", "13:53-15:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Brussels, service: "EST FRPNO", mode: train, runs: "sun", times: ["08:04-09:39", "08:07-09:47", "10:24-11:47", "10:25-11:47", "15:20-16:44", "19:53-21:17",
+      "21:48-23:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "fri", times: ["15:22-18:50", "20:22-23:50"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "mon-fri", times: ["07:23-10:50", "08:25-11:50", "09:24-12:50", "10:55-14:20", "12:22-15:50", "14:22-17:50",
+      "16:25-19:50", "17:25-20:50", "18:25-21:50", "19:25-22:50"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "mon-thu", times: ["06:22-09:50"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sat", times: ["07:23-11:19", "08:25-12:19", "12:22-16:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sat,sun", times: ["14:22-18:19", "16:25-20:19", "19:25-23:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Amsterdam, service: "EST Eurostar", mode: train, runs: "sun", times: ["08:04-12:19", "10:24-14:19", "12:21-16:19", "17:25-21:19", "18:25-22:19", "20:22-00:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Liège, service: "EST FRPNO", mode: train, times: ["09:54-12:09", "15:47-18:09", "17:53-20:09"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Liège, service: "EST FRPNO", mode: train, runs: "fri", times: ["18:53-21:11"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Liège, service: "EST FRPNO", mode: train, runs: "mon-fri,sat", times: ["07:52-10:09"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Liège, service: "EST FRPNO", mode: train, runs: "mon-fri,sun", times: ["11:53-14:09"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Liège, service: "EST FRPNO", mode: train, runs: "sat,sun", times: ["13:53-16:09"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Liège, service: "EST FRPNO", mode: train, runs: "sun", times: ["19:53-22:09"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Köln, service: "ICE", mode: train, times: ["07:12-08:16", "09:14-10:16", "11:14-12:15", "12:12-13:15", "12:18-13:24", "13:14-14:15",
+      "15:14-16:15", "17:14-18:15", "18:12-19:15", "19:14-20:15", "20:12-21:15", "20:18-21:24"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Köln, service: "ICE", mode: train, runs: "fri", times: ["21:11-22:15", "21:14-22:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Köln, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["10:12-11:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Köln, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["14:12-15:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Köln, service: "ICE", mode: train, runs: "sat,sun", times: ["16:12-17:14", "21:14-22:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Köln, service: "ICE", mode: train, runs: "sun", times: ["22:12-23:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Köln, service: "EST FRPNO", mode: train, times: ["09:54-13:15", "15:47-19:15", "17:53-21:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Köln, service: "EST FRPNO", mode: train, runs: "fri", times: ["18:53-22:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Köln, service: "EST FRPNO", mode: train, runs: "mon-fri,sat", times: ["07:52-11:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Köln, service: "EST FRPNO", mode: train, runs: "mon-fri,sun", times: ["11:53-15:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Köln, service: "EST FRPNO", mode: train, runs: "sat,sun", times: ["13:53-17:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Köln, service: "EST FRPNO", mode: train, runs: "sun", times: ["19:53-23:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Paris, service: "EST DEKOH", mode: train, times: ["09:51-12:15", "13:51-16:07", "17:51-20:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Paris, service: "EST DEKOH", mode: train, runs: "fri,sat,sun", times: ["11:51-14:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Paris, service: "EST DEKOH", mode: train, runs: "mon-fri,sat", times: ["07:53-10:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Paris, service: "EST DEKOH", mode: train, runs: "mon-fri,sun", times: ["19:51-22:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Liège, to: Paris, service: "EST DEKOH", mode: train, runs: "sun", times: ["15:51-18:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, times: ["06:11-07:36", "08:39-09:47", "09:43-10:43", "11:43-12:43", "12:39-13:46", "13:42-14:43",
+      "14:38-15:38", "15:41-16:43", "16:43-17:46", "17:43-18:43", "19:43-20:43"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, runs: "fri,sat", times: ["21:02-22:43"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, runs: "fri,sat,sun", times: ["10:39-11:46"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["06:39-07:46", "07:43-08:43"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["18:44-19:46"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, runs: "mon-thu,sun", times: ["21:42-22:43"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Liège, service: "ICE", mode: train, runs: "sun", times: ["07:43-08:46", "14:43-15:46"], query: "*", checked: 2026-11-02, source: transitous}
