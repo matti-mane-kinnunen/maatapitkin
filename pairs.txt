@@ -239,7 +239,7 @@ Malmö -> Stockholm : *
 Göteborg -> Oslo : *
 Göteborg -> Stockholm : X2 every 60 07:11-21:11 3:30   # Transitous has no direct SJ trains here
 
-# --- From a route list (routes_to_pairs.py) ---
+# --- From a route list Eurostar (routes_to_pairs.py) ---
 London -> Paris : *
 London -> Lille : *
 Lille -> Brussels : *
@@ -256,28 +256,20 @@ Paris -> Köln : *
 Liège -> Paris : *
 Köln -> Liège : *
 
-# --- From a route list (routes_to_pairs.py) ---
+# --- From a route list Italy, Frecce (routes_to_pairs.py) ---
 Torino -> Milan : *
 Milan -> Bologna : *
 Florence -> Rome : *
-Naples -> Reggio di Calabria : *
-Torino -> Reggio di Calabria : *
 Florence -> Bologna : *
 Rome -> Florence : *
 Naples -> Rome : *
-Reggio di Calabria -> Naples : *
-Reggio di Calabria -> Torino : *
 Naples -> Lecce : *
 Torino -> Lecce : *
 Lecce -> Naples : *
 Lecce -> Torino : *
 Venice -> Bologna : *
 Naples -> Salerno : *
-Salerno -> Reggio di Calabria : *
-Venice -> Reggio di Calabria : *
 Salerno -> Naples : *
-Reggio di Calabria -> Salerno : *
-Reggio di Calabria -> Venice : *
 Trieste -> Verona : *
 Verona -> Brescia : *
 Brescia -> Milan : *
@@ -315,3 +307,37 @@ Marseille -> Paris : *
 Aix en Provence -> Marseille : *
 Avignon -> Aix en Provence : *
 Lyon -> Avignon : *
+
+
+# -- towards east from Berlin plus some other changes -- 
+
+Valga -> Tallinn : * 
+Riga -> Valga : * 
+Vilnius -> Riga : *
+Krakow -> Warsaw : *
+Wien -> Warsaw : *
+Berlin -> Warsaw : *
+Praha -> Berlin : *
+München -> Berlin : *
+Frankfurt -> Berlin : *
+Köln -> Berlin  : *
+Osnabrück -> Hamburg : *
+
+# --- From a route list TGV  (routes_to_pairs.py) ---
+Strasbourg -> Frankfurt : *
+Paris -> Frankfurt : *
+Frankfurt -> Paris : *
+Strasbourg -> Berlin : *
+Paris -> Berlin : *
+Berlin -> Strasbourg : *
+Berlin -> Paris : *
+Strasbourg -> Stuttgart : *
+Paris -> Stuttgart : *
+Stuttgart -> Strasbourg : *
+Stuttgart -> Paris : *
+Strasbourg -> Munich : *
+Paris -> Munich : *
+Munich -> Strasbourg : *
+Munich -> Paris : *
+Strasbourg -> Brussels : *
+Brussels -> Strasbourg : *
