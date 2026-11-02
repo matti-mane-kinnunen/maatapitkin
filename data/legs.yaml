@@ -27,14 +27,8 @@ legs:
   - {from: Turku, to: Stockholm, dep: "20:55", arr: "06:30", service: "Viking Line", mode: ferry, night: true, checked: 2026-10-31, source: manual}
 
   # --- From Stockholm -------------------------------------------------------
-  - {from: Stockholm, to: Hamburg,   dep: "17:29", arr: "05:53", service: EN 345, mode: train, night: true, highlight: sto-ham-night, checked: 2026-10-30}
-  - {from: Oslo,      to: Trondheim, dep: "18:02", arr: "00:53", service: R51,    mode: train}
-  - {from: Hamburg,   to: Berlin,    dep: "20:34", arr: "22:22", service: ICE 609, mode: train, checked: 2026-10-30}
 
   # --- Morning after the Stockholm-Hamburg night train (orange) -------------
-  - {from: Strasbourg, to: Paris,    dep: "17:19", arr: "19:05", service: TGV INOUI 2362, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
-  - {from: Amsterdam, to: London,    dep: "16:40", arr: "19:57", service: EST 9157, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
-  - {from: Amsterdam, to: Paris,     dep: "15:10", arr: "18:48", service: EST 9364, mode: train, highlight: sto-ham-night, checked: 2026-10-30}
 
   # --- Berlin ---------------------------------------------------------------
 
@@ -43,11 +37,6 @@ legs:
 
   # --- Night train Hamburg -> Basel ----------------------------------------
   - {from: Hamburg,   to: Basel,     dep: "22:11", arr: "08:21", service: NJ 471,  mode: train, night: true, checked: 2026-10-30}
-  - {from: Milan,     to: Rome,      dep: "13:00", arr: "16:15", service: FR 9631, mode: train, checked: 2026-10-30}
-  - {from: Rome,      to: Naples,    dep: "16:25", arr: "17:33", service: FR 9631, mode: train, checked: 2026-10-30}
-  - {from: Marseille, to: Nice,      dep: "17:28", arr: "20:04", service: TGV INOUI 6177, mode: train, checked: 2026-10-30}
-  - {from: Paris,     to: Toulouse,  dep: "15:08", arr: "19:26", service: TGV8509, mode: train}
-  - {from: London,    to: Holyhead,  dep: "19:02", arr: "23:02", service: Avanti VT4390, mode: train, checked: 2026-10-30}
 
   # --- Italy and Malta ------------------------------------------------------
   - {from: Rome,      to: Syracuse,  dep: "23:00", arr: "11:29", service: ICN1959, mode: train, night: true}
@@ -55,21 +44,17 @@ legs:
   - {from: Pozzallo, to: Valletta, dep: "21:30", arr: "23:15", service: "VirtuFerries", mode: ferry, checked: 2026-10-31, source: manual}
 
   # --- Iberia ---------------------------------------------------------------
-  - {from: Barcelona, to: Madrid,    dep: "06:20", arr: "08:50", service: AVE 3260, mode: train}
-  - {from: Madrid,    to: Malaga,    dep: "09:35", arr: "12:33", service: AVE 2092, mode: train, checked: 2026-10-30}
   - {from: Madrid,    to: Badajoz,   dep: "10:55", arr: "16:11", service: MD, mode: train}
   - {from: Badajoz,   to: Abrantes,  dep: "19:41", arr: "20:52", service: R, mode: train}
   - {from: Abrantes,  to: Lisbon,    dep: "21:02", arr: "22:20", service: IC, mode: train}
 
   # --- Ireland --------------------------------------------------------------
-  - {from: Dublin,    to: Galway,    dep: "15:35", arr: "17:39", service: IC708, mode: train}
 
   # --- Balkans, Greece, Turkey ---------------------------------------------
   - {from: Sofia,     to: Istanbul,  dep: "18:40", arr: "06:34", service: 493 / 12504, mode: train, night: true}
   - {from: Istanbul,  to: Ankara,    dep: "08:40", arr: "13:16", service: IC81006, mode: train}
   - {from: Bari, to: Patras, dep: "19:30", arr: "13:00", service: "Anek Superfast", mode: ferry, night: true, runs: "mon-sat", checked: 2026-10-31, source: manual}
   - {from: Ancona, to: Split, dep: "19:45", arr: "07:00", service: "Jadrolinija 53", mode: ferry, night: true, runs: "tue,fri", checked: 2026-10-31, source: manual}
-  - {from: Split,     to: Zagreb,    dep: "07:54", arr: "16:04", service: IC 520, mode: train, checked: 2026-10-30}
   - {from: Bucharest, to: Chisinau,  dep: "19:20", arr: "08:10", service: "402", mode: train, night: true}
 
   # --- Added with add_leg.py ----------------------------------------------
