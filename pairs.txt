@@ -415,3 +415,6 @@ Oslo -> Stavanger : *
 # -- Tunisia --
 Palermo -> Tunis : Ferry 02:30 ferry 02:30-14:00 tue      # operator timetable, Nov 2026
 Palermo -> Tunis : Ferry 10:30 ferry 10:30-22:30 sat      # operator timetable, Nov 2026
+
+# -- Sardinia --
+Genoa -> Porto Torres : Moby Lines ferry night 20:30-07:30 daily   # Nov 2026
