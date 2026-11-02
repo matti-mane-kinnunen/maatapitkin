@@ -841,7 +841,11 @@ function select(cap, opt = 0, fromMap = false) {
   if (options.length > 1) options.forEach((o, i) => {
     const b = document.createElement("button"); b.type = "button"; b.setAttribute("role", "tab");
     b.setAttribute("aria-selected", String(o === r));
-    b.innerHTML = `<b>${o.label}</b><span>${dur(o.door_to_door_min)} · ${o.changes} changes · ${o.hotel_nights} hotel</span>`;
+    // compare by arrival: an option that leaves next morning has a shorter door-to-door time but arrives later
+    const day = t => t.replace(/ \d+\.\d+\./, "");                  // "Mon 16.11. 18:40" -> "Mon 18:40"
+    const when = o.depart !== r0.depart ? `leave ${day(o.depart_txt)} · ` : "";
+    b.innerHTML = `<b>${o.label}</b><span>${when}arrive ${day(o.arrive_txt)}</span>` +
+      `<span>${dur(o.door_to_door_min)} · ${o.changes} changes · ${o.hotel_nights} hotel</span>`;
     b.addEventListener("click", () => select(cap, i));
     optsEl.appendChild(b);
   });
