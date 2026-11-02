@@ -31,7 +31,7 @@ _leave Copenhagen Tue 10.11.2026 from 06:00 · generated 2.11.2026. Change 20 mi
 | Tirana | Tue 10.11. 06:22 | Thu 12.11. 12:40 | 54 h 18 min | 6 | 1 | 1 (Lugano) |  |
 | Riga | Tue 10.11. 06:03 | Thu 12.11. 16:44 | 57 h 41 min | 5 | 1 | 1 (Helsinki) |  |
 | Athens | Tue 10.11. 06:22 | Thu 12.11. 17:30 | 58 h 08 min | 6 | 1 | 1 (Lugano) |  |
-| Belfast | Tue 10.11. 06:22 | Thu 12.11. 15:58 | 58 h 36 min | 6 | 1 | 1 (Holyhead) |  |
+| Belfast | Tue 10.11. 06:22 | Thu 12.11. 15:58 | 58 h 36 min | 6 | 1 | 1 (Holyhead) | fewest hotel nights: 64 h 45 min, 8 ch., 0 hotel |
 | Sofia | Tue 10.11. 06:22 | Thu 12.11. 20:41 | 61 h 19 min | 6 | 2 | 0 |  |
 | Vilnius | Tue 10.11. 06:03 | Thu 12.11. 21:28 | 62 h 25 min | 6 | 1 | 1 (Helsinki) |  |
 | Valletta | Tue 10.11. 06:22 | Thu 12.11. 23:15 | 64 h 53 min | 6 | 2 | 0 |  |
@@ -175,16 +175,18 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Glasgow | Wed 11.11. 14:02 | 32 h 40 min | 4 | 1 |
 | Naples | Wed 11.11. 15:03 | 32 h 41 min | 5 | 1 |
 | Trieste | Wed 11.11. 15:12 | 32 h 50 min | 3 | 0 |
-| Ayr | Wed 11.11. 14:57 | 33 h 35 min | 5 | 1 |
 | Penzance | Wed 11.11. 15:03 | 33 h 41 min | 4 | 1 |
 | Bologna | Wed 11.11. 16:08 | 33 h 46 min | 2 | 0 |
 | Subotica | Wed 11.11. 16:24 | 34 h 02 min | 5 | 0 |
+| Ayr | Wed 11.11. 15:24 | 34 h 02 min | 5 | 1 |
 | Oulu | Wed 11.11. 17:48 | 34 h 45 min | 3 | 0 |
 | Bari | Wed 11.11. 17:27 | 35 h 05 min | 4 | 1 |
 | Valencia | Wed 11.11. 19:02 | 36 h 40 min | 4 | 1 |
 | Rovaniemi | Wed 11.11. 20:23 | 37 h 20 min | 3 | 0 |
 | Holyhead | Wed 11.11. 18:54 | 37 h 32 min | 4 | 1 |
+| Stranraer | Wed 11.11. 18:57 | 37 h 35 min | 6 | 1 |
 | Villa San Giovanni | Wed 11.11. 20:04 | 37 h 42 min | 5 | 1 |
+| Cairnryan | Wed 11.11. 19:43 | 38 h 21 min | 7 | 1 |
 | Sevilla | Wed 11.11. 21:39 | 39 h 17 min | 5 | 1 |
 | Santiago de Compostela | Wed 11.11. 22:19 | 39 h 57 min | 5 | 1 |
 | Malaga | Wed 11.11. 22:45 | 40 h 23 min | 5 | 1 |
@@ -605,6 +607,26 @@ _Fastest: 58 h 36 min, arrive Thu 12.11. 15:58, 6 changes, 1 hotel nights_
 - Thu 12.11. 07:30 → Thu 12.11. 11:00  **Holyhead → Dublin**  IrishFerry
 - Wait 2 h 50 min in Dublin
 - Thu 12.11. 13:50 → Thu 12.11. 15:58  **Dublin → Belfast**  rail
+
+### Belfast — fewest hotel nights
+_Fewest hotel nights: 64 h 45 min, arrive Thu 12.11. 22:07, 8 changes, 0 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 11 h 03 min in Hamburg
+- Tue 10.11. 21:51 → Tue 10.11. 23:51  **Hamburg → Berlin**  ICE
+- Tue 10.11. 23:51 → Wed 11.11. 06:15  **Berlin → Köln**  ICE  (night)
+- Wait 2 h 24 min in Köln
+- Wed 11.11. 08:39 → Wed 11.11. 12:15  **Köln → Paris**  EST DEKOH
+- Wait 2 h 26 min in Paris
+- Wed 11.11. 14:41 → Wed 11.11. 16:00  **Paris → London**  EST FRPNO
+- Wait 7 h 45 min in London
+- Wed 11.11. 23:45 → Thu 12.11. 07:30  **London → Glasgow**  Avanti  (night)
+- Thu 12.11. 08:00 → Thu 12.11. 08:51  **Glasgow → Ayr**  ScotRail
+- Wait 2 h 45 min in Ayr
+- Thu 12.11. 11:36 → Thu 12.11. 12:57  **Ayr → Stranraer**  ScotRail 11:36
+- Thu 12.11. 13:41 → Thu 12.11. 13:50  **Stranraer → Cairnryan**  360
+- Wait 5 h 15 min in Cairnryan
+- Thu 12.11. 19:05 → Thu 12.11. 22:07  **Cairnryan → Belfast**  Stenaline
 
 ### Sofia
 _Fastest: 61 h 19 min, arrive Thu 12.11. 20:41, 6 changes, 0 hotel nights_

@@ -1228,3 +1228,20 @@ legs:
   - {from: Ayr, to: Stranraer, dep: "17:32", arr: "18:57", service: "ScotRail 17:32", mode: train, checked: 2026-11-02, source: manual}
   - {from: Ayr, to: Stranraer, dep: "21:39", arr: "23:00", service: "ScotRail 21:39", mode: train, checked: 2026-11-02, source: manual}
   - {from: Ayr, to: Stranraer, dep: "07:29", arr: "08:54", service: "ScotRail 07:29", mode: train, checked: 2026-11-02, source: manual}
+  - {from: Glasgow, to: Ayr, service: "ScotRail", mode: train, runs: "mon-fri", times: ["06:00-06:55", "07:01-07:55", "08:00-08:51", "08:09-09:19", "08:30-09:25", "09:00-09:54",
+      "10:30-11:22", "11:00-11:56", "11:30-12:22", "12:00-12:55", "12:30-13:24", "13:00-13:52",
+      "14:30-15:24", "16:34-17:35", "17:00-17:55", "17:13-18:05", "17:30-18:22", "18:00-18:54",
+      "19:31-20:22", "20:00-20:52", "21:00-21:54", "22:00-22:51", "23:01-23:53"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Glasgow, to: Ayr, service: "ScotRail", mode: train, runs: "mon-fri,sat", times: ["00:15-01:09", "06:31-07:24", "07:30-08:24", "09:30-10:24", "10:00-10:55", "13:30-14:23",
+      "14:00-14:52", "15:00-15:52", "15:30-16:24", "16:00-16:52", "18:30-19:23", "20:30-21:25",
+      "21:30-22:23", "22:30-23:22", "23:30-00:22"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Glasgow, to: Ayr, service: "ScotRail", mode: train, runs: "mon-fri,sun", times: ["16:30-17:21", "19:00-19:53"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Glasgow, to: Ayr, service: "ScotRail", mode: train, runs: "sat", times: ["06:00-06:53", "07:01-07:53", "08:01-08:52", "08:07-09:20", "08:30-09:24", "10:30-11:24",
+      "11:01-11:57", "11:30-12:23", "12:00-12:56", "12:30-13:22", "13:00-13:51", "14:30-15:23",
+      "16:30-17:23", "17:30-18:23", "18:00-18:52", "19:00-19:52", "19:31-20:24", "20:02-20:54",
+      "21:00-21:57", "23:00-23:53"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Glasgow, to: Ayr, service: "ScotRail", mode: train, runs: "sat,sun", times: ["09:00-09:52", "17:00-17:54", "22:00-22:52"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Glasgow, to: Ayr, service: "ScotRail", mode: train, runs: "sun", times: ["09:30-10:20", "10:00-10:53", "10:30-11:20", "11:00-11:53", "11:30-12:21", "12:00-12:53",
+      "12:30-13:21", "13:00-13:55", "13:30-14:21", "14:00-14:53", "14:30-15:20", "15:00-15:54",
+      "15:30-16:21", "16:00-16:54", "17:30-18:20", "18:00-18:53", "18:30-19:21", "20:00-20:53",
+      "21:00-21:52", "23:00-23:54"], query: "*", checked: 2026-11-02, source: transitous}

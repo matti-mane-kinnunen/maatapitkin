@@ -31,7 +31,7 @@ _leave Helsinki Tue 10.11.2026 from 17:00 · generated 2.11.2026. Change 20 min 
 | Belgrade | Tue 10.11. 17:35 | Fri 13.11. 09:15 | 64 h 40 min | 8 | 2 | 1 (Subotica) | fewest hotel nights: 74 h 00 min, 8 ch., 0 hotel |
 | Bucharest | Tue 10.11. 17:35 | Fri 13.11. 10:37 | 65 h 02 min | 6 | 3 | 0 |  |
 | Dublin | Tue 10.11. 17:35 | Fri 13.11. 11:00 | 67 h 25 min | 9 | 2 | 1 (Holyhead) |  |
-| Belfast | Tue 10.11. 17:35 | Fri 13.11. 15:58 | 72 h 23 min | 10 | 2 | 1 (Holyhead) |  |
+| Belfast | Tue 10.11. 17:35 | Fri 13.11. 15:58 | 72 h 23 min | 10 | 2 | 1 (Holyhead) | fewest hotel nights: 78 h 32 min, 10 ch., 0 hotel |
 | Valletta | Tue 10.11. 17:35 | Fri 13.11. 23:15 | 78 h 40 min | 8 | 3 | 0 |  |
 | Lisbon | Tue 10.11. 17:35 | Fri 13.11. 22:20 | 78 h 45 min | 11 | 2 | 1 (Barcelona) |  |
 | Chisinau | Tue 10.11. 17:35 | Sat 14.11. 08:10 | 86 h 35 min | 7 | 4 | 0 |  |
@@ -183,13 +183,15 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Barcelona | Thu 12.11. 19:23 | 50 h 48 min | 8 | 0 |
 | Trieste | Thu 12.11. 19:27 | 50 h 52 min | 8 | 0 |
 | Holyhead | Thu 12.11. 18:54 | 51 h 19 min | 9 | 0 |
-| Ayr | Thu 12.11. 18:55 | 51 h 20 min | 10 | 0 |
+| Ayr | Thu 12.11. 19:23 | 51 h 48 min | 10 | 0 |
 | Penzance | Thu 12.11. 19:25 | 51 h 50 min | 9 | 0 |
 | Bari | Thu 12.11. 21:30 | 52 h 55 min | 8 | 0 |
 | Subotica | Thu 12.11. 23:18 | 54 h 43 min | 7 | 0 |
 | Valencia | Thu 12.11. 23:34 | 54 h 59 min | 9 | 0 |
+| Stranraer | Thu 12.11. 23:00 | 55 h 25 min | 11 | 0 |
 | Villa San Giovanni | Fri 13.11. 03:30 | 58 h 55 min | 6 | 0 |
 | Ventimiglia | Fri 13.11. 07:48 | 63 h 13 min | 9 | 1 |
+| Cairnryan | Fri 13.11. 07:38 | 64 h 03 min | 12 | 1 |
 | Palermo | Fri 13.11. 09:13 | 64 h 38 min | 6 | 0 |
 | Newcastle | Fri 13.11. 09:15 | 65 h 40 min | 5 | 0 |
 | Sevilla | Fri 13.11. 10:39 | 66 h 04 min | 10 | 1 |
@@ -734,6 +736,26 @@ _Fastest: 72 h 23 min, arrive Fri 13.11. 15:58, 10 changes, 1 hotel nights_
 - Fri 13.11. 07:30 → Fri 13.11. 11:00  **Holyhead → Dublin**  IrishFerry
 - Wait 2 h 50 min in Dublin
 - Fri 13.11. 13:50 → Fri 13.11. 15:58  **Dublin → Belfast**  rail
+
+### Belfast — fewest hotel nights
+_Fewest hotel nights: 78 h 32 min, arrive Fri 13.11. 22:07, 10 changes, 0 hotel nights_
+
+- Tue 10.11. 17:35 → Tue 10.11. 19:49  **Helsinki → Turku**  IC
+- Tue 10.11. 20:55 → Wed 11.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
+- Wait 10 h 59 min in Stockholm
+- Wed 11.11. 17:29 → Thu 12.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Thu 12.11. 06:45 → Thu 12.11. 10:48  **Hamburg → Köln**  ICE
+- Wait 1 h 51 min in Köln
+- Thu 12.11. 12:39 → Thu 12.11. 16:07  **Köln → Paris**  EST DEKOH
+- Thu 12.11. 17:09 → Thu 12.11. 18:30  **Paris → London**  EST FRPNO
+- Wait 5 h 15 min in London
+- Thu 12.11. 23:45 → Fri 13.11. 07:30  **London → Glasgow**  Avanti  (night)
+- Fri 13.11. 08:00 → Fri 13.11. 08:51  **Glasgow → Ayr**  ScotRail
+- Wait 2 h 45 min in Ayr
+- Fri 13.11. 11:36 → Fri 13.11. 12:57  **Ayr → Stranraer**  ScotRail 11:36
+- Fri 13.11. 13:41 → Fri 13.11. 13:50  **Stranraer → Cairnryan**  360
+- Wait 5 h 15 min in Cairnryan
+- Fri 13.11. 19:05 → Fri 13.11. 22:07  **Cairnryan → Belfast**  Stenaline
 
 ### Valletta
 _Fastest: 78 h 40 min, arrive Fri 13.11. 23:15, 8 changes, 0 hotel nights_
