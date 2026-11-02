@@ -1151,3 +1151,4 @@ legs:
   - {from: Malmö, to: Stockholm, service: "526", mode: train, runs: "sun", times: ["09:18-14:17"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Göteborg, to: Oslo, service: "30", mode: train, times: ["09:16-13:16"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Göteborg, to: Oslo, service: "30", mode: train, runs: "sun", times: ["16:10-19:46"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Tallinn, to: Valga, service: "E35 Tallinn", mode: train, times: ["07:15-11:13", "10:22-14:14", "13:27-17:12", "14:31-18:32", "18:25-22:07"], query: "*", checked: 2026-11-02, source: transitous}
