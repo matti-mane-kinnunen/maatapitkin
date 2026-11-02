@@ -211,7 +211,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Ruse | Thu 12.11. 13:40 | 54 h 18 min | 5 | 0 |
 | Valga | Thu 12.11. 14:14 | 55 h 11 min | 4 | 1 |
 | Algeciras | Thu 12.11. 13:59 | 55 h 37 min | 5 | 2 |
-| Reggio di Calabria | Thu 12.11. 14:10 | 55 h 48 min | 4 | 1 |
 | Galway | Thu 12.11. 13:51 | 56 h 29 min | 6 | 1 |
 | Pozzallo | Thu 12.11. 15:58 | 57 h 36 min | 5 | 0 |
 | Badajoz | Thu 12.11. 16:11 | 57 h 49 min | 5 | 1 |

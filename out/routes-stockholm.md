@@ -196,7 +196,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Valga | Thu 12.11. 14:14 | 45 h 14 min | 2 | 1 |
 | Subotica | Thu 12.11. 13:24 | 43 h 55 min | 5 | 1 |
 | Stranraer | Thu 12.11. 12:57 | 44 h 28 min | 6 | 0 |
-| Reggio di Calabria | Thu 12.11. 14:10 | 44 h 41 min | 6 | 1 |
 | Salerno | Thu 12.11. 14:30 | 45 h 01 min | 6 | 1 |
 | Barcelona | Thu 12.11. 14:32 | 45 h 03 min | 3 | 1 |
 | Cairnryan | Thu 12.11. 13:50 | 45 h 21 min | 7 | 0 |

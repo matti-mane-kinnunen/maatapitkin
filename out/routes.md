@@ -207,7 +207,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Syracuse | Fri 13.11. 11:29 | 66 h 54 min | 6 | 0 |
 | Santiago de Compostela | Fri 13.11. 11:32 | 66 h 57 min | 10 | 1 |
 | Algeciras | Fri 13.11. 13:59 | 69 h 24 min | 10 | 1 |
-| Reggio di Calabria | Fri 13.11. 14:10 | 69 h 35 min | 6 | 1 |
 | Salerno | Fri 13.11. 14:30 | 69 h 55 min | 6 | 1 |
 | Galway | Fri 13.11. 13:51 | 70 h 16 min | 8 | 1 |
 | Granada | Fri 13.11. 14:55 | 70 h 20 min | 11 | 1 |
