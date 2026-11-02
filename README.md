@@ -117,6 +117,6 @@ All of these settings are in `places.yaml` → `settings`.
 
 ## Next steps
 
-1. **Fix the 6 flagged legs** (`build.py` prints them).
-2. **Let corridors carry several departures.** Today each leg is a single train. Turning a leg into a *corridor* (e.g. Hamburg → Munich) with all its departures that day, filled in by the checker from Transitous, lets the router choose between them. You keep deciding which corridors are sensible.
-3. **Add the missing capitals**, starting with Tallinn, Riga and Vilnius, then the western Balkans.
+Open work is tracked in [BACKLOG.md](BACKLOG.md) (FIX, DATA and IDEA items), and the choices made
+along the way in [DECISIONS.md](DECISIONS.md).
+
