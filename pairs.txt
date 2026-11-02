@@ -255,3 +255,63 @@ Liège -> Köln : *
 Paris -> Köln : *
 Liège -> Paris : *
 Köln -> Liège : *
+
+# --- From a route list (routes_to_pairs.py) ---
+Torino -> Milan : *
+Milan -> Bologna : *
+Florence -> Rome : *
+Naples -> Reggio di Calabria : *
+Torino -> Reggio di Calabria : *
+Florence -> Bologna : *
+Rome -> Florence : *
+Naples -> Rome : *
+Reggio di Calabria -> Naples : *
+Reggio di Calabria -> Torino : *
+Naples -> Lecce : *
+Torino -> Lecce : *
+Lecce -> Naples : *
+Lecce -> Torino : *
+Venice -> Bologna : *
+Naples -> Salerno : *
+Salerno -> Reggio di Calabria : *
+Venice -> Reggio di Calabria : *
+Salerno -> Naples : *
+Reggio di Calabria -> Salerno : *
+Reggio di Calabria -> Venice : *
+Trieste -> Verona : *
+Verona -> Brescia : *
+Brescia -> Milan : *
+Trieste -> Torino : *
+Verona -> Trieste : *
+Brescia -> Verona : *
+Milan -> Brescia : *
+Torino -> Trieste : *
+Verona -> Bologna : *
+Verona -> Rome : *
+Bologna -> Verona : *
+Rome -> Verona : *
+Florence -> Naples : *
+Verona -> Naples : *
+Naples -> Florence : *
+Naples -> Verona : *
+Bologna -> Rimini : *
+Rimini -> Ancona : *
+Ancona -> Foggia : *
+Foggia -> Bari : *
+Bari -> Lecce : *
+Rimini -> Bologna : *
+Ancona -> Rimini : *
+Foggia -> Ancona : *
+Bari -> Foggia : *
+Lecce -> Bari : *
+Torino -> Lyon : *
+Milan -> Paris : *
+Lyon -> Torino : *
+Paris -> Milan : *
+Marseille -> Aix en Provence : *
+Aix en Provence -> Avignon : *
+Avignon -> Lyon : *
+Marseille -> Paris : *
+Aix en Provence -> Marseille : *
+Avignon -> Aix en Provence : *
+Lyon -> Avignon : *
