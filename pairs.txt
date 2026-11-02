@@ -191,7 +191,11 @@ Paris -> Bordeaux : *
 Paris -> Toulouse : *
 London -> Glasgow : *
 Glasgow -> Ayr : *
-Ayr -> Stranraer : *
+Ayr -> Stranraer : ScotRail 07:29 07:29-08:54   # Transitous finds no direct trains; times from bahn.de (Nov 2026)
+Ayr -> Stranraer : ScotRail 11:36 11:36-12:57
+Ayr -> Stranraer : ScotRail 15:35 15:35-16:56
+Ayr -> Stranraer : ScotRail 17:32 17:32-18:57
+Ayr -> Stranraer : ScotRail 21:39 21:39-23:00
 Stranraer -> Cairnryan : * bus   # local bus to the Stena Line port (FIX-04)
 London -> Holyhead : *
 Rome -> Syracuse : ICN1959 night 23:00-11:29   # 2023 times - Transitous has no trains here; check by hand
