@@ -78,7 +78,8 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h))
                .replace("__ORIGIN__", html.escape(net["origin"]))
-               .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin")))
+               .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin"))
+               .replace("__DRAFT__", " · <b>draft</b>: some connections may still be missing" if net.get("draft") else ""))
     if fragment:
         (root / "out" / "map.html").write_text(page)      # fragment: paste into a page or publish as is
     site = root / "out" / "site"                             # a complete page for GitHub Pages

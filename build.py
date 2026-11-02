@@ -13,6 +13,8 @@ import argparse
 import re
 import datetime as dt
 import json
+import multiprocessing
+import os
 import sys
 import time
 from pathlib import Path
@@ -48,6 +50,8 @@ def main():
     ap.add_argument("--starts", metavar="T1,T2",
                     help="departure times to switch between on the map, e.g. 06:00,17:00 (default: "
                          "settings.start_times, or 06:00 and the start time)")
+    ap.add_argument("--jobs", type=int, metavar="N",
+                    help="build this many maps at the same time (default: number of CPU cores)")
     ap.add_argument("--only", metavar="ORIGIN",
                     help="build only the map from this origin (quicker for testing; summary.json is not written)")
     ap.add_argument("--night", metavar="T",
@@ -73,17 +77,27 @@ def main():
         net.settings["start_time"] = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
     # one map page per origin (IDEA-04): the first is index.html, the others e.g. stockholm.html
     origins = net.settings.get("origins") or {net.settings.get("origin", "Helsinki"): {"page": "index.html"}}
-    pages = [{"name": o, "page": c.get("page") or f"{slugify(o)}.html"} for o, c in origins.items()]
+    pages = [{"name": o, "page": (c or {}).get("page") or f"{slugify(o)}.html", "draft": bool((c or {}).get("draft"))}
+             for o, c in origins.items()]
     if args.only and args.only not in origins:
         ap.error(f"only: {args.only!r} is not one of the origins ({', '.join(origins)})")
-    summaries = {}
+    jobs_list = []
     for k, (origin, cfg) in enumerate(origins.items()):
         if origin not in net.places:
             ap.error(f"origin {origin!r} is not in places.yaml")
         if args.only and origin != args.only:
             continue
-        cfg = dict(cfg or {}, page=pages[k]["page"])
-        summaries[origin] = build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
+        jobs_list.append((k, origin, dict(cfg or {}, page=pages[k]["page"])))
+    # the maps are independent: build them side by side on the machine's cores (GitHub: 4)
+    n_jobs = max(1, min(args.jobs or os.cpu_count() or 1, len(jobs_list)))
+    global _JOB
+    _JOB = (net, warnings, args, ap, pages, jobs_list)
+    if n_jobs > 1 and hasattr(os, "fork"):
+        with multiprocessing.get_context("fork").Pool(n_jobs) as pool:
+            results = pool.map(_build_job, range(len(jobs_list)))
+    else:
+        results = [_build_job(i) for i in range(len(jobs_list))]
+    summaries = {origin: summ for origin, summ in results}
     if args.only:
         print("Built one map only - out/summary.json not written.")
         return
@@ -137,6 +151,15 @@ def compact_variants(variants: dict) -> dict:
             o["starts"] = {t: one(sv) for t, sv in v["starts"].items()}
         return o
     return {d: one(v) for d, v in variants.items()}
+
+
+_JOB = None          # set by main() before the worker processes are forked
+
+
+def _build_job(i: int):
+    net, warnings, args, ap, pages, jobs_list = _JOB
+    k, origin, cfg = jobs_list[i]
+    return origin, build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
 
 
 def slugify(name: str) -> str:
@@ -449,7 +472,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "pages": pages, "other_pairs": other_pairs, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
@@ -464,7 +487,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
 
     # a small summary, committed every week, so the next run can tell if something broke
     summary = {
-        "generated": today.isoformat(), "dates": [d.isoformat() for d in dates],
+        "generated": today.isoformat(), "dates": [d.isoformat() for d in dates], "draft": bool(cfg.get("draft")),
         "departures": len(net.legs), "warnings": len(warnings),
         "capitals": {k: {"with_night_trains": len(v["yes"]["routes"]), "without": len(v["no"]["routes"])}
                      for k, v in variants.items()},

@@ -65,6 +65,11 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.full }}" = "true" ]; then mode="--oldest-first"; fi
           python3 add_leg.py --file pairs.txt $mode --budget 240 --date "${{ steps.dates.outputs.tue }}" --days tue,fri,sat,sun 2>&1 | tee lookup.log
 
+      # entries whose pairs.txt line is gone (or old trains a '*' line now covers) are removed
+      # automatically - no judgement needed; the issue lists them (D-35)
+      - name: Tidy legs.yaml
+        run: python3 tidy_legs.py --apply | tee tidy.log
+
       - name: Build the map
         run: python3 build.py "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee build.log
 
@@ -100,7 +105,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 lookup_report.py lookup.log > attention.md
+          python3 lookup_report.py lookup.log tidy.log > attention.md
           if [ -s attention.md ]; then
             {
               echo "Timetable lookup for the week of ${{ steps.dates.outputs.tue }}. Map published: ${{ steps.check.outputs.ok == 'true' && 'yes' || 'no (see the held-back issue)' }}."

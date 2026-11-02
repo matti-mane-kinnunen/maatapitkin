@@ -66,7 +66,9 @@ def main():
                 continue
             a_, b_ = first(so["capitals"]), first(sn["capitals"])
             lines.append(f"From {o}: {b_['with_night_trains']} capitals (last run {a_['with_night_trains']}).")
-            if b_["with_night_trains"] < a_["with_night_trains"]:
+            if b_["with_night_trains"] < a_["with_night_trains"] and sn.get("draft"):
+                lines.append(f"From {o} (draft): fewer capitals – not holding the update back.")
+            elif b_["with_night_trains"] < a_["with_night_trains"]:
                 lost = sorted(set(so.get("reached", {}).get("capitals", [])) - set(sn.get("reached", {}).get("capitals", [])))
                 problems.append(f"from {o}: fewer capitals reached ({a_['with_night_trains']} → {b_['with_night_trains']})"
                                 + (f": {', '.join(lost)}" if lost else ""))
