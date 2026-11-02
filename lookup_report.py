@@ -2,7 +2,8 @@
 """From an add_leg.py log, keep only what needs a person (D-38).
 
     python3 add_leg.py --file pairs.txt ... | tee lookup.log
-    python3 lookup_report.py lookup.log > attention.md     # empty when nothing needs you
+    python3 tidy_legs.py --apply | tee tidy.log
+    python3 lookup_report.py lookup.log tidy.log > attention.md     # empty when nothing needs you
 
 Reported: lines that lost their trains ("removed N old entries") or failed with an error,
 "Impossibly fast" legs, new places and guessed names, and lines left for next time.
@@ -24,7 +25,22 @@ SECTIONS = {                      # heading in the add_leg.py summary -> title i
 }
 
 
-def report(log: str) -> str:
+def tidy_report(log: str) -> list[str]:
+    """What tidy_legs.py --apply removed (its 'orphaned', 'covered', 'moved', 'expired' lists)."""
+    if not re.search(r"Removed \d+ entr", log):
+        return []
+    removed, current = [], None
+    for line in log.splitlines():
+        m = re.match(r"^(orphaned|covered|moved|expired|partial|no-star|keep) \(\d+\):", line)
+        if m:
+            current = m.group(1) if m.group(1) in ("orphaned", "covered", "moved", "expired") else None
+            continue
+        if current and line.startswith("  ") and line.strip():
+            removed.append(f"{line.strip()} ({current})")
+    return removed
+
+
+def report(log: str, tidy_log: str = "") -> str:
     text = log.split("=" * 72, 1)[-1]                 # the summary at the end of the log
     new_only = "Only new lines (--new)" in log        # after a push: every line is new, report all failures
     found: dict[str, list[str]] = {}
@@ -45,9 +61,14 @@ def report(log: str) -> str:
             out += [f"### {title}", ""] + [f"- {x}" for x in found[key]] + [""]
     if later:
         out += [f"_{later.group(1)} lines were left for next time (time budget); they go first next week._", ""]
+    removed = tidy_report(tidy_log)
+    if removed:
+        out += ["### Removed from legs.yaml by tidy_legs.py (no pairs.txt line looks after them any more)", ""] + \
+               [f"- {x}" for x in removed] + [""]
     return "\n".join(out)
 
 
 if __name__ == "__main__":
     log = Path(sys.argv[1]).read_text(encoding="utf-8") if len(sys.argv) > 1 else sys.stdin.read()
-    print(report(log), end="")
+    tidy = Path(sys.argv[2]).read_text(encoding="utf-8") if len(sys.argv) > 2 and Path(sys.argv[2]).exists() else ""
+    print(report(log, tidy), end="")

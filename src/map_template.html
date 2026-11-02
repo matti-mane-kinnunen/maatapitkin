@@ -205,7 +205,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
 <div class="wrap">
   <header>
-    <h1>__TITLE__<small>__ORIGIN__ to European capitals by train and ferry — fastest connection from the timetable data</small></h1>
+    <h1>__TITLE__<small>__ORIGIN__ to European capitals by train and ferry — fastest connection from the timetable data__DRAFT__</small></h1>
     <div class="origins"><nav id="origins" aria-label="Maps from other cities"></nav><span class="credit">Developed with Claude by <a href="mailto:mane@iki.fi">mane@iki.fi</a> – see <a href="https://mattikinnunen.blogspot.com" target="_blank" rel="noopener">blog</a></span></div>
     <div class="meta" id="meta"></div>
   </header>
@@ -322,8 +322,8 @@ const P = {...NET.places, ...NET.not_covered};
   nav.append("Maps from: ");
   pages.forEach((p, i) => {
     if (i) nav.append(" · ");
-    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = p.name; b.setAttribute("aria-current", "page"); nav.append(b); }
-    else { const a = document.createElement("a"); a.href = p.page; a.textContent = p.name; nav.append(a); }
+    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = p.name + (p.draft ? " (draft)" : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
+    else { const a = document.createElement("a"); a.href = p.page; a.textContent = p.name + (p.draft ? " (draft)" : ""); nav.append(a); }
   });
 })();
 const SVGNS = "http://www.w3.org/2000/svg";

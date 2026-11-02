@@ -692,6 +692,27 @@ now prefers a night on board over a short hotel stop where one exists.
 
 ---
 
+## D-40 Draft maps, parallel build, automatic tidy
+**Date:** 2.11.2026 · **Status:** Accepted
+
+**Context.** London and Berlin maps (IDEA-04) need many lines in the outward direction; gaps are
+easier to see on a map than in pairs.txt. Five maps one after another would take 20+ minutes on
+GitHub. And running tidy_legs.py by hand after each lookup was easy to forget.
+
+**Decision.**
+- An origin can be `draft: true` (London, Berlin): its link reads "London (draft)", the subtitle
+  says connections may be missing, and a draft never holds the weekly update back.
+- build.py builds the maps in parallel (one process per map, up to the number of cores; GitHub
+  has 4); `jobs=N` overrides.
+- The workflow runs `tidy_legs.py --apply` after every lookup (Matti: it needs no judgement);
+  the issue lists what it removed. Only the removable groups are reported, so a quiet week
+  still sends nothing.
+
+**Consequences.** First drafts: London and Berlin reach 27 of 35 capitals; both miss the Nordic
+and Baltic capitals and Bern, because many German, Baltic and Hamburg lines exist only one way.
+
+---
+
 ## Template for a new decision
 
 ```
