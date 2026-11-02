@@ -108,6 +108,7 @@ places:
   Genoa: {lat: 44.417, lon: 8.921, country: "IT", aliases: [Genova, Gênes]}  # corrected by hand 31.10.2026
   Porto Torres: {lat: 40.840, lon: 8.401, country: IT}  # Sardinia; ferry port, set by hand
   Bastia: {lat: 42.700, lon: 9.452, country: FR}  # Corsica; ferry port, set by hand
+  Palma: {lat: 39.567, lon: 2.636, country: ES, aliases: [Palma de Mallorca]}  # Mallorca; ferry port, set by hand
   Belgrade: {lat: 44.818, lon: 20.457, capital: true, country: "RS"}  # added by add_leg.py
   Szeged: {lat: 46.240, lon: 20.143, country: "HU"}  # added by add_leg.py
   Subotica: {lat: 46.102, lon: 19.671, country: "RS"}  # added by add_leg.py
