@@ -339,13 +339,13 @@ Strasbourg -> Brussels : *
 Brussels -> Strasbourg : *
 
 # --- From a route list (routes_to_pairs.py) ---
-Paris -> Geneva : *
-Geneva -> Paris : *
+Paris -> Geneve : *
+Geneve -> Paris : *
 Paris -> Zürich : *
 Zürich -> Paris : *
 Basel -> Hamburg : *
-Marseille -> Geneva : *
-Geneva -> Marseille : *
+Marseille -> Geneve : *
+Geneve -> Marseille : *
 Köln -> Munich : *
 Munich -> Köln : *
 Vienna -> Munich : *
@@ -355,6 +355,21 @@ Berlin -> Amsterdam : *
 Hannover -> Berlin : *
 Osnabrück -> Hannover : *
 Amsterdam -> Osnabrück : *
+
+# --- Outward lines for the London and Berlin drafts (D-40) ---
+Brussels -> Köln : *
+Köln -> Hamburg : *
+Berlin -> Hamburg : *
+Frankfurt -> Hamburg : *
+Hamburg -> Copenhagen : *
+Berlin -> Copenhagen : *
+Frankfurt -> Basel : *
+Köln -> Basel : *
+Berlin -> Basel : *
+Paris -> Basel : *
+Zürich -> Bern : *
+Warsaw -> Mockava : *
+Mockava -> Vilnius : *
 
 # --- Outward lines for the London and Berlin drafts (D-40) ---
 Brussels -> Köln : *
