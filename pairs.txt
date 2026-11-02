@@ -392,6 +392,7 @@ Mockava -> Vilnius : *
 Prague -> Przemyśl : RegioJet night 21:48-06:25      # Seat61, Nov 2026: daily; Transitous finds no trains
 Przemyśl -> Kyiv : UZ Intercity 09:49-20:10         # Seat61, Nov 2026: via Lviv (12:26)
 Warsaw -> Kyiv : Kyiv Express night 18:50-09:49     # Seat61, Nov 2026: from Warszawa Wschodnia
+Berlin -> Przemyśl : *                               # EC 59 runs through from Berlin-Lichtenberg (bahn.de, Nov 2026)
 
 # -- Andorra --
 Paris -> L'Hospitalet : *                                        # Intercités de Nuit 22:14-09:43 (Seat61, Nov 2026): fri,sat; daily Jun-Sep
@@ -403,3 +404,9 @@ Zagreb -> Sarajevo : Coach 16:45 bus 16:45-23:55          # Seat61, Nov 2026
 
 # -- San Marino --
 Rimini -> San Marino : Bonelli bus every 60 08:10-19:10 0:50   # Seat61, Nov 2026: 'every hour or so' 08:10-19:25 in winter (06:45-20:30 in summer), fewer on winter Sundays; from outside Rimini station
+
+# -- small fixes --
+Hamburg -> Kolding : *
+Kolding -> Aarhus : *
+Wroclaw -> Praha : *
+Berlin -> Wroclaw : *                                # EC 59 leaves from Berlin-Lichtenberg, not Hbf; the S-Bahn there is trimmed off
