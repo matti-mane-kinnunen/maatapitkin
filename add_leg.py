@@ -161,6 +161,16 @@ def resolve(name: str, auto: bool, near: dict | None = None) -> tuple[str, dict]
                     return known, places[known]
                 name = known
     was_missing = find_place(name, missing)
+    if was_missing:
+        # a capital waiting in not_yet_covered: its coordinates were set by hand, so use them
+        # rather than a namesake from the geocoder (San Marino near Bologna, Nov 2026)
+        v = missing[was_missing]
+        add_place(was_missing, v["lat"], v["lon"], v.get("country", ""), True, v.get("aliases"))
+        print(f"  Added {was_missing} to places.yaml (coordinates from not_yet_covered).")
+        LOG["places"].append(f"{was_missing}: ({v['lat']:.3f}, {v['lon']:.3f}) from not_yet_covered, "
+                             f"country {v.get('country') or '?'}, capital")
+        places, _ = load_places()
+        return was_missing, places[was_missing]
     print(f"  '{name}' is not in places.yaml - looking it up in Transitous...")
     found = [m for m in T.geocode(name) if "lat" in m and "lon" in m]
     # only Europe and around the Mediterranean (Porto must not become Porto Alegre)
