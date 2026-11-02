@@ -355,3 +355,18 @@ Berlin -> Amsterdam : *
 Hannover -> Berlin : *
 Osnabrück -> Hannover : *
 Amsterdam -> Osnabrück : *
+
+# --- Outward lines for the London and Berlin drafts (D-40) ---
+Brussels -> Köln : *
+Köln -> Hamburg : *
+Berlin -> Hamburg : *
+Frankfurt -> Hamburg : *
+Hamburg -> Copenhagen : *
+Berlin -> Copenhagen : *
+Frankfurt -> Basel : *
+Köln -> Basel : *
+Berlin -> Basel : *
+Paris -> Basel : *
+Zürich -> Bern : *
+Warsaw -> Mockava : *
+Mockava -> Vilnius : *
