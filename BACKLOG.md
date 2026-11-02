@@ -36,6 +36,7 @@ if it led to a decision, the D-number in DECISIONS.md. Purpose and scope: see D-
 | DATA-08 | 1.11.2026 | Cairnryan → Belfast has only one sailing (Stena Line 19:05 → 22:07). | Stena Line runs about six a day; add more once the Glasgow – Stranraer – Cairnryan route works (FIX-04). | open |
 | DATA-09 | 1.11.2026 | Stockholm → Tallinn (Tallink 17:30 → 11:00) is entered for Sundays only. | aferry says 3 sailings a week but lists only Sunday; find the other two days. Also check whether Stockholm → Riga sails again. | open |
 | DATA-10 | 2.11.2026 | Two 2023 trains kept although Transitous lacks them on one day. | NJ 471 Hamburg 22:11 → Basel 08:21: not found on Saturdays (Nightjets usually run nightly – a gap?). Regional Syracuse 14:45 → Pozzallo 15:58: no trains at all on Sundays (may be real; it feeds the Valletta ferry). Check both and fix the run days. | open |
+| DATA-11 | 2.11.2026 | Direct Paris – Berlin trains (and via Strasbourg) not found. | Lines removed 2.11.: Transitous found no direct Paris/Strasbourg ↔ Berlin trains for November 2026. A daytime ICE/TGV Paris – Berlin started in Dec 2024; check again for the summer timetable and add as `*` lines or own times if it runs. | open |
 
 ## Ideas
 
