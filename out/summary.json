@@ -7,31 +7,31 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5724,
+ "departures": 5737,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
-   "with_night_trains": 37,
-   "without": 31
+   "with_night_trains": 39,
+   "without": 32
   },
   "2026-11-13": {
-   "with_night_trains": 36,
-   "without": 30
+   "with_night_trains": 38,
+   "without": 31
   },
   "2026-11-14": {
-   "with_night_trains": 35,
-   "without": 30
-  },
-  "2026-11-15": {
    "with_night_trains": 37,
    "without": 31
+  },
+  "2026-11-15": {
+   "with_night_trains": 39,
+   "without": 32
   }
  },
  "places_reached": {
-  "2026-11-10": 146,
-  "2026-11-13": 144,
-  "2026-11-14": 142,
-  "2026-11-15": 146
+  "2026-11-10": 149,
+  "2026-11-13": 147,
+  "2026-11-14": 145,
+  "2026-11-15": 149
  },
  "reached": {
   "capitals": [
@@ -50,6 +50,7 @@
    "Chisinau",
    "Copenhagen",
    "Dublin",
+   "Kyiv",
    "Lisbon",
    "Ljubljana",
    "London",
@@ -61,6 +62,7 @@
    "Prague",
    "Riga",
    "Rome",
+   "San Marino",
    "Sarajevo",
    "Sofia",
    "Stockholm",
@@ -96,6 +98,7 @@
    "Prague",
    "Riga",
    "Rome",
+   "San Marino",
    "Sarajevo",
    "Stockholm",
    "Tallinn",
@@ -165,6 +168,7 @@
    "Kaisiadorys",
    "Kaunas",
    "Krakow",
+   "Kyiv",
    "K\u00f6ln",
    "L'Hospitalet",
    "Lecce",
@@ -204,6 +208,7 @@
    "Porto",
    "Pozzallo",
    "Prague",
+   "Przemy\u015bl",
    "Riga",
    "Rimini",
    "Rome",
@@ -211,6 +216,7 @@
    "Rovaniemi",
    "Ruse",
    "Salerno",
+   "San Marino",
    "Santiago de Compostela",
    "Sarajevo",
    "Sevilla",
@@ -265,31 +271,31 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5724,
+   "departures": 5737,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-13": {
+     "with_night_trains": 39,
+     "without": 32
+    },
+    "2026-11-14": {
      "with_night_trains": 37,
      "without": 31
     },
-    "2026-11-14": {
-     "with_night_trains": 35,
-     "without": 30
-    },
     "2026-11-15": {
-     "with_night_trains": 35,
-     "without": 31
+     "with_night_trains": 37,
+     "without": 32
     }
    },
    "places_reached": {
-    "2026-11-10": 146,
-    "2026-11-13": 146,
-    "2026-11-14": 142,
-    "2026-11-15": 142
+    "2026-11-10": 149,
+    "2026-11-13": 149,
+    "2026-11-14": 145,
+    "2026-11-15": 145
    },
    "reached": {
     "capitals": [
@@ -309,6 +315,7 @@
      "Copenhagen",
      "Dublin",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -320,6 +327,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Sofia",
      "Tallinn",
@@ -355,6 +363,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Tallinn",
      "Tirana",
@@ -424,6 +433,7 @@
      "Kaisiadorys",
      "Kaunas",
      "Krakow",
+     "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
      "Lecce",
@@ -463,6 +473,7 @@
      "Porto",
      "Pozzallo",
      "Prague",
+     "Przemy\u015bl",
      "Riga",
      "Rimini",
      "Rome",
@@ -470,6 +481,7 @@
      "Rovaniemi",
      "Ruse",
      "Salerno",
+     "San Marino",
      "Santiago de Compostela",
      "Sarajevo",
      "Sevilla",
@@ -523,31 +535,31 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5724,
+   "departures": 5737,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-13": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-14": {
-     "with_night_trains": 36,
-     "without": 31
+     "with_night_trains": 38,
+     "without": 32
     },
     "2026-11-15": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     }
    },
    "places_reached": {
-    "2026-11-10": 146,
-    "2026-11-13": 146,
-    "2026-11-14": 144,
-    "2026-11-15": 142
+    "2026-11-10": 149,
+    "2026-11-13": 149,
+    "2026-11-14": 147,
+    "2026-11-15": 145
    },
    "reached": {
     "capitals": [
@@ -566,6 +578,7 @@
      "Chisinau",
      "Dublin",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -577,6 +590,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Sofia",
      "Stockholm",
@@ -612,6 +626,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Stockholm",
      "Tallinn",
@@ -681,6 +696,7 @@
      "Kaisiadorys",
      "Kaunas",
      "Krakow",
+     "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
      "Lecce",
@@ -720,6 +736,7 @@
      "Porto",
      "Pozzallo",
      "Prague",
+     "Przemy\u015bl",
      "Riga",
      "Rimini",
      "Rome",
@@ -727,6 +744,7 @@
      "Rovaniemi",
      "Ruse",
      "Salerno",
+     "San Marino",
      "Santiago de Compostela",
      "Sarajevo",
      "Sevilla",
@@ -781,31 +799,31 @@
     "2026-11-15"
    ],
    "draft": true,
-   "departures": 5724,
+   "departures": 5737,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-13": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-14": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-15": {
-     "with_night_trains": 36,
-     "without": 31
+     "with_night_trains": 38,
+     "without": 32
     }
    },
    "places_reached": {
-    "2026-11-10": 146,
-    "2026-11-13": 146,
-    "2026-11-14": 146,
-    "2026-11-15": 144
+    "2026-11-10": 149,
+    "2026-11-13": 149,
+    "2026-11-14": 149,
+    "2026-11-15": 147
    },
    "reached": {
     "capitals": [
@@ -825,6 +843,7 @@
      "Copenhagen",
      "Dublin",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "Luxembourg",
@@ -835,6 +854,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Sofia",
      "Stockholm",
@@ -870,6 +890,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Stockholm",
      "Tallinn",
@@ -940,6 +961,7 @@
      "Kaisiadorys",
      "Kaunas",
      "Krakow",
+     "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
      "Lecce",
@@ -978,6 +1000,7 @@
      "Porto",
      "Pozzallo",
      "Prague",
+     "Przemy\u015bl",
      "Riga",
      "Rimini",
      "Rome",
@@ -985,6 +1008,7 @@
      "Rovaniemi",
      "Ruse",
      "Salerno",
+     "San Marino",
      "Santiago de Compostela",
      "Sarajevo",
      "Sevilla",
@@ -1039,31 +1063,31 @@
     "2026-11-15"
    ],
    "draft": true,
-   "departures": 5724,
+   "departures": 5737,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-13": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-14": {
-     "with_night_trains": 37,
-     "without": 31
+     "with_night_trains": 39,
+     "without": 32
     },
     "2026-11-15": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     }
    },
    "places_reached": {
-    "2026-11-10": 146,
-    "2026-11-13": 146,
-    "2026-11-14": 146,
-    "2026-11-15": 142
+    "2026-11-10": 149,
+    "2026-11-13": 149,
+    "2026-11-14": 149,
+    "2026-11-15": 145
    },
    "reached": {
     "capitals": [
@@ -1082,6 +1106,7 @@
      "Copenhagen",
      "Dublin",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -1093,6 +1118,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Sofia",
      "Stockholm",
@@ -1128,6 +1154,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "San Marino",
      "Sarajevo",
      "Stockholm",
      "Tallinn",
@@ -1197,6 +1224,7 @@
      "Kaisiadorys",
      "Kaunas",
      "Krakow",
+     "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
      "Lecce",
@@ -1236,6 +1264,7 @@
      "Porto",
      "Pozzallo",
      "Prague",
+     "Przemy\u015bl",
      "Riga",
      "Rimini",
      "Rome",
@@ -1243,6 +1272,7 @@
      "Rovaniemi",
      "Ruse",
      "Salerno",
+     "San Marino",
      "Santiago de Compostela",
      "Sarajevo",
      "Sevilla",

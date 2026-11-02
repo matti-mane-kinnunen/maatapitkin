@@ -1858,9 +1858,11 @@ legs:
   - {from: Zürich, to: Bern, service: "IC8", mode: train, runs: "sat,sun", times: ["01:02-02:04", "02:02-03:04"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Warsaw, to: Mockava, service: "IC Hańcza", mode: train, times: ["08:53-14:43", "14:53-20:55"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Mockava, to: Vilnius, service: "32", mode: train, times: ["09:09-11:35", "15:07-17:25", "21:04-23:25"], query: "*", checked: 2026-11-02, source: transitous}
-  - {from: Przemyśl, to: Kyiv, service: "716", mode: train, times: ["23:49-10:06"], query: "*", checked: 2026-11-02, source: transitous}
-  - {from: Przemyśl, to: Kyiv, service: "716", mode: train, runs: "sun", times: ["07:40-17:35"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Paris, to: L'Hospitalet, service: "ICN", mode: train, night: true, runs: "sat", times: ["22:13-09:42"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: L'Hospitalet, to: Andorra la Vella, dep: "10:15", arr: "11:30", service: "Hife", mode: bus, checked: 2026-11-02, source: manual}
   - {from: Zagreb, to: Sarajevo, dep: "12:30", arr: "20:55", service: "Coach 12:30", mode: bus, checked: 2026-11-02, source: manual}
   - {from: Zagreb, to: Sarajevo, dep: "16:45", arr: "23:55", service: "Coach 16:45", mode: bus, checked: 2026-11-02, source: manual}
+  - {from: Prague, to: Przemyśl, dep: "21:48", arr: "06:25", service: "RegioJet", mode: train, night: true, checked: 2026-11-02, source: manual}
+  - {from: Przemyśl, to: Kyiv, dep: "09:49", arr: "20:10", service: "UZ Intercity", mode: train, checked: 2026-11-02, source: manual}
+  - {from: Warsaw, to: Kyiv, dep: "18:50", arr: "09:49", service: "Kyiv Express", mode: train, night: true, checked: 2026-11-02, source: manual}
+  - {from: Rimini, to: San Marino, service: "Bonelli", mode: bus, every: 60, first: "08:10", last: "19:10", duration: "0:50", checked: 2026-11-02, source: manual}

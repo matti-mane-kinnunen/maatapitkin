@@ -175,6 +175,7 @@ places:
   Kyiv: {lat: 50.439, lon: 30.488, capital: true, country: "UA", aliases: ["Kyiv-Pas"]}  # added by add_leg.py
   Andorra la Vella: {lat: 42.507, lon: 1.521, capital: true, country: "AD"}  # added by add_leg.py
   Sarajevo: {lat: 43.860, lon: 18.399, capital: true, country: "BA"}  # added by add_leg.py
+  San Marino: {lat: 44.600, lon: 11.420, capital: true, country: "IT"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
@@ -182,6 +183,5 @@ not_yet_covered:
   Podgorica: {lat: 42.430, lon: 19.259, country: ME}
   Skopje:  {lat: 41.996, lon: 21.431, country: MK}
   Pristina: {lat: 42.663, lon: 21.164, country: XK}
-  San Marino: {lat: 43.936, lon: 12.447, country: SM}
   Vaduz:   {lat: 47.141, lon: 9.521, country: LI}
   Nicosia: {lat: 35.173, lon: 33.364, country: CY}
