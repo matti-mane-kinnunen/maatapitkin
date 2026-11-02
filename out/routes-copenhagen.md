@@ -34,11 +34,13 @@ _leave Copenhagen Tue 10.11.2026 from 06:00 · generated 2.11.2026. Change 20 mi
 | Athens | Tue 10.11. 06:22 | Thu 12.11. 17:30 | 58 h 08 min | 6 | 1 | 1 (Lugano) |  |
 | Belfast | Tue 10.11. 06:22 | Thu 12.11. 15:58 | 58 h 36 min | 6 | 1 | 1 (Holyhead) | fewest hotel nights: 64 h 45 min, 8 ch., 0 hotel |
 | Sofia | Tue 10.11. 06:22 | Thu 12.11. 20:41 | 61 h 19 min | 6 | 2 | 0 |  |
+| Sarajevo | Tue 10.11. 06:22 | Thu 12.11. 20:55 | 62 h 33 min | 4 | 1 | 1 (Zagreb) |  |
 | Valletta | Tue 10.11. 06:22 | Thu 12.11. 23:15 | 64 h 53 min | 6 | 2 | 0 |  |
 | Lisbon | Tue 10.11. 06:22 | Thu 12.11. 22:20 | 64 h 58 min | 7 | 1 | 1 (Barcelona) |  |
 | Monaco | Tue 10.11. 06:22 | Fri 13.11. 06:47 | 72 h 25 min | 5 | 1 | 2 (Nice) |  |
 | Chisinau | Tue 10.11. 06:22 | Fri 13.11. 08:10 | 72 h 48 min | 5 | 3 | 0 |  |
 | Ankara | Tue 10.11. 06:22 | Sat 14.11. 13:16 | 100 h 54 min | 8 | 3 | 1 (Sofia) |  |
+| Andorra la Vella | Tue 10.11. 06:22 | Sun 15.11. 11:30 | 125 h 08 min | 4 | 1 | 4 (Hamburg, Köln, Paris) | fewest hotel nights: 125 h 08 min, 9 ch., 1 hotel |
 
 ## Without night trains
 
@@ -74,10 +76,11 @@ _Night trains and night buses left out; night ferries still used._
 | Tirana | Thu 12.11. 12:40 | 54 h 18 min | 6 | 1 (Lugano) | same |
 | Athens | Thu 12.11. 17:30 | 58 h 08 min | 6 | 1 (Lugano) | same |
 | Belfast | Thu 12.11. 15:58 | 58 h 36 min | 6 | 2 (Paris, Holyhead) | same |
+| Sarajevo | Thu 12.11. 20:55 | 62 h 33 min | 4 | 2 (Vienna, Zagreb) | same |
 | Lisbon | Thu 12.11. 22:20 | 64 h 58 min | 7 | 2 (Paris, Madrid) | same |
 | Monaco | Fri 13.11. 06:47 | 72 h 25 min | 5 | 3 (Paris, Nice) | same |
 
-Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
+Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara, Kyiv, Andorra la Vella
 
 ## Leaving from 16:00 instead of 06:00
 
@@ -113,11 +116,13 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Athens | Wed 11.11. 06:22 | Fri 13.11. 17:30 | 58 h 08 min | arrives 24 h 00 min later |
 | Belfast | Wed 11.11. 06:22 | Fri 13.11. 15:58 | 58 h 36 min | arrives 24 h 00 min later |
 | Sofia | Wed 11.11. 06:22 | Fri 13.11. 20:41 | 61 h 19 min | arrives 24 h 00 min later |
+| Sarajevo | Wed 11.11. 06:22 | Fri 13.11. 20:55 | 62 h 33 min | arrives 24 h 00 min later |
 | Valletta | Wed 11.11. 06:22 | Fri 13.11. 23:15 | 64 h 53 min | arrives 24 h 00 min later |
 | Lisbon | Wed 11.11. 06:22 | Fri 13.11. 22:20 | 64 h 58 min | arrives 24 h 00 min later |
 | Monaco | Wed 11.11. 06:22 | Fri 13.11. 06:47 | 48 h 25 min | same arrival |
 | Chisinau | Wed 11.11. 06:22 | Sat 14.11. 08:10 | 72 h 48 min | arrives 24 h 00 min later |
 | Ankara | Wed 11.11. 06:22 | Sun 15.11. 13:16 | 100 h 54 min | arrives 24 h 00 min later |
+| Andorra la Vella | Wed 11.11. 06:22 | Sun 15.11. 11:30 | 101 h 08 min | same arrival |
 
 ## Other cities
 
@@ -231,6 +236,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Marrakech | Fri 13.11. 12:37 | 79 h 15 min | 9 | 3 |
 | Istanbul | Sat 14.11. 06:34 | 94 h 12 min | 7 | 1 |
 | Split | Sat 14.11. 07:00 | 96 h 38 min | 4 | 2 |
+| L'Hospitalet | Sun 15.11. 09:42 | 123 h 20 min | 3 | 4 |
 
 ## Itineraries
 
@@ -692,6 +698,18 @@ _Fastest: 61 h 19 min, arrive Thu 12.11. 20:41, 6 changes, 0 hotel nights_
 - Thu 12.11. 10:46 → Thu 12.11. 13:40  **Bucharest → Ruse**  1095
 - Thu 12.11. 14:25 → Thu 12.11. 20:41  **Ruse → Sofia**  IC463
 
+### Sarajevo
+_Fastest: 62 h 33 min, arrive Thu 12.11. 20:55, 4 changes, 1 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Tue 10.11. 11:33 → Tue 10.11. 13:23  **Hamburg → Berlin**  ICE
+- Wait 6 h 48 min in Berlin
+- Tue 10.11. 20:11 → Wed 11.11. 07:00  **Berlin → Vienna**  IC  (night)
+- Wait 8 h 53 min in Vienna
+- Wed 11.11. 15:53 → Wed 11.11. 22:20  **Vienna → Zagreb**  EC
+- 🛏 Overnight in Zagreb (Wed 11.11. 22:20 → Thu 12.11. 12:30)
+- Thu 12.11. 12:30 → Thu 12.11. 20:55  **Zagreb → Sarajevo**  Coach 12:30
+
 ### Valletta
 _Fastest: 64 h 53 min, arrive Thu 12.11. 23:15, 6 changes, 0 hotel nights_
 
@@ -773,15 +791,44 @@ _Fastest: 100 h 54 min, arrive Sat 14.11. 13:16, 8 changes, 1 hotel nights_
 - Wait 2 h 06 min in Istanbul
 - Sat 14.11. 08:40 → Sat 14.11. 13:16  **Istanbul → Ankara**  IC81006
 
+### Andorra la Vella
+_Fastest: 125 h 08 min, arrive Sun 15.11. 11:30, 4 changes, 4 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- 🛏 Overnight in Hamburg (Tue 10.11. 10:48 → Wed 11.11. 06:45)
+- Wed 11.11. 06:45 → Wed 11.11. 10:48  **Hamburg → Köln**  ICE
+- 🛏 Overnight in Köln (Wed 11.11. 10:48 → Fri 13.11. 10:39)
+- Fri 13.11. 10:39 → Fri 13.11. 14:07  **Köln → Paris**  EST DEKOH
+- 🛏 Overnight in Paris (Fri 13.11. 14:07 → Sat 14.11. 22:13)
+- Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
+- Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
+
+### Andorra la Vella — fewest hotel nights
+_Fewest hotel nights: 125 h 08 min, arrive Sun 15.11. 11:30, 9 changes, 1 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Tue 10.11. 11:33 → Tue 10.11. 13:23  **Hamburg → Berlin**  ICE
+- Wait 3 h 21 min in Berlin
+- Tue 10.11. 16:44 → Tue 10.11. 23:39  **Berlin → Krakow**  IC
+- Wed 11.11. 00:36 → Wed 11.11. 04:38  **Krakow → Warsaw**  EIP  (night)
+- Wait 15 h 10 min in Warsaw
+- Wed 11.11. 19:48 → Thu 12.11. 05:25  **Warsaw → Vienna**  IC  (night)
+- Thu 12.11. 06:28 → Thu 12.11. 10:43  **Vienna → Munich**  RJX
+- 🛏 Overnight in Munich (Thu 12.11. 10:43 → Fri 13.11. 23:49)
+- Fri 13.11. 23:49 → Sat 14.11. 06:04  **Munich → Köln**  ICE  (night)
+- Wait 4 h 35 min in Köln
+- Sat 14.11. 10:39 → Sat 14.11. 14:07  **Köln → Paris**  EST DEKOH
+- Wait 8 h 06 min in Paris
+- Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
+- Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
+
 ## Capitals not reachable with the current legs
 
+- Kyiv
 - Reykjavik
-- Sarajevo
 - Podgorica
 - Skopje
 - Pristina
-- Kyiv
-- Andorra la Vella
 - San Marino
 - Vaduz
 - Nicosia

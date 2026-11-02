@@ -7,35 +7,36 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5718,
+ "departures": 5724,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
-   "with_night_trains": 35,
-   "without": 30
+   "with_night_trains": 37,
+   "without": 31
   },
   "2026-11-13": {
-   "with_night_trains": 35,
-   "without": 29
+   "with_night_trains": 36,
+   "without": 30
   },
   "2026-11-14": {
-   "with_night_trains": 34,
-   "without": 29
-  },
-  "2026-11-15": {
    "with_night_trains": 35,
    "without": 30
+  },
+  "2026-11-15": {
+   "with_night_trains": 37,
+   "without": 31
   }
  },
  "places_reached": {
-  "2026-11-10": 143,
-  "2026-11-13": 143,
-  "2026-11-14": 141,
-  "2026-11-15": 143
+  "2026-11-10": 146,
+  "2026-11-13": 144,
+  "2026-11-14": 142,
+  "2026-11-15": 146
  },
  "reached": {
   "capitals": [
    "Amsterdam",
+   "Andorra la Vella",
    "Ankara",
    "Athens",
    "Belfast",
@@ -60,6 +61,7 @@
    "Prague",
    "Riga",
    "Rome",
+   "Sarajevo",
    "Sofia",
    "Stockholm",
    "Tallinn",
@@ -94,6 +96,7 @@
    "Prague",
    "Riga",
    "Rome",
+   "Sarajevo",
    "Stockholm",
    "Tallinn",
    "Tirana",
@@ -110,6 +113,7 @@
    "Algeciras",
    "Amsterdam",
    "Ancona",
+   "Andorra la Vella",
    "Ankara",
    "Athens",
    "Avignon",
@@ -162,6 +166,7 @@
    "Kaunas",
    "Krakow",
    "K\u00f6ln",
+   "L'Hospitalet",
    "Lecce",
    "Lille",
    "Lisbon",
@@ -207,6 +212,7 @@
    "Ruse",
    "Salerno",
    "Santiago de Compostela",
+   "Sarajevo",
    "Sevilla",
    "Sofia",
    "Split",
@@ -259,35 +265,36 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5718,
+   "departures": 5724,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-13": {
+     "with_night_trains": 37,
+     "without": 31
+    },
+    "2026-11-14": {
      "with_night_trains": 35,
      "without": 30
     },
-    "2026-11-14": {
-     "with_night_trains": 34,
-     "without": 29
-    },
     "2026-11-15": {
-     "with_night_trains": 34,
-     "without": 30
+     "with_night_trains": 35,
+     "without": 31
     }
    },
    "places_reached": {
-    "2026-11-10": 143,
-    "2026-11-13": 143,
-    "2026-11-14": 141,
-    "2026-11-15": 141
+    "2026-11-10": 146,
+    "2026-11-13": 146,
+    "2026-11-14": 142,
+    "2026-11-15": 142
    },
    "reached": {
     "capitals": [
      "Amsterdam",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Belfast",
@@ -313,6 +320,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Sofia",
      "Tallinn",
      "Tirana",
@@ -347,6 +355,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Tallinn",
      "Tirana",
      "Vatican",
@@ -362,6 +371,7 @@
      "Algeciras",
      "Amsterdam",
      "Ancona",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Avignon",
@@ -415,6 +425,7 @@
      "Kaunas",
      "Krakow",
      "K\u00f6ln",
+     "L'Hospitalet",
      "Lecce",
      "Lille",
      "Lisbon",
@@ -460,6 +471,7 @@
      "Ruse",
      "Salerno",
      "Santiago de Compostela",
+     "Sarajevo",
      "Sevilla",
      "Sofia",
      "Split",
@@ -511,35 +523,36 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5718,
+   "departures": 5724,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-13": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-14": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 36,
+     "without": 31
     },
     "2026-11-15": {
-     "with_night_trains": 34,
-     "without": 29
+     "with_night_trains": 35,
+     "without": 30
     }
    },
    "places_reached": {
-    "2026-11-10": 143,
-    "2026-11-13": 143,
-    "2026-11-14": 143,
-    "2026-11-15": 141
+    "2026-11-10": 146,
+    "2026-11-13": 146,
+    "2026-11-14": 144,
+    "2026-11-15": 142
    },
    "reached": {
     "capitals": [
      "Amsterdam",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Belfast",
@@ -564,6 +577,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -598,6 +612,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Stockholm",
      "Tallinn",
      "Tirana",
@@ -614,6 +629,7 @@
      "Algeciras",
      "Amsterdam",
      "Ancona",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Avignon",
@@ -666,6 +682,7 @@
      "Kaunas",
      "Krakow",
      "K\u00f6ln",
+     "L'Hospitalet",
      "Lecce",
      "Lille",
      "Lisbon",
@@ -711,6 +728,7 @@
      "Ruse",
      "Salerno",
      "Santiago de Compostela",
+     "Sarajevo",
      "Sevilla",
      "Sofia",
      "Split",
@@ -763,35 +781,36 @@
     "2026-11-15"
    ],
    "draft": true,
-   "departures": 5718,
+   "departures": 5724,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-13": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-14": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-15": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 36,
+     "without": 31
     }
    },
    "places_reached": {
-    "2026-11-10": 143,
-    "2026-11-13": 143,
-    "2026-11-14": 143,
-    "2026-11-15": 143
+    "2026-11-10": 146,
+    "2026-11-13": 146,
+    "2026-11-14": 146,
+    "2026-11-15": 144
    },
    "reached": {
     "capitals": [
      "Amsterdam",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Belfast",
@@ -816,6 +835,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -850,6 +870,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Stockholm",
      "Tallinn",
      "Tirana",
@@ -866,6 +887,7 @@
      "Algeciras",
      "Amsterdam",
      "Ancona",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Avignon",
@@ -919,6 +941,7 @@
      "Kaunas",
      "Krakow",
      "K\u00f6ln",
+     "L'Hospitalet",
      "Lecce",
      "Lille",
      "Lisbon",
@@ -963,6 +986,7 @@
      "Ruse",
      "Salerno",
      "Santiago de Compostela",
+     "Sarajevo",
      "Sevilla",
      "Sofia",
      "Split",
@@ -1015,35 +1039,36 @@
     "2026-11-15"
    ],
    "draft": true,
-   "departures": 5718,
+   "departures": 5724,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-13": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-14": {
-     "with_night_trains": 35,
-     "without": 30
+     "with_night_trains": 37,
+     "without": 31
     },
     "2026-11-15": {
-     "with_night_trains": 34,
-     "without": 29
+     "with_night_trains": 35,
+     "without": 30
     }
    },
    "places_reached": {
-    "2026-11-10": 143,
-    "2026-11-13": 143,
-    "2026-11-14": 143,
-    "2026-11-15": 141
+    "2026-11-10": 146,
+    "2026-11-13": 146,
+    "2026-11-14": 146,
+    "2026-11-15": 142
    },
    "reached": {
     "capitals": [
      "Amsterdam",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Belfast",
@@ -1068,6 +1093,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1102,6 +1128,7 @@
      "Prague",
      "Riga",
      "Rome",
+     "Sarajevo",
      "Stockholm",
      "Tallinn",
      "Tirana",
@@ -1118,6 +1145,7 @@
      "Algeciras",
      "Amsterdam",
      "Ancona",
+     "Andorra la Vella",
      "Ankara",
      "Athens",
      "Avignon",
@@ -1170,6 +1198,7 @@
      "Kaunas",
      "Krakow",
      "K\u00f6ln",
+     "L'Hospitalet",
      "Lecce",
      "Lille",
      "Lisbon",
@@ -1215,6 +1244,7 @@
      "Ruse",
      "Salerno",
      "Santiago de Compostela",
+     "Sarajevo",
      "Sevilla",
      "Sofia",
      "Split",
