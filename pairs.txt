@@ -337,3 +337,21 @@ Munich -> Strasbourg : *
 Munich -> Paris : *
 Strasbourg -> Brussels : *
 Brussels -> Strasbourg : *
+
+# --- From a route list (routes_to_pairs.py) ---
+Paris -> Geneva : *
+Geneva -> Paris : *
+Paris -> Zürich : *
+Zürich -> Paris : *
+Basel -> Hamburg : *
+Marseille -> Geneva : *
+Geneva -> Marseille : *
+Köln -> Munich : *
+Munich -> Köln : *
+Vienna -> Munich : *
+Berlin -> Hannover : *
+Hannover -> Osnabrück : *
+Berlin -> Amsterdam : *
+Hannover -> Berlin : *
+Osnabrück -> Hannover : *
+Amsterdam -> Osnabrück : *
