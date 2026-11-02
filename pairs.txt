@@ -410,3 +410,8 @@ Hamburg -> Kolding : *
 Kolding -> Aarhus : *
 Wroclaw -> Praha : *
 Berlin -> Wroclaw : *                                # EC 59 leaves from Berlin-Lichtenberg, not Hbf; the S-Bahn there is trimmed off
+Oslo -> Stavanger : * 
+
+# -- Tunisia --
+Palermo -> Tunis : Ferry 02:30 ferry 02:30-14:00 tue      # operator timetable, Nov 2026
+Palermo -> Tunis : Ferry 10:30 ferry 10:30-22:30 sat      # operator timetable, Nov 2026

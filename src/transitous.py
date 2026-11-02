@@ -21,7 +21,7 @@ UA = "maatapitkin/0.3 (https://github.com/matti-mane-kinnunen/maatapitkin)"
 TZ = {"FI": "Europe/Helsinki", "EE": "Europe/Tallinn", "LV": "Europe/Riga", "LT": "Europe/Vilnius",
       "PL": "Europe/Warsaw", "RO": "Europe/Bucharest", "MD": "Europe/Chisinau", "BG": "Europe/Sofia",
       "GR": "Europe/Athens", "TR": "Europe/Istanbul", "GB": "Europe/London", "IE": "Europe/Dublin",
-      "PT": "Europe/Lisbon", "UA": "Europe/Kyiv"}                       # everything else: Central European Time
+      "PT": "Europe/Lisbon", "UA": "Europe/Kyiv", "TN": "Africa/Tunis"}                       # everything else: Central European Time
 # City transport at either end of an answer (metro to the station etc.) is trimmed off.
 URBAN = {"WALK", "BIKE", "CAR", "SUBWAY", "METRO", "TRAM", "SUBURBAN", "BUS", "CABLE_CAR",
          "FUNICULAR", "AERIAL_LIFT", "ODM", "FLEX", "RENTAL"}

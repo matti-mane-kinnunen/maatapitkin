@@ -27,7 +27,7 @@ TZ = {"FI": "Europe/Helsinki", "EE": "Europe/Tallinn", "LV": "Europe/Riga", "LT"
       "RO": "Europe/Bucharest", "MD": "Europe/Chisinau", "BG": "Europe/Sofia", "GR": "Europe/Athens",
       "UA": "Europe/Kyiv", "TR": "Europe/Istanbul", "CY": "Asia/Nicosia",
       "GB": "Europe/London", "IE": "Europe/Dublin", "PT": "Europe/Lisbon", "IS": "Atlantic/Reykjavik",
-      "MA": "Africa/Casablanca"}
+      "MA": "Africa/Casablanca", "TN": "Africa/Tunis"}
 
 
 def utc_offset(place: dict, date: dt.date, clock: int) -> int:
