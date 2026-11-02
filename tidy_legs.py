@@ -15,6 +15,8 @@ fresh. Entries without one (mostly single trains from the original v1.9 graph) a
               a gap in Transitous or a real change - check by hand, then remove or give the
               missing days as your own times
   expired     valid_to is in the past - removed by --apply
+  orphaned    looked up (or given as own times) for a pairs.txt line that has been removed
+              since - removed by --apply
   no-star     no '*' line for this pair yet - add 'A -> B : *' to pairs.txt
   keep        a connection stored as one leg, a ferry or the metro - give it as your own
               times in pairs.txt (A -> B : name HH:MM-HH:MM), or leave it
@@ -67,7 +69,10 @@ def classify():
     today = dt.date.today()
     out = []
     for m, d in entries:
-        if m.start() in covered or d.get("source"):
+        if m.start() in covered:
+            continue
+        if d.get("source"):                     # came from a pairs.txt line that is gone now
+            out.append(("orphaned", m, d))
             continue
         pair = (d["from"], d["to"])
         if d.get("valid_to") and dt.date.fromisoformat(str(d["valid_to"])) < today:
@@ -87,16 +92,16 @@ def classify():
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], epilog=__doc__.split("\n", 2)[2],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--apply", action="store_true", help="remove the 'covered', 'moved' and 'expired' entries")
+    ap.add_argument("--apply", action="store_true", help="remove the 'orphaned', 'covered', 'moved' and 'expired' entries")
     args = ap.parse_args()
     rows = classify()
-    for kind in ("covered", "moved", "expired", "partial", "no-star", "keep"):
+    for kind in ("orphaned", "covered", "moved", "expired", "partial", "no-star", "keep"):
         group = [r for r in rows if r[0] == kind]
         if group:
             print(f"\n{kind} ({len(group)}):")
             for _, _, d in group:
                 print(f"  {d['from']} -> {d['to']} : {d.get('service')} {d.get('dep', '')}-{d.get('arr', '')}")
-    gone = [m for k, m, _ in rows if k in ("covered", "moved", "expired")]
+    gone = [m for k, m, _ in rows if k in ("orphaned", "covered", "moved", "expired")]
     if args.apply and gone:
         A.write_entries([], gone)
         print(f"\nRemoved {len(gone)} entries from legs.yaml. Run build.py and compare.")

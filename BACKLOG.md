@@ -12,7 +12,7 @@ if it led to a decision, the D-number in DECISIONS.md. Purpose and scope: see D-
 
 | ID | Added | What | Notes | Status |
 |---|---|---|---|---|
-| FIX-01 | 1.11.2026 | The station check (D-33) is a little generous between nearby cities. | "Frankfurt → Koblenz" includes a 44-min ICE, probably the high-speed line to Montabaur, 22 km from Koblenz – within the 25 km limit. It does not affect Luxembourg (via Brussels and Paris). Tighten the limit for short pairs, or check the stop name too. | open |
+| FIX-01 | 1.11.2026 | The station check (D-33) is a little generous between nearby cities. | "Frankfurt → Koblenz" includes a 44-min ICE, probably the high-speed line to Montabaur, 22 km from Koblenz – within the 25 km limit. It does not affect Luxembourg (via Brussels and Paris). Tighten the limit for short pairs, or check the stop name too. | partly moot 2.11.2026: the Koblenz lines (with the suspicious ICE) were removed; the limit itself is unchanged |
 | FIX-02 | 1.11.2026 | GitHub warns that the Node 20 actions are deprecated. | Update `actions/checkout`, `setup-python`, `upload-pages-artifact`, `deploy-pages` to current versions and pin each to a commit SHA (supply-chain hygiene). | open |
 | FIX-03 | 1.11.2026 | Run-day text is clumsy: "mon-fri,sat" instead of "mon-sat"; summary shows "(mon-Sat 1)". | Cosmetic, in add_leg.py (`runs_spec`, `runs_text`). | open |
 | FIX-04 | 1.11.2026 | The Hague and Cairnryan have no incoming journey. | Cairnryan: no train exists (bus from Stranraer/Ayr); The Hague: no line to it. Add a line or remove the place. | The Hague removed 1.11.2026 (not needed for the map). Cairnryan: Glasgow → Stranraer train + Stranraer → Cairnryan bus added 1.11.2026 – check the next run's issue |
