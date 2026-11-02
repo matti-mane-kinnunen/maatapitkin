@@ -167,6 +167,7 @@ places:
   Avignon: {lat: 43.922, lon: 4.786, country: "FR", aliases: ["Avignon TGV"]}  # added by add_leg.py
   Stuttgart: {lat: 48.718, lon: 9.108, country: "DE", aliases: ["Stuttgart, P+R"]}  # added by add_leg.py
   Hannover: {lat: 52.382, lon: 9.767, country: "DE", aliases: ["Hannover Zoo"]}  # added by add_leg.py
+  Geneve: {lat: 46.233, lon: 6.112, country: "CH", aliases: ["Genève-Aéroport"]}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

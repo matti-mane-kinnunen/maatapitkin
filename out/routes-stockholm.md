@@ -26,10 +26,10 @@ _leave Stockholm Tue 10.11.2026 from 16:00 · generated 2.11.2026. Change 20 min
 | Ljubljana | Tue 10.11. 17:29 | Thu 12.11. 13:53 | 44 h 24 min | 3 | 2 | 0 | fewest changes: 47 h 11 min, 2 ch., 0 hotel |
 | Belgrade | Tue 10.11. 17:29 | Thu 12.11. 15:15 | 45 h 46 min | 6 | 1 | 1 (Budapest) | fewest hotel nights: 49 h 06 min, 6 ch., 0 hotel |
 | Riga | Tue 10.11. 16:00 | Thu 12.11. 16:44 | 47 h 44 min | 3 | 1 | 1 (Helsinki) |  |
+| Vilnius | Tue 10.11. 17:29 | Thu 12.11. 17:25 | 46 h 56 min | 4 | 1 | 1 (Warsaw) | fewest hotel nights: 46 h 56 min, 5 ch., 0 hotel |
 | Belfast | Tue 10.11. 17:29 | Thu 12.11. 15:58 | 47 h 29 min | 6 | 1 | 1 (Holyhead) | fewest hotel nights: 53 h 38 min, 8 ch., 0 hotel |
 | Madrid | Tue 10.11. 17:29 | Thu 12.11. 18:17 | 48 h 48 min | 4 | 1 | 1 (Paris) | fewest hotel nights: 54 h 15 min, 5 ch., 0 hotel |
 | Zagreb | Tue 10.11. 17:29 | Thu 12.11. 19:20 | 49 h 51 min | 4 | 2 | 0 | fewest changes: 52 h 51 min, 3 ch., 0 hotel |
-| Vilnius | Tue 10.11. 16:00 | Thu 12.11. 21:28 | 52 h 28 min | 4 | 1 | 1 (Helsinki) |  |
 | Valletta | Tue 10.11. 17:29 | Thu 12.11. 23:15 | 53 h 46 min | 7 | 2 | 0 |  |
 | Monaco | Tue 10.11. 17:29 | Fri 13.11. 06:47 | 61 h 18 min | 5 | 2 | 1 (Nice) |  |
 | Bucharest | Tue 10.11. 17:29 | Fri 13.11. 08:23 | 61 h 54 min | 4 | 3 | 0 |  |
@@ -66,10 +66,10 @@ _Night trains and night buses left out; night ferries still used._
 | Vatican | Thu 12.11. 13:50 | 45 h 31 min | 7 | 2 (Copenhagen, Lugano) | +15 h 41 min |
 | Ljubljana | Thu 12.11. 13:53 | 45 h 34 min | 5 | 2 (Copenhagen, Vienna) | +1 h 10 min |
 | Riga | Thu 12.11. 16:44 | 47 h 44 min | 3 | 1 (Helsinki) | same |
+| Vilnius | Thu 12.11. 17:25 | 48 h 06 min | 6 | 2 (Copenhagen, Warsaw) | +1 h 10 min |
 | Madrid | Thu 12.11. 18:17 | 49 h 58 min | 6 | 2 (Copenhagen, Paris) | +1 h 10 min |
 | Belgrade | Thu 12.11. 18:35 | 50 h 16 min | 8 | 2 (Copenhagen, Vienna) | +4 h 30 min |
 | Zagreb | Thu 12.11. 19:20 | 51 h 01 min | 6 | 2 (Copenhagen, Vienna) | +1 h 10 min |
-| Vilnius | Thu 12.11. 21:28 | 52 h 28 min | 4 | 1 (Helsinki) | same |
 | Monaco | Fri 13.11. 06:47 | 49 h 25 min | 7 | 2 (Köln, Nice) | – |
 | Dublin | Fri 13.11. 11:00 | 49 h 17 min | 5 | 2 (Hamburg, Holyhead) | +6 h 46 min |
 | Tirana | Fri 13.11. 12:40 | 68 h 21 min | 8 | 2 (Copenhagen, Lugano) | +1 h 10 min |
@@ -89,7 +89,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Helsinki | – | – | – | no gain: take the 16:00 journey |
 | Amsterdam | Tue 10.11. 08:23 | Wed 11.11. 07:28 | 23 h 05 min | arrives 6 h 33 min earlier |
 | Paris | Tue 10.11. 08:23 | Wed 11.11. 10:05 | 25 h 42 min | arrives 4 h 46 min earlier |
-| Bern | Tue 10.11. 08:23 | Wed 11.11. 09:56 | 25 h 33 min | arrives 5 h 00 min earlier |
+| Bern | Tue 10.11. 08:23 | Wed 11.11. 07:56 | 23 h 33 min | arrives 7 h 00 min earlier |
 | Brussels | Tue 10.11. 08:23 | Wed 11.11. 11:06 | 26 h 43 min | arrives 6 h 00 min earlier |
 | Prague | Tue 10.11. 06:20 | Wed 11.11. 00:26 | 18 h 06 min | arrives 16 h 49 min earlier |
 | London | Tue 10.11. 08:23 | Wed 11.11. 12:30 | 29 h 07 min | arrives 5 h 05 min earlier |
@@ -97,22 +97,22 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Vienna | Tue 10.11. 06:20 | Wed 11.11. 07:00 | 24 h 40 min | arrives 12 h 32 min earlier |
 | Luxembourg | Tue 10.11. 08:23 | Wed 11.11. 14:49 | 30 h 26 min | arrives 5 h 04 min earlier |
 | Bratislava | Tue 10.11. 06:20 | Wed 11.11. 08:44 | 26 h 24 min | arrives 12 h 26 min earlier |
-| Rome | Tue 10.11. 08:23 | Wed 11.11. 17:40 | 33 h 17 min | arrives 4 h 59 min earlier |
-| Vatican | Tue 10.11. 08:23 | Wed 11.11. 18:20 | 33 h 57 min | arrives 4 h 59 min earlier |
+| Rome | Tue 10.11. 08:23 | Wed 11.11. 15:49 | 31 h 26 min | arrives 6 h 50 min earlier |
+| Vatican | Tue 10.11. 08:23 | Wed 11.11. 16:29 | 32 h 06 min | arrives 6 h 50 min earlier |
 | Budapest | Tue 10.11. 06:20 | Wed 11.11. 10:35 | 28 h 15 min | arrives 13 h 00 min earlier |
 | Tallinn | – | – | – | no gain: take the 16:00 journey |
 | Dublin | – | – | – | no gain: take the 16:00 journey |
 | Ljubljana | Tue 10.11. 06:20 | Wed 11.11. 13:53 | 31 h 33 min | arrives 24 h 00 min earlier |
 | Belgrade | Tue 10.11. 06:20 | Wed 11.11. 18:35 | 36 h 15 min | arrives 20 h 40 min earlier |
 | Riga | – | – | – | no gain: take the 16:00 journey |
+| Vilnius | – | – | – | no gain: take the 16:00 journey |
 | Belfast | – | – | – | no gain: take the 16:00 journey |
 | Madrid | Tue 10.11. 08:23 | Wed 11.11. 23:44 | 39 h 21 min | arrives 18 h 33 min earlier |
 | Zagreb | Tue 10.11. 06:20 | Wed 11.11. 19:20 | 37 h 00 min | arrives 24 h 00 min earlier |
-| Vilnius | – | – | – | no gain: take the 16:00 journey |
 | Valletta | – | – | – | no gain: take the 16:00 journey |
 | Monaco | – | – | – | no gain: take the 16:00 journey |
 | Bucharest | Tue 10.11. 06:20 | Thu 12.11. 08:23 | 49 h 03 min | arrives 24 h 00 min earlier |
-| Tirana | – | – | – | no gain: take the 16:00 journey |
+| Tirana | Tue 10.11. 08:23 | Thu 12.11. 12:40 | 52 h 17 min | arrives 24 h 00 min earlier |
 | Athens | – | – | – | no gain: take the 16:00 journey |
 | Sofia | Tue 10.11. 06:20 | Thu 12.11. 20:41 | 61 h 21 min | arrives 24 h 00 min earlier |
 | Lisbon | Tue 10.11. 10:43 | Thu 12.11. 22:20 | 60 h 37 min | arrives 24 h 00 min earlier |
@@ -167,6 +167,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Verona | Wed 11.11. 20:53 | 27 h 24 min | 5 | 0 |
 | Avignon | Wed 11.11. 21:09 | 27 h 40 min | 4 | 0 |
 | Bologna | Wed 11.11. 21:24 | 27 h 55 min | 4 | 0 |
+| Geneve | Wed 11.11. 21:36 | 28 h 07 min | 3 | 0 |
 | Irun | Wed 11.11. 21:37 | 28 h 08 min | 4 | 0 |
 | Venice | Wed 11.11. 21:44 | 28 h 15 min | 4 | 0 |
 | Genoa | Wed 11.11. 21:44 | 28 h 15 min | 4 | 0 |
@@ -196,6 +197,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Palermo | Thu 12.11. 11:55 | 42 h 26 min | 5 | 0 |
 | Valga | Thu 12.11. 14:14 | 45 h 14 min | 2 | 1 |
 | Subotica | Thu 12.11. 13:24 | 43 h 55 min | 5 | 1 |
+| Mockava | Thu 12.11. 14:43 | 44 h 14 min | 3 | 1 |
 | Stranraer | Thu 12.11. 12:57 | 44 h 28 min | 6 | 0 |
 | Salerno | Thu 12.11. 14:30 | 45 h 01 min | 6 | 1 |
 | Barcelona | Thu 12.11. 14:32 | 45 h 03 min | 3 | 1 |
@@ -211,7 +213,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Malaga | Thu 12.11. 22:45 | 53 h 16 min | 5 | 1 |
 | Durrës | Fri 13.11. 07:00 | 61 h 31 min | 5 | 0 |
 | Ventimiglia | Fri 13.11. 07:48 | 62 h 19 min | 5 | 1 |
-| Mockava | Fri 13.11. 08:52 | 63 h 52 min | 5 | 2 |
 | Taormina | Fri 13.11. 10:08 | 64 h 39 min | 7 | 1 |
 | Granada | Fri 13.11. 10:25 | 64 h 56 min | 6 | 2 |
 | Vitoria-Gasteiz | Fri 13.11. 10:38 | 65 h 09 min | 5 | 2 |
@@ -445,6 +446,29 @@ _Fastest: 47 h 44 min, arrive Thu 12.11. 16:44, 3 changes, 1 hotel nights_
 - Thu 12.11. 10:22 → Thu 12.11. 14:14  **Tallinn → Valga**  Elron
 - Thu 12.11. 14:25 → Thu 12.11. 16:44  **Valga → Riga**  875
 
+### Vilnius
+_Fastest: 46 h 56 min, arrive Thu 12.11. 17:25, 4 changes, 1 hotel nights_
+
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
+- Wait 7 h 22 min in Berlin
+- Wed 11.11. 15:44 → Wed 11.11. 21:00  **Berlin → Warsaw**  IC
+- 🛏 Overnight in Warsaw (Wed 11.11. 21:00 → Thu 12.11. 08:53)
+- Thu 12.11. 08:53 → Thu 12.11. 14:43  **Warsaw → Mockava**  IC Hańcza
+- Thu 12.11. 15:07 → Thu 12.11. 17:25  **Mockava → Vilnius**  32
+
+### Vilnius — fewest hotel nights
+_Fewest hotel nights: 46 h 56 min, arrive Thu 12.11. 17:25, 5 changes, 0 hotel nights_
+
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wait 2 h 08 min in Hamburg
+- Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
+- Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
+- Wait 3 h 47 min in Vienna
+- Wed 11.11. 23:19 → Thu 12.11. 08:08  **Vienna → Warsaw**  IC  (night)
+- Thu 12.11. 08:53 → Thu 12.11. 14:43  **Warsaw → Mockava**  IC Hańcza
+- Thu 12.11. 15:07 → Thu 12.11. 17:25  **Mockava → Vilnius**  32
+
 ### Belfast
 _Fastest: 47 h 29 min, arrive Thu 12.11. 15:58, 6 changes, 1 hotel nights_
 
@@ -517,16 +541,6 @@ _Fewest changes: 52 h 51 min, arrive Thu 12.11. 22:20, 3 changes, 0 hotel nights
 - Wed 11.11. 20:11 → Thu 12.11. 07:00  **Berlin → Vienna**  IC  (night)
 - Wait 8 h 53 min in Vienna
 - Thu 12.11. 15:53 → Thu 12.11. 22:20  **Vienna → Zagreb**  EC
-
-### Vilnius
-_Fastest: 52 h 28 min, arrive Thu 12.11. 21:28, 4 changes, 1 hotel nights_
-
-- Tue 10.11. 16:00 → Wed 11.11. 10:10  **Stockholm → Helsinki**  Viking Line  (night)
-- 🛏 Overnight in Helsinki (Wed 11.11. 10:10 → Thu 12.11. 07:30)
-- Thu 12.11. 07:30 → Thu 12.11. 09:30  **Helsinki → Tallinn**  Megastar
-- Thu 12.11. 10:22 → Thu 12.11. 14:14  **Tallinn → Valga**  Elron
-- Thu 12.11. 14:25 → Thu 12.11. 16:44  **Valga → Riga**  875
-- Thu 12.11. 16:55 → Thu 12.11. 21:28  **Riga → Vilnius**  891/892
 
 ### Valletta
 _Fastest: 53 h 46 min, arrive Thu 12.11. 23:15, 7 changes, 0 hotel nights_
