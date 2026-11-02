@@ -117,6 +117,8 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .leg.train { stroke: var(--train) } .leg.night { stroke: var(--night) } .leg.ferry, .leg.local { stroke: var(--ferry); stroke-dasharray: 4 4 }
 #base .leg { stroke-width: 1.3; opacity: 0.45 }
 #route .leg { stroke-width: 4.2; opacity: 1 }
+#base .leg.unused { display: none }                  /* IDEA-12: connections no journey uses */
+.all-legs #base .leg.unused { display: inline; opacity: 0.35; stroke-dasharray: 1.5 3.5 }
 #route .leg.ferry, #route .leg.local { stroke-dasharray: 7 6 }
 #route .halo { fill: none; stroke: var(--land); stroke-width: 8; stroke-linecap: round; opacity: 0.9 }
 .node { fill: var(--panel); stroke: var(--fg); stroke-width: 1.2 }
@@ -221,6 +223,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <div class="togs">
           <label><input type="checkbox" id="f-nohotel"> No hotel nights</label>
           <label><input type="checkbox" id="f-cities"> Include other cities</label>
+          <label title="Also draw connections in the data that no journey on this map uses"><input type="checkbox" id="f-alllegs"> All connections</label>
         </div>
         <div class="count" id="count" aria-live="polite"></div>
       </div>
@@ -354,6 +357,10 @@ for (const l of NET.legs) {
   pairs.get(key).legs.push(l);
 }
 const legHitsG = document.getElementById("leghits");
+// connections no journey on this map uses: drawn faintly only with "All connections" (IDEA-12)
+for (const [a, b, mode, night] of NET.other_pairs || [])
+  if (P[a] && P[b] && !pairs.has(a + ">" + b))
+    el("path", { d: curve(P[a], P[b]), class: `leg unused ${cls({ mode, night })}` }, base);
 for (const pr of pairs.values()) {
   const d = curve(P[pr.from], P[pr.to]);
   pr.line = el("path", { d, class: `leg ${cls(pr.legs[0])}` }, base);
@@ -679,7 +686,7 @@ const fold = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase
 const namesOf = n => [n, ...((P[n] && P[n].aliases) || [])].map(fold);
 const qEl = document.getElementById("q"), noHotelEl = document.getElementById("f-nohotel"), citiesEl = document.getElementById("f-cities");
 const dayGroup = document.getElementById("f-day"), countEl = document.getElementById("count");
-const F = { day: 0, noHotel: false, cities: false };
+const F = { day: 0, noHotel: false, cities: false, allLegs: false };
 try { Object.assign(F, JSON.parse(localStorage.getItem("maatapitkin-filters") || "{}")); } catch (e) {}
 const allVariantRoutes = VARS ? Object.values(VARS).flatMap(v => [v, ...Object.values(v.starts || {})]).flatMap(v => [...v.yes.routes, ...v.no.routes]) : [...V.yes.routes, ...(V.no ? V.no.routes : [])];
 const lastDay = Math.max(...allVariantRoutes.map(dayOf));
@@ -699,6 +706,7 @@ function pickOption(r) {
 const passes = r => [r, ...(r.alternatives || [])].some(okOption);
 function applyFilters() {
   noHotelEl.checked = F.noHotel; citiesEl.checked = F.cities;
+  allLegsEl.checked = !!F.allLegs; document.body.classList.toggle("all-legs", !!F.allLegs);
   for (const bt of dayGroup.querySelectorAll("button")) bt.setAttribute("aria-pressed", String(+bt.dataset.day === F.day));
   const q = fold(qEl.value.trim());
   const shown = rows.filter(({ r, isCap }) =>
@@ -742,6 +750,8 @@ qEl.addEventListener("keydown", e => {
 });
 noHotelEl.addEventListener("change", () => { F.noHotel = noHotelEl.checked; applyFilters(); });
 citiesEl.addEventListener("change", () => { F.cities = citiesEl.checked; applyFilters(); });
+const allLegsEl = document.getElementById("f-alllegs");
+allLegsEl.addEventListener("change", () => { F.allLegs = allLegsEl.checked; applyFilters(); });
 document.addEventListener("keydown", e => {
   if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) { e.preventDefault(); qEl.focus(); }
 });

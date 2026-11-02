@@ -94,6 +94,24 @@ def main():
     (ROOT / "out" / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
 
 
+def used_legs(variants: dict) -> set:
+    """Every leg any journey of these variants uses (fastest and alternatives, all start times)."""
+    used = set()
+
+    def walk(r):
+        if not r or r.get("same_as_default"):
+            return
+        used.update(x["i"] for x in r.get("steps", []) if x.get("kind") == "leg")
+        for a in r.get("alternatives") or []:
+            walk(a)
+    for v in variants.values():
+        for sv in [v, *(v.get("starts") or {}).values()]:
+            for key in ("yes", "no"):
+                for r in sv.get(key, {}).get("routes", []) + sv.get(key, {}).get("city_routes", []):
+                    walk(r)
+    return used
+
+
 def compact_route(r: dict) -> dict:
     """The map's copy of a journey, without what the page can rebuild from the timetable
     (station names, services, dates as text): a leg is ["l", leg, dep, arr], a hotel night or
@@ -411,6 +429,16 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     (outdir / f"routes{suffix}.md").write_text("\n".join(md) + "\n")
 
     # --- data for the map ---------------------------------------------------------
+    # IDEA-12: draw only the connections this map's journeys use (any day, mode, start time,
+    # option); the page gets every departure of those pairs (for the hover box) and just the
+    # names of the other pairs, for the "all connections" switch
+    used = used_legs(variants)
+    by_idx = {l.idx: l for l in net.legs}
+    used_pairs = {(by_idx[i].frm, by_idx[i].to) for i in used if i in by_idx}
+    map_legs = [l for l in net.legs if (l.frm, l.to) in used_pairs]
+    other_pairs = sorted({(l.frm, l.to, l.mode, bool(l.night)) for l in net.legs
+                          if (l.frm, l.to) not in used_pairs and l.frm in net.places and l.to in net.places})
+    other_pairs = [list(x) for x in {(a, b): (a, b, m, n) for a, b, m, n in other_pairs}.values()]
     legs_json = [{"i": l.idx, "from": l.frm, "to": l.to, "service": l.service, "mode": l.mode,
                   "night": l.night, "highlight": l.highlight, "issue": l.issue, "note": l.note,
                   "dep": fmt_clock(l.dep) if l.timed else None,
@@ -419,9 +447,9 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                   "duration_true": l.duration - (
                       (utc_offset(net.places[l.to], start_date, ((l.dep or 0) + l.duration) % DAY)
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
-                      if l.frm in net.places and l.to in net.places else 0)} for l in net.legs]
+                      if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "pages": pages, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "pages": pages, "other_pairs": other_pairs, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
@@ -450,6 +478,8 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
 
     print(f"From {origin}: main journeys {t_main:.0f} s; other start times {t_other:.0f} s "
           f"(sweep {stats['sweep']} searches {stats['t_sweep']:.0f} s, routes {stats['t_compute']:.0f} s)")
+    print(f"From {origin}: map draws {len(used_pairs)} connections ({len(map_legs)} departures), "
+          f"{len(other_pairs)} connections unused")
     print(f"From {origin}: {len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
           f"{len(warnings)} warnings -> {outdir}/")
     if main_origin:
