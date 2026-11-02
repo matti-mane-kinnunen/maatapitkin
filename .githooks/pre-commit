@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Refuse a commit whose YAML files don't read or whose pairs.txt has malformed lines.
+
+Checks the staged version (what is about to be committed). Enabled per clone with:
+    git config core.hooksPath .githooks
+Skip once in an emergency with:  git commit --no-verify
+"""
+import re
+import subprocess
+import sys
+
+import yaml
+
+LINE = re.compile(r"^\s*\S.*?\s*->\s*\S.*?\s*:\s*\S")
+
+
+def staged(path):
+    return subprocess.run(["git", "show", f":{path}"], capture_output=True, text=True).stdout
+
+
+files = subprocess.run(["git", "diff", "--cached", "--name-only", "--diff-filter=ACM"],
+                       capture_output=True, text=True).stdout.split()
+problems = []
+for f in files:
+    if f.endswith((".yaml", ".yml")):
+        try:
+            yaml.safe_load(staged(f))
+        except yaml.YAMLError as e:
+            mark = getattr(e, "problem_mark", None)
+            where = f" (line {mark.line + 1}, column {mark.column + 1})" if mark else ""
+            problems.append(f"{f}{where}: {str(e).splitlines()[0]}")
+    elif f == "pairs.txt":
+        for n, raw in enumerate(staged(f).splitlines(), 1):
+            line = raw.split("#", 1)[0].strip()
+            if line and not LINE.match(line):
+                problems.append(f"pairs.txt line {n}: '{raw.strip()}' is not  A -> B : train")
+
+if problems:
+    print("Commit refused - fix these first:\n  " + "\n  ".join(problems), file=sys.stderr)
+    sys.exit(1)

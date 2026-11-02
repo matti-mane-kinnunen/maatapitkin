@@ -88,6 +88,17 @@ Links to a journey: `…/maatapitkin/#lisbon/sat/no-night/fewestchanges` – pla
 optionally the day (`tue`, `fri`, `sat`, `sun`), `no-night`, `morning`, and the journey option. The
 map's *Copy link* button gives the link for whatever is on screen.
 
+## Safety net before each commit
+
+`.githooks/pre-commit` refuses a commit when a YAML file doesn't read or a pairs.txt line isn't
+`A -> B : train`. Turn it on once per clone:
+
+```
+git config core.hooksPath .githooks
+```
+
+(`git commit --no-verify` skips it in an emergency.)
+
 ## How journeys are built
 
 Each journey is built for a real travel date, not just by adding up leg durations:
