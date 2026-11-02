@@ -158,6 +158,7 @@ places:
   Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"]}  # added by add_leg.py
   Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"]}  # added by add_leg.py
   Ayr: {lat: 55.458, lon: -4.626, country: "GB"}  # station; corrected by hand 2.11.2026 (was "Ayr Road" in Glasgow)
+  "L'Hospitalet": {lat: 42.589, lon: 1.799, country: FR, aliases: ["L'Hospitalet-près-l'Andorre", "Andorre-L'Hospitalet"]}  # station for Andorra (Seat61); not L'Hospitalet de Llobregat
   Reggio di Calabria: {lat: 38.184, lon: 15.641, country: "IT", aliases: ["REGGIO DI CALABRIA CATONA"]}  # added by add_leg.py
   Lecce: {lat: 40.335, lon: 18.111, country: "IT", aliases: ["Lecce - Ecotekne"]}  # added by add_leg.py
   Salerno: {lat: 40.683, lon: 14.776, country: "IT", aliases: ["SALERNO IRNO"]}  # added by add_leg.py

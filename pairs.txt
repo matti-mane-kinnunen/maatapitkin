@@ -385,3 +385,16 @@ Paris -> Basel : *
 Zürich -> Bern : *
 Warsaw -> Mockava : *
 Mockava -> Vilnius : *
+
+
+# -- Ukraine --
+Prague -> Przemyśl : *
+Przemyśl -> Kyiv : *
+
+# -- Andorra --
+Paris -> L'Hospitalet : *                                        # Intercités de Nuit 22:14-09:43 (Seat61, Nov 2026): fri,sat; daily Jun-Sep
+L'Hospitalet -> Andorra la Vella : Hife bus 10:15-11:30          # Seat61, Nov 2026; taxi ~47 min, ~€115
+
+# -- Sarajevo: no trains across the Croatia-Bosnia border, and a gap inside Bosnia since 2025 (Seat61) --
+Zagreb -> Sarajevo : Coach 12:30 bus 12:30-20:55          # Seat61, Nov 2026: usually daily; bus station is an 18-min walk from Zagreb station
+Zagreb -> Sarajevo : Coach 16:45 bus 16:45-23:55          # Seat61, Nov 2026
