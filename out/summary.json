@@ -6,7 +6,7 @@
   "2026-11-14",
   "2026-11-15"
  ],
- "departures": 3802,
+ "departures": 5097,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
@@ -27,10 +27,10 @@
   }
  },
  "places_reached": {
-  "2026-11-10": 132,
-  "2026-11-13": 131,
-  "2026-11-14": 130,
-  "2026-11-15": 132
+  "2026-11-10": 141,
+  "2026-11-13": 140,
+  "2026-11-14": 139,
+  "2026-11-15": 141
  },
  "reached": {
   "capitals": [
@@ -105,11 +105,13 @@
   "places": [
    "Aarhus",
    "Abrantes",
+   "Aix en Provence",
    "Algeciras",
    "Amsterdam",
    "Ancona",
    "Ankara",
    "Athens",
+   "Avignon",
    "Ayr",
    "Badajoz",
    "Barcelona",
@@ -124,6 +126,7 @@
    "Bologna",
    "Bordeaux",
    "Bratislava",
+   "Brescia",
    "Brest",
    "Brussels",
    "Bucharest",
@@ -138,6 +141,7 @@
    "Edinburgh",
    "Faro",
    "Florence",
+   "Foggia",
    "Frankfurt",
    "Galway",
    "Gdansk",
@@ -155,6 +159,7 @@
    "Kaunas",
    "Krakow",
    "K\u00f6ln",
+   "Lecce",
    "Lille",
    "Lisbon",
    "Li\u00e8ge",
@@ -191,11 +196,14 @@
    "Porto",
    "Pozzallo",
    "Prague",
+   "Reggio di Calabria",
    "Riga",
+   "Rimini",
    "Rome",
    "Rostock",
    "Rovaniemi",
    "Ruse",
+   "Salerno",
    "Santiago de Compostela",
    "Sevilla",
    "Sofia",
@@ -226,6 +234,7 @@
    "Vatican",
    "Venice",
    "Ventimiglia",
+   "Verona",
    "Vienna",
    "Villa San Giovanni",
    "Vilnius",
@@ -246,7 +255,7 @@
     "2026-11-14",
     "2026-11-15"
    ],
-   "departures": 3802,
+   "departures": 5097,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -267,10 +276,10 @@
     }
    },
    "places_reached": {
-    "2026-11-10": 132,
-    "2026-11-13": 132,
-    "2026-11-14": 130,
-    "2026-11-15": 130
+    "2026-11-10": 141,
+    "2026-11-13": 141,
+    "2026-11-14": 139,
+    "2026-11-15": 139
    },
    "reached": {
     "capitals": [
@@ -345,11 +354,13 @@
     "places": [
      "Aarhus",
      "Abrantes",
+     "Aix en Provence",
      "Algeciras",
      "Amsterdam",
      "Ancona",
      "Ankara",
      "Athens",
+     "Avignon",
      "Ayr",
      "Badajoz",
      "Barcelona",
@@ -364,6 +375,7 @@
      "Bologna",
      "Bordeaux",
      "Bratislava",
+     "Brescia",
      "Brest",
      "Brussels",
      "Bucharest",
@@ -378,6 +390,7 @@
      "Edinburgh",
      "Faro",
      "Florence",
+     "Foggia",
      "Frankfurt",
      "Galway",
      "Gdansk",
@@ -396,6 +409,7 @@
      "Kaunas",
      "Krakow",
      "K\u00f6ln",
+     "Lecce",
      "Lille",
      "Lisbon",
      "Li\u00e8ge",
@@ -432,11 +446,14 @@
      "Porto",
      "Pozzallo",
      "Prague",
+     "Reggio di Calabria",
      "Riga",
+     "Rimini",
      "Rome",
      "Rostock",
      "Rovaniemi",
      "Ruse",
+     "Salerno",
      "Santiago de Compostela",
      "Sevilla",
      "Sofia",
@@ -466,6 +483,7 @@
      "Vatican",
      "Venice",
      "Ventimiglia",
+     "Verona",
      "Vienna",
      "Villa San Giovanni",
      "Vilnius",
@@ -486,7 +504,7 @@
     "2026-11-14",
     "2026-11-15"
    ],
-   "departures": 3802,
+   "departures": 5097,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -507,10 +525,10 @@
     }
    },
    "places_reached": {
-    "2026-11-10": 132,
-    "2026-11-13": 132,
-    "2026-11-14": 132,
-    "2026-11-15": 130
+    "2026-11-10": 141,
+    "2026-11-13": 141,
+    "2026-11-14": 141,
+    "2026-11-15": 139
    },
    "reached": {
     "capitals": [
@@ -585,11 +603,13 @@
     "places": [
      "Aarhus",
      "Abrantes",
+     "Aix en Provence",
      "Algeciras",
      "Amsterdam",
      "Ancona",
      "Ankara",
      "Athens",
+     "Avignon",
      "Ayr",
      "Badajoz",
      "Barcelona",
@@ -604,6 +624,7 @@
      "Bologna",
      "Bordeaux",
      "Bratislava",
+     "Brescia",
      "Brest",
      "Brussels",
      "Bucharest",
@@ -617,6 +638,7 @@
      "Edinburgh",
      "Faro",
      "Florence",
+     "Foggia",
      "Frankfurt",
      "Galway",
      "Gdansk",
@@ -635,6 +657,7 @@
      "Kaunas",
      "Krakow",
      "K\u00f6ln",
+     "Lecce",
      "Lille",
      "Lisbon",
      "Li\u00e8ge",
@@ -671,11 +694,14 @@
      "Porto",
      "Pozzallo",
      "Prague",
+     "Reggio di Calabria",
      "Riga",
+     "Rimini",
      "Rome",
      "Rostock",
      "Rovaniemi",
      "Ruse",
+     "Salerno",
      "Santiago de Compostela",
      "Sevilla",
      "Sofia",
@@ -706,6 +732,7 @@
      "Vatican",
      "Venice",
      "Ventimiglia",
+     "Verona",
      "Vienna",
      "Villa San Giovanni",
      "Vilnius",

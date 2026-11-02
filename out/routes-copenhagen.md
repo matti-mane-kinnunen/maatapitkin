@@ -154,9 +154,14 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Storlien | Wed 11.11. 09:17 | 27 h 14 min | 3 | 0 |
 | Milan | Wed 11.11. 09:20 | 26 h 58 min | 3 | 1 |
 | Marseille | Wed 11.11. 09:57 | 27 h 35 min | 3 | 1 |
+| Avignon | Wed 11.11. 10:07 | 27 h 45 min | 4 | 1 |
 | Montpellier | Wed 11.11. 10:11 | 27 h 49 min | 3 | 1 |
 | Brest | Wed 11.11. 10:20 | 27 h 58 min | 3 | 1 |
+| Brescia | Wed 11.11. 10:21 | 27 h 59 min | 4 | 1 |
+| Aix en Provence | Wed 11.11. 10:29 | 28 h 07 min | 4 | 1 |
 | Torino | Wed 11.11. 10:48 | 28 h 26 min | 4 | 1 |
+| Bologna | Wed 11.11. 11:04 | 28 h 42 min | 4 | 1 |
+| Verona | Wed 11.11. 11:28 | 29 h 06 min | 5 | 1 |
 | Hendaye | Wed 11.11. 11:48 | 29 h 26 min | 3 | 1 |
 | Tampere | Wed 11.11. 12:53 | 29 h 50 min | 3 | 0 |
 | Florence | Wed 11.11. 12:04 | 29 h 42 min | 4 | 1 |
@@ -164,6 +169,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Szeged | Wed 11.11. 12:16 | 29 h 54 min | 4 | 0 |
 | Irun | Wed 11.11. 12:37 | 30 h 15 min | 4 | 1 |
 | Narvik | Wed 11.11. 12:37 | 30 h 34 min | 3 | 0 |
+| Rimini | Wed 11.11. 12:38 | 30 h 16 min | 5 | 1 |
 | Genoa | Wed 11.11. 12:44 | 30 h 22 min | 4 | 1 |
 | Manchester | Wed 11.11. 11:44 | 30 h 22 min | 4 | 1 |
 | Donostia | Wed 11.11. 13:22 | 31 h 00 min | 5 | 1 |
@@ -176,13 +182,15 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Naples | Wed 11.11. 15:03 | 32 h 41 min | 5 | 1 |
 | Trieste | Wed 11.11. 15:12 | 32 h 50 min | 3 | 0 |
 | Penzance | Wed 11.11. 15:03 | 33 h 41 min | 4 | 1 |
-| Bologna | Wed 11.11. 16:08 | 33 h 46 min | 2 | 0 |
 | Subotica | Wed 11.11. 16:24 | 34 h 02 min | 5 | 0 |
 | Ayr | Wed 11.11. 15:24 | 34 h 02 min | 5 | 1 |
 | Oulu | Wed 11.11. 17:48 | 34 h 45 min | 3 | 0 |
+| Foggia | Wed 11.11. 17:19 | 34 h 57 min | 5 | 1 |
 | Bari | Wed 11.11. 17:27 | 35 h 05 min | 4 | 1 |
+| Salerno | Wed 11.11. 18:23 | 36 h 01 min | 6 | 1 |
 | Valencia | Wed 11.11. 19:02 | 36 h 40 min | 4 | 1 |
 | Rovaniemi | Wed 11.11. 20:23 | 37 h 20 min | 3 | 0 |
+| Lecce | Wed 11.11. 19:43 | 37 h 21 min | 5 | 1 |
 | Holyhead | Wed 11.11. 18:54 | 37 h 32 min | 4 | 1 |
 | Stranraer | Wed 11.11. 18:57 | 37 h 35 min | 6 | 1 |
 | Villa San Giovanni | Wed 11.11. 20:04 | 37 h 42 min | 5 | 1 |
@@ -202,6 +210,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Ruse | Thu 12.11. 13:40 | 54 h 18 min | 5 | 0 |
 | Valga | Thu 12.11. 14:14 | 55 h 11 min | 4 | 1 |
 | Algeciras | Thu 12.11. 13:59 | 55 h 37 min | 5 | 2 |
+| Reggio di Calabria | Thu 12.11. 14:10 | 55 h 48 min | 4 | 1 |
 | Galway | Thu 12.11. 13:51 | 56 h 29 min | 6 | 1 |
 | Pozzallo | Thu 12.11. 15:58 | 57 h 36 min | 5 | 0 |
 | Badajoz | Thu 12.11. 16:11 | 57 h 49 min | 5 | 1 |

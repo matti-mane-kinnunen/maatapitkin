@@ -156,6 +156,15 @@ places:
   Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"]}  # added by add_leg.py
   Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"]}  # added by add_leg.py
   Ayr: {lat: 55.458, lon: -4.626, country: "GB"}  # station; corrected by hand 2.11.2026 (was "Ayr Road" in Glasgow)
+  Reggio di Calabria: {lat: 38.184, lon: 15.641, country: "IT", aliases: ["REGGIO DI CALABRIA CATONA"]}  # added by add_leg.py
+  Lecce: {lat: 40.335, lon: 18.111, country: "IT", aliases: ["Lecce - Ecotekne"]}  # added by add_leg.py
+  Salerno: {lat: 40.683, lon: 14.776, country: "IT", aliases: ["SALERNO IRNO"]}  # added by add_leg.py
+  Verona: {lat: 45.429, lon: 10.983, country: "IT", aliases: ["VERONA PORTA NUOVA"]}  # added by add_leg.py
+  Brescia: {lat: 45.532, lon: 10.213, country: "IT"}  # added by add_leg.py
+  Rimini: {lat: 44.064, lon: 12.572, country: "IT", aliases: ["Rimini FS"]}  # added by add_leg.py
+  Foggia: {lat: 41.466, lon: 15.553, country: "IT"}  # added by add_leg.py
+  Aix en Provence: {lat: 43.455, lon: 5.317, country: "FR", aliases: ["Aix-en-Provence TGV"]}  # added by add_leg.py
+  Avignon: {lat: 43.922, lon: 4.786, country: "FR", aliases: ["Avignon TGV"]}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

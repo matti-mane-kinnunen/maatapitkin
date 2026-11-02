@@ -156,13 +156,19 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Nantes | Wed 11.11. 19:20 | 25 h 51 min | 3 | 0 |
 | Rovaniemi | Wed 11.11. 20:23 | 27 h 23 min | 1 | 0 |
 | Marseille | Wed 11.11. 19:47 | 26 h 18 min | 3 | 0 |
+| Brescia | Wed 11.11. 19:51 | 26 h 22 min | 4 | 0 |
 | Torino | Wed 11.11. 20:08 | 26 h 39 min | 4 | 0 |
+| Aix en Provence | Wed 11.11. 20:25 | 26 h 56 min | 4 | 0 |
+| Verona | Wed 11.11. 20:53 | 27 h 24 min | 5 | 0 |
+| Avignon | Wed 11.11. 21:09 | 27 h 40 min | 4 | 0 |
 | Montpellier | Wed 11.11. 21:11 | 27 h 42 min | 3 | 0 |
+| Bologna | Wed 11.11. 21:24 | 27 h 55 min | 4 | 0 |
 | Brest | Wed 11.11. 21:29 | 28 h 00 min | 3 | 0 |
 | Venice | Wed 11.11. 21:44 | 28 h 15 min | 4 | 0 |
 | Genoa | Wed 11.11. 21:44 | 28 h 15 min | 4 | 0 |
 | Toulouse | Wed 11.11. 21:48 | 28 h 19 min | 3 | 0 |
 | Florence | Wed 11.11. 22:04 | 28 h 35 min | 4 | 0 |
+| Rimini | Wed 11.11. 22:41 | 29 h 12 min | 5 | 0 |
 | Manchester | Wed 11.11. 21:44 | 29 h 15 min | 4 | 0 |
 | Hendaye | Wed 11.11. 23:24 | 29 h 55 min | 3 | 0 |
 | Ancona | Wed 11.11. 23:38 | 30 h 09 min | 4 | 0 |
@@ -175,9 +181,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Irun | Thu 12.11. 07:37 | 38 h 08 min | 4 | 1 |
 | Naples | Thu 12.11. 08:12 | 38 h 43 min | 5 | 1 |
 | Donostia | Thu 12.11. 08:21 | 38 h 52 min | 5 | 1 |
+| Foggia | Thu 12.11. 08:33 | 39 h 04 min | 5 | 0 |
 | Nice | Thu 12.11. 08:37 | 39 h 08 min | 4 | 1 |
 | Penzance | Thu 12.11. 07:55 | 39 h 26 min | 4 | 0 |
 | Gdansk | Thu 12.11. 09:12 | 39 h 43 min | 3 | 1 |
+| Lecce | Thu 12.11. 09:15 | 39 h 46 min | 5 | 0 |
 | Ayr | Thu 12.11. 08:51 | 40 h 22 min | 5 | 0 |
 | Newcastle | Thu 12.11. 09:15 | 40 h 46 min | 3 | 0 |
 | Szeged | Thu 12.11. 10:16 | 40 h 47 min | 4 | 1 |
@@ -187,10 +195,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Valga | Thu 12.11. 14:14 | 45 h 14 min | 2 | 1 |
 | Subotica | Thu 12.11. 13:24 | 43 h 55 min | 5 | 1 |
 | Stranraer | Thu 12.11. 12:57 | 44 h 28 min | 6 | 0 |
+| Reggio di Calabria | Thu 12.11. 14:10 | 44 h 41 min | 6 | 1 |
+| Salerno | Thu 12.11. 14:30 | 45 h 01 min | 6 | 1 |
 | Barcelona | Thu 12.11. 14:32 | 45 h 03 min | 3 | 1 |
 | Cairnryan | Thu 12.11. 13:50 | 45 h 21 min | 7 | 0 |
 | Pozzallo | Thu 12.11. 15:58 | 46 h 29 min | 6 | 0 |
-| Bologna | Thu 12.11. 16:08 | 46 h 39 min | 2 | 0 |
 | Messina | Thu 12.11. 18:30 | 49 h 01 min | 6 | 0 |
 | Valencia | Thu 12.11. 19:02 | 49 h 33 min | 4 | 1 |
 | Kaisiadorys | Thu 12.11. 20:45 | 51 h 45 min | 4 | 1 |
