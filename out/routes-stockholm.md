@@ -87,15 +87,15 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Oslo | Tue 10.11. 07:23 | Tue 10.11. 13:23 | 6 h 00 min | arrives 10 h 39 min earlier |
 | Berlin | Tue 10.11. 06:20 | Tue 10.11. 19:23 | 13 h 03 min | arrives 12 h 59 min earlier |
 | Helsinki | – | – | – | no gain: take the 16:00 journey |
-| Amsterdam | Tue 10.11. 08:23 | Wed 11.11. 10:02 | 25 h 39 min | arrives 3 h 59 min earlier |
+| Amsterdam | Tue 10.11. 08:23 | Wed 11.11. 07:28 | 23 h 05 min | arrives 6 h 33 min earlier |
 | Paris | Tue 10.11. 08:23 | Wed 11.11. 10:05 | 25 h 42 min | arrives 4 h 46 min earlier |
 | Bern | Tue 10.11. 08:23 | Wed 11.11. 09:56 | 25 h 33 min | arrives 5 h 00 min earlier |
-| Brussels | Tue 10.11. 08:23 | Wed 11.11. 12:47 | 28 h 24 min | arrives 4 h 19 min earlier |
+| Brussels | Tue 10.11. 08:23 | Wed 11.11. 11:06 | 26 h 43 min | arrives 6 h 00 min earlier |
 | Prague | Tue 10.11. 06:20 | Wed 11.11. 00:26 | 18 h 06 min | arrives 16 h 49 min earlier |
 | London | Tue 10.11. 08:23 | Wed 11.11. 12:30 | 29 h 07 min | arrives 5 h 05 min earlier |
 | Warsaw | – | – | – | no gain: take the 16:00 journey |
 | Vienna | Tue 10.11. 06:20 | Wed 11.11. 07:00 | 24 h 40 min | arrives 12 h 32 min earlier |
-| Luxembourg | Tue 10.11. 08:23 | Wed 11.11. 15:51 | 31 h 28 min | arrives 4 h 02 min earlier |
+| Luxembourg | Tue 10.11. 08:23 | Wed 11.11. 14:49 | 30 h 26 min | arrives 5 h 04 min earlier |
 | Bratislava | Tue 10.11. 06:20 | Wed 11.11. 08:44 | 26 h 24 min | arrives 12 h 26 min earlier |
 | Rome | Tue 10.11. 08:23 | Wed 11.11. 17:40 | 33 h 17 min | arrives 4 h 59 min earlier |
 | Vatican | Tue 10.11. 08:23 | Wed 11.11. 18:20 | 33 h 57 min | arrives 4 h 59 min earlier |
@@ -135,6 +135,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Rostock | Wed 11.11. 09:50 | 16 h 21 min | 1 | 0 |
 | Frankfurt | Wed 11.11. 10:14 | 16 h 45 min | 1 | 0 |
 | Köln | Wed 11.11. 10:48 | 17 h 19 min | 1 | 0 |
+| Hannover | Wed 11.11. 10:51 | 17 h 22 min | 2 | 0 |
 | Tampere | Wed 11.11. 12:53 | 19 h 53 min | 1 | 0 |
 | Offenburg | Wed 11.11. 11:58 | 18 h 29 min | 1 | 0 |
 | Narvik | Wed 11.11. 12:37 | 18 h 25 min | 1 | 0 |
