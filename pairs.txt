@@ -67,6 +67,8 @@ Mockava -> Warsaw : *
 
 RIga -> Kaisiadorys: * 
 Kaisiadorys -> Kaunas : *
+Kaunas -> Kaisiadorys : *
+Kaisiadorys -> Riga: *
 
 Tallinn -> Valga : Elron 10:22-14:14    
 
@@ -75,6 +77,7 @@ Budapest -> Szeged : *
 Szeged -> Subotica : *
 Subotica -> Belgrade : *
 Kaunas -> Mockava : *
+Mockava -> Kaunas: *
 Stockholm -> Malmö : *
 Madrid -> Vitoria-Gasteiz : Alvia 06:55 06:55-10:38   # Transitous has no direct trains here; times from Rome2Rio (Nov 2026)
 Madrid -> Vitoria-Gasteiz : Alvia 14:50 14:50-17:57 mon-fri
@@ -344,8 +347,6 @@ Geneve -> Paris : *
 Paris -> Zürich : *
 Zürich -> Paris : *
 Basel -> Hamburg : *
-Marseille -> Geneve : *
-Geneve -> Marseille : *
 Köln -> Munich : *
 Munich -> Köln : *
 Vienna -> Munich : *
