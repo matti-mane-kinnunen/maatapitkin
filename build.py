@@ -14,6 +14,7 @@ import re
 import datetime as dt
 import json
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -144,8 +145,12 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
 
-    def compute(night_trains: bool, date: dt.date, start: int = start):
+    stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0}
+
+    def compute(night_trains: bool, date: dt.date, start: int = start, only: set | None = None,
+                journeys: dict | None = None):
         """All journeys (fastest + alternatives) leaving on `date` from `start`, with or without night trains."""
+        stats["compute"] += 1
         router = Router(net, date, night_trains=night_trains)
 
         def when(t: int) -> str:
@@ -185,6 +190,17 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                     "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
                     "steps": steps}
 
+        if journeys is not None:
+            # journeys already found (other start times): just the fastest, no new search
+            rs, crs = [], []
+            for place, j in journeys.items():
+                r = build_route(place, j)
+                if r:
+                    r.update(label="Fastest", capital=place, is_capital=bool(net.places[place].get("capital")),
+                             alternatives=[])
+                    (rs if r["is_capital"] else crs).append(r)
+            return router, rs, crs, [], []
+
         front = router.pareto(origin, start)
         router.search(origin, start, "fastest")          # last: the main table uses the fastest search
 
@@ -210,6 +226,8 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
 
         routes, city_routes, unreached, unreached_cities = [], [], [], []
         for place in net.places:
+            if only is not None and place not in only:      # other start times: just the places that need it
+                continue
             if place == origin:
                 continue
             r = journey_with_alternatives(place)
@@ -257,32 +275,34 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
             ev = {r["capital"]: r for r in base[key]["routes"] + base[key]["city_routes"]}
             router = Router(net, d, night_trains=nt)
             router.search(origin, hm(t), "fastest")
-            best = {}                                   # place -> (first departure, arrival)
+            best, jbest = {}, {}                        # place -> (first departure, arrival), its journey
             for p in net.places:
                 j = router.journey(p) if p != origin else None
                 if j:
                     legs = [x for x in j if x["kind"] == "leg"]
-                    best[p] = (legs[0]["dep"], legs[-1]["arr"])
+                    best[p], jbest[p] = (legs[0]["dep"], legs[-1]["arr"]), j
             open_ = {p for p, (_, a) in best.items() if p not in ev or a < ev[p]["arrive"]}
             # move the start later as long as the arrival stays the same
+            ts = time.monotonic()
             while open_:
                 t2 = min(best[p][0] for p in open_) + 1
+                stats["sweep"] += 1
                 router.search(origin, t2, "fastest")
                 for p in list(open_):
                     j = router.journey(p)
                     legs = [x for x in j if x["kind"] == "leg"] if j else []
                     if legs and legs[-1]["arr"] == best[p][1]:
-                        best[p] = (max(best[p][0], legs[0]["dep"]), best[p][1])
+                        if legs[0]["dep"] >= best[p][0]:
+                            best[p], jbest[p] = (legs[0]["dep"], best[p][1]), j
                     else:
                         open_.discard(p)
-            # build each place's journey (with alternatives) from the start that was found
+            stats["t_sweep"] += time.monotonic() - ts
+            ts = time.monotonic()
+            # the journeys the sweep found, as routes (fastest only - no second search per start time)
             gain = {p for p, (_, a) in best.items() if p not in ev or a < ev[p]["arrive"]}
-            found: dict[str, dict] = {}
-            for st in sorted({best[p][0] for p in gain}):
-                _, rs, crs, _, _ = compute(nt, d, st)
-                for r in rs + crs:
-                    if r["capital"] in gain and best[r["capital"]][0] == st:
-                        found[r["capital"]] = r
+            _, rs, crs, _, _ = compute(nt, d, hm(t), journeys={p: jbest[p] for p in gain})
+            found: dict[str, dict] = {r["capital"]: r for r in rs + crs}
+            stats["t_compute"] += time.monotonic() - ts
             rs, crs, un, unc = [], [], [], []
             for p in net.places:
                 if p == origin:
@@ -301,10 +321,14 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
         return v
 
     variants = {}
+    t_main = t_other = 0.0
     for d in dates:
+        t0 = time.monotonic()
         v = {"label": f"{d:%a %-d.%-m.}", **one_variant(d, start_time)}
+        t1 = time.monotonic(); t_main += t1 - t0
         v["starts"] = {t: (other_start(d, t, v) if t < start_time else one_variant(d, t))
                        for t in starts if t != start_time}
+        t_other += time.monotonic() - t1
         variants[d.isoformat()] = v
     router, routes, city_routes, unreached, _ = compute(True, start_date)
     day_routes, day_city_routes, day_unreached = (variants[start_date.isoformat()]["no"][k]
@@ -424,6 +448,8 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                                      + variants[dates[0].isoformat()]["yes"]["city_routes"])},
     }
 
+    print(f"From {origin}: main journeys {t_main:.0f} s; other start times {t_other:.0f} s "
+          f"(sweep {stats['sweep']} searches {stats['t_sweep']:.0f} s, routes {stats['t_compute']:.0f} s)")
     print(f"From {origin}: {len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
           f"{len(warnings)} warnings -> {outdir}/")
     if main_origin:
