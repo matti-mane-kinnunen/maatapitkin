@@ -159,7 +159,11 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .opts { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 14px 6px }
 .opts:empty { display: none }
 .co2 { margin: 0; padding: 2px 14px 0; font-size: 12px; color: var(--muted) }
-.co2 a { color: inherit }
+.co2 button { all: unset; cursor: pointer; text-decoration: underline; color: inherit }
+.co2 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.co2-how { margin: 4px 14px 0; padding: 6px 10px; border-left: 2px solid var(--rule); font-size: 12px; line-height: 1.45; color: var(--muted) }
+.co2-how p { margin: 0 0 4px }
+.co2-how a { color: inherit }
 .share { display: flex; align-items: center; gap: 10px; padding: 4px 14px 2px; font-size: 12px; color: var(--muted) }
 .share button { all: unset; cursor: pointer; font: 600 11px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase;
   border: 1px solid var(--rule); border-radius: 4px; padding: 5px 8px; color: var(--ink) }
@@ -258,6 +262,16 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
         <div class="opts" id="opts" role="tablist" aria-label="Journey options"></div>
         <p class="co2" id="co2" hidden></p>
+        <div class="co2-how" id="co2-how" hidden>
+          <p>A rough estimate, rounded on purpose. Each train, bus or ferry leg: distance between the two places
+          (+20&nbsp;% for the real route) × the average emissions per passenger-km for that kind of transport.
+          The flight: a direct flight between the same two cities (+8&nbsp;% for detours), including the
+          extra warming effect of emissions at high altitude.</p>
+          <p>Factors: <span id="co2-factors"></span>.
+          Electric trains in e.g. Sweden, France and Switzerland emit much less than this average, so the
+          saving is probably bigger than shown; a cabin on a night train or ferry somewhat more.
+          <a href="https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting" target="_blank" rel="noopener">Source</a></p>
+        </div>
         <div class="share"><button type="button" id="share">Copy link</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
@@ -839,10 +853,11 @@ updateFoot();
 // rough CO2 compared with a direct flight (IDEA-07, D-41): round numbers only - it reassures, it does not account
 function showCO2(r) {
   const el = document.getElementById("co2");
-  if (r.co2 == null) { el.hidden = true; return; }
+  if (r.co2 == null) { el.hidden = true; document.getElementById("co2-how").hidden = true; return; }
   const kg = x => x < 20 ? Math.round(x) : x < 100 ? Math.round(x / 5) * 5 : Math.round(x / 10) * 10;
   const pct = Math.round((1 - r.co2 / r.co2_flight) * 20) * 5;       // to the nearest 5 %
-  const how = ` <a href="https://github.com/matti-mane-kinnunen/maatapitkin#co2-estimates" target="_blank" rel="noopener">How?</a>`;
+  const box = document.getElementById("co2-how");
+  const how = ` <button type="button" id="co2-btn" aria-controls="co2-how" aria-expanded="${!box.hidden}">How?</button>`;
   el.innerHTML = !r.co2_flight
     ? `CO₂ about ${kg(r.co2)} kg (no flights to compare with).${how}`
     : pct >= 10
@@ -850,7 +865,15 @@ function showCO2(r) {
     : r.co2 <= r.co2_flight * 1.1
       ? `CO₂ about ${kg(r.co2)} kg – about as much as flying (${kg(r.co2_flight)} kg).${how}`
       : `CO₂ about ${kg(r.co2)} kg – more than flying (${kg(r.co2_flight)} kg).${how}`;
+  const c = NET.co2 || {}, f = c.factors || {}, g = x => `${Math.round(x * 1000)}&nbsp;g`;
+  const yr = (String(c.source || "").match(/\b20\d\d\b/) || [""])[0];
+  document.getElementById("co2-factors").innerHTML = `the UK government's greenhouse gas conversion factors ${yr} ` +
+    `(train ${g(f.rail)}, bus ${g(f.coach)}, ferry ${g(f.ferry)}, Eurostar ${g(f.international_rail)}, ` +
+    `flight ${g(f.flight)} CO₂e per passenger-km)`;
   el.hidden = false;
+  document.getElementById("co2-btn").addEventListener("click", e => {
+    box.hidden = !box.hidden; e.currentTarget.setAttribute("aria-expanded", String(!box.hidden));
+  });
 }
 
 function select(cap, opt = 0, fromMap = false) {

@@ -475,7 +475,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,

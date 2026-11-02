@@ -120,6 +120,7 @@ All of these settings are in `places.yaml` → `settings`.
 Each journey on the map shows a rough CO₂ figure and compares it with flying, e.g.
 *"CO₂ about 110 kg – roughly 65 % less than flying (about 300 kg)"*. It is meant to reassure, not to
 account: the numbers are rounded (kg to 5 or 10, percentages to 5 %).
+On the map, *How?* opens a short version of this explanation under the CO₂ line.
 
 **Source.** The UK government's greenhouse gas conversion factors (DESNZ, 2026, full set), in kg CO₂e
 per passenger-km. They are open, documented and published every year (not every factor is renewed every
