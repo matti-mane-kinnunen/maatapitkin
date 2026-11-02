@@ -408,7 +408,9 @@ Rimini -> San Marino : Bonelli bus every 60 08:10-19:10 0:50   # Seat61, Nov 202
 # -- small fixes --
 Hamburg -> Kolding : *
 Kolding -> Aarhus : *
-Wroclaw -> Praha : *
+Wroclaw -> Praha : IC 261 09:13-13:14     # bahn.de, Nov 2026; Transitous finds no direct trains
+Wroclaw -> Praha : IC 263 13:13-17:14     # bahn.de, Nov 2026
+Wroclaw -> Praha : IC 265 17:13-21:14     # bahn.de, Nov 2026
 Berlin -> Wroclaw : *                                # EC 59 leaves from Berlin-Lichtenberg, not Hbf; the S-Bahn there is trimmed off
 Oslo -> Stavanger : * 
 
