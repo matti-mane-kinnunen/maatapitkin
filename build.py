@@ -190,22 +190,10 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                     "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
                     "steps": steps}
 
-        if journeys is not None:
-            # journeys already found (other start times): just the fastest, no new search
-            rs, crs = [], []
-            for place, j in journeys.items():
-                r = build_route(place, j)
-                if r:
-                    r.update(label="Fastest", capital=place, is_capital=bool(net.places[place].get("capital")),
-                             alternatives=[])
-                    (rs if r["is_capital"] else crs).append(r)
-            return router, rs, crs, [], []
+        front = router.pareto(origin, start)            # all sensible trade-offs, for the alternatives
 
-        front = router.pareto(origin, start)
-        router.search(origin, start, "fastest")          # last: the main table uses the fastest search
-
-        def journey_with_alternatives(place: str) -> dict | None:
-            r = build_route(place)
+        def journey_with_alternatives(place: str, j: list | None = None) -> dict | None:
+            r = build_route(place, j)
             if not r:
                 return None
             r["label"] = "Fastest"
@@ -223,6 +211,18 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                     r["alternatives"].append(alt)
                     seen.append(alt["signature"])
             return r
+
+        if journeys is not None:
+            # other start times: the fastest journeys were found already (latest departure that
+            # still arrives first); add the alternatives from this one Pareto search (FIX-09)
+            rs, crs = [], []
+            for place, j in journeys.items():
+                r = journey_with_alternatives(place, j)
+                if r:
+                    (rs if r["is_capital"] else crs).append(r)
+            return router, rs, crs, [], []
+
+        router.search(origin, start, "fastest")          # the main table uses the fastest search
 
         routes, city_routes, unreached, unreached_cities = [], [], [], []
         for place in net.places:
