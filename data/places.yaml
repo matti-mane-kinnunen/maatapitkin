@@ -20,6 +20,17 @@ settings:
   max_stay_nights: 2         # never wait longer than this at one place
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   start_date: 2026-12-08   # travel date; default is next Monday (or use --date)
+  co2:                       # rough CO2 per journey vs a direct flight (IDEA-07, D-41); remove to switch off
+    source: "UK DESNZ GHG conversion factors 2025, condensed set (gov.uk), kg CO2e total per passenger-km"
+    factors:
+      rail: 0.03546          # Business travel- land: Rail, National rail
+      international_rail: 0.00446  # Rail, International rail - used for Eurostar only
+      coach: 0.02776         # Coach
+      ferry: 0.01871         # Business travel- sea: Ferry, Foot passenger
+      flight: 0.12576        # Business travel- air: Short-haul, Economy class, with RF (non-CO2 effects, +70 %);
+                             # DESNZ counts all of Europe and North Africa as short-haul
+    route_factor: 1.2        # tracks, roads and sea routes are about 20 % longer than the straight line
+    flight_uplift: 1.08      # flights: straight line + 8 % (indirect routes, holding), as DESNZ does
 
 # Each place may list other names it is known by (aliases), e.g. Vienna: [Wien].
 # add_leg.py accepts them in pairs files and they never create a second city.
@@ -178,7 +189,7 @@ places:
   Hannover: {lat: 52.382, lon: 9.767, country: "DE", aliases: ["Hannover Zoo"]}  # added by add_leg.py
   Geneve: {lat: 46.233, lon: 6.112, country: "CH", aliases: ["Genève-Aéroport"]}  # added by add_leg.py
   Przemyśl: {lat: 49.794, lon: 22.774, country: "PL", aliases: ["Przemysl Zasanie"]}  # added by add_leg.py
-  Kyiv: {lat: 50.439, lon: 30.488, capital: true, country: "UA", aliases: ["Kyiv-Pas"]}  # added by add_leg.py
+  Kyiv: {lat: 50.439, lon: 30.488, capital: true, country: "UA", aliases: ["Kyiv-Pas"], no_flights: true}  # no_flights: Ukrainian airspace closed since 2022 (no CO2 comparison with flying)
   Andorra la Vella: {lat: 42.507, lon: 1.521, capital: true, country: "AD"}  # added by add_leg.py
   Sarajevo: {lat: 43.860, lon: 18.399, capital: true, country: "BA"}  # added by add_leg.py
   San Marino: {lat: 43.942, lon: 12.458, capital: true, country: SM}  # corrected by hand 2.11.2026 (was a namesake near Bologna)

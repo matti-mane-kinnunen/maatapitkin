@@ -158,6 +158,8 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .steps { list-style: none; margin: 0; padding: 4px 0 }
 .opts { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 14px 6px }
 .opts:empty { display: none }
+.co2 { margin: 0; padding: 2px 14px 0; font-size: 12px; color: var(--muted) }
+.co2 a { color: inherit }
 .share { display: flex; align-items: center; gap: 10px; padding: 4px 14px 2px; font-size: 12px; color: var(--muted) }
 .share button { all: unset; cursor: pointer; font: 600 11px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase;
   border: 1px solid var(--rule); border-radius: 4px; padding: 5px 8px; color: var(--ink) }
@@ -255,6 +257,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <section class="itin" aria-live="polite">
         <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
         <div class="opts" id="opts" role="tablist" aria-label="Journey options"></div>
+        <p class="co2" id="co2" hidden></p>
         <div class="share"><button type="button" id="share">Copy link</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
@@ -833,6 +836,23 @@ function updateFoot() { document.getElementById("foot").textContent =
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`; }
 updateFoot();
 
+// rough CO2 compared with a direct flight (IDEA-07, D-41): round numbers only - it reassures, it does not account
+function showCO2(r) {
+  const el = document.getElementById("co2");
+  if (r.co2 == null) { el.hidden = true; return; }
+  const kg = x => x < 20 ? Math.round(x) : x < 100 ? Math.round(x / 5) * 5 : Math.round(x / 10) * 10;
+  const pct = Math.round((1 - r.co2 / r.co2_flight) * 20) * 5;       // to the nearest 5 %
+  const how = ` <a href="https://github.com/matti-mane-kinnunen/maatapitkin#co2-estimates" target="_blank" rel="noopener">How?</a>`;
+  el.innerHTML = !r.co2_flight
+    ? `CO₂ about ${kg(r.co2)} kg (no flights to compare with).${how}`
+    : pct >= 10
+    ? `CO₂ about ${kg(r.co2)} kg – roughly ${pct} % less than flying (about ${kg(r.co2_flight)} kg).${how}`
+    : r.co2 <= r.co2_flight * 1.1
+      ? `CO₂ about ${kg(r.co2)} kg – about as much as flying (${kg(r.co2_flight)} kg).${how}`
+      : `CO₂ about ${kg(r.co2)} kg – more than flying (${kg(r.co2_flight)} kg).${how}`;
+  el.hidden = false;
+}
+
 function select(cap, opt = 0, fromMap = false) {
   const r0 = routeOf(cap); if (!r0) return;
   const options = [r0, ...(r0.alternatives || [])];
@@ -871,6 +891,7 @@ function select(cap, opt = 0, fromMap = false) {
   document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}` +
     (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "") +
     (curStart !== DEF_START ? (r0.same_as_default ? ` · leaving earlier doesn't help: the ${partOfDay(DEF_START)} journey` : ` · from ${curStart}`) : "");
+  showCO2(r);
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   r.steps.forEach(s => {

@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
+from co2 import CO2  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser(
@@ -185,6 +186,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     ALTERNATIVES = [("Fewest changes", "changes", lambda c, h, t: (c, t, h)),
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
+    co2 = CO2(s.get("co2"), net.places)                   # rough CO2 vs flying (IDEA-07, D-41)
 
     stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0}
 
@@ -229,6 +231,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                     "stays": [x["place"] for x in steps if x["kind"] == "stay"],
                     "has_issue": any(x.get("issue") for x in steps),
                     "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
+                    **(co2.journey([x["leg"] for x in legs], origin, cap) or {}),
                     "steps": steps}
 
         front = router.pareto(origin, start)            # all sensible trade-offs, for the alternatives
