@@ -388,8 +388,9 @@ Mockava -> Vilnius : *
 
 
 # -- Ukraine --
-Prague -> Przemyśl : *
-Przemyśl -> Kyiv : *
+Prague -> Przemyśl : RegioJet night 21:48-06:25      # Seat61, Nov 2026: daily; Transitous finds no trains
+Przemyśl -> Kyiv : UZ Intercity 09:49-20:10         # Seat61, Nov 2026: via Lviv (12:26)
+Warsaw -> Kyiv : Kyiv Express night 18:50-09:49     # Seat61, Nov 2026: from Warszawa Wschodnia
 
 # -- Andorra --
 Paris -> L'Hospitalet : *                                        # Intercités de Nuit 22:14-09:43 (Seat61, Nov 2026): fri,sat; daily Jun-Sep
