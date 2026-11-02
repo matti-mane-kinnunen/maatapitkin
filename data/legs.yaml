@@ -1618,3 +1618,97 @@ legs:
   - {from: Lyon, to: Avignon, service: "TGV INOUI", mode: train, runs: "sat", times: ["06:28-07:37", "12:06-13:07", "17:06-18:09"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Lyon, to: Avignon, service: "TGV INOUI", mode: train, runs: "sat,sun", times: ["20:40-21:52"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Lyon, to: Avignon, service: "TGV INOUI", mode: train, runs: "sun", times: ["22:06-23:09"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Valga, to: Tallinn, service: "E35 Valga", mode: train, times: ["06:12-10:47", "09:40-14:02", "12:50-16:56", "14:33-18:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Riga, to: Valga, service: "RE37", mode: train, times: ["07:30-09:33", "11:53-14:13", "18:30-21:12"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Riga, to: Valga, service: "RE37", mode: train, runs: "fri,sat,sun", times: ["09:30-12:24"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Vilnius, to: Riga, service: "889/890", mode: train, times: ["07:04-11:34"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Krakow, to: Warsaw, service: "EIP", mode: train, times: ["00:36-04:38", "03:42-06:36", "05:27-08:20", "05:39-08:36", "07:56-10:20", "08:40-11:12",
+      "09:44-12:20", "10:51-13:20", "11:52-14:20", "14:47-17:20", "15:49-18:20", "16:47-19:20",
+      "17:49-20:20", "18:39-21:21", "18:48-21:36", "19:49-22:20", "20:13-23:08", "21:49-00:36"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Krakow, to: Warsaw, service: "EIP", mode: train, runs: "fri,sat,sun", times: ["06:53-09:20", "13:39-16:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Krakow, to: Warsaw, service: "EIP", mode: train, runs: "mon-fri", times: ["04:35-07:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Krakow, to: Warsaw, service: "EIP", mode: train, runs: "mon-thu", times: ["06:53-09:21", "13:43-16:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Krakow, to: Warsaw, service: "EIP", mode: train, runs: "sat,sun", times: ["04:35-07:40"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Vienna, to: Warsaw, service: "IC", mode: train, night: true, times: ["23:19-08:08"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Prague, to: Berlin, service: "RJ", mode: train, times: ["03:14-07:41", "06:31-10:29", "16:31-20:29"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Prague, to: Berlin, service: "RJ", mode: train, runs: "mon-fri,sat", times: ["06:41-10:29", "10:41-14:29"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Prague, to: Berlin, service: "RJ", mode: train, runs: "sat", times: ["14:41-18:29"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Prague, to: Berlin, service: "RJ", mode: train, runs: "sat,sun", times: ["08:31-12:29", "10:31-14:29", "12:31-16:29"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Berlin, service: "ICE", mode: train, times: ["04:30-09:23", "05:34-10:24", "06:34-11:23", "07:12-12:05", "07:34-12:24", "08:34-13:23",
+      "09:12-14:05", "09:34-14:24", "10:34-15:23", "11:34-16:24", "12:34-17:23", "13:12-18:05",
+      "13:34-18:24", "14:34-19:23", "15:34-20:24", "16:34-21:23", "17:08-22:05", "17:34-22:24"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Berlin, service: "ICE", mode: train, runs: "mon-fri", times: ["05:05-10:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Berlin, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["18:34-23:23", "19:34-00:25", "23:12-06:30"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Berlin, service: "ICE", mode: train, runs: "mon-thu", times: ["10:41-16:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Berlin, service: "ICE", mode: train, runs: "sat", times: ["18:34-23:51", "19:34-00:53", "22:52-06:30"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, times: ["03:31-08:06", "06:15-10:33", "07:15-11:17", "08:15-12:33", "09:15-13:17", "09:58-14:00",
+      "10:15-14:33", "11:15-15:17", "12:15-16:33", "13:15-17:17", "14:15-18:32", "15:15-19:17",
+      "16:15-20:33", "17:15-21:17", "18:15-22:33", "19:15-23:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "fri", times: ["00:20-07:15", "11:58-16:00", "23:35-06:37"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "fri,sat,sun", times: ["13:58-18:00"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "fri,sun", times: ["17:58-22:00"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["20:15-00:31"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "mon-thu", times: ["23:40-06:56"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "mon-thu,sun", times: ["15:58-20:00", "21:15-01:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "sat", times: ["07:58-12:00", "20:15-01:04"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Berlin, service: "ICE", mode: train, runs: "sat,sun", times: ["23:40-07:32"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, times: ["06:45-12:17", "07:45-13:19", "08:44-14:17", "09:45-15:18", "10:44-16:17", "11:45-17:19",
+      "12:44-18:17", "13:45-19:19", "14:44-20:17", "15:45-21:19", "17:45-23:25"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "fri", times: ["16:14-22:40", "16:44-22:54", "18:44-00:15", "20:45-02:40"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "fri,sat", times: ["04:16-10:26", "23:01-05:39"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "fri,sat,sun", times: ["19:46-01:26"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["05:44-11:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "mon-thu", times: ["04:25-10:26"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "mon-thu,sat,sun", times: ["16:44-22:17", "18:44-00:18"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "mon-thu,sun", times: ["23:27-05:39"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Köln, to: Berlin, service: "ICE", mode: train, runs: "sun", times: ["05:26-11:19", "20:45-02:33"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, times: ["07:23-09:15", "09:23-11:15", "10:23-12:15", "11:23-13:15", "12:23-14:15", "13:23-15:15",
+      "14:23-16:15", "15:23-17:15", "16:23-18:15", "17:23-19:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "fri", times: ["04:51-06:51", "08:39-10:31", "17:15-19:08"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "fri,sat", times: ["11:15-13:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "fri,sat,sun", times: ["20:24-22:16"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "mon-fri", times: ["19:23-21:15", "21:23-23:16"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["06:23-08:18"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["18:23-20:15", "22:23-00:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "mon-thu", times: ["04:50-06:50", "20:23-22:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "mon-thu,sat,sun", times: ["08:23-10:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Osnabrück, to: Hamburg, service: "ICE", mode: train, runs: "sun", times: ["13:15-15:08", "19:15-21:08", "19:22-21:14", "21:22-23:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Frankfurt, service: "ICE", mode: train, times: ["13:09-15:06", "13:55-16:00", "17:13-19:13"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Frankfurt, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["09:08-11:10"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Frankfurt, service: "ICE", mode: train, times: ["09:06-13:00", "11:07-15:06", "13:10-17:03"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Frankfurt, service: "ICE", mode: train, runs: "mon-fri", times: ["15:21-19:13"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Frankfurt, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["07:16-11:10"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Frankfurt, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["17:10-21:03", "19:06-23:03"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Frankfurt, service: "ICE", mode: train, runs: "sat", times: ["19:07-23:23"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Frankfurt, service: "ICE", mode: train, runs: "sat,sun", times: ["15:21-19:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Paris, service: "ICE", mode: train, times: ["11:01-14:51"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Paris, service: "ICE", mode: train, runs: "mon-fri", times: ["05:54-09:50", "06:53-10:36", "16:55-20:42"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Paris, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["08:53-12:51", "12:53-16:50"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Paris, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["18:53-22:52"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Paris, service: "ICE", mode: train, runs: "sat", times: ["06:53-10:52"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Frankfurt, to: Paris, service: "ICE", mode: train, runs: "sun", times: ["06:06-10:36", "08:53-12:52", "12:53-16:52"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Stuttgart, service: "ICE", mode: train, runs: "mon-fri", times: ["12:44-14:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Stuttgart, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["08:34-10:04", "15:44-17:14", "17:46-19:04", "19:44-21:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Stuttgart, service: "ICE", mode: train, runs: "sat", times: ["08:36-10:04", "15:35-17:04", "19:44-21:04"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Stuttgart, service: "ICE", mode: train, runs: "sat,sun", times: ["12:34-14:04"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Stuttgart, service: "ICE", mode: train, runs: "mon-fri", times: ["10:53-14:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Stuttgart, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["06:41-10:04", "13:52-17:14", "15:55-19:04", "17:53-21:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Stuttgart, service: "ICE", mode: train, runs: "sat", times: ["06:44-10:04", "13:43-17:04", "17:53-21:04"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Stuttgart, service: "ICE", mode: train, runs: "sat,sun", times: ["10:43-14:04"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Strasbourg, service: "ICE", mode: train, times: ["09:10-10:40", "14:52-16:18", "18:52-20:18"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Strasbourg, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["06:52-08:16"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Strasbourg, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["10:52-12:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Strasbourg, service: "ICE", mode: train, runs: "sat", times: ["10:52-12:16"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Paris, service: "ICE", mode: train, times: ["09:10-12:35", "14:52-18:16", "18:52-22:13"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Paris, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["06:52-10:05", "10:52-14:07"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Stuttgart, to: Paris, service: "ICE", mode: train, runs: "sun", times: ["10:52-14:06"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Munich, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["17:46-21:37"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Munich, service: "ICE", mode: train, runs: "sat", times: ["19:44-23:31"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Munich, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["15:55-21:46"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Paris, to: Munich, service: "ICE", mode: train, runs: "sat", times: ["17:53-23:39"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Strasbourg, service: "ICE", mode: train, times: ["06:51-10:40"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Munich, to: Paris, service: "ICE", mode: train, times: ["06:51-12:35"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Strasbourg, to: Brussels, service: "TGV INOUI", mode: train, times: ["05:59-09:43", "17:01-21:01"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Strasbourg, service: "TGV INOUI", mode: train, times: ["13:17-17:37"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Strasbourg, service: "TGV INOUI", mode: train, runs: "mon-fri,sat", times: ["07:17-11:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Brussels, to: Strasbourg, service: "TGV INOUI", mode: train, runs: "sun", times: ["07:17-11:09"], query: "*", checked: 2026-11-02, source: transitous}

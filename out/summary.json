@@ -6,7 +6,7 @@
   "2026-11-14",
   "2026-11-15"
  ],
- "departures": 5097,
+ "departures": 5311,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
@@ -27,10 +27,10 @@
   }
  },
  "places_reached": {
-  "2026-11-10": 141,
-  "2026-11-13": 140,
-  "2026-11-14": 139,
-  "2026-11-15": 141
+  "2026-11-10": 142,
+  "2026-11-13": 142,
+  "2026-11-14": 140,
+  "2026-11-15": 142
  },
  "reached": {
   "capitals": [
@@ -212,6 +212,7 @@
    "Storlien",
    "Stranraer",
    "Strasbourg",
+   "Stuttgart",
    "Subotica",
    "Syracuse",
    "Szeged",
@@ -255,7 +256,7 @@
     "2026-11-14",
     "2026-11-15"
    ],
-   "departures": 5097,
+   "departures": 5311,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -271,15 +272,15 @@
      "without": 29
     },
     "2026-11-15": {
-     "with_night_trains": 34,
+     "with_night_trains": 35,
      "without": 30
     }
    },
    "places_reached": {
-    "2026-11-10": 141,
-    "2026-11-13": 141,
-    "2026-11-14": 139,
-    "2026-11-15": 139
+    "2026-11-10": 142,
+    "2026-11-13": 142,
+    "2026-11-14": 140,
+    "2026-11-15": 141
    },
    "reached": {
     "capitals": [
@@ -461,6 +462,7 @@
      "Storlien",
      "Stranraer",
      "Strasbourg",
+     "Stuttgart",
      "Subotica",
      "Syracuse",
      "Szeged",
@@ -504,7 +506,7 @@
     "2026-11-14",
     "2026-11-15"
    ],
-   "departures": 5097,
+   "departures": 5311,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -520,15 +522,15 @@
      "without": 30
     },
     "2026-11-15": {
-     "with_night_trains": 34,
-     "without": 29
+     "with_night_trains": 35,
+     "without": 30
     }
    },
    "places_reached": {
-    "2026-11-10": 141,
-    "2026-11-13": 141,
-    "2026-11-14": 141,
-    "2026-11-15": 139
+    "2026-11-10": 142,
+    "2026-11-13": 142,
+    "2026-11-14": 142,
+    "2026-11-15": 141
    },
    "reached": {
     "capitals": [
@@ -710,6 +712,7 @@
      "Storlien",
      "Stranraer",
      "Strasbourg",
+     "Stuttgart",
      "Subotica",
      "Syracuse",
      "Szeged",
