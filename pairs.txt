@@ -41,7 +41,6 @@ Berlin -> Frankfurt : *
 Berlin -> Köln : *
 Berlin -> Warsaw: *
 Osnabrück -> Amsterdam : *
-Amsterdam -> Brussels : *
 Amsterdam -> Paris : *
 Brussels -> Paris : *
 Brussels -> London : *

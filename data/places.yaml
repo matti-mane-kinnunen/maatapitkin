@@ -32,7 +32,7 @@ places:
   Copenhagen: {lat: 55.673, lon: 12.565, capital: true, country: DK, aliases: [København, Kopenhagen, Köpenhamn]}
   Hamburg:    {lat: 53.553, lon: 10.007, country: DE}
   Berlin:     {lat: 52.525, lon: 13.369, capital: true, country: DE}
-  Frankfurt:  {lat: 50.107, lon: 8.663, country: DE}
+  Frankfurt:  {lat: 50.107, lon: 8.663, country: DE, aliases: [Frankfurt am Main, Frankfurt (Main), Frankfurt Main]}  # not Frankfurt (Oder)
   Munich:     {lat: 48.140, lon: 11.558, country: DE, aliases: [München, Muenchen]}
   Strasbourg: {lat: 48.585, lon: 7.735, country: FR, aliases: [Strassburg, Straßburg]}
   Paris:      {lat: 48.876, lon: 2.358, capital: true, country: FR, min_transfer: 60}  # change of station (Nord / Est / Lyon)
@@ -95,13 +95,13 @@ places:
   Tallinn: {lat: 59.441, lon: 24.737, capital: true, country: "EE"}  # added by add_leg.py
   Göteborg: {lat: 57.729, lon: 12.014, country: "SE"}  # added by add_leg.py
   Osnabrück: {lat: 52.273, lon: 8.062, country: "DE"}  # added by add_leg.py
-  Köln: {lat: 50.943, lon: 6.959, country: "DE"}  # added by add_leg.py
+  Köln: {lat: 50.943, lon: 6.959, country: "DE", aliases: [Cologne, Koeln]}  # added by add_leg.py
   Offenburg: {lat: 48.476, lon: 7.947, country: "DE"}  # added by add_leg.py
   Trieste: {lat: 45.657, lon: 13.771, country: "IT"}  # added by add_leg.py
   Valga:      {lat: 57.775, lon: 26.053, country: "EE", min_transfer: 10}  # small border/junction station, planned connections (D-36)
   Riga:       {lat: 56.945, lon: 24.114, capital: true, country: "LV", min_transfer: 10}  # planned connection to Vilnius, 11 min (D-36)
   Vilnius: {lat: 54.670, lon: 25.285, capital: true, country: "LT"}  # added by add_leg.py
-  Torino: {lat: 45.070, lon: 7.688, country: "IT"}  # added by add_leg.py
+  Torino: {lat: 45.070, lon: 7.688, country: "IT", aliases: [Turin]}  # added by add_leg.py
   Monaco: {lat: 43.739, lon: 7.420, capital: true, country: "MC"}  # corrected by hand 31.10.2026
   Genoa: {lat: 44.417, lon: 8.921, country: "IT", aliases: [Genova, Gênes]}  # corrected by hand 31.10.2026
   Belgrade: {lat: 44.818, lon: 20.457, capital: true, country: "RS"}  # added by add_leg.py
