@@ -327,10 +327,6 @@ Osnabrück -> Hamburg : *
 Strasbourg -> Frankfurt : *
 Paris -> Frankfurt : *
 Frankfurt -> Paris : *
-Strasbourg -> Berlin : *
-Paris -> Berlin : *
-Berlin -> Strasbourg : *
-Berlin -> Paris : *
 Strasbourg -> Stuttgart : *
 Paris -> Stuttgart : *
 Stuttgart -> Strasbourg : *
