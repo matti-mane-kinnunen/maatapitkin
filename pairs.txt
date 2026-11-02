@@ -13,7 +13,6 @@ Milan -> Rome : FR*
 Amsterdam -> Brussels : *
 Helsinki -> Tallinn : Megastar 07:30-09:30 ferry
 Stockholm -> Oslo : *
-Stockholm -> Göteborg : *
 Göteborg -> Malmö : *
 Göteborg -> Copenhagen : *
 Copenhagen -> Hamburg : *
@@ -59,7 +58,6 @@ Bologna -> Rome : *
 Rome -> Napoli : *
 
 Lisbon -> Porto : *
-Madrid -> San Sebastian: *
 Madrid -> Malaga : *
 Madrid -> Algeciras : Alvia 08:30-13:59   # daily direct Alvia (Rome2Rio); Transitous does not offer it as direct
 
@@ -142,11 +140,9 @@ Rome -> Bari : *
 Naples -> Bari : *
 Hamburg -> Basel : *
 Rome -> Palermo : *
-Rome -> Taormina : *
 Rome -> Villa San Giovanni : *
 Messina -> Palermo : *
 Messina -> Taormina : *
-Messina -> Syracuse : *
 
 # Your own times (not looked up; the run just keeps them)
 Pozzallo -> Valletta : VirtuFerries ferry 21:30-23:15
@@ -194,7 +190,8 @@ Marseille -> Nice : *
 Paris -> Bordeaux : *
 Paris -> Toulouse : *
 London -> Glasgow : *
-Glasgow -> Stranraer : *
+Glasgow -> Ayr : *
+Ayr -> Stranraer : *
 Stranraer -> Cairnryan : * bus   # local bus to the Stena Line port (FIX-04)
 London -> Holyhead : *
 Rome -> Syracuse : ICN1959 night 23:00-11:29   # 2023 times - Transitous has no trains here; check by hand
@@ -222,9 +219,6 @@ Ancona -> Split : Jadrolinija 53 ferry night 19:45-07:00 tue,fri
 # --- Luxembourg: real direct trains (Frankfurt -> Luxembourg has none) ---
 Brussels -> Luxembourg : *
 Paris -> Luxembourg : *
-Frankfurt -> Koblenz : *
-Köln -> Koblenz : *
-Koblenz -> Luxembourg : *
 
 # --- Ferries east from Stockholm, for the Stockholm map (IDEA-04); times local, from aferry.com, Nov 2026 ---
 Stockholm -> Helsinki : Viking Line ferry night 16:00-10:10
@@ -238,8 +232,8 @@ Copenhagen -> Göteborg : *
 Copenhagen -> Stockholm : *
 Malmö -> Göteborg : *
 Malmö -> Stockholm : *
-Göteborg -> Stockholm : *
 Göteborg -> Oslo : *
+Göteborg -> Stockholm : X2 every 60 07:11-21:11 3:30   # Transitous has no direct SJ trains here
 
 # --- From a route list (routes_to_pairs.py) ---
 London -> Paris : *
