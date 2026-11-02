@@ -249,6 +249,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Algiers | Sat 14.11. 17:00 | 96 h 25 min | 6 | 1 |
 | Tunis | Sat 14.11. 22:30 | 101 h 55 min | 7 | 1 |
 | Varna | Sun 15.11. 06:50 | 109 h 15 min | 9 | 0 |
+| Chania | Sun 15.11. 07:00 | 109 h 25 min | 8 | 1 |
 | L'Hospitalet | Sun 15.11. 09:42 | 113 h 07 min | 5 | 2 |
 | Istanbul | Mon 16.11. 06:34 | 131 h 59 min | 9 | 1 |
 

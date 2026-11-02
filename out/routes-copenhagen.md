@@ -242,6 +242,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Abrantes | Thu 12.11. 20:52 | 63 h 30 min | 6 | 1 |
 | Casablanca | Thu 12.11. 21:17 | 63 h 55 min | 8 | 2 |
 | Varna | Fri 13.11. 06:50 | 71 h 28 min | 7 | 0 |
+| Chania | Fri 13.11. 07:00 | 71 h 38 min | 7 | 1 |
 | Ventimiglia | Fri 13.11. 07:48 | 73 h 26 min | 5 | 2 |
 | Porto | Fri 13.11. 09:43 | 76 h 21 min | 8 | 2 |
 | Faro | Fri 13.11. 11:27 | 78 h 05 min | 8 | 2 |
