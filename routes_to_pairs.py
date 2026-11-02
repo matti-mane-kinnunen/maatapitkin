@@ -7,7 +7,8 @@
     python3 routes_to_pairs.py routes.txt --both     # also the opposite direction
     python3 routes_to_pairs.py routes.txt --all      # every pair along each route
 
-One route per line; stops separated by – — - -> > or ','. A last stop like
+One route per line; stops separated by – — - -> > or ','. Lines starting with '#' are notes
+(keep the source and date there, e.g. in data/sources/ave.txt). A last stop like
 "Seville/Granada/Malaga" means one route to each. Lines without a separator (headings) are
 skipped. For each route you get the stops in order (Madrid -> Zaragoza, Zaragoza ->
 Barcelona) and the whole way (Madrid -> Barcelona), so a train that runs through is found
@@ -32,7 +33,9 @@ SEP = re.compile(r"\s*(?:–|—|->|>|,|\s-\s)\s*")
 def routes(text: str) -> list[list[str]]:
     out = []
     for raw in text.splitlines():
-        line = raw.strip().lstrip("•*·-").strip()
+        if raw.lstrip().startswith("#"):
+            continue                                    # a note, e.g. "# Source: interrail.com, 2.11.2026"
+        line = raw.split(" #", 1)[0].strip().lstrip("•*·-").strip()
         stops = [s.strip() for s in SEP.split(line) if s.strip()]
         if len(stops) < 2:
             continue                                    # a heading, not a route
