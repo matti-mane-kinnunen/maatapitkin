@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
+from co2 import CO2  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser(
@@ -185,6 +186,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     ALTERNATIVES = [("Fewest changes", "changes", lambda c, h, t: (c, t, h)),
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
+    co2 = CO2(s.get("co2"), net.places)                   # rough CO2 vs flying (IDEA-07, D-41)
 
     stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0}
 
@@ -229,6 +231,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                     "stays": [x["place"] for x in steps if x["kind"] == "stay"],
                     "has_issue": any(x.get("issue") for x in steps),
                     "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
+                    **(co2.journey([x["leg"] for x in legs], origin, cap) or {}),
                     "steps": steps}
 
         front = router.pareto(origin, start)            # all sensible trade-offs, for the alternatives
@@ -472,7 +475,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,

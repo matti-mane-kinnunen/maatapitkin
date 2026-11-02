@@ -711,6 +711,33 @@ GitHub. And running tidy_legs.py by hand after each lookup was easy to forget.
 **Consequences.** First drafts: London and Berlin reach 27 of 35 capitals; both miss the Nordic
 and Baltic capitals and Bern, because many German, Baltic and Hamburg lines exist only one way.
 
+## D-41 Rough CO₂ per journey, compared with flying
+**Date:** 3.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-07: showing the climate benefit supports the map's purpose (D-37) – getting people
+over the step to travel by train. It must not pretend to a precision the data lacks.
+
+**Decision.**
+- Factors from the UK government's GHG conversion factors (DESNZ 2026, full set), kept in
+  `places.yaml` → `settings.co2` with the rows they come from. Train: national rail; Eurostar:
+  international rail; bus: coach; ferry: foot passenger; flight: short-haul economy *with* the non-CO₂
+  effects (+70 %) – DESNZ counts all of Europe and North Africa as short-haul.
+- Journey = Σ factor × straight-line leg distance × 1.2. Flight = direct, straight line + 8 %.
+- Calculated in the build (`src/co2.py`), stored per journey (`co2`, `co2_flight`), shown as one line
+  under the option cards with rounded kg and the saving to the nearest 5 %. A *How?* button opens a
+  short explanation in place (factors filled in from `settings.co2`, link to the gov.uk source) –
+  not a link to the repository, which means nothing to a map reader (Matti). Places with
+  `no_flights: true` (Kyiv) show no comparison.
+
+**Why.** DESNZ is open, documented and yearly, and needs no service at build time (no new moving
+parts). EcoPassenger (UIC/IFEU) is more detailed – electricity mix per country – but has no open
+interface; it stays a manual cross-check. One European train factor understates the saving on
+electric lines and overstates it on diesel ones; the UK average is a fair middle.
+
+**Consequences.** Typical saving shown: 55–65 % from Helsinki – modest, because the train route
+zigzags and the train factor is conservative. Page +85 KB (3 %). Factors to refresh once a year
+(DATA-12). The rough spots (cabins, long ferries, one rail factor) are listed in the README.
+
 ---
 
 ## Template for a new decision
