@@ -398,3 +398,6 @@ L'Hospitalet -> Andorra la Vella : Hife bus 10:15-11:30          # Seat61, Nov 2
 # -- Sarajevo: no trains across the Croatia-Bosnia border, and a gap inside Bosnia since 2025 (Seat61) --
 Zagreb -> Sarajevo : Coach 12:30 bus 12:30-20:55          # Seat61, Nov 2026: usually daily; bus station is an 18-min walk from Zagreb station
 Zagreb -> Sarajevo : Coach 16:45 bus 16:45-23:55          # Seat61, Nov 2026
+
+# -- San Marino --
+Rimini -> San Marino : Bonelli bus every 60 08:10-19:10 0:50   # Seat61, Nov 2026: 'every hour or so' 08:10-19:25 in winter (06:45-20:30 in summer), fewer on winter Sundays; from outside Rimini station
