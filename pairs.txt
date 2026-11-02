@@ -420,3 +420,8 @@ Palermo -> Tunis : Ferry 10:30 ferry 10:30-22:30 sat      # operator timetable, 
 Genoa -> Porto Torres : Moby Lines ferry night 20:30-07:30 daily   # Nov 2026
 Genoa -> Bastia : Moby Lines ferry 08:45-14:15 daily                # Corsica, Nov 2026
 Barcelona -> Palma : Trasmed ferry night 22:30-05:30 daily          # Mallorca, Nov 2026
+
+# -- Algeria: one sailing a week per operator, times 'around' (Nov 2026) --
+Marseille -> Algiers : Corsica Linea ferry night 10:00-09:00 tue          # ~23 h, arrives Wednesday
+Marseille -> Algiers : Algérie Ferries ferry night 15:00-12:00 sat        # ~21 h, arrives Sunday
+Marseille -> Algiers : Nouris Elbahr ferry night 19:00-17:00 fri          # ~22 h, arrives Saturday
