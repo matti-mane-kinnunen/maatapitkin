@@ -7,7 +7,7 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5737,
+ "departures": 5760,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
@@ -271,7 +271,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5737,
+   "departures": 5760,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -535,7 +535,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5737,
+   "departures": 5760,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -799,7 +799,7 @@
     "2026-11-15"
    ],
    "draft": true,
-   "departures": 5737,
+   "departures": 5760,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -1063,7 +1063,7 @@
     "2026-11-15"
    ],
    "draft": true,
-   "departures": 5737,
+   "departures": 5760,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {

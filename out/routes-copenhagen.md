@@ -196,10 +196,12 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Glasgow | Wed 11.11. 14:02 | 32 h 40 min | 4 | 1 |
 | Naples | Wed 11.11. 15:03 | 32 h 41 min | 5 | 1 |
 | Trieste | Wed 11.11. 15:12 | 32 h 50 min | 3 | 0 |
+| Kaunas | Wed 11.11. 16:20 | 32 h 58 min | 4 | 1 |
 | Penzance | Wed 11.11. 15:03 | 33 h 41 min | 4 | 1 |
 | Subotica | Wed 11.11. 16:24 | 34 h 02 min | 5 | 0 |
 | Ayr | Wed 11.11. 15:24 | 34 h 02 min | 5 | 1 |
 | Oulu | Wed 11.11. 17:48 | 34 h 45 min | 3 | 0 |
+| Kaisiadorys | Wed 11.11. 18:18 | 34 h 56 min | 5 | 1 |
 | Foggia | Wed 11.11. 17:19 | 34 h 57 min | 5 | 1 |
 | Bari | Wed 11.11. 17:27 | 35 h 05 min | 4 | 1 |
 | Salerno | Wed 11.11. 18:23 | 36 h 01 min | 6 | 1 |
@@ -231,8 +233,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Tarifa | Thu 12.11. 16:45 | 58 h 23 min | 6 | 2 |
 | Tanger Med | Thu 12.11. 16:30 | 59 h 08 min | 6 | 2 |
 | Tanger | Thu 12.11. 18:00 | 60 h 38 min | 7 | 2 |
-| Kaisiadorys | Thu 12.11. 20:45 | 61 h 42 min | 6 | 1 |
-| Kaunas | Thu 12.11. 21:55 | 62 h 52 min | 7 | 1 |
 | Abrantes | Thu 12.11. 20:52 | 63 h 30 min | 6 | 1 |
 | Casablanca | Thu 12.11. 21:17 | 63 h 55 min | 8 | 2 |
 | Varna | Fri 13.11. 06:50 | 71 h 28 min | 7 | 0 |

@@ -214,11 +214,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Barcelona | Thu 12.11. 14:32 | 45 h 03 min | 3 | 1 |
 | Cairnryan | Thu 12.11. 13:50 | 45 h 21 min | 7 | 0 |
 | Galway | Thu 12.11. 13:51 | 45 h 22 min | 6 | 1 |
+| Kaunas | Thu 12.11. 16:20 | 45 h 51 min | 4 | 1 |
 | Pozzallo | Thu 12.11. 15:58 | 46 h 29 min | 6 | 0 |
+| Kaisiadorys | Thu 12.11. 18:18 | 47 h 49 min | 5 | 1 |
 | Messina | Thu 12.11. 18:30 | 49 h 01 min | 6 | 0 |
 | Valencia | Thu 12.11. 19:02 | 49 h 33 min | 4 | 1 |
-| Kaisiadorys | Thu 12.11. 20:45 | 51 h 45 min | 4 | 1 |
-| Kaunas | Thu 12.11. 21:55 | 52 h 55 min | 5 | 1 |
 | Sevilla | Thu 12.11. 21:39 | 52 h 10 min | 5 | 1 |
 | Santiago de Compostela | Thu 12.11. 22:19 | 52 h 50 min | 5 | 1 |
 | Malaga | Thu 12.11. 22:45 | 53 h 16 min | 5 | 1 |

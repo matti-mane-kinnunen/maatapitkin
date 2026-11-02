@@ -233,13 +233,13 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Marrakech | Thu 12.11. 12:37 | 54 h 36 min | 8 | 2 |
 | Mockava | Thu 12.11. 14:43 | 54 h 27 min | 4 | 1 |
 | Trondheim | Thu 12.11. 14:40 | 55 h 24 min | 7 | 2 |
+| Kaunas | Thu 12.11. 16:20 | 56 h 04 min | 5 | 1 |
 | Oulu | Thu 12.11. 17:48 | 57 h 32 min | 7 | 1 |
+| Kaisiadorys | Thu 12.11. 18:18 | 58 h 02 min | 6 | 1 |
 | Rovaniemi | Thu 12.11. 20:23 | 60 h 07 min | 7 | 1 |
 | Varna | Fri 13.11. 06:50 | 70 h 49 min | 7 | 1 |
 | Ventimiglia | Fri 13.11. 07:48 | 72 h 47 min | 3 | 3 |
 | Valga | Fri 13.11. 14:13 | 77 h 57 min | 7 | 2 |
-| Kaisiadorys | Fri 13.11. 20:45 | 84 h 29 min | 7 | 2 |
-| Kaunas | Fri 13.11. 21:55 | 85 h 39 min | 8 | 2 |
 | Istanbul | Sat 14.11. 06:34 | 93 h 33 min | 7 | 2 |
 | Split | Sat 14.11. 07:00 | 95 h 59 min | 3 | 3 |
 | L'Hospitalet | Sun 15.11. 09:42 | 49 h 11 min | 1 | 1 |
