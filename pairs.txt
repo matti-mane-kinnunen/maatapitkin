@@ -240,3 +240,20 @@ Malmö -> Göteborg : *
 Malmö -> Stockholm : *
 Göteborg -> Stockholm : *
 Göteborg -> Oslo : *
+
+# --- From a route list (routes_to_pairs.py) ---
+London -> Paris : *
+London -> Lille : *
+Lille -> Brussels : *
+London -> Brussels : *
+Lille -> London : *
+Brussels -> Lille : *
+Brussels -> Amsterdam : *
+London -> Amsterdam : *
+Paris -> Brussels : *
+Paris -> Amsterdam : *
+Paris -> Liège : *
+Liège -> Köln : *
+Paris -> Köln : *
+Liège -> Paris : *
+Köln -> Liège : *
