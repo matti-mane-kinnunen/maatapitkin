@@ -24,6 +24,7 @@ _leave London Tue 10.11.2026 from 06:00 · generated 2.11.2026. Change 20 min (m
 | Ljubljana | Tue 10.11. 06:16 | Wed 11.11. 13:53 | 30 h 37 min | 4 | 1 | 0 | fewest changes: 33 h 39 min, 2 ch., 1 hotel |
 | Stockholm | Tue 10.11. 06:16 | Wed 11.11. 14:36 | 31 h 20 min | 5 | 0 | 1 (Copenhagen) | fewest hotel nights: 38 h 34 min, 5 ch., 0 hotel |
 | Belgrade | Tue 10.11. 06:16 | Wed 11.11. 18:35 | 35 h 19 min | 7 | 1 | 0 |  |
+| Kyiv | Tue 10.11. 06:16 | Wed 11.11. 20:10 | 35 h 54 min | 4 | 1 | 0 |  |
 | Warsaw | Tue 10.11. 06:16 | Wed 11.11. 19:20 | 36 h 04 min | 4 | 1 | 0 | fewest changes: 37 h 44 min, 3 ch., 0 hotel |
 | Zagreb | Tue 10.11. 06:16 | Wed 11.11. 19:20 | 36 h 04 min | 5 | 1 | 0 | fewest changes: 39 h 19 min, 3 ch., 1 hotel |
 | Oslo | Tue 10.11. 06:16 | Wed 11.11. 21:14 | 37 h 58 min | 6 | 0 | 1 (Copenhagen) |  |
@@ -34,7 +35,6 @@ _leave London Tue 10.11.2026 from 06:00 · generated 2.11.2026. Change 20 min (m
 | Tirana | Tue 10.11. 06:01 | Thu 12.11. 12:40 | 53 h 39 min | 4 | 1 | 1 (Milan) | fewest hotel nights: 53 h 39 min, 5 ch., 0 hotel |
 | Vilnius | Tue 10.11. 06:16 | Thu 12.11. 17:25 | 57 h 09 min | 5 | 1 | 1 (Warsaw) | fewest hotel nights: 57 h 09 min, 6 ch., 0 hotel |
 | Athens | Tue 10.11. 06:01 | Thu 12.11. 17:30 | 57 h 29 min | 4 | 1 | 1 (Milan) | fewest hotel nights: 57 h 29 min, 5 ch., 0 hotel |
-| Kyiv | Tue 10.11. 06:16 | Thu 12.11. 20:10 | 59 h 54 min | 5 | 2 | 0 |  |
 | Sofia | Tue 10.11. 06:01 | Thu 12.11. 20:41 | 60 h 40 min | 6 | 1 | 1 (Munich) | fewest hotel nights: 60 h 25 min, 7 ch., 0 hotel |
 | Sarajevo | Tue 10.11. 06:01 | Thu 12.11. 20:55 | 61 h 54 min | 4 | 0 | 2 (Munich, Zagreb) | fewest hotel nights: 61 h 39 min, 5 ch., 1 hotel |
 | Monaco | Tue 10.11. 06:01 | Fri 13.11. 06:47 | 71 h 46 min | 3 | 0 | 3 (Marseille, Nice) | fewest hotel nights: 76 h 33 min, 7 ch., 2 hotel |
@@ -78,12 +78,13 @@ _Night trains and night buses left out; night ferries still used._
 | Tirana | Thu 12.11. 12:40 | 53 h 39 min | 4 | 1 (Milan) | same |
 | Vilnius | Thu 12.11. 17:25 | 57 h 09 min | 5 | 2 (Berlin, Warsaw) | same |
 | Athens | Thu 12.11. 17:30 | 57 h 29 min | 4 | 1 (Milan) | same |
+| Kyiv | Thu 12.11. 20:10 | 59 h 54 min | 4 | 2 (Berlin, Przemyśl) | +24 h 00 min |
 | Sarajevo | Thu 12.11. 20:55 | 61 h 54 min | 4 | 2 (Munich, Zagreb) | same |
 | Monaco | Fri 13.11. 06:47 | 71 h 46 min | 3 | 3 (Marseille, Nice) | same |
 | Tallinn | Fri 13.11. 09:30 | 73 h 14 min | 7 | 2 (Copenhagen, Helsinki) | same |
 | Riga | Fri 13.11. 11:34 | 75 h 18 min | 6 | 3 (Berlin, Warsaw, Vilnius) | same |
 
-Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara, Kyiv, Andorra la Vella
+Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara, Andorra la Vella
 
 ## Leaving from 17:00 instead of 06:00
 
@@ -109,6 +110,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Ljubljana | Wed 11.11. 06:16 | Thu 12.11. 13:53 | 30 h 37 min | arrives 24 h 00 min later |
 | Stockholm | Tue 10.11. 18:04 | Thu 12.11. 06:00 | 34 h 56 min | arrives 15 h 24 min later |
 | Belgrade | Tue 10.11. 17:04 | Thu 12.11. 13:15 | 43 h 11 min | arrives 18 h 40 min later |
+| Kyiv | Wed 11.11. 06:16 | Thu 12.11. 20:10 | 35 h 54 min | arrives 24 h 00 min later |
 | Warsaw | Tue 10.11. 17:04 | Wed 11.11. 21:00 | 26 h 56 min | arrives 1 h 40 min later |
 | Zagreb | Wed 11.11. 06:16 | Thu 12.11. 19:20 | 36 h 04 min | arrives 24 h 00 min later |
 | Oslo | Tue 10.11. 18:04 | Thu 12.11. 13:16 | 42 h 12 min | arrives 16 h 02 min later |
@@ -119,7 +121,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Tirana | Tue 10.11. 17:31 | Fri 13.11. 12:40 | 66 h 09 min | arrives 24 h 00 min later |
 | Vilnius | Tue 10.11. 17:04 | Thu 12.11. 17:25 | 46 h 21 min | same arrival |
 | Athens | Tue 10.11. 17:31 | Fri 13.11. 17:30 | 69 h 59 min | arrives 24 h 00 min later |
-| Kyiv | Tue 10.11. 17:04 | Thu 12.11. 20:10 | 49 h 06 min | same arrival |
 | Sofia | Wed 11.11. 06:01 | Fri 13.11. 20:41 | 60 h 40 min | arrives 24 h 00 min later |
 | Sarajevo | Wed 11.11. 06:01 | Fri 13.11. 20:55 | 61 h 54 min | arrives 24 h 00 min later |
 | Monaco | Wed 11.11. 06:01 | Fri 13.11. 06:47 | 47 h 46 min | same arrival |
@@ -177,12 +178,14 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Munich | Tue 10.11. 21:37 | 14 h 36 min | 2 | 0 |
 | Venice | Tue 10.11. 21:44 | 14 h 43 min | 3 | 0 |
 | Genoa | Tue 10.11. 21:44 | 14 h 43 min | 3 | 0 |
+| Kolding | Tue 10.11. 21:44 | 14 h 28 min | 3 | 0 |
 | Florence | Tue 10.11. 22:04 | 15 h 03 min | 2 | 0 |
 | Rimini | Tue 10.11. 22:41 | 15 h 40 min | 3 | 0 |
+| Aarhus | Tue 10.11. 23:20 | 16 h 04 min | 4 | 0 |
 | Valencia | Tue 10.11. 23:34 | 16 h 33 min | 3 | 0 |
 | Ancona | Tue 10.11. 23:38 | 16 h 37 min | 1 | 0 |
 | Trieste | Tue 10.11. 23:45 | 16 h 44 min | 2 | 0 |
-| Aarhus | Wed 11.11. 04:12 | 20 h 56 min | 4 | 0 |
+| Palma | Wed 11.11. 05:30 | 22 h 29 min | 2 | 0 |
 | Villa San Giovanni | Wed 11.11. 06:10 | 23 h 09 min | 4 | 0 |
 | Offenburg | Wed 11.11. 06:39 | 23 h 23 min | 3 | 0 |
 | Bari | Wed 11.11. 07:00 | 23 h 59 min | 3 | 0 |
@@ -190,6 +193,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Naples | Wed 11.11. 08:12 | 25 h 11 min | 4 | 0 |
 | Foggia | Wed 11.11. 08:33 | 25 h 32 min | 4 | 0 |
 | Malmö | Wed 11.11. 08:55 | 25 h 39 min | 4 | 1 |
+| Przemyśl | Wed 11.11. 09:08 | 25 h 52 min | 3 | 0 |
 | Lecce | Wed 11.11. 09:15 | 26 h 14 min | 4 | 0 |
 | Newcastle | Wed 11.11. 09:15 | 26 h 59 min | 1 | 0 |
 | Sevilla | Wed 11.11. 10:39 | 27 h 38 min | 4 | 1 |
@@ -199,7 +203,9 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Palermo | Wed 11.11. 11:55 | 28 h 54 min | 4 | 0 |
 | Göteborg | Wed 11.11. 12:05 | 28 h 49 min | 4 | 1 |
 | Szeged | Wed 11.11. 12:16 | 29 h 00 min | 5 | 0 |
+| Wroclaw | Wed 11.11. 12:54 | 29 h 38 min | 3 | 0 |
 | Algeciras | Wed 11.11. 13:59 | 30 h 58 min | 4 | 1 |
+| Bastia | Wed 11.11. 14:15 | 31 h 14 min | 3 | 1 |
 | Salerno | Wed 11.11. 14:30 | 31 h 29 min | 4 | 1 |
 | Galway | Wed 11.11. 13:51 | 29 h 51 min | 2 | 1 |
 | Granada | Wed 11.11. 14:55 | 31 h 54 min | 5 | 1 |
@@ -216,12 +222,12 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Östersund | Wed 11.11. 22:05 | 38 h 49 min | 6 | 1 |
 | Casablanca | Wed 11.11. 21:17 | 39 h 16 min | 7 | 1 |
 | Gdansk | Wed 11.11. 23:12 | 39 h 56 min | 5 | 0 |
-| Wroclaw | Thu 12.11. 00:26 | 41 h 10 min | 5 | 0 |
 | Boden | Thu 12.11. 05:42 | 46 h 26 min | 6 | 1 |
 | Bergen | Thu 12.11. 06:23 | 47 h 07 min | 7 | 1 |
-| Przemyśl | Thu 12.11. 06:25 | 47 h 09 min | 4 | 0 |
 | Turku | Thu 12.11. 07:35 | 47 h 19 min | 6 | 1 |
 | Durrës | Thu 12.11. 07:00 | 47 h 59 min | 3 | 1 |
+| Stavanger | Thu 12.11. 07:21 | 48 h 05 min | 7 | 1 |
+| Porto Torres | Thu 12.11. 07:30 | 48 h 29 min | 3 | 1 |
 | Storlien | Thu 12.11. 09:17 | 50 h 16 min | 7 | 0 |
 | Taormina | Thu 12.11. 10:08 | 51 h 07 min | 5 | 2 |
 | Porto | Thu 12.11. 09:43 | 51 h 42 min | 6 | 2 |
@@ -242,6 +248,8 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Valga | Fri 13.11. 14:13 | 77 h 57 min | 7 | 2 |
 | Istanbul | Sat 14.11. 06:34 | 93 h 33 min | 7 | 2 |
 | Split | Sat 14.11. 07:00 | 95 h 59 min | 3 | 3 |
+| Algiers | Sat 14.11. 17:00 | 32 h 29 min | 2 | 0 |
+| Tunis | Sat 14.11. 22:30 | 111 h 29 min | 6 | 4 |
 | L'Hospitalet | Sun 15.11. 09:42 | 49 h 11 min | 1 | 1 |
 
 ## Itineraries
@@ -518,6 +526,16 @@ _Fastest: 35 h 19 min, arrive Wed 11.11. 18:35, 7 changes, 0 hotel nights_
 - Wed 11.11. 15:04 → Wed 11.11. 16:24  **Szeged → Subotica**  SZ
 - Wed 11.11. 17:00 → Wed 11.11. 18:35  **Subotica → Belgrade**  IC
 
+### Kyiv
+_Fastest: 35 h 54 min, arrive Wed 11.11. 20:10, 4 changes, 0 hotel nights_
+
+- Tue 10.11. 06:16 → Tue 10.11. 09:13  **London → Brussels**  EST GBSPX
+- Tue 10.11. 10:22 → Tue 10.11. 12:15  **Brussels → Köln**  ICE
+- Tue 10.11. 12:44 → Tue 10.11. 18:17  **Köln → Berlin**  ICE
+- Wait 3 h 30 min in Berlin
+- Tue 10.11. 21:47 → Wed 11.11. 09:08  **Berlin → Przemyśl**  IC  (night)
+- Wed 11.11. 09:49 → Wed 11.11. 20:10  **Przemyśl → Kyiv**  UZ Intercity
+
 ### Warsaw
 _Fastest: 36 h 04 min, arrive Wed 11.11. 19:20, 4 changes, 0 hotel nights_
 
@@ -712,19 +730,6 @@ _Fewest hotel nights: 57 h 29 min, arrive Thu 12.11. 17:30, 5 changes, 0 hotel n
 - Wed 11.11. 19:30 → Thu 12.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
 - Wait 1 h 30 min in Patras
 - Thu 12.11. 14:30 → Thu 12.11. 17:30  **Patras → Athens**  ?
-
-### Kyiv
-_Fastest: 59 h 54 min, arrive Thu 12.11. 20:10, 5 changes, 0 hotel nights_
-
-- Tue 10.11. 06:16 → Tue 10.11. 09:13  **London → Brussels**  EST GBSPX
-- Tue 10.11. 10:22 → Tue 10.11. 12:15  **Brussels → Köln**  ICE
-- Wait 11 h 12 min in Köln
-- Tue 10.11. 23:27 → Wed 11.11. 05:39  **Köln → Berlin**  ICE  (night)
-- Wed 11.11. 06:12 → Wed 11.11. 10:22  **Berlin → Prague**  RJ
-- Wait 11 h 26 min in Prague
-- Wed 11.11. 21:48 → Thu 12.11. 06:25  **Prague → Przemyśl**  RegioJet  (night)
-- Wait 3 h 24 min in Przemyśl
-- Thu 12.11. 09:49 → Thu 12.11. 20:10  **Przemyśl → Kyiv**  UZ Intercity
 
 ### Sofia
 _Fastest: 60 h 40 min, arrive Thu 12.11. 20:41, 6 changes, 1 hotel nights_

@@ -1873,3 +1873,30 @@ legs:
   - {from: Kaunas, to: Kaisiadorys, service: "872", mode: train, runs: "mon-fri", times: ["05:00-05:23", "06:32-06:57"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Kaisiadorys, to: Riga, service: "889/890", mode: train, times: ["07:47-11:34"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Mockava, to: Kaunas, service: "32", mode: train, times: ["09:09-10:30", "15:07-16:20", "21:04-22:17"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Berlin, to: Przemyśl, service: "IC", mode: train, times: ["08:44-18:44", "12:44-22:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Berlin, to: Przemyśl, service: "IC", mode: train, runs: "mon-thu", times: ["21:47-09:08"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Berlin, to: Przemyśl, service: "IC", mode: train, runs: "sat", times: ["22:08-09:08"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Hamburg, to: Kolding, service: "ECE", mode: train, times: ["09:51-12:59", "10:53-13:44", "12:28-15:44", "13:08-15:44", "14:52-17:44", "16:28-19:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Hamburg, to: Kolding, service: "ECE", mode: train, runs: "mon-fri,sun", times: ["18:53-21:44"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Hamburg, to: Kolding, service: "ECE", mode: train, runs: "sat", times: ["18:53-21:46"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Kolding, to: Aarhus, service: "IC", mode: train, times: ["15:24-16:08", "19:24-20:08"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Kolding, to: Aarhus, service: "IC", mode: train, runs: "mon-fri", times: ["06:24-07:08", "07:24-08:08", "08:24-09:08", "09:24-10:08", "14:24-15:08", "17:24-18:08",
+      "22:29-23:20"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Kolding, to: Aarhus, service: "IC", mode: train, runs: "sat", times: ["21:24-22:08", "23:28-00:18"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Kolding, to: Aarhus, service: "IC", mode: train, runs: "sat,sun", times: ["03:23-04:08", "05:23-06:08", "11:24-12:08"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Kolding, to: Aarhus, service: "IC", mode: train, runs: "sun", times: ["23:22-00:11"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Berlin, to: Wroclaw, service: "IC", mode: train, times: ["08:44-12:54", "12:44-16:55", "16:44-20:52"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Berlin, to: Wroclaw, service: "IC", mode: train, runs: "fri,sat", times: ["22:08-03:00"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Oslo, to: Stavanger, service: "F5", mode: train, times: ["15:23-23:14"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "fri", times: ["04:19-12:05"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "mon-fri,sat", times: ["07:25-15:18", "09:25-17:49", "13:25-21:15"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "mon-fri,sun", times: ["11:25-19:19"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "mon-thu,sun", times: ["22:25-07:21"], query: "*", checked: 2026-11-02, source: transitous}
+  - {from: Palermo, to: Tunis, dep: "02:30", arr: "14:00", service: "02:30", mode: ferry, runs: "tue", checked: 2026-11-02, source: manual}
+  - {from: Palermo, to: Tunis, dep: "10:30", arr: "22:30", service: "10:30", mode: ferry, runs: "sat", checked: 2026-11-02, source: manual}
+  - {from: Genoa, to: Porto Torres, dep: "20:30", arr: "07:30", service: "Moby Lines", mode: ferry, night: true, checked: 2026-11-02, source: manual}
+  - {from: Genoa, to: Bastia, dep: "08:45", arr: "14:15", service: "Moby Lines", mode: ferry, checked: 2026-11-02, source: manual}
+  - {from: Barcelona, to: Palma, dep: "22:30", arr: "05:30", service: "Trasmed", mode: ferry, night: true, checked: 2026-11-02, source: manual}
+  - {from: Marseille, to: Algiers, dep: "10:00", arr: "09:00", service: "Corsica Linea", mode: ferry, night: true, runs: "tue", checked: 2026-11-02, source: manual}
+  - {from: Marseille, to: Algiers, dep: "15:00", arr: "12:00", service: "Algérie Ferries", mode: ferry, night: true, runs: "sat", checked: 2026-11-02, source: manual}
+  - {from: Marseille, to: Algiers, dep: "19:00", arr: "17:00", service: "Nouris Elbahr", mode: ferry, night: true, runs: "fri", checked: 2026-11-02, source: manual}
