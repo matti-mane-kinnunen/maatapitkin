@@ -6,7 +6,7 @@
   "2026-11-14",
   "2026-11-15"
  ],
- "departures": 3815,
+ "departures": 3833,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
@@ -110,6 +110,7 @@
    "Ancona",
    "Ankara",
    "Athens",
+   "Ayr",
    "Badajoz",
    "Barcelona",
    "Bari",
@@ -151,7 +152,6 @@
    "Istanbul",
    "Kaisiadorys",
    "Kaunas",
-   "Koblenz",
    "Krakow",
    "K\u00f6ln",
    "Lille",
@@ -244,7 +244,7 @@
     "2026-11-14",
     "2026-11-15"
    ],
-   "departures": 3815,
+   "departures": 3833,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -348,6 +348,7 @@
      "Ancona",
      "Ankara",
      "Athens",
+     "Ayr",
      "Badajoz",
      "Barcelona",
      "Bari",
@@ -390,7 +391,6 @@
      "Istanbul",
      "Kaisiadorys",
      "Kaunas",
-     "Koblenz",
      "Krakow",
      "K\u00f6ln",
      "Lille",
@@ -482,7 +482,7 @@
     "2026-11-14",
     "2026-11-15"
    ],
-   "departures": 3815,
+   "departures": 3833,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -586,6 +586,7 @@
      "Ancona",
      "Ankara",
      "Athens",
+     "Ayr",
      "Badajoz",
      "Barcelona",
      "Bari",
@@ -627,7 +628,6 @@
      "Istanbul",
      "Kaisiadorys",
      "Kaunas",
-     "Koblenz",
      "Krakow",
      "K\u00f6ln",
      "Lille",

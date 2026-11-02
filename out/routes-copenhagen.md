@@ -131,7 +131,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Osnabrück | Tue 10.11. 13:34 | 7 h 12 min | 1 | 0 |
 | Köln | Tue 10.11. 15:48 | 9 h 26 min | 1 | 0 |
 | Frankfurt | Tue 10.11. 16:14 | 9 h 52 min | 1 | 0 |
-| Koblenz | Tue 10.11. 17:42 | 11 h 20 min | 2 | 0 |
 | Liège | Tue 10.11. 17:46 | 11 h 24 min | 2 | 0 |
 | Offenburg | Tue 10.11. 17:58 | 11 h 36 min | 1 | 0 |
 | Munich | Tue 10.11. 18:04 | 11 h 42 min | 1 | 0 |
@@ -176,6 +175,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Glasgow | Wed 11.11. 14:02 | 32 h 40 min | 4 | 1 |
 | Naples | Wed 11.11. 15:03 | 32 h 41 min | 5 | 1 |
 | Trieste | Wed 11.11. 15:12 | 32 h 50 min | 3 | 0 |
+| Ayr | Wed 11.11. 14:57 | 33 h 35 min | 5 | 1 |
 | Penzance | Wed 11.11. 15:03 | 33 h 41 min | 4 | 1 |
 | Bologna | Wed 11.11. 16:08 | 33 h 46 min | 2 | 0 |
 | Subotica | Wed 11.11. 16:24 | 34 h 02 min | 5 | 0 |
@@ -662,8 +662,8 @@ _Fastest: 64 h 58 min, arrive Thu 12.11. 22:20, 7 changes, 1 hotel nights_
 - Wait 2 h 27 min in Paris
 - Wed 11.11. 14:42 → Wed 11.11. 21:32  **Paris → Barcelona**  TGV INOUI
 - 🛏 Overnight in Barcelona (Wed 11.11. 21:32 → Thu 12.11. 06:20)
-- Thu 12.11. 06:20 → Thu 12.11. 08:50  **Barcelona → Madrid**  AVE 3260
-- Wait 2 h 05 min in Madrid
+- Thu 12.11. 06:20 → Thu 12.11. 09:22  **Barcelona → Madrid**  AVE
+- Wait 1 h 33 min in Madrid
 - Thu 12.11. 10:55 → Thu 12.11. 16:11  **Madrid → Badajoz**  MD
 - Wait 3 h 30 min in Badajoz
 - Thu 12.11. 19:41 → Thu 12.11. 20:52  **Badajoz → Abrantes**  R

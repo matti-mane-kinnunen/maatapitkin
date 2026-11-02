@@ -155,6 +155,7 @@ places:
   Stranraer: {lat: 54.906, lon: -5.003, country: "GB", aliases: ["Stranraer Academy"]}  # added by add_leg.py
   Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"]}  # added by add_leg.py
   Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"]}  # added by add_leg.py
+  Ayr: {lat: 55.791, lon: -4.310, country: "GB", aliases: ["Ayr Road"]}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

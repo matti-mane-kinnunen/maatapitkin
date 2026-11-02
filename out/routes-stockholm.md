@@ -138,7 +138,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Tampere | Wed 11.11. 12:53 | 19 h 53 min | 1 | 0 |
 | Offenburg | Wed 11.11. 11:58 | 18 h 29 min | 1 | 0 |
 | Narvik | Wed 11.11. 12:37 | 18 h 25 min | 1 | 0 |
-| Koblenz | Wed 11.11. 12:42 | 19 h 13 min | 2 | 0 |
 | Liège | Wed 11.11. 12:43 | 19 h 14 min | 2 | 0 |
 | Strasbourg | Wed 11.11. 12:51 | 19 h 22 min | 2 | 0 |
 | Basel | Wed 11.11. 13:21 | 19 h 52 min | 1 | 0 |
@@ -178,6 +177,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Donostia | Thu 12.11. 08:21 | 38 h 52 min | 5 | 1 |
 | Nice | Thu 12.11. 08:37 | 39 h 08 min | 4 | 1 |
 | Penzance | Thu 12.11. 07:55 | 39 h 26 min | 4 | 0 |
+| Ayr | Thu 12.11. 08:05 | 39 h 36 min | 5 | 0 |
 | Gdansk | Thu 12.11. 09:12 | 39 h 43 min | 3 | 1 |
 | Newcastle | Thu 12.11. 09:15 | 40 h 46 min | 3 | 0 |
 | Szeged | Thu 12.11. 10:16 | 40 h 47 min | 4 | 1 |
@@ -235,7 +235,7 @@ _Fastest: 5 h 43 min, arrive Wed 11.11. 00:02, 0 changes, 0 hotel nights_
 ### Berlin
 _Fastest: 14 h 53 min, arrive Wed 11.11. 08:22, 1 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 
 ### Helsinki
@@ -246,7 +246,7 @@ _Fastest: 17 h 10 min, arrive Wed 11.11. 10:10, 0 changes, 0 hotel nights_
 ### Amsterdam
 _Fastest: 20 h 32 min, arrive Wed 11.11. 14:01, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:45 → Wed 11.11. 08:34  **Hamburg → Osnabrück**  ICE
 - Wait 2 h 32 min in Osnabrück
 - Wed 11.11. 11:06 → Wed 11.11. 14:01  **Osnabrück → Amsterdam**  ICE
@@ -254,14 +254,14 @@ _Fastest: 20 h 32 min, arrive Wed 11.11. 14:01, 2 changes, 0 hotel nights_
 ### Bern
 _Fastest: 21 h 27 min, arrive Wed 11.11. 14:56, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
 - Wed 11.11. 13:58 → Wed 11.11. 14:56  **Basel → Bern**  IC61
 
 ### Paris
 _Fastest: 22 h 38 min, arrive Wed 11.11. 16:07, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:45 → Wed 11.11. 10:48  **Hamburg → Köln**  ICE
 - Wait 1 h 51 min in Köln
 - Wed 11.11. 12:39 → Wed 11.11. 16:07  **Köln → Paris**  EST DEKOH
@@ -269,7 +269,7 @@ _Fastest: 22 h 38 min, arrive Wed 11.11. 16:07, 2 changes, 0 hotel nights_
 ### Brussels
 _Fastest: 23 h 37 min, arrive Wed 11.11. 17:06, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:45 → Wed 11.11. 08:34  **Hamburg → Osnabrück**  ICE
 - Wait 2 h 32 min in Osnabrück
 - Wed 11.11. 11:06 → Wed 11.11. 14:01  **Osnabrück → Amsterdam**  ICE
@@ -278,7 +278,7 @@ _Fastest: 23 h 37 min, arrive Wed 11.11. 17:06, 3 changes, 0 hotel nights_
 ### Prague
 _Fastest: 23 h 46 min, arrive Wed 11.11. 17:15, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 5 h 06 min in Berlin
 - Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
@@ -286,7 +286,7 @@ _Fastest: 23 h 46 min, arrive Wed 11.11. 17:15, 2 changes, 0 hotel nights_
 ### London
 _Fastest: 26 h 01 min, arrive Wed 11.11. 18:30, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:45 → Wed 11.11. 10:48  **Hamburg → Köln**  ICE
 - Wait 1 h 51 min in Köln
 - Wed 11.11. 12:39 → Wed 11.11. 16:07  **Köln → Paris**  EST DEKOH
@@ -295,7 +295,7 @@ _Fastest: 26 h 01 min, arrive Wed 11.11. 18:30, 3 changes, 0 hotel nights_
 ### Vienna
 _Fastest: 26 h 03 min, arrive Wed 11.11. 19:32, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 2 h 08 min in Hamburg
 - Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
 - Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
@@ -303,7 +303,7 @@ _Fastest: 26 h 03 min, arrive Wed 11.11. 19:32, 2 changes, 0 hotel nights_
 ### Luxembourg
 _Fastest: 26 h 24 min, arrive Wed 11.11. 19:53, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:45 → Wed 11.11. 10:48  **Hamburg → Köln**  ICE
 - Wait 1 h 51 min in Köln
 - Wed 11.11. 12:39 → Wed 11.11. 16:07  **Köln → Paris**  EST DEKOH
@@ -313,7 +313,7 @@ _Fastest: 26 h 24 min, arrive Wed 11.11. 19:53, 3 changes, 0 hotel nights_
 ### Warsaw
 _Fastest: 27 h 31 min, arrive Wed 11.11. 21:00, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 7 h 22 min in Berlin
 - Wed 11.11. 15:44 → Wed 11.11. 21:00  **Berlin → Warsaw**  IC
@@ -321,7 +321,7 @@ _Fastest: 27 h 31 min, arrive Wed 11.11. 21:00, 2 changes, 0 hotel nights_
 ### Bratislava
 _Fastest: 27 h 41 min, arrive Wed 11.11. 21:10, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 2 h 08 min in Hamburg
 - Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
 - Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
@@ -330,7 +330,7 @@ _Fastest: 27 h 41 min, arrive Wed 11.11. 21:10, 3 changes, 0 hotel nights_
 ### Rome
 _Fastest: 29 h 10 min, arrive Wed 11.11. 22:39, 4 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
 - Wed 11.11. 13:43 → Wed 11.11. 14:52  **Basel → Zürich**  IC3
 - Wed 11.11. 15:33 → Wed 11.11. 18:53  **Zürich → Milan**  EC
@@ -339,7 +339,7 @@ _Fastest: 29 h 10 min, arrive Wed 11.11. 22:39, 4 changes, 0 hotel nights_
 ### Vatican
 _Fastest: 29 h 50 min, arrive Wed 11.11. 23:19, 5 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
 - Wed 11.11. 13:43 → Wed 11.11. 14:52  **Basel → Zürich**  IC3
 - Wed 11.11. 15:33 → Wed 11.11. 18:53  **Zürich → Milan**  EC
@@ -349,7 +349,7 @@ _Fastest: 29 h 50 min, arrive Wed 11.11. 23:19, 5 changes, 0 hotel nights_
 ### Budapest
 _Fastest: 30 h 06 min, arrive Wed 11.11. 23:35, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 2 h 08 min in Hamburg
 - Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
 - Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
@@ -365,7 +365,7 @@ _Fastest: 40 h 30 min, arrive Thu 12.11. 09:30, 1 changes, 1 hotel nights_
 ### Ljubljana
 _Fastest: 44 h 24 min, arrive Thu 12.11. 13:53, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 11 h 49 min in Berlin
 - Wed 11.11. 20:11 → Thu 12.11. 07:00  **Berlin → Vienna**  IC  (night)
@@ -374,7 +374,7 @@ _Fastest: 44 h 24 min, arrive Thu 12.11. 13:53, 3 changes, 0 hotel nights_
 ### Ljubljana — fewest changes
 _Fewest changes: 47 h 11 min, arrive Thu 12.11. 16:40, 2 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 14 h 17 min in Hamburg
 - Wed 11.11. 20:10 → Thu 12.11. 06:13  **Hamburg → Munich**  ICE  (night)
 - Wait 4 h 03 min in Munich
@@ -383,7 +383,7 @@ _Fewest changes: 47 h 11 min, arrive Thu 12.11. 16:40, 2 changes, 0 hotel nights
 ### Belgrade
 _Fastest: 45 h 46 min, arrive Thu 12.11. 15:15, 6 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 2 h 08 min in Hamburg
 - Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
 - Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
@@ -397,7 +397,7 @@ _Fastest: 45 h 46 min, arrive Thu 12.11. 15:15, 6 changes, 1 hotel nights_
 ### Belgrade — fewest hotel nights
 _Fewest hotel nights: 49 h 06 min, arrive Thu 12.11. 18:35, 6 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 5 h 06 min in Berlin
 - Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
@@ -420,7 +420,7 @@ _Fastest: 47 h 44 min, arrive Thu 12.11. 16:44, 3 changes, 1 hotel nights_
 ### Madrid
 _Fastest: 48 h 48 min, arrive Thu 12.11. 18:17, 4 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:45 → Wed 11.11. 10:48  **Hamburg → Köln**  ICE
 - Wait 1 h 51 min in Köln
 - Wed 11.11. 12:39 → Wed 11.11. 16:07  **Köln → Paris**  EST DEKOH
@@ -431,7 +431,7 @@ _Fastest: 48 h 48 min, arrive Thu 12.11. 18:17, 4 changes, 1 hotel nights_
 ### Madrid — fewest hotel nights
 _Fewest hotel nights: 54 h 15 min, arrive Thu 12.11. 23:44, 5 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 16 h 18 min in Hamburg
 - Wed 11.11. 22:11 → Thu 12.11. 06:39  **Hamburg → Offenburg**  ICE  (night)
 - Thu 12.11. 07:05 → Thu 12.11. 07:34  **Offenburg → Strasbourg**  RS4
@@ -444,7 +444,7 @@ _Fewest hotel nights: 54 h 15 min, arrive Thu 12.11. 23:44, 5 changes, 0 hotel n
 ### Zagreb
 _Fastest: 49 h 51 min, arrive Thu 12.11. 19:20, 4 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 11 h 49 min in Berlin
 - Wed 11.11. 20:11 → Thu 12.11. 07:00  **Berlin → Vienna**  IC  (night)
@@ -455,7 +455,7 @@ _Fastest: 49 h 51 min, arrive Thu 12.11. 19:20, 4 changes, 0 hotel nights_
 ### Zagreb — fewest changes
 _Fewest changes: 52 h 51 min, arrive Thu 12.11. 22:20, 3 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 11 h 49 min in Berlin
 - Wed 11.11. 20:11 → Thu 12.11. 07:00  **Berlin → Vienna**  IC  (night)
@@ -475,7 +475,7 @@ _Fastest: 52 h 28 min, arrive Thu 12.11. 21:28, 4 changes, 1 hotel nights_
 ### Valletta
 _Fastest: 53 h 46 min, arrive Thu 12.11. 23:15, 7 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
 - Wed 11.11. 13:43 → Wed 11.11. 14:52  **Basel → Zürich**  IC3
 - Wed 11.11. 15:33 → Wed 11.11. 18:53  **Zürich → Milan**  EC
@@ -489,7 +489,7 @@ _Fastest: 53 h 46 min, arrive Thu 12.11. 23:15, 7 changes, 0 hotel nights_
 ### Monaco
 _Fastest: 61 h 18 min, arrive Fri 13.11. 06:47, 5 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 16 h 18 min in Hamburg
 - Wed 11.11. 22:11 → Thu 12.11. 06:39  **Hamburg → Offenburg**  ICE  (night)
 - Thu 12.11. 07:05 → Thu 12.11. 07:34  **Offenburg → Strasbourg**  RS4
@@ -502,7 +502,7 @@ _Fastest: 61 h 18 min, arrive Fri 13.11. 06:47, 5 changes, 1 hotel nights_
 ### Bucharest
 _Fastest: 61 h 54 min, arrive Fri 13.11. 08:23, 4 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 5 h 06 min in Berlin
 - Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
@@ -514,7 +514,7 @@ _Fastest: 61 h 54 min, arrive Fri 13.11. 08:23, 4 changes, 0 hotel nights_
 ### Dublin
 _Fastest: 66 h 31 min, arrive Fri 13.11. 11:00, 5 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 15 h 58 min in Hamburg
 - Wed 11.11. 21:51 → Wed 11.11. 23:51  **Hamburg → Berlin**  ICE
 - Wed 11.11. 23:51 → Thu 12.11. 06:15  **Berlin → Köln**  ICE  (night)
@@ -529,7 +529,7 @@ _Fastest: 66 h 31 min, arrive Fri 13.11. 11:00, 5 changes, 1 hotel nights_
 ### Tirana
 _Fastest: 67 h 11 min, arrive Fri 13.11. 12:40, 6 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
 - Wed 11.11. 13:43 → Wed 11.11. 14:52  **Basel → Zürich**  IC3
 - Wed 11.11. 15:33 → Wed 11.11. 18:53  **Zürich → Milan**  EC
@@ -542,7 +542,7 @@ _Fastest: 67 h 11 min, arrive Fri 13.11. 12:40, 6 changes, 0 hotel nights_
 ### Athens
 _Fastest: 71 h 01 min, arrive Fri 13.11. 17:30, 6 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
 - Wed 11.11. 13:43 → Wed 11.11. 14:52  **Basel → Zürich**  IC3
 - Wed 11.11. 15:33 → Wed 11.11. 18:53  **Zürich → Milan**  EC
@@ -555,7 +555,7 @@ _Fastest: 71 h 01 min, arrive Fri 13.11. 17:30, 6 changes, 0 hotel nights_
 ### Belfast
 _Fastest: 71 h 29 min, arrive Fri 13.11. 15:58, 6 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 15 h 58 min in Hamburg
 - Wed 11.11. 21:51 → Wed 11.11. 23:51  **Hamburg → Berlin**  ICE
 - Wed 11.11. 23:51 → Thu 12.11. 06:15  **Berlin → Köln**  ICE  (night)
@@ -572,7 +572,7 @@ _Fastest: 71 h 29 min, arrive Fri 13.11. 15:58, 6 changes, 1 hotel nights_
 ### Sofia
 _Fastest: 74 h 12 min, arrive Fri 13.11. 20:41, 6 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 5 h 06 min in Berlin
 - Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
@@ -587,7 +587,7 @@ _Fastest: 74 h 12 min, arrive Fri 13.11. 20:41, 6 changes, 0 hotel nights_
 ### Lisbon
 _Fastest: 77 h 51 min, arrive Fri 13.11. 22:20, 7 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wait 15 h 58 min in Hamburg
 - Wed 11.11. 21:51 → Wed 11.11. 23:51  **Hamburg → Berlin**  ICE
 - Wed 11.11. 23:51 → Thu 12.11. 06:15  **Berlin → Köln**  ICE  (night)
@@ -595,9 +595,8 @@ _Fastest: 77 h 51 min, arrive Fri 13.11. 22:20, 7 changes, 1 hotel nights_
 - Thu 12.11. 08:39 → Thu 12.11. 12:15  **Köln → Paris**  EST DEKOH
 - Wait 2 h 27 min in Paris
 - Thu 12.11. 14:42 → Thu 12.11. 21:32  **Paris → Barcelona**  TGV INOUI
-- 🛏 Overnight in Barcelona (Thu 12.11. 21:32 → Fri 13.11. 06:20)
-- Fri 13.11. 06:20 → Fri 13.11. 08:50  **Barcelona → Madrid**  AVE 3260
-- Wait 2 h 05 min in Madrid
+- 🛏 Overnight in Barcelona (Thu 12.11. 21:32 → Fri 13.11. 06:35)
+- Fri 13.11. 06:35 → Fri 13.11. 09:52  **Barcelona → Madrid**  AVE
 - Fri 13.11. 10:55 → Fri 13.11. 16:11  **Madrid → Badajoz**  MD
 - Wait 3 h 30 min in Badajoz
 - Fri 13.11. 19:41 → Fri 13.11. 20:52  **Badajoz → Abrantes**  R
@@ -606,7 +605,7 @@ _Fastest: 77 h 51 min, arrive Fri 13.11. 22:20, 7 changes, 1 hotel nights_
 ### Chisinau
 _Fastest: 85 h 41 min, arrive Sat 14.11. 08:10, 5 changes, 0 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 5 h 06 min in Berlin
 - Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
@@ -620,7 +619,7 @@ _Fastest: 85 h 41 min, arrive Sat 14.11. 08:10, 5 changes, 0 hotel nights_
 ### Ankara
 _Fastest: 113 h 47 min, arrive Sun 15.11. 13:16, 8 changes, 1 hotel nights_
 
-- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  EN 345  (night)
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
 - Wait 5 h 06 min in Berlin
 - Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
