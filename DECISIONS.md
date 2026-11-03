@@ -13,8 +13,8 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-03 | Transitous is the timetable source | 30.10.2026 | Accepted |
 | D-04 | Build real journeys for a travel date, not sums of leg durations | 30.10.2026 | Accepted |
 | D-05 | Realistic change times, longer at some stations | 30.10.2026 | Accepted |
-| D-06 | A wait through the night is a hotel night | 30.10.2026 | Accepted |
-| D-07 | Show alternatives only when they are worth it | 30.10.2026 | Accepted |
+| D-06 | A wait through the night is a hotel night | 30.10.2026 | Accepted (updated by D-42) |
+| D-07 | Show alternatives only when they are worth it | 30.10.2026 | Accepted (updated 2–3.11.) |
 | D-08 | A connection holds all its departures, not one train | 30.10.2026 | Accepted |
 | D-09 | Add trains as `A -> B : train`; pairs.txt is the main input | 30.10.2026 | Accepted |
 | D-10 | The checker reports; people decide what changes | 30.10.2026 | Accepted |
@@ -37,6 +37,25 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-27 | Journeys with or without night trains | 31.10.2026 | Accepted |
 | D-28 | Several travel dates on the map | 31.10.2026 | Accepted |
 | D-29 | Weekly automatic update, published on GitHub Pages | 31.10.2026 | Accepted |
+| D-30 | Shareable links to a journey | 31.10.2026 | Accepted |
+| D-31 | Weekly lookup within a time budget, oldest first | 31.10.2026 | Accepted |
+| D-32 | Morning or evening departure from Helsinki | 31.10.2026 | Accepted |
+| D-33 | A "direct train" must really run from A to B | 31.10.2026 | Accepted |
+| D-34 | Namesakes and impossible speeds when adding legs | 31.10.2026 | Accepted |
+| D-35 | Every leg comes from a pairs.txt line | 1.11.2026 | Accepted |
+| D-36 | More time for changes, with exceptions at small stations | 1.11.2026 | Accepted |
+| D-37 | Purpose: an encouraging map, not a journey planner | 1.11.2026 | Accepted |
+| D-38 | An issue only when the lookup needs a person | 1.11.2026 | Accepted |
+| D-39 | A hotel night lasts at least 8 hours | 1.11.2026 | Accepted |
+| D-40 | Draft maps, parallel build, automatic tidy | 2.11.2026 | Accepted |
+| D-41 | Rough CO₂ per journey, compared with flying | 3.11.2026 | Accepted |
+| D-42 | Waiting for weekly services instead of looping | 3.11.2026 | Accepted |
+| D-43 | One map per origin | 1–3.11.2026 | Accepted |
+| D-44 | Draw only the connections a map's journeys use | 2.11.2026 | Accepted |
+| D-45 | City names, not station names | 2.11.2026 | Accepted |
+| D-46 | Times by hand where Transitous has none, with a source | 2–3.11.2026 | Accepted |
+| D-47 | Supply-chain hygiene and a safety net before commits | 1–2.11.2026 | Accepted |
+| D-48 | A faster build and a smaller page | 2.11.2026 | Accepted |
 
 ---
 
@@ -121,6 +140,9 @@ nights.
 
 **See also** D-25 (quiet hours).
 
+**Update 3.11.2026 (D-42).** The 2-night limit is now 6 (`max_stay_nights`), so weekly services can be
+waited for; and a wait that ends by boarding a night train or ferry after midnight is not a hotel night.
+
 **Why / history.** First set to 07:00; changed to 06:00 the same day because the 06:20 AVE
 from Barcelona made Madrid and Lisbon unreachable – 06:00 is still a realistic start after a
 hotel.
@@ -135,6 +157,12 @@ change or a night and is at most 12 h slower (`alternative_max_extra_hours`).
 
 **Why.** The first version picked alternatives that saved one change by waiting a whole day
 (e.g. all day in Stockholm for the night train). The 12 h limit removes those.
+
+**Update 2.11.2026 (FIX-10).** The option cards show "leave … · arrive …" above the door-to-door
+time. Door-to-door counts from each option's own departure, so an option that sleeps at home and
+leaves next morning looked faster than the fastest one (Berlin → Rome: 17 h 05 vs 25 h 03, though
+it arrives 5 h later). **Update 3.11.2026 (D-42):** an alternative that passes the same place twice
+(riding a night train back and forth to avoid a hotel) is skipped; the next best one is shown.
 
 ## D-08 A connection holds all its departures, not one train
 **Date:** 30.10.2026 · **Status:** Accepted
@@ -764,6 +792,126 @@ waits without reason – and the build time did not change.
 **Consequences.** All five maps, Friday and Sunday, both start times: no loops, 39 capitals each.
 Andorra without night trains stays unreachable (the sleeper is the only way). Helsinki → Tunis
 leaving Friday: 93 h instead of 197 h (Tuesday sailing).
+
+## D-43 One map per origin
+**Date:** 1–3.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-04: the Helsinki map is useful to people elsewhere only if it starts where they
+are. Seat61 readers start in London, the Tågsemester group in Stockholm.
+
+**Decision.**
+- `settings.origins` in places.yaml lists the maps: Helsinki (`index.html`), Stockholm, Copenhagen,
+  London and Berlin, each a page of its own from the same template, with its own title in the local
+  language (Tågsemester, Togferie, Train holiday, Zugurlaub) and its own start times (`start_time`,
+  `start_times`: e.g. Stockholm 06:00/16:00 for the ferries east and night trains south).
+- A "Maps from:" line at the top links the pages; the credit line names the author and the blog.
+- Each origin gets its own route table (`routes-<origin>.md`) and its own weekly check (D-40 for
+  drafts); `build.py only=Berlin` builds a single map.
+- The same network serves every map, so an origin needs lines in the outward direction too.
+
+**Why.** Separate pages keep each map simple and shareable in its own community; one page with an
+origin switch would be heavier and harder to link. All-to-all stays out of scope (D-37).
+
+**Consequences.** pairs.txt grew to ~420 lines. All five maps reach 39 capitals (3.11.2026).
+Paris is the next candidate.
+
+## D-44 Draw only the connections a map's journeys use
+**Date:** 2.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-12 (Matti): with five origins the network became cluttered (Italy, Germany), and
+every map drew every connection, including ones its own journeys never use.
+
+**Decision.** The build collects the connections used by any journey of that map – every travel
+day, with and without night trains, morning and evening, fastest and alternatives – and draws only
+those. An "All connections" checkbox shows the rest (for curating). The selected journey is
+highlighted as before.
+
+**Why.** The map is for reading journeys, not for inspecting the data; the full network is still
+one click away. Bonus: the page carries only the timetables it needs, so it is smaller.
+
+**Consequences.** Helsinki draws ~220 of ~330 connections. A connection no map uses is a hint that
+its pairs.txt line may not be needed.
+
+## D-45 City names, not station names
+**Date:** 2.11.2026 (Matti: "by design") · **Status:** Accepted
+
+**Context.** Several trains and ferries leave from a second station or a port: EC 59 to Wrocław and
+Przemyśl from Berlin-Lichtenberg, Crete ferries from Piraeus, Paris has six stations.
+
+**Decision.** Places on the map are towns and cities. A station or port in the same city belongs to
+the city: the station check (D-33) accepts a first or last stop within its distance of the city's
+point, and city transport at either end (S-Bahn, metro, tram) is trimmed off. Where the extra
+journey to a port matters, the place gets a longer change time instead of a new dot – Athens has
+`ferry_checkin: 75` (metro to Piraeus + 45 min), Paris a longer `min_transfer`. A port becomes a
+place of its own only when it is really another town (Tanger Med, 40 km from Tanger; Tarifa;
+Porto Torres; Cairnryan).
+
+**Why.** The map answers "can I get from city to city", not "which platform". Extra dots for
+Lichtenberg or Piraeus would clutter the map and confuse readers.
+
+**Consequences.** A journey may hide a short city transfer; change times absorb it.
+
+## D-46 Times by hand where Transitous has none, with a source
+**Date:** 2–3.11.2026 · **Status:** Accepted
+
+**Context.** Transitous lacks many ferries, buses and some trains (Kyiv, Sarajevo, San Marino,
+Andorra's bus, Wrocław – Prague, all the new island and North Africa ferries).
+
+**Decision.**
+- Use own times (`A -> B : name HH:MM-HH:MM [days]`, or `every N first-last duration`) from Seat61,
+  bahn.de or the operator, with the source and month as a note (`# Seat61, Nov 2026`). Seat61 is
+  trusted for routes Transitous lacks. Two departures on one route need different names.
+- Try `*` first where the operator's data may be in Transitous; switch to own times when the issue
+  says nothing was found.
+- New places whose name has namesakes get hand-set coordinates in places.yaml before the line is
+  added (L'Hospitalet, Porto Torres, Bastia, Palma, Chania, Tunis, Algiers); capitals listed under
+  `not_yet_covered` keep their coordinates when they become places (no geocoding – San Marino had
+  become a namesake near Bologna).
+- Places outside Europe (Tanger, Casablanca, Tunis, Algiers) are ordinary cities, shown with
+  "Include other cities"; every country used gets its time zone (UA, TN, DZ added).
+
+**Why.** Reaching every capital matters more than having every time from one source; the note
+says where a time came from and when to check it again.
+
+**Consequences.** DATA-12: a yearly check of hand-entered times. Usually only the outward direction
+is entered.
+
+## D-47 Supply-chain hygiene and a safety net before commits
+**Date:** 1–2.11.2026 · **Status:** Accepted
+
+**Context.** The workflow runs third-party GitHub actions with write access to the repository and
+Pages; and a missing comma in places.yaml once broke a commit.
+
+**Decision.**
+- Every action in the workflow is pinned to a full commit SHA (with the version as a comment) and
+  updated to the Node 24 versions (FIX-02); the workflow's `GITHUB_TOKEN` has only the permissions
+  it needs; untrusted text (issue bodies) is passed as files, never into shell commands.
+- A pre-commit hook (`.githooks/pre-commit`, enabled with `git config core.hooksPath .githooks`)
+  refuses a commit whose YAML does not load (reporting line and column) or whose pairs.txt has a
+  line that is not `A -> B : something`.
+
+**Why.** A tag can be moved to other code; a SHA cannot. Broken data should stop at the commit, not
+in the Monday run.
+
+**Consequences.** Updating an action means changing its SHA on purpose (Dependabot could propose
+it). The hook must be enabled once per clone.
+
+## D-48 A faster build and a smaller page
+**Date:** 2.11.2026 · **Status:** Accepted
+
+**Context.** The morning views made the page 9 MB and the build took 10 minutes on GitHub.
+
+**Decision.**
+- The page stores journeys compactly (a leg is `["l", leg, dep, arr]`, a stay or change
+  `["s"/"c", place, from, to, nights]`); the page rebuilds names and times from the timetable.
+- The morning view reuses the journeys found while sweeping for the latest departure that still
+  arrives first, and gets its alternatives from one Pareto search per view (FIX-09).
+- The maps are built in parallel (D-40).
+
+**Why.** Page weight matters for readers on phones; build time for the weekly run's budget.
+
+**Consequences.** Page ~2.5–3 MB per map (it grows with the network – watch the ~8 MB limit, D-37);
+one map builds in about a minute on GitHub.
 
 ---
 
