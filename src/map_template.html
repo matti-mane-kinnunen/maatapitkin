@@ -272,13 +272,12 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <p class="co2" id="co2" hidden></p>
         <div class="co2-how" id="co2-how" hidden>
           <p>A rough estimate, rounded on purpose. Each train, bus or ferry leg: distance between the two places
-          (+20&nbsp;% for the real route) × the average emissions per passenger-km for that kind of transport.
-          The flight: a direct flight between the same two cities (+8&nbsp;% for detours), including the
-          extra warming effect of emissions at high altitude.</p>
+          (+20&nbsp;% for the real route) × the average emissions per person-km for that kind of transport.
+          The flight: a direct flight between the same two cities, including the extra warming effect of
+          emissions at high altitude.</p>
           <p>Factors: <span id="co2-factors"></span>.
-          Electric trains in e.g. Sweden, France and Switzerland emit much less than this average, so the
-          saving is probably bigger than shown; a cabin on a night train or ferry somewhat more.
-          <a href="https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting" target="_blank" rel="noopener">Source</a></p>
+          Ferries weigh a lot – per kilometre more than flying – so on many journeys the ferry is most of the
+          total, and a short trip with a long ferry crossing can emit more than the flight. <a id="co2-src" href="#" target="_blank" rel="noopener">Source</a></p>
         </div>
         <div class="share"><button type="button" id="share">Copy link</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
@@ -923,9 +922,11 @@ function showCO2(r) {
       : `CO₂ about ${kg(r.co2)} kg – more than flying (${kg(r.co2_flight)} kg).${how}`;
   const c = NET.co2 || {}, f = c.factors || {}, g = x => `${Math.round(x * 1000)}&nbsp;g`;
   const yr = (String(c.source || "").match(/\b20\d\d\b/) || [""])[0];
-  document.getElementById("co2-factors").innerHTML = `the UK government's greenhouse gas conversion factors ${yr} ` +
-    `(train ${g(f.rail)}, bus ${g(f.coach)}, ferry ${g(f.ferry)}, Eurostar ${g(f.international_rail)}, ` +
-    `flight ${g(f.flight)} CO₂e per passenger-km)`;
+  const src = String(c.source || "").split(",")[0] || "the source";
+  document.getElementById("co2-factors").innerHTML = `${src} ${yr} (electric train ${g(f.rail)}` +
+    (f.rail_nordic ? `, in the Nordics ${g(f.rail_nordic)}` : "") +
+    `, bus ${g(f.coach)}, ferry ${g(f.ferry)}, flight ${g(f.flight)} CO₂e per person-km)`;
+  if (c.source_url) document.getElementById("co2-src").href = c.source_url;
   el.hidden = false;
   document.getElementById("co2-btn").addEventListener("click", e => {
     box.hidden = !box.hidden; e.currentTarget.setAttribute("aria-expanded", String(!box.hidden));

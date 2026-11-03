@@ -156,47 +156,43 @@ All of these settings are in `places.yaml` → `settings`.
 ## CO2 estimates
 
 Each journey on the map shows a rough CO₂ figure and compares it with flying, e.g.
-*"CO₂ about 110 kg – roughly 65 % less than flying (about 300 kg)"*. It is meant to reassure, not to
-account: the numbers are rounded (kg to 5 or 10, percentages to 5 %).
-On the map, *How?* opens a short version of this explanation under the CO₂ line.
+*"CO₂ about 100 kg – roughly 60 % less than flying (about 260 kg)"*. It is meant to inform, not to
+account: the numbers are rounded (kg to 5 or 10, percentages to 5 %). On the map, *How?* opens a short
+version of this explanation under the CO₂ line.
 
-**Source.** The UK government's greenhouse gas conversion factors (DESNZ, 2026, full set), in kg CO₂e
-per passenger-km. They are open, documented and published every year (not every factor is renewed every
-year: in 2026 rail and coach were, flights and ferries were not); the values and the rows they come
-from are in `places.yaml` → `settings` → `co2`.
+**Source** (D-51). [Klimatsmart semester](https://klimatsmartsemester.se/sa-har-vi-raknat), Chalmers
+(Jörgen Larsson), method report v5.1, factors for 2026 – one documented set for every mode, in g CO₂e per
+person-km. The values are in `places.yaml` → `settings` → `co2`.
 
-| Mode | kg CO₂e per passenger-km | DESNZ row |
+| Mode | g CO₂e per person-km | Their category |
 |---|---|---|
-| Train | 0.031 | Rail, national rail |
-| Eurostar | 0.011 | Rail, international rail |
-| Bus | 0.039 | Coach |
-| Ferry | 0.019 | Ferry, foot passenger |
-| Flight | 0.126 | Short-haul, economy, with the non-CO₂ effects at altitude (+70 %) |
+| Electric train | 19 | El Europa (European electricity mix) |
+| Electric train within FI, SE, NO | 4 | El Norden (Nordic electricity mix) |
+| Bus | 30 | Diesel coach (29–32) |
+| Ferry | 186 | Standard value; emissions shared between passengers and freight by revenue |
+| Flight | 117 | Scheduled, economy, standard fuel, incl. high-altitude effects (×1.5) and fuel production |
 
 **Method.**
 - Journey: for each train, bus or ferry leg, the factor × the straight-line distance between the two
-  places × 1.2 (tracks, roads and sea routes are longer than the straight line; the map stores no
-  track geometry).
-- Flight: a direct flight between the same two cities, straight-line distance + 8 % (indirect routes,
-  holding patterns), short-haul economy factor including the non-CO₂ effects – as the UK government's own
-  journey comparisons do. DESNZ counts all of Europe and North Africa as short-haul.
+  places × 1.2 (tracks, roads and sea routes are longer than the straight line). A train leg between two
+  places in Finland, Sweden or Norway uses the Nordic figure.
+- Flight: a direct flight between the same two cities, straight-line distance (their factor is per
+  great-circle km).
 - Places with no flights at all (Kyiv – Ukrainian airspace is closed) get `no_flights: true` and show the
   journey's figure without a comparison.
 
-**Rough spots, in both directions.**
-- One train factor for all of Europe. Electric trains in Sweden, France, Switzerland or Austria emit much
-  less; diesel lines (parts of the Baltics, Poland, the Balkans) more. The UK average is a middle value,
-  so for most journeys the saving is probably *understated*. [EcoPassenger](https://uic.org/ecopassenger)
-  (UIC/IFEU) accounts for each country's electricity mix and is good for checking a route by hand.
-- A cabin on a night train or a night ferry takes more space per passenger than a seat; the factors do
-  not separate that.
-- The ferry factor is an average for foot passengers; long overnight crossings (Marseille – Algiers,
-  21–23 h) on big cruise ferries probably emit more per passenger-km.
-- Getting to and from airports and stations is left out on both sides.
+**What it means.** Trains weigh little; **ferries weigh a lot** – per kilometre more than flying. From
+Helsinki, the overnight ferry is often most of a journey's total, and Helsinki → Stockholm by ferry shows
+*more* than flying. Long journeys still save 40–65 %. Ferry figures vary hugely between sources (the UK
+government's 19 g is an average for foot passengers on short crossings); we use Chalmers' higher figure on
+purpose, so that the map does not greenwash.
 
-To update the factors (once a year, DATA-12), download the new set (2026 came only as the full set) from
-[gov.uk](https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting),
-read the same rows and change the numbers in `places.yaml`.
+**Rough spots.** One European train figure for all electric lines (France and Switzerland are cleaner,
+Poland dirtier); diesel lines (96 g) are not told apart; a cabin on a night train takes more space than a
+seat; getting to and from airports and stations is left out on both sides.
+
+To update the factors, read the new table on the Klimatsmart semester page and change the numbers in
+`places.yaml` (yearly check, DATA-12).
 
 ## Next steps
 

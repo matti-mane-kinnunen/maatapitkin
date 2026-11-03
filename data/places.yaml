@@ -21,17 +21,18 @@ settings:
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   start_date: 2026-12-08   # travel date; default is next Monday (or use --date)
   site_url: "https://matti-mane-kinnunen.github.io/maatapitkin/"  # for link previews (Open Graph, IDEA-11)
-  co2:                       # rough CO2 per journey vs a direct flight (IDEA-07, D-41); remove to switch off
-    source: "UK DESNZ GHG conversion factors 2026, full set (gov.uk), kg CO2e total per passenger-km"
-    factors:
-      rail: 0.03092          # Business travel- land: Rail, National rail (renewed 2026 from ORR data)
-      international_rail: 0.01135  # Rail, International rail - used for Eurostar only
-      coach: 0.03948         # Coach
-      ferry: 0.01871         # Business travel- sea: Ferry, Foot passenger (not updated in 2026)
-      flight: 0.12576        # Business travel- air: Short-haul, Economy class, with RF (non-CO2 effects, +70 %; not updated in 2026);
-                             # DESNZ counts all of Europe and North Africa as short-haul
+  co2:                       # rough CO2 per journey vs a direct flight (IDEA-07, D-41, D-51); remove to switch off
+    source: "Klimatsmart semester (Chalmers), Jörgen Larsson, method report v5.1, factors for 2026"
+    source_url: "https://klimatsmartsemester.se/sa-har-vi-raknat"
+    factors:                 # kg CO2e per person-km (their table 1, g / 1000)
+      rail: 0.019            # electric train, European electricity mix
+      rail_nordic: 0.004     # electric train in Finland, Sweden and Norway (Nordic electricity mix)
+      coach: 0.030           # diesel coach (29-32 in their report)
+      ferry: 0.186           # ferry, standard value (emissions shared between passengers and freight by revenue)
+      flight: 0.117          # scheduled flight, economy, standard jet fuel, incl. high-altitude effects (x1.5) and fuel production
+    nordic_countries: [FI, SE, NO]
     route_factor: 1.2        # tracks, roads and sea routes are about 20 % longer than the straight line
-    flight_uplift: 1.08      # flights: straight line + 8 % (indirect routes, holding), as DESNZ does
+    flight_uplift: 1.0       # none: their flight factor is per straight-line (great-circle) km
 
 # Each place may list other names it is known by (aliases), e.g. Vienna: [Wien].
 # add_leg.py accepts them in pairs files and they never create a second city.

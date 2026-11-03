@@ -48,7 +48,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-38 | An issue only when the lookup needs a person | 1.11.2026 | Accepted |
 | D-39 | A hotel night lasts at least 8 hours | 1.11.2026 | Accepted |
 | D-40 | Draft maps, parallel build, automatic tidy | 2.11.2026 | Accepted |
-| D-41 | Rough CO₂ per journey, compared with flying | 3.11.2026 | Accepted |
+| D-41 | Rough CO₂ per journey, compared with flying | 3.11.2026 | Accepted (factors replaced by D-51) |
 | D-42 | Waiting for weekly services instead of looping | 3.11.2026 | Accepted |
 | D-43 | One map per origin | 1–3.11.2026 | Accepted |
 | D-44 | Draw only the connections a map's journeys use | 2.11.2026 | Accepted |
@@ -58,6 +58,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-48 | A faster build and a smaller page | 2.11.2026 | Accepted |
 | D-49 | One issue per week, not one per run | 3.11.2026 | Accepted |
 | D-50 | Place names in each map's language | 3.11.2026 | Accepted |
+| D-51 | CO₂ factors from Chalmers, ferries included | 3.11.2026 | Accepted |
 
 ---
 
@@ -963,6 +964,26 @@ Only differing names are listed – most places (Hamburg, Oslo) are the same eve
 
 **Consequences.** New places need a line only if their name differs. Exonyms that are politically
 sensitive in one language (Danzig, Breslau) are not used: the Polish names are shown.
+
+## D-51 CO₂ factors from Chalmers, ferries included
+**Date:** 3.11.2026 · **Status:** Accepted
+
+**Context.** Matti found the Chalmers figures behind Klimatsmart semester (Jörgen Larsson, method
+report v5.1, 2026): flight 117 g CO₂e per person-km incl. high-altitude effects, electric train 19 (4 in
+the Nordics), coach ~30 – and ferry 186. The UK figures used so far (D-41) had ferry at 19 g, an average
+for foot passengers on short crossings. Taking Chalmers' flight and train figures but keeping the low
+ferry figure would make every journey look better than either source supports.
+
+**Decision.** The whole Chalmers set: train 19, Nordic electric train 4 (both ends in FI, SE or NO), bus
+30, ferry 186, flight 117 with no extra detour allowance (their factor is per great-circle km). The
+"How?" text names the source and says plainly that ferries weigh more per km than flying.
+
+**Why.** One consistent, documented source; not greenwashing (Matti: ferry emissions are a hot topic
+among overland travellers, and there are many ways to count them – we take the honest high one).
+
+**Consequences.** From Helsinki: Stockholm by ferry shows more than flying (≈60 vs 45 kg); Berlin 40 %,
+Rome 60 %, Lisbon 65 % less than flying; Athens and Algiers only 15–20 % less (long ferries). D-41's
+method stands; its factors are replaced.
 
 ---
 

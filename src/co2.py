@@ -6,7 +6,8 @@ Deliberately simple - the map reassures, it does not account:
   * the flight: straight-line distance x flight_uplift (indirect routes, holding) x the short-haul
     economy factor *with* the non-CO2 effects at altitude (radiative forcing), as the UK
     government's journey comparisons do (all of Europe and North Africa is short-haul for DESNZ)
-Factors come from settings.co2 in places.yaml (source and year noted there)."""
+Factors come from settings.co2 in places.yaml (source and year noted there; D-51: Chalmers /
+Klimatsmart semester). Electric trains between two Nordic places use rail_nordic."""
 from __future__ import annotations
 
 import math
@@ -31,9 +32,14 @@ class CO2:
             return f["ferry"]
         if leg.mode == "bus":
             return f["coach"]
+        if "rail_nordic" in f:                      # Nordic electricity is much cleaner (D-51)
+            nordic = set(self.cfg.get("nordic_countries") or ["FI", "SE", "NO"])
+            a, b = self.places.get(leg.frm) or {}, self.places.get(leg.to) or {}
+            if a.get("country") in nordic and b.get("country") in nordic:
+                return f["rail_nordic"]
         svc = str(leg.service or "").upper().replace(" ", "")
         if svc.startswith(("EST", "EUROSTAR")) and "international_rail" in f:
-            return f["international_rail"]         # Eurostar: the source's own international-rail figure
+            return f["international_rail"]         # Eurostar, when the source has its own figure
         return f["rail"]
 
     def leg_kg(self, leg) -> float:
