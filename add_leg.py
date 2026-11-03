@@ -90,7 +90,17 @@ def q(s: str) -> str:
 # --- places -------------------------------------------------------------------
 def load_places() -> tuple[dict, dict]:
     d = yaml.safe_load(PLACES.read_text())
-    return d["places"], d.get("not_yet_covered") or {}
+    places, missing = d["places"], d.get("not_yet_covered") or {}
+    # local names (data/names.yaml, D-50) count as aliases: "Tukholma -> Turku" means Stockholm
+    names_file = PLACES.parent / "names.yaml"
+    if names_file.exists():
+        for key, v in (yaml.safe_load(names_file.read_text()) or {}).items():
+            for pool in (places, missing):
+                if key in pool and isinstance(v, dict):
+                    p = dict(pool[key] or {})
+                    p["aliases"] = list(p.get("aliases") or []) + [x for x in v.values() if x and x != key]
+                    pool[key] = p
+    return places, missing
 
 
 def find_place(name: str, places: dict) -> str | None:

@@ -19,6 +19,8 @@ import sys
 import time
 from pathlib import Path
 
+import yaml
+
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
@@ -161,6 +163,20 @@ def _build_job(i: int):
     net, warnings, args, ap, pages, jobs_list = _JOB
     k, origin, cfg = jobs_list[i]
     return origin, build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
+
+
+def local_names(lang: str, places: dict) -> dict:
+    """{key: name to show} for one map's language (data/names.yaml, D-50): the language's own
+    name, else `all`, else the key itself (left out). Routing, links and data keep the keys."""
+    f = ROOT / "data" / "names.yaml"
+    names = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
+    out = {}
+    for key, v in names.items():
+        if key in places and isinstance(v, dict):
+            shown = v.get(lang) or v.get("all")
+            if shown and shown != key:
+                out[key] = shown
+    return out
 
 
 def slugify(name: str) -> str:
@@ -484,7 +500,8 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "lang": cfg.get("lang", "en"),
+        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,

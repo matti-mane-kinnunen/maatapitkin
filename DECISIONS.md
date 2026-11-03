@@ -57,6 +57,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-47 | Supply-chain hygiene and a safety net before commits | 1–2.11.2026 | Accepted |
 | D-48 | A faster build and a smaller page | 2.11.2026 | Accepted |
 | D-49 | One issue per week, not one per run | 3.11.2026 | Accepted |
+| D-50 | Place names in each map's language | 3.11.2026 | Accepted |
 
 ---
 
@@ -938,6 +939,30 @@ lines; replacing the issue text would drop the full weekly run's findings.
 **Consequences.** At most one new issue a week per kind; further emails only when a run finds
 something new. Closing an issue once handled is safe: a closed issue is left alone, and if a
 later run that week finds something, it opens a fresh one.
+
+## D-50 Place names in each map's language
+**Date:** 3.11.2026 · **Status:** Accepted
+
+**Context.** Matti: the maps have local titles (Tågsemester, Togferie …) but every place name was
+English. Local names are a courtesy to readers; the rest of the page can stay English, since the
+readers are very likely to manage the interface in English.
+
+**Decision.**
+- `data/names.yaml` lists, per place, only the names that differ from the key:
+  `Copenhagen: {fi: Kööpenhamina, sv: Köpenhamn, da: København, de: Kopenhagen}`; `all` is the right
+  spelling for every map (`Krakow: {all: Kraków, fi: Krakova, de: Krakau}`).
+- Each origin has `lang` (Helsinki fi, Stockholm sv, Copenhagen da, Berlin de, London en). A map
+  shows the name in its language, else `all`, else the key.
+- Only the display changes: routing, pairs.txt, legs.yaml, places.yaml and the links in the address
+  bar (`#rome/sat`) keep the English keys, so a link means the same on every map. Search accepts
+  both; add_leg.py accepts local names in pairs.txt (`Tukholma -> Turku`).
+- Page text (buttons, guide, footer) stays English.
+
+**Why.** A separate file keeps places.yaml readable and lets a native speaker check one column.
+Only differing names are listed – most places (Hamburg, Oslo) are the same everywhere.
+
+**Consequences.** New places need a line only if their name differs. Exonyms that are politically
+sensitive in one language (Danzig, Breslau) are not used: the Polish names are shown.
 
 ---
 

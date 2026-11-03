@@ -78,7 +78,7 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
     page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h))
-               .replace("__ORIGIN__", html.escape(net["origin"]))
+               .replace("__ORIGIN__", html.escape((net.get("display") or {}).get(net["origin"], net["origin"])))
                .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin"))
                .replace("__DRAFT__", " · <b>draft</b>: some connections may still be missing" if net.get("draft") else ""))
     if fragment:
@@ -102,7 +102,7 @@ def head_tags(net: dict, page_name: str, site: Path) -> str:
     """<title>, description and the Open Graph tags Facebook, LinkedIn, WhatsApp etc. use for
     link previews (IDEA-11). The picture is static/preview-<origin>.png, made by hand when the
     network changes a lot; without it the preview simply has no picture."""
-    origin = net["origin"]
+    origin = (net.get("display") or {}).get(net["origin"], net["origin"])   # in the map's language (D-50)
     title = net.get("title") or "Maata pitkin"
     first = (net.get("dates") or [None])[0]
     v = (net.get("variants") or {}).get(first) or {}
@@ -120,7 +120,7 @@ def head_tags(net: dict, page_name: str, site: Path) -> str:
         url = base if page_name == "index.html" else base + page_name
         tags.append(f'<meta property="og:url" content="{e(url)}">')
         tags.append(f'<link rel="canonical" href="{e(url)}">')
-        pic = f"preview-{re.sub(r'[^a-z0-9]+', '-', origin.lower()).strip('-')}.png"
+        pic = f"preview-{re.sub(r'[^a-z0-9]+', '-', net['origin'].lower()).strip('-')}.png"
         if (site / pic).exists():
             tags += [f'<meta property="og:image" content="{e(base + pic)}">',
                      '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',

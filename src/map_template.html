@@ -386,6 +386,8 @@ if (VARS) {
                        no_night_trains: v0.no, start_date: curDate, version: v0.version });
 }
 const P = {...NET.places, ...NET.not_covered};
+// place names in this map's language (data/names.yaml, D-50); routing and links keep the English keys
+const LN = n => (NET.display && NET.display[n]) || n;
 // links to the maps from other origins (IDEA-04): "Also from: Stockholm · London"
 (function () {
   const nav = document.getElementById("origins"), pages = NET.pages || [];
@@ -393,8 +395,8 @@ const P = {...NET.places, ...NET.not_covered};
   nav.append("Maps from: ");
   pages.forEach((p, i) => {
     if (i) nav.append(" · ");
-    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = p.name + (p.draft ? " (draft)" : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
-    else { const a = document.createElement("a"); a.href = p.page; a.textContent = p.name + (p.draft ? " (draft)" : ""); nav.append(a); }
+    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = LN(p.name) + (p.draft ? " (draft)" : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
+    else { const a = document.createElement("a"); a.href = p.page; a.textContent = LN(p.name) + (p.draft ? " (draft)" : ""); nav.append(a); }
   });
 })();
 const SVGNS = "http://www.w3.org/2000/svg";
@@ -452,7 +454,7 @@ for (const [name, p] of Object.entries(P)) {
     ? el("rect", { x: p.x - 3.5, y: p.y - 3.5, width: 7, height: 7, class: `node ${kind}${rt ? " day d" + dayClass(rt) : ""}` }, nodesG)
     : el("circle", { cx: p.x, cy: p.y, r: kind === "missing" ? 4 : 2.6, class: `node ${kind}` }, nodesG);
   const t = el("text", { x: p.x + 7, y: p.y + 4, class: `lbl ${kind === "place" ? "small" : kind === "missing" ? "missing" : ""}` }, labelsG);
-  t.textContent = name; labelEls[name] = t;
+  t.textContent = LN(name); labelEls[name] = t;
   if (kind === "place") t.style.display = "none";
 }
 
@@ -532,18 +534,18 @@ const vehicle = s => s.mode === "ferry" ? (s.night ? "night ferry" : "ferry") : 
 function routeMarks(r) {
   const legs = r.steps.filter(s => s.kind === "leg"), marks = [];
   for (const st of r.steps)            // hotel nights exactly as the router counted them
-    if (st.kind === "stay") marks.push({ kind: "hotel", place: st.place, title: `Hotel night in ${st.place}: arrive ${st.from_t}, leave ${st.to_t}` });
+    if (st.kind === "stay") marks.push({ kind: "hotel", place: st.place, title: `Hotel night in ${LN(st.place)}: arrive ${st.from_t}, leave ${st.to_t}` });
   legs.forEach((s, i) => {
     for (let m = (Math.floor(s.dep / 1440) + 1) * 1440; m < s.arr; m += 1440) {   // midnight on board
       const d = m / 1440 + 1, t = (m - s.dep) / Math.max(1, s.arr - s.dep);
-      marks.push({ kind: "day", day: d, leg: s, t, title: `Day ${d} (${dayDate(d)}) begins on the ${vehicle(s)} ${s.from} → ${s.to}` });
+      marks.push({ kind: "day", day: d, leg: s, t, title: `Day ${d} (${dayDate(d)}) begins on the ${vehicle(s)} ${LN(s.from)} → ${LN(s.to)}` });
     }
     const next = legs[i + 1];
     if (!next) return;
     const place = next.from;
     for (let m = Math.ceil(s.arr / 1440) * 1440; m <= next.dep; m += 1440) {          // midnight at a station
       const d = m / 1440 + 1;
-      marks.push({ kind: "day", day: d, place, title: `Day ${d} (${dayDate(d)}) begins in ${place}` });
+      marks.push({ kind: "day", day: d, place, title: `Day ${d} (${dayDate(d)}) begins in ${LN(place)}` });
     }
   });
   return marks;
@@ -603,14 +605,14 @@ function hover(name) {
   if (r && !buttons[name]?.getAttribute("aria-pressed")?.includes("true"))
     for (const s of r.steps.filter(s => s.kind === "leg")) el("path", { d: curve(P[s.from], P[s.to]), class: "leg" }, previewG);
   tip.innerHTML = r
-    ? `<b>${name}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span> · day ${dayOf(r)}, ${r.arrive_txt}<br>` +
+    ? `<b>${LN(name)}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span> · day ${dayOf(r)}, ${r.arrive_txt}<br>` +
       `${r.changes} change${r.changes === 1 ? "" : "s"} · ${r.hotel_nights} hotel night${r.hotel_nights === 1 ? "" : "s"}` +
       `${r.alternatives?.length ? ` · ${r.alternatives.length} alternative${r.alternatives.length > 1 ? "s" : ""}` : ""}` +
       `<br><span class="hint">Click for the itinerary</span>`
-    : name === NET.origin ? `<b>${name}</b><span class="hint">Every journey starts here</span>`
-    : P[name].missing ? `<b>${name}</b><span class="hint">No connections yet</span>`
-    : reachableWithNight(name) ? `<b>${name}</b><span class="hint">Not reachable without night trains</span>`
-    : `<b>${name}</b><span class="hint">No journey from ${NET.origin} in the data</span>`;
+    : name === NET.origin ? `<b>${LN(name)}</b><span class="hint">Every journey starts here</span>`
+    : P[name].missing ? `<b>${LN(name)}</b><span class="hint">No connections yet</span>`
+    : reachableWithNight(name) ? `<b>${LN(name)}</b><span class="hint">Not reachable without night trains</span>`
+    : `<b>${LN(name)}</b><span class="hint">No journey from ${LN(NET.origin)} in the data</span>`;
   if (!isMain(name)) layoutCities(name);
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
   const x = (p.x - VB.x) * k, y = (p.y - VB.y) * k;
@@ -654,7 +656,7 @@ function pairHtml(pr) {
   }).sort((a, b) => a.first - b.first);
   const more = rows.length > 6 ? `<div class="hint">and ${rows.length - 6} more services</div>` : "";
   const checked = pr.legs.map(l => l.checked).filter(Boolean).sort().pop();
-  return `<b>${pr.from} → ${pr.to}</b><div class="svcs">${rows.slice(0, 6).map(r => r.html).join("")}</div>${more}` +
+  return `<b>${LN(pr.from)} → ${LN(pr.to)}</b><div class="svcs">${rows.slice(0, 6).map(r => r.html).join("")}</div>${more}` +
          (checked ? `<span class="hint">Timetable checked ${checked.split("-").reverse().map(Number).join(".")}</span>` : "");
 }
 let hotPairs = [];
@@ -713,7 +715,7 @@ for (const name of hitNames) {
   placed.push({ x: cx, y: cy, r: rad });
   if (r) {
     h.setAttribute("tabindex", "0"); h.setAttribute("role", "button");
-    h.setAttribute("aria-label", `${name}: ${dur(r.door_to_door_min)}, show itinerary`);
+    h.setAttribute("aria-label", `${LN(name)}: ${dur(r.door_to_door_min)}, show itinerary`);
     h.addEventListener("click", () => { unhover(); select(name, 0, true); });
     h.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(name, 0, true); } });
     if (isMain(name)) labelEls[name].addEventListener("click", () => { unhover(); select(name, 0, true); });
@@ -740,10 +742,10 @@ rows = ALL_ROUTES.map(r => {
   const li = document.createElement("li"), b = document.createElement("button");
   const isCap = r.is_capital !== false;
   b.type = "button"; b.setAttribute("aria-pressed", "false");
-  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="Arrives on day ${dayOf(r)}"></i>${r.capital}${isCap ? "" : '<span class="citytag">city</span>'}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
+  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="Arrives on day ${dayOf(r)}"></i>${LN(r.capital)}${isCap ? "" : '<span class="citytag">city</span>'}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
     <span class="when">${dur(r.door_to_door_min)}</span>
     <span class="bar"><i style="width:${(100 * r.door_to_door_min / maxMin).toFixed(1)}%"></i></span>
-    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Day ${dayOf(r)} · ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.join(", ")})</span>` : ""}</span>`;
+    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Day ${dayOf(r)} · ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.map(LN).join(", ")})</span>` : ""}</span>`;
   li.appendChild(b); buttons[r.capital] = b;
   const row = { r, li, b, isCap };
   b.addEventListener("click", () => select(r.capital, pickOption(r)));
@@ -754,7 +756,7 @@ buildRows();
 
 // --- Search and filters ---
 const fold = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-const namesOf = n => [n, ...((P[n] && P[n].aliases) || [])].map(fold);
+const namesOf = n => [n, LN(n), ...((P[n] && P[n].aliases) || [])].map(fold);   // search: English and local names
 const qEl = document.getElementById("q"), noHotelEl = document.getElementById("f-nohotel"), citiesEl = document.getElementById("f-cities");
 const dayGroup = document.getElementById("f-day"), countEl = document.getElementById("count");
 const F = { day: 0, noHotel: false, cities: false, allLegs: false };
@@ -787,8 +789,8 @@ function applyFilters() {
   const noRoute = q ? Object.keys(P).filter(n => n !== NET.origin && !routeOf(n) && namesOf(n).some(x => x.includes(q))) : [];
   for (const n of noRoute) {
     const li = document.createElement("li"); li.className = "noroute";
-    li.innerHTML = `<b>${n}</b>` + (P[n].missing ? "Capital without connections yet – add legs to pairs.txt"
-      : `No journey from ${NET.origin} in the data yet` + (NET.legs.some(l => l.from === n) ? " (trains leave from here, none arrive)" : ""));
+    li.innerHTML = `<b>${LN(n)}</b>` + (P[n].missing ? "Capital without connections yet – add legs to pairs.txt"
+      : `No journey from ${LN(NET.origin)} in the data yet` + (NET.legs.some(l => l.from === n) ? " (trains leave from here, none arrive)" : ""));
     list.appendChild(li);
   }
   if (!shown.length && !noRoute.length) {
@@ -835,7 +837,7 @@ function updateSummary() {
   const missing = [...V.yes.unreached, ...Object.keys(NET.not_covered)];
   document.getElementById("gaps").innerHTML =
     (noNight.length ? `<b>Not reachable without night trains:</b> ${noNight.join(", ")}.<br><br>` : "") +
-    `<b>${missing.length} capitals not covered yet:</b> ${missing.join(", ")}.`;
+    `<b>${missing.length} capitals not covered yet:</b> ${missing.map(LN).join(", ")}.`;
   document.getElementById("meta").innerHTML =
     `${NET.routes.length} capitals reached${F.nightTrains === false ? " without night trains" : ""} · ${NET.legs.length} legs<br>${NET.version}`;
 }
@@ -886,7 +888,7 @@ const startGroup = document.getElementById("f-start");
 if (VARS && STARTS.length > 1) {
   for (const t of STARTS) {
     const bt = document.createElement("button");
-    bt.type = "button"; bt.dataset.t = t; bt.textContent = partOfDay(t); bt.title = `Leave ${NET.origin} from ${t}`;
+    bt.type = "button"; bt.dataset.t = t; bt.textContent = partOfDay(t); bt.title = `Leave ${LN(NET.origin)} from ${t}`;
     bt.setAttribute("aria-label", `${partOfDay(t)}, from ${t}`);
     bt.setAttribute("aria-pressed", String(t === curStart));
     bt.addEventListener("click", () => setVariant(curDate, F.nightTrains !== false, t));
@@ -899,7 +901,7 @@ const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin
 function updateFoot() { document.getElementById("foot").textContent =
   `Timetables from Transitous, looked up weekly, and by hand from Seat61, Deutsche Bahn and the operators, applied to the travel date above. ` +
   `Changes take at least ${S.min_transfer} min (longer where you change station, e.g. Paris, London), ferry check-in ${S.ferry_checkin} min, Eurostar ${S.eurostar_checkin} min. ` +
-  `Clock times are local; durations are corrected for time zones. Journeys leave ${NET.origin} from ${curStart || S.start || "00:00"}${curStart && curStart !== DEF_START ? ` (on the latest departure that still arrives as early; where that doesn't arrive sooner, the ${DEF_START} journey is shown)` : ""}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
+  `Clock times are local; durations are corrected for time zones. Journeys leave ${LN(NET.origin)} from ${curStart || S.start || "00:00"}${curStart && curStart !== DEF_START ? ` (on the latest departure that still arrives as early; where that doesn't arrive sooner, the ${DEF_START} journey is shown)` : ""}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
   `between ${S.quiet || "00:00–05:00"} only night trains and night ferries run. ` +
   `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`; }
 updateFoot();
@@ -964,7 +966,7 @@ function select(cap, opt = 0, fromMap = false) {
   }
   curRoute = r;
   drawMarks(); layoutMain(); layoutCities(); placeHits();
-  document.getElementById("itin-title").textContent = `${NET.origin} → ${cap}`;
+  document.getElementById("itin-title").textContent = `${LN(NET.origin)} → ${LN(cap)}`;
   document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}` +
     (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "") +
     (curStart !== DEF_START ? (r0.same_as_default ? ` · leaving earlier doesn't help: the ${partOfDay(DEF_START)} journey` : ` · from ${curStart}`) : "");
@@ -984,19 +986,19 @@ function select(cap, opt = 0, fromMap = false) {
     const li = document.createElement("li");
     if (s.kind === "stay") {
       li.className = "stay";
-      li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>Overnight in ${s.place}</b><span class="chip hotel">Hotel</span><div class="svc">${dur(s.minutes)} between trains</div></div>`;
+      li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>Overnight in ${LN(s.place)}</b><span class="chip hotel">Hotel</span><div class="svc">${dur(s.minutes)} between trains</div></div>`;
       ol.appendChild(li); return;
     }
     if (s.kind === "change") {
       if (s.minutes < 90) return;
       li.className = "pause";
-      li.innerHTML = `<div class="t"></div><div class="wait">Wait ${dur(s.minutes)} in ${s.place}</div>`;
+      li.innerHTML = `<div class="t"></div><div class="wait">Wait ${dur(s.minutes)} in ${LN(s.place)}</div>`;
       ol.appendChild(li); return;
     }
     const chip = s.mode === "ferry" || s.mode === "local" ? `<span class="chip ${s.mode}">${s.mode === "local" ? "Metro" : s.night ? "Night ferry" : "Ferry"}</span>`
       : s.night ? `<span class="chip night">Night train</span>` : "";
     li.innerHTML = `<div class="t">${s.timed ? s.dep_txt : `<em>any time</em>`}<br>${s.arr_txt}${s.timed ? "" : " <em>est.</em>"}</div>
-      <div class="what"><b>${s.from} → ${s.to}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}</div>
+      <div class="what"><b>${LN(s.from)} → ${LN(s.to)}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}</div>
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
   });
