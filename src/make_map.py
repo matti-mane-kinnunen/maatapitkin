@@ -108,8 +108,8 @@ def head_tags(net: dict, page_name: str, site: Path) -> str:
     v = (net.get("variants") or {}).get(first) or {}
     routes = (v.get("yes") or {}).get("routes") or net.get("routes") or []
     n = len({r["capital"] for r in routes if r.get("is_capital", True)})
-    og_title = f"{title} – {origin} to {n} European capitals by train"
-    desc = (f"{origin} to {n} European capitals by train, ferry and bus: door to door, how long it really "
+    og_title = f"{title} – {origin} to {n} capitals in Europe and around the Mediterranean by train"
+    desc = (f"{origin} to {n} capitals in Europe and around the Mediterranean by train, ferry and bus: door to door, how long it really "
             f"takes, day by day, with every change and hotel night.")
     e = lambda x: html.escape(x, quote=True)
     tags = [f'<title>{e(og_title)}</title>', f'<meta name="description" content="{e(desc)}">',
@@ -124,7 +124,7 @@ def head_tags(net: dict, page_name: str, site: Path) -> str:
         if (site / pic).exists():
             tags += [f'<meta property="og:image" content="{e(base + pic)}">',
                      '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
-                     f'<meta property="og:image:alt" content="{e(f"Map of train journeys from {origin} to the European capitals")}">']
+                     f'<meta property="og:image:alt" content="{e(f"Map of train journeys from {origin} to capitals in Europe and around the Mediterranean")}">']
     return "\n".join(tags) + "\n"
 
 

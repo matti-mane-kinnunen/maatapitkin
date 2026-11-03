@@ -1,6 +1,6 @@
 # Maata pitkin
 
-Overland journeys to the European capitals by train, ferry and bus – an interactive map for each
+Overland journeys to the capitals in Europe and around the Mediterranean by train, ferry and bus – an interactive map for each
 starting city, updated every week.
 
 **Maps.** https://matti-mane-kinnunen.github.io/maatapitkin/ – one page per origin, listed under
@@ -91,7 +91,7 @@ column is too narrow for the map and the list side by side:
 ```html
 <p><a href="https://matti-mane-kinnunen.github.io/maatapitkin/" target="_blank" rel="noopener">
   <img src="https://matti-mane-kinnunen.github.io/maatapitkin/preview-helsinki.png"
-       alt="Map of train journeys from Helsinki to the European capitals" style="width:100%;height:auto"></a></p>
+       alt="Map of train journeys from Helsinki to capitals in Europe and around the Mediterranean" style="width:100%;height:auto"></a></p>
 <p><a href="https://matti-mane-kinnunen.github.io/maatapitkin/" target="_blank" rel="noopener">Open the map full screen</a></p>
 ```
 
