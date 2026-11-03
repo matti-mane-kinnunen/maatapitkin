@@ -129,6 +129,7 @@ Stockholm -> Östersund : *
 Östersund -> Storlien : *
 Storlien -> Trondheim : *
 Boden -> Narvik : *
+Boden -> Narvik : IC 98 06:07-12:37 fri,sat,sun   # daily per bahn.de (Nov 2026); Transitous has it Mon-Thu only
 Stockholm -> Boden : *
 Helsinki -> Oulu : *
 Helsinki -> Rovaniemi : *
