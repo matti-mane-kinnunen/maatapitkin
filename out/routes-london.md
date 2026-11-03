@@ -34,7 +34,7 @@ _leave London Tue 10.11.2026 from 06:00 · generated 3.11.2026. Change 20 min (m
 | Valletta | Tue 10.11. 06:01 | Wed 11.11. 23:15 | 40 h 14 min | 6 | 1 | 0 |  |
 | Lisbon | Tue 10.11. 06:01 | Wed 11.11. 22:20 | 40 h 19 min | 5 | 0 | 1 (Barcelona) |  |
 | Bucharest | Tue 10.11. 06:01 | Thu 12.11. 08:23 | 48 h 22 min | 4 | 1 | 1 (Munich) | fewest hotel nights: 48 h 07 min, 5 ch., 0 hotel |
-| Helsinki | Tue 10.11. 06:16 | Thu 12.11. 10:10 | 49 h 54 min | 6 | 1 | 1 (Copenhagen) |  |
+| Helsinki | Tue 10.11. 06:16 | Thu 12.11. 10:10 | 49 h 54 min | 6 | 1 | 1 (Copenhagen) | fewest hotel nights: 60 h 23 min, 8 ch., 0 hotel |
 | Tirana | Tue 10.11. 06:01 | Thu 12.11. 12:40 | 53 h 39 min | 4 | 1 | 1 (Milan) | fewest hotel nights: 53 h 39 min, 5 ch., 0 hotel |
 | Vilnius | Tue 10.11. 06:16 | Thu 12.11. 17:25 | 57 h 09 min | 5 | 1 | 1 (Warsaw) | fewest hotel nights: 57 h 09 min, 6 ch., 0 hotel |
 | Athens | Tue 10.11. 06:01 | Thu 12.11. 17:30 | 57 h 29 min | 4 | 1 | 1 (Milan) | fewest hotel nights: 57 h 29 min, 5 ch., 0 hotel |
@@ -42,7 +42,7 @@ _leave London Tue 10.11.2026 from 06:00 · generated 3.11.2026. Change 20 min (m
 | Sarajevo | Tue 10.11. 06:01 | Thu 12.11. 20:55 | 61 h 54 min | 4 | 0 | 2 (Munich, Zagreb) | fewest hotel nights: 61 h 39 min, 5 ch., 1 hotel |
 | Monaco | Tue 10.11. 06:01 | Fri 13.11. 06:47 | 71 h 46 min | 3 | 0 | 3 (Nice) | fewest hotel nights: 76 h 33 min, 7 ch., 2 hotel |
 | Chisinau | Tue 10.11. 06:01 | Fri 13.11. 08:10 | 72 h 09 min | 5 | 2 | 1 (Munich) | fewest hotel nights: 71 h 54 min, 6 ch., 0 hotel |
-| Tallinn | Tue 10.11. 06:16 | Fri 13.11. 09:30 | 73 h 14 min | 7 | 1 | 2 (Copenhagen, Helsinki) | fewest hotel nights: 81 h 59 min, 9 ch., 1 hotel |
+| Tallinn | Tue 10.11. 06:16 | Fri 13.11. 09:30 | 73 h 14 min | 7 | 1 | 2 (Copenhagen, Helsinki) | fewest hotel nights: 73 h 14 min, 9 ch., 1 hotel |
 | Riga | Tue 10.11. 06:16 | Fri 13.11. 11:34 | 75 h 18 min | 6 | 1 | 2 (Warsaw, Vilnius) | fewest hotel nights: 75 h 18 min, 7 ch., 1 hotel |
 | Ankara | Tue 10.11. 06:01 | Sat 14.11. 13:16 | 100 h 15 min | 8 | 2 | 2 (Munich, Sofia) | fewest hotel nights: 100 h 00 min, 9 ch., 1 hotel |
 | Algiers | Fri 13.11. 07:31 | Sat 14.11. 17:00 | 32 h 29 min | 2 | 1 | 0 |  |
@@ -130,7 +130,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Valletta | Tue 10.11. 17:31 | Thu 12.11. 23:15 | 52 h 44 min | arrives 24 h 00 min later |
 | Lisbon | Wed 11.11. 06:01 | Thu 12.11. 22:20 | 40 h 19 min | arrives 24 h 00 min later |
 | Bucharest | Tue 10.11. 17:04 | Thu 12.11. 13:38 | 42 h 34 min | arrives 5 h 15 min later |
-| Helsinki | Tue 10.11. 18:04 | Fri 13.11. 10:10 | 62 h 06 min | arrives 24 h 00 min later |
+| Helsinki | Tue 10.11. 18:04 | Fri 13.11. 08:35 | 60 h 31 min | arrives 22 h 25 min later |
 | Tirana | Tue 10.11. 17:31 | Fri 13.11. 12:40 | 66 h 09 min | arrives 24 h 00 min later |
 | Vilnius | Tue 10.11. 17:04 | Thu 12.11. 17:25 | 46 h 21 min | same arrival |
 | Athens | Tue 10.11. 17:31 | Fri 13.11. 17:30 | 69 h 59 min | arrives 24 h 00 min later |
@@ -232,10 +232,12 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Vitoria-Gasteiz | Wed 11.11. 17:57 | 34 h 56 min | 3 | 1 |
 | Messina | Wed 11.11. 18:30 | 35 h 29 min | 4 | 1 |
 | Tanger | Wed 11.11. 18:00 | 35 h 59 min | 6 | 1 |
+| Sundsvall | Wed 11.11. 19:53 | 36 h 37 min | 6 | 1 |
 | Abrantes | Wed 11.11. 20:52 | 38 h 51 min | 4 | 1 |
 | Östersund | Wed 11.11. 22:05 | 38 h 49 min | 6 | 1 |
 | Casablanca | Wed 11.11. 21:17 | 39 h 16 min | 7 | 1 |
 | Gdansk | Wed 11.11. 23:12 | 39 h 56 min | 5 | 0 |
+| Umeå | Wed 11.11. 23:34 | 40 h 18 min | 6 | 1 |
 | Boden | Thu 12.11. 05:42 | 46 h 26 min | 6 | 1 |
 | Bergen | Thu 12.11. 06:23 | 47 h 07 min | 7 | 1 |
 | Turku | Thu 12.11. 07:35 | 47 h 19 min | 6 | 1 |
@@ -258,9 +260,8 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Kaunas | Thu 12.11. 16:20 | 56 h 04 min | 5 | 1 |
 | Oulu | Thu 12.11. 17:48 | 57 h 32 min | 7 | 1 |
 | Kaisiadorys | Thu 12.11. 18:18 | 58 h 02 min | 6 | 1 |
-| Umeå | Thu 12.11. 19:15 | 59 h 59 min | 8 | 1 |
 | Rovaniemi | Thu 12.11. 20:23 | 60 h 07 min | 7 | 1 |
-| Sundsvall | Fri 13.11. 05:26 | 70 h 10 min | 9 | 1 |
+| Thessaloniki | Thu 12.11. 23:10 | 63 h 09 min | 5 | 1 |
 | Varna | Fri 13.11. 06:50 | 70 h 49 min | 7 | 1 |
 | Chania | Fri 13.11. 07:00 | 70 h 59 min | 5 | 1 |
 | Ventimiglia | Fri 13.11. 07:48 | 72 h 47 min | 3 | 3 |
@@ -683,6 +684,22 @@ _Fastest: 49 h 54 min, arrive Thu 12.11. 10:10, 6 changes, 1 hotel nights_
 - Wed 11.11. 10:07 → Wed 11.11. 14:36  **Malmö → Stockholm**  526
 - Wed 11.11. 16:00 → Thu 12.11. 10:10  **Stockholm → Helsinki**  Viking Line  (night)
 
+### Helsinki — fewest hotel nights
+_Fewest hotel nights: 60 h 23 min, arrive Thu 12.11. 20:39, 8 changes, 0 hotel nights_
+
+- Tue 10.11. 06:16 → Tue 10.11. 09:13  **London → Brussels**  EST GBSPX
+- Tue 10.11. 10:22 → Tue 10.11. 12:15  **Brussels → Köln**  ICE
+- Wait 13 h 54 min in Köln
+- Wed 11.11. 02:09 → Wed 11.11. 06:50  **Köln → Hamburg**  ICE  (night)
+- Wait 4 h 03 min in Hamburg
+- Wed 11.11. 10:53 → Wed 11.11. 15:38  **Hamburg → Copenhagen**  ECE
+- Wed 11.11. 15:59 → Wed 11.11. 16:40  **Copenhagen → Malmö**  Ø Göteborg
+- Wed 11.11. 17:07 → Wed 11.11. 21:35  **Malmö → Stockholm**  526
+- Wed 11.11. 21:55 → Thu 12.11. 07:11  **Stockholm → Umeå**  94  (night)
+- Wait 4 h 04 min in Umeå
+- Thu 12.11. 11:15 → Thu 12.11. 16:00  **Umeå → Vaasa**  WasaLine 11:15
+- Thu 12.11. 16:25 → Thu 12.11. 20:39  **Vaasa → Helsinki**  IC
+
 ### Tirana
 _Fastest: 53 h 39 min, arrive Thu 12.11. 12:40, 4 changes, 1 hotel nights_
 
@@ -879,21 +896,22 @@ _Fastest: 73 h 14 min, arrive Fri 13.11. 09:30, 7 changes, 2 hotel nights_
 - Fri 13.11. 07:30 → Fri 13.11. 09:30  **Helsinki → Tallinn**  Megastar
 
 ### Tallinn — fewest hotel nights
-_Fewest hotel nights: 81 h 59 min, arrive Fri 13.11. 18:15, 9 changes, 1 hotel nights_
+_Fewest hotel nights: 73 h 14 min, arrive Fri 13.11. 09:30, 9 changes, 1 hotel nights_
 
 - Tue 10.11. 06:16 → Tue 10.11. 09:13  **London → Brussels**  EST GBSPX
 - Tue 10.11. 10:22 → Tue 10.11. 12:15  **Brussels → Köln**  ICE
-- Tue 10.11. 12:44 → Tue 10.11. 18:17  **Köln → Berlin**  ICE
-- Wait 1 h 54 min in Berlin
-- Tue 10.11. 20:11 → Wed 11.11. 07:00  **Berlin → Vienna**  IC  (night)
-- Wait 16 h 19 min in Vienna
-- Wed 11.11. 23:19 → Thu 12.11. 08:08  **Vienna → Warsaw**  IC  (night)
-- Thu 12.11. 08:53 → Thu 12.11. 14:43  **Warsaw → Mockava**  IC Hańcza
-- Thu 12.11. 15:07 → Thu 12.11. 17:25  **Mockava → Vilnius**  32
-- 🛏 Overnight in Vilnius (Thu 12.11. 17:25 → Fri 13.11. 07:04)
-- Fri 13.11. 07:04 → Fri 13.11. 11:34  **Vilnius → Riga**  889/890
-- Fri 13.11. 11:53 → Fri 13.11. 14:13  **Riga → Valga**  RE37
-- Fri 13.11. 14:33 → Fri 13.11. 18:15  **Valga → Tallinn**  E35 Valga
+- Wait 13 h 54 min in Köln
+- Wed 11.11. 02:09 → Wed 11.11. 06:50  **Köln → Hamburg**  ICE  (night)
+- Wait 4 h 03 min in Hamburg
+- Wed 11.11. 10:53 → Wed 11.11. 15:38  **Hamburg → Copenhagen**  ECE
+- Wed 11.11. 15:59 → Wed 11.11. 16:40  **Copenhagen → Malmö**  Ø Göteborg
+- Wed 11.11. 17:07 → Wed 11.11. 21:35  **Malmö → Stockholm**  526
+- Wed 11.11. 21:55 → Thu 12.11. 07:11  **Stockholm → Umeå**  94  (night)
+- Wait 4 h 04 min in Umeå
+- Thu 12.11. 11:15 → Thu 12.11. 16:00  **Umeå → Vaasa**  WasaLine 11:15
+- Thu 12.11. 16:25 → Thu 12.11. 20:39  **Vaasa → Helsinki**  IC
+- 🛏 Overnight in Helsinki (Thu 12.11. 20:39 → Fri 13.11. 07:30)
+- Fri 13.11. 07:30 → Fri 13.11. 09:30  **Helsinki → Tallinn**  Megastar
 
 ### Riga
 _Fastest: 75 h 18 min, arrive Fri 13.11. 11:34, 6 changes, 2 hotel nights_

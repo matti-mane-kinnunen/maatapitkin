@@ -264,6 +264,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Faro | Sat 14.11. 11:27 | 91 h 52 min | 10 | 2 |
 | Ruse | Sat 14.11. 13:40 | 92 h 05 min | 7 | 0 |
 | Marrakech | Sat 14.11. 12:37 | 93 h 02 min | 14 | 2 |
+| Thessaloniki | Sat 14.11. 23:10 | 101 h 35 min | 8 | 1 |
 | Varna | Sun 15.11. 06:50 | 109 h 15 min | 9 | 0 |
 | Chania | Sun 15.11. 07:00 | 109 h 25 min | 8 | 1 |
 | L'Hospitalet | Sun 15.11. 09:42 | 113 h 07 min | 5 | 2 |

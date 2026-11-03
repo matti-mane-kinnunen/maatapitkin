@@ -7,7 +7,7 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5956,
+ "departures": 6018,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
@@ -28,10 +28,10 @@
   }
  },
  "places_reached": {
-  "2026-11-10": 163,
-  "2026-11-13": 163,
-  "2026-11-14": 163,
-  "2026-11-15": 163
+  "2026-11-10": 164,
+  "2026-11-13": 164,
+  "2026-11-14": 164,
+  "2026-11-15": 164
  },
  "reached": {
   "capitals": [
@@ -258,6 +258,7 @@
    "Tanger Med",
    "Taormina",
    "Tarifa",
+   "Thessaloniki",
    "Tirana",
    "Torino",
    "Toulouse",
@@ -296,7 +297,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5956,
+   "departures": 6018,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -317,10 +318,10 @@
     }
    },
    "places_reached": {
-    "2026-11-10": 163,
-    "2026-11-13": 163,
-    "2026-11-14": 163,
-    "2026-11-15": 163
+    "2026-11-10": 164,
+    "2026-11-13": 164,
+    "2026-11-14": 164,
+    "2026-11-15": 164
    },
    "reached": {
     "capitals": [
@@ -547,6 +548,7 @@
      "Tanger Med",
      "Taormina",
      "Tarifa",
+     "Thessaloniki",
      "Tirana",
      "Torino",
      "Toulouse",
@@ -585,7 +587,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5956,
+   "departures": 6018,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -606,10 +608,10 @@
     }
    },
    "places_reached": {
-    "2026-11-10": 163,
-    "2026-11-13": 163,
-    "2026-11-14": 163,
-    "2026-11-15": 163
+    "2026-11-10": 164,
+    "2026-11-13": 164,
+    "2026-11-14": 164,
+    "2026-11-15": 164
    },
    "reached": {
     "capitals": [
@@ -836,6 +838,7 @@
      "Tanger Med",
      "Taormina",
      "Tarifa",
+     "Thessaloniki",
      "Tirana",
      "Torino",
      "Toulouse",
@@ -874,7 +877,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5956,
+   "departures": 6018,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -895,10 +898,10 @@
     }
    },
    "places_reached": {
-    "2026-11-10": 163,
-    "2026-11-13": 163,
-    "2026-11-14": 163,
-    "2026-11-15": 163
+    "2026-11-10": 164,
+    "2026-11-13": 164,
+    "2026-11-14": 164,
+    "2026-11-15": 164
    },
    "reached": {
     "capitals": [
@@ -1125,6 +1128,7 @@
      "Tanger Med",
      "Taormina",
      "Tarifa",
+     "Thessaloniki",
      "Tirana",
      "Torino",
      "Toulouse",
@@ -1163,7 +1167,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5956,
+   "departures": 6018,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -1184,10 +1188,10 @@
     }
    },
    "places_reached": {
-    "2026-11-10": 163,
-    "2026-11-13": 163,
-    "2026-11-14": 163,
-    "2026-11-15": 163
+    "2026-11-10": 164,
+    "2026-11-13": 164,
+    "2026-11-14": 164,
+    "2026-11-15": 164
    },
    "reached": {
     "capitals": [
@@ -1414,6 +1418,7 @@
      "Tanger Med",
      "Taormina",
      "Tarifa",
+     "Thessaloniki",
      "Tirana",
      "Torino",
      "Toulouse",
