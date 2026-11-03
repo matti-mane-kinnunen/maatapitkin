@@ -37,6 +37,7 @@ src/journeys.py       loading, validation and the journey router
 src/make_map.py       the map pages (out/site/)
 src/co2.py            rough CO2 per journey vs flying
 src/transitous.py     talking to the Transitous API (used by add_leg.py and the checker)
+.github/weekly_issue.py  one issue per week for the workflow's reports (D-49)
 .githooks/pre-commit  refuses broken YAML and malformed pairs.txt lines (git config core.hooksPath .githooks)
 ```
 
@@ -114,6 +115,8 @@ been shared; to refresh it, paste the link into the
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
 - If the lookup finds something that needs you (a line lost its trains, an impossibly fast leg,
   a new place), an issue lists just that; GitHub emails it. No email means nothing to do.
+  There is one issue per week: later runs that week add a comment only when they find something
+  new, and last week's issue is closed.
 - `git pull` before editing locally – the workflow commits the new timetable data.
 - A full run stops starting new lines after 4 hours; the lines it didn't reach keep last
   week's data and are looked up first next time.

@@ -100,6 +100,7 @@ jobs:
 
       # Only what needs a person (lines that lost their trains, impossibly fast legs, new places,
       # guessed names) - opened as an issue, so GitHub emails it. A quiet week sends nothing (D-38).
+      # One issue per week: later runs add to it, older weeks' issues are closed (D-49).
       - name: Report lookup results that need attention
         if: always() && hashFiles('lookup.log') != ''
         env:
@@ -115,7 +116,7 @@ jobs:
               echo "Full log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             } > issue.md
             { echo "## Needs attention"; echo; cat attention.md; } >> "$GITHUB_STEP_SUMMARY"
-            gh issue create --title "Check the timetable lookup (week of ${{ steps.dates.outputs.tue }})" --body-file issue.md
+            python3 .github/weekly_issue.py report "Check the timetable lookup" "${{ steps.dates.outputs.tue }}" issue.md
           else
             echo "Nothing needs attention." >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -125,7 +126,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue create --title "Map update held back (week of ${{ steps.dates.outputs.tue }})" --body-file check.md
+          python3 .github/weekly_issue.py report "Map update held back" "${{ steps.dates.outputs.tue }}" check.md
+
+      - name: Close held-back issues once a map is published
+        if: steps.check.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .github/weekly_issue.py close "Map update held back" "A later run published the map: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
   publish:
     needs: update

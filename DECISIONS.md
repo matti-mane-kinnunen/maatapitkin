@@ -56,6 +56,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-46 | Times by hand where Transitous has none, with a source | 2–3.11.2026 | Accepted |
 | D-47 | Supply-chain hygiene and a safety net before commits | 1–2.11.2026 | Accepted |
 | D-48 | A faster build and a smaller page | 2.11.2026 | Accepted |
+| D-49 | One issue per week, not one per run | 3.11.2026 | Accepted |
 
 ---
 
@@ -912,6 +913,28 @@ it). The hook must be enabled once per clone.
 
 **Consequences.** Page ~2.5–3 MB per map (it grows with the network – watch the ~8 MB limit, D-37);
 one map builds in about a minute on GitHub.
+
+---
+
+## D-49 One issue per week, not one per run
+**Date:** 3.11.2026 · **Status:** Accepted
+
+**Context.** Every run opened a new issue (D-38), and a run also starts on each push to
+pairs.txt and by hand. On 2.11. that made 17 issues "Check the timetable lookup (week of
+2026-11-10)" and 17 emails – noise that hides the one that matters.
+
+**Decision.** `.github/weekly_issue.py` keeps one open issue per kind and week. A later run's
+report is added to it as a comment, or nothing is added when it says the same as the last one.
+Open issues of the same kind for other weeks, and duplicates, are closed with "Superseded by
+#N". A "Map update held back" issue works the same way and is closed when a later run
+publishes the map.
+
+**Why comments, not replacing the text.** A quick run after a push reports only its new
+lines; replacing the issue text would drop the full weekly run's findings.
+
+**Consequences.** At most one new issue a week per kind; further emails only when a run finds
+something new. Closing an issue once handled is safe: a closed issue is left alone, and if a
+later run that week finds something, it opens a fresh one.
 
 ---
 
