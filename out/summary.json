@@ -7,34 +7,35 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5871,
+ "departures": 5886,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
-   "with_night_trains": 41,
-   "without": 35
+   "with_night_trains": 44,
+   "without": 38
   },
   "2026-11-13": {
-   "with_night_trains": 41,
-   "without": 35
+   "with_night_trains": 44,
+   "without": 38
   },
   "2026-11-14": {
-   "with_night_trains": 41,
-   "without": 35
+   "with_night_trains": 44,
+   "without": 38
   },
   "2026-11-15": {
-   "with_night_trains": 41,
-   "without": 35
+   "with_night_trains": 44,
+   "without": 38
   }
  },
  "places_reached": {
-  "2026-11-10": 158,
-  "2026-11-13": 158,
-  "2026-11-14": 158,
-  "2026-11-15": 158
+  "2026-11-10": 159,
+  "2026-11-13": 159,
+  "2026-11-14": 159,
+  "2026-11-15": 159
  },
  "reached": {
   "capitals": [
+   "Algiers",
    "Amsterdam",
    "Andorra la Vella",
    "Ankara",
@@ -62,6 +63,7 @@
    "Oslo",
    "Paris",
    "Prague",
+   "Rabat",
    "Riga",
    "Rome",
    "San Marino",
@@ -70,6 +72,7 @@
    "Stockholm",
    "Tallinn",
    "Tirana",
+   "Tunis",
    "Valletta",
    "Vatican",
    "Vienna",
@@ -78,6 +81,7 @@
    "Zagreb"
   ],
   "capitals_without_night_trains": [
+   "Algiers",
    "Amsterdam",
    "Athens",
    "Belfast",
@@ -101,6 +105,7 @@
    "Oslo",
    "Paris",
    "Prague",
+   "Rabat",
    "Riga",
    "Rome",
    "San Marino",
@@ -108,6 +113,7 @@
    "Stockholm",
    "Tallinn",
    "Tirana",
+   "Tunis",
    "Vatican",
    "Vienna",
    "Vilnius",
@@ -221,6 +227,7 @@
    "Pozzallo",
    "Prague",
    "Przemy\u015bl",
+   "Rabat",
    "Riga",
    "Rimini",
    "Rome",
@@ -285,34 +292,35 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5871,
+   "departures": 5886,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-13": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-14": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-15": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     }
    },
    "places_reached": {
-    "2026-11-10": 158,
-    "2026-11-13": 158,
-    "2026-11-14": 158,
-    "2026-11-15": 158
+    "2026-11-10": 159,
+    "2026-11-13": 159,
+    "2026-11-14": 159,
+    "2026-11-15": 159
    },
    "reached": {
     "capitals": [
+     "Algiers",
      "Amsterdam",
      "Andorra la Vella",
      "Ankara",
@@ -341,6 +349,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -348,6 +357,7 @@
      "Sofia",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Valletta",
      "Vatican",
      "Vienna",
@@ -356,6 +366,7 @@
      "Zagreb"
     ],
     "capitals_without_night_trains": [
+     "Algiers",
      "Amsterdam",
      "Athens",
      "Belfast",
@@ -380,12 +391,14 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Vatican",
      "Vienna",
      "Vilnius",
@@ -500,6 +513,7 @@
      "Pozzallo",
      "Prague",
      "Przemy\u015bl",
+     "Rabat",
      "Riga",
      "Rimini",
      "Rome",
@@ -563,34 +577,35 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5871,
+   "departures": 5886,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-13": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-14": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-15": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     }
    },
    "places_reached": {
-    "2026-11-10": 158,
-    "2026-11-13": 158,
-    "2026-11-14": 158,
-    "2026-11-15": 158
+    "2026-11-10": 159,
+    "2026-11-13": 159,
+    "2026-11-14": 159,
+    "2026-11-15": 159
    },
    "reached": {
     "capitals": [
+     "Algiers",
      "Amsterdam",
      "Andorra la Vella",
      "Ankara",
@@ -618,6 +633,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -626,6 +642,7 @@
      "Stockholm",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Valletta",
      "Vatican",
      "Vienna",
@@ -634,6 +651,7 @@
      "Zagreb"
     ],
     "capitals_without_night_trains": [
+     "Algiers",
      "Amsterdam",
      "Athens",
      "Belfast",
@@ -657,6 +675,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -664,6 +683,7 @@
      "Stockholm",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Vatican",
      "Vienna",
      "Vilnius",
@@ -777,6 +797,7 @@
      "Pozzallo",
      "Prague",
      "Przemy\u015bl",
+     "Rabat",
      "Riga",
      "Rimini",
      "Rome",
@@ -841,34 +862,35 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5871,
+   "departures": 5886,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-13": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-14": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-15": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     }
    },
    "places_reached": {
-    "2026-11-10": 158,
-    "2026-11-13": 158,
-    "2026-11-14": 158,
-    "2026-11-15": 158
+    "2026-11-10": 159,
+    "2026-11-13": 159,
+    "2026-11-14": 159,
+    "2026-11-15": 159
    },
    "reached": {
     "capitals": [
+     "Algiers",
      "Amsterdam",
      "Andorra la Vella",
      "Ankara",
@@ -896,6 +918,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -904,6 +927,7 @@
      "Stockholm",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Valletta",
      "Vatican",
      "Vienna",
@@ -912,6 +936,7 @@
      "Zagreb"
     ],
     "capitals_without_night_trains": [
+     "Algiers",
      "Amsterdam",
      "Athens",
      "Belfast",
@@ -935,6 +960,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -942,6 +968,7 @@
      "Stockholm",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Vatican",
      "Vienna",
      "Vilnius",
@@ -1055,6 +1082,7 @@
      "Pozzallo",
      "Prague",
      "Przemy\u015bl",
+     "Rabat",
      "Riga",
      "Rimini",
      "Rome",
@@ -1119,34 +1147,35 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5871,
+   "departures": 5886,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-13": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-14": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     },
     "2026-11-15": {
-     "with_night_trains": 41,
-     "without": 35
+     "with_night_trains": 44,
+     "without": 38
     }
    },
    "places_reached": {
-    "2026-11-10": 158,
-    "2026-11-13": 158,
-    "2026-11-14": 158,
-    "2026-11-15": 158
+    "2026-11-10": 159,
+    "2026-11-13": 159,
+    "2026-11-14": 159,
+    "2026-11-15": 159
    },
    "reached": {
     "capitals": [
+     "Algiers",
      "Amsterdam",
      "Andorra la Vella",
      "Ankara",
@@ -1174,6 +1203,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -1182,6 +1212,7 @@
      "Stockholm",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Valletta",
      "Vatican",
      "Vienna",
@@ -1190,6 +1221,7 @@
      "Zagreb"
     ],
     "capitals_without_night_trains": [
+     "Algiers",
      "Amsterdam",
      "Athens",
      "Belfast",
@@ -1213,6 +1245,7 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Rabat",
      "Riga",
      "Rome",
      "San Marino",
@@ -1220,6 +1253,7 @@
      "Stockholm",
      "Tallinn",
      "Tirana",
+     "Tunis",
      "Vatican",
      "Vienna",
      "Vilnius",
@@ -1333,6 +1367,7 @@
      "Pozzallo",
      "Prague",
      "Przemy\u015bl",
+     "Rabat",
      "Riga",
      "Rimini",
      "Rome",

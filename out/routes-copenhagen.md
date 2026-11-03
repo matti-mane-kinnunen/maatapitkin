@@ -39,11 +39,14 @@ _leave Copenhagen Tue 10.11.2026 from 06:00 · generated 3.11.2026. Change 20 mi
 | Belfast | Tue 10.11. 06:22 | Thu 12.11. 15:58 | 58 h 36 min | 6 | 1 | 1 (Holyhead) | fewest hotel nights: 64 h 45 min, 8 ch., 0 hotel |
 | Sofia | Tue 10.11. 06:22 | Thu 12.11. 20:41 | 61 h 19 min | 6 | 2 | 0 |  |
 | Sarajevo | Tue 10.11. 06:22 | Thu 12.11. 20:55 | 62 h 33 min | 4 | 1 | 1 (Zagreb) |  |
+| Rabat | Tue 10.11. 06:22 | Thu 12.11. 20:22 | 63 h 00 min | 8 | 0 | 2 (Paris, Madrid) | fewest hotel nights: 63 h 00 min, 9 ch., 1 hotel |
 | Valletta | Tue 10.11. 06:22 | Thu 12.11. 23:15 | 64 h 53 min | 6 | 2 | 0 |  |
 | Lisbon | Tue 10.11. 06:22 | Thu 12.11. 22:20 | 64 h 58 min | 7 | 1 | 1 (Barcelona) |  |
 | Monaco | Tue 10.11. 06:22 | Fri 13.11. 06:47 | 72 h 25 min | 5 | 1 | 2 (Nice) |  |
 | Chisinau | Tue 10.11. 06:22 | Fri 13.11. 08:10 | 72 h 48 min | 5 | 3 | 0 |  |
 | Ankara | Tue 10.11. 06:22 | Sat 14.11. 13:16 | 100 h 54 min | 8 | 3 | 1 (Sofia) |  |
+| Algiers | Tue 10.11. 06:22 | Sat 14.11. 17:00 | 106 h 38 min | 4 | 2 | 2 (Marseille) |  |
+| Tunis | Tue 10.11. 06:22 | Sat 14.11. 22:30 | 112 h 08 min | 5 | 2 | 2 (Palermo) |  |
 | Andorra la Vella | Tue 10.11. 06:22 | Sun 15.11. 11:30 | 125 h 08 min | 4 | 2 | 3 (Paris) | fewest hotel nights: 125 h 08 min, 9 ch., 1 hotel |
 
 ## Without night trains
@@ -85,8 +88,11 @@ _Night trains and night buses left out; night ferries still used._
 | Belfast | Thu 12.11. 15:58 | 58 h 36 min | 6 | 2 (Paris, Holyhead) | same |
 | Kyiv | Thu 12.11. 20:10 | 60 h 48 min | 3 | 2 (Berlin, Przemyśl) | +24 h 00 min |
 | Sarajevo | Thu 12.11. 20:55 | 62 h 33 min | 4 | 2 (Vienna, Zagreb) | same |
+| Rabat | Thu 12.11. 20:22 | 63 h 00 min | 8 | 2 (Paris, Madrid) | same |
 | Lisbon | Thu 12.11. 22:20 | 64 h 58 min | 7 | 2 (Paris, Madrid) | same |
 | Monaco | Fri 13.11. 06:47 | 72 h 25 min | 5 | 3 (Paris, Nice) | same |
+| Algiers | Sat 14.11. 17:00 | 106 h 38 min | 4 | 3 (Paris, Marseille) | same |
+| Tunis | Sat 14.11. 22:30 | 112 h 08 min | 5 | 4 (Munich, Rome, Palermo) | same |
 
 Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara, Andorra la Vella
 
@@ -129,11 +135,14 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Belfast | Wed 11.11. 06:22 | Fri 13.11. 15:58 | 58 h 36 min | arrives 24 h 00 min later |
 | Sofia | Wed 11.11. 06:22 | Fri 13.11. 20:41 | 61 h 19 min | arrives 24 h 00 min later |
 | Sarajevo | Wed 11.11. 06:22 | Fri 13.11. 20:55 | 62 h 33 min | arrives 24 h 00 min later |
+| Rabat | Wed 11.11. 06:22 | Fri 13.11. 20:22 | 63 h 00 min | arrives 24 h 00 min later |
 | Valletta | Wed 11.11. 06:22 | Fri 13.11. 23:15 | 64 h 53 min | arrives 24 h 00 min later |
 | Lisbon | Wed 11.11. 06:22 | Fri 13.11. 22:20 | 64 h 58 min | arrives 24 h 00 min later |
 | Monaco | Wed 11.11. 06:22 | Fri 13.11. 06:47 | 48 h 25 min | same arrival |
 | Chisinau | Wed 11.11. 06:22 | Sat 14.11. 08:10 | 72 h 48 min | arrives 24 h 00 min later |
 | Ankara | Wed 11.11. 06:22 | Sun 15.11. 13:16 | 100 h 54 min | arrives 24 h 00 min later |
+| Algiers | Wed 11.11. 06:22 | Sat 14.11. 17:00 | 82 h 38 min | same arrival |
+| Tunis | Wed 11.11. 06:22 | Sat 14.11. 22:30 | 88 h 08 min | same arrival |
 | Andorra la Vella | Wed 11.11. 06:22 | Sun 15.11. 11:30 | 101 h 08 min | same arrival |
 
 ## Other cities
@@ -254,8 +263,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Marrakech | Fri 13.11. 12:37 | 79 h 15 min | 9 | 3 |
 | Istanbul | Sat 14.11. 06:34 | 94 h 12 min | 7 | 1 |
 | Split | Sat 14.11. 07:00 | 96 h 38 min | 4 | 2 |
-| Algiers | Sat 14.11. 17:00 | 106 h 38 min | 4 | 2 |
-| Tunis | Sat 14.11. 22:30 | 112 h 08 min | 5 | 2 |
 | L'Hospitalet | Sun 15.11. 09:42 | 123 h 20 min | 3 | 3 |
 
 ## Itineraries
@@ -822,6 +829,41 @@ _Fastest: 62 h 33 min, arrive Thu 12.11. 20:55, 4 changes, 1 hotel nights_
 - 🛏 Overnight in Zagreb (Wed 11.11. 22:20 → Thu 12.11. 12:30)
 - Thu 12.11. 12:30 → Thu 12.11. 20:55  **Zagreb → Sarajevo**  Coach 12:30
 
+### Rabat
+_Fastest: 63 h 00 min, arrive Thu 12.11. 20:22, 8 changes, 2 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 1 h 41 min in Hamburg
+- Tue 10.11. 12:29 → Tue 10.11. 16:14  **Hamburg → Frankfurt**  ICE
+- Tue 10.11. 16:55 → Tue 10.11. 20:42  **Frankfurt → Paris**  ICE
+- 🛏 Overnight in Paris (Tue 10.11. 20:42 → Wed 11.11. 07:42)
+- Wed 11.11. 07:42 → Wed 11.11. 14:32  **Paris → Barcelona**  TGV INOUI
+- Wed 11.11. 15:00 → Wed 11.11. 18:17  **Barcelona → Madrid**  AVE
+- 🛏 Overnight in Madrid (Wed 11.11. 18:17 → Thu 12.11. 08:30)
+- Thu 12.11. 08:30 → Thu 12.11. 13:59  **Madrid → Algeciras**  Alvia
+- Wait 1 h 46 min in Algeciras
+- Thu 12.11. 15:45 → Thu 12.11. 16:45  **Algeciras → Tarifa**  FRS shuttle
+- Thu 12.11. 17:00 → Thu 12.11. 18:00  **Tarifa → Tanger**  FRS
+- Thu 12.11. 19:00 → Thu 12.11. 20:22  **Tanger → Rabat**  Al Boraq
+
+### Rabat — fewest hotel nights
+_Fewest hotel nights: 63 h 00 min, arrive Thu 12.11. 20:22, 9 changes, 1 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 11 h 23 min in Hamburg
+- Tue 10.11. 22:11 → Wed 11.11. 06:39  **Hamburg → Offenburg**  ICE  (night)
+- Wed 11.11. 07:05 → Wed 11.11. 07:34  **Offenburg → Strasbourg**  RS4
+- Wait 1 h 30 min in Strasbourg
+- Wed 11.11. 09:04 → Wed 11.11. 12:59  **Strasbourg → Lyon**  TGV INOUI
+- Wait 1 h 36 min in Lyon
+- Wed 11.11. 14:35 → Wed 11.11. 19:23  **Lyon → Barcelona**  AVE INT
+- Wed 11.11. 20:00 → Wed 11.11. 23:44  **Barcelona → Madrid**  AVE
+- 🛏 Overnight in Madrid (Wed 11.11. 23:44 → Thu 12.11. 08:30)
+- Thu 12.11. 08:30 → Thu 12.11. 13:59  **Madrid → Algeciras**  Alvia
+- Thu 12.11. 15:00 → Thu 12.11. 16:30  **Algeciras → Tanger Med**  AML
+- Thu 12.11. 17:00 → Thu 12.11. 18:00  **Tanger Med → Tanger**  Port shuttle
+- Thu 12.11. 19:00 → Thu 12.11. 20:22  **Tanger → Rabat**  Al Boraq
+
 ### Valletta
 _Fastest: 64 h 53 min, arrive Thu 12.11. 23:15, 6 changes, 0 hotel nights_
 
@@ -902,6 +944,32 @@ _Fastest: 100 h 54 min, arrive Sat 14.11. 13:16, 8 changes, 1 hotel nights_
 - Fri 13.11. 18:40 → Sat 14.11. 06:34  **Sofia → Istanbul**  493 / 12504  (night)
 - Wait 2 h 06 min in Istanbul
 - Sat 14.11. 08:40 → Sat 14.11. 13:16  **Istanbul → Ankara**  IC81006
+
+### Algiers
+_Fastest: 106 h 38 min, arrive Sat 14.11. 17:00, 4 changes, 2 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 11 h 23 min in Hamburg
+- Tue 10.11. 22:11 → Wed 11.11. 06:39  **Hamburg → Offenburg**  ICE  (night)
+- Wed 11.11. 07:05 → Wed 11.11. 07:34  **Offenburg → Strasbourg**  RS4
+- Wait 1 h 30 min in Strasbourg
+- Wed 11.11. 09:04 → Wed 11.11. 15:04  **Strasbourg → Marseille**  TGV INOUI
+- 🛏 Overnight in Marseille (Wed 11.11. 15:04 → Fri 13.11. 19:00)
+- Fri 13.11. 19:00 → Sat 14.11. 17:00  **Marseille → Algiers**  Nouris Elbahr  (night)
+
+### Tunis
+_Fastest: 112 h 08 min, arrive Sat 14.11. 22:30, 5 changes, 2 hotel nights_
+
+- Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
+- Wait 9 h 22 min in Hamburg
+- Tue 10.11. 20:10 → Wed 11.11. 06:13  **Hamburg → Munich**  ICE  (night)
+- Wait 3 h 10 min in Munich
+- Wed 11.11. 09:23 → Wed 11.11. 16:08  **Munich → Bologna**  ICE
+- Wed 11.11. 16:37 → Wed 11.11. 18:40  **Bologna → Rome**  FR
+- Wait 1 h 51 min in Rome
+- Wed 11.11. 20:31 → Thu 12.11. 09:13  **Rome → Palermo**  IC  (night)
+- 🛏 Overnight in Palermo (Thu 12.11. 09:13 → Sat 14.11. 10:30)
+- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  10:30
 
 ### Andorra la Vella
 _Fastest: 125 h 08 min, arrive Sun 15.11. 11:30, 4 changes, 3 hotel nights_
