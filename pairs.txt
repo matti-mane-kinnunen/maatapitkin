@@ -462,3 +462,10 @@ Umeå -> Boden : *          # night train D 94 (Stockholm - Narvik), leaves Ume�
 
 Umeå -> Sundsvall :* 
 Sundswall -> Storlien :*
+
+Stockholm -> Umeå :* 
+Vaasa -> Helsinki :*
+Vaasa -> Oulu :* 
+Vaasa -> Rovaniemi :*
+Oulu -> Rovaniemi : * 
+
