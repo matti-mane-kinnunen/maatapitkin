@@ -122,6 +122,7 @@ Helsinki -> Turku : *
 Köln -> Paris : *
 Newcastle -> Edinburgh : *
 London -> Edinburgh : *
+London -> Cardiff : *          # GWR, about two an hour (Facebook feedback: all four UK capitals)
 Stockholm -> Östersund : *
 Östersund -> Storlien : *
 Storlien -> Trondheim : *
