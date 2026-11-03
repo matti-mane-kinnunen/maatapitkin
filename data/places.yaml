@@ -20,6 +20,7 @@ settings:
   max_stay_nights: 6         # never wait longer than this at one place: a week covers weekly services (Andorra sleeper, D-42)
   alternative_max_extra_hours: 12  # show "fewest changes / hotel nights" only if at most this much slower
   start_date: 2026-12-08   # travel date; default is next Monday (or use --date)
+  site_url: "https://matti-mane-kinnunen.github.io/maatapitkin/"  # for link previews (Open Graph, IDEA-11)
   co2:                       # rough CO2 per journey vs a direct flight (IDEA-07, D-41); remove to switch off
     source: "UK DESNZ GHG conversion factors 2026, full set (gov.uk), kg CO2e total per passenger-km"
     factors:

@@ -68,11 +68,32 @@ Outputs in `out/`:
 
 Every Monday at 03:00 (Finnish winter time) GitHub Actions looks up next week's trains,
 rebuilds the map for Tue, Fri, Sat and Sun, checks it and publishes it at
-https://matti-mane-kinnunen.github.io/maatapitkin/ – embed it with
+https://matti-mane-kinnunen.github.io/maatapitkin/ (Helsinki), with `stockholm.html`,
+`copenhagen.html`, `london.html` and `berlin.html` next to it.
+
+**In a blog post** (Blogger: *HTML view*), a link that opens the map full screen works best – a blog
+column is too narrow for the map and the list side by side:
+
+```html
+<p><a href="https://matti-mane-kinnunen.github.io/maatapitkin/" target="_blank" rel="noopener">
+  <img src="https://matti-mane-kinnunen.github.io/maatapitkin/preview-helsinki.png"
+       alt="Map of train journeys from Helsinki to the European capitals" style="width:100%;height:auto"></a></p>
+<p><a href="https://matti-mane-kinnunen.github.io/maatapitkin/" target="_blank" rel="noopener">Open the map full screen</a></p>
+```
+
+or embed the map itself (it fits itself to the width, but is tall):
 
 ```html
 <iframe src="https://matti-mane-kinnunen.github.io/maatapitkin/" style="width:100%;height:1600px;border:0"></iframe>
+<p><a href="https://matti-mane-kinnunen.github.io/maatapitkin/" target="_blank" rel="noopener">Open the map full screen</a></p>
 ```
+
+**Link previews** (Facebook, LinkedIn, WhatsApp, Slack …): each page carries Open Graph tags – title,
+a one-line description with the number of capitals, and a picture, `static/preview-<origin>.png`
+(1200 × 630). The pictures are made by hand, not every week: refresh them when a map is added or the
+network changes a lot (ask Claude, or screenshot the map). Facebook keeps a preview once a link has
+been shared; to refresh it, paste the link into the
+[Sharing Debugger](https://developers.facebook.com/tools/debug/) and press *Scrape again*.
 
 - Add a connection: edit `pairs.txt` (on github.com or locally + push); the map is updated
   within minutes.

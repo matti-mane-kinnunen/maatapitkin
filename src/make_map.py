@@ -6,6 +6,7 @@ data/basemap.geojson and are projected here into SVG paths.
 from __future__ import annotations
 
 import html
+import re
 import json
 import math
 from pathlib import Path
@@ -84,12 +85,47 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
         (root / "out" / "map.html").write_text(page)      # fragment: paste into a page or publish as is
     site = root / "out" / "site"                             # a complete page for GitHub Pages
     site.mkdir(exist_ok=True)
+    static = root / "static"                                 # preview pictures etc., copied as they are
+    if static.is_dir():
+        for f in static.iterdir():
+            if f.is_file():
+                (site / f.name).write_bytes(f.read_bytes())
     (site / page_name).write_text(
         '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        f'<meta name="description" content="Overland journeys from {html.escape(net["origin"])} to the European capitals by train, ferry and bus.">\n'
-        '</head>\n<body>\n' + page + '\n</body>\n</html>\n')
+        + head_tags(net, page_name, site) +
+        '</head>\n<body>\n' + re.sub(r"<title>.*?</title>\n?", "", page, count=1) + '\n</body>\n</html>\n')
     return site / page_name
+
+
+def head_tags(net: dict, page_name: str, site: Path) -> str:
+    """<title>, description and the Open Graph tags Facebook, LinkedIn, WhatsApp etc. use for
+    link previews (IDEA-11). The picture is static/preview-<origin>.png, made by hand when the
+    network changes a lot; without it the preview simply has no picture."""
+    origin = net["origin"]
+    title = net.get("title") or "Maata pitkin"
+    first = (net.get("dates") or [None])[0]
+    v = (net.get("variants") or {}).get(first) or {}
+    routes = (v.get("yes") or {}).get("routes") or net.get("routes") or []
+    n = len({r["capital"] for r in routes if r.get("is_capital", True)})
+    og_title = f"{title} – {origin} to {n} European capitals by train"
+    desc = (f"{origin} to {n} European capitals by train, ferry and bus: door to door, how long it really "
+            f"takes, day by day, with every change and hotel night.")
+    e = lambda x: html.escape(x, quote=True)
+    tags = [f'<title>{e(og_title)}</title>', f'<meta name="description" content="{e(desc)}">',
+            '<meta property="og:type" content="website">', f'<meta property="og:title" content="{e(og_title)}">',
+            f'<meta property="og:description" content="{e(desc)}">', '<meta name="twitter:card" content="summary_large_image">']
+    base = (net.get("site_url") or "").rstrip("/") + "/"
+    if base != "/":
+        url = base if page_name == "index.html" else base + page_name
+        tags.append(f'<meta property="og:url" content="{e(url)}">')
+        tags.append(f'<link rel="canonical" href="{e(url)}">')
+        pic = f"preview-{re.sub(r'[^a-z0-9]+', '-', origin.lower()).strip('-')}.png"
+        if (site / pic).exists():
+            tags += [f'<meta property="og:image" content="{e(base + pic)}">',
+                     '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
+                     f'<meta property="og:image:alt" content="{e(f"Map of train journeys from {origin} to the European capitals")}">']
+    return "\n".join(tags) + "\n"
 
 
 if __name__ == "__main__":
