@@ -102,6 +102,7 @@ Basel -> Lugano : *
 Lugano -> Milan : *
 Milan -> Venice : *
 Krakow -> Prague : *
+Krakow -> Budapest : *
 Prague -> Budapest : *
 Munich -> Ljubljana : *
 Munich -> Zürich : *
@@ -134,6 +135,7 @@ Helsinki -> Tampere : *
 Barcelona -> Valencia : *
 Berlin -> Rostock : *
 Warsaw -> Wroclaw : *
+Warsaw -> Budapest : *
 Hamburg -> Rostock : *
 Milan -> Trieste : *
 Bologna -> Trieste : *
