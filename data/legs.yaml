@@ -1919,3 +1919,5 @@ legs:
       "14:08-16:12", "14:38-16:34", "15:38-17:40", "16:38-18:34", "17:38-19:34", "18:38-20:34",
       "19:38-21:35", "20:38-22:37", "21:38-23:34"], query: "*", checked: 2026-11-03, source: transitous}
   - {from: Tanger, to: Rabat, service: "Al Boraq", mode: train, every: 60, first: "07:00", last: "21:00", duration: "1:22", checked: 2026-11-03, source: manual}
+  - {from: Warsaw, to: Budapest, service: "IC", mode: train, times: ["08:44-19:49"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Warsaw, to: Budapest, service: "IC", mode: train, runs: "sat", times: ["08:20-19:49"], query: "*", checked: 2026-11-03, source: transitous}
