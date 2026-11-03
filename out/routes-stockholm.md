@@ -515,10 +515,9 @@ _Fewest hotel nights: 49 h 06 min, arrive Thu 12.11. 18:35, 6 changes, 0 hotel n
 
 - Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Wed 11.11. 06:34 → Wed 11.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 5 h 06 min in Berlin
-- Wed 11.11. 13:28 → Wed 11.11. 17:15  **Berlin → Prague**  RJ
-- Wait 7 h 21 min in Prague
-- Thu 12.11. 00:36 → Thu 12.11. 08:29  **Prague → Budapest**  rj  (night)
+- Wed 11.11. 08:44 → Wed 11.11. 16:00  **Berlin → Krakow**  IC
+- Wait 4 h 57 min in Krakow
+- Wed 11.11. 20:57 → Thu 12.11. 08:29  **Krakow → Budapest**  IC 417  (night)
 - Thu 12.11. 09:48 → Thu 12.11. 12:16  **Budapest → Szeged**  InterCity
 - Wait 2 h 48 min in Szeged
 - Thu 12.11. 15:04 → Thu 12.11. 16:24  **Szeged → Subotica**  SZ

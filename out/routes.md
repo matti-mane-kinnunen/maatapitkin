@@ -117,7 +117,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Bratislava | Tue 10.11. 07:30 | Thu 12.11. 07:10 | 48 h 40 min | arrives 6 h 00 min earlier |
 | London | Tue 10.11. 05:32 | Thu 12.11. 08:30 | 52 h 58 min | arrives 4 h 00 min earlier |
 | Luxembourg | Tue 10.11. 05:32 | Thu 12.11. 09:45 | 53 h 13 min | arrives 5 h 04 min earlier |
-| Budapest | Tue 10.11. 05:32 | Thu 12.11. 08:29 | 51 h 57 min | arrives 7 h 06 min earlier |
+| Budapest | Tue 10.11. 07:30 | Thu 12.11. 08:29 | 49 h 59 min | arrives 7 h 06 min earlier |
 | Rome | Tue 10.11. 05:32 | Thu 12.11. 14:43 | 58 h 11 min | arrives 1 h 06 min earlier |
 | San Marino | – | – | – | no gain: take the 17:00 journey |
 | Vatican | Tue 10.11. 05:32 | Thu 12.11. 15:23 | 58 h 51 min | arrives 1 h 06 min earlier |
@@ -816,10 +816,11 @@ _Fewest hotel nights: 74 h 00 min, arrive Fri 13.11. 18:35, 8 changes, 0 hotel n
 - Wait 10 h 59 min in Stockholm
 - Wed 11.11. 17:29 → Thu 12.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Thu 12.11. 06:34 → Thu 12.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 11 h 49 min in Berlin
-- Thu 12.11. 20:11 → Fri 13.11. 07:00  **Berlin → Vienna**  IC  (night)
-- Fri 13.11. 07:40 → Fri 13.11. 10:35  **Vienna → Budapest**  xpress
-- Fri 13.11. 11:48 → Fri 13.11. 14:16  **Budapest → Szeged**  InterCity
+- Thu 12.11. 08:44 → Thu 12.11. 16:00  **Berlin → Krakow**  IC
+- Wait 4 h 57 min in Krakow
+- Thu 12.11. 20:57 → Fri 13.11. 08:29  **Krakow → Budapest**  IC 417  (night)
+- Fri 13.11. 09:48 → Fri 13.11. 12:16  **Budapest → Szeged**  InterCity
+- Wait 2 h 48 min in Szeged
 - Fri 13.11. 15:04 → Fri 13.11. 16:24  **Szeged → Subotica**  SZ
 - Fri 13.11. 17:00 → Fri 13.11. 18:35  **Subotica → Belgrade**  IC
 
@@ -1072,10 +1073,10 @@ _Fastest: 99 h 06 min, arrive Sat 14.11. 20:41, 8 changes, 0 hotel nights_
 - Wait 10 h 59 min in Stockholm
 - Wed 11.11. 17:29 → Thu 12.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Thu 12.11. 06:34 → Thu 12.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 11 h 49 min in Berlin
-- Thu 12.11. 20:11 → Fri 13.11. 07:00  **Berlin → Vienna**  IC  (night)
-- Fri 13.11. 07:40 → Fri 13.11. 10:35  **Vienna → Budapest**  xpress
-- Wait 4 h 35 min in Budapest
+- Thu 12.11. 08:44 → Thu 12.11. 16:00  **Berlin → Krakow**  IC
+- Wait 4 h 57 min in Krakow
+- Thu 12.11. 20:57 → Fri 13.11. 08:29  **Krakow → Budapest**  IC 417  (night)
+- Wait 6 h 41 min in Budapest
 - Fri 13.11. 15:10 → Sat 14.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 2 h 23 min in Bucharest
 - Sat 14.11. 10:46 → Sat 14.11. 13:40  **Bucharest → Ruse**  1095
@@ -1135,10 +1136,10 @@ _Fastest: 138 h 41 min, arrive Mon 16.11. 13:16, 10 changes, 1 hotel nights_
 - Wait 10 h 59 min in Stockholm
 - Wed 11.11. 17:29 → Thu 12.11. 05:53  **Stockholm → Hamburg**  IC  (night)
 - Thu 12.11. 06:34 → Thu 12.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 11 h 49 min in Berlin
-- Thu 12.11. 20:11 → Fri 13.11. 07:00  **Berlin → Vienna**  IC  (night)
-- Fri 13.11. 07:40 → Fri 13.11. 10:35  **Vienna → Budapest**  xpress
-- Wait 4 h 35 min in Budapest
+- Thu 12.11. 08:44 → Thu 12.11. 16:00  **Berlin → Krakow**  IC
+- Wait 4 h 57 min in Krakow
+- Thu 12.11. 20:57 → Fri 13.11. 08:29  **Krakow → Budapest**  IC 417  (night)
+- Wait 6 h 41 min in Budapest
 - Fri 13.11. 15:10 → Sat 14.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 2 h 23 min in Bucharest
 - Sat 14.11. 10:46 → Sat 14.11. 13:40  **Bucharest → Ruse**  1095
