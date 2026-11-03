@@ -1,6 +1,6 @@
 # Journeys from Stockholm
 
-_leave Stockholm Tue 10.11.2026 from 16:00 · generated 2.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Stockholm Tue 10.11.2026 from 16:00 · generated 3.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -22,7 +22,7 @@ _leave Stockholm Tue 10.11.2026 from 16:00 · generated 2.11.2026. Change 20 min
 | Vatican | Tue 10.11. 17:29 | Wed 11.11. 23:19 | 29 h 50 min | 5 | 1 | 0 |  |
 | Budapest | Tue 10.11. 17:29 | Wed 11.11. 23:35 | 30 h 06 min | 3 | 1 | 0 |  |
 | Tallinn | Tue 10.11. 16:00 | Thu 12.11. 09:30 | 40 h 30 min | 1 | 1 | 1 (Helsinki) |  |
-| San Marino | Tue 10.11. 17:29 | Thu 12.11. 09:00 | 39 h 31 min | 6 | 1 | 1 (Rimini) | fewest changes: 49 h 31 min, 4 ch., 0 hotel; fewest hotel nights: 42 h 31 min, 8 ch., 0 hotel |
+| San Marino | Tue 10.11. 17:29 | Thu 12.11. 09:00 | 39 h 31 min | 6 | 1 | 1 (Rimini) | fewest changes: 49 h 31 min, 4 ch., 0 hotel; fewest hotel nights: 44 h 31 min, 5 ch., 0 hotel |
 | Dublin | Tue 10.11. 17:29 | Thu 12.11. 11:00 | 42 h 31 min | 5 | 1 | 1 (Holyhead) |  |
 | Ljubljana | Tue 10.11. 17:29 | Thu 12.11. 13:53 | 44 h 24 min | 3 | 2 | 0 | fewest changes: 47 h 11 min, 2 ch., 0 hotel |
 | Belgrade | Tue 10.11. 17:29 | Thu 12.11. 15:15 | 45 h 46 min | 6 | 1 | 1 (Budapest) | fewest hotel nights: 49 h 06 min, 6 ch., 0 hotel |
@@ -42,7 +42,7 @@ _leave Stockholm Tue 10.11.2026 from 16:00 · generated 2.11.2026. Change 20 min
 | Lisbon | Tue 10.11. 17:29 | Fri 13.11. 22:20 | 77 h 51 min | 7 | 2 | 1 (Barcelona) |  |
 | Chisinau | Tue 10.11. 17:29 | Sat 14.11. 08:10 | 85 h 41 min | 5 | 4 | 0 |  |
 | Ankara | Tue 10.11. 17:29 | Sun 15.11. 13:16 | 113 h 47 min | 8 | 4 | 1 (Sofia) |  |
-| Andorra la Vella | Tue 10.11. 17:29 | Sun 15.11. 11:30 | 114 h 01 min | 4 | 3 | 2 (Köln, Paris) | fewest hotel nights: 114 h 01 min, 6 ch., 0 hotel |
+| Andorra la Vella | Tue 10.11. 17:29 | Sun 15.11. 11:30 | 114 h 01 min | 4 | 3 | 2 (Paris) | fewest hotel nights: 114 h 01 min, 5 ch., 1 hotel |
 
 ## Without night trains
 
@@ -199,9 +199,9 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Edinburgh | Wed 11.11. 23:35 | 31 h 06 min | 4 | 0 |
 | Glasgow | Thu 12.11. 00:09 | 31 h 40 min | 4 | 0 |
 | Villa San Giovanni | Thu 12.11. 06:10 | 36 h 41 min | 5 | 0 |
+| Foggia | Thu 12.11. 06:17 | 36 h 48 min | 5 | 0 |
 | Bari | Thu 12.11. 07:00 | 37 h 31 min | 4 | 0 |
 | Naples | Thu 12.11. 08:12 | 38 h 43 min | 5 | 1 |
-| Foggia | Thu 12.11. 08:33 | 39 h 04 min | 5 | 0 |
 | Penzance | Thu 12.11. 07:55 | 39 h 26 min | 4 | 0 |
 | Lecce | Thu 12.11. 09:15 | 39 h 46 min | 5 | 0 |
 | Ayr | Thu 12.11. 08:51 | 40 h 22 min | 5 | 0 |
@@ -425,19 +425,17 @@ _Fewest changes: 49 h 31 min, arrive Thu 12.11. 19:00, 4 changes, 0 hotel nights
 - Thu 12.11. 18:10 → Thu 12.11. 19:00  **Rimini → San Marino**  Bonelli
 
 ### San Marino — fewest hotel nights
-_Fewest hotel nights: 42 h 31 min, arrive Thu 12.11. 12:00, 8 changes, 0 hotel nights_
+_Fewest hotel nights: 44 h 31 min, arrive Thu 12.11. 14:00, 5 changes, 0 hotel nights_
 
 - Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Wed 11.11. 06:29 → Wed 11.11. 13:21  **Hamburg → Basel**  ICE
-- Wed 11.11. 13:43 → Wed 11.11. 14:52  **Basel → Zürich**  IC3
-- Wed 11.11. 15:33 → Wed 11.11. 18:53  **Zürich → Milan**  EC
-- Wed 11.11. 20:10 → Wed 11.11. 21:24  **Milan → Bologna**  FR
-- Wait 1 h 54 min in Bologna
-- Wed 11.11. 23:18 → Thu 12.11. 06:35  **Bologna → Rome**  FR  (night)
-- Thu 12.11. 06:35 → Thu 12.11. 08:11  **Rome → Florence**  FR
-- Thu 12.11. 08:36 → Thu 12.11. 09:13  **Florence → Bologna**  FR
-- Thu 12.11. 09:45 → Thu 12.11. 10:38  **Bologna → Rimini**  FR
-- Thu 12.11. 11:10 → Thu 12.11. 12:00  **Rimini → San Marino**  Bonelli
+- Wait 2 h 08 min in Hamburg
+- Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
+- Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
+- Wait 2 h 07 min in Vienna
+- Wed 11.11. 21:39 → Thu 12.11. 08:34  **Vienna → Venice**  RJX  (night)
+- Thu 12.11. 09:40 → Thu 12.11. 11:45  **Venice → Bologna**  FR
+- Thu 12.11. 11:45 → Thu 12.11. 12:38  **Bologna → Rimini**  FR
+- Thu 12.11. 13:10 → Thu 12.11. 14:00  **Rimini → San Marino**  Bonelli
 
 ### Dublin
 _Fastest: 42 h 31 min, arrive Thu 12.11. 11:00, 5 changes, 1 hotel nights_
@@ -757,27 +755,26 @@ _Fastest: 113 h 47 min, arrive Sun 15.11. 13:16, 8 changes, 1 hotel nights_
 _Fastest: 114 h 01 min, arrive Sun 15.11. 11:30, 4 changes, 2 hotel nights_
 
 - Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Wait 14 h 52 min in Hamburg
-- Wed 11.11. 20:45 → Thu 12.11. 02:09  **Hamburg → Köln**  ICE  (night)
-- 🛏 Overnight in Köln (Thu 12.11. 02:09 → Fri 13.11. 10:39)
-- Fri 13.11. 10:39 → Fri 13.11. 14:07  **Köln → Paris**  EST DEKOH
-- 🛏 Overnight in Paris (Fri 13.11. 14:07 → Sat 14.11. 22:13)
+- Wait 15 h 58 min in Hamburg
+- Wed 11.11. 21:51 → Wed 11.11. 23:51  **Hamburg → Berlin**  ICE
+- Wed 11.11. 23:51 → Thu 12.11. 06:15  **Berlin → Köln**  ICE  (night)
+- Wait 2 h 24 min in Köln
+- Thu 12.11. 08:39 → Thu 12.11. 12:15  **Köln → Paris**  EST DEKOH
+- 🛏 Overnight in Paris (Thu 12.11. 12:15 → Sat 14.11. 22:13)
 - Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
 - Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
 
 ### Andorra la Vella — fewest hotel nights
-_Fewest hotel nights: 114 h 01 min, arrive Sun 15.11. 11:30, 6 changes, 0 hotel nights_
+_Fewest hotel nights: 114 h 01 min, arrive Sun 15.11. 11:30, 5 changes, 1 hotel nights_
 
 - Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Wait 14 h 52 min in Hamburg
-- Wed 11.11. 20:45 → Thu 12.11. 02:09  **Hamburg → Köln**  ICE  (night)
-- Wait 22 h 08 min in Köln
-- Fri 13.11. 00:17 → Fri 13.11. 06:24  **Köln → Munich**  ICE  (night)
-- Wait 17 h 25 min in Munich
-- Fri 13.11. 23:49 → Sat 14.11. 06:04  **Munich → Köln**  ICE  (night)
-- Wait 4 h 35 min in Köln
-- Sat 14.11. 10:39 → Sat 14.11. 14:07  **Köln → Paris**  EST DEKOH
-- Wait 8 h 06 min in Paris
+- Wait 14 h 17 min in Hamburg
+- Wed 11.11. 20:10 → Thu 12.11. 06:13  **Hamburg → Munich**  ICE  (night)
+- Wait 21 h 43 min in Munich
+- Fri 13.11. 03:56 → Fri 13.11. 08:29  **Munich → Köln**  ICE  (night)
+- Wait 2 h 10 min in Köln
+- Fri 13.11. 10:39 → Fri 13.11. 14:07  **Köln → Paris**  EST DEKOH
+- 🛏 Overnight in Paris (Fri 13.11. 14:07 → Sat 14.11. 22:13)
 - Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
 - Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
 

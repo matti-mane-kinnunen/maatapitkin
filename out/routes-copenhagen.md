@@ -1,6 +1,6 @@
 # Journeys from Copenhagen
 
-_leave Copenhagen Tue 10.11.2026 from 06:00 · generated 2.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Copenhagen Tue 10.11.2026 from 06:00 · generated 3.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -42,7 +42,7 @@ _leave Copenhagen Tue 10.11.2026 from 06:00 · generated 2.11.2026. Change 20 mi
 | Monaco | Tue 10.11. 06:22 | Fri 13.11. 06:47 | 72 h 25 min | 5 | 1 | 2 (Nice) |  |
 | Chisinau | Tue 10.11. 06:22 | Fri 13.11. 08:10 | 72 h 48 min | 5 | 3 | 0 |  |
 | Ankara | Tue 10.11. 06:22 | Sat 14.11. 13:16 | 100 h 54 min | 8 | 3 | 1 (Sofia) |  |
-| Andorra la Vella | Tue 10.11. 06:22 | Sun 15.11. 11:30 | 125 h 08 min | 4 | 1 | 4 (Hamburg, Köln, Paris) | fewest hotel nights: 125 h 08 min, 9 ch., 1 hotel |
+| Andorra la Vella | Tue 10.11. 06:22 | Sun 15.11. 11:30 | 125 h 08 min | 4 | 2 | 3 (Paris) | fewest hotel nights: 125 h 08 min, 9 ch., 1 hotel |
 
 ## Without night trains
 
@@ -158,6 +158,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Nantes | Tue 10.11. 23:54 | 17 h 32 min | 3 | 0 |
 | Lugano | Tue 10.11. 23:58 | 17 h 36 min | 2 | 0 |
 | Boden | Wed 11.11. 05:42 | 23 h 39 min | 2 | 0 |
+| Gdansk | Wed 11.11. 06:08 | 23 h 46 min | 3 | 0 |
 | Bergen | Wed 11.11. 06:23 | 24 h 20 min | 3 | 0 |
 | Przemyśl | Wed 11.11. 06:25 | 24 h 03 min | 3 | 0 |
 | Turku | Wed 11.11. 07:35 | 24 h 32 min | 2 | 0 |
@@ -166,7 +167,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Lille | Wed 11.11. 07:51 | 25 h 29 min | 4 | 1 |
 | Bordeaux | Wed 11.11. 08:14 | 25 h 52 min | 3 | 1 |
 | Lyon | Wed 11.11. 08:26 | 26 h 04 min | 3 | 1 |
-| Gdansk | Wed 11.11. 09:12 | 26 h 50 min | 3 | 1 |
 | Storlien | Wed 11.11. 09:17 | 27 h 14 min | 3 | 0 |
 | Milan | Wed 11.11. 09:20 | 26 h 58 min | 3 | 1 |
 | Marseille | Wed 11.11. 09:24 | 27 h 02 min | 3 | 1 |
@@ -251,7 +251,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Split | Sat 14.11. 07:00 | 96 h 38 min | 4 | 2 |
 | Algiers | Sat 14.11. 17:00 | 106 h 38 min | 4 | 2 |
 | Tunis | Sat 14.11. 22:30 | 112 h 08 min | 5 | 2 |
-| L'Hospitalet | Sun 15.11. 09:42 | 123 h 20 min | 3 | 4 |
+| L'Hospitalet | Sun 15.11. 09:42 | 123 h 20 min | 3 | 3 |
 
 ## Itineraries
 
@@ -424,9 +424,9 @@ _Fewest changes: 36 h 18 min, arrive Wed 11.11. 18:40, 3 changes, 0 hotel nights
 _Fewest hotel nights: 33 h 27 min, arrive Wed 11.11. 15:49, 5 changes, 0 hotel nights_
 
 - Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 9 h 41 min in Hamburg
-- Tue 10.11. 20:29 → Wed 11.11. 01:04  **Hamburg → Frankfurt**  ICE  (night)
-- Wait 1 h 41 min in Frankfurt
+- Wait 1 h 41 min in Hamburg
+- Tue 10.11. 12:29 → Tue 10.11. 16:14  **Hamburg → Frankfurt**  ICE
+- Wait 10 h 31 min in Frankfurt
 - Wed 11.11. 02:45 → Wed 11.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Wed 11.11. 06:43 → Wed 11.11. 07:52  **Basel → Zürich**  IC3
 - Wed 11.11. 08:33 → Wed 11.11. 11:50  **Zürich → Milan**  EC
@@ -460,9 +460,9 @@ _Fewest changes: 36 h 58 min, arrive Wed 11.11. 19:20, 4 changes, 0 hotel nights
 _Fewest hotel nights: 34 h 07 min, arrive Wed 11.11. 16:29, 6 changes, 0 hotel nights_
 
 - Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 9 h 41 min in Hamburg
-- Tue 10.11. 20:29 → Wed 11.11. 01:04  **Hamburg → Frankfurt**  ICE  (night)
-- Wait 1 h 41 min in Frankfurt
+- Wait 1 h 41 min in Hamburg
+- Tue 10.11. 12:29 → Tue 10.11. 16:14  **Hamburg → Frankfurt**  ICE
+- Wait 10 h 31 min in Frankfurt
 - Wed 11.11. 02:45 → Wed 11.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Wed 11.11. 06:43 → Wed 11.11. 07:52  **Basel → Zürich**  IC3
 - Wed 11.11. 08:33 → Wed 11.11. 11:50  **Zürich → Milan**  EC
@@ -516,9 +516,9 @@ _Fewest changes: 36 h 38 min, arrive Wed 11.11. 19:00, 4 changes, 0 hotel nights
 _Fewest hotel nights: 33 h 38 min, arrive Wed 11.11. 16:00, 7 changes, 0 hotel nights_
 
 - Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 9 h 41 min in Hamburg
-- Tue 10.11. 20:29 → Wed 11.11. 01:04  **Hamburg → Frankfurt**  ICE  (night)
-- Wait 1 h 41 min in Frankfurt
+- Wait 1 h 41 min in Hamburg
+- Tue 10.11. 12:29 → Tue 10.11. 16:14  **Hamburg → Frankfurt**  ICE
+- Wait 10 h 31 min in Frankfurt
 - Wed 11.11. 02:45 → Wed 11.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Wed 11.11. 06:43 → Wed 11.11. 07:52  **Basel → Zürich**  IC3
 - Wed 11.11. 08:33 → Wed 11.11. 11:50  **Zürich → Milan**  EC
@@ -685,9 +685,9 @@ _Fastest: 54 h 18 min, arrive Thu 12.11. 12:40, 6 changes, 1 hotel nights_
 _Fewest hotel nights: 54 h 18 min, arrive Thu 12.11. 12:40, 7 changes, 0 hotel nights_
 
 - Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Wait 9 h 41 min in Hamburg
-- Tue 10.11. 20:29 → Wed 11.11. 01:04  **Hamburg → Frankfurt**  ICE  (night)
-- Wait 1 h 41 min in Frankfurt
+- Wait 1 h 41 min in Hamburg
+- Tue 10.11. 12:29 → Tue 10.11. 16:14  **Hamburg → Frankfurt**  ICE
+- Wait 10 h 31 min in Frankfurt
 - Wed 11.11. 02:45 → Wed 11.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Wed 11.11. 06:43 → Wed 11.11. 07:52  **Basel → Zürich**  IC3
 - Wed 11.11. 08:33 → Wed 11.11. 11:50  **Zürich → Milan**  EC
@@ -855,14 +855,15 @@ _Fastest: 100 h 54 min, arrive Sat 14.11. 13:16, 8 changes, 1 hotel nights_
 - Sat 14.11. 08:40 → Sat 14.11. 13:16  **Istanbul → Ankara**  IC81006
 
 ### Andorra la Vella
-_Fastest: 125 h 08 min, arrive Sun 15.11. 11:30, 4 changes, 4 hotel nights_
+_Fastest: 125 h 08 min, arrive Sun 15.11. 11:30, 4 changes, 3 hotel nights_
 
 - Tue 10.11. 06:22 → Tue 10.11. 10:48  **Copenhagen → Hamburg**  ECE
-- 🛏 Overnight in Hamburg (Tue 10.11. 10:48 → Wed 11.11. 06:45)
-- Wed 11.11. 06:45 → Wed 11.11. 10:48  **Hamburg → Köln**  ICE
-- 🛏 Overnight in Köln (Wed 11.11. 10:48 → Fri 13.11. 10:39)
-- Fri 13.11. 10:39 → Fri 13.11. 14:07  **Köln → Paris**  EST DEKOH
-- 🛏 Overnight in Paris (Fri 13.11. 14:07 → Sat 14.11. 22:13)
+- Wait 11 h 03 min in Hamburg
+- Tue 10.11. 21:51 → Tue 10.11. 23:51  **Hamburg → Berlin**  ICE
+- Tue 10.11. 23:51 → Wed 11.11. 06:15  **Berlin → Köln**  ICE  (night)
+- Wait 2 h 24 min in Köln
+- Wed 11.11. 08:39 → Wed 11.11. 12:15  **Köln → Paris**  EST DEKOH
+- 🛏 Overnight in Paris (Wed 11.11. 12:15 → Sat 14.11. 22:13)
 - Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
 - Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
 
@@ -877,11 +878,11 @@ _Fewest hotel nights: 125 h 08 min, arrive Sun 15.11. 11:30, 9 changes, 1 hotel 
 - Wait 15 h 10 min in Warsaw
 - Wed 11.11. 19:48 → Thu 12.11. 05:25  **Warsaw → Vienna**  IC  (night)
 - Thu 12.11. 06:28 → Thu 12.11. 10:43  **Vienna → Munich**  RJX
-- 🛏 Overnight in Munich (Thu 12.11. 10:43 → Fri 13.11. 23:49)
-- Fri 13.11. 23:49 → Sat 14.11. 06:04  **Munich → Köln**  ICE  (night)
-- Wait 4 h 35 min in Köln
-- Sat 14.11. 10:39 → Sat 14.11. 14:07  **Köln → Paris**  EST DEKOH
-- Wait 8 h 06 min in Paris
+- Wait 17 h 13 min in Munich
+- Fri 13.11. 03:56 → Fri 13.11. 08:29  **Munich → Köln**  ICE  (night)
+- Wait 2 h 10 min in Köln
+- Fri 13.11. 10:39 → Fri 13.11. 14:07  **Köln → Paris**  EST DEKOH
+- 🛏 Overnight in Paris (Fri 13.11. 14:07 → Sat 14.11. 22:13)
 - Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
 - Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
 

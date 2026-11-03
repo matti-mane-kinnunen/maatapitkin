@@ -1,6 +1,6 @@
 # Journeys from Helsinki
 
-_leave Helsinki Tue 10.11.2026 from 17:00 · generated 2.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Helsinki Tue 10.11.2026 from 17:00 · generated 3.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@ _leave Helsinki Tue 10.11.2026 from 17:00 · generated 2.11.2026. Change 20 min 
 | Vilnius | Wed 11.11. 07:30 | Wed 11.11. 21:28 | 13 h 58 min | 3 | 0 | 0 |  |
 | Berlin | Tue 10.11. 17:35 | Wed 11.11. 21:23 | 28 h 48 min | 5 | 1 | 0 | fewest changes: 39 h 47 min, 3 ch., 0 hotel |
 | Amsterdam | Tue 10.11. 17:35 | Thu 12.11. 07:28 | 38 h 53 min | 6 | 2 | 0 | fewest changes: 45 h 26 min, 4 ch., 0 hotel |
-| Bern | Tue 10.11. 17:35 | Thu 12.11. 07:56 | 39 h 21 min | 7 | 3 | 0 | fewest changes: 46 h 21 min, 4 ch., 0 hotel |
+| Bern | Tue 10.11. 17:35 | Thu 12.11. 07:56 | 39 h 21 min | 7 | 3 | 0 | fewest changes: 45 h 51 min, 4 ch., 0 hotel |
 | Paris | Tue 10.11. 17:35 | Thu 12.11. 10:05 | 41 h 30 min | 7 | 2 | 0 | fewest changes: 44 h 16 min, 4 ch., 0 hotel |
 | Prague | Tue 10.11. 17:35 | Thu 12.11. 10:22 | 41 h 47 min | 6 | 1 | 1 (Berlin) | fewest changes: 48 h 40 min, 4 ch., 0 hotel |
 | Brussels | Tue 10.11. 17:35 | Thu 12.11. 11:06 | 42 h 31 min | 7 | 2 | 0 | fewest changes: 47 h 09 min, 5 ch., 0 hotel |
@@ -351,14 +351,15 @@ _Fastest: 39 h 21 min, arrive Thu 12.11. 07:56, 7 changes, 0 hotel nights_
 - Thu 12.11. 06:58 → Thu 12.11. 07:56  **Basel → Bern**  IC61
 
 ### Bern — fewest changes
-_Fewest changes: 46 h 21 min, arrive Thu 12.11. 14:56, 4 changes, 0 hotel nights_
+_Fewest changes: 45 h 51 min, arrive Thu 12.11. 14:26, 4 changes, 0 hotel nights_
 
 - Tue 10.11. 17:35 → Tue 10.11. 19:49  **Helsinki → Turku**  IC
 - Tue 10.11. 20:55 → Wed 11.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
-- Wait 10 h 59 min in Stockholm
-- Wed 11.11. 17:29 → Thu 12.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Thu 12.11. 06:29 → Thu 12.11. 13:21  **Hamburg → Basel**  ICE
-- Thu 12.11. 13:58 → Thu 12.11. 14:56  **Basel → Bern**  IC61
+- Wait 4 h 13 min in Stockholm
+- Wed 11.11. 10:43 → Wed 11.11. 21:57  **Stockholm → Hamburg**  IC
+- Wait 6 h 44 min in Hamburg
+- Thu 12.11. 04:41 → Thu 12.11. 12:48  **Hamburg → Basel**  ICE  (night)
+- Thu 12.11. 13:30 → Thu 12.11. 14:26  **Basel → Bern**  IC61
 
 ### Paris
 _Fastest: 41 h 30 min, arrive Thu 12.11. 10:05, 7 changes, 0 hotel nights_
@@ -962,12 +963,12 @@ _Fastest: 114 h 55 min, arrive Sun 15.11. 11:30, 6 changes, 2 hotel nights_
 
 - Tue 10.11. 17:35 → Tue 10.11. 19:49  **Helsinki → Turku**  IC
 - Tue 10.11. 20:55 → Wed 11.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
-- Wait 10 h 59 min in Stockholm
-- Wed 11.11. 17:29 → Thu 12.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Thu 12.11. 06:29 → Thu 12.11. 13:21  **Hamburg → Basel**  ICE
-- Wait 6 h 13 min in Basel
-- Thu 12.11. 19:34 → Thu 12.11. 22:44  **Basel → Paris**  TGV Lyria
-- 🛏 Overnight in Paris (Thu 12.11. 22:44 → Sat 14.11. 22:13)
+- Wait 4 h 13 min in Stockholm
+- Wed 11.11. 10:43 → Wed 11.11. 21:57  **Stockholm → Hamburg**  IC
+- Wed 11.11. 22:45 → Thu 12.11. 07:03  **Hamburg → Frankfurt**  ICE  (night)
+- Wait 1 h 50 min in Frankfurt
+- Thu 12.11. 08:53 → Thu 12.11. 12:51  **Frankfurt → Paris**  ICE
+- 🛏 Overnight in Paris (Thu 12.11. 12:51 → Sat 14.11. 22:13)
 - Sat 14.11. 22:13 → Sun 15.11. 09:42  **Paris → L'Hospitalet**  ICN  (night)
 - Sun 15.11. 10:15 → Sun 15.11. 11:30  **L'Hospitalet → Andorra la Vella**  Hife
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02",
+ "generated": "2026-11-03",
  "dates": [
   "2026-11-10",
   "2026-11-13",
@@ -7,7 +7,7 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5807,
+ "departures": 5810,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
@@ -15,12 +15,12 @@
    "without": 33
   },
   "2026-11-13": {
-   "with_night_trains": 38,
-   "without": 32
+   "with_night_trains": 39,
+   "without": 33
   },
   "2026-11-14": {
-   "with_night_trains": 37,
-   "without": 32
+   "with_night_trains": 39,
+   "without": 33
   },
   "2026-11-15": {
    "with_night_trains": 39,
@@ -29,9 +29,9 @@
  },
  "places_reached": {
   "2026-11-10": 157,
-  "2026-11-13": 154,
-  "2026-11-14": 152,
-  "2026-11-15": 156
+  "2026-11-13": 157,
+  "2026-11-14": 157,
+  "2026-11-15": 157
  },
  "reached": {
   "capitals": [
@@ -272,7 +272,7 @@
  },
  "origins": {
   "Stockholm": {
-   "generated": "2026-11-02",
+   "generated": "2026-11-03",
    "dates": [
     "2026-11-10",
     "2026-11-13",
@@ -280,7 +280,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5807,
+   "departures": 5810,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -292,19 +292,19 @@
      "without": 33
     },
     "2026-11-14": {
-     "with_night_trains": 37,
-     "without": 32
+     "with_night_trains": 39,
+     "without": 33
     },
     "2026-11-15": {
-     "with_night_trains": 37,
+     "with_night_trains": 39,
      "without": 33
     }
    },
    "places_reached": {
     "2026-11-10": 157,
-    "2026-11-13": 156,
-    "2026-11-14": 152,
-    "2026-11-15": 152
+    "2026-11-13": 157,
+    "2026-11-14": 157,
+    "2026-11-15": 157
    },
    "reached": {
     "capitals": [
@@ -545,7 +545,7 @@
    }
   },
   "Copenhagen": {
-   "generated": "2026-11-02",
+   "generated": "2026-11-03",
    "dates": [
     "2026-11-10",
     "2026-11-13",
@@ -553,7 +553,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5807,
+   "departures": 5810,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -565,19 +565,19 @@
      "without": 33
     },
     "2026-11-14": {
-     "with_night_trains": 38,
+     "with_night_trains": 39,
      "without": 33
     },
     "2026-11-15": {
-     "with_night_trains": 37,
-     "without": 32
+     "with_night_trains": 39,
+     "without": 33
     }
    },
    "places_reached": {
     "2026-11-10": 157,
-    "2026-11-13": 156,
-    "2026-11-14": 154,
-    "2026-11-15": 152
+    "2026-11-13": 157,
+    "2026-11-14": 157,
+    "2026-11-15": 157
    },
    "reached": {
     "capitals": [
@@ -818,7 +818,7 @@
    }
   },
   "London": {
-   "generated": "2026-11-02",
+   "generated": "2026-11-03",
    "dates": [
     "2026-11-10",
     "2026-11-13",
@@ -826,7 +826,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5807,
+   "departures": 5810,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -842,15 +842,15 @@
      "without": 33
     },
     "2026-11-15": {
-     "with_night_trains": 38,
+     "with_night_trains": 39,
      "without": 33
     }
    },
    "places_reached": {
     "2026-11-10": 157,
-    "2026-11-13": 156,
-    "2026-11-14": 156,
-    "2026-11-15": 154
+    "2026-11-13": 157,
+    "2026-11-14": 157,
+    "2026-11-15": 157
    },
    "reached": {
     "capitals": [
@@ -1091,7 +1091,7 @@
    }
   },
   "Berlin": {
-   "generated": "2026-11-02",
+   "generated": "2026-11-03",
    "dates": [
     "2026-11-10",
     "2026-11-13",
@@ -1099,7 +1099,7 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5807,
+   "departures": 5810,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
@@ -1115,15 +1115,15 @@
      "without": 33
     },
     "2026-11-15": {
-     "with_night_trains": 37,
-     "without": 32
+     "with_night_trains": 39,
+     "without": 33
     }
    },
    "places_reached": {
     "2026-11-10": 157,
-    "2026-11-13": 156,
-    "2026-11-14": 156,
-    "2026-11-15": 152
+    "2026-11-13": 157,
+    "2026-11-14": 157,
+    "2026-11-15": 157
    },
    "reached": {
     "capitals": [

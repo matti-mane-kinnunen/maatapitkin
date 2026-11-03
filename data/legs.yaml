@@ -1901,3 +1901,6 @@ legs:
   - {from: Marseille, to: Algiers, dep: "15:00", arr: "12:00", service: "Algérie Ferries", mode: ferry, night: true, runs: "sat", checked: 2026-11-02, source: manual}
   - {from: Marseille, to: Algiers, dep: "19:00", arr: "17:00", service: "Nouris Elbahr", mode: ferry, night: true, runs: "fri", checked: 2026-11-02, source: manual}
   - {from: Athens, to: Chania, dep: "22:00", arr: "07:00", service: "Blue Star Ferries", mode: ferry, night: true, checked: 2026-11-02, source: manual}
+  - {from: Wroclaw, to: Prague, dep: "09:13", arr: "13:14", service: "IC 261", mode: train, checked: 2026-11-03, source: manual}
+  - {from: Wroclaw, to: Prague, dep: "13:13", arr: "17:14", service: "IC 263", mode: train, checked: 2026-11-03, source: manual}
+  - {from: Wroclaw, to: Prague, dep: "17:13", arr: "21:14", service: "IC 265", mode: train, checked: 2026-11-03, source: manual}
