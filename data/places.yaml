@@ -201,6 +201,8 @@ places:
   San Marino: {lat: 43.942, lon: 12.458, capital: true, country: SM}  # corrected by hand 2.11.2026 (was a namesake near Bologna)
   Kolding: {lat: 55.491, lon: 9.481, country: "DK"}  # added by add_leg.py
   Stavanger: {lat: 58.966, lon: 5.733, country: "NO", aliases: ["Stavanger bussterminal"]}  # added by add_leg.py
+  Kuopio: {lat: 62.897, lon: 27.680, country: "FI"}  # added by add_leg.py
+  Sundsvall: {lat: 62.414, lon: 17.339, country: "SE", aliases: ["Sundsvall Bydalen"]}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

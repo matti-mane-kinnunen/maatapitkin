@@ -151,8 +151,13 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 |---|---|---|---|---|
 | Tampere | Tue 10.11. 18:53 | 1 h 53 min | 0 | 0 |
 | Turku | Tue 10.11. 19:49 | 2 h 14 min | 0 | 0 |
+| Vaasa | Tue 10.11. 21:02 | 3 h 42 min | 0 | 0 |
+| Kuopio | Tue 10.11. 23:23 | 4 h 09 min | 0 | 0 |
 | Oulu | Wed 11.11. 00:16 | 5 h 56 min | 0 | 0 |
+| Umeå | Wed 11.11. 06:00 | 13 h 40 min | 1 | 0 |
 | Rovaniemi | Wed 11.11. 07:20 | 11 h 51 min | 0 | 0 |
+| Sundsvall | Wed 11.11. 09:48 | 17 h 28 min | 2 | 0 |
+| Boden | Wed 11.11. 11:35 | 19 h 15 min | 2 | 0 |
 | Göteborg | Wed 11.11. 11:47 | 19 h 12 min | 2 | 0 |
 | Malmö | Wed 11.11. 11:53 | 19 h 18 min | 2 | 0 |
 | Valga | Wed 11.11. 14:14 | 6 h 44 min | 1 | 0 |
@@ -170,7 +175,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Frankfurt | Thu 12.11. 01:04 | 32 h 29 min | 5 | 0 |
 | Köln | Thu 12.11. 02:09 | 33 h 34 min | 5 | 0 |
 | Hannover | Thu 12.11. 02:42 | 34 h 07 min | 5 | 0 |
-| Boden | Thu 12.11. 05:42 | 37 h 07 min | 2 | 0 |
 | Munich | Thu 12.11. 06:13 | 37 h 38 min | 5 | 0 |
 | Basel | Thu 12.11. 06:21 | 37 h 46 min | 6 | 0 |
 | Offenburg | Thu 12.11. 06:39 | 38 h 04 min | 5 | 0 |

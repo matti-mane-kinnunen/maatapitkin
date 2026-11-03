@@ -1923,3 +1923,48 @@ legs:
   - {from: Warsaw, to: Budapest, service: "IC", mode: train, runs: "sat", times: ["08:20-19:49"], query: "*", checked: 2026-11-03, source: transitous}
   - {from: Krakow, to: Budapest, dep: "10:23", arr: "19:49", service: "IC 205", mode: train, checked: 2026-11-03, source: manual}
   - {from: Krakow, to: Budapest, dep: "20:57", arr: "08:29", service: "IC 417", mode: train, night: true, checked: 2026-11-03, source: manual}
+  - {from: Boden, to: Narvik, dep: "06:07", arr: "12:37", service: "IC 98", mode: train, runs: "fri,sat,sun", checked: 2026-11-03, source: manual}
+  - {from: Helsinki, to: Kuopio, service: "IC", mode: train, times: ["08:14-12:29", "11:14-15:35", "14:14-18:30", "15:59-21:35", "19:14-23:23"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Kuopio, service: "IC", mode: train, runs: "fri,sat,sun", times: ["15:24-19:50"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Kuopio, service: "IC", mode: train, runs: "fri,sun", times: ["09:30-13:55"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Kuopio, service: "IC", mode: train, runs: "mon-fri,sat", times: ["05:54-10:12"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Kuopio, service: "IC", mode: train, runs: "sat,sun", times: ["12:00-17:55"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Vaasa, service: "IC", mode: train, times: ["09:20-13:22", "11:00-15:17", "15:20-19:10", "17:20-21:02"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Vaasa, service: "IC", mode: train, runs: "mon-fri,sat", times: ["07:20-11:07"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Vaasa, service: "IC", mode: train, runs: "mon-fri,sun", times: ["20:20-23:59"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Vaasa, service: "IC", mode: train, runs: "sat", times: ["07:26-11:07", "20:00-23:59"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Helsinki, to: Vaasa, service: "IC", mode: train, runs: "sat,sun", times: ["09:26-13:22"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Vaasa, to: Umeå, dep: "08:00", arr: "10:30", service: "WasaLine 08:00 Thu", mode: ferry, runs: "thu,fri", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "08:00", arr: "11:15", service: "WasaLine 08:00 Sun", mode: ferry, runs: "sun", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "09:00", arr: "12:00", service: "WasaLine 09:00", mode: ferry, runs: "sat", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "14:00", arr: "17:15", service: "WasaLine 14:00", mode: ferry, runs: "tue", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "14:30", arr: "17:30", service: "WasaLine 14:30", mode: ferry, runs: "wed", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "16:45", arr: "19:15", service: "WasaLine 16:45", mode: ferry, runs: "thu,fri", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "20:00", arr: "23:15", service: "WasaLine 20:00 Mon", mode: ferry, runs: "mon", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "20:00", arr: "23:00", service: "WasaLine 20:00 Sun", mode: ferry, runs: "sun", checked: 2026-11-03, source: manual}
+  - {from: Vaasa, to: Umeå, dep: "23:45", arr: "06:00", service: "WasaLine 23:45", mode: ferry, night: true, runs: "tue", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "08:00", arr: "13:00", service: "WasaLine 08:00", mode: ferry, runs: "tue,wed", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "11:15", arr: "16:00", service: "WasaLine 11:15", mode: ferry, runs: "thu,fri", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "11:30", arr: "17:00", service: "WasaLine 11:30", mode: ferry, runs: "mon", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "13:00", arr: "18:15", service: "WasaLine 13:00", mode: ferry, runs: "sun", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "17:00", arr: "22:00", service: "WasaLine 17:00", mode: ferry, runs: "sat", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "18:15", arr: "23:00", service: "WasaLine 18:15", mode: ferry, runs: "tue", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "19:00", arr: "00:00", service: "WasaLine 19:00", mode: ferry, night: true, runs: "wed", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Vaasa, dep: "20:15", arr: "01:00", service: "WasaLine 20:15", mode: ferry, runs: "thu,fri", checked: 2026-11-03, source: manual}
+  - {from: Umeå, to: Stockholm, service: "93", mode: train, times: ["01:44-10:13", "21:23-06:20"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Stockholm, service: "93", mode: train, runs: "mon-fri", times: ["04:21-10:38", "06:15-12:38"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Stockholm, service: "93", mode: train, runs: "mon-fri,sun", times: ["14:20-20:38"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Stockholm, service: "93", mode: train, runs: "sat", times: ["07:18-13:38", "15:17-21:38"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Stockholm, service: "93", mode: train, runs: "sat,sun", times: ["09:13-15:38"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Boden, service: "94", mode: train, times: ["13:30-16:57"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Boden, service: "94", mode: train, runs: "mon-fri,sat", times: ["02:10-05:42", "08:13-11:35"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Boden, service: "94", mode: train, runs: "mon-fri,sun", times: ["18:32-22:09"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Boden, service: "94", mode: train, runs: "sun", times: ["02:10-06:09"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, times: ["01:44-05:26", "10:35-13:40"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "fri,sat", times: ["21:23-01:03"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "mon-fri", times: ["05:34-08:39", "06:15-08:57", "06:34-09:48", "07:35-10:48", "08:35-11:39"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "mon-fri,sat", times: ["16:34-19:48"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "mon-fri,sun", times: ["14:20-17:00"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "sat", times: ["07:18-09:55", "15:17-17:59"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "sat,sun", times: ["09:13-11:55", "12:35-15:40"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Umeå, to: Sundsvall, service: "93", mode: train, runs: "sun", times: ["15:35-18:39", "17:35-20:41", "18:35-21:47"], query: "*", checked: 2026-11-03, source: transitous}

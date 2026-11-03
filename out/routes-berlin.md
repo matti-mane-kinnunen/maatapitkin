@@ -245,6 +245,8 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Ruse | Thu 12.11. 13:40 | 54 h 28 min | 3 | 0 |
 | Valga | Thu 12.11. 14:13 | 45 h 29 min | 4 | 2 |
 | Algeciras | Thu 12.11. 13:59 | 55 h 16 min | 4 | 2 |
+| Vaasa | Thu 12.11. 15:17 | 51 h 43 min | 4 | 0 |
+| Kuopio | Thu 12.11. 15:35 | 52 h 01 min | 4 | 0 |
 | Galway | Thu 12.11. 13:51 | 40 h 00 min | 4 | 1 |
 | Pozzallo | Thu 12.11. 15:58 | 57 h 22 min | 4 | 0 |
 | Badajoz | Thu 12.11. 16:11 | 40 h 03 min | 4 | 1 |
@@ -252,9 +254,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Oulu | Thu 12.11. 17:48 | 54 h 14 min | 4 | 0 |
 | Tanger Med | Thu 12.11. 16:30 | 58 h 47 min | 5 | 2 |
 | Tanger | Thu 12.11. 18:00 | 60 h 17 min | 6 | 2 |
+| Umeå | Thu 12.11. 19:15 | 56 h 41 min | 5 | 0 |
 | Rovaniemi | Thu 12.11. 20:23 | 56 h 49 min | 4 | 0 |
 | Abrantes | Thu 12.11. 20:52 | 45 h 44 min | 5 | 1 |
 | Casablanca | Thu 12.11. 21:17 | 63 h 34 min | 7 | 2 |
+| Sundsvall | Fri 13.11. 05:26 | 66 h 52 min | 6 | 0 |
 | Varna | Fri 13.11. 06:50 | 71 h 38 min | 5 | 0 |
 | Chania | Fri 13.11. 07:00 | 71 h 24 min | 5 | 1 |
 | Ventimiglia | Fri 13.11. 07:48 | 55 h 40 min | 4 | 2 |

@@ -208,7 +208,9 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Donostia | Wed 11.11. 13:22 | 31 h 00 min | 5 | 1 |
 | Ancona | Wed 11.11. 13:34 | 31 h 12 min | 4 | 1 |
 | Mockava | Wed 11.11. 14:43 | 31 h 21 min | 3 | 1 |
+| Vaasa | Wed 11.11. 15:17 | 32 h 14 min | 3 | 0 |
 | Barcelona | Wed 11.11. 14:32 | 32 h 10 min | 3 | 1 |
+| Kuopio | Wed 11.11. 15:35 | 32 h 32 min | 3 | 0 |
 | Trondheim | Wed 11.11. 14:40 | 32 h 37 min | 3 | 1 |
 | Glasgow | Wed 11.11. 14:02 | 32 h 40 min | 4 | 1 |
 | Naples | Wed 11.11. 15:03 | 32 h 41 min | 5 | 1 |
@@ -240,6 +242,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Taormina | Thu 12.11. 10:08 | 51 h 46 min | 7 | 2 |
 | Newcastle | Thu 12.11. 09:15 | 51 h 53 min | 3 | 0 |
 | Granada | Thu 12.11. 10:25 | 52 h 03 min | 6 | 2 |
+| Umeå | Thu 12.11. 10:30 | 52 h 27 min | 4 | 1 |
 | Vitoria-Gasteiz | Thu 12.11. 10:38 | 52 h 16 min | 5 | 2 |
 | Syracuse | Thu 12.11. 11:29 | 53 h 07 min | 4 | 0 |
 | Patras | Thu 12.11. 13:00 | 53 h 38 min | 5 | 1 |
@@ -251,6 +254,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Pozzallo | Thu 12.11. 15:58 | 57 h 36 min | 5 | 0 |
 | Badajoz | Thu 12.11. 16:11 | 57 h 49 min | 5 | 1 |
 | Tarifa | Thu 12.11. 16:45 | 58 h 23 min | 6 | 2 |
+| Sundsvall | Thu 12.11. 17:00 | 58 h 57 min | 5 | 1 |
 | Tanger Med | Thu 12.11. 16:30 | 59 h 08 min | 6 | 2 |
 | Tanger | Thu 12.11. 18:00 | 60 h 38 min | 7 | 2 |
 | Abrantes | Thu 12.11. 20:52 | 63 h 30 min | 6 | 1 |

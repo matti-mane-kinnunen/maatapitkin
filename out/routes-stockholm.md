@@ -171,6 +171,8 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Kolding | Wed 11.11. 12:59 | 19 h 30 min | 1 | 0 |
 | Basel | Wed 11.11. 13:21 | 19 h 52 min | 1 | 0 |
 | Munich | Wed 11.11. 14:05 | 20 h 36 min | 1 | 0 |
+| Vaasa | Wed 11.11. 15:17 | 22 h 17 min | 1 | 0 |
+| Kuopio | Wed 11.11. 15:35 | 22 h 35 min | 1 | 0 |
 | Trondheim | Wed 11.11. 14:40 | 20 h 21 min | 1 | 1 |
 | Zürich | Wed 11.11. 14:52 | 21 h 23 min | 2 | 0 |
 | Bergen | Wed 11.11. 15:00 | 20 h 41 min | 1 | 1 |
@@ -221,6 +223,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Ayr | Thu 12.11. 08:51 | 40 h 22 min | 5 | 0 |
 | Newcastle | Thu 12.11. 09:15 | 40 h 46 min | 3 | 0 |
 | Szeged | Thu 12.11. 10:16 | 40 h 47 min | 4 | 1 |
+| Umeå | Thu 12.11. 10:30 | 42 h 30 min | 2 | 1 |
 | Syracuse | Thu 12.11. 11:29 | 42 h 00 min | 5 | 0 |
 | Palermo | Thu 12.11. 11:55 | 42 h 26 min | 5 | 0 |
 | Valga | Thu 12.11. 14:14 | 45 h 14 min | 2 | 1 |
@@ -234,6 +237,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Galway | Thu 12.11. 13:51 | 45 h 22 min | 6 | 1 |
 | Kaunas | Thu 12.11. 16:20 | 45 h 51 min | 4 | 1 |
 | Pozzallo | Thu 12.11. 15:58 | 46 h 29 min | 6 | 0 |
+| Sundsvall | Thu 12.11. 17:00 | 49 h 00 min | 3 | 1 |
 | Kaisiadorys | Thu 12.11. 18:18 | 47 h 49 min | 5 | 1 |
 | Messina | Thu 12.11. 18:30 | 49 h 01 min | 6 | 0 |
 | Valencia | Thu 12.11. 19:02 | 49 h 33 min | 4 | 1 |
