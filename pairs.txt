@@ -102,7 +102,8 @@ Basel -> Lugano : *
 Lugano -> Milan : *
 Milan -> Venice : *
 Krakow -> Prague : *
-Krakow -> Budapest : *
+Krakow -> Budapest : IC 205 10:23-19:49          # bahn.de, Nov 2026; Transitous finds no direct trains
+Krakow -> Budapest : IC 417 night 20:57-08:29    # bahn.de, Nov 2026; overnight
 Prague -> Budapest : *
 Munich -> Ljubljana : *
 Munich -> Zürich : *
