@@ -469,3 +469,5 @@ Vaasa -> Oulu :*
 Vaasa -> Rovaniemi :*
 Oulu -> Rovaniemi : * 
 
+# Turkey
+Ankara -> Izmir :*
