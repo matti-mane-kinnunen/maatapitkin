@@ -22,7 +22,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-12 | The interactive map is the main output | 30.10.2026 | Accepted |
 | D-13 | Remove the Graphviz graph | 31.10.2026 | Accepted |
 | D-14 | Git workflow: Claude commits on the Mac, Matti pushes | 30.10.2026 | Accepted |
-| D-15 | Which places count as capitals | 30.10.2026 | Accepted |
+| D-15 | Which places count as capitals | 30.10.2026 | Accepted (updated 3.11.) |
 | D-16 | Time zones in door-to-door times | 31.10.2026 | Accepted |
 | D-17 | Trains that do not run every day | – | Superseded by D-24 |
 | D-18 | The map fits itself to the data; labels never overlap | 31.10.2026 | Accepted |
@@ -260,6 +260,9 @@ is the capital of the Netherlands (The Hague is kept as seat of government, not 
 Belfast and the Vatican are included. Capitals with no connections yet are listed under
 `not_yet_covered` and shown dashed on the map; when a connection is added they move over
 automatically.
+
+**Update 3.11.2026 (Facebook feedback).** All four UK nations count: Edinburgh (Scotland) and
+Cardiff (Wales) are capitals like Belfast (Northern Ireland), each with `note: capital of …`.
 
 ## D-16 Time zones in door-to-door times
 **Date:** 31.10.2026 · **Status:** Accepted
