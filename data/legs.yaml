@@ -1904,3 +1904,17 @@ legs:
   - {from: Wroclaw, to: Prague, dep: "09:13", arr: "13:14", service: "IC 261", mode: train, checked: 2026-11-03, source: manual}
   - {from: Wroclaw, to: Prague, dep: "13:13", arr: "17:14", service: "IC 263", mode: train, checked: 2026-11-03, source: manual}
   - {from: Wroclaw, to: Prague, dep: "17:13", arr: "21:14", service: "IC 265", mode: train, checked: 2026-11-03, source: manual}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "fri", times: ["21:48-23:44", "22:49-01:00"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "fri,sat", times: ["20:48-22:41"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "mon-fri", times: ["05:23-08:06", "06:48-08:39", "07:12-09:08", "08:18-10:12", "08:48-10:37", "09:18-11:07",
+      "10:16-12:10", "10:48-12:37", "11:16-13:16", "11:48-13:36", "12:13-14:08", "13:15-15:08",
+      "14:15-16:06", "14:48-16:38", "15:16-17:09", "16:18-18:06", "17:48-19:38", "18:18-20:14",
+      "19:18-21:02", "19:48-21:38"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "mon-fri,sat", times: ["07:48-09:36", "09:48-11:40", "12:48-14:37", "13:48-15:36", "15:48-17:37", "16:48-18:37",
+      "17:18-19:10", "18:48-20:37"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "mon-thu", times: ["20:48-22:47", "21:48-23:46", "22:49-01:36"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "sat", times: ["06:48-08:37", "08:13-10:20", "08:48-10:40", "09:15-11:26", "10:13-12:17", "10:48-12:40",
+      "11:48-13:37", "14:48-16:37", "16:16-18:10", "18:18-20:10", "19:18-21:11", "19:48-21:37"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "sun", times: ["08:31-10:34", "09:31-11:33", "10:38-12:34", "11:38-13:34", "12:38-14:35", "13:38-15:40",
+      "14:08-16:12", "14:38-16:34", "15:38-17:40", "16:38-18:34", "17:38-19:34", "18:38-20:34",
+      "19:38-21:35", "20:38-22:37", "21:38-23:34"], query: "*", checked: 2026-11-03, source: transitous}

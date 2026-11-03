@@ -18,9 +18,11 @@ _leave Stockholm Tue 10.11.2026 from 16:00 · generated 3.11.2026. Change 20 min
 | Vienna | Tue 10.11. 17:29 | Wed 11.11. 19:32 | 26 h 03 min | 2 | 1 | 0 |  |
 | Luxembourg | Tue 10.11. 17:29 | Wed 11.11. 19:53 | 26 h 24 min | 3 | 1 | 0 |  |
 | Bratislava | Tue 10.11. 17:29 | Wed 11.11. 21:10 | 27 h 41 min | 3 | 1 | 0 |  |
+| Cardiff | Tue 10.11. 17:29 | Wed 11.11. 20:37 | 28 h 08 min | 4 | 1 | 0 |  |
 | Rome | Tue 10.11. 17:29 | Wed 11.11. 22:39 | 29 h 10 min | 4 | 1 | 0 |  |
 | Vatican | Tue 10.11. 17:29 | Wed 11.11. 23:19 | 29 h 50 min | 5 | 1 | 0 |  |
 | Budapest | Tue 10.11. 17:29 | Wed 11.11. 23:35 | 30 h 06 min | 3 | 1 | 0 |  |
+| Edinburgh | Tue 10.11. 17:29 | Wed 11.11. 23:35 | 31 h 06 min | 4 | 1 | 0 |  |
 | Tallinn | Tue 10.11. 16:00 | Thu 12.11. 09:30 | 40 h 30 min | 1 | 1 | 1 (Helsinki) |  |
 | San Marino | Tue 10.11. 17:29 | Thu 12.11. 09:00 | 39 h 31 min | 6 | 1 | 1 (Rimini) | fewest changes: 49 h 31 min, 4 ch., 0 hotel; fewest hotel nights: 44 h 31 min, 5 ch., 0 hotel |
 | Dublin | Tue 10.11. 17:29 | Thu 12.11. 11:00 | 42 h 31 min | 5 | 1 | 1 (Holyhead) |  |
@@ -66,10 +68,12 @@ _Night trains and night buses left out; night ferries still used._
 | London | Thu 12.11. 08:30 | 41 h 11 min | 5 | 2 (Copenhagen, Paris) | +16 h 05 min |
 | Luxembourg | Thu 12.11. 09:45 | 41 h 26 min | 5 | 2 (Copenhagen, Paris) | +15 h 02 min |
 | Budapest | Thu 12.11. 10:35 | 42 h 16 min | 5 | 2 (Copenhagen, Vienna) | +12 h 10 min |
+| Cardiff | Thu 12.11. 11:40 | 44 h 21 min | 6 | 2 (Copenhagen, Paris) | +16 h 13 min |
 | Rome | Thu 12.11. 13:10 | 44 h 51 min | 6 | 2 (Copenhagen, Lugano) | +15 h 41 min |
 | Vatican | Thu 12.11. 13:50 | 45 h 31 min | 7 | 2 (Copenhagen, Lugano) | +15 h 41 min |
 | Ljubljana | Thu 12.11. 13:53 | 45 h 34 min | 5 | 2 (Copenhagen, Vienna) | +1 h 10 min |
 | San Marino | Thu 12.11. 14:00 | 45 h 41 min | 8 | 2 (Copenhagen, Lugano) | +6 h 10 min |
+| Edinburgh | Thu 12.11. 13:38 | 46 h 19 min | 6 | 2 (Copenhagen, Paris) | +15 h 13 min |
 | Riga | Thu 12.11. 16:44 | 47 h 44 min | 3 | 1 (Helsinki) | same |
 | Vilnius | Thu 12.11. 17:25 | 48 h 06 min | 6 | 2 (Copenhagen, Warsaw) | +1 h 10 min |
 | Madrid | Thu 12.11. 18:17 | 49 h 58 min | 6 | 2 (Copenhagen, Paris) | +1 h 10 min |
@@ -104,9 +108,11 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Vienna | Tue 10.11. 06:20 | Wed 11.11. 07:00 | 24 h 40 min | arrives 12 h 32 min earlier |
 | Luxembourg | Tue 10.11. 08:23 | Wed 11.11. 14:49 | 30 h 26 min | arrives 5 h 04 min earlier |
 | Bratislava | Tue 10.11. 06:20 | Wed 11.11. 08:44 | 26 h 24 min | arrives 12 h 26 min earlier |
+| Cardiff | Tue 10.11. 08:23 | Wed 11.11. 15:36 | 32 h 13 min | arrives 5 h 01 min earlier |
 | Rome | Tue 10.11. 08:23 | Wed 11.11. 15:49 | 31 h 26 min | arrives 6 h 50 min earlier |
 | Vatican | Tue 10.11. 08:23 | Wed 11.11. 16:29 | 32 h 06 min | arrives 6 h 50 min earlier |
 | Budapest | Tue 10.11. 06:20 | Wed 11.11. 10:35 | 28 h 15 min | arrives 13 h 00 min earlier |
+| Edinburgh | Tue 10.11. 08:23 | Wed 11.11. 17:38 | 34 h 15 min | arrives 5 h 57 min earlier |
 | Tallinn | – | – | – | no gain: take the 16:00 journey |
 | San Marino | Tue 10.11. 08:23 | Wed 11.11. 16:00 | 31 h 37 min | arrives 17 h 00 min earlier |
 | Dublin | – | – | – | no gain: take the 16:00 journey |
@@ -196,7 +202,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Ancona | Wed 11.11. 23:38 | 30 h 09 min | 4 | 0 |
 | Trieste | Wed 11.11. 23:45 | 30 h 16 min | 4 | 0 |
 | Holyhead | Wed 11.11. 23:02 | 30 h 33 min | 4 | 0 |
-| Edinburgh | Wed 11.11. 23:35 | 31 h 06 min | 4 | 0 |
 | Glasgow | Thu 12.11. 00:09 | 31 h 40 min | 4 | 0 |
 | Villa San Giovanni | Thu 12.11. 06:10 | 36 h 41 min | 5 | 0 |
 | Foggia | Thu 12.11. 06:17 | 36 h 48 min | 5 | 0 |
@@ -366,6 +371,15 @@ _Fastest: 27 h 41 min, arrive Wed 11.11. 21:10, 3 changes, 0 hotel nights_
 - Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
 - Wed 11.11. 20:14 → Wed 11.11. 21:10  **Vienna → Bratislava**  REX
 
+### Cardiff
+_Fastest: 28 h 08 min, arrive Wed 11.11. 20:37, 4 changes, 0 hotel nights_
+
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wed 11.11. 06:29 → Wed 11.11. 10:14  **Hamburg → Frankfurt**  ICE
+- Wed 11.11. 11:01 → Wed 11.11. 14:51  **Frankfurt → Paris**  ICE
+- Wed 11.11. 16:02 → Wed 11.11. 17:35  **Paris → London**  EST FRPNO
+- Wed 11.11. 18:48 → Wed 11.11. 20:37  **London → Cardiff**  GWR GW4301
+
 ### Rome
 _Fastest: 29 h 10 min, arrive Wed 11.11. 22:39, 4 changes, 0 hotel nights_
 
@@ -393,6 +407,15 @@ _Fastest: 30 h 06 min, arrive Wed 11.11. 23:35, 3 changes, 0 hotel nights_
 - Wed 11.11. 08:01 → Wed 11.11. 14:05  **Hamburg → Munich**  ICE
 - Wed 11.11. 15:13 → Wed 11.11. 19:32  **Munich → Vienna**  IC
 - Wed 11.11. 20:37 → Wed 11.11. 23:35  **Vienna → Budapest**  xpress
+
+### Edinburgh
+_Fastest: 31 h 06 min, arrive Wed 11.11. 23:35, 4 changes, 0 hotel nights_
+
+- Tue 10.11. 17:29 → Wed 11.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wed 11.11. 06:29 → Wed 11.11. 10:14  **Hamburg → Frankfurt**  ICE
+- Wed 11.11. 11:01 → Wed 11.11. 14:51  **Frankfurt → Paris**  ICE
+- Wed 11.11. 16:02 → Wed 11.11. 17:35  **Paris → London**  EST FRPNO
+- Wed 11.11. 19:00 → Wed 11.11. 23:35  **London → Edinburgh**  LNER
 
 ### Tallinn
 _Fastest: 40 h 30 min, arrive Thu 12.11. 09:30, 1 changes, 1 hotel nights_

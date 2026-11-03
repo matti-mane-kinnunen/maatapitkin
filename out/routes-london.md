@@ -6,7 +6,9 @@ _leave London Tue 10.11.2026 from 06:00 · generated 3.11.2026. Change 20 min (m
 |---|---|---|---|---|---|---|---|
 | Brussels | Tue 10.11. 06:16 | Tue 10.11. 09:13 | 1 h 57 min | 0 | 0 | 0 |  |
 | Paris | Tue 10.11. 06:01 | Tue 10.11. 09:22 | 2 h 21 min | 0 | 0 | 0 |  |
+| Cardiff | Tue 10.11. 06:48 | Tue 10.11. 08:39 | 1 h 51 min | 0 | 0 | 0 |  |
 | Amsterdam | Tue 10.11. 06:16 | Tue 10.11. 11:20 | 4 h 04 min | 0 | 0 | 0 |  |
+| Edinburgh | Tue 10.11. 06:30 | Tue 10.11. 10:38 | 4 h 08 min | 0 | 0 | 0 |  |
 | Luxembourg | Tue 10.11. 06:16 | Tue 10.11. 12:49 | 5 h 33 min | 1 | 0 | 0 |  |
 | Bern | Tue 10.11. 06:01 | Tue 10.11. 14:56 | 7 h 55 min | 2 | 0 | 0 |  |
 | Berlin | Tue 10.11. 06:16 | Tue 10.11. 18:17 | 11 h 01 min | 2 | 0 | 0 |  |
@@ -52,7 +54,9 @@ _Night trains and night buses left out; night ferries still used._
 |---|---|---|---|---|---|
 | Brussels | Tue 10.11. 09:13 | 1 h 57 min | 0 | 0 | same |
 | Paris | Tue 10.11. 09:22 | 2 h 21 min | 0 | 0 | same |
+| Cardiff | Tue 10.11. 08:39 | 1 h 51 min | 0 | 0 | same |
 | Amsterdam | Tue 10.11. 11:20 | 4 h 04 min | 0 | 0 | same |
+| Edinburgh | Tue 10.11. 10:38 | 4 h 08 min | 0 | 0 | same |
 | Luxembourg | Tue 10.11. 12:49 | 5 h 33 min | 1 | 0 | same |
 | Bern | Tue 10.11. 14:56 | 7 h 55 min | 2 | 0 | same |
 | Berlin | Tue 10.11. 18:17 | 11 h 01 min | 2 | 0 | same |
@@ -92,7 +96,9 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 |---|---|---|---|---|
 | Brussels | Tue 10.11. 17:04 | Tue 10.11. 20:05 | 2 h 01 min | arrives 10 h 52 min later |
 | Paris | Tue 10.11. 17:31 | Tue 10.11. 20:53 | 2 h 22 min | arrives 11 h 31 min later |
+| Cardiff | Tue 10.11. 17:18 | Tue 10.11. 19:10 | 1 h 52 min | arrives 10 h 31 min later |
 | Amsterdam | Tue 10.11. 18:04 | Tue 10.11. 23:20 | 4 h 16 min | arrives 12 h 00 min later |
+| Edinburgh | Tue 10.11. 17:03 | Tue 10.11. 21:34 | 4 h 31 min | arrives 10 h 56 min later |
 | Luxembourg | Tue 10.11. 17:04 | Tue 10.11. 23:49 | 5 h 45 min | arrives 11 h 00 min later |
 | Bern | Tue 10.11. 17:31 | Wed 11.11. 11:56 | 17 h 25 min | arrives 21 h 00 min later |
 | Berlin | Tue 10.11. 17:04 | Wed 11.11. 14:17 | 20 h 13 min | arrives 20 h 00 min later |
@@ -136,7 +142,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 |---|---|---|---|---|
 | Manchester | Tue 10.11. 08:25 | 2 h 17 min | 0 | 0 |
 | Lille | Tue 10.11. 09:26 | 1 h 22 min | 0 | 0 |
-| Edinburgh | Tue 10.11. 10:38 | 4 h 08 min | 0 | 0 |
 | Köln | Tue 10.11. 12:15 | 4 h 59 min | 1 | 0 |
 | Strasbourg | Tue 10.11. 12:38 | 5 h 37 min | 1 | 0 |
 | Penzance | Tue 10.11. 11:40 | 5 h 40 min | 0 | 0 |
@@ -265,10 +270,20 @@ _Fastest: 2 h 21 min, arrive Tue 10.11. 09:22, 0 changes, 0 hotel nights_
 
 - Tue 10.11. 06:01 → Tue 10.11. 09:22  **London → Paris**  EST GBSPX
 
+### Cardiff
+_Fastest: 1 h 51 min, arrive Tue 10.11. 08:39, 0 changes, 0 hotel nights_
+
+- Tue 10.11. 06:48 → Tue 10.11. 08:39  **London → Cardiff**  GWR GW4301
+
 ### Amsterdam
 _Fastest: 4 h 04 min, arrive Tue 10.11. 11:20, 0 changes, 0 hotel nights_
 
 - Tue 10.11. 06:16 → Tue 10.11. 11:20  **London → Amsterdam**  EST Eurostar
+
+### Edinburgh
+_Fastest: 4 h 08 min, arrive Tue 10.11. 10:38, 0 changes, 0 hotel nights_
+
+- Tue 10.11. 06:30 → Tue 10.11. 10:38  **London → Edinburgh**  LNER
 
 ### Luxembourg
 _Fastest: 5 h 33 min, arrive Tue 10.11. 12:49, 1 changes, 0 hotel nights_

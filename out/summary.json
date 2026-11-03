@@ -7,31 +7,31 @@
   "2026-11-15"
  ],
  "draft": false,
- "departures": 5810,
+ "departures": 5871,
  "warnings": 0,
  "capitals": {
   "2026-11-10": {
-   "with_night_trains": 39,
-   "without": 33
+   "with_night_trains": 41,
+   "without": 35
   },
   "2026-11-13": {
-   "with_night_trains": 39,
-   "without": 33
+   "with_night_trains": 41,
+   "without": 35
   },
   "2026-11-14": {
-   "with_night_trains": 39,
-   "without": 33
+   "with_night_trains": 41,
+   "without": 35
   },
   "2026-11-15": {
-   "with_night_trains": 39,
-   "without": 33
+   "with_night_trains": 41,
+   "without": 35
   }
  },
  "places_reached": {
-  "2026-11-10": 157,
-  "2026-11-13": 157,
-  "2026-11-14": 157,
-  "2026-11-15": 157
+  "2026-11-10": 158,
+  "2026-11-13": 158,
+  "2026-11-14": 158,
+  "2026-11-15": 158
  },
  "reached": {
   "capitals": [
@@ -47,9 +47,11 @@
    "Brussels",
    "Bucharest",
    "Budapest",
+   "Cardiff",
    "Chisinau",
    "Copenhagen",
    "Dublin",
+   "Edinburgh",
    "Kyiv",
    "Lisbon",
    "Ljubljana",
@@ -85,8 +87,10 @@
    "Bratislava",
    "Brussels",
    "Budapest",
+   "Cardiff",
    "Copenhagen",
    "Dublin",
+   "Edinburgh",
    "Kyiv",
    "Lisbon",
    "Ljubljana",
@@ -143,6 +147,7 @@
    "Bucharest",
    "Budapest",
    "Cairnryan",
+   "Cardiff",
    "Casablanca",
    "Chania",
    "Chisinau",
@@ -280,31 +285,31 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5810,
+   "departures": 5871,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-13": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-14": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-15": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     }
    },
    "places_reached": {
-    "2026-11-10": 157,
-    "2026-11-13": 157,
-    "2026-11-14": 157,
-    "2026-11-15": 157
+    "2026-11-10": 158,
+    "2026-11-13": 158,
+    "2026-11-14": 158,
+    "2026-11-15": 158
    },
    "reached": {
     "capitals": [
@@ -320,9 +325,11 @@
      "Brussels",
      "Bucharest",
      "Budapest",
+     "Cardiff",
      "Chisinau",
      "Copenhagen",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -358,8 +365,10 @@
      "Bratislava",
      "Brussels",
      "Budapest",
+     "Cardiff",
      "Copenhagen",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -416,6 +425,7 @@
      "Bucharest",
      "Budapest",
      "Cairnryan",
+     "Cardiff",
      "Casablanca",
      "Chania",
      "Chisinau",
@@ -553,31 +563,31 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5810,
+   "departures": 5871,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-13": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-14": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-15": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     }
    },
    "places_reached": {
-    "2026-11-10": 157,
-    "2026-11-13": 157,
-    "2026-11-14": 157,
-    "2026-11-15": 157
+    "2026-11-10": 158,
+    "2026-11-13": 158,
+    "2026-11-14": 158,
+    "2026-11-15": 158
    },
    "reached": {
     "capitals": [
@@ -593,8 +603,10 @@
      "Brussels",
      "Bucharest",
      "Budapest",
+     "Cardiff",
      "Chisinau",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -631,7 +643,9 @@
      "Bratislava",
      "Brussels",
      "Budapest",
+     "Cardiff",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -689,6 +703,7 @@
      "Bucharest",
      "Budapest",
      "Cairnryan",
+     "Cardiff",
      "Casablanca",
      "Chania",
      "Chisinau",
@@ -826,31 +841,31 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5810,
+   "departures": 5871,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-13": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-14": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-15": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     }
    },
    "places_reached": {
-    "2026-11-10": 157,
-    "2026-11-13": 157,
-    "2026-11-14": 157,
-    "2026-11-15": 157
+    "2026-11-10": 158,
+    "2026-11-13": 158,
+    "2026-11-14": 158,
+    "2026-11-15": 158
    },
    "reached": {
     "capitals": [
@@ -866,9 +881,11 @@
      "Brussels",
      "Bucharest",
      "Budapest",
+     "Cardiff",
      "Chisinau",
      "Copenhagen",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -904,8 +921,10 @@
      "Bratislava",
      "Brussels",
      "Budapest",
+     "Cardiff",
      "Copenhagen",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -962,6 +981,7 @@
      "Bucharest",
      "Budapest",
      "Cairnryan",
+     "Cardiff",
      "Casablanca",
      "Chania",
      "Chisinau",
@@ -1099,31 +1119,31 @@
     "2026-11-15"
    ],
    "draft": false,
-   "departures": 5810,
+   "departures": 5871,
    "warnings": 0,
    "capitals": {
     "2026-11-10": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-13": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-14": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     },
     "2026-11-15": {
-     "with_night_trains": 39,
-     "without": 33
+     "with_night_trains": 41,
+     "without": 35
     }
    },
    "places_reached": {
-    "2026-11-10": 157,
-    "2026-11-13": 157,
-    "2026-11-14": 157,
-    "2026-11-15": 157
+    "2026-11-10": 158,
+    "2026-11-13": 158,
+    "2026-11-14": 158,
+    "2026-11-15": 158
    },
    "reached": {
     "capitals": [
@@ -1138,9 +1158,11 @@
      "Brussels",
      "Bucharest",
      "Budapest",
+     "Cardiff",
      "Chisinau",
      "Copenhagen",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -1176,8 +1198,10 @@
      "Bratislava",
      "Brussels",
      "Budapest",
+     "Cardiff",
      "Copenhagen",
      "Dublin",
+     "Edinburgh",
      "Helsinki",
      "Kyiv",
      "Lisbon",
@@ -1234,6 +1258,7 @@
      "Bucharest",
      "Budapest",
      "Cairnryan",
+     "Cardiff",
      "Casablanca",
      "Chania",
      "Chisinau",

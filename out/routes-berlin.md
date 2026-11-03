@@ -19,7 +19,9 @@ _leave Berlin Tue 10.11.2026 from 06:00 · generated 3.11.2026. Change 20 min (m
 | Luxembourg | Tue 10.11. 06:09 | Tue 10.11. 21:49 | 15 h 40 min | 4 | 0 | 0 | fewest changes: 15 h 10 min, 2 ch., 0 hotel |
 | Zagreb | Tue 10.11. 06:12 | Tue 10.11. 22:20 | 16 h 08 min | 1 | 0 | 0 |  |
 | Rome | Tue 10.11. 06:36 | Tue 10.11. 23:30 | 16 h 54 min | 2 | 0 | 0 |  |
+| Cardiff | Tue 10.11. 06:43 | Tue 10.11. 22:47 | 17 h 04 min | 3 | 0 | 0 | fewest changes: 24 h 30 min, 2 ch., 1 hotel |
 | Vatican | Tue 10.11. 06:36 | Wed 11.11. 00:10 | 17 h 34 min | 3 | 0 | 0 |  |
+| Edinburgh | Tue 10.11. 09:09 | Wed 11.11. 07:30 | 23 h 21 min | 2 | 1 | 0 |  |
 | San Marino | Tue 10.11. 06:36 | Wed 11.11. 09:00 | 26 h 24 min | 3 | 0 | 1 (Rimini) | fewest hotel nights: 31 h 48 min, 3 ch., 0 hotel |
 | Belgrade | Tue 10.11. 06:12 | Wed 11.11. 09:15 | 27 h 03 min | 4 | 0 | 1 (Subotica) | fewest hotel nights: 36 h 23 min, 4 ch., 0 hotel |
 | Bucharest | Tue 10.11. 06:12 | Wed 11.11. 10:37 | 27 h 25 min | 2 | 1 | 0 |  |
@@ -65,10 +67,12 @@ _Night trains and night buses left out; night ferries still used._
 | Luxembourg | Tue 10.11. 21:49 | 15 h 40 min | 4 | 0 | same |
 | Zagreb | Tue 10.11. 22:20 | 16 h 08 min | 1 | 0 | same |
 | Rome | Tue 10.11. 23:30 | 16 h 54 min | 2 | 0 | same |
+| Cardiff | Tue 10.11. 22:47 | 17 h 04 min | 3 | 0 | same |
 | Vatican | Wed 11.11. 00:10 | 17 h 34 min | 3 | 0 | same |
 | San Marino | Wed 11.11. 09:00 | 26 h 24 min | 3 | 1 (Rimini) | same |
 | Belgrade | Wed 11.11. 09:15 | 27 h 03 min | 4 | 1 (Subotica) | same |
 | Ljubljana | Wed 11.11. 10:57 | 28 h 45 min | 2 | 1 (Zagreb) | same |
+| Edinburgh | Wed 11.11. 10:38 | 26 h 29 min | 2 | 1 (London) | +3 h 08 min |
 | Oslo | Wed 11.11. 13:16 | 26 h 42 min | 2 | 1 (Göteborg) | same |
 | Vilnius | Wed 11.11. 17:25 | 24 h 41 min | 2 | 1 (Warsaw) | same |
 | Madrid | Wed 11.11. 18:17 | 35 h 34 min | 3 | 1 (Paris) | same |
@@ -105,7 +109,9 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Luxembourg | Tue 10.11. 22:51 | Wed 11.11. 14:49 | 15 h 58 min | arrives 17 h 00 min later |
 | Zagreb | Tue 10.11. 20:11 | Wed 11.11. 19:20 | 23 h 09 min | arrives 21 h 00 min later |
 | Rome | Tue 10.11. 17:27 | Wed 11.11. 15:49 | 22 h 22 min | arrives 16 h 19 min later |
+| Cardiff | Tue 10.11. 17:37 | Wed 11.11. 15:36 | 22 h 59 min | arrives 16 h 49 min later |
 | Vatican | Tue 10.11. 17:27 | Wed 11.11. 16:29 | 23 h 02 min | arrives 16 h 19 min later |
+| Edinburgh | Tue 10.11. 17:37 | Wed 11.11. 17:38 | 25 h 01 min | arrives 10 h 08 min later |
 | San Marino | Tue 10.11. 17:27 | Wed 11.11. 16:00 | 22 h 33 min | arrives 7 h 00 min later |
 | Belgrade | Tue 10.11. 17:28 | Wed 11.11. 18:35 | 25 h 07 min | arrives 9 h 20 min later |
 | Bucharest | Tue 10.11. 17:28 | Thu 12.11. 08:23 | 37 h 55 min | arrives 21 h 46 min later |
@@ -188,7 +194,6 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Bari | Wed 11.11. 08:10 | 25 h 34 min | 5 | 0 |
 | Naples | Wed 11.11. 08:12 | 25 h 36 min | 3 | 0 |
 | Donostia | Wed 11.11. 08:21 | 25 h 38 min | 4 | 1 |
-| Edinburgh | Wed 11.11. 07:30 | 23 h 21 min | 2 | 0 |
 | Glasgow | Wed 11.11. 07:30 | 23 h 21 min | 2 | 0 |
 | Nice | Wed 11.11. 08:37 | 25 h 54 min | 3 | 1 |
 | Penzance | Wed 11.11. 07:55 | 23 h 46 min | 2 | 0 |
@@ -403,6 +408,24 @@ _Fastest: 16 h 54 min, arrive Tue 10.11. 23:30, 2 changes, 0 hotel nights_
 - Tue 10.11. 13:22 → Tue 10.11. 20:16  **Munich → Bologna**  ICE
 - Tue 10.11. 21:02 → Tue 10.11. 23:30  **Bologna → Rome**  FR
 
+### Cardiff
+_Fastest: 17 h 04 min, arrive Tue 10.11. 22:47, 3 changes, 0 hotel nights_
+
+- Tue 10.11. 06:43 → Tue 10.11. 10:44  **Berlin → Frankfurt**  ICE
+- Wait 2 h 09 min in Frankfurt
+- Tue 10.11. 12:53 → Tue 10.11. 16:50  **Frankfurt → Paris**  ICE
+- Tue 10.11. 18:09 → Tue 10.11. 19:38  **Paris → London**  EST FRPNO
+- Tue 10.11. 20:48 → Tue 10.11. 22:47  **London → Cardiff**  GWR GW4301
+
+### Cardiff — fewest changes
+_Fewest changes: 24 h 30 min, arrive Wed 11.11. 08:39, 2 changes, 1 hotel nights_
+
+- Tue 10.11. 09:09 → Tue 10.11. 16:00  **Berlin → Amsterdam**  ICE
+- Wait 2 h 40 min in Amsterdam
+- Tue 10.11. 18:40 → Tue 10.11. 21:57  **Amsterdam → London**  EST Eurostar
+- 🛏 Overnight in London (Tue 10.11. 21:57 → Wed 11.11. 06:48)
+- Wed 11.11. 06:48 → Wed 11.11. 08:39  **London → Cardiff**  GWR GW4301
+
 ### Vatican
 _Fastest: 17 h 34 min, arrive Wed 11.11. 00:10, 3 changes, 0 hotel nights_
 
@@ -411,6 +434,15 @@ _Fastest: 17 h 34 min, arrive Wed 11.11. 00:10, 3 changes, 0 hotel nights_
 - Tue 10.11. 13:22 → Tue 10.11. 20:16  **Munich → Bologna**  ICE
 - Tue 10.11. 21:02 → Tue 10.11. 23:30  **Bologna → Rome**  FR
 - Tue 10.11. 23:50 → Wed 11.11. 00:10  **Rome → Vatican**  Metro line A
+
+### Edinburgh
+_Fastest: 23 h 21 min, arrive Wed 11.11. 07:30, 2 changes, 0 hotel nights_
+
+- Tue 10.11. 09:09 → Tue 10.11. 16:00  **Berlin → Amsterdam**  ICE
+- Wait 2 h 40 min in Amsterdam
+- Tue 10.11. 18:40 → Tue 10.11. 21:57  **Amsterdam → London**  EST Eurostar
+- Wait 1 h 48 min in London
+- Tue 10.11. 23:45 → Wed 11.11. 07:30  **London → Edinburgh**  LNER  (night)
 
 ### San Marino
 _Fastest: 26 h 24 min, arrive Wed 11.11. 09:00, 3 changes, 1 hotel nights_
