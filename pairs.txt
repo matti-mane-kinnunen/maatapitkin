@@ -433,3 +433,27 @@ Athens -> Chania : Blue Star Ferries ferry night 22:00-07:00 daily   # Crete; fr
 Marseille -> Algiers : Corsica Linea ferry night 10:00-09:00 tue          # ~23 h, arrives Wednesday
 Marseille -> Algiers : Algérie Ferries ferry night 15:00-12:00 sat        # ~21 h, arrives Sunday
 Marseille -> Algiers : Nouris Elbahr ferry night 19:00-17:00 fri          # ~22 h, arrives Saturday
+
+# some additions 3.11.2026
+Helsinki -> Kuopio : *
+Helsinki -> Vaasa : *
+
+# WasaLine Vaasa - Umeå (Uumaja), timetable from wasaline.com, Nov 2026; local times (Finland is an hour ahead)
+Vaasa -> Umeå : WasaLine 08:00 Thu ferry 08:00-10:30 thu,fri
+Vaasa -> Umeå : WasaLine 08:00 Sun ferry 08:00-11:15 sun
+Vaasa -> Umeå : WasaLine 09:00 ferry 09:00-12:00 sat
+Vaasa -> Umeå : WasaLine 14:00 ferry 14:00-17:15 tue
+Vaasa -> Umeå : WasaLine 14:30 ferry 14:30-17:30 wed
+Vaasa -> Umeå : WasaLine 16:45 ferry 16:45-19:15 thu,fri
+Vaasa -> Umeå : WasaLine 20:00 Mon ferry 20:00-23:15 mon
+Vaasa -> Umeå : WasaLine 20:00 Sun ferry 20:00-23:00 sun
+Vaasa -> Umeå : WasaLine 23:45 ferry night 23:45-06:00 tue
+Umeå -> Vaasa : WasaLine 08:00 ferry 08:00-13:00 tue,wed
+Umeå -> Vaasa : WasaLine 11:15 ferry 11:15-16:00 thu,fri
+Umeå -> Vaasa : WasaLine 11:30 ferry 11:30-17:00 mon
+Umeå -> Vaasa : WasaLine 13:00 ferry 13:00-18:15 sun
+Umeå -> Vaasa : WasaLine 17:00 ferry 17:00-22:00 sat
+Umeå -> Vaasa : WasaLine 18:15 ferry 18:15-23:00 tue
+Umeå -> Vaasa : WasaLine 19:00 ferry 19:00-00:00 wed
+Umeå -> Vaasa : WasaLine 20:15 ferry 20:15-01:00 thu,fri
+Umeå -> Stockholm : *

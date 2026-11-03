@@ -39,6 +39,8 @@ settings:
 places:
   Helsinki:   {lat: 60.172, lon: 24.941, capital: true, country: FI, aliases: [Helsingfors]}
   Tampere:    {lat: 61.498, lon: 23.773, country: FI}
+  Vaasa:      {lat: 63.096, lon: 21.616, country: FI}  # station; WasaLine ferries leave from Vaskiluoto, 2 km out
+  Umeå:       {lat: 63.828, lon: 20.268, country: SE, ferry_checkin: 75}  # Umeå C; WasaLine ferries leave from Holmsund, ~20 km: bus + 45 min check-in (D-45)
   Turku:      {lat: 60.435, lon: 22.220, country: FI, aliases: [Åbo]}
   Stockholm:  {lat: 59.330, lon: 18.058, capital: true, country: SE}
   Oslo:       {lat: 59.911, lon: 10.753, capital: true, country: "NO"}
