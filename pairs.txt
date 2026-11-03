@@ -459,3 +459,6 @@ Umeå -> Vaasa : WasaLine 19:00 ferry 19:00-00:00 wed
 Umeå -> Vaasa : WasaLine 20:15 ferry 20:15-01:00 thu,fri
 Umeå -> Stockholm : *
 Umeå -> Boden : *          # night train D 94 (Stockholm - Narvik), leaves Umeå 02:10; on to Narvik with IC 98 from Boden 06:07 (bahn.de, Nov 2026)
+
+Umeå -> Sundsvall :* 
+Sundswall -> Storlien :*
