@@ -462,6 +462,7 @@ Umeå -> Boden : *          # night train D 94 (Stockholm - Narvik), leaves Ume�
 
 Umeå -> Sundsvall :* 
 Sundswall -> Storlien :*
+Sundswall -> Östersund : *
 
 Stockholm -> Umeå :* 
 Vaasa -> Helsinki :*
