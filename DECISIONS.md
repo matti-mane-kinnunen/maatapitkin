@@ -738,6 +738,33 @@ electric lines and overstates it on diesel ones; the UK average is a fair middle
 zigzags and the train factor is conservative. Page +85 KB (3 %). Factors to refresh once a year
 (DATA-12). The rough spots (cabins, long ferries, one rail factor) are listed in the README.
 
+## D-42 Waiting for weekly services instead of looping
+**Date:** 3.11.2026 · **Status:** Accepted
+
+**Context.** Matti found Helsinki → Paris → London → Paris → Andorra (Sunday), a Copenhagen loop via
+Berlin and London, and no Stockholm → Andorra at all. The Andorra sleeper runs on Saturdays only
+(Transitous and bahn.de agree), and the router never waited more than 2 nights in one place, so it
+killed time with round trips. Tunis (two sailings a week) was unreachable for the same reason, and its
+Tuesday 02:30 sailing could never be used: waiting for it counted as a hotel night, and after a hotel
+night nothing leaves before 06:00. "Fewest hotel nights" alternatives also rode night trains back and
+forth (Frankfurt → Hamburg → Frankfurt) to avoid paying for a hotel.
+
+**Decision.**
+- `max_stay_nights: 6` – a week, so any weekly service can be waited for honestly ("4 nights in Paris").
+- A wait that ends by boarding a night train or ferry inside the quiet hours (Palermo 02:30) counts
+  only the nights before that evening: you wait at the port and sleep on board. The 02:30 sailing is
+  marked `night`.
+- An alternative that passes the same place twice is skipped; the next best one is taken.
+- build.py prints a WARNING listing destinations whose journeys still pass a place twice.
+
+**Why.** A loop is never advice anyone would follow; waiting in Paris is (and Paris is a fine place
+to wait). The longer limit only matters when nothing earlier exists – the fastest journey never
+waits without reason – and the build time did not change.
+
+**Consequences.** All five maps, Friday and Sunday, both start times: no loops, 39 capitals each.
+Andorra without night trains stays unreachable (the sleeper is the only way). Helsinki → Tunis
+leaving Friday: 93 h instead of 197 h (Tuesday sailing).
+
 ---
 
 ## Template for a new decision

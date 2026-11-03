@@ -256,6 +256,11 @@ class Router:
         """Hotel nights in a wait from a to b before leg `nxt`: each 03:00 (night_point)
         passed counts one; a wait touching the quiet hours before an ordinary train
         counts one even without passing 03:00 (arrive 01:10, leave 06:20)."""
+        if nxt is not None and nxt.night and self.in_quiet(b):
+            # a night ferry/train leaving after midnight (Palermo 02:30): you wait at the port and board
+            # around midnight - the night is spent on board, so only nights before that evening count
+            cut = (b // DAY) * DAY + self.quiet[0] - 1
+            return self.nights_between(a, cut) if cut > a else 0
         n = self.nights_between(a, b)
         if n == 0 and b > a and not (nxt is not None and nxt.night) and self.overlaps_quiet(a, b):
             n = 1

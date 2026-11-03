@@ -1892,7 +1892,7 @@ legs:
   - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "mon-fri,sat", times: ["07:25-15:18", "09:25-17:49", "13:25-21:15"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "mon-fri,sun", times: ["11:25-19:19"], query: "*", checked: 2026-11-02, source: transitous}
   - {from: Oslo, to: Stavanger, service: "F5", mode: train, runs: "mon-thu,sun", times: ["22:25-07:21"], query: "*", checked: 2026-11-02, source: transitous}
-  - {from: Palermo, to: Tunis, dep: "02:30", arr: "14:00", service: "02:30", mode: ferry, runs: "tue", checked: 2026-11-02, source: manual}
+  - {from: Palermo, to: Tunis, dep: "02:30", arr: "14:00", service: "02:30", mode: ferry, night: true, runs: "tue", checked: 2026-11-02, source: manual}
   - {from: Palermo, to: Tunis, dep: "10:30", arr: "22:30", service: "10:30", mode: ferry, runs: "sat", checked: 2026-11-02, source: manual}
   - {from: Genoa, to: Porto Torres, dep: "20:30", arr: "07:30", service: "Moby Lines", mode: ferry, night: true, checked: 2026-11-02, source: manual}
   - {from: Genoa, to: Bastia, dep: "08:45", arr: "14:15", service: "Moby Lines", mode: ferry, checked: 2026-11-02, source: manual}

@@ -415,7 +415,7 @@ Berlin -> Wroclaw : *                                # EC 59 leaves from Berlin-
 Oslo -> Stavanger : * 
 
 # -- Tunisia --
-Palermo -> Tunis : Ferry 02:30 ferry 02:30-14:00 tue      # operator timetable, Nov 2026
+Palermo -> Tunis : Ferry 02:30 ferry night 02:30-14:00 tue   # operator timetable, Nov 2026; board around midnight
 Palermo -> Tunis : Ferry 10:30 ferry 10:30-22:30 sat      # operator timetable, Nov 2026
 
 # -- Islands: Sardinia, Corsica, Mallorca, Crete --

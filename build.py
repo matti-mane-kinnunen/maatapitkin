@@ -188,7 +188,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
     co2 = CO2(s.get("co2"), net.places)                   # rough CO2 vs flying (IDEA-07, D-41)
 
-    stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0}
+    stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0, "loops": set()}
 
     def compute(night_trains: bool, date: dt.date, start: int = start, only: set | None = None,
                 journeys: dict | None = None):
@@ -205,6 +205,9 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                 return None
             legs = [x for x in j if x["kind"] == "leg"]
             first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
+            visited = [legs[0]["leg"].frm] + [x["leg"].to for x in legs]
+            if len(set(visited)) < len(visited):          # e.g. Paris - London - Paris to kill time (max_stay_nights)
+                stats["loops"].add(cap)
             # clock times are local; door to door is corrected for the time-zone difference
             shift = (utc_offset(net.places[cap], router.date_of(arr), arr % DAY)
                      - utc_offset(net.places[origin], router.date_of(first_dep), first_dep % DAY))
@@ -248,8 +251,14 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                 ok = [l for l in front.get(place, []) if l[2] <= r["arrive"] + max_extra]
                 if not ok:
                     continue
-                c, h, t, lid = min(ok, key=lambda l: order(*l[:3]))
-                alt = build_route(place, router.pareto_journey(lid))
+                alt = None
+                for c, h, t, lid in sorted(ok, key=lambda l: order(*l[:3]))[:20]:
+                    j = router.pareto_journey(lid)
+                    pl = [x["leg"] for x in j if x["kind"] == "leg"]
+                    visited = [pl[0].frm] + [x.to for x in pl]
+                    if len(set(visited)) == len(visited):   # no back-and-forth to dodge a hotel night
+                        alt = build_route(place, j)
+                        break
                 if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
                     alt["label"] = name
                     r["alternatives"].append(alt)
@@ -504,6 +513,9 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
 
     print(f"From {origin}: main journeys {t_main:.0f} s; other start times {t_other:.0f} s "
           f"(sweep {stats['sweep']} searches {stats['t_sweep']:.0f} s, routes {stats['t_compute']:.0f} s)")
+    if stats["loops"]:
+        print(f"From {origin}: WARNING - journeys that pass the same place twice (waiting would need more than "
+              f"max_stay_nights?): {', '.join(sorted(stats['loops']))}")
     print(f"From {origin}: map draws {len(used_pairs)} connections ({len(map_legs)} departures), "
           f"{len(other_pairs)} connections unused")
     print(f"From {origin}: {len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
