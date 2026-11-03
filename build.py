@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Build everything from data/: route table (out/routes.md), map (out/map.html), data (out/network.json).
+"""Build everything from data/: one map per origin (out/site/), route tables (out/routes*.md), data (out/network*.json).
 
     python build.py                # writes out/
     python build.py transfer=15    # minimum change time 15 min (stations with a longer
                                    # change time in places.yaml keep theirs)
-    python build.py night=01       # a wait through 01:00 counts as a hotel night (default 03)
+    python build.py night=02       # a wait through 02:00 counts as a hotel night (default: settings, 01:00)
     python build.py transfer=20 night=2:30 date=2026-11-17
 """
 from __future__ import annotations
@@ -45,9 +45,9 @@ def main():
                     help="travel dates to offer on the map, YYYY-MM-DD,... (default: settings.travel_dates, or the "
                          "travel date and the Friday, Saturday and Sunday after it)")
     ap.add_argument("--transfer", type=int, metavar="N",
-                    help="minimum change time in minutes (default: settings.min_transfer, 10)")
+                    help="minimum change time in minutes (default: settings.min_transfer)")
     ap.add_argument("--start", metavar="T",
-                    help="leave Helsinki from this time on the travel date, 24 h (default: settings.start_time, 17:00)")
+                    help="leave the origin from this time on the travel date, 24 h (default: the origin's start_time, or settings.start_time)")
     ap.add_argument("--starts", metavar="T1,T2",
                     help="departure times to switch between on the map, e.g. 06:00,17:00 (default: "
                          "settings.start_times, or 06:00 and the start time)")
@@ -56,7 +56,7 @@ def main():
     ap.add_argument("--only", metavar="ORIGIN",
                     help="build only the map from this origin (quicker for testing; summary.json is not written)")
     ap.add_argument("--night", metavar="T",
-                    help="time the night begins, 24 h: 03, 3, 0300 or 03:00 (default: settings.night_point, 03:00)")
+                    help="time the night begins, 24 h: 01, 1, 0100 or 01:00 (default: settings.night_point)")
     # accept key=value as well as --key value
     argv = [f"--{a}" if re.fullmatch(r"[a-z][a-z-]*=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)

@@ -1,9 +1,12 @@
 # Maata pitkin
 
-Overland journeys from Helsinki to the European capitals, by train, ferry and bus.
+Overland journeys to the European capitals by train, ferry and bus – an interactive map for each
+starting city, updated every week.
 
-**Maps.** One page per origin, listed under `origins` in places.yaml: `index.html` (Helsinki),
-`stockholm.html`, `copenhagen.html`; each links to the others at the top.
+**Maps.** https://matti-mane-kinnunen.github.io/maatapitkin/ – one page per origin, listed under
+`origins` in places.yaml: `index.html` (Helsinki), `stockholm.html` (Tågsemester),
+`copenhagen.html` (Togferie), `london.html` (Train holiday), `berlin.html` (Zugurlaub); each links to
+the others at the top and has a short user guide at the end.
 
 **Purpose.** To help people wondering how to plan an Interrail trip get over the first fear
 that train travel is difficult and slow: a map that shows it can be done, how long it takes,
@@ -11,21 +14,30 @@ and a sensible way to do it. It is not a journey planner – for booking, use th
 bahn.de or Transitous. So the network is a curated backbone of good trains, journeys are
 realistic rather than optimal to the minute, and the map has to stay readable on a phone.
 This started from a hand-made Graphviz graph (MaataPitkin v1.9, April 2023, kept in data/) and replaces it
-with data, a journey router and an interactive map.
+with data, a journey router and interactive maps.
 
-See DECISIONS.md for what was decided and why.
+See DECISIONS.md for what was decided and why, BACKLOG.md for what is still open.
 
 ```
-data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs, valid_from/to
-data/places.yaml      coordinates, capitals, change times per station, routing settings
+pairs.txt             the connections ("A -> B : *" or own times) – the main input
+data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs
+data/places.yaml      coordinates, capitals, change times per station, the maps (origins), routing and CO2 settings
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
-build.py              builds everything in out/
+data/sources/         route lists (Eurostar, Frecce, railjet …) used with routes_to_pairs.py
+static/               files copied into the site as they are (link-preview pictures)
+build.py              builds every map, route table and summary in out/
+add_leg.py            looks pairs.txt lines up in Transitous and writes legs.yaml
+tidy_legs.py          legs.yaml entries that no pairs.txt line looks after any more; --apply removes them
+lookup_report.py      from the lookup log, only what needs a person (the weekly issue)
+check_build.py        is the new map at least as good as last week's? (holds the update back if not)
+routes_to_pairs.py    route lists ('Madrid – Zaragoza – Barcelona') -> pairs.txt lines
 check_timetables.py   re-checks the legs against Transitous and writes a report
 coverage_check.py     which European countries, links and ferries Transitous has timetables for
-add_leg.py            adds trains one at a time: "A -> B : train", looked up in Transitous
 src/journeys.py       loading, validation and the journey router
-src/make_map.py       interactive map page (out/map.html)
-src/transitous.py     talking to the Transitous API (used by the checker and add_leg.py)
+src/make_map.py       the map pages (out/site/)
+src/co2.py            rough CO2 per journey vs flying
+src/transitous.py     talking to the Transitous API (used by add_leg.py and the checker)
+.githooks/pre-commit  refuses broken YAML and malformed pairs.txt lines (git config core.hooksPath .githooks)
 ```
 
 ## Use
@@ -34,11 +46,11 @@ src/transitous.py     talking to the Transitous API (used by the checker and add
 pip install pyyaml
 python build.py             # travel date = next Monday
 python build.py --date 2026-11-17
-python build.py transfer=15        # minimum change time in minutes (default 10)
-python build.py night=01           # a wait past 01:00 counts as a hotel night (default 03)
-python build.py start=08:00        # leave Helsinki in the morning (default 17:00, the evening train)
+python build.py transfer=15        # minimum change time in minutes (default: settings, 20)
+python build.py night=02           # a wait past 02:00 counts as a hotel night (default: settings, 01:00)
+python build.py start=08:00        # leave in the morning (default: each origin's start_time)
 python build.py dates=2026-12-08,2026-12-11,2026-12-12   # travel dates to switch between on the map
-python build.py starts=06:00,17:00  # morning / evening switch on the map (default 06:00 and the start time)
+python build.py starts=06:00,17:00  # morning / evening switch on the map (default: each origin's start_times)
 python build.py only=Copenhagen     # build just one origin's map (quick test; summary.json not written)
 python build.py --help             # all options
 python add_leg.py "Stockholm -> Malmö : X2 523"   # add a train, looked up in Transitous
@@ -59,10 +71,11 @@ python routes_to_pairs.py routes.txt   # route lists ('Madrid – Zaragoza – B
 
 Outputs in `out/`:
 
-- `routes.md` – the fastest journey to every capital, with full itineraries, waits and hotel nights,
-  and a table of the journeys without night trains.
-- `map.html` – an interactive map with the journeys.
-- `network.json` – everything above as data.
+- `site/` – the map pages and pictures, as published on GitHub Pages (not committed).
+- `routes.md`, `routes-<origin>.md` – the fastest journey from each origin to every capital, with full
+  itineraries, waits and hotel nights, and a table of the journeys without night trains.
+- `summary.json` – what each map reaches; the weekly check compares it with last week's.
+- `map.html`, `network*.json` – the Helsinki map as a fragment, and the data behind each map (not committed).
 
 ## Automatic weekly update
 
