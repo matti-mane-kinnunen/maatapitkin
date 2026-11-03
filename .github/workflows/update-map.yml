@@ -103,6 +103,7 @@ jobs:
       # One issue per week: later runs add to it, older weeks' issues are closed (D-49).
       - name: Report lookup results that need attention
         if: always() && hashFiles('lookup.log') != ''
+        continue-on-error: true   # issue bookkeeping must never stop the map from being published
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -130,6 +131,7 @@ jobs:
 
       - name: Close held-back issues once a map is published
         if: steps.check.outputs.ok == 'true'
+        continue-on-error: true   # issue bookkeeping must never stop the map from being published
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
