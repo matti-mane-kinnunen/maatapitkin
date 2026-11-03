@@ -471,3 +471,6 @@ Oulu -> Rovaniemi : *
 
 # Turkey
 Ankara -> Izmir :*
+
+# Greece 
+Athens -> Thessaloniki : * 
