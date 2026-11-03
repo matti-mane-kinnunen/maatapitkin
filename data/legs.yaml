@@ -1918,3 +1918,4 @@ legs:
   - {from: London, to: Cardiff, service: "GWR GW4301", mode: train, runs: "sun", times: ["08:31-10:34", "09:31-11:33", "10:38-12:34", "11:38-13:34", "12:38-14:35", "13:38-15:40",
       "14:08-16:12", "14:38-16:34", "15:38-17:40", "16:38-18:34", "17:38-19:34", "18:38-20:34",
       "19:38-21:35", "20:38-22:37", "21:38-23:34"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Tanger, to: Rabat, service: "Al Boraq", mode: train, every: 60, first: "07:00", last: "21:00", duration: "1:22", checked: 2026-11-03, source: manual}

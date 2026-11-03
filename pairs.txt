@@ -158,6 +158,7 @@ Bari -> Durrës : ? ferry night 22:00-07:00
 Durrës -> Tirana : ? bus 10:00-12:40
 Algeciras -> Tanger Med : Balearia ferry 20:30-21:00
 Tanger -> Casablanca : TGV every 60 07:00-21:00 2:17
+Tanger -> Rabat : Al Boraq every 60 07:00-21:00 1:22   # hourly (Matti, Nov 2026)
 Casablanca -> Marrakech : IC every 60 09:54-20:54 2:43
 Algeciras -> Tanger Med : AML ferry every 180 06:00-21:00 1:30
 Tanger Med -> Tanger : Port shuttle bus every 60 09:00-21:00 1:00   # buses meet the ferries but are unreliable; a taxi may be needed (Matti, Feb 2026)
