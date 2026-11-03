@@ -58,7 +58,7 @@ places:
   Amsterdam:  {lat: 52.379, lon: 4.900, capital: true, country: NL}
   Brussels:   {lat: 50.836, lon: 4.336, capital: true, country: BE, aliases: [Bruxelles, Brussel, Bryssel, Brüssel]}
   London:     {lat: 51.532, lon: -0.126, capital: true, country: GB, min_transfer: 60}  # St Pancras -> Euston
-  Edinburgh:  {lat: 55.952, lon: -3.189, country: GB}
+  Edinburgh:  {lat: 55.952, lon: -3.189, capital: true, country: GB, note: capital of Scotland}
   Glasgow:    {lat: 55.860, lon: -4.258, country: GB}
   Holyhead:   {lat: 53.308, lon: -4.631, country: GB}
   Belfast:    {lat: 54.596, lon: -5.917, capital: true, country: GB, note: capital of Northern Ireland}
