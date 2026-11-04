@@ -2058,3 +2058,19 @@ legs:
   - {from: Iasi, to: Chisinau, dep: "11:10", arr: "14:50", service: "SVS 11:10", mode: bus, checked: 2026-11-04, source: manual}
   - {from: Iasi, to: Chisinau, dep: "14:00", arr: "17:00", service: "SVS 14:00", mode: bus, checked: 2026-11-04, source: manual}
   - {from: Iasi, to: Chisinau, dep: "19:30", arr: "23:00", service: "SVS 19:30", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "05:20", arr: "05:40", service: "Strait M1", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "06:10", arr: "06:30", service: "Strait M2", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "07:40", arr: "08:00", service: "Strait M3", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "08:30", arr: "08:50", service: "Strait M4", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "09:30", arr: "09:50", service: "Strait M5", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "11:30", arr: "11:50", service: "Strait M6", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "12:50", arr: "13:10", service: "Strait M7", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "14:40", arr: "15:00", service: "Strait M8", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "15:40", arr: "16:00", service: "Strait M9", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "16:40", arr: "17:00", service: "Strait M10", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "17:30", arr: "17:50", service: "Strait M11", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "18:30", arr: "18:50", service: "Strait M12", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "19:40", arr: "20:00", service: "Strait M13", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "21:10", arr: "21:30", service: "Strait M14", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "22:40", arr: "23:00", service: "Strait M15", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Villa San Giovanni, to: Messina, dep: "23:50", arr: "00:10", service: "Strait M16", mode: ferry, checked: 2026-11-04, source: manual}

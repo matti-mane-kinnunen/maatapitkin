@@ -186,6 +186,23 @@ Cairnryan -> Belfast : Stenaline ferry 19:05-22:07
 Budapest -> Zagreb : IC 15:35-22:03
 Villa San Giovanni -> Messina : Bluejet (evening) ferry 18:10-18:30
 Villa San Giovanni -> Messina : Bluejet (late) ferry 23:30-23:40
+# Strait of Messina, daily (Matti, Nov 2026: timetable 'Monday to Sunday', runs M1-M16), 20 min crossing
+Villa San Giovanni -> Messina : Strait M1 ferry 05:20-05:40
+Villa San Giovanni -> Messina : Strait M2 ferry 06:10-06:30
+Villa San Giovanni -> Messina : Strait M3 ferry 07:40-08:00
+Villa San Giovanni -> Messina : Strait M4 ferry 08:30-08:50
+Villa San Giovanni -> Messina : Strait M5 ferry 09:30-09:50
+Villa San Giovanni -> Messina : Strait M6 ferry 11:30-11:50
+Villa San Giovanni -> Messina : Strait M7 ferry 12:50-13:10
+Villa San Giovanni -> Messina : Strait M8 ferry 14:40-15:00
+Villa San Giovanni -> Messina : Strait M9 ferry 15:40-16:00
+Villa San Giovanni -> Messina : Strait M10 ferry 16:40-17:00
+Villa San Giovanni -> Messina : Strait M11 ferry 17:30-17:50
+Villa San Giovanni -> Messina : Strait M12 ferry 18:30-18:50
+Villa San Giovanni -> Messina : Strait M13 ferry 19:40-20:00
+Villa San Giovanni -> Messina : Strait M14 ferry 21:10-21:30
+Villa San Giovanni -> Messina : Strait M15 ferry 22:40-23:00
+Villa San Giovanni -> Messina : Strait M16 ferry 23:50-00:10
 
 # --- From the original v1.9 graph (D-35): pairs that only had one old train ---
 Tampere -> Turku : *
