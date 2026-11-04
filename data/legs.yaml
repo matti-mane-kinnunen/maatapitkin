@@ -2074,3 +2074,7 @@ legs:
   - {from: Villa San Giovanni, to: Messina, dep: "21:10", arr: "21:30", service: "Strait M14", mode: ferry, checked: 2026-11-04, source: manual}
   - {from: Villa San Giovanni, to: Messina, dep: "22:40", arr: "23:00", service: "Strait M15", mode: ferry, checked: 2026-11-04, source: manual}
   - {from: Villa San Giovanni, to: Messina, dep: "23:50", arr: "00:10", service: "Strait M16", mode: ferry, checked: 2026-11-04, source: manual}
+  - {from: Bucharest, to: Iasi, service: "IC", mode: train, times: ["06:59-12:33", "11:50-18:08", "16:06-21:41", "16:25-22:58", "19:06-02:03", "22:55-05:35"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Toulouse, to: L'Hospitalet, service: "TER", mode: train, runs: "mon-fri", times: ["07:48-10:05", "09:47-12:08", "13:47-16:19", "15:47-18:05", "18:48-21:10"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Toulouse, to: L'Hospitalet, service: "TER", mode: train, runs: "sat,sun", times: ["07:46-10:07", "10:46-13:11", "13:47-16:16", "15:47-18:15", "17:46-20:12"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Toulouse, to: L'Hospitalet, service: "TER", mode: train, runs: "sun", times: ["07:13-09:42"], query: "*", checked: 2026-11-04, source: transitous}
