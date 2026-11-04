@@ -49,6 +49,7 @@ h1 small { display: block; font: 500 1rem/1.3 var(--body); text-transform: none;
   background: var(--panel); border: 1px solid var(--rule); border-radius: 6px }
 .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 440px); gap: 20px; align-items: start }
 .board { margin-top: 20px; scroll-margin-top: 12px }
+.controls .valid { flex-basis: 100%; margin: -2px 0 0; font-size: 12px; color: var(--muted) }
 .controls .tolist { margin-left: auto; font: 500 14px/1.4 var(--body); color: var(--accent); text-underline-offset: 2px; white-space: nowrap }
 @media (max-width: 1100px) { .grid { grid-template-columns: minmax(0, 1fr) } }
 @media (max-width: 860px) { .meta { text-align: left } }
@@ -243,6 +244,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
           <label title="Also draw connections in the data that no journey on this map uses"><input type="checkbox" id="f-alllegs"> All connections</label>
         </div>
     <a class="tolist" href="#arrivals" id="arrivals-link">Travel times from __ORIGIN__ ↓</a>
+    <p class="valid" id="valid" hidden></p>
   </div>
   <div class="grid">
     <div class="mapcol">
@@ -887,12 +889,20 @@ const dateGroup = document.getElementById("f-date");
 if (VARS && NET.dates.length > 1) {
   for (const d of NET.dates) {
     const bt = document.createElement("button");
-    bt.type = "button"; bt.dataset.date = d; bt.textContent = VARS[d].label;
+    // weekday only: the trains are those of a typical week (see the validity note below the bar)
+    bt.type = "button"; bt.dataset.date = d; bt.textContent = VARS[d].label.split(" ")[0]; bt.title = VARS[d].label;
     bt.setAttribute("aria-pressed", String(d === curDate));
     bt.addEventListener("click", () => setVariant(d, F.nightTrains !== false));
     dateGroup.appendChild(bt);
   }
 } else dateGroup.hidden = true;
+// how long the timetables hold: until the next European timetable change (D-52)
+if (NET.valid_until) {
+  const v = document.getElementById("valid"), u = new Date(NET.valid_until + "T12:00:00");
+  v.textContent = `Timetables valid until ${u.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} ` +
+    `(the European timetable change). For later dates, check with the train and ferry companies.`;
+  v.hidden = false;
+}
 // one button per departure time (morning / evening)
 const startGroup = document.getElementById("f-start");
 if (VARS && STARTS.length > 1) {

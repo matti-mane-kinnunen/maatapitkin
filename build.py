@@ -165,6 +165,16 @@ def _build_job(i: int):
     return origin, build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
 
 
+def next_timetable_change(day: dt.date) -> dt.date:
+    """The next European timetable change after `day`: the second Sunday of December (the big yearly
+    change) or of June (the smaller mid-year one). Timetables looked up for one week normally hold
+    until the day before (D-52)."""
+    def second_sunday(year: int, month: int) -> dt.date:
+        first = dt.date(year, month, 1)
+        return first + dt.timedelta(days=(6 - first.weekday()) % 7 + 7)
+    return min(c for y in (day.year, day.year + 1) for c in (second_sunday(y, 6), second_sunday(y, 12)) if c > day)
+
+
 def local_names(lang: str, places: dict) -> dict:
     """{key: name to show} for one map's language (data/names.yaml, D-50): the language's own
     name, else `all`, else the key itself (left out). Routing, links and data keep the keys."""
@@ -501,7 +511,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
         "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "lang": cfg.get("lang", "en"),
-        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(), "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,

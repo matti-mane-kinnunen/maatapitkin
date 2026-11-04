@@ -59,6 +59,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-49 | One issue per week, not one per run | 3.11.2026 | Accepted |
 | D-50 | Place names in each map's language | 3.11.2026 | Accepted |
 | D-51 | CO₂ factors from Chalmers, ferries included | 3.11.2026 | Accepted |
+| D-52 | Weekdays, not dates, and how long the timetables hold | 4.11.2026 | Accepted |
 
 ---
 
@@ -984,6 +985,24 @@ among overland travellers, and there are many ways to count them – we take the
 **Consequences.** From Helsinki: Stockholm by ferry shows more than flying (≈60 vs 45 kg); Berlin 40 %,
 Rome 60 %, Lisbon 65 % less than flying; Athens and Algiers only 15–20 % less (long ferries). D-41's
 method stands; its factors are replaced.
+
+## D-52 Weekdays, not dates, and how long the timetables hold
+**Date:** 4.11.2026 · **Status:** Accepted
+
+**Context.** Matti: "Leave Tue 10.11." suggests the map is only for that date, while the trains are
+those of a typical week. Readers also need to know how far ahead the times can be trusted.
+
+**Decision.** The travel-day buttons show only the weekday (Tue, Fri, Sat, Sun); the full date is in
+the tooltip. Below the settings bar: "Timetables valid until <date> (the European timetable change).
+For later dates, check with the train and ferry companies." The build works out the date: the day
+before the next change – the second Sunday of December (the big yearly change) or of June.
+
+**Why.** Rail timetables in Europe change on these fixed dates; between them a week's trains are a
+good guide. The weekly run keeps the date current.
+
+**Consequences.** Seasonal and engineering changes between the two dates are not covered – the note
+points readers to the operators. The itinerary still shows dates (Day 1 · Tue 17.11.), so a journey
+stays concrete.
 
 ---
 
