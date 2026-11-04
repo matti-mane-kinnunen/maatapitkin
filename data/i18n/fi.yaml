@@ -1,0 +1,168 @@
+# Sivun tekstit suomeksi (IDEA-13). Avaimet kuten en.yaml; puuttuva avain näkyy englanniksi.
+# {origin_from} = lähtökaupunki elatiivissa (places.yaml: Helsinki: {from: Helsingistä}).
+# Kohteiden ja pysähdysten nimet pysyvät perusmuodossa ("Hotelliyö · Köln"), koska niitä ei taivuteta.
+_locale: fi-FI
+weekdays_short: [su, ma, ti, ke, to, pe, la]
+
+# --- otsikko ---
+subtitle: "{origin_from} pääkaupunkeihin Euroopassa ja Välimeren ympärillä junalla, laivalla ja bussilla — nopeimmat yhteydet aikataulutiedoista"
+draft_note: " · <b>luonnos</b>: osa yhteyksistä voi vielä puuttua"
+maps_from_aria: "Kartat muista lähtökaupungeista"
+maps_from: "Kartat: "
+draft_suffix: " (luonnos)"
+credit: 'Lue <a href="#user-guide" id="guide-link">käyttöohje</a>. Tehty Clauden kanssa, <a href="mailto:mane@iki.fi">mane@iki.fi</a> – <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">blogi</a>'
+meta_reached: "Saavutettavissa {n} pääkaupunkia"
+meta_without_night: " ilman yöjunia"
+meta_legs: " · {n} osuutta"
+version: "lähtö {origin_from} {date} klo {time} · päivitetty {today}"
+
+# --- asetukset ---
+settings_aria: "Matkan asetukset"
+leave: "Lähtöpäivä"
+leave_aria: "Lähtöpäivä"
+from: "Lähtöaika"
+from_aria: "Lähtöaika"
+night_trains: "Yöjunat"
+allowed: "sallittu"
+avoid: "vältä"
+no_hotel_nights: "Ei hotelliöitä"
+other_cities: "Myös muut kaupungit"
+all_connections: "Kaikki yhteydet"
+all_connections_title: "Piirrä myös aineiston yhteydet, joita tämän kartan matkat eivät käytä"
+to_list: "Matka-ajat {origin_from} ↓"
+part_morning: "aamu"
+part_afternoon: "iltapäivä"
+part_evening: "ilta"
+start_title: "Lähtö {origin_from} klo {t} alkaen"
+start_aria: "{part}, klo {t} alkaen"
+valid_until: "Aikataulut ovat voimassa {date} asti (eurooppalainen aikataulumuutos). Myöhempien päivien aikataulut kannattaa tarkistaa rautatie- ja laivayhtiöiltä."
+
+# --- selite ja kartta ---
+leg_day_train: "Päiväjuna"
+leg_night_train: "Yöjuna"
+leg_ferry: "Laiva / paikallisliikenne"
+leg_no_legs: "Ei vielä yhteyksiä"
+leg_day_begins: "Päivä 3 alkaa tästä"
+leg_hotel: "Hotelliyö"
+legend_arrives: "Pääkaupunki, perillä"
+legend_day: "päivä {d}"
+map_aria: "Kartta juna- ja laivayhteyksistä Euroopassa"
+zoom_aria: "Kartan suurennus"
+zoom_in: "Suurenna"
+zoom_out: "Pienennä"
+zoom_fit_aria: "Näytä koko kartta"
+zoom_fit: "Koko"
+mark_hotel: "Hotelliyö · {place}: saapuminen {from}, lähtö {to}"
+mark_day_on: "Päivä {d} ({date}) alkaa matkalla {from} → {to} ({vehicle})"
+mark_day_in: "Päivä {d} ({date}) alkaa · {place}"
+veh_train: "juna"
+veh_night_train: "yöjuna"
+veh_ferry: "laiva"
+veh_night_ferry: "yölaiva"
+veh_bus: "bussi"
+veh_metro: "metro"
+
+# --- vihjeet ---
+tip_arrive: " · päivä {d}, {when}"
+n_changes: {one: "{n} vaihto", other: "{n} vaihtoa"}
+n_hotel_nights: {one: "{n} hotelliyö", other: "{n} hotelliyötä"}
+n_alternatives: {one: " · {n} vaihtoehto", other: " · {n} vaihtoehtoa"}
+tip_click: "Napsauta, niin näet aikataulun"
+tip_origin: "Kaikki matkat alkavat täältä"
+tip_missing: "Ei vielä yhteyksiä"
+tip_night_only: "Ei saavutettavissa ilman yöjunia"
+tip_no_journey: "Aineistossa ei ole matkaa {origin_from} tänne"
+svc_untimed: " · noin {dur}, ei aikataulua"
+n_departures: {one: "{n} lähtö", other: "{n} lähtöä"}
+svc_every: " · {x} välein"
+svc_more: "ja {n} muuta vuoroa"
+svc_checked: "Aikataulu tarkistettu {date}"
+hit_aria: "{place}: {dur}, näytä aikataulu"
+
+# --- aikataulu ---
+itinerary: "Matka"
+options_aria: "Matkavaihtoehdot"
+opt_fastest: "Nopein"
+opt_fewest_changes: "Vähiten vaihtoja"
+opt_fewest_hotels: "Vähiten hotelliöitä"
+card_leave: "lähtö {when} · "
+card_arrive: "perillä {when}"
+card_stats: "{dur} · vaihtoja {c} · hotelliöitä {h}"
+sum_arrive: "{dur} · perillä {when}"
+sum_no_night: " · ilman yöjunia"
+sum_same: " · aiempi lähtö ei nopeuta, sama matka kuin myöhemmin lähtiessä"
+sum_from: " · lähtö aikaisintaan {t}"
+day_head: "Päivä {d} · {date}"
+overnight_in: "Hotelliyö · {place}"
+chip_hotel: "Hotelli"
+between_trains: "{dur} yhteyksien välissä"
+wait_in: "Odotus {dur} · {place}"
+chip_metro: "Metro"
+chip_ferry: "Laiva"
+chip_night_ferry: "Yölaiva"
+chip_night_train: "Yöjuna"
+any_time: "milloin vain"
+est: "arvio"
+copy_link: "Kopioi linkki"
+link_copied: "Linkki kopioitu"
+link_aria: "Linkki tähän matkaan"
+
+# --- CO2 ---
+how: "Miten?"
+co2_no_flight: "CO₂ noin {kg} kg (lentoja ei ole vertailtavaksi)."
+co2_less: "CO₂ noin {kg} kg – noin {pct} % vähemmän kuin lentäen (noin {fkg} kg)."
+co2_same: "CO₂ noin {kg} kg – suunnilleen saman verran kuin lentäen ({fkg} kg)."
+co2_more: "CO₂ noin {kg} kg – enemmän kuin lentäen ({fkg} kg)."
+co2_how_1: "Karkea arvio, tarkoituksella pyöristetty. Jokainen juna-, bussi- tai laivaosuus: paikkojen välinen etäisyys
+          (+20&nbsp;% todellisen reitin vuoksi) × kyseisen kulkumuodon keskimääräiset päästöt henkilökilometriä kohden.
+          Lento: suora lento samojen kaupunkien välillä, mukaan lukien korkealla syntyvien päästöjen
+          lisälämmitysvaikutus."
+co2_factors_label: "Kertoimet: "
+co2_how_2: "Laivat painavat paljon – kilometriä kohden enemmän kuin lento – joten monella matkalla laiva on suurin osa
+          päästöistä, ja lyhyt matka pitkällä laivaosuudella voi tuottaa enemmän päästöjä kuin lento."
+co2_source: "Lähde"
+co2_the_source: "lähde"
+co2_factors: "{src} {yr} (sähköjuna {rail}"
+co2_nordic: ", Pohjoismaissa {nordic}"
+co2_factors_end: ", bussi {bus}, laiva {ferry}, lento {flight} CO₂e henkilökilometriä kohden)"
+
+# --- kohteet ---
+board_aria: "Kohteet saapumisajan mukaan"
+arrivals_from: "Matka-ajat {origin_from}"
+door_to_door: "ovelta ovelle"
+search_placeholder: "Etsi kaupunki (paina / )"
+search_aria: "Etsi kohde"
+arrive_by: "Perillä viimeistään"
+any: "milloin vain"
+day_n: "päivä {d}"
+arrives_on_day: "Perillä päivänä {d}"
+city_tag: "kaupunki"
+data_issue: "Reitillä on osuus, jonka tiedoissa on tunnettu ongelma"
+opt_list: "vaihtoehto: {labels} · "
+row_day: "Päivä {d} · {when} · "
+hotel_nights_at: "{nights} ({places})"
+search_missing: "Pääkaupunki, jolla ei vielä ole yhteyksiä – lisää rivejä pairs.txt-tiedostoon"
+search_no_journey: "Aineistossa ei vielä ole matkaa {origin_from} tänne"
+search_departs_only: " (täältä lähtee junia, mutta tänne ei saavu yhtään)"
+no_match: "Yksikään kohde ei vastaa hakua."
+clear_filters: "Tyhjennä suodattimet"
+count: "{caps}/{total} pääkaupunkia"
+n_other_cities: {one: " · {n} muu kaupunki", other: " · {n} muuta kaupunkia"}
+count_no_night: " · ilman yöjunia"
+count_faded: " · muut himmennetty kartalla"
+gaps_night: "Ei saavutettavissa ilman yöjunia:"
+gaps_missing: "Vielä ilman yhteyksiä ({n} pääkaupunkia):"
+
+# --- alatunniste ---
+foot_sources: "Aikataulut Transitous-palvelusta viikoittain sekä käsin Seat61:stä, Deutsche Bahnilta ja liikennöitsijöiltä, sovitettuna yllä valittuun matkapäivään. "
+foot_changes: "Vaihtoon varataan vähintään {min} min (enemmän, jos asema vaihtuu, esim. Pariisissa ja Lontoossa), laivan lähtöselvitykseen {ferry} min, Eurostariin {eurostar} min. "
+foot_clock: "Kellonajat ovat paikallisia; matka-ajoissa aikavyöhykkeet on otettu huomioon. Matkat lähtevät {origin_from} klo {start} alkaen"
+foot_latest: " (myöhäisimmällä lähdöllä, joka on silti yhtä aikaisin perillä; jos aikaisempi lähtö ei nopeuta, näytetään klo {def} alkava matka)"
+foot_night: ". Odotus, joka jatkuu yli klo {night}, on hotelliyö, eikä seuraavana aamuna lähdetä ennen klo {morning}; "
+foot_quiet: "klo {quiet} kulkevat vain yöjunat ja yölaivat. "
+foot_issues: "Tunnettuja tieto-ongelmia: {n} osuutta (⚠). Karttapohja: Natural Earth."
+
+# --- linkin esikatselu ---
+og_title: "{title} – {origin_from} {n} pääkaupunkiin junalla, Euroopassa ja Välimeren ympärillä"
+og_desc: "{origin_from} {n} pääkaupunkiin Euroopassa ja Välimeren ympärillä junalla, laivalla ja bussilla: ovelta ovelle, kuinka kauan matka oikeasti kestää, päivä kerrallaan, jokainen vaihto ja hotelliyö."
+og_alt: "Kartta junamatkoista {origin_from} pääkaupunkeihin Euroopassa ja Välimeren ympärillä"

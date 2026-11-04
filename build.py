@@ -339,9 +339,11 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     starts = sorted({clock_arg(x) for x in raw if str(x).strip()} | {start_time})
 
     tx = i18n.texts(cfg.get("lang", "en"))                 # the map's language (IDEA-13)
+    # "from Helsinki" where the language inflects the name (fi: Helsingistä); else the shown name
+    origin_from = cfg.get("from") or local_names(cfg.get("lang", "en"), net.places).get(origin, origin)
 
     def version_line(d: dt.date, t: str) -> str:
-        return i18n.t(tx, "version", origin=origin, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
+        return i18n.t(tx, "version", origin=origin, origin_from=origin_from, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
                       time=t, today=f"{today.day}.{today.month}.{today.year}")
 
     def one_variant(d: dt.date, t: str) -> dict:
@@ -517,7 +519,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "lang": cfg.get("lang", "en"),
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "lang": cfg.get("lang", "en"), "origin_from": origin_from,
         "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(), "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,

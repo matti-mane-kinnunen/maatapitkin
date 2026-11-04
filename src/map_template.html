@@ -365,6 +365,7 @@ if (VARS) {
 const P = {...NET.places, ...NET.not_covered};
 // place names in this map's language (data/names.yaml, D-50); routing and links keep the English keys
 const LN = n => (NET.display && NET.display[n]) || n;
+const ORIGIN_FROM = NET.origin_from || LN(NET.origin);   // "from Helsinki" in the map's language (fi: Helsingistä)
 // links to the maps from other origins (IDEA-04): "Also from: Stockholm · London"
 (function () {
   const nav = document.getElementById("origins"), pages = NET.pages || [];
@@ -589,7 +590,7 @@ function hover(name) {
     : name === NET.origin ? `<b>${LN(name)}</b><span class="hint">${T("tip_origin")}</span>`
     : P[name].missing ? `<b>${LN(name)}</b><span class="hint">${T("tip_missing")}</span>`
     : reachableWithNight(name) ? `<b>${LN(name)}</b><span class="hint">${T("tip_night_only")}</span>`
-    : `<b>${LN(name)}</b><span class="hint">${T("tip_no_journey", { origin: LN(NET.origin) })}</span>`;
+    : `<b>${LN(name)}</b><span class="hint">${T("tip_no_journey", { origin: LN(NET.origin), origin_from: ORIGIN_FROM })}</span>`;
   if (!isMain(name)) layoutCities(name);
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
   const x = (p.x - VB.x) * k, y = (p.y - VB.y) * k;
@@ -767,7 +768,7 @@ function applyFilters() {
   for (const n of noRoute) {
     const li = document.createElement("li"); li.className = "noroute";
     li.innerHTML = `<b>${LN(n)}</b>` + (P[n].missing ? T("search_missing")
-      : T("search_no_journey", { origin: LN(NET.origin) }) + (NET.legs.some(l => l.from === n) ? T("search_departs_only") : ""));
+      : T("search_no_journey", { origin: LN(NET.origin), origin_from: ORIGIN_FROM }) + (NET.legs.some(l => l.from === n) ? T("search_departs_only") : ""));
     list.appendChild(li);
   }
   if (!shown.length && !noRoute.length) {
@@ -813,7 +814,7 @@ function updateSummary() {
   const noNight = F.nightTrains === false && V.no ? V.no.unreached.filter(reachableWithNight) : [];
   const missing = [...V.yes.unreached, ...Object.keys(NET.not_covered)];
   document.getElementById("gaps").innerHTML =
-    (noNight.length ? `<b>${T("gaps_night")}</b> ${noNight.join(", ")}.<br><br>` : "") +
+    (noNight.length ? `<b>${T("gaps_night")}</b> ${noNight.map(LN).join(", ")}.<br><br>` : "") +
     `<b>${T("gaps_missing", { n: missing.length })}</b> ${missing.map(LN).join(", ")}.`;
   document.getElementById("meta").innerHTML =
     `${T("meta_reached", { n: NET.routes.length })}${F.nightTrains === false ? T("meta_without_night") : ""}${T("meta_legs", { n: NET.legs.length })}<br>${NET.version}`;
@@ -872,7 +873,7 @@ const startGroup = document.getElementById("f-start");
 if (VARS && STARTS.length > 1) {
   for (const t of STARTS) {
     const bt = document.createElement("button");
-    bt.type = "button"; bt.dataset.t = t; bt.textContent = partLabel(t); bt.title = T("start_title", { origin: LN(NET.origin), t });
+    bt.type = "button"; bt.dataset.t = t; bt.textContent = partLabel(t); bt.title = T("start_title", { origin: LN(NET.origin), origin_from: ORIGIN_FROM, t });
     bt.setAttribute("aria-label", T("start_aria", { part: partLabel(t), t }));
     bt.setAttribute("aria-pressed", String(t === curStart));
     bt.addEventListener("click", () => setVariant(curDate, F.nightTrains !== false, t));
@@ -885,7 +886,7 @@ const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin
 function updateFoot() { document.getElementById("foot").textContent =
   T("foot_sources") +
   T("foot_changes", { min: S.min_transfer, ferry: S.ferry_checkin, eurostar: S.eurostar_checkin }) +
-  T("foot_clock", { origin: LN(NET.origin), start: curStart || S.start || "00:00" }) +
+  T("foot_clock", { origin: LN(NET.origin), origin_from: ORIGIN_FROM, start: curStart || S.start || "00:00" }) +
   (curStart && curStart !== DEF_START ? T("foot_latest", { def: DEF_START }) : "") +
   T("foot_night", { night: S.night_point, morning: S.morning }) +
   T("foot_quiet", { quiet: S.quiet || "00:00–05:00" }) +

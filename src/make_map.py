@@ -82,10 +82,11 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
     tpl = (root / "src" / "map_template.html").read_text()
     tpl = tpl.replace("__GUIDE__", i18n.guide(lang))
     # {{key}} markers: texts may contain simple HTML; {origin} becomes __ORIGIN__, filled in below
-    tpl = re.sub(r"\{\{(\w+)\}\}", lambda m: i18n.t(tx, m.group(1), origin="__ORIGIN__"), tpl)
+    tpl = re.sub(r"\{\{(\w+)\}\}", lambda m: i18n.t(tx, m.group(1), origin="__ORIGIN__", origin_from="__ORIGIN_FROM__"), tpl)
     page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h))
+               .replace("__ORIGIN_FROM__", html.escape(net.get("origin_from") or (net.get("display") or {}).get(net["origin"], net["origin"])))
                .replace("__ORIGIN__", html.escape((net.get("display") or {}).get(net["origin"], net["origin"])))
                .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin"))
                .replace("__DRAFT__", i18n.t(tx, "draft_note") if net.get("draft") else ""))
@@ -122,8 +123,9 @@ def head_tags(net: dict, page_name: str, site: Path, tx: dict | None = None) -> 
     routes = (v.get("yes") or {}).get("routes") or net.get("routes") or []
     n = len({r["capital"] for r in routes if r.get("is_capital", True)})
     tx = tx or i18n.texts(net.get("lang") or "en")
-    og_title = i18n.t(tx, "og_title", title=title, origin=origin, n=n)
-    desc = i18n.t(tx, "og_desc", origin=origin, n=n)
+    origin_from = net.get("origin_from") or origin
+    og_title = i18n.t(tx, "og_title", title=title, origin=origin, origin_from=origin_from, n=n)
+    desc = i18n.t(tx, "og_desc", origin=origin, origin_from=origin_from, n=n)
     e = lambda x: html.escape(x, quote=True)
     tags = [f'<title>{e(og_title)}</title>', f'<meta name="description" content="{e(desc)}">',
             '<meta property="og:type" content="website">', f'<meta property="og:title" content="{e(og_title)}">',
@@ -137,7 +139,7 @@ def head_tags(net: dict, page_name: str, site: Path, tx: dict | None = None) -> 
         if (site / pic).exists():
             tags += [f'<meta property="og:image" content="{e(base + pic)}">',
                      '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
-                     f'<meta property="og:image:alt" content="{e(i18n.t(tx, "og_alt", origin=origin))}">']
+                     f'<meta property="og:image:alt" content="{e(i18n.t(tx, "og_alt", origin=origin, origin_from=origin_from))}">']
     return "\n".join(tags) + "\n"
 
 

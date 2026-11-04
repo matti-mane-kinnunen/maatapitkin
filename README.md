@@ -23,6 +23,8 @@ pairs.txt             the connections ("A -> B : *" or own times) – the main i
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs
 data/places.yaml      coordinates, capitals, change times per station, the maps (origins), routing and CO2 settings
 data/names.yaml       place names in each map's language (Tukholma, Köpenhamn, København …), D-50
+data/i18n/<lang>.yaml page texts per language (en master; fi …), D-53 – check_i18n.py lists gaps
+src/guide/<lang>.html the user guide per language
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
 data/sources/         route lists (Eurostar, Frecce, railjet …) used with routes_to_pairs.py
 static/               files copied into the site as they are (link-preview pictures)

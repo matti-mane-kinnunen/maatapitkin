@@ -60,6 +60,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-50 | Place names in each map's language | 3.11.2026 | Accepted |
 | D-51 | CO₂ factors from Chalmers, ferries included | 3.11.2026 | Accepted |
 | D-52 | Weekdays, not dates, and how long the timetables hold | 4.11.2026 | Accepted |
+| D-53 | Each map's texts in its own language | 4.11.2026 | Accepted |
 
 ---
 
@@ -1003,6 +1004,27 @@ good guide. The weekly run keeps the date current.
 **Consequences.** Seasonal and engineering changes between the two dates are not covered – the note
 points readers to the operators. The itinerary still shows dates (Day 1 · Tue 17.11.), so a journey
 stays concrete.
+
+## D-53 Each map's texts in its own language
+**Date:** 4.11.2026 · **Status:** Accepted (Finnish done; Swedish, Danish, German to come)
+
+**Context.** IDEA-13 (Matti): after the place names (D-50), the whole page in the map's language.
+
+**Decision.**
+- Texts in `data/i18n/<lang>.yaml`, English the master; a missing key shows in English. The user
+  guide is one file per language (`src/guide/<lang>.html`). The build fills `{{key}}` markers in the
+  page; the page script uses `T("key", {…})`, with one/other forms by the browser's plural rules.
+- Finnish inflects the starting city: `from:` per origin in places.yaml (`Helsingistä`) fills
+  `{origin_from}`. Destinations and stops keep their basic form – sentences are worded around them
+  ("Hotelliyö · Köln", "Odotus 1 h 41 · Frankfurt").
+- Links stay English (`#rome/fri/no-night/morning/fewestchanges`); option labels stay English in the
+  data and are translated only when shown. Dates use the language's weekday names (pe 20.11.).
+- `check_i18n.py` lists missing or unused texts per language.
+
+**Why.** One mechanism for all languages; English fallback means a half-done language still works.
+Step 1 (English only) was verified as invisible: 5 maps × 78 browser states, 702 fields identical.
+
+**Consequences.** Every new page text needs a key in en.yaml and, in time, four translations.
 
 ---
 

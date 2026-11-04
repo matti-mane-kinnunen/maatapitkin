@@ -3,7 +3,7 @@
 settings:
   origin: Helsinki
   origins:                   # one map page per origin (IDEA-04); the first is index.html; lang = place names (data/names.yaml)
-    Helsinki: {page: index.html, lang: fi}
+    Helsinki: {page: index.html, lang: fi, from: Helsingistä}   # from = 'from Helsinki' in the map's language (Finnish cases, IDEA-13)
     Stockholm: {page: stockholm.html, lang: sv, title: Tågsemester, start_time: "16:00", start_times: ["06:00", "16:00"]}  # ferries east and night trains south leave 16:30-18:00
     Copenhagen: {page: copenhagen.html, lang: da, title: Togferie, start_time: "06:00", start_times: ["06:00", "16:00"]}  # day trains from early morning; evening for night trains
     London: {page: london.html, lang: en, title: Train holiday, start_time: "06:00", start_times: ["06:00", "17:00"]}  # Eurostar from early morning; evening for the sleepers
