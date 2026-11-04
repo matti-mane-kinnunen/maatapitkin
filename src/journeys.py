@@ -194,7 +194,8 @@ class Router:
       * staying on the same train (same service number, dep == arr): no change time
       * ferry: `ferry_checkin` before departure; Eurostar: `eurostar_checkin`
       * if the wait at a place spans the night (contains `night_point`, 03:00), it is a
-        hotel stay: the next departure must be at or after `morning_departure` (07:00)
+        hotel stay: the next departure must be at or after `morning_departure` (07:00;
+        a place may set its own, e.g. Budapest 05:00 for the only day train to Bucharest)
         and at least `min_hotel_stay` after arriving (8 h: arrive 01:00, leave 09:00 at
         the earliest), unless it is a night train/ferry you board the same evening
       * `max_stay_nights`: never wait more than this many nights at one place
@@ -242,6 +243,12 @@ class Router:
         # small border stations with planned same-platform connections (Valga, Mockava) (D-36)
         return int(here["min_transfer"]) if "min_transfer" in here else self.min_transfer
 
+    def morning_at(self, place: str) -> int:
+        """Earliest departure after a hotel night at this place: its own `morning_departure`
+        (Budapest 05:00, the 05:05 day train to Bucharest) or the general setting."""
+        here = self.net.places.get(place, {})
+        return hm(here["morning_departure"]) if "morning_departure" in here else self.morning
+
     def in_quiet(self, t: int) -> bool:
         """Is clock time t inside the quiet hours (default 00:00-05:00)?"""
         return self.quiet[0] <= t % DAY < self.quiet[1]
@@ -276,7 +283,7 @@ class Router:
             if not leg.night and self.in_quiet(t):                # nothing ordinary runs at night
                 t = (t // DAY) * DAY + self.quiet[1]
             if not first_leg and self.is_stay(arrival, t, leg):
-                t = max(t, (t // DAY) * DAY + self.morning, arrival + self.min_stay)
+                t = max(t, (t // DAY) * DAY + self.morning_at(leg.frm), arrival + self.min_stay)
             return t
         for k in range(0, self.max_nights + 2):
             t = (ready // DAY + k) * DAY + leg.dep
@@ -287,7 +294,7 @@ class Router:
             if not first_leg and self.is_stay(arrival, t, leg):
                 if (t - arrival) // DAY >= self.max_nights:
                     return None
-                if t % DAY < self.morning:                     # no 05:00 starts after a hotel night
+                if t % DAY < self.morning_at(leg.frm):         # no 05:00 starts after a hotel night
                     continue
                 if t - arrival < self.min_stay:                # arrive 01:00 -> not before 09:00 (FIX-07)
                     continue

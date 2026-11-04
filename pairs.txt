@@ -152,6 +152,13 @@ Rome -> Villa San Giovanni : *
 Messina -> Palermo : *
 Messina -> Taormina : *
 
+# -- IDEA-03: day connections for the no-night-train mode (4.11.2026) --
+Messina -> Syracuse : *          # regional trains; with Rome -> Villa San Giovanni / Palermo by day: Syracuse, Pozzallo, Valletta
+Rome -> Syracuse : *             # day Intercity via the train ferry (splits at Messina); the night ICN line below stays
+Istanbul -> Ankara : *           # high-speed YHT; so far only one 2023 train in our data
+Bucharest -> Iasi : *            # towards Chisinau by day (Iasi -> Chisinau still needs own times)
+Toulouse -> L'Hospitalet : *     # TER towards Latour-de-Carol; Andorra by day also needs more buses from L'Hospitalet
+
 # Your own times (not looked up; the run just keeps them)
 Pozzallo -> Valletta : VirtuFerries ferry 21:30-23:15
 Bucharest -> Ruse : 1095 10:46-13:40

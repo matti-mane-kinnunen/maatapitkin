@@ -14,7 +14,7 @@ settings:
   ferry_checkin: 45          # minutes before a ferry departs (check-in and getting from the station to the port)
   eurostar_checkin: 60       # minutes before Eurostar (service starting EST/ES); passport control is unpredictable
   night_point: "01:00"       # a wait that includes this time is an overnight (hotel) stay
-  morning_departure: "06:00" # earliest departure after a hotel night
+  morning_departure: "06:00" # earliest departure after a hotel night (a place may have its own: Budapest 05:00)
   min_hotel_stay: "8:00"     # and at least this long after arriving: arrive 01:00, leave 09:00 at the earliest (FIX-07)
   quiet_hours: "00:00-05:00" # only night trains and night ferries run then; a wait touching them is a hotel night
   max_stay_nights: 6         # never wait longer than this at one place: a week covers weekly services (Andorra sleeper, D-42)
@@ -74,7 +74,7 @@ places:
   Vienna:     {lat: 48.185, lon: 16.376, capital: true, country: AT, aliases: [Wien, Wenen], db: 8196001}
   Innsbruck:  {lat: 47.263, lon: 11.401, country: AT, db: 8100108}
   Bratislava: {lat: 48.159, lon: 17.106, capital: true, country: SK, db: 5696001}
-  Budapest:   {lat: 47.500, lon: 19.083, capital: true, country: HU, db: 5596001}
+  Budapest:   {lat: 47.500, lon: 19.083, capital: true, country: HU, morning_departure: "05:00", db: 5596001}  # the only day train to Bucharest leaves 05:05 (IDEA-03)
   Basel:      {lat: 47.547, lon: 7.590, country: CH, aliases: [Bâle, Basle], db: 8596001}
   Bern:       {lat: 46.949, lon: 7.439, capital: true, country: CH, aliases: [Berne], db: 8507000}
   Milan:      {lat: 45.486, lon: 9.204, country: IT, aliases: [Milano, Mailand], db: 8396005}
