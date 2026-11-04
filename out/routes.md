@@ -160,10 +160,10 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Boden | Wed 11.11. 11:35 | 19 h 15 min | 2 | 0 |
 | Göteborg | Wed 11.11. 11:47 | 19 h 12 min | 2 | 0 |
 | Malmö | Wed 11.11. 11:53 | 19 h 18 min | 2 | 0 |
+| Östersund | Wed 11.11. 12:37 | 20 h 17 min | 3 | 0 |
 | Valga | Wed 11.11. 14:14 | 6 h 44 min | 1 | 0 |
-| Östersund | Wed 11.11. 13:17 | 20 h 42 min | 2 | 0 |
 | Aarhus | Wed 11.11. 16:38 | 24 h 03 min | 4 | 0 |
-| Storlien | Wed 11.11. 18:27 | 25 h 52 min | 3 | 0 |
+| Storlien | Wed 11.11. 18:27 | 26 h 07 min | 3 | 0 |
 | Hamburg | Wed 11.11. 19:01 | 26 h 26 min | 4 | 0 |
 | Kaisiadorys | Wed 11.11. 20:45 | 13 h 15 min | 3 | 0 |
 | Trondheim | Wed 11.11. 20:47 | 28 h 12 min | 4 | 0 |

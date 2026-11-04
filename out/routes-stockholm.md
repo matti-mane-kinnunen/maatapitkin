@@ -159,7 +159,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Hamburg | Wed 11.11. 05:53 | 12 h 24 min | 0 | 0 |
 | Turku | Wed 11.11. 07:35 | 10 h 35 min | 0 | 0 |
 | Osnabrück | Wed 11.11. 08:34 | 15 h 05 min | 1 | 0 |
-| Storlien | Wed 11.11. 09:17 | 10 h 37 min | 1 | 0 |
+| Storlien | Wed 11.11. 09:17 | 16 h 55 min | 1 | 0 |
 | Rostock | Wed 11.11. 09:50 | 16 h 21 min | 1 | 0 |
 | Frankfurt | Wed 11.11. 10:14 | 16 h 45 min | 1 | 0 |
 | Köln | Wed 11.11. 10:48 | 17 h 19 min | 1 | 0 |

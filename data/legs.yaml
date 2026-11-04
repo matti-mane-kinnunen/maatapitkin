@@ -2000,3 +2000,10 @@ legs:
   - {from: Oulu, to: Rovaniemi, service: "IC", mode: train, times: ["04:52-07:20", "08:26-10:59", "12:20-14:41", "14:27-16:46", "17:53-20:23", "20:24-22:45"], query: "*", checked: 2026-11-03, source: transitous}
   - {from: Oulu, to: Rovaniemi, service: "IC", mode: train, runs: "sat", times: ["07:02-09:58"], query: "*", checked: 2026-11-03, source: transitous}
   - {from: Athens, to: Thessaloniki, service: "IC50", mode: train, times: ["06:58-12:10", "17:58-23:10"], query: "*", checked: 2026-11-03, source: transitous}
+  - {from: Sundsvall, to: Storlien, service: "7510", mode: train, times: ["14:08-18:27"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sundsvall, to: Storlien, service: "7510", mode: train, runs: "mon-fri", times: ["04:54-09:17"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sundsvall, to: Östersund, service: "7506", mode: train, times: ["10:08-12:37", "14:08-16:31"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sundsvall, to: Östersund, service: "7506", mode: train, runs: "mon-fri", times: ["04:54-07:22", "08:08-10:34", "16:37-19:05", "18:08-20:35", "20:07-22:32"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sundsvall, to: Östersund, service: "7506", mode: train, runs: "mon-fri,sat", times: ["06:08-08:37", "12:08-14:33", "15:58-18:18"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sundsvall, to: Östersund, service: "7506", mode: train, runs: "sat", times: ["16:07-18:35"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sundsvall, to: Östersund, service: "7506", mode: train, runs: "sun", times: ["08:08-10:37", "16:01-18:22", "16:05-18:38", "19:08-21:38"], query: "*", checked: 2026-11-04, source: transitous}
