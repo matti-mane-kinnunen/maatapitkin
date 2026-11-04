@@ -2045,3 +2045,12 @@ legs:
   - {from: Seinäjoki, to: Helsinki, service: "IC", mode: train, runs: "sun", times: ["05:19-10:34"], query: "*", checked: 2026-11-04, source: transitous}
   - {from: Sofia, to: Istanbul, dep: "11:00", arr: "20:30", service: "Kamil Koç 11:00", mode: bus, checked: 2026-11-04, source: manual}
   - {from: Sofia, to: Istanbul, dep: "23:00", arr: "08:00", service: "Kamil Koç 23:00", mode: bus, night: true, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "06:00", arr: "10:30", service: "Alsa 06:00", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "07:00", arr: "10:15", service: "Alsa 07:00", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "07:30", arr: "11:40", service: "Alsa 07:30", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "10:30", arr: "13:45", service: "Alsa 10:30", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "13:00", arr: "16:00", service: "Alsa 13:00", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "14:30", arr: "19:00", service: "Alsa 14:30", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "15:00", arr: "18:15", service: "Alsa 15:00", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "19:00", arr: "22:20", service: "Alsa 19:00", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Barcelona, to: Andorra la Vella, dep: "19:30", arr: "22:50", service: "Alsa 19:30", mode: bus, checked: 2026-11-04, source: manual}

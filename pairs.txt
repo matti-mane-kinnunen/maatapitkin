@@ -412,6 +412,16 @@ Berlin -> Przemyśl : *                               # EC 59 runs through from 
 # -- Andorra --
 Paris -> L'Hospitalet : *                                        # Intercités de Nuit 22:14-09:43 (Seat61, Nov 2026): fri,sat; daily Jun-Sep
 L'Hospitalet -> Andorra la Vella : Hife bus 10:15-11:30          # Seat61, Nov 2026; taxi ~47 min, ~€115
+# Barcelona -> Andorra la Vella by day: Alsa buses (Matti, Nov 2026, Alsa timetable); the slower 15:00 (arr 19:15) left out - same name, never faster
+Barcelona -> Andorra la Vella : Alsa 06:00 bus 06:00-10:30
+Barcelona -> Andorra la Vella : Alsa 07:00 bus 07:00-10:15
+Barcelona -> Andorra la Vella : Alsa 07:30 bus 07:30-11:40
+Barcelona -> Andorra la Vella : Alsa 10:30 bus 10:30-13:45
+Barcelona -> Andorra la Vella : Alsa 13:00 bus 13:00-16:00
+Barcelona -> Andorra la Vella : Alsa 14:30 bus 14:30-19:00
+Barcelona -> Andorra la Vella : Alsa 15:00 bus 15:00-18:15
+Barcelona -> Andorra la Vella : Alsa 19:00 bus 19:00-22:20
+Barcelona -> Andorra la Vella : Alsa 19:30 bus 19:30-22:50
 
 # -- Sarajevo: no trains across the Croatia-Bosnia border, and a gap inside Bosnia since 2025 (Seat61) --
 Zagreb -> Sarajevo : Coach 12:30 bus 12:30-20:55          # Seat61, Nov 2026: usually daily; bus station is an 18-min walk from Zagreb station
