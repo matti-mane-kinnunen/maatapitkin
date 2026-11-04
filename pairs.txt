@@ -468,9 +468,12 @@ Stockholm -> Sundsvall : *
 
 Stockholm -> Umeå :* 
 Vaasa -> Helsinki :*
-Vaasa -> Oulu :* 
-Vaasa -> Rovaniemi :*
+Vaasa -> Seinäjoki:* 
+Seinäjoki -> Oulu :* 
+Seinäjoki  -> Rovaniemi :*
 Oulu -> Rovaniemi : * 
+Helsinki -> Seinäjoki : *
+Seinäjoki -> Helsinki : *
 
 # Turkey
 Ankara -> Izmir :*
