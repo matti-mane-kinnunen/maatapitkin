@@ -25,6 +25,7 @@ ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
 from co2 import CO2  # noqa: E402
+import i18n  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser(
@@ -337,8 +338,14 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     raw = args.starts.split(",") if args.starts else s.get("start_times") or ["06:00", start_time]
     starts = sorted({clock_arg(x) for x in raw if str(x).strip()} | {start_time})
 
+    tx = i18n.texts(cfg.get("lang", "en"))                 # the map's language (IDEA-13)
+
+    def version_line(d: dt.date, t: str) -> str:
+        return i18n.t(tx, "version", origin=origin, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
+                      time=t, today=f"{today.day}.{today.month}.{today.year}")
+
     def one_variant(d: dt.date, t: str) -> dict:
-        v = {"version": f"leave {origin} {d:%a %-d.%-m.%Y} from {t} · generated {today:%-d.%-m.%Y}"}
+        v = {"version": version_line(d, t)}
         for key, nt in (("yes", True), ("no", False)):
             _, rs, crs, un, unc = compute(nt, d, hm(t))
             v[key] = {"routes": rs, "city_routes": crs, "unreached": un, "unreached_cities": unc}
@@ -349,7 +356,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
         For each place: the earliest arrival from `t`, on the latest departure that still
         makes it. Where leaving early doesn't arrive sooner, the default journey is kept
         and marked same_as_default."""
-        v = {"version": f"leave {origin} {d:%a %-d.%-m.%Y} from {t} · generated {today:%-d.%-m.%Y}"}
+        v = {"version": version_line(d, t)}
         for key, nt in (("yes", True), ("no", False)):
             ev = {r["capital"]: r for r in base[key]["routes"] + base[key]["city_routes"]}
             router = Router(net, d, night_trains=nt)
@@ -403,7 +410,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
     t_main = t_other = 0.0
     for d in dates:
         t0 = time.monotonic()
-        v = {"label": f"{d:%a %-d.%-m.}", **one_variant(d, start_time)}
+        v = {"label": f"{i18n.weekday(tx, d)} {d.day}.{d.month}.", **one_variant(d, start_time)}
         t1 = time.monotonic(); t_main += t1 - t0
         v["starts"] = {t: (other_start(d, t, v) if t < start_time else one_variant(d, t))
                        for t in starts if t != start_time}

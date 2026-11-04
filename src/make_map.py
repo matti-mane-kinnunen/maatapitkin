@@ -7,6 +7,8 @@ from __future__ import annotations
 
 import html
 import re
+
+import i18n
 import json
 import math
 from pathlib import Path
@@ -74,13 +76,19 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
     for p in net["not_covered"].values():
         p["missing"] = True
     w, h = size()
+    lang = net.get("lang") or "en"
+    tx = i18n.texts(lang)                                     # page texts in the map's language (IDEA-13)
+    net["i18n"] = tx
     tpl = (root / "src" / "map_template.html").read_text()
+    tpl = tpl.replace("__GUIDE__", i18n.guide(lang))
+    # {{key}} markers: texts may contain simple HTML; {origin} becomes __ORIGIN__, filled in below
+    tpl = re.sub(r"\{\{(\w+)\}\}", lambda m: i18n.t(tx, m.group(1), origin="__ORIGIN__"), tpl)
     page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h))
                .replace("__ORIGIN__", html.escape((net.get("display") or {}).get(net["origin"], net["origin"])))
                .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin"))
-               .replace("__DRAFT__", " · <b>draft</b>: some connections may still be missing" if net.get("draft") else ""))
+               .replace("__DRAFT__", i18n.t(tx, "draft_note") if net.get("draft") else ""))
     if fragment:
         (root / "out" / "map.html").write_text(page)      # fragment: paste into a page or publish as is
     site = root / "out" / "site"                             # a complete page for GitHub Pages
@@ -91,14 +99,19 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
             if f.is_file():
                 (site / f.name).write_bytes(f.read_bytes())
     (site / page_name).write_text(
-        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        f'<!doctype html>\n<html lang="{page_lang(lang)}">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        + head_tags(net, page_name, site) +
+        + head_tags(net, page_name, site, tx) +
         '</head>\n<body>\n' + re.sub(r"<title>.*?</title>\n?", "", page, count=1) + '\n</body>\n</html>\n')
     return site / page_name
 
 
-def head_tags(net: dict, page_name: str, site: Path) -> str:
+def page_lang(lang: str) -> str:
+    """The <html lang> of a page: its language once that language has texts, else English."""
+    return lang if lang == "en" or (i18n.ROOT / "data" / "i18n" / f"{lang}.yaml").exists() else "en"
+
+
+def head_tags(net: dict, page_name: str, site: Path, tx: dict | None = None) -> str:
     """<title>, description and the Open Graph tags Facebook, LinkedIn, WhatsApp etc. use for
     link previews (IDEA-11). The picture is static/preview-<origin>.png, made by hand when the
     network changes a lot; without it the preview simply has no picture."""
@@ -108,9 +121,9 @@ def head_tags(net: dict, page_name: str, site: Path) -> str:
     v = (net.get("variants") or {}).get(first) or {}
     routes = (v.get("yes") or {}).get("routes") or net.get("routes") or []
     n = len({r["capital"] for r in routes if r.get("is_capital", True)})
-    og_title = f"{title} – {origin} to {n} capitals in Europe and around the Mediterranean by train"
-    desc = (f"{origin} to {n} capitals in Europe and around the Mediterranean by train, ferry and bus: door to door, how long it really "
-            f"takes, day by day, with every change and hotel night.")
+    tx = tx or i18n.texts(net.get("lang") or "en")
+    og_title = i18n.t(tx, "og_title", title=title, origin=origin, n=n)
+    desc = i18n.t(tx, "og_desc", origin=origin, n=n)
     e = lambda x: html.escape(x, quote=True)
     tags = [f'<title>{e(og_title)}</title>', f'<meta name="description" content="{e(desc)}">',
             '<meta property="og:type" content="website">', f'<meta property="og:title" content="{e(og_title)}">',
@@ -124,7 +137,7 @@ def head_tags(net: dict, page_name: str, site: Path) -> str:
         if (site / pic).exists():
             tags += [f'<meta property="og:image" content="{e(base + pic)}">',
                      '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
-                     f'<meta property="og:image:alt" content="{e(f"Map of train journeys from {origin} to capitals in Europe and around the Mediterranean")}">']
+                     f'<meta property="og:image:alt" content="{e(i18n.t(tx, "og_alt", origin=origin))}">']
     return "\n".join(tags) + "\n"
 
 

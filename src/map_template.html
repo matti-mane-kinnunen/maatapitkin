@@ -227,71 +227,67 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
 <div class="wrap">
   <header>
-    <h1>__TITLE__<small>__ORIGIN__ to capitals in Europe and around the Mediterranean by train, ferry and bus — fastest connection from the timetable data__DRAFT__</small></h1>
-    <div class="origins"><nav id="origins" aria-label="Maps from other cities"></nav><span class="credit">See <a href="#user-guide" id="guide-link">User guide</a>. Developed with Claude by <a href="mailto:mane@iki.fi">mane@iki.fi</a> – see <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">blog</a></span></div>
+    <h1>__TITLE__<small>{{subtitle}}__DRAFT__</small></h1>
+    <div class="origins"><nav id="origins" aria-label="{{maps_from_aria}}"></nav><span class="credit">{{credit}}</span></div>
     <div class="meta" id="meta"></div>
   </header>
   <!-- layout (feedback 4.11.2026): settings on top, map with the timetable beside it, destinations below -->
-  <div class="controls" role="group" aria-label="Journey settings">
-        <div class="seg" id="f-date" role="group" aria-label="Leave __ORIGIN__ on"><span>Leave</span></div>
-        <div class="seg" id="f-start" role="group" aria-label="Leave __ORIGIN__ from"><span>From</span></div>
-        <div class="seg" id="f-night" role="group" aria-label="Night trains">
-          <span>Night trains</span><button type="button" data-n="1">allowed</button><button type="button" data-n="0">avoid</button>
+  <div class="controls" role="group" aria-label="{{settings_aria}}">
+        <div class="seg" id="f-date" role="group" aria-label="{{leave_aria}}"><span>{{leave}}</span></div>
+        <div class="seg" id="f-start" role="group" aria-label="{{from_aria}}"><span>{{from}}</span></div>
+        <div class="seg" id="f-night" role="group" aria-label="{{night_trains}}">
+          <span>{{night_trains}}</span><button type="button" data-n="1">{{allowed}}</button><button type="button" data-n="0">{{avoid}}</button>
         </div>
         <div class="togs">
-          <label><input type="checkbox" id="f-nohotel"> No hotel nights</label>
-          <label><input type="checkbox" id="f-cities"> Include other cities</label>
-          <label title="Also draw connections in the data that no journey on this map uses"><input type="checkbox" id="f-alllegs"> All connections</label>
+          <label><input type="checkbox" id="f-nohotel"> {{no_hotel_nights}}</label>
+          <label><input type="checkbox" id="f-cities"> {{other_cities}}</label>
+          <label title="{{all_connections_title}}"><input type="checkbox" id="f-alllegs"> {{all_connections}}</label>
         </div>
-    <a class="tolist" href="#arrivals" id="arrivals-link">Travel times from __ORIGIN__ ↓</a>
+    <a class="tolist" href="#arrivals" id="arrivals-link">{{to_list}}</a>
     <p class="valid" id="valid" hidden></p>
   </div>
   <div class="grid">
     <div class="mapcol">
       <div class="legend">
-        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>Day train</span>
-        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--night)" stroke-width="3"/></svg>Night train</span>
-        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>Ferry / local</span>
+        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>{{leg_day_train}}</span>
+        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--night)" stroke-width="3"/></svg>{{leg_night_train}}</span>
+        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>{{leg_ferry}}</span>
         <span class="daylegend" id="daylegend"></span>
-        <span><svg viewBox="0 0 28 10"><circle cx="14" cy="5" r="4" fill="none" stroke="var(--missing)" stroke-dasharray="2 2"/></svg>No legs yet</span>
-        <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark day d3"><rect x="-9" y="-7" width="18" height="14" rx="4"/><text>3</text></g></svg>Day 3 begins here</span>
-        <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark hotel"><rect x="-10" y="-7" width="20" height="14" rx="4"/><path d="M-6 3.5V-3.5 M-6 1.5h12v2 M6 1.5v-1.5a1.5 1.5 0 0 0-1.5-1.5H-1v3 M-3.4 -1.3a0.01 0.01 0 1 0 0.02 0"/></g></svg>Hotel night</span>
+        <span><svg viewBox="0 0 28 10"><circle cx="14" cy="5" r="4" fill="none" stroke="var(--missing)" stroke-dasharray="2 2"/></svg>{{leg_no_legs}}</span>
+        <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark day d3"><rect x="-9" y="-7" width="18" height="14" rx="4"/><text>3</text></g></svg>{{leg_day_begins}}</span>
+        <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark hotel"><rect x="-10" y="-7" width="20" height="14" rx="4"/><path d="M-6 3.5V-3.5 M-6 1.5h12v2 M6 1.5v-1.5a1.5 1.5 0 0 0-1.5-1.5H-1v3 M-3.4 -1.3a0.01 0.01 0 1 0 0.02 0"/></g></svg>{{leg_hotel}}</span>
       </div>
       <div class="mapbox">
-        <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="Map of rail and ferry legs across Europe">
+        <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="{{map_aria}}">
           <g id="land">__BASEMAP__</g>
           <g id="base"></g><g id="preview"></g><g id="route"></g><g id="leghits"></g><g id="nodes"></g><g id="labels"></g><g id="marks"></g><g id="hits"></g>
         </svg>
         <div class="tip" id="tip" hidden></div>
-        <div class="zoombar" role="group" aria-label="Zoom the map">
-          <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
-          <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
-          <button type="button" id="zoom-fit" class="fit" aria-label="Show the whole map">Fit</button>
+        <div class="zoombar" role="group" aria-label="{{zoom_aria}}">
+          <button type="button" id="zoom-in" aria-label="{{zoom_in}}">+</button>
+          <button type="button" id="zoom-out" aria-label="{{zoom_out}}">−</button>
+          <button type="button" id="zoom-fit" class="fit" aria-label="{{zoom_fit_aria}}">{{zoom_fit}}</button>
         </div>
       </div>
     </div>
       <section class="itin" aria-live="polite">
-        <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
-        <div class="opts" id="opts" role="tablist" aria-label="Journey options"></div>
+        <h2><span id="itin-title">{{itinerary}}</span><span id="itin-sum"></span></h2>
+        <div class="opts" id="opts" role="tablist" aria-label="{{options_aria}}"></div>
         <p class="co2" id="co2" hidden></p>
         <div class="co2-how" id="co2-how" hidden>
-          <p>A rough estimate, rounded on purpose. Each train, bus or ferry leg: distance between the two places
-          (+20&nbsp;% for the real route) × the average emissions per person-km for that kind of transport.
-          The flight: a direct flight between the same two cities, including the extra warming effect of
-          emissions at high altitude.</p>
-          <p>Factors: <span id="co2-factors"></span>.
-          Ferries weigh a lot – per kilometre more than flying – so on many journeys the ferry is most of the
-          total, and a short trip with a long ferry crossing can emit more than the flight. <a id="co2-src" href="#" target="_blank" rel="noopener">Source</a></p>
+          <p>{{co2_how_1}}</p>
+          <p>{{co2_factors_label}}<span id="co2-factors"></span>.
+          {{co2_how_2}} <a id="co2-src" href="#" target="_blank" rel="noopener">{{co2_source}}</a></p>
         </div>
-        <div class="share"><button type="button" id="share">Copy link</button><span id="share-msg" role="status"></span></div>
+        <div class="share"><button type="button" id="share">{{copy_link}}</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
   </div>
-  <section class="board" id="arrivals" aria-label="Destinations by arrival time">
-      <h2><span>Arrivals from __ORIGIN__</span><span>door to door</span></h2>
+  <section class="board" id="arrivals" aria-label="{{board_aria}}">
+      <h2><span>{{arrivals_from}}</span><span>{{door_to_door}}</span></h2>
       <div class="tools">
-        <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
-        <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
+        <input type="search" id="q" placeholder="{{search_placeholder}}" aria-label="{{search_aria}}" autocomplete="off" spellcheck="false">
+        <div class="seg" id="f-day" role="group" aria-label="{{arrive_by}}"><span>{{arrive_by}}</span></div>
         <div class="count" id="count" aria-live="polite"></div>
       </div>
       <ol id="list"></ol>
@@ -299,55 +295,21 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
   </section>
   <footer id="foot"></footer>
   <section class="guide" id="user-guide" aria-labelledby="guide-h">
-    <h2 id="guide-h">User guide</h2>
-    <p>This map shows how far you get from __ORIGIN__ by train, ferry and bus – to the capitals in
-    Europe and around the Mediterranean, door to door. It is meant to show that it can be done and roughly how long it takes,
-    not to replace a journey planner: check the times and book with the operators.</p>
-    <h3>Pick a destination</h3>
-    <ul>
-      <li>The list below the map shows the capitals in order of arrival, with the door-to-door time.
-      The colour tells on which day you arrive.</li>
-      <li>Click a city in the list or on the map, or type its name in <b>Find a city</b> (press <kbd>/</kbd>).</li>
-      <li>The journey's timetable appears beside the map (below it on narrow screens), day by day: every train, ferry and bus, the changes,
-      and where you stay overnight. On the map, numbered marks show where each day begins and a bed
-      shows a hotel night.</li>
-    </ul>
-    <h3>Choose how you travel</h3>
-    <ul>
-      <li><b>Leave</b>: the travel day. Some trains and ferries do not run every day, so the day changes the answer.</li>
-      <li><b>From</b>: leave in the morning or in the evening.</li>
-      <li><b>Night trains</b>: <i>allowed</i> uses sleepers and night ferries; <i>avoid</i> travels by day only
-      (night ferries still count). Some places are reachable only by night train.</li>
-      <li><b>Arrive by</b>, above the list, shows only the places you reach by that day; <b>No hotel nights</b> only journeys
-      without one; <b>Include other cities</b> adds towns and ports that are not capitals.</li>
-    </ul>
-    <h3>Read a journey</h3>
-    <ul>
-      <li>Where there is a real choice, cards show <b>Fastest</b> (arrives first), <b>Fewest changes</b> and
-      <b>Fewest hotel nights</b>, each with its departure and arrival.</li>
-      <li>A wait through the night is a hotel night: you sleep in that town and go on in the morning.
-      Nights on a sleeper or a night ferry are spent on board.</li>
-      <li>Clock times are local; the door-to-door time accounts for time zones.</li>
-      <li>The CO₂ line compares the journey with flying; <b>How?</b> explains the estimate.</li>
-      <li><b>Copy link</b> gives a link to exactly this journey and these choices – to share or save.</li>
-    </ul>
-    <h3>The map</h3>
-    <ul>
-      <li>Zoom with <b>+</b> and <b>−</b> (or the mouse wheel, or pinch) and drag to move; <b>Fit</b> shows all of it.</li>
-      <li>Point at a connection to see its departures.</li>
-      <li>The map draws the connections that journeys use; <b>All connections</b> shows the rest of the data.</li>
-      <li><b>Maps from</b> at the top opens the same map for other starting cities.</li>
-    </ul>
-    <h3>Where the times come from</h3>
-    <p>Most trains are looked up every week in <a href="https://transitous.org" target="_blank" rel="noopener">Transitous</a>,
-    an open community journey planner; ferries, buses and trains it lacks are entered by hand from
-    Seat61, Deutsche Bahn and the operators. Journeys are worked out for the travel days shown, with
-    time for every change – the settings are in the text just above.</p>
+__GUIDE__
   </section>
 </div>
 
 <script>
 const NET = /*__DATA__*/null;
+// page texts in this map's language (data/i18n/<lang>.yaml, IDEA-13); {name} filled in, {one, other} by n
+const I18N = NET.i18n || {}, LOCALE = I18N._locale || "en-GB", PLURAL = new Intl.PluralRules(LOCALE);
+function T(key, v = {}) {
+  let s = I18N[key];
+  if (s == null) return key;
+  if (Array.isArray(s)) return s;
+  if (typeof s === "object") s = s[PLURAL.select(v.n ?? 0)] ?? s.other;
+  return String(s).replace(/\{(\w+)\}/g, (m, k) => v[k] ?? m);
+}
 // journeys exist per travel date and with/without night trains; start with the first date
 const VARS = NET.variants || null;
 let curDate = NET.dates ? NET.dates[0] : null;
@@ -355,10 +317,13 @@ let curDate = NET.dates ? NET.dates[0] : null;
 const DEF_START = NET.default_start || null, STARTS = NET.starts || [];
 let curStart = DEF_START;
 const varOf = (date, t) => { const b = VARS[date]; return (t && t !== DEF_START && b.starts && b.starts[t]) || b; };
-const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";
+const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";   // link word
+const partLabel = t => T("part_" + partOfDay(t));                                        // shown word
+const OPT_KEY = { "Fastest": "opt_fastest", "Fewest changes": "opt_fewest_changes", "Fewest hotel nights": "opt_fewest_hotels" };
+const optLabel = l => OPT_KEY[l] ? T(OPT_KEY[l]) : l;   // labels stay English in the data and in links
 // journeys are stored compactly (build.py compact_route): rebuild the full steps from the timetable
 const LEG_BY_I = Object.fromEntries((NET.legs || []).map(l => [l.i, l]));
-const WDAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const WDAY = T("weekdays_short");
 function whenTxt(date, t) {                       // like build.py: "Tue 3.11. 17:35"
   const d = new Date(date + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + Math.floor(t / 1440));
   const m = ((t % 1440) + 1440) % 1440;
@@ -404,11 +369,11 @@ const LN = n => (NET.display && NET.display[n]) || n;
 (function () {
   const nav = document.getElementById("origins"), pages = NET.pages || [];
   if (pages.length < 2) { nav.hidden = true; return; }
-  nav.append("Maps from: ");
+  nav.append(T("maps_from"));
   pages.forEach((p, i) => {
     if (i) nav.append(" · ");
-    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = LN(p.name) + (p.draft ? " (draft)" : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
-    else { const a = document.createElement("a"); a.href = p.page; a.textContent = LN(p.name) + (p.draft ? " (draft)" : ""); nav.append(a); }
+    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = LN(p.name) + (p.draft ? T("draft_suffix") : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
+    else { const a = document.createElement("a"); a.href = p.page; a.textContent = LN(p.name) + (p.draft ? T("draft_suffix") : ""); nav.append(a); }
   });
 })();
 const SVGNS = "http://www.w3.org/2000/svg";
@@ -421,7 +386,7 @@ const cls = l => l.mode === "ferry" || l.mode === "local" ? l.mode : (l.night ? 
 const dayOf = r => Math.floor(r.arrive / 1440) + 1;
 const dayClass = r => Math.min(dayOf(r), 6);
 const dayDate = d => { const t = new Date(NET.start_date + "T12:00:00"); t.setDate(t.getDate() + d - 1);
-  return `${t.toLocaleDateString("en-GB", { weekday: "short" })} ${t.getDate()}.${t.getMonth() + 1}.`; };
+  return `${WDAY[t.getDay()]} ${t.getDate()}.${t.getMonth() + 1}.`; };
 // label nudges for crowded spots: [dx, dy, anchor]
 const NUDGE = { Vatican: [-7, 10, "end"], Rome: [7, -4, "start"], Bratislava: [7, 10, "start"], Vienna: [-7, -5, "end"],
   Brussels: [-7, 4, "end"], Amsterdam: [-7, -4, "end"], Luxembourg: [7, -4, "start"], Paris: [-7, 4, "end"], Ankara: [-7, -6, "end"], Nicosia: [-7, -6, "end"], "The Hague": [-7, -2, "end"],
@@ -542,22 +507,22 @@ function curvePoint(a, b, t) {      // a point on the same arc as curve()
   return { x: u * u * a.x + 2 * u * t * cx + t * t * b.x, y: u * u * a.y + 2 * u * t * cy + t * t * b.y };
 }
 const nightsBetween = (a, b) => { let n = 0; for (let m = Math.floor((a - NIGHT_POINT) / 1440) * 1440 + NIGHT_POINT + 1440; m <= b; m += 1440) n++; return n; };
-const vehicle = s => s.mode === "ferry" ? (s.night ? "night ferry" : "ferry") : s.mode === "bus" ? "bus" : (s.night ? "night train" : "train");
+const vehicle = s => T(s.mode === "ferry" ? (s.night ? "veh_night_ferry" : "veh_ferry") : s.mode === "bus" ? "veh_bus" : (s.night ? "veh_night_train" : "veh_train"));
 function routeMarks(r) {
   const legs = r.steps.filter(s => s.kind === "leg"), marks = [];
   for (const st of r.steps)            // hotel nights exactly as the router counted them
-    if (st.kind === "stay") marks.push({ kind: "hotel", place: st.place, title: `Hotel night in ${LN(st.place)}: arrive ${st.from_t}, leave ${st.to_t}` });
+    if (st.kind === "stay") marks.push({ kind: "hotel", place: st.place, title: T("mark_hotel", { place: LN(st.place), from: st.from_t, to: st.to_t }) });
   legs.forEach((s, i) => {
     for (let m = (Math.floor(s.dep / 1440) + 1) * 1440; m < s.arr; m += 1440) {   // midnight on board
       const d = m / 1440 + 1, t = (m - s.dep) / Math.max(1, s.arr - s.dep);
-      marks.push({ kind: "day", day: d, leg: s, t, title: `Day ${d} (${dayDate(d)}) begins on the ${vehicle(s)} ${LN(s.from)} → ${LN(s.to)}` });
+      marks.push({ kind: "day", day: d, leg: s, t, title: T("mark_day_on", { d, date: dayDate(d), vehicle: vehicle(s), from: LN(s.from), to: LN(s.to) }) });
     }
     const next = legs[i + 1];
     if (!next) return;
     const place = next.from;
     for (let m = Math.ceil(s.arr / 1440) * 1440; m <= next.dep; m += 1440) {          // midnight at a station
       const d = m / 1440 + 1;
-      marks.push({ kind: "day", day: d, place, title: `Day ${d} (${dayDate(d)}) begins in ${LN(place)}` });
+      marks.push({ kind: "day", day: d, place, title: T("mark_day_in", { d, date: dayDate(d), place: LN(place) }) });
     }
   });
   return marks;
@@ -617,14 +582,14 @@ function hover(name) {
   if (r && !buttons[name]?.getAttribute("aria-pressed")?.includes("true"))
     for (const s of r.steps.filter(s => s.kind === "leg")) el("path", { d: curve(P[s.from], P[s.to]), class: "leg" }, previewG);
   tip.innerHTML = r
-    ? `<b>${LN(name)}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span> · day ${dayOf(r)}, ${r.arrive_txt}<br>` +
-      `${r.changes} change${r.changes === 1 ? "" : "s"} · ${r.hotel_nights} hotel night${r.hotel_nights === 1 ? "" : "s"}` +
-      `${r.alternatives?.length ? ` · ${r.alternatives.length} alternative${r.alternatives.length > 1 ? "s" : ""}` : ""}` +
-      `<br><span class="hint">Click for the itinerary</span>`
-    : name === NET.origin ? `<b>${LN(name)}</b><span class="hint">Every journey starts here</span>`
-    : P[name].missing ? `<b>${LN(name)}</b><span class="hint">No connections yet</span>`
-    : reachableWithNight(name) ? `<b>${LN(name)}</b><span class="hint">Not reachable without night trains</span>`
-    : `<b>${LN(name)}</b><span class="hint">No journey from ${LN(NET.origin)} in the data</span>`;
+    ? `<b>${LN(name)}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span>${T("tip_arrive", { d: dayOf(r), when: r.arrive_txt })}<br>` +
+      `${T("n_changes", { n: r.changes })} · ${T("n_hotel_nights", { n: r.hotel_nights })}` +
+      `${r.alternatives?.length ? T("n_alternatives", { n: r.alternatives.length }) : ""}` +
+      `<br><span class="hint">${T("tip_click")}</span>`
+    : name === NET.origin ? `<b>${LN(name)}</b><span class="hint">${T("tip_origin")}</span>`
+    : P[name].missing ? `<b>${LN(name)}</b><span class="hint">${T("tip_missing")}</span>`
+    : reachableWithNight(name) ? `<b>${LN(name)}</b><span class="hint">${T("tip_night_only")}</span>`
+    : `<b>${LN(name)}</b><span class="hint">${T("tip_no_journey", { origin: LN(NET.origin) })}</span>`;
   if (!isMain(name)) layoutCities(name);
   const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
   const x = (p.x - VB.x) * k, y = (p.y - VB.y) * k;
@@ -647,10 +612,10 @@ function pairHtml(pr) {
   for (const l of pr.legs) { const k = l.service || "?"; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(l); }
   const rows = [...groups.entries()].map(([svc, ls]) => {
     const timed = ls.filter(l => l.dep).sort((a, b) => hm(a.dep) - hm(b.dep));
-    const kind = ls[0].mode === "ferry" ? (ls[0].night ? "night ferry" : "ferry") : ls[0].mode === "bus" ? "bus"
-               : ls[0].mode === "local" ? "metro" : ls[0].night ? "night train" : "";
+    const kind = ls[0].mode === "ferry" ? T(ls[0].night ? "veh_night_ferry" : "veh_ferry") : ls[0].mode === "bus" ? T("veh_bus")
+               : ls[0].mode === "local" ? T("veh_metro") : ls[0].night ? T("veh_night_train") : "";
     const note = kind ? ` <span class="chipnote">${kind}</span>` : "";
-    if (!timed.length) return { first: 1e9, html: `<div class="svc-row"><b>${svc}</b>${note} · about ${durTxt(ls[0].duration_true ?? ls[0].duration)}, no timetable</div>` };
+    if (!timed.length) return { first: 1e9, html: `<div class="svc-row"><b>${svc}</b>${note}${T("svc_untimed", { dur: durTxt(ls[0].duration_true ?? ls[0].duration) })}</div>` };
     const typical = durTxt(median(timed.map(l => l.duration_true ?? l.duration)));
     const nextDay = l => hm(l.arr) < hm(l.dep) ? "+1" : "";
     if (timed.length === 1) {
@@ -661,15 +626,15 @@ function pairHtml(pr) {
     const gaps = deps.slice(1).map((d, i) => hm(d) - hm(deps[i]));
     const g = median(gaps), regular = gaps.filter(x => Math.abs(x - g) <= 10).length >= gaps.length * 0.6;
     const gr = g < 60 ? Math.round(g / 5) * 5 : Math.round(g / 15) * 15;      // 32 min -> "every 30 min"
-    const every = regular && g <= 120 ? ` · every ${gr < 60 ? gr + " min" : durTxt(gr)}` : "";
+    const every = regular && g <= 120 ? T("svc_every", { x: gr < 60 ? gr + " min" : durTxt(gr) }) : "";
     const times = deps.length <= 14 ? deps.join(" ") : [...deps.slice(0, 6), "…", ...deps.slice(-3)].join(" ");
-    return { first: hm(deps[0]), html: `<div class="svc-row"><b>${svc}</b>${note} · ${deps.length} departures${every} · ${typical}` +
+    return { first: hm(deps[0]), html: `<div class="svc-row"><b>${svc}</b>${note} · ${T("n_departures", { n: deps.length })}${every} · ${typical}` +
              `<div class="times">${times}</div></div>` };
   }).sort((a, b) => a.first - b.first);
-  const more = rows.length > 6 ? `<div class="hint">and ${rows.length - 6} more services</div>` : "";
+  const more = rows.length > 6 ? `<div class="hint">${T("svc_more", { n: rows.length - 6 })}</div>` : "";
   const checked = pr.legs.map(l => l.checked).filter(Boolean).sort().pop();
   return `<b>${LN(pr.from)} → ${LN(pr.to)}</b><div class="svcs">${rows.slice(0, 6).map(r => r.html).join("")}</div>${more}` +
-         (checked ? `<span class="hint">Timetable checked ${checked.split("-").reverse().map(Number).join(".")}</span>` : "");
+         (checked ? `<span class="hint">${T("svc_checked", { date: checked.split("-").reverse().map(Number).join(".") })}</span>` : "");
 }
 let hotPairs = [];
 function showPair(pr, e, moving = false) {
@@ -727,7 +692,7 @@ for (const name of hitNames) {
   placed.push({ x: cx, y: cy, r: rad });
   if (r) {
     h.setAttribute("tabindex", "0"); h.setAttribute("role", "button");
-    h.setAttribute("aria-label", `${LN(name)}: ${dur(r.door_to_door_min)}, show itinerary`);
+    h.setAttribute("aria-label", T("hit_aria", { place: LN(name), dur: dur(r.door_to_door_min) }));
     h.addEventListener("click", () => { unhover(); select(name, 0, true); });
     h.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(name, 0, true); } });
     if (isMain(name)) labelEls[name].addEventListener("click", () => { unhover(); select(name, 0, true); });
@@ -754,10 +719,10 @@ rows = ALL_ROUTES.map(r => {
   const li = document.createElement("li"), b = document.createElement("button");
   const isCap = r.is_capital !== false;
   b.type = "button"; b.setAttribute("aria-pressed", "false");
-  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="Arrives on day ${dayOf(r)}"></i>${LN(r.capital)}${isCap ? "" : '<span class="citytag">city</span>'}${r.has_issue ? '<span class="w" title="Route uses a leg with a known data issue">⚠</span>' : ""}</span>
+  b.innerHTML = `<span class="cap"><i class="swatch d${dayClass(r)}" title="${T("arrives_on_day", { d: dayOf(r) })}"></i>${LN(r.capital)}${isCap ? "" : `<span class="citytag">${T("city_tag")}</span>`}${r.has_issue ? `<span class="w" title="${T("data_issue")}">⚠</span>` : ""}</span>
     <span class="when">${dur(r.door_to_door_min)}</span>
     <span class="bar"><i style="width:${(100 * r.door_to_door_min / maxMin).toFixed(1)}%"></i></span>
-    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Day ${dayOf(r)} · ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.map(LN).join(", ")})</span>` : ""}</span>`;
+    <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${T("opt_list", { labels: r.alternatives.map(a => optLabel(a.label).toLowerCase()).join(", ") })}</span>` : ""}${T("row_day", { d: dayOf(r), when: r.arrive_txt })}${T("n_changes", { n: r.changes })}${r.hotel_nights ? ` · <span class="bed">${T("hotel_nights_at", { nights: T("n_hotel_nights", { n: r.hotel_nights }), places: r.stays.map(LN).join(", ") })}</span>` : ""}</span>`;
   li.appendChild(b); buttons[r.capital] = b;
   const row = { r, li, b, isCap };
   b.addEventListener("click", () => select(r.capital, pickOption(r), false, true));
@@ -777,7 +742,7 @@ const allVariantRoutes = VARS ? Object.values(VARS).flatMap(v => [v, ...Object.v
 const lastDay = Math.max(...allVariantRoutes.map(dayOf));
 for (const d of [0, ...Array.from({ length: Math.max(0, Math.min(lastDay, 6) - 2) }, (_, i) => i + 2)]) {
   const bt = document.createElement("button");
-  bt.type = "button"; bt.dataset.day = d; bt.textContent = d ? `day ${d}` : "any";
+  bt.type = "button"; bt.dataset.day = d; bt.textContent = d ? T("day_n", { d }) : T("any");
   bt.addEventListener("click", () => { F.day = d; applyFilters(); });
   dayGroup.appendChild(bt);
 }
@@ -801,20 +766,20 @@ function applyFilters() {
   const noRoute = q ? Object.keys(P).filter(n => n !== NET.origin && !routeOf(n) && namesOf(n).some(x => x.includes(q))) : [];
   for (const n of noRoute) {
     const li = document.createElement("li"); li.className = "noroute";
-    li.innerHTML = `<b>${LN(n)}</b>` + (P[n].missing ? "Capital without connections yet – add legs to pairs.txt"
-      : `No journey from ${LN(NET.origin)} in the data yet` + (NET.legs.some(l => l.from === n) ? " (trains leave from here, none arrive)" : ""));
+    li.innerHTML = `<b>${LN(n)}</b>` + (P[n].missing ? T("search_missing")
+      : T("search_no_journey", { origin: LN(NET.origin) }) + (NET.legs.some(l => l.from === n) ? T("search_departs_only") : ""));
     list.appendChild(li);
   }
   if (!shown.length && !noRoute.length) {
     const li = document.createElement("li"); li.className = "empty";
-    li.innerHTML = `No destination matches.<button type="button">Clear filters</button>`;
+    li.innerHTML = `${T("no_match")}<button type="button">${T("clear_filters")}</button>`;
     li.querySelector("button").addEventListener("click", () => { qEl.value = ""; Object.assign(F, { day: 0, noHotel: false }); applyFilters(); qEl.focus(); });
     list.appendChild(li);
   }
   const caps = shown.filter(x => x.isCap).length, cities = shown.length - caps, totalCaps = V.yes.routes.length;
-  countEl.textContent = `${caps} of ${totalCaps} capitals` + (cities ? ` · ${cities} other cit${cities === 1 ? "y" : "ies"}` : "") +
-    (F.nightTrains === false ? " · without night trains" : "") +
-    (F.day || F.noHotel ? " · faded on the map: the others" : "");
+  countEl.textContent = T("count", { caps, total: totalCaps }) + (cities ? T("n_other_cities", { n: cities }) : "") +
+    (F.nightTrains === false ? T("count_no_night") : "") +
+    (F.day || F.noHotel ? T("count_faded") : "");
   // the map agrees with the filters: places that do not pass are faded
   for (const { r } of rows) {
     const dim = !passes(r);
@@ -843,15 +808,15 @@ document.addEventListener("keydown", e => {
 applyFilters();
 function updateSummary() {
   const maxDay = Math.min(6, Math.max(...NET.routes.map(dayClass)));
-  document.getElementById("daylegend").innerHTML = `<b>Capital, arrives on</b>` + Array.from({ length: maxDay }, (_, i) => i + 1)
-    .map(d => `<span><i class="swatch d${d}"></i>day ${d}${d === 6 ? "+" : ""} <span class="dd">${d === 6 ? "" : dayDate(d)}</span></span>`).join("");
+  document.getElementById("daylegend").innerHTML = `<b>${T("legend_arrives")}</b>` + Array.from({ length: maxDay }, (_, i) => i + 1)
+    .map(d => `<span><i class="swatch d${d}"></i>${T("legend_day", { d })}${d === 6 ? "+" : ""} <span class="dd">${d === 6 ? "" : dayDate(d)}</span></span>`).join("");
   const noNight = F.nightTrains === false && V.no ? V.no.unreached.filter(reachableWithNight) : [];
   const missing = [...V.yes.unreached, ...Object.keys(NET.not_covered)];
   document.getElementById("gaps").innerHTML =
-    (noNight.length ? `<b>Not reachable without night trains:</b> ${noNight.join(", ")}.<br><br>` : "") +
-    `<b>${missing.length} capitals not covered yet:</b> ${missing.map(LN).join(", ")}.`;
+    (noNight.length ? `<b>${T("gaps_night")}</b> ${noNight.join(", ")}.<br><br>` : "") +
+    `<b>${T("gaps_missing", { n: missing.length })}</b> ${missing.map(LN).join(", ")}.`;
   document.getElementById("meta").innerHTML =
-    `${NET.routes.length} capitals reached${F.nightTrains === false ? " without night trains" : ""} · ${NET.legs.length} legs<br>${NET.version}`;
+    `${T("meta_reached", { n: NET.routes.length })}${F.nightTrains === false ? T("meta_without_night") : ""}${T("meta_legs", { n: NET.legs.length })}<br>${NET.version}`;
 }
 function updateNodeDays() {
   for (const [name, n] of Object.entries(nodeEls)) {
@@ -899,8 +864,7 @@ if (VARS && NET.dates.length > 1) {
 // how long the timetables hold: until the next European timetable change (D-52)
 if (NET.valid_until) {
   const v = document.getElementById("valid"), u = new Date(NET.valid_until + "T12:00:00");
-  v.textContent = `Timetables valid until ${u.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} ` +
-    `(the European timetable change). For later dates, check with the train and ferry companies.`;
+  v.textContent = T("valid_until", { date: u.toLocaleDateString(LOCALE, { day: "numeric", month: "long", year: "numeric" }) });
   v.hidden = false;
 }
 // one button per departure time (morning / evening)
@@ -908,8 +872,8 @@ const startGroup = document.getElementById("f-start");
 if (VARS && STARTS.length > 1) {
   for (const t of STARTS) {
     const bt = document.createElement("button");
-    bt.type = "button"; bt.dataset.t = t; bt.textContent = partOfDay(t); bt.title = `Leave ${LN(NET.origin)} from ${t}`;
-    bt.setAttribute("aria-label", `${partOfDay(t)}, from ${t}`);
+    bt.type = "button"; bt.dataset.t = t; bt.textContent = partLabel(t); bt.title = T("start_title", { origin: LN(NET.origin), t });
+    bt.setAttribute("aria-label", T("start_aria", { part: partLabel(t), t }));
     bt.setAttribute("aria-pressed", String(t === curStart));
     bt.addEventListener("click", () => setVariant(curDate, F.nightTrains !== false, t));
     startGroup.appendChild(bt);
@@ -919,11 +883,13 @@ if (!V.no) document.getElementById("f-night").hidden = true;
 updateSummary();
 const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin: 45, night_point: "03:00", morning: "06:00"};
 function updateFoot() { document.getElementById("foot").textContent =
-  `Timetables from Transitous, looked up weekly, and by hand from Seat61, Deutsche Bahn and the operators, applied to the travel date above. ` +
-  `Changes take at least ${S.min_transfer} min (longer where you change station, e.g. Paris, London), ferry check-in ${S.ferry_checkin} min, Eurostar ${S.eurostar_checkin} min. ` +
-  `Clock times are local; durations are corrected for time zones. Journeys leave ${LN(NET.origin)} from ${curStart || S.start || "00:00"}${curStart && curStart !== DEF_START ? ` (on the latest departure that still arrives as early; where that doesn't arrive sooner, the ${DEF_START} journey is shown)` : ""}. A wait past ${S.night_point} is a hotel night, with no departure before ${S.morning} the next morning; ` +
-  `between ${S.quiet || "00:00–05:00"} only night trains and night ferries run. ` +
-  `${NET.warnings.length} legs have known data issues (⚠). Map outlines: Natural Earth.`; }
+  T("foot_sources") +
+  T("foot_changes", { min: S.min_transfer, ferry: S.ferry_checkin, eurostar: S.eurostar_checkin }) +
+  T("foot_clock", { origin: LN(NET.origin), start: curStart || S.start || "00:00" }) +
+  (curStart && curStart !== DEF_START ? T("foot_latest", { def: DEF_START }) : "") +
+  T("foot_night", { night: S.night_point, morning: S.morning }) +
+  T("foot_quiet", { quiet: S.quiet || "00:00–05:00" }) +
+  T("foot_issues", { n: NET.warnings.length }); }
 updateFoot();
 
 // rough CO2 compared with a direct flight (IDEA-07, D-41): round numbers only - it reassures, it does not account
@@ -933,20 +899,15 @@ function showCO2(r) {
   const kg = x => x < 20 ? Math.round(x) : x < 100 ? Math.round(x / 5) * 5 : Math.round(x / 10) * 10;
   const pct = Math.round((1 - r.co2 / r.co2_flight) * 20) * 5;       // to the nearest 5 %
   const box = document.getElementById("co2-how");
-  const how = ` <button type="button" id="co2-btn" aria-controls="co2-how" aria-expanded="${!box.hidden}">How?</button>`;
-  el.innerHTML = !r.co2_flight
-    ? `CO₂ about ${kg(r.co2)} kg (no flights to compare with).${how}`
-    : pct >= 10
-    ? `CO₂ about ${kg(r.co2)} kg – roughly ${pct} % less than flying (about ${kg(r.co2_flight)} kg).${how}`
-    : r.co2 <= r.co2_flight * 1.1
-      ? `CO₂ about ${kg(r.co2)} kg – about as much as flying (${kg(r.co2_flight)} kg).${how}`
-      : `CO₂ about ${kg(r.co2)} kg – more than flying (${kg(r.co2_flight)} kg).${how}`;
+  const how = ` <button type="button" id="co2-btn" aria-controls="co2-how" aria-expanded="${!box.hidden}">${T("how")}</button>`;
+  const kv = { kg: kg(r.co2), fkg: kg(r.co2_flight || 0), pct };
+  el.innerHTML = T(!r.co2_flight ? "co2_no_flight" : pct >= 10 ? "co2_less" : r.co2 <= r.co2_flight * 1.1 ? "co2_same" : "co2_more", kv) + how;
   const c = NET.co2 || {}, f = c.factors || {}, g = x => `${Math.round(x * 1000)}&nbsp;g`;
   const yr = (String(c.source || "").match(/\b20\d\d\b/) || [""])[0];
-  const src = String(c.source || "").split(",")[0] || "the source";
-  document.getElementById("co2-factors").innerHTML = `${src} ${yr} (electric train ${g(f.rail)}` +
-    (f.rail_nordic ? `, in the Nordics ${g(f.rail_nordic)}` : "") +
-    `, bus ${g(f.coach)}, ferry ${g(f.ferry)}, flight ${g(f.flight)} CO₂e per person-km)`;
+  const src = String(c.source || "").split(",")[0] || T("co2_the_source");
+  document.getElementById("co2-factors").innerHTML = T("co2_factors", { src, yr, rail: g(f.rail) }) +
+    (f.rail_nordic ? T("co2_nordic", { nordic: g(f.rail_nordic) }) : "") +
+    T("co2_factors_end", { bus: g(f.coach), ferry: g(f.ferry), flight: g(f.flight) });
   if (c.source_url) document.getElementById("co2-src").href = c.source_url;
   el.hidden = false;
   document.getElementById("co2-btn").addEventListener("click", e => {
@@ -964,9 +925,9 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
     b.setAttribute("aria-selected", String(o === r));
     // compare by arrival: an option that leaves next morning has a shorter door-to-door time but arrives later
     const day = t => t.replace(/ \d+\.\d+\./, "");                  // "Mon 16.11. 18:40" -> "Mon 18:40"
-    const when = o.depart !== r0.depart ? `leave ${day(o.depart_txt)} · ` : "";
-    b.innerHTML = `<b>${o.label}</b><span>${when}arrive ${day(o.arrive_txt)}</span>` +
-      `<span>${dur(o.door_to_door_min)} · ${o.changes} changes · ${o.hotel_nights} hotel</span>`;
+    const when = o.depart !== r0.depart ? T("card_leave", { when: day(o.depart_txt) }) : "";
+    b.innerHTML = `<b>${optLabel(o.label)}</b><span>${when}${T("card_arrive", { when: day(o.arrive_txt) })}</span>` +
+      `<span>${T("card_stats", { dur: dur(o.door_to_door_min), c: o.changes, h: o.hotel_nights })}</span>`;
     b.addEventListener("click", () => select(cap, i));
     optsEl.appendChild(b);
   });
@@ -989,9 +950,9 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
   curRoute = r;
   drawMarks(); layoutMain(); layoutCities(); placeHits();
   document.getElementById("itin-title").textContent = `${LN(NET.origin)} → ${LN(cap)}`;
-  document.getElementById("itin-sum").textContent = `${dur(r.door_to_door_min)} · arrive ${r.arrive_txt}` +
-    (typeof F !== "undefined" && F.nightTrains === false ? " · no night trains" : "") +
-    (curStart !== DEF_START ? (r0.same_as_default ? ` · leaving earlier doesn't help: the ${partOfDay(DEF_START)} journey` : ` · from ${curStart}`) : "");
+  document.getElementById("itin-sum").textContent = T("sum_arrive", { dur: dur(r.door_to_door_min), when: r.arrive_txt }) +
+    (typeof F !== "undefined" && F.nightTrains === false ? T("sum_no_night") : "") +
+    (curStart !== DEF_START ? (r0.same_as_default ? T("sum_same", { part: partLabel(DEF_START) }) : T("sum_from", { t: curStart })) : "");
   showCO2(r);
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
@@ -1002,24 +963,24 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
     if (day > shownDay && !(s.kind === "change" && s.minutes < 90)) {
       const h = document.createElement("li");
       h.className = "dayhead";
-      h.innerHTML = `<i class="swatch d${Math.min(day, 6)}"></i>Day ${day} · ${dayDate(day)}`;
+      h.innerHTML = `<i class="swatch d${Math.min(day, 6)}"></i>${T("day_head", { d: day, date: dayDate(day) })}`;
       ol.appendChild(h); shownDay = day;
     }
     const li = document.createElement("li");
     if (s.kind === "stay") {
       li.className = "stay";
-      li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>Overnight in ${LN(s.place)}</b><span class="chip hotel">Hotel</span><div class="svc">${dur(s.minutes)} between trains</div></div>`;
+      li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>${T("overnight_in", { place: LN(s.place) })}</b><span class="chip hotel">${T("chip_hotel")}</span><div class="svc">${T("between_trains", { dur: dur(s.minutes) })}</div></div>`;
       ol.appendChild(li); return;
     }
     if (s.kind === "change") {
       if (s.minutes < 90) return;
       li.className = "pause";
-      li.innerHTML = `<div class="t"></div><div class="wait">Wait ${dur(s.minutes)} in ${LN(s.place)}</div>`;
+      li.innerHTML = `<div class="t"></div><div class="wait">${T("wait_in", { dur: dur(s.minutes), place: LN(s.place) })}</div>`;
       ol.appendChild(li); return;
     }
-    const chip = s.mode === "ferry" || s.mode === "local" ? `<span class="chip ${s.mode}">${s.mode === "local" ? "Metro" : s.night ? "Night ferry" : "Ferry"}</span>`
-      : s.night ? `<span class="chip night">Night train</span>` : "";
-    li.innerHTML = `<div class="t">${s.timed ? s.dep_txt : `<em>any time</em>`}<br>${s.arr_txt}${s.timed ? "" : " <em>est.</em>"}</div>
+    const chip = s.mode === "ferry" || s.mode === "local" ? `<span class="chip ${s.mode}">${T(s.mode === "local" ? "chip_metro" : s.night ? "chip_night_ferry" : "chip_ferry")}</span>`
+      : s.night ? `<span class="chip night">${T("chip_night_train")}</span>` : "";
+    li.innerHTML = `<div class="t">${s.timed ? s.dep_txt : `<em>${T("any_time")}</em>`}<br>${s.arr_txt}${s.timed ? "" : ` <em>${T("est")}</em>`}</div>
       <div class="what"><b>${LN(s.from)} → ${LN(s.to)}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}</div>
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
@@ -1090,10 +1051,10 @@ fromHash(true);
 const shareBt = document.getElementById("share"), shareMsg = document.getElementById("share-msg");
 shareBt.addEventListener("click", async () => {
   const url = location.href.split("#")[0] + location.hash;
-  try { await navigator.clipboard.writeText(url); shareMsg.textContent = "Link copied"; setTimeout(() => shareMsg.textContent = "", 2500); }
+  try { await navigator.clipboard.writeText(url); shareMsg.textContent = T("link_copied"); setTimeout(() => shareMsg.textContent = "", 2500); }
   catch (e) {
     // clipboard blocked (e.g. iframe without permission): show the link to copy by hand
-    const inp = document.createElement("input"); inp.readOnly = true; inp.value = url; inp.setAttribute("aria-label", "Link to this journey");
+    const inp = document.createElement("input"); inp.readOnly = true; inp.value = url; inp.setAttribute("aria-label", T("link_aria"));
     shareMsg.replaceChildren(inp); inp.focus(); inp.select();
   }
 });
