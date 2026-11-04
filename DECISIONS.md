@@ -62,6 +62,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-52 | Weekdays, not dates, and how long the timetables hold | 4.11.2026 | Accepted |
 | D-53 | Each map's texts in its own language | 4.11.2026 | Accepted |
 | D-54 | DB station numbers for places, from Trainline's open list | 4.11.2026 | Accepted |
+| D-55 | "Check on bahn.de" link under each rail stretch | 4.11.2026 | Accepted |
 
 ---
 
@@ -1056,6 +1057,32 @@ the map never asks bahn.de anything.
 **Consequences.** The ODbL asks for credit: README now, the user guide once the links are on the map.
 Some numbers in the list can be outdated (London St Pancras 7004428 there, 7001424 at bahn.de) – city-wide
 numbers avoid most of that.
+
+---
+
+## D-55 "Check on bahn.de" link under each rail stretch
+**Date:** 4.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-14 (Matti): let people check and book what the map shows, without the map becoming
+a journey planner (D-37).
+
+**Decision.**
+- Under the last train of each rail stretch – the trains between the start, a hotel night, a ferry or a
+  bus – a link opens bahn.de's planner at that stretch's first departure: start and end by DB station
+  number (D-54), date and time, departures from then (`hza=D`). No intermediate stops: in the tests,
+  start, end and time were enough.
+- Only when both ends have a number; metro legs belong to the stretch, ferries and buses end it.
+- Link text "Check {from} → {to} on bahn.de" in the map's language; a tooltip says bahn.de may suggest
+  other trains and may show no price.
+- Links are kept where DB sells no tickets (Finnish, Swedish and UK trains, night trains, Eurostar):
+  bahn.de still shows the times (Matti).
+
+**Why.** In tests the link's first result was usually our journey, sometimes a better one; one link
+per stretch keeps each search simple and gives a natural booking unit.
+
+**Consequences.** The link format is bahn.de's own, not a documented interface. If it changes, the
+links open an empty search; the weekly update cannot check this (bahn.de blocks scripts), so an
+occasional click by hand is the check.
 
 ---
 
