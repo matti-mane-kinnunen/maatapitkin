@@ -10,3 +10,4 @@ lookup.log
 build.log
 check.md
 out/network-*.json
+.cache/

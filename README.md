@@ -21,7 +21,7 @@ See DECISIONS.md for what was decided and why, BACKLOG.md for what is still open
 ```
 pairs.txt             the connections ("A -> B : *" or own times) – the main input
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs
-data/places.yaml      coordinates, capitals, change times per station, the maps (origins), routing and CO2 settings
+data/places.yaml      coordinates, capitals, DB station numbers (db:), change times per station, the maps (origins), routing and CO2 settings
 data/names.yaml       place names in each map's language (Tukholma, Köpenhamn, København …), D-50
 data/i18n/<lang>.yaml page texts per language (en master; fi …), D-53 – check_i18n.py lists gaps
 src/guide/<lang>.html the user guide per language
@@ -29,7 +29,8 @@ data/basemap.geojson  country outlines for the map (Natural Earth, public domain
 data/sources/         route lists (Eurostar, Frecce, railjet …) used with routes_to_pairs.py
 static/               files copied into the site as they are (link-preview pictures)
 build.py              builds every map, route table and summary in out/
-add_leg.py            looks pairs.txt lines up in Transitous and writes legs.yaml
+add_leg.py            looks pairs.txt lines up in Transitous and writes legs.yaml (new places get a DB station number)
+fill_db_ids.py        adds missing DB station numbers to places.yaml (one-off; add_leg.py does new places)
 tidy_legs.py          legs.yaml entries that no pairs.txt line looks after any more; --apply removes them
 lookup_report.py      from the lookup log, only what needs a person (the weekly issue)
 check_build.py        is the new map at least as good as last week's? (holds the update back if not)
@@ -40,6 +41,7 @@ src/journeys.py       loading, validation and the journey router
 src/make_map.py       the map pages (out/site/)
 src/co2.py            rough CO2 per journey vs flying
 src/transitous.py     talking to the Transitous API (used by add_leg.py and the checker)
+src/db_stations.py    DB station numbers from Trainline's open station list (for bahn.de links, D-54)
 .github/weekly_issue.py  one issue per week for the workflow's reports (D-49)
 .githooks/pre-commit  refuses broken YAML and malformed pairs.txt lines (git config core.hooksPath .githooks)
 ```
@@ -195,6 +197,18 @@ seat; getting to and from airports and stations is left out on both sides.
 
 To update the factors, read the new table on the Klimatsmart semester page and change the numbers in
 `places.yaml` (yearly check, DATA-12).
+
+## DB station numbers
+
+Each place in `places.yaml` can have `db:`, its station number in Deutsche Bahn's planner (EVA), so that
+a journey can link to a ready search on bahn.de (IDEA-14). For cities with several stations it is DB's
+city-wide number (PARIS 8796001, LONDON 7096001), as the map shows cities, not stations (D-45).
+
+The numbers come from Trainline's open station list,
+[trainline-eu/stations](https://github.com/trainline-eu/stations) (Open Database License, ODbL),
+downloaded to `.cache/` when needed. Places it does not cover were looked up by hand in bahn.de's own
+station search. Places with no `db:` (ferry ports, islands, North Africa, Albania, Sarajevo, Andorra,
+San Marino) get no bahn.de link; `db: 0` keeps a place without one.
 
 ## Next steps
 

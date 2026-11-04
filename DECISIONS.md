@@ -61,6 +61,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-51 | CO₂ factors from Chalmers, ferries included | 3.11.2026 | Accepted |
 | D-52 | Weekdays, not dates, and how long the timetables hold | 4.11.2026 | Accepted |
 | D-53 | Each map's texts in its own language | 4.11.2026 | Accepted |
+| D-54 | DB station numbers for places, from Trainline's open list | 4.11.2026 | Accepted |
 
 ---
 
@@ -1027,6 +1028,34 @@ Swedish, Danish and German (4.11.2026) are Claude's translations; Swedish, Danis
 city's basic form (från/fra/ab Stockholm), so no `from:` is needed. Native speakers should check them.
 
 **Consequences.** Every new page text needs a key in en.yaml and, in time, four translations.
+
+---
+
+## D-54 DB station numbers for places, from Trainline's open list
+**Date:** 4.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-14: a "Check on bahn.de" link per rail stretch. A bahn.de link needs DB's station
+numbers (EVA); names alone do not work (tested 4.11.2026).
+
+**Decision.**
+- `db:` per place in places.yaml. Cities with several stations get DB's city-wide number (PARIS 8796001
+  covers every Paris station) – the map shows cities, not stations (D-45).
+- Source: Trainline's open station list (github.com/trainline-eu/stations, ODbL), cached in `.cache/`.
+  `src/db_stations.py` picks the city-wide number, else the station with the place's name (or its main
+  station) nearest the place's coordinates; bus stations and other names only when nothing better.
+- `fill_db_ids.py` filled 133 places (4.11.2026), 21 of them checked and set by hand (add_leg.py had put
+  Stuttgart at a P+R stop, Genève at the airport…); 18 more from bahn.de's own station search in the
+  browser (Oslo, Umeå, Dublin, Tallinn…). 18 places have none (ferry ports, islands, North Africa,
+  Albania, Sarajevo, Andorra, San Marino) – no link there.
+- add_leg.py looks up the number for each new place and says when it is unsure or missing.
+
+**Why.** bahn.de cannot be asked by script (not reachable from the Mac or the cloud, and it blocks quick
+repeated searches), so an open list is the only automatic source. One lookup per place, stored, means
+the map never asks bahn.de anything.
+
+**Consequences.** The ODbL asks for credit: README now, the user guide once the links are on the map.
+Some numbers in the list can be outdated (London St Pancras 7004428 there, 7001424 at bahn.de) – city-wide
+numbers avoid most of that.
 
 ---
 

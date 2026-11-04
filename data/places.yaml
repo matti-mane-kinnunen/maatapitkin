@@ -37,175 +37,175 @@ settings:
 # Each place may list other names it is known by (aliases), e.g. Vienna: [Wien].
 # add_leg.py accepts them in pairs files and they never create a second city.
 places:
-  Helsinki:   {lat: 60.172, lon: 24.941, capital: true, country: FI, aliases: [Helsingfors]}
-  Tampere:    {lat: 61.498, lon: 23.773, country: FI}
-  Vaasa:      {lat: 63.096, lon: 21.616, country: FI}  # station; WasaLine ferries leave from Vaskiluoto, 2 km out
-  Umeå:       {lat: 63.828, lon: 20.268, country: SE, ferry_checkin: 75}  # Umeå C; WasaLine ferries leave from Holmsund, ~20 km: bus + 45 min check-in (D-45)
-  Turku:      {lat: 60.435, lon: 22.220, country: FI, aliases: [Åbo]}
-  Stockholm:  {lat: 59.330, lon: 18.058, capital: true, country: SE}
-  Oslo:       {lat: 59.911, lon: 10.753, capital: true, country: "NO"}
-  Bergen:     {lat: 60.390, lon: 5.333, country: "NO"}
-  Trondheim:  {lat: 63.436, lon: 10.399, country: "NO"}
-  Copenhagen: {lat: 55.673, lon: 12.565, capital: true, country: DK, aliases: [København, Kopenhagen, Köpenhamn]}
-  Hamburg:    {lat: 53.553, lon: 10.007, country: DE}
-  Berlin:     {lat: 52.525, lon: 13.369, capital: true, country: DE}
-  Frankfurt:  {lat: 50.107, lon: 8.663, country: DE, aliases: [Frankfurt am Main, Frankfurt (Main), Frankfurt Main]}  # not Frankfurt (Oder)
-  Munich:     {lat: 48.140, lon: 11.558, country: DE, aliases: [München, Muenchen]}
-  Strasbourg: {lat: 48.585, lon: 7.735, country: FR, aliases: [Strassburg, Straßburg]}
-  Paris:      {lat: 48.876, lon: 2.358, capital: true, country: FR, min_transfer: 60}  # change of station (Nord / Est / Lyon)
-  Marseille:  {lat: 43.303, lon: 5.380, country: FR, aliases: [Marseilles]}
-  Nice:       {lat: 43.704, lon: 7.262, country: FR}
-  Bordeaux:   {lat: 44.826, lon: -0.556, country: FR}
-  Toulouse:   {lat: 43.611, lon: 1.454, country: FR}
-  Luxembourg: {lat: 49.600, lon: 6.134, capital: true, country: LU, aliases: [Luxemburg]}
-  Amsterdam:  {lat: 52.379, lon: 4.900, capital: true, country: NL}
-  Brussels:   {lat: 50.836, lon: 4.336, capital: true, country: BE, aliases: [Bruxelles, Brussel, Bryssel, Brüssel]}
-  London:     {lat: 51.532, lon: -0.126, capital: true, country: GB, min_transfer: 60}  # St Pancras -> Euston
-  Edinburgh:  {lat: 55.952, lon: -3.189, capital: true, country: GB, note: capital of Scotland}
-  Cardiff:    {lat: 51.476, lon: -3.179, capital: true, country: GB, note: capital of Wales}  # Cardiff Central, set by hand
-  Glasgow:    {lat: 55.860, lon: -4.258, country: GB}
-  Holyhead:   {lat: 53.308, lon: -4.631, country: GB}
-  Belfast:    {lat: 54.596, lon: -5.917, capital: true, country: GB, note: capital of Northern Ireland}
-  Dublin:     {lat: 53.346, lon: -6.247, capital: true, country: IE, aliases: [Baile Átha Cliath]}
-  Galway:     {lat: 53.274, lon: -9.047, country: IE}
-  Prague:     {lat: 50.083, lon: 14.435, capital: true, country: CZ, aliases: [Praha, Prag]}
-  Warsaw:     {lat: 52.229, lon: 21.003, capital: true, country: PL, aliases: [Warszawa, Warschau]}
-  Krakow:     {lat: 50.068, lon: 19.947, country: PL, aliases: [Kraków, Krakau]}
-  Vienna:     {lat: 48.185, lon: 16.376, capital: true, country: AT, aliases: [Wien, Wenen]}
-  Innsbruck:  {lat: 47.263, lon: 11.401, country: AT}
-  Bratislava: {lat: 48.159, lon: 17.106, capital: true, country: SK}
-  Budapest:   {lat: 47.500, lon: 19.083, capital: true, country: HU}
-  Basel:      {lat: 47.547, lon: 7.590, country: CH, aliases: [Bâle, Basle]}
-  Bern:       {lat: 46.949, lon: 7.439, capital: true, country: CH, aliases: [Berne]}
-  Milan:      {lat: 45.486, lon: 9.204, country: IT, aliases: [Milano, Mailand]}
-  Bologna:    {lat: 44.506, lon: 11.343, country: IT}
-  Venice:     {lat: 45.441, lon: 12.321, country: IT, aliases: [Venezia, Venedig]}
-  Florence:   {lat: 43.776, lon: 11.248, country: IT, aliases: [Firenze, Florenz]}
-  Rome:       {lat: 41.901, lon: 12.501, capital: true, country: IT, aliases: [Roma, Rom]}
-  Vatican:    {lat: 41.904, lon: 12.453, capital: true, country: VA, aliases: [Vatikan]}
-  Naples:     {lat: 40.853, lon: 14.272, country: IT, aliases: [Napoli, Neapel]}
-  Ancona:     {lat: 43.607, lon: 13.498, country: IT}
-  Bari:       {lat: 41.118, lon: 16.869, country: IT}
-  Palermo:    {lat: 38.110, lon: 13.367, country: IT}
-  Syracuse:   {lat: 37.069, lon: 15.282, country: IT}
-  Pozzallo:   {lat: 36.727, lon: 14.849, country: IT}
+  Helsinki:   {lat: 60.172, lon: 24.941, capital: true, country: FI, aliases: [Helsingfors], db: 1000094}
+  Tampere:    {lat: 61.498, lon: 23.773, country: FI, db: 1000038}
+  Vaasa:      {lat: 63.096, lon: 21.616, country: FI, db: 1000046}  # station; WasaLine ferries leave from Vaskiluoto, 2 km out
+  Umeå:       {lat: 63.828, lon: 20.268, country: SE, ferry_checkin: 75, db: 7400101}  # Umeå C; WasaLine ferries leave from Holmsund, ~20 km: bus + 45 min check-in (D-45)
+  Turku:      {lat: 60.435, lon: 22.220, country: FI, aliases: [Åbo], db: 1000093}
+  Stockholm:  {lat: 59.330, lon: 18.058, capital: true, country: SE, db: 7496000}
+  Oslo:       {lat: 59.911, lon: 10.753, capital: true, country: "NO", db: 7696001}
+  Bergen:     {lat: 60.390, lon: 5.333, country: "NO", db: 7600007}
+  Trondheim:  {lat: 63.436, lon: 10.399, country: "NO", db: 7600043}
+  Copenhagen: {lat: 55.673, lon: 12.565, capital: true, country: DK, aliases: [København, Kopenhagen, Köpenhamn], db: 8601309}
+  Hamburg:    {lat: 53.553, lon: 10.007, country: DE, db: 8096009}
+  Berlin:     {lat: 52.525, lon: 13.369, capital: true, country: DE, db: 8096003}
+  Frankfurt:  {lat: 50.107, lon: 8.663, country: DE, aliases: [Frankfurt am Main, Frankfurt (Main), Frankfurt Main], db: 8096021}  # not Frankfurt (Oder)
+  Munich:     {lat: 48.140, lon: 11.558, country: DE, aliases: [München, Muenchen], db: 8000261}
+  Strasbourg: {lat: 48.585, lon: 7.735, country: FR, aliases: [Strassburg, Straßburg], db: 8700023}
+  Paris:      {lat: 48.876, lon: 2.358, capital: true, country: FR, min_transfer: 60, db: 8796001}  # change of station (Nord / Est / Lyon)
+  Marseille:  {lat: 43.303, lon: 5.380, country: FR, aliases: [Marseilles], db: 8700074}
+  Nice:       {lat: 43.704, lon: 7.262, country: FR, db: 8700171}
+  Bordeaux:   {lat: 44.826, lon: -0.556, country: FR, db: 8700047}
+  Toulouse:   {lat: 43.611, lon: 1.454, country: FR, db: 8700065}
+  Luxembourg: {lat: 49.600, lon: 6.134, capital: true, country: LU, aliases: [Luxemburg], db: 8200100}
+  Amsterdam:  {lat: 52.379, lon: 4.900, capital: true, country: NL, db: 8400058}
+  Brussels:   {lat: 50.836, lon: 4.336, capital: true, country: BE, aliases: [Bruxelles, Brussel, Bryssel, Brüssel], db: 8800004}
+  London:     {lat: 51.532, lon: -0.126, capital: true, country: GB, min_transfer: 60, db: 7096001}  # St Pancras -> Euston
+  Edinburgh:  {lat: 55.952, lon: -3.189, capital: true, country: GB, note: capital of Scotland, db: 7000756}
+  Cardiff:    {lat: 51.476, lon: -3.179, capital: true, country: GB, note: capital of Wales, db: 7000444}  # Cardiff Central, set by hand
+  Glasgow:    {lat: 55.860, lon: -4.258, country: GB, db: 7096002}
+  Holyhead:   {lat: 53.308, lon: -4.631, country: GB, db: 7001052}
+  Belfast:    {lat: 54.596, lon: -5.917, capital: true, country: GB, note: capital of Northern Ireland, db: 7002556}
+  Dublin:     {lat: 53.346, lon: -6.247, capital: true, country: IE, aliases: [Baile Átha Cliath], db: 6096001}
+  Galway:     {lat: 53.274, lon: -9.047, country: IE, db: 6000055}
+  Prague:     {lat: 50.083, lon: 14.435, capital: true, country: CZ, aliases: [Praha, Prag], db: 5496001}
+  Warsaw:     {lat: 52.229, lon: 21.003, capital: true, country: PL, aliases: [Warszawa, Warschau], db: 5196003}
+  Krakow:     {lat: 50.068, lon: 19.947, country: PL, aliases: [Kraków, Krakau], db: 5100028}
+  Vienna:     {lat: 48.185, lon: 16.376, capital: true, country: AT, aliases: [Wien, Wenen], db: 8196001}
+  Innsbruck:  {lat: 47.263, lon: 11.401, country: AT, db: 8100108}
+  Bratislava: {lat: 48.159, lon: 17.106, capital: true, country: SK, db: 5696001}
+  Budapest:   {lat: 47.500, lon: 19.083, capital: true, country: HU, db: 5596001}
+  Basel:      {lat: 47.547, lon: 7.590, country: CH, aliases: [Bâle, Basle], db: 8596001}
+  Bern:       {lat: 46.949, lon: 7.439, capital: true, country: CH, aliases: [Berne], db: 8507000}
+  Milan:      {lat: 45.486, lon: 9.204, country: IT, aliases: [Milano, Mailand], db: 8396005}
+  Bologna:    {lat: 44.506, lon: 11.343, country: IT, db: 8300217}
+  Venice:     {lat: 45.441, lon: 12.321, country: IT, aliases: [Venezia, Venedig], db: 8396008}
+  Florence:   {lat: 43.776, lon: 11.248, country: IT, aliases: [Firenze, Florenz], db: 8396001}
+  Rome:       {lat: 41.901, lon: 12.501, capital: true, country: IT, aliases: [Roma, Rom], db: 8396004}
+  Vatican:    {lat: 41.904, lon: 12.453, capital: true, country: VA, aliases: [Vatikan], db: 8301017}
+  Naples:     {lat: 40.853, lon: 14.272, country: IT, aliases: [Napoli, Neapel], db: 8396003}
+  Ancona:     {lat: 43.607, lon: 13.498, country: IT, db: 8300186}
+  Bari:       {lat: 41.118, lon: 16.869, country: IT, db: 8300293}
+  Palermo:    {lat: 38.110, lon: 13.367, country: IT, db: 8300341}
+  Syracuse:   {lat: 37.069, lon: 15.282, country: IT, db: 8300338}
+  Pozzallo:   {lat: 36.727, lon: 14.849, country: IT, db: 8302642}
   Valletta:   {lat: 35.898, lon: 14.514, capital: true, country: MT}
-  Barcelona:  {lat: 41.379, lon: 2.140, country: ES}
-  Madrid:     {lat: 40.407, lon: -3.691, capital: true, country: ES, min_transfer: 40}  # Chamartín <-> Atocha
-  Sevilla:    {lat: 37.392, lon: -5.975, country: ES, aliases: [Seville]}
-  Granada:    {lat: 37.184, lon: -3.610, country: ES}
-  Malaga:     {lat: 36.712, lon: -4.433, country: ES}
-  Badajoz:    {lat: 38.888, lon: -6.968, country: ES}
-  Abrantes:   {lat: 39.448, lon: -8.196, country: PT, min_transfer: 10}  # small border/junction station, planned connections (D-36)
-  Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT, aliases: [Lisboa, Lissabon]}
-  Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO, aliases: [București, Bucuresti, Bukarest]}
-  Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD, aliases: [Chișinău, Kishinev]}
-  Sofia:      {lat: 42.712, lon: 23.321, capital: true, country: BG, aliases: [Sofiya]}
-  Varna:      {lat: 43.199, lon: 27.913, country: BG}
-  Istanbul:   {lat: 41.015, lon: 28.977, country: TR, min_transfer: 60}  # Halkalı -> Söğütlüçeşme across the city
-  Ankara:     {lat: 39.936, lon: 32.844, capital: true, country: TR}
-  Patras:     {lat: 38.247, lon: 21.733, country: GR}
-  Athens:     {lat: 38.003, lon: 23.721, capital: true, country: GR, aliases: [Athina, Athen], ferry_checkin: 75}  # ferries leave from Piraeus: ~30 min by metro + 45 min check-in
+  Barcelona:  {lat: 41.379, lon: 2.140, country: ES, db: 7100064}
+  Madrid:     {lat: 40.407, lon: -3.691, capital: true, country: ES, min_transfer: 40, db: 7100049}  # Chamartín <-> Atocha
+  Sevilla:    {lat: 37.392, lon: -5.975, country: ES, aliases: [Seville], db: 7100180}
+  Granada:    {lat: 37.184, lon: -3.610, country: ES, db: 7100182}
+  Malaga:     {lat: 36.712, lon: -4.433, country: ES, db: 7100045}
+  Badajoz:    {lat: 38.888, lon: -6.968, country: ES, db: 7100035}
+  Abrantes:   {lat: 39.448, lon: -8.196, country: PT, min_transfer: 10, db: 9400005}  # small border/junction station, planned connections (D-36)
+  Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT, aliases: [Lisboa, Lissabon], db: 9400009}
+  Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO, aliases: [București, Bucuresti, Bukarest], db: 5300007}
+  Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD, aliases: [Chișinău, Kishinev], db: 2300010}
+  Sofia:      {lat: 42.712, lon: 23.321, capital: true, country: BG, aliases: [Sofiya], db: 5200004}
+  Varna:      {lat: 43.199, lon: 27.913, country: BG, db: 5200016}
+  Istanbul:   {lat: 41.015, lon: 28.977, country: TR, min_transfer: 60, db: 7500003}  # Halkalı -> Söğütlüçeşme across the city
+  Ankara:     {lat: 39.936, lon: 32.844, capital: true, country: TR, db: 7502903}
+  Patras:     {lat: 38.247, lon: 21.733, country: GR, db: 7300052}
+  Athens:     {lat: 38.003, lon: 23.721, capital: true, country: GR, aliases: [Athina, Athen], ferry_checkin: 75, db: 7300001}  # ferries leave from Piraeus: ~30 min by metro + 45 min check-in
   Chania: {lat: 35.514, lon: 24.018, country: GR}  # Crete; ferries dock at Souda, 7 km out
-  Split:      {lat: 43.504, lon: 16.442, country: HR}
-  Zagreb:     {lat: 45.805, lon: 15.979, capital: true, country: HR}
-  Ljubljana:  {lat: 46.058, lon: 14.511, capital: true, country: SI}
-  Malmö: {lat: 55.609, lon: 13.001, country: "SE"}  # added by add_leg.py
-  Tallinn: {lat: 59.441, lon: 24.737, capital: true, country: "EE"}  # added by add_leg.py
-  Göteborg: {lat: 57.729, lon: 12.014, country: "SE"}  # added by add_leg.py
-  Osnabrück: {lat: 52.273, lon: 8.062, country: "DE"}  # added by add_leg.py
-  Köln: {lat: 50.943, lon: 6.959, country: "DE", aliases: [Cologne, Koeln]}  # added by add_leg.py
-  Offenburg: {lat: 48.476, lon: 7.947, country: "DE"}  # added by add_leg.py
-  Trieste: {lat: 45.657, lon: 13.771, country: "IT"}  # added by add_leg.py
-  Valga:      {lat: 57.775, lon: 26.053, country: "EE", min_transfer: 10}  # small border/junction station, planned connections (D-36)
-  Riga:       {lat: 56.945, lon: 24.114, capital: true, country: "LV", min_transfer: 10}  # planned connection to Vilnius, 11 min (D-36)
-  Vilnius: {lat: 54.670, lon: 25.285, capital: true, country: "LT"}  # added by add_leg.py
-  Torino: {lat: 45.070, lon: 7.688, country: "IT", aliases: [Turin]}  # added by add_leg.py
-  Monaco: {lat: 43.739, lon: 7.420, capital: true, country: "MC"}  # corrected by hand 31.10.2026
-  Genoa: {lat: 44.417, lon: 8.921, country: "IT", aliases: [Genova, Gênes]}  # corrected by hand 31.10.2026
-  Porto Torres: {lat: 40.840, lon: 8.401, country: IT}  # Sardinia; ferry port, set by hand
+  Split:      {lat: 43.504, lon: 16.442, country: HR, db: 7800016}
+  Zagreb:     {lat: 45.805, lon: 15.979, capital: true, country: HR, db: 7896001}
+  Ljubljana:  {lat: 46.058, lon: 14.511, capital: true, country: SI, db: 7900003}
+  Malmö: {lat: 55.609, lon: 13.001, country: "SE", db: 7400004}  # added by add_leg.py
+  Tallinn: {lat: 59.441, lon: 24.737, capital: true, country: "EE", db: 2600080}  # added by add_leg.py
+  Göteborg: {lat: 57.729, lon: 12.014, country: "SE", db: 7400003}  # added by add_leg.py
+  Osnabrück: {lat: 52.273, lon: 8.062, country: "DE", db: 8000294}  # added by add_leg.py
+  Köln: {lat: 50.943, lon: 6.959, country: "DE", aliases: [Cologne, Koeln], db: 8096022}  # added by add_leg.py
+  Offenburg: {lat: 48.476, lon: 7.947, country: "DE", db: 8000290}  # added by add_leg.py
+  Trieste: {lat: 45.657, lon: 13.771, country: "IT", db: 8300107}  # added by add_leg.py
+  Valga:      {lat: 57.775, lon: 26.053, country: "EE", min_transfer: 10, db: 2600011}  # small border/junction station, planned connections (D-36)
+  Riga:       {lat: 56.945, lon: 24.114, capital: true, country: "LV", min_transfer: 10, db: 2500009}  # planned connection to Vilnius, 11 min (D-36)
+  Vilnius: {lat: 54.670, lon: 25.285, capital: true, country: "LT", db: 2400008}  # added by add_leg.py
+  Torino: {lat: 45.070, lon: 7.688, country: "IT", aliases: [Turin], db: 8396006}  # added by add_leg.py
+  Monaco: {lat: 43.739, lon: 7.420, capital: true, country: "MC", db: 8700174}  # corrected by hand 31.10.2026
+  Genoa: {lat: 44.417, lon: 8.921, country: "IT", aliases: [Genova, Gênes], db: 8396002}  # corrected by hand 31.10.2026
+  Porto Torres: {lat: 40.840, lon: 8.401, country: IT, db: 8300037}  # Sardinia; ferry port, set by hand
   Bastia: {lat: 42.700, lon: 9.452, country: FR}  # Corsica; ferry port, set by hand
   Palma: {lat: 39.567, lon: 2.636, country: ES, aliases: [Palma de Mallorca]}  # Mallorca; ferry port, set by hand
-  Belgrade: {lat: 44.818, lon: 20.457, capital: true, country: "RS"}  # added by add_leg.py
-  Szeged: {lat: 46.240, lon: 20.143, country: "HU"}  # added by add_leg.py
-  Subotica: {lat: 46.102, lon: 19.671, country: "RS"}  # added by add_leg.py
-  Aarhus: {lat: 56.150, lon: 10.205, country: "DK"}  # added by add_leg.py
-  Porto: {lat: 41.149, lon: -8.585, country: "PT"}  # corrected by hand 31.10.2026
-  Algeciras: {lat: 36.131, lon: -5.438, country: "ES"}  # added by add_leg.py
+  Belgrade: {lat: 44.818, lon: 20.457, capital: true, country: "RS", db: 7200002}  # added by add_leg.py
+  Szeged: {lat: 46.240, lon: 20.143, country: "HU", db: 5500101}  # added by add_leg.py
+  Subotica: {lat: 46.102, lon: 19.671, country: "RS", db: 7200012}  # added by add_leg.py
+  Aarhus: {lat: 56.150, lon: 10.205, country: "DK", db: 8600087}  # added by add_leg.py
+  Porto: {lat: 41.149, lon: -8.585, country: "PT", db: 9400008}  # corrected by hand 31.10.2026
+  Algeciras: {lat: 36.131, lon: -5.438, country: "ES", db: 7100136}  # added by add_leg.py
   Tarifa:     {lat: 36.008, lon: -5.604, country: ES, ferry_checkin: 15}  # port; the FRS shuttle bus from Algeciras brings you to the boat (D-37)
   Casablanca: {lat: 33.590, lon: -7.591, country: "MA"}  # corrected by hand 31.10.2026
   Rabat: {lat: 34.016, lon: -6.836, capital: true, country: MA, note: capital of Morocco}  # Rabat Ville station, set by hand
   Tunis: {lat: 36.806, lon: 10.181, capital: true, country: TN, note: capital of Tunisia}  # city; ferries from Palermo arrive at La Goulette, 10 km out
   Algiers: {lat: 36.772, lon: 3.064, capital: true, country: DZ, aliases: [Alger, Argel], note: capital of Algeria}  # city centre by the ferry port, set by hand
   Marrakech: {lat: 31.631, lon: -8.017, country: "MA"}  # added by add_leg.py
-  Mockava:    {lat: 54.328, lon: 23.356, country: "LT", min_transfer: 10}  # small border/junction station, planned connections (D-36)
-  Kaisiadorys: {lat: 54.863, lon: 24.461, country: "LT"}  # added by add_leg.py
-  Kaunas: {lat: 54.890, lon: 23.928, country: "LT"}  # added by add_leg.py
-  Ruse: {lat: 43.821, lon: 25.955, country: "BG", aliases: [Русе]}  # main station; corrected by hand 31.10.2026 (was Ruše, Slovenia)
+  Mockava:    {lat: 54.328, lon: 23.356, country: "LT", min_transfer: 10, db: 2400120}  # small border/junction station, planned connections (D-36)
+  Kaisiadorys: {lat: 54.863, lon: 24.461, country: "LT", db: 2400012}  # added by add_leg.py
+  Kaunas: {lat: 54.890, lon: 23.928, country: "LT", db: 2400050}  # added by add_leg.py
+  Ruse: {lat: 43.821, lon: 25.955, country: "BG", aliases: [Русе], db: 5200024}  # main station; corrected by hand 31.10.2026 (was Ruše, Slovenia)
   Durrës: {lat: 41.318, lon: 19.454, country: "AL", aliases: [Durres, Dürres, Durazzo]}  # corrected by hand 31.10.2026
   Tirana: {lat: 41.328, lon: 19.818, capital: true, country: "AL", aliases: [Tirane, Tiranë]}  # corrected by hand 31.10.2026
-  Vitoria-Gasteiz: {lat: 42.842, lon: -2.673, country: "ES"}  # added by add_leg.py
-  Faro: {lat: 37.020, lon: -7.941, country: "PT"}  # added by add_leg.py
-  Brest: {lat: 48.388, lon: -4.480, country: "FR"}  # added by add_leg.py
-  Penzance: {lat: 50.122, lon: -5.532, country: "GB"}  # added by add_leg.py
-  Nantes: {lat: 47.217, lon: -1.542, country: "FR"}  # added by add_leg.py
-  Manchester: {lat: 53.479, lon: -2.245, country: "GB"}  # added by add_leg.py
-  Montpellier: {lat: 43.605, lon: 3.881, country: "FR"}  # corrected by hand 31.10.2026
-  Lyon: {lat: 45.761, lon: 4.859, country: "FR"}  # added by add_leg.py
-  Zürich: {lat: 47.378, lon: 8.537, country: "CH"}  # added by add_leg.py
-  Santiago de Compostela: {lat: 42.878, lon: -8.544, country: "ES"}  # added by add_leg.py
-  Valencia: {lat: 39.441, lon: -0.411, country: "ES"}  # added by add_leg.py
-  Hendaye: {lat: 43.353, lon: -1.782, country: "FR"}  # added by add_leg.py
-  Irun: {lat: 43.340, lon: -1.801, country: "ES"}  # added by add_leg.py
-  Donostia: {lat: 43.317, lon: -1.977, country: "ES", aliases: [San Sebastian, San Sebastián]}  # corrected by hand 31.10.2026
-  Gdansk: {lat: 54.410, lon: 18.572, country: "PL"}  # added by add_leg.py
+  Vitoria-Gasteiz: {lat: 42.842, lon: -2.673, country: "ES", db: 7100127}  # added by add_leg.py
+  Faro: {lat: 37.020, lon: -7.941, country: "PT", db: 9400033}  # added by add_leg.py
+  Brest: {lat: 48.388, lon: -4.480, country: "FR", db: 8700434}  # added by add_leg.py
+  Penzance: {lat: 50.122, lon: -5.532, country: "GB", db: 7001829}  # added by add_leg.py
+  Nantes: {lat: 47.217, lon: -1.542, country: "FR", db: 8700020}  # added by add_leg.py
+  Manchester: {lat: 53.479, lon: -2.245, country: "GB", db: 7001537}  # added by add_leg.py
+  Montpellier: {lat: 43.605, lon: 3.881, country: "FR", db: 8796008}  # corrected by hand 31.10.2026
+  Lyon: {lat: 45.761, lon: 4.859, country: "FR", db: 8796002}  # added by add_leg.py
+  Zürich: {lat: 47.378, lon: 8.537, country: "CH", db: 8596008}  # added by add_leg.py
+  Santiago de Compostela: {lat: 42.878, lon: -8.544, country: "ES", db: 7100028}  # added by add_leg.py
+  Valencia: {lat: 39.441, lon: -0.411, country: "ES", db: 7100054}  # added by add_leg.py
+  Hendaye: {lat: 43.353, lon: -1.782, country: "FR", db: 8700149}  # added by add_leg.py
+  Irun: {lat: 43.340, lon: -1.801, country: "ES", db: 7100009}  # added by add_leg.py
+  Donostia: {lat: 43.317, lon: -1.977, country: "ES", aliases: [San Sebastian, San Sebastián], db: 7100008}  # corrected by hand 31.10.2026
+  Gdansk: {lat: 54.410, lon: 18.572, country: "PL", db: 5100009}  # added by add_leg.py
   Tanger: {lat: 35.771, lon: -5.786, country: "MA", aliases: [Tangier, Tanger Ville]}  # city and Tanger Ville port (Tarifa ferry)
   Tanger Med: {lat: 35.887, lon: -5.503, country: "MA", aliases: [Tangier Med]}  # port 40 km east of Tangier; Algeciras ferries land here (FIX-05)
-  Newcastle: {lat: 54.968, lon: -1.616, country: "GB"}  # added by add_leg.py
+  Newcastle: {lat: 54.968, lon: -1.616, country: "GB", db: 7001605}  # added by add_leg.py
   Cairnryan: {lat: 54.963, lon: -5.016, country: "GB"}  # added by add_leg.py
-  Östersund: {lat: 63.176, lon: 14.639, country: "SE"}  # added by add_leg.py
-  Storlien: {lat: 63.316, lon: 12.099, country: "SE"}  # added by add_leg.py
-  Narvik: {lat: 68.441, lon: 17.441, country: "NO"}  # added by add_leg.py
-  Boden: {lat: 65.829, lon: 21.708, country: "SE", aliases: [Boden Centralstation, Boden C]}  # corrected by hand 31.10.2026
-  Oulu: {lat: 65.012, lon: 25.486, country: "FI"}  # added by add_leg.py
-  Rovaniemi: {lat: 66.498, lon: 25.705, country: "FI"}  # added by add_leg.py
-  Rostock: {lat: 54.078, lon: 12.132, country: "DE"}  # added by add_leg.py
-  Wroclaw: {lat: 51.098, lon: 17.037, country: "PL"}  # added by add_leg.py
-  Ventimiglia: {lat: 43.792, lon: 7.604, country: "IT"}  # added by add_leg.py
-  Taormina: {lat: 37.851, lon: 15.284, country: "IT"}  # added by add_leg.py
-  Messina: {lat: 38.186, lon: 15.561, country: "IT"}  # added by add_leg.py
-  Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"], ferry_checkin: 30}  # foot-passenger boats leave next to the station (D-36)
-  Lugano: {lat: 46.005, lon: 8.947, country: "CH"}  # station; corrected by hand 1.11.2026 (was the Resega stop)
-  Koblenz: {lat: 50.349, lon: 7.590, country: "DE"}  # added by add_leg.py
-  Stranraer: {lat: 54.906, lon: -5.003, country: "GB", aliases: ["Stranraer Academy"]}  # added by add_leg.py
-  Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"]}  # added by add_leg.py
-  Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"]}  # added by add_leg.py
-  Ayr: {lat: 55.458, lon: -4.626, country: "GB"}  # station; corrected by hand 2.11.2026 (was "Ayr Road" in Glasgow)
-  "L'Hospitalet": {lat: 42.589, lon: 1.799, country: FR, aliases: ["L'Hospitalet-près-l'Andorre", "Andorre-L'Hospitalet"]}  # station for Andorra (Seat61); not L'Hospitalet de Llobregat
-  Reggio di Calabria: {lat: 38.184, lon: 15.641, country: "IT", aliases: ["REGGIO DI CALABRIA CATONA"]}  # added by add_leg.py
-  Lecce: {lat: 40.335, lon: 18.111, country: "IT", aliases: ["Lecce - Ecotekne"]}  # added by add_leg.py
-  Salerno: {lat: 40.683, lon: 14.776, country: "IT", aliases: ["SALERNO IRNO"]}  # added by add_leg.py
-  Verona: {lat: 45.429, lon: 10.983, country: "IT", aliases: ["VERONA PORTA NUOVA"]}  # added by add_leg.py
-  Brescia: {lat: 45.532, lon: 10.213, country: "IT"}  # added by add_leg.py
-  Rimini: {lat: 44.064, lon: 12.572, country: "IT", aliases: ["Rimini FS"]}  # added by add_leg.py
-  Foggia: {lat: 41.466, lon: 15.553, country: "IT"}  # added by add_leg.py
-  Aix en Provence: {lat: 43.455, lon: 5.317, country: "FR", aliases: ["Aix-en-Provence TGV"]}  # added by add_leg.py
-  Avignon: {lat: 43.922, lon: 4.786, country: "FR", aliases: ["Avignon TGV"]}  # added by add_leg.py
-  Stuttgart: {lat: 48.718, lon: 9.108, country: "DE", aliases: ["Stuttgart, P+R"]}  # added by add_leg.py
-  Hannover: {lat: 52.382, lon: 9.767, country: "DE", aliases: ["Hannover Zoo"]}  # added by add_leg.py
-  Geneve: {lat: 46.233, lon: 6.112, country: "CH", aliases: ["Genève-Aéroport"]}  # added by add_leg.py
-  Przemyśl: {lat: 49.794, lon: 22.774, country: "PL", aliases: ["Przemysl Zasanie"]}  # added by add_leg.py
-  Kyiv: {lat: 50.439, lon: 30.488, capital: true, country: "UA", aliases: ["Kyiv-Pas"], no_flights: true}  # no_flights: Ukrainian airspace closed since 2022 (no CO2 comparison with flying)
+  Östersund: {lat: 63.176, lon: 14.639, country: "SE", db: 7400125}  # added by add_leg.py
+  Storlien: {lat: 63.316, lon: 12.099, country: "SE", db: 7400093}  # added by add_leg.py
+  Narvik: {lat: 68.441, lon: 17.441, country: "NO", db: 7600092}  # added by add_leg.py
+  Boden: {lat: 65.829, lon: 21.708, country: "SE", aliases: [Boden Centralstation, Boden C], db: 7400043}  # corrected by hand 31.10.2026
+  Oulu: {lat: 65.012, lon: 25.486, country: "FI", db: 1000069}  # added by add_leg.py
+  Rovaniemi: {lat: 66.498, lon: 25.705, country: "FI", db: 1000086}  # added by add_leg.py
+  Rostock: {lat: 54.078, lon: 12.132, country: "DE", db: 8010304}  # added by add_leg.py
+  Wroclaw: {lat: 51.098, lon: 17.037, country: "PL", db: 5100069}  # added by add_leg.py
+  Ventimiglia: {lat: 43.792, lon: 7.604, country: "IT", db: 8300146}  # added by add_leg.py
+  Taormina: {lat: 37.851, lon: 15.284, country: "IT", db: 8300339}  # added by add_leg.py
+  Messina: {lat: 38.186, lon: 15.561, country: "IT", db: 8300332}  # added by add_leg.py
+  Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"], ferry_checkin: 30, db: 8300342}  # foot-passenger boats leave next to the station (D-36)
+  Lugano: {lat: 46.005, lon: 8.947, country: "CH", db: 8505300}  # station; corrected by hand 1.11.2026 (was the Resega stop)
+  Koblenz: {lat: 50.349, lon: 7.590, country: "DE", db: 8000206}  # added by add_leg.py
+  Stranraer: {lat: 54.906, lon: -5.003, country: "GB", aliases: ["Stranraer Academy"], db: 7002152}  # added by add_leg.py
+  Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"], db: 8796003}  # added by add_leg.py
+  Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"], db: 8800012}  # added by add_leg.py
+  Ayr: {lat: 55.458, lon: -4.626, country: "GB", db: 7000132}  # station; corrected by hand 2.11.2026 (was "Ayr Road" in Glasgow)
+  "L'Hospitalet": {lat: 42.589, lon: 1.799, country: FR, aliases: ["L'Hospitalet-près-l'Andorre", "Andorre-L'Hospitalet"], db: 8700495}  # station for Andorra (Seat61); not L'Hospitalet de Llobregat
+  Reggio di Calabria: {lat: 38.184, lon: 15.641, country: "IT", aliases: ["REGGIO DI CALABRIA CATONA"], db: 8300337}  # added by add_leg.py
+  Lecce: {lat: 40.335, lon: 18.111, country: "IT", aliases: ["Lecce - Ecotekne"], db: 8300272}  # added by add_leg.py
+  Salerno: {lat: 40.683, lon: 14.776, country: "IT", aliases: ["SALERNO IRNO"], db: 8300269}  # added by add_leg.py
+  Verona: {lat: 45.429, lon: 10.983, country: "IT", aliases: ["VERONA PORTA NUOVA"], db: 8300120}  # added by add_leg.py
+  Brescia: {lat: 45.532, lon: 10.213, country: "IT", db: 8300048}  # added by add_leg.py
+  Rimini: {lat: 44.064, lon: 12.572, country: "IT", aliases: ["Rimini FS"], db: 8300221}  # added by add_leg.py
+  Foggia: {lat: 41.466, lon: 15.553, country: "IT", db: 8300287}  # added by add_leg.py
+  Aix en Provence: {lat: 43.455, lon: 5.317, country: "FR", aliases: ["Aix-en-Provence TGV"], db: 8704980}  # added by add_leg.py
+  Avignon: {lat: 43.922, lon: 4.786, country: "FR", aliases: ["Avignon TGV"], db: 8796005}  # added by add_leg.py
+  Stuttgart: {lat: 48.718, lon: 9.108, country: "DE", aliases: ["Stuttgart, P+R"], db: 8000096}  # added by add_leg.py
+  Hannover: {lat: 52.382, lon: 9.767, country: "DE", aliases: ["Hannover Zoo"], db: 8000152}  # added by add_leg.py
+  Geneve: {lat: 46.233, lon: 6.112, country: "CH", aliases: ["Genève-Aéroport"], db: 8501008}  # added by add_leg.py
+  Przemyśl: {lat: 49.794, lon: 22.774, country: "PL", aliases: ["Przemysl Zasanie"], db: 5100234}  # added by add_leg.py
+  Kyiv: {lat: 50.439, lon: 30.488, capital: true, country: "UA", aliases: ["Kyiv-Pas"], no_flights: true, db: 2200005}  # no_flights: Ukrainian airspace closed since 2022 (no CO2 comparison with flying)
   Andorra la Vella: {lat: 42.507, lon: 1.521, capital: true, country: "AD"}  # added by add_leg.py
   Sarajevo: {lat: 43.860, lon: 18.399, capital: true, country: "BA"}  # added by add_leg.py
   San Marino: {lat: 43.942, lon: 12.458, capital: true, country: SM}  # corrected by hand 2.11.2026 (was a namesake near Bologna)
-  Kolding: {lat: 55.491, lon: 9.481, country: "DK"}  # added by add_leg.py
-  Stavanger: {lat: 58.966, lon: 5.733, country: "NO", aliases: ["Stavanger bussterminal"]}  # added by add_leg.py
-  Kuopio: {lat: 62.897, lon: 27.680, country: "FI"}  # added by add_leg.py
-  Sundsvall: {lat: 62.387, lon: 17.308, country: "SE", aliases: ["Sundsvall Bydalen", "Sundsvall Centralstation", "Sundsvall C"]}  # Centralstation; corrected by hand 4.11.2026 (was the Bydalen stop, 3 km north)
-  Izmir: {lat: 38.431, lon: 27.214, country: "TR", aliases: ["İzmir bus station"]}  # added by add_leg.py
-  Thessaloniki: {lat: 40.635, lon: 22.933, country: "GR"}  # added by add_leg.py
-  Seinäjoki: {lat: 62.792, lon: 22.844, country: "FI"}  # added by add_leg.py
+  Kolding: {lat: 55.491, lon: 9.481, country: "DK", db: 8601318}  # added by add_leg.py
+  Stavanger: {lat: 58.966, lon: 5.733, country: "NO", aliases: ["Stavanger bussterminal"], db: 7600039}  # added by add_leg.py
+  Kuopio: {lat: 62.897, lon: 27.680, country: "FI", db: 1000030}  # added by add_leg.py
+  Sundsvall: {lat: 62.387, lon: 17.308, country: "SE", aliases: ["Sundsvall Bydalen", "Sundsvall Centralstation", "Sundsvall C"], db: 7400412}  # Centralstation; corrected by hand 4.11.2026 (was the Bydalen stop, 3 km north)
+  Izmir: {lat: 38.431, lon: 27.214, country: "TR", aliases: ["İzmir bus station"], db: 7521920}  # added by add_leg.py
+  Thessaloniki: {lat: 40.635, lon: 22.933, country: "GR", db: 7300415}  # added by add_leg.py
+  Seinäjoki: {lat: 62.792, lon: 22.844, country: "FI", db: 1000089}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

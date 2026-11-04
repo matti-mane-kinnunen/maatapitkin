@@ -43,6 +43,7 @@ import yaml
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 import transitous as T  # noqa: E402
+import db_stations  # noqa: E402
 
 LEGS = ROOT / "data" / "legs.yaml"
 PLACES = ROOT / "data" / "places.yaml"
@@ -127,14 +128,35 @@ def guess_place(name: str, places: dict) -> tuple[str, float] | None:
     return best
 
 
+def db_number(name: str, lat: float, lon: float, country: str, aliases: list[str]) -> int | None:
+    """DB station number for a new place (bahn.de links, IDEA-14), or None. Never stops add_leg."""
+    try:
+        f = db_stations.find(name, {"lat": lat, "lon": lon, "country": (country or "").upper()}, aliases)
+    except Exception as e:                      # no station list, no network...
+        print(f"  (no DB station number: {e})")
+        return None
+    if not f:
+        print(f"  No DB station number found for {name} - fine for ferry ports and bus stops; "
+              f"else add `db:` to it in places.yaml by hand")
+        LOG["places"].append(f"{name}: no DB station number")
+        return None
+    note = "" if f["sure"] else f" - {f['why']}, please check"
+    print(f"  DB station: {f['station']} {f['db']} ({f['km']} km){note}")
+    if not f["sure"]:
+        LOG["places"].append(f"{name}: DB station {f['station']} {f['db']} ({f['why']})")
+    return f["db"]
+
+
 def add_place(name: str, lat: float, lon: float, country: str, capital: bool, aliases: list[str] | None = None) -> None:
     text = PLACES.read_text()
     if re.search(rf"(?m)^  {re.escape(name)}:", text.split("not_yet_covered:")[0]):
         return                                   # already there: never write a place twice
     al = [a for a in (aliases or []) if a and T.fold(a) != T.fold(name)]
+    db = db_number(name, lat, lon, country, al)
     line = (f"  {name}: {{lat: {lat:.3f}, lon: {lon:.3f}{', capital: true' if capital else ''}, "
             f"country: {q(country.upper()) if country else q('')}"
-            f"{', aliases: [' + ', '.join(q(a) for a in al) + ']' if al else ''}}}  # added by add_leg.py\n")
+            f"{', aliases: [' + ', '.join(q(a) for a in al) + ']' if al else ''}"
+            f"{f', db: {db}' if db else ''}}}  # added by add_leg.py\n")
     # drop it from the "not yet covered" list if it is there
     nyc = re.search(r"(?m)^not_yet_covered:", text)
     if nyc:
