@@ -156,7 +156,8 @@ Messina -> Taormina : *
 Messina -> Syracuse : *          # regional trains; with Rome -> Villa San Giovanni / Palermo by day: Syracuse, Pozzallo, Valletta
 Rome -> Syracuse : *             # day Intercity via the train ferry (splits at Messina); the night ICN line below stays
 Istanbul -> Ankara : *           # high-speed YHT; so far only one 2023 train in our data
-Bucharest -> Iasi : *            # towards Chisinau by day (Iasi -> Chisinau still needs own times)
+Bucharest -> Iasi : *            # towards Chisinau by day
+Iasi -> Chisinau : Coach 20:30 bus 20:30-23:50   # Matti, Nov 2026 (Busbud): from the stop 'Iași' (not Autogara Codreanu or the airport) to Chișinău, Maraton shopping centre; same time zone
 Toulouse -> L'Hospitalet : *     # TER towards Latour-de-Carol; Andorra by day also needs more buses from L'Hospitalet
 
 # Your own times (not looked up; the run just keeps them)

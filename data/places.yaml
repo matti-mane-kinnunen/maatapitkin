@@ -100,6 +100,7 @@ places:
   Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT, aliases: [Lisboa, Lissabon], db: 9400009}
   Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO, aliases: [București, Bucuresti, Bukarest], db: 5300007}
   Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD, aliases: [Chișinău, Kishinev], db: 2300010}
+  Iasi:       {lat: 47.165, lon: 27.570, country: RO, aliases: [Iași, Iaşi, Jassy]}  # railway station; buses to Chisinau leave from the stop 'Iași' (IDEA-03); no DB number in Trainline's list yet
   Sofia:      {lat: 42.712, lon: 23.321, capital: true, country: BG, aliases: [Sofiya], db: 5200004}
   Varna:      {lat: 43.199, lon: 27.913, country: BG, db: 5200016}
   Istanbul:   {lat: 41.015, lon: 28.977, country: TR, min_transfer: 60, db: 7500003}  # Halkalı -> Söğütlüçeşme across the city

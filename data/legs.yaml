@@ -2054,3 +2054,4 @@ legs:
   - {from: Barcelona, to: Andorra la Vella, dep: "15:00", arr: "18:15", service: "Alsa 15:00", mode: bus, checked: 2026-11-04, source: manual}
   - {from: Barcelona, to: Andorra la Vella, dep: "19:00", arr: "22:20", service: "Alsa 19:00", mode: bus, checked: 2026-11-04, source: manual}
   - {from: Barcelona, to: Andorra la Vella, dep: "19:30", arr: "22:50", service: "Alsa 19:30", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Iasi, to: Chisinau, dep: "20:30", arr: "23:50", service: "Coach 20:30", mode: bus, checked: 2026-11-04, source: manual}
