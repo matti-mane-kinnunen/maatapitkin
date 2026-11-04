@@ -202,7 +202,7 @@ places:
   Kolding: {lat: 55.491, lon: 9.481, country: "DK"}  # added by add_leg.py
   Stavanger: {lat: 58.966, lon: 5.733, country: "NO", aliases: ["Stavanger bussterminal"]}  # added by add_leg.py
   Kuopio: {lat: 62.897, lon: 27.680, country: "FI"}  # added by add_leg.py
-  Sundsvall: {lat: 62.414, lon: 17.339, country: "SE", aliases: ["Sundsvall Bydalen"]}  # added by add_leg.py
+  Sundsvall: {lat: 62.387, lon: 17.308, country: "SE", aliases: ["Sundsvall Bydalen", "Sundsvall Centralstation", "Sundsvall C"]}  # Centralstation; corrected by hand 4.11.2026 (was the Bydalen stop, 3 km north)
   Izmir: {lat: 38.431, lon: 27.214, country: "TR", aliases: ["İzmir bus station"]}  # added by add_leg.py
   Thessaloniki: {lat: 40.635, lon: 22.933, country: "GR"}  # added by add_leg.py
 
