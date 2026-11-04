@@ -44,14 +44,19 @@ h1 small { display: block; font: 500 1rem/1.3 var(--body); text-transform: none;
 @media (max-width: 860px) { .origins .credit { margin-left: 0 } }
 .origins a { color: var(--accent); text-underline-offset: 2px }
 .origins b { color: var(--fg) }
-.grid { display: grid; grid-template-columns: minmax(280px, 360px) minmax(0, 1fr); gap: 20px; align-items: start }
-@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr) } .board { order: 2 } .meta { text-align: left } }
+/* settings bar above the map; map + timetable side by side; destinations below (feedback 4.11.2026) */
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; margin: 0 0 14px; padding: 10px 14px;
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 6px }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 440px); gap: 20px; align-items: start }
+.board { margin-top: 20px }
+@media (max-width: 1100px) { .grid { grid-template-columns: minmax(0, 1fr) } }
+@media (max-width: 860px) { .meta { text-align: left } }
 
 /* Departure board */
 .board { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden }
 .board h2, .itin h2 { font: 600 13px/1 var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
   margin: 0; padding: 12px 14px; border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: space-between }
-.board ol { list-style: none; margin: 0; padding: 0 }
+.board ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) }
 .board button { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: grid;
   grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 8px 14px; border-bottom: 1px solid var(--rule) }
 .board button:hover { background: color-mix(in srgb, var(--accent) 7%, transparent) }
@@ -66,7 +71,8 @@ button[aria-pressed="true"] .bar i { background: var(--accent) }
 .sub { grid-column: 1 / -1; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums }
 .gaps { padding: 12px 14px; font-size: 13px; color: var(--muted) }
 /* search and filters above the arrivals list */
-.tools { display: grid; gap: 8px; padding: 10px 14px 12px; border-bottom: 1px solid var(--rule) }
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; padding: 10px 14px 12px; border-bottom: 1px solid var(--rule) }
+.tools input[type=search] { flex: 0 1 260px }
 .tools input[type=search] { width: 100%; box-sizing: border-box; font: 14px var(--body); color: var(--fg); background: var(--bg);
   border: 1px solid var(--rule); border-radius: 4px; padding: 7px 10px }
 .tools input[type=search]:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent }
@@ -223,12 +229,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     <div class="origins"><nav id="origins" aria-label="Maps from other cities"></nav><span class="credit">See <a href="#user-guide" id="guide-link">User guide</a>. Developed with Claude by <a href="mailto:mane@iki.fi">mane@iki.fi</a> – see <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">blog</a></span></div>
     <div class="meta" id="meta"></div>
   </header>
-  <div class="grid">
-    <aside class="board" aria-label="Capitals by arrival time">
-      <h2><span>Arrivals from __ORIGIN__</span><span>door to door</span></h2>
-      <div class="tools">
-        <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
-        <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
+  <!-- layout (feedback 4.11.2026): settings on top, map with the timetable beside it, destinations below -->
+  <div class="controls" role="group" aria-label="Journey settings">
         <div class="seg" id="f-date" role="group" aria-label="Leave __ORIGIN__ on"><span>Leave</span></div>
         <div class="seg" id="f-start" role="group" aria-label="Leave __ORIGIN__ from"><span>From</span></div>
         <div class="seg" id="f-night" role="group" aria-label="Night trains">
@@ -239,11 +241,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
           <label><input type="checkbox" id="f-cities"> Include other cities</label>
           <label title="Also draw connections in the data that no journey on this map uses"><input type="checkbox" id="f-alllegs"> All connections</label>
         </div>
-        <div class="count" id="count" aria-live="polite"></div>
-      </div>
-      <ol id="list"></ol>
-      <div class="gaps" id="gaps"></div>
-    </aside>
+  </div>
+  <div class="grid">
     <div class="mapcol">
       <div class="mapbox">
         <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="Map of rail and ferry legs across Europe">
@@ -266,6 +265,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark day d3"><rect x="-9" y="-7" width="18" height="14" rx="4"/><text>3</text></g></svg>Day 3 begins here</span>
         <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark hotel"><rect x="-10" y="-7" width="20" height="14" rx="4"/><path d="M-6 3.5V-3.5 M-6 1.5h12v2 M6 1.5v-1.5a1.5 1.5 0 0 0-1.5-1.5H-1v3 M-3.4 -1.3a0.01 0.01 0 1 0 0.02 0"/></g></svg>Hotel night</span>
       </div>
+    </div>
       <section class="itin" aria-live="polite">
         <h2><span id="itin-title">Itinerary</span><span id="itin-sum"></span></h2>
         <div class="opts" id="opts" role="tablist" aria-label="Journey options"></div>
@@ -282,8 +282,17 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <div class="share"><button type="button" id="share">Copy link</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
-    </div>
   </div>
+  <section class="board" aria-label="Destinations by arrival time">
+      <h2><span>Arrivals from __ORIGIN__</span><span>door to door</span></h2>
+      <div class="tools">
+        <input type="search" id="q" placeholder="Find a city (press / )" aria-label="Find a destination" autocomplete="off" spellcheck="false">
+        <div class="seg" id="f-day" role="group" aria-label="Arrive by"><span>Arrive by</span></div>
+        <div class="count" id="count" aria-live="polite"></div>
+      </div>
+      <ol id="list"></ol>
+      <div class="gaps" id="gaps"></div>
+  </section>
   <footer id="foot"></footer>
   <section class="guide" id="user-guide" aria-labelledby="guide-h">
     <h2 id="guide-h">User guide</h2>
@@ -292,10 +301,10 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     not to replace a journey planner: check the times and book with the operators.</p>
     <h3>Pick a destination</h3>
     <ul>
-      <li>The list on the left shows the capitals in order of arrival, with the door-to-door time.
+      <li>The list below the map shows the capitals in order of arrival, with the door-to-door time.
       The colour tells on which day you arrive.</li>
       <li>Click a city in the list or on the map, or type its name in <b>Find a city</b> (press <kbd>/</kbd>).</li>
-      <li>The journey appears under the map, day by day: every train, ferry and bus, the changes,
+      <li>The journey's timetable appears beside the map (below it on narrow screens), day by day: every train, ferry and bus, the changes,
       and where you stay overnight. On the map, numbered marks show where each day begins and a bed
       shows a hotel night.</li>
     </ul>
@@ -305,7 +314,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <li><b>From</b>: leave in the morning or in the evening.</li>
       <li><b>Night trains</b>: <i>allowed</i> uses sleepers and night ferries; <i>avoid</i> travels by day only
       (night ferries still count). Some places are reachable only by night train.</li>
-      <li><b>Arrive by</b> shows only the places you reach by that day; <b>No hotel nights</b> only journeys
+      <li><b>Arrive by</b>, above the list, shows only the places you reach by that day; <b>No hotel nights</b> only journeys
       without one; <b>Include other cities</b> adds towns and ports that are not capitals.</li>
     </ul>
     <h3>Read a journey</h3>
@@ -747,7 +756,7 @@ rows = ALL_ROUTES.map(r => {
     <span class="sub">${r.alternatives && r.alternatives.length ? `<span class="alt">${r.alternatives.map(a => a.label.toLowerCase()).join(", ")} option · </span>` : ""}Day ${dayOf(r)} · ${r.arrive_txt} · ${r.changes} change${r.changes === 1 ? "" : "s"}${r.hotel_nights ? ` · <span class="bed">${r.hotel_nights} hotel night${r.hotel_nights > 1 ? "s" : ""} (${r.stays.map(LN).join(", ")})</span>` : ""}</span>`;
   li.appendChild(b); buttons[r.capital] = b;
   const row = { r, li, b, isCap };
-  b.addEventListener("click", () => select(r.capital, pickOption(r)));
+  b.addEventListener("click", () => select(r.capital, pickOption(r), false, true));
   return row;
 }).sort((a, b) => (a.r.arrive_abs ?? a.r.arrive) - (b.r.arrive_abs ?? b.r.arrive));
 }
@@ -933,7 +942,7 @@ function showCO2(r) {
   });
 }
 
-function select(cap, opt = 0, fromMap = false) {
+function select(cap, opt = 0, fromMap = false, fromList = false) {
   const r0 = routeOf(cap); if (!r0) return;
   const options = [r0, ...(r0.alternatives || [])];
   const r = options[Math.min(opt, options.length - 1)];
@@ -1003,11 +1012,13 @@ function select(cap, opt = 0, fromMap = false) {
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
   });
-  if (fromMap) {
+  if (fromMap || fromList) {
+    // the timetable sits beside the map (below it on narrow screens), the list below both:
+    // a click in the list or on the map brings the timetable into view, never the list
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    buttons[cap]?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
-    if (matchMedia("(max-width: 860px)").matches)
-      document.querySelector(".itin").scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+    const itinEl = document.querySelector(".itin"), top = itinEl.getBoundingClientRect().top;
+    if (fromList || top > innerHeight * 0.6)
+      itinEl.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
   }
   try { const h = hashFor(cap, options.indexOf(r)); if (location.hash !== h) history.replaceState(null, "", h); } catch (e) {}
 }
