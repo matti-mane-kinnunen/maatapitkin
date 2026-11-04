@@ -2043,3 +2043,5 @@ legs:
   - {from: Seinäjoki, to: Helsinki, service: "IC", mode: train, runs: "mon-fri,sun", times: ["01:35-07:14", "13:45-16:39"], query: "*", checked: 2026-11-04, source: transitous}
   - {from: Seinäjoki, to: Helsinki, service: "IC", mode: train, runs: "sat,sun", times: ["03:56-09:15", "11:28-14:39"], query: "*", checked: 2026-11-04, source: transitous}
   - {from: Seinäjoki, to: Helsinki, service: "IC", mode: train, runs: "sun", times: ["05:19-10:34"], query: "*", checked: 2026-11-04, source: transitous}
+  - {from: Sofia, to: Istanbul, dep: "11:00", arr: "20:30", service: "Kamil Koç 11:00", mode: bus, checked: 2026-11-04, source: manual}
+  - {from: Sofia, to: Istanbul, dep: "23:00", arr: "08:00", service: "Kamil Koç 23:00", mode: bus, night: true, checked: 2026-11-04, source: manual}

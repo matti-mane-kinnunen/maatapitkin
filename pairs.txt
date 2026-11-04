@@ -226,6 +226,8 @@ Dublin -> Belfast : *
 Dublin -> Galway : *
 Budapest -> Bucharest : *
 Sofia -> Istanbul : 493 / 12504 night 18:40-06:34   # 2023 times - Transitous has no trains here; check by hand
+Sofia -> Istanbul : Kamil Koç 11:00 bus 11:00-20:30          # Matti, Nov 2026 (bus booking site): daily, direct, to Esenler bus station; local times (Istanbul +1 h)
+Sofia -> Istanbul : Kamil Koç 23:00 bus night 23:00-08:00    # Matti, Nov 2026: direct night bus, arrives 08:00 next day
 Istanbul -> Ankara : IC81006 08:40-13:16   # 2023 times - Transitous has no trains here; check by hand
 Split -> Zagreb : *
 Bucharest -> Chisinau : 402 night 19:20-08:10   # 2023 times - Transitous has no trains here; check by hand
