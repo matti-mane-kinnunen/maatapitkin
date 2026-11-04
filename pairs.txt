@@ -476,7 +476,7 @@ Helsinki -> Seinäjoki : *
 Seinäjoki -> Helsinki : *
 
 # Turkey
-Ankara -> Izmir :*
+# Ankara -> Izmir :*
 
 # Greece 
 Athens -> Thessaloniki : * 
