@@ -1006,7 +1006,7 @@ points readers to the operators. The itinerary still shows dates (Day 1 · Tue 1
 stays concrete.
 
 ## D-53 Each map's texts in its own language
-**Date:** 4.11.2026 · **Status:** Accepted (Finnish done; Swedish, Danish, German to come)
+**Date:** 4.11.2026 · **Status:** Accepted (all five maps in their language: fi, sv, da, de, en)
 
 **Context.** IDEA-13 (Matti): after the place names (D-50), the whole page in the map's language.
 
@@ -1023,6 +1023,8 @@ stays concrete.
 
 **Why.** One mechanism for all languages; English fallback means a half-done language still works.
 Step 1 (English only) was verified as invisible: 5 maps × 78 browser states, 702 fields identical.
+Swedish, Danish and German (4.11.2026) are Claude's translations; Swedish, Danish and German use the
+city's basic form (från/fra/ab Stockholm), so no `from:` is needed. Native speakers should check them.
 
 **Consequences.** Every new page text needs a key in en.yaml and, in time, four translations.
 
