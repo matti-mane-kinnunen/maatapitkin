@@ -238,6 +238,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Turku | Thu 12.11. 07:35 | 44 h 01 min | 3 | 0 |
 | Durrës | Thu 12.11. 07:00 | 48 h 24 min | 3 | 1 |
 | Porto Torres | Thu 12.11. 07:30 | 34 h 38 min | 4 | 0 |
+| Seinäjoki | Thu 12.11. 09:15 | 45 h 41 min | 5 | 1 |
 | Tampere | Thu 12.11. 10:53 | 47 h 19 min | 6 | 0 |
 | Taormina | Thu 12.11. 10:08 | 51 h 32 min | 5 | 1 |
 | Granada | Thu 12.11. 10:25 | 51 h 42 min | 5 | 2 |
@@ -247,16 +248,16 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Narvik | Thu 12.11. 12:37 | 50 h 03 min | 4 | 0 |
 | Ruse | Thu 12.11. 13:40 | 54 h 28 min | 3 | 0 |
 | Valga | Thu 12.11. 14:13 | 45 h 29 min | 4 | 2 |
+| Oulu | Thu 12.11. 14:22 | 50 h 48 min | 6 | 1 |
 | Algeciras | Thu 12.11. 13:59 | 55 h 16 min | 4 | 2 |
 | Kuopio | Thu 12.11. 15:35 | 52 h 01 min | 4 | 0 |
 | Galway | Thu 12.11. 13:51 | 40 h 00 min | 4 | 1 |
+| Rovaniemi | Thu 12.11. 16:46 | 53 h 12 min | 6 | 1 |
 | Pozzallo | Thu 12.11. 15:58 | 57 h 22 min | 4 | 0 |
 | Badajoz | Thu 12.11. 16:11 | 40 h 03 min | 4 | 1 |
 | Tarifa | Thu 12.11. 16:45 | 58 h 02 min | 5 | 2 |
-| Oulu | Thu 12.11. 17:48 | 54 h 14 min | 4 | 0 |
 | Tanger Med | Thu 12.11. 16:30 | 58 h 47 min | 5 | 2 |
 | Tanger | Thu 12.11. 18:00 | 60 h 17 min | 6 | 2 |
-| Rovaniemi | Thu 12.11. 20:23 | 56 h 49 min | 4 | 0 |
 | Abrantes | Thu 12.11. 20:52 | 45 h 44 min | 5 | 1 |
 | Thessaloniki | Thu 12.11. 23:10 | 63 h 34 min | 5 | 1 |
 | Casablanca | Thu 12.11. 21:17 | 63 h 34 min | 7 | 2 |

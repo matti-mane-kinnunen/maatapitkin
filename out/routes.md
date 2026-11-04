@@ -151,6 +151,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 |---|---|---|---|---|
 | Tampere | Tue 10.11. 18:53 | 1 h 53 min | 0 | 0 |
 | Turku | Tue 10.11. 19:49 | 2 h 14 min | 0 | 0 |
+| Seinäjoki | Tue 10.11. 20:05 | 2 h 45 min | 0 | 0 |
 | Vaasa | Tue 10.11. 21:02 | 3 h 42 min | 0 | 0 |
 | Kuopio | Tue 10.11. 23:23 | 4 h 09 min | 0 | 0 |
 | Oulu | Wed 11.11. 00:16 | 5 h 56 min | 0 | 0 |

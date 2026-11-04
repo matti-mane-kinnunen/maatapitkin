@@ -208,6 +208,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Rimini | Wed 11.11. 12:38 | 30 h 16 min | 5 | 1 |
 | Genoa | Wed 11.11. 12:44 | 30 h 22 min | 4 | 1 |
 | Manchester | Wed 11.11. 11:44 | 30 h 22 min | 4 | 1 |
+| Seinäjoki | Wed 11.11. 14:12 | 31 h 09 min | 3 | 0 |
 | Donostia | Wed 11.11. 13:22 | 31 h 00 min | 5 | 1 |
 | Ancona | Wed 11.11. 13:34 | 31 h 12 min | 4 | 1 |
 | Mockava | Wed 11.11. 14:43 | 31 h 21 min | 3 | 1 |

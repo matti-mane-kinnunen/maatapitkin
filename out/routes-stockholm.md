@@ -172,6 +172,7 @@ Not reachable without night trains: Valletta, Bucharest, Chisinau, Sofia, Ankara
 | Strasbourg | Wed 11.11. 12:51 | 19 h 22 min | 2 | 0 |
 | Wroclaw | Wed 11.11. 12:54 | 19 h 25 min | 2 | 0 |
 | Kolding | Wed 11.11. 12:59 | 19 h 30 min | 1 | 0 |
+| Seinäjoki | Wed 11.11. 14:12 | 21 h 12 min | 1 | 0 |
 | Basel | Wed 11.11. 13:21 | 19 h 52 min | 1 | 0 |
 | Munich | Wed 11.11. 14:05 | 20 h 36 min | 1 | 0 |
 | Kuopio | Wed 11.11. 15:35 | 22 h 35 min | 1 | 0 |

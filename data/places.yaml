@@ -205,6 +205,7 @@ places:
   Sundsvall: {lat: 62.387, lon: 17.308, country: "SE", aliases: ["Sundsvall Bydalen", "Sundsvall Centralstation", "Sundsvall C"]}  # Centralstation; corrected by hand 4.11.2026 (was the Bydalen stop, 3 km north)
   Izmir: {lat: 38.431, lon: 27.214, country: "TR", aliases: ["İzmir bus station"]}  # added by add_leg.py
   Thessaloniki: {lat: 40.635, lon: 22.933, country: "GR"}  # added by add_leg.py
+  Seinäjoki: {lat: 62.792, lon: 22.844, country: "FI"}  # added by add_leg.py
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
