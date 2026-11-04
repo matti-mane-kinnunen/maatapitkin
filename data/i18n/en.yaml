@@ -105,6 +105,8 @@ chip_night_train: "Night train"
 any_time: "any time"
 est: "est."
 copy_link: "Copy link"
+bahn_check: "Check {from} → {to} on bahn.de"
+bahn_title: "Opens Deutsche Bahn's journey planner at this departure. It may suggest other trains; night trains and Eurostar may show no price."
 link_copied: "Link copied"
 link_aria: "Link to this journey"
 

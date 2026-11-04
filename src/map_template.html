@@ -187,7 +187,7 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .opts button[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent) }
 .alt { color: var(--accent) }
 .steps li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 16px; padding: 8px 14px; border-bottom: 1px dashed var(--rule) }
-.steps li:last-child { border-bottom: 0 }
+.steps li:last-child, .steps li:has(+ li.bahn) { border-bottom: 0 }
 @media (max-width: 520px) { .steps li { grid-template-columns: minmax(0, 1fr) } }
 .t { font: 13px/1.5 var(--mono); font-variant-numeric: tabular-nums }
 .t em { font-style: normal; color: var(--muted) }
@@ -200,6 +200,9 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .issue { color: var(--warn); font-size: 13px }
 .wait { color: var(--muted); font-size: 13px; font-style: italic }
 .steps li.pause { padding-block: 4px }
+.steps li.bahn { padding-block: 0 8px }
+.steps li.bahn a { font-size: 13px; line-height: 1.4; color: var(--muted); text-underline-offset: 2px }
+.steps li.bahn a:hover { color: var(--fg) }
 .steps li.stay { background: color-mix(in srgb, var(--warn) 9%, transparent) }
 .steps li.dayhead { display: flex; align-items: center; gap: 8px; padding: 12px 14px 4px; border-bottom: 0;
   font: 600 12px/1 var(--display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted) }
@@ -957,7 +960,8 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
   showCO2(r);
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
-  r.steps.forEach(s => {
+  const stretches = railStretches(r.steps);
+  r.steps.forEach((s, idx) => {
     // a heading whenever the journey enters a new day
     const day = Math.floor((s.kind === "leg" ? s.dep : lastArr) / 1440) + 1;
     if (s.kind === "leg") lastArr = s.arr;
@@ -985,6 +989,13 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       <div class="what"><b>${LN(s.from)} → ${LN(s.to)}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}</div>
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
+    const st = stretches.get(idx), url = st && bahnUrl(st.from, st.to, st.dep);
+    if (url) {
+      const b = document.createElement("li");
+      b.className = "bahn";
+      b.innerHTML = `<div class="t"></div><div class="what"><a href="${url}" target="_blank" rel="noopener" title="${T("bahn_title")}">${T("bahn_check", { from: LN(st.from), to: LN(st.to) })} ↗</a></div>`;
+      ol.appendChild(b);
+    }
   });
   if (fromMap || fromList) {
     // the timetable sits beside the map (below it on narrow screens), the list below both:
@@ -995,6 +1006,34 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       itinEl.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
   }
   try { const h = hashFor(cap, options.indexOf(r)); if (location.hash !== h) history.replaceState(null, "", h); } catch (e) {}
+}
+
+// "Check on bahn.de" (IDEA-14, D-54): one link per rail stretch - the trains between the start,
+// a hotel night, a ferry or a bus - opening Deutsche Bahn's planner at that departure. Needs DB
+// station numbers (places.yaml db:) at both ends; the link format is bahn.de's own (tested 4.11.2026).
+function bahnUrl(from, to, t) {
+  const a = (NET.places[from] || {}).db, b = (NET.places[to] || {}).db;
+  if (!a || !b || a === b) return null;
+  const d = new Date(curDate + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + Math.floor(t / 1440));
+  const m = ((t % 1440) + 1440) % 1440, p2 = n => String(n).padStart(2, "0");
+  const hd = `${d.getUTCFullYear()}-${p2(d.getUTCMonth() + 1)}-${p2(d.getUTCDate())}T${p2(Math.floor(m / 60))}:${p2(m % 60)}:00`;
+  const id = n => encodeURIComponent(`A=1@L=${n}@`);
+  return `https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=${encodeURIComponent(from)}&zo=${encodeURIComponent(to)}` +
+    `&soid=${id(a)}&zoid=${id(b)}&hd=${hd}&hza=D`;
+}
+function railStretches(steps) {          // index of each stretch's last leg -> {from, to, dep}
+  const out = new Map(); let cur = null;
+  const close = () => { if (cur && cur.trains) out.set(cur.last, cur); cur = null; };
+  steps.forEach((s, i) => {
+    if (s.kind === "stay") return close();
+    if (s.kind !== "leg") return;
+    if (s.mode === "ferry" || s.mode === "bus") return close();
+    if (!cur) cur = { from: s.from, dep: s.dep, trains: 0 };
+    cur.to = s.to; cur.last = i;
+    if (s.mode === "train") cur.trains++;
+  });
+  close();
+  return out;
 }
 
 // Shareable links: #lisbon/sat/no-night/fewestchanges

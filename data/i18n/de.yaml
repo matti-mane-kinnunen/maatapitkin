@@ -102,6 +102,8 @@ chip_night_train: "Nachtzug"
 any_time: "jederzeit"
 est: "ca."
 copy_link: "Link kopieren"
+bahn_check: "{from} → {to} auf bahn.de prüfen"
+bahn_title: "Öffnet die Reiseauskunft der Deutschen Bahn ab dieser Abfahrt. Sie kann andere Züge vorschlagen; Nachtzüge und Eurostar erscheinen evtl. ohne Preis."
 link_copied: "Link kopiert"
 link_aria: "Link zu dieser Reise"
 

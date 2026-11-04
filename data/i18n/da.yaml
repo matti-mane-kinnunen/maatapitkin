@@ -102,6 +102,8 @@ chip_night_train: "Nattog"
 any_time: "når som helst"
 est: "anslået"
 copy_link: "Kopiér link"
+bahn_check: "Tjek {from} → {to} på bahn.de"
+bahn_title: "Åbner Deutsche Bahns rejseplanlægger ved denne afgang. Den kan foreslå andre tog; nattog og Eurostar vises måske uden pris."
 link_copied: "Linket er kopieret"
 link_aria: "Link til denne rejse"
 

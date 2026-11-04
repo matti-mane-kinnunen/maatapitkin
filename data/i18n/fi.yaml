@@ -104,6 +104,8 @@ chip_night_train: "Yöjuna"
 any_time: "milloin vain"
 est: "arvio"
 copy_link: "Kopioi linkki"
+bahn_check: "Tarkista {from} → {to} bahn.de:stä"
+bahn_title: "Avaa Deutsche Bahnin reittihaun tästä lähdöstä. Se voi ehdottaa muita junia; yöjunille ja Eurostarille ei aina näy hintaa."
 link_copied: "Linkki kopioitu"
 link_aria: "Linkki tähän matkaan"
 
