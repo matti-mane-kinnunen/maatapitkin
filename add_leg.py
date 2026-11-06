@@ -52,6 +52,16 @@ LINE_RE = re.compile(r"^\s*(?P<a>.+?)\s*->\s*(?P<b>.+?)\s*:\s*(?P<svc>.+?)\s*$")
 FLAGS = {"ferry", "bus", "train", "night"}
 RUNS_WORD = re.compile(r"(?i)^(daily|(mon|tue|wed|thu|fri|sat|sun)(-(mon|tue|wed|thu|fri|sat|sun))?"
                        r"(,(mon|tue|wed|thu|fri|sat|sun)(-(mon|tue|wed|thu|fri|sat|sun))?)*)$")
+_T = r"\d{1,2}:\d{2}"
+_D = r"(?:mon|tue|wed|thu|fri|sat|sun)"
+# The end of a service: flag words, your own times, 'every ...', run days, '@08:30'. Only flag
+# words in this tail are flags, so a name may contain them ("Bus 20:30 bus 20:30-23:50", FIX-13).
+TAIL_RE = re.compile(rf"(?i)(?:^|\s+)(?:(?:{'|'.join(sorted(FLAGS))})\b|@\s*{_T}|{_T}\s*[-–]\s*{_T}"
+                     rf"|every\s+\d+\s+{_T}\s*[-–]\s*{_T}\s+{_T}"
+                     rf"|(?:daily|{_D}(?:-{_D})?(?:,{_D}(?:-{_D})?)*)\b)"
+                     rf"(?:\s+(?:(?:{'|'.join(sorted(FLAGS))})\b|@\s*{_T}|{_T}\s*[-–]\s*{_T}"
+                     rf"|every\s+\d+\s+{_T}\s*[-–]\s*{_T}\s+{_T}"
+                     rf"|(?:daily|{_D}(?:-{_D})?(?:,{_D}(?:-{_D})?)*)\b))*\s*$")
 EVERY_RE = re.compile(r"(?i)\bevery\s+(\d+)\s+(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s+(\d{1,2}:\d{2})\s*$")   # 'bus' also lets '*' include buses
 
 
@@ -479,6 +489,17 @@ def service_type(label: str) -> str:
     return " ".join(keep[:2]) or label
 
 
+def split_flags(svc: str) -> tuple[set[str], str]:
+    """'Coach 20:30 bus 20:30-23:50' -> ({'bus'}, 'Coach 20:30 20:30-23:50'). Flag words count
+    only at the end, among the times, run days and '@08:30' (FIX-13); in the name they stay."""
+    tail = TAIL_RE.search(svc)
+    if not tail:
+        return set(), svc
+    words = svc[tail.start():].split()
+    flags = {w.lower() for w in words if w.lower() in FLAGS}
+    return flags, " ".join(svc[:tail.start()].split() + [w for w in words if w.lower() not in FLAGS])
+
+
 # --- one leg ---------------------------------------------------------------------
 def handle(line: str, args) -> bool:
     m = LINE_RE.match(line)
@@ -486,8 +507,7 @@ def handle(line: str, args) -> bool:
         print("  Write it as:  A -> B : train   (e.g. Stockholm -> Malmö : X2 523)")
         return status("not understood - write it as  A -> B : train")
     svc = m["svc"]
-    flags = {w.lower() for w in svc.split() if w.lower() in FLAGS}
-    svc = " ".join(w for w in svc.split() if w.lower() not in FLAGS)
+    flags, svc = split_flags(svc)
     near = None
     nm = re.search(r"@\s*(\d{1,2}:\d{2})", svc)
     if nm:
@@ -786,7 +806,7 @@ def line_entries(line: str, places: dict | None = None) -> list:
     frm, to = find_place(m["a"], places), find_place(m["b"], places)
     if not frm or not to:
         return []
-    svc = " ".join(w for w in m["svc"].split() if w.lower() not in FLAGS)
+    svc = split_flags(m["svc"])[1]
     svc = re.sub(r"@\s*\d{1,2}:\d{2}", "", svc)
     if svc.split() and RUNS_WORD.match(svc.split()[-1]):
         svc = " ".join(svc.split()[:-1])
@@ -800,7 +820,7 @@ def own_times(line: str) -> bool:
     m = LINE_RE.match(line)
     if not m:
         return False
-    words = [w for w in m["svc"].split() if w.lower() not in FLAGS]
+    words = split_flags(m["svc"])[1].split()
     if words and RUNS_WORD.match(words[-1]):
         words = words[:-1]
     svc = " ".join(words)

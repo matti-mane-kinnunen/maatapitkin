@@ -35,7 +35,7 @@ def main():
     except (subprocess.CalledProcessError, json.JSONDecodeError):
         old = None
 
-    problems, lines = [], [f"## Map update check", "",
+    problems, lines = [], ["## Map update check", "",
                            f"Travel dates: {', '.join(new['dates'])} · departures in the data: **{new['departures']}**", ""]
     nc = first(new["capitals"])
     lines += ["| Leaving | Capitals reached | Without night trains | Places reached |", "|---|---|---|---|"]

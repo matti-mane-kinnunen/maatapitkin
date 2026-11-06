@@ -18,15 +18,9 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import json
-import re
 import sys
 import time
-import urllib.error
-import urllib.parse
-import urllib.request
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
