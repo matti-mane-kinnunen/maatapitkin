@@ -1,6 +1,6 @@
 # Journeys from London
 
-_leave London Tue 10.11.2026 from 06:00 · generated 4.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave London Tue 10.11.2026 from 06:00 · generated 6.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -1036,7 +1036,7 @@ _Fastest: 111 h 29 min, arrive Sat 14.11. 22:30, 4 changes, 3 hotel nights_
 - 🛏 Overnight in Rome (Tue 10.11. 23:25 → Wed 11.11. 20:31)
 - Wed 11.11. 20:31 → Thu 12.11. 09:13  **Rome → Palermo**  IC  (night)
 - 🛏 Overnight in Palermo (Thu 12.11. 09:13 → Sat 14.11. 10:30)
-- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  10:30
+- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  Ferry 10:30
 
 ### Tunis — fewest hotel nights
 _Fewest hotel nights: 111 h 29 min, arrive Sat 14.11. 22:30, 5 changes, 2 hotel nights_
@@ -1050,7 +1050,7 @@ _Fewest hotel nights: 111 h 29 min, arrive Sat 14.11. 22:30, 5 changes, 2 hotel 
 - Wait 13 h 56 min in Rome
 - Wed 11.11. 20:31 → Thu 12.11. 09:13  **Rome → Palermo**  IC  (night)
 - 🛏 Overnight in Palermo (Thu 12.11. 09:13 → Sat 14.11. 10:30)
-- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  10:30
+- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  Ferry 10:30
 
 ## Capitals not reachable with the current legs
 

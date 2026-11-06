@@ -1,6 +1,6 @@
 # Journeys from Stockholm
 
-_leave Stockholm Tue 10.11.2026 from 16:00 · generated 4.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Stockholm Tue 10.11.2026 from 16:00 · generated 6.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -855,7 +855,7 @@ _Fastest: 101 h 01 min, arrive Sat 14.11. 22:30, 5 changes, 1 hotel nights_
 - Wait 1 h 51 min in Rome
 - Thu 12.11. 20:31 → Fri 13.11. 09:13  **Rome → Palermo**  IC  (night)
 - 🛏 Overnight in Palermo (Fri 13.11. 09:13 → Sat 14.11. 10:30)
-- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  10:30
+- Sat 14.11. 10:30 → Sat 14.11. 22:30  **Palermo → Tunis**  Ferry 10:30
 
 ### Ankara
 _Fastest: 113 h 47 min, arrive Sun 15.11. 13:16, 8 changes, 1 hotel nights_
