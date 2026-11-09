@@ -1,37 +1,37 @@
 {
- "generated": "2026-11-06",
+ "generated": "2026-11-09",
  "dates": [
-  "2026-11-10",
-  "2026-11-13",
-  "2026-11-14",
-  "2026-11-15"
+  "2026-11-17",
+  "2026-11-20",
+  "2026-11-21",
+  "2026-11-22"
  ],
  "draft": false,
- "departures": 6165,
+ "departures": 6090,
  "warnings": 0,
  "capitals": {
-  "2026-11-10": {
+  "2026-11-17": {
    "with_night_trains": 44,
-   "without": 43
+   "without": 42
   },
-  "2026-11-13": {
+  "2026-11-20": {
    "with_night_trains": 44,
-   "without": 43
+   "without": 42
   },
-  "2026-11-14": {
+  "2026-11-21": {
    "with_night_trains": 44,
-   "without": 43
+   "without": 42
   },
-  "2026-11-15": {
+  "2026-11-22": {
    "with_night_trains": 44,
-   "without": 43
+   "without": 42
   }
  },
  "places_reached": {
-  "2026-11-10": 166,
-  "2026-11-13": 166,
-  "2026-11-14": 166,
-  "2026-11-15": 166
+  "2026-11-17": 166,
+  "2026-11-20": 166,
+  "2026-11-21": 166,
+  "2026-11-22": 166
  },
  "reached": {
   "capitals": [
@@ -99,7 +99,6 @@
    "Copenhagen",
    "Dublin",
    "Edinburgh",
-   "Kyiv",
    "Lisbon",
    "Ljubljana",
    "London",
@@ -296,39 +295,39 @@
  },
  "origins": {
   "Stockholm": {
-   "generated": "2026-11-06",
+   "generated": "2026-11-09",
    "dates": [
-    "2026-11-10",
-    "2026-11-13",
-    "2026-11-14",
-    "2026-11-15"
+    "2026-11-17",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22"
    ],
    "draft": false,
-   "departures": 6165,
+   "departures": 6090,
    "warnings": 0,
    "capitals": {
-    "2026-11-10": {
+    "2026-11-17": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-13": {
+    "2026-11-20": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-14": {
+    "2026-11-21": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-15": {
+    "2026-11-22": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     }
    },
    "places_reached": {
-    "2026-11-10": 166,
-    "2026-11-13": 166,
-    "2026-11-14": 166,
-    "2026-11-15": 166
+    "2026-11-17": 166,
+    "2026-11-20": 166,
+    "2026-11-21": 166,
+    "2026-11-22": 166
    },
    "reached": {
     "capitals": [
@@ -397,7 +396,6 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
-     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -593,39 +591,39 @@
    }
   },
   "Copenhagen": {
-   "generated": "2026-11-06",
+   "generated": "2026-11-09",
    "dates": [
-    "2026-11-10",
-    "2026-11-13",
-    "2026-11-14",
-    "2026-11-15"
+    "2026-11-17",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22"
    ],
    "draft": false,
-   "departures": 6165,
+   "departures": 6090,
    "warnings": 0,
    "capitals": {
-    "2026-11-10": {
+    "2026-11-17": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-13": {
+    "2026-11-20": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-14": {
+    "2026-11-21": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-15": {
+    "2026-11-22": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     }
    },
    "places_reached": {
-    "2026-11-10": 166,
-    "2026-11-13": 166,
-    "2026-11-14": 166,
-    "2026-11-15": 166
+    "2026-11-17": 166,
+    "2026-11-20": 166,
+    "2026-11-21": 166,
+    "2026-11-22": 166
    },
    "reached": {
     "capitals": [
@@ -693,7 +691,6 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
-     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -890,39 +887,39 @@
    }
   },
   "London": {
-   "generated": "2026-11-06",
+   "generated": "2026-11-09",
    "dates": [
-    "2026-11-10",
-    "2026-11-13",
-    "2026-11-14",
-    "2026-11-15"
+    "2026-11-17",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22"
    ],
    "draft": false,
-   "departures": 6165,
+   "departures": 6090,
    "warnings": 0,
    "capitals": {
-    "2026-11-10": {
+    "2026-11-17": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-13": {
+    "2026-11-20": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-14": {
+    "2026-11-21": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-15": {
+    "2026-11-22": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     }
    },
    "places_reached": {
-    "2026-11-10": 166,
-    "2026-11-13": 166,
-    "2026-11-14": 166,
-    "2026-11-15": 166
+    "2026-11-17": 166,
+    "2026-11-20": 166,
+    "2026-11-21": 166,
+    "2026-11-22": 166
    },
    "reached": {
     "capitals": [
@@ -991,7 +988,6 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
-     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "Luxembourg",
@@ -1187,39 +1183,39 @@
    }
   },
   "Berlin": {
-   "generated": "2026-11-06",
+   "generated": "2026-11-09",
    "dates": [
-    "2026-11-10",
-    "2026-11-13",
-    "2026-11-14",
-    "2026-11-15"
+    "2026-11-17",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22"
    ],
    "draft": false,
-   "departures": 6165,
+   "departures": 6090,
    "warnings": 0,
    "capitals": {
-    "2026-11-10": {
+    "2026-11-17": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-13": {
+    "2026-11-20": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-14": {
+    "2026-11-21": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     },
-    "2026-11-15": {
+    "2026-11-22": {
      "with_night_trains": 44,
-     "without": 43
+     "without": 42
     }
    },
    "places_reached": {
-    "2026-11-10": 166,
-    "2026-11-13": 166,
-    "2026-11-14": 166,
-    "2026-11-15": 166
+    "2026-11-17": 166,
+    "2026-11-20": 166,
+    "2026-11-21": 166,
+    "2026-11-22": 166
    },
    "reached": {
     "capitals": [
@@ -1287,7 +1283,6 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
-     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
