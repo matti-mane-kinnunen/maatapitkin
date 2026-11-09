@@ -45,6 +45,9 @@ jobs:
 
       - run: pip install pyyaml
 
+      - name: Test the routing rules (FIX-15)
+        run: python3 -m unittest discover -s tests -v
+
       - name: Next week's travel dates (Tue, Fri, Sat, Sun)
         id: dates
         run: |

@@ -38,6 +38,7 @@ routes_to_pairs.py    route lists ('Madrid – Zaragoza – Barcelona') -> pairs
 check_timetables.py   re-checks the legs against Transitous and writes a report
 coverage_check.py     which European countries, links and ferries Transitous has timetables for
 src/journeys.py       loading, validation and the journey router
+tests/                routing tests (python3 -m unittest discover -s tests)
 src/make_map.py       the map pages (out/site/)
 src/co2.py            rough CO2 per journey vs flying
 src/transitous.py     talking to the Transitous API (used by add_leg.py and the checker)
@@ -132,14 +133,27 @@ map's *Copy link* button gives the link for whatever is on screen.
 
 ## Safety net before each commit
 
-`.githooks/pre-commit` refuses a commit when a YAML file doesn't read or a pairs.txt line isn't
-`A -> B : train`. Turn it on once per clone:
+`.githooks/pre-commit` refuses a commit when a YAML file doesn't read, a pairs.txt line isn't
+`A -> B : train`, or – when `src/journeys.py` or `tests/` change – the routing tests fail. Turn it on
+once per clone:
 
 ```
 git config core.hooksPath .githooks
 ```
 
 (`git commit --no-verify` skips it in an emergency.)
+
+**Routing tests** (FIX-15): `tests/test_journeys.py` checks the router's rules one by one on tiny
+made-up networks – change times (per station, ferry and Eurostar check-in), hotel nights, the morning
+rule (and a place's own, Budapest 05:00), the 8-hour minimum hotel stay, quiet hours, night trains and
+ferries, run days, `every`/`times` entries, the search objectives. Run them with
+
+```
+python3 -m unittest discover -s tests -v
+```
+
+The weekly workflow runs them first and stops if one fails. When you change a rule on purpose, change
+its test too.
 
 ## How journeys are built
 
