@@ -63,6 +63,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-53 | Each map's texts in its own language | 4.11.2026 | Accepted |
 | D-54 | DB station numbers for places, from Trainline's open list | 4.11.2026 | Accepted |
 | D-55 | "Check on bahn.de" link under each rail stretch | 4.11.2026 | Accepted |
+| D-56 | Visitor counts with GoatCounter, sent by our own code | 9.11.2026 | Accepted |
 
 ---
 
@@ -1083,6 +1084,31 @@ per stretch keeps each search simple and gives a natural booking unit.
 **Consequences.** The link format is bahn.de's own, not a documented interface. If it changes, the
 links open an empty search; the weekly update cannot check this (bahn.de blocks scripts), so an
 occasional click by hand is the check.
+
+---
+
+## D-56 Visitor counts with GoatCounter, sent by our own code
+**Date:** 9.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-15 (Matti): how many people view the maps? GitHub Pages keeps no visitor statistics.
+
+**Decision.**
+- GoatCounter (open source, free for non-commercial sites): no cookies, no personal data, so no
+  cookie banner. Account `maatapitkin` (Matti); address in places.yaml `settings.goatcounter`.
+- The page sends the count request itself (path, title, referrer, screen width) instead of loading
+  GoatCounter's count.js: the same data, but no outside code runs on the map, and we decide when
+  not to count.
+- Counted only on github.io; never in local files or automated browsers (`navigator.webdriver`:
+  the weekly page check, FIX-14) and not when the browser sends Do Not Track or Global Privacy
+  Control. One sentence in each user guide says so.
+- Not Google Analytics: it needs cookies and a consent banner.
+
+**Why.** Enough to see whether the maps are used and where people come from, with the least data and
+no third-party code – the same thinking as pinned actions (supply chain).
+
+**Consequences.** Counts are a little low: privacy settings, ad blockers and visits from automated
+browsers are not counted. Checked 9.11.2026 with a simulated github.io visit: counted once, not
+counted in the four other cases.
 
 ---
 

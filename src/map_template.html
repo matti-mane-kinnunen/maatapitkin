@@ -1188,4 +1188,21 @@ applyView(false);
 
 // label widths change once the web fonts arrive: lay out again
 document.fonts?.ready.then(() => { drawMarks(); layoutMain(); layoutCities(); placeHits(); });
+
+// Visitor count (IDEA-15, D-56): one request to GoatCounter per page view - no cookies, no
+// personal data, and no script of theirs: we send the same request GoatCounter's count.js would.
+// Only on the published site (github.io), never in tests or local files, nor in automated
+// browsers or when the browser asks not to be tracked (Do Not Track, Global Privacy Control).
+(function countVisit() {
+  try {
+    if (!NET.goatcounter || !/\.github\.io$/.test(location.hostname)) return;
+    if (navigator.webdriver || navigator.doNotTrack === "1" || navigator.globalPrivacyControl) return;
+    const q = new URLSearchParams({
+      p: location.pathname,                          // which map: /maatapitkin/, /maatapitkin/stockholm.html ...
+      t: document.title, r: document.referrer,       // where the visitor came from (Facebook, the blog ...)
+      s: String(screen.width), rnd: Math.random().toString(36).slice(2),
+    });
+    new Image().src = NET.goatcounter + "?" + q;
+  } catch (e) { /* counting must never break the map */ }
+})();
 </script>

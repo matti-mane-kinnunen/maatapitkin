@@ -519,7 +519,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
                       if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
     (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "lang": cfg.get("lang", "en"), "origin_from": origin_from,
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"), "lang": cfg.get("lang", "en"), "origin_from": origin_from,
         "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(), "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,

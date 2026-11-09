@@ -218,6 +218,17 @@ seat; getting to and from airports and stations is left out on both sides.
 To update the factors, read the new table on the Klimatsmart semester page and change the numbers in
 `places.yaml` (yearly check, DATA-12).
 
+## Visitor counts
+
+The maps count page views with [GoatCounter](https://www.goatcounter.com) (IDEA-15, D-56):
+dashboard at https://maatapitkin.goatcounter.com – views per map (`/maatapitkin/` is Helsinki,
+`/maatapitkin/stockholm.html` …), where visitors came from (Facebook, the blog) and countries.
+No cookies and no personal data, so no cookie banner. The page sends the request itself – the same
+one GoatCounter's `count.js` would – so no outside script runs on the map. It counts only on github.io,
+not in local files, automated browsers (the weekly page check) or when the browser asks not to be
+tracked (Do Not Track, Global Privacy Control). The address is `settings.goatcounter` in
+places.yaml; remove it to switch counting off.
+
 ## DB station numbers
 
 Each place in `places.yaml` can have `db:`, its station number in Deutsche Bahn's planner (EVA), so that
