@@ -158,12 +158,12 @@ Not reachable without night trains: Valletta, Kyiv
 | Göteborg | Tue 17.11. 10:05 | 3 h 36 min | 0 | 0 |
 | Hamburg | Tue 17.11. 10:48 | 4 h 26 min | 0 | 0 |
 | Rostock | Tue 17.11. 12:55 | 6 h 33 min | 1 | 0 |
-| Osnabrück | Tue 17.11. 13:34 | 7 h 12 min | 1 | 0 |
+| Osnabrück | Tue 17.11. 13:01 | 6 h 39 min | 1 | 0 |
+| Hannover | Tue 17.11. 15:01 | 8 h 39 min | 2 | 0 |
 | Kolding | Tue 17.11. 15:44 | 9 h 22 min | 1 | 0 |
 | Köln | Tue 17.11. 15:48 | 9 h 26 min | 1 | 0 |
 | Sundsvall | Tue 17.11. 15:54 | 9 h 51 min | 2 | 0 |
 | Frankfurt | Tue 17.11. 16:14 | 9 h 52 min | 1 | 0 |
-| Hannover | Tue 17.11. 16:37 | 10 h 15 min | 2 | 0 |
 | Liège | Tue 17.11. 17:46 | 11 h 24 min | 2 | 0 |
 | Offenburg | Tue 17.11. 17:58 | 11 h 36 min | 1 | 0 |
 | Munich | Tue 17.11. 18:04 | 11 h 42 min | 1 | 0 |
@@ -179,6 +179,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Krakow | Wed 18.11. 00:57 | 18 h 35 min | 3 | 0 |
 | Wroclaw | Wed 18.11. 03:00 | 20 h 38 min | 2 | 0 |
 | Boden | Wed 18.11. 05:42 | 23 h 39 min | 2 | 0 |
+| Gdansk | Wed 18.11. 06:15 | 23 h 53 min | 3 | 0 |
 | Bergen | Wed 18.11. 06:23 | 24 h 20 min | 3 | 0 |
 | Przemyśl | Wed 18.11. 06:25 | 24 h 03 min | 3 | 0 |
 | Turku | Wed 18.11. 07:35 | 24 h 32 min | 2 | 0 |
@@ -187,7 +188,6 @@ Not reachable without night trains: Valletta, Kyiv
 | Lille | Wed 18.11. 07:51 | 25 h 29 min | 4 | 1 |
 | Bordeaux | Wed 18.11. 08:14 | 25 h 52 min | 3 | 1 |
 | Lyon | Wed 18.11. 08:22 | 26 h 00 min | 3 | 1 |
-| Gdansk | Wed 18.11. 09:12 | 26 h 50 min | 3 | 1 |
 | Storlien | Wed 18.11. 09:17 | 27 h 14 min | 3 | 0 |
 | Milan | Wed 18.11. 09:20 | 26 h 58 min | 3 | 1 |
 | Marseille | Wed 18.11. 09:24 | 27 h 02 min | 3 | 1 |
@@ -302,8 +302,8 @@ _Fastest: 12 h 53 min, arrive Tue 17.11. 19:15, 2 changes, 0 hotel nights_
 _Fastest: 13 h 39 min, arrive Tue 17.11. 20:01, 2 changes, 0 hotel nights_
 
 - Tue 17.11. 06:22 → Tue 17.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Tue 17.11. 11:45 → Tue 17.11. 13:34  **Hamburg → Osnabrück**  ICE
-- Wait 3 h 32 min in Osnabrück
+- Tue 17.11. 11:23 → Tue 17.11. 13:01  **Hamburg → Osnabrück**  ICE
+- Wait 4 h 05 min in Osnabrück
 - Tue 17.11. 17:06 → Tue 17.11. 20:01  **Osnabrück → Amsterdam**  ICE
 
 ### Paris
@@ -342,8 +342,8 @@ _Fastest: 15 h 11 min, arrive Tue 17.11. 21:14, 2 changes, 0 hotel nights_
 _Fastest: 16 h 44 min, arrive Tue 17.11. 23:06, 3 changes, 0 hotel nights_
 
 - Tue 17.11. 06:22 → Tue 17.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Tue 17.11. 11:45 → Tue 17.11. 13:34  **Hamburg → Osnabrück**  ICE
-- Wait 3 h 32 min in Osnabrück
+- Tue 17.11. 11:23 → Tue 17.11. 13:01  **Hamburg → Osnabrück**  ICE
+- Wait 4 h 05 min in Osnabrück
 - Tue 17.11. 17:06 → Tue 17.11. 20:01  **Osnabrück → Amsterdam**  ICE
 - Tue 17.11. 21:10 → Tue 17.11. 23:06  **Amsterdam → Brussels**  EST Eurostar
 

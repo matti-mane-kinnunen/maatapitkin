@@ -220,6 +220,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Glasgow | Thu 19.11. 00:09 | 31 h 40 min | 4 | 0 |
 | Wroclaw | Thu 19.11. 03:00 | 33 h 31 min | 2 | 0 |
 | Villa San Giovanni | Thu 19.11. 06:10 | 36 h 41 min | 5 | 0 |
+| Gdansk | Thu 19.11. 06:15 | 36 h 46 min | 3 | 0 |
 | Foggia | Thu 19.11. 06:17 | 36 h 48 min | 5 | 0 |
 | Przemyśl | Thu 19.11. 06:25 | 36 h 56 min | 3 | 0 |
 | Bari | Thu 19.11. 07:00 | 37 h 31 min | 4 | 0 |
@@ -227,7 +228,6 @@ Not reachable without night trains: Valletta, Kyiv
 | Messina | Thu 19.11. 08:00 | 38 h 31 min | 6 | 0 |
 | Naples | Thu 19.11. 08:12 | 38 h 43 min | 5 | 1 |
 | Penzance | Thu 19.11. 07:55 | 39 h 26 min | 4 | 0 |
-| Gdansk | Thu 19.11. 09:12 | 39 h 43 min | 3 | 1 |
 | Lecce | Thu 19.11. 09:15 | 39 h 46 min | 5 | 0 |
 | Ayr | Thu 19.11. 08:51 | 40 h 22 min | 5 | 0 |
 | L'Hospitalet | Thu 19.11. 10:05 | 40 h 36 min | 4 | 1 |

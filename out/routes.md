@@ -104,37 +104,37 @@ Not reachable without night trains: Valletta, Kyiv
 
 | Capital | Leave | Arrive | Door to door | Compared with 17:00 |
 |---|---|---|---|---|
-| Stockholm | Tue 17.11. 05:26 | Tue 17.11. 18:55 | 14 h 29 min | arrives 11 h 35 min earlier |
+| Stockholm | Tue 17.11. 05:32 | Tue 17.11. 18:55 | 14 h 23 min | arrives 11 h 35 min earlier |
 | Tallinn | Tue 17.11. 07:30 | Tue 17.11. 09:30 | 2 h 00 min | arrives 24 h 00 min earlier |
-| Copenhagen | Tue 17.11. 05:26 | Wed 18.11. 07:58 | 27 h 32 min | arrives 5 h 00 min earlier |
-| Oslo | Tue 17.11. 05:26 | Wed 18.11. 13:16 | 32 h 50 min | arrives 0 h 07 min earlier |
+| Copenhagen | Tue 17.11. 05:32 | Wed 18.11. 07:58 | 27 h 26 min | arrives 5 h 00 min earlier |
+| Oslo | Tue 17.11. 05:32 | Wed 18.11. 13:16 | 32 h 44 min | arrives 0 h 07 min earlier |
 | Riga | Tue 17.11. 07:30 | Tue 17.11. 16:44 | 9 h 14 min | arrives 24 h 00 min earlier |
 | Vilnius | Tue 17.11. 07:30 | Tue 17.11. 21:28 | 13 h 58 min | arrives 24 h 00 min earlier |
-| Berlin | Tue 17.11. 05:26 | Wed 18.11. 15:23 | 34 h 57 min | arrives 6 h 00 min earlier |
-| Amsterdam | Tue 17.11. 05:26 | Wed 18.11. 20:01 | 39 h 35 min | arrives 11 h 27 min earlier |
-| Bern | Tue 17.11. 05:26 | Wed 18.11. 22:56 | 42 h 30 min | arrives 9 h 00 min earlier |
-| Paris | Tue 17.11. 05:26 | Wed 18.11. 22:07 | 41 h 41 min | arrives 11 h 58 min earlier |
+| Berlin | Tue 17.11. 05:32 | Wed 18.11. 15:23 | 34 h 51 min | arrives 6 h 00 min earlier |
+| Amsterdam | Tue 17.11. 05:32 | Wed 18.11. 20:01 | 39 h 29 min | arrives 11 h 27 min earlier |
+| Bern | Tue 17.11. 05:32 | Wed 18.11. 22:56 | 42 h 24 min | arrives 9 h 00 min earlier |
+| Paris | Tue 17.11. 05:32 | Wed 18.11. 22:07 | 41 h 35 min | arrives 11 h 58 min earlier |
 | Vienna | Tue 17.11. 07:30 | Thu 19.11. 05:25 | 46 h 55 min | arrives 4 h 48 min earlier |
 | Warsaw | Tue 17.11. 07:30 | Wed 18.11. 13:07 | 30 h 37 min | arrives 21 h 13 min earlier |
-| Prague | Tue 17.11. 05:26 | Wed 18.11. 21:15 | 40 h 49 min | arrives 13 h 07 min earlier |
-| Brussels | Tue 17.11. 05:26 | Wed 18.11. 23:06 | 42 h 40 min | arrives 12 h 00 min earlier |
+| Prague | Tue 17.11. 05:32 | Wed 18.11. 21:15 | 40 h 43 min | arrives 13 h 07 min earlier |
+| Brussels | Tue 17.11. 05:32 | Wed 18.11. 23:06 | 42 h 34 min | arrives 12 h 00 min earlier |
 | Bratislava | Tue 17.11. 07:30 | Thu 19.11. 07:10 | 48 h 40 min | arrives 4 h 34 min earlier |
 | Budapest | Tue 17.11. 07:30 | Thu 19.11. 08:29 | 49 h 59 min | arrives 4 h 33 min earlier |
-| London | Tue 17.11. 05:26 | Thu 19.11. 08:30 | 53 h 04 min | arrives 4 h 00 min earlier |
-| Luxembourg | Tue 17.11. 05:26 | Thu 19.11. 09:45 | 53 h 19 min | arrives 5 h 04 min earlier |
-| Rome | Tue 17.11. 05:26 | Thu 19.11. 14:43 | 58 h 17 min | arrives 1 h 06 min earlier |
-| San Marino | Tue 17.11. 05:26 | Thu 19.11. 15:00 | 58 h 34 min | arrives 1 h 00 min earlier |
-| Vatican | Tue 17.11. 05:26 | Thu 19.11. 15:23 | 58 h 57 min | arrives 1 h 06 min earlier |
-| Cardiff | Tue 17.11. 05:26 | Thu 19.11. 11:40 | 56 h 14 min | arrives 3 h 56 min earlier |
+| London | Tue 17.11. 05:32 | Thu 19.11. 08:30 | 52 h 58 min | arrives 4 h 00 min earlier |
+| Luxembourg | Tue 17.11. 05:32 | Thu 19.11. 09:45 | 53 h 13 min | arrives 5 h 04 min earlier |
+| Rome | Tue 17.11. 05:32 | Thu 19.11. 14:43 | 58 h 11 min | arrives 1 h 06 min earlier |
+| San Marino | Tue 17.11. 05:32 | Thu 19.11. 15:00 | 58 h 28 min | arrives 1 h 00 min earlier |
+| Vatican | Tue 17.11. 05:32 | Thu 19.11. 15:23 | 58 h 51 min | arrives 1 h 06 min earlier |
+| Cardiff | Tue 17.11. 05:32 | Thu 19.11. 11:40 | 56 h 08 min | arrives 3 h 56 min earlier |
 | Ljubljana | Tue 17.11. 07:30 | Thu 19.11. 13:53 | 55 h 23 min | arrives 2 h 47 min earlier |
-| Edinburgh | Tue 17.11. 05:26 | Thu 19.11. 13:38 | 58 h 12 min | arrives 4 h 00 min earlier |
-| Monaco | Tue 17.11. 05:26 | Thu 19.11. 13:48 | 57 h 22 min | arrives 5 h 39 min earlier |
+| Edinburgh | Tue 17.11. 05:32 | Thu 19.11. 13:38 | 58 h 06 min | arrives 4 h 00 min earlier |
+| Monaco | Tue 17.11. 05:32 | Thu 19.11. 13:48 | 57 h 16 min | arrives 5 h 39 min earlier |
 | Zagreb | Tue 17.11. 07:30 | Thu 19.11. 17:23 | 58 h 53 min | arrives 2 h 35 min earlier |
 | Belgrade | Tue 17.11. 07:30 | Thu 19.11. 18:35 | 60 h 05 min | arrives 2 h 40 min earlier |
-| Madrid | Tue 17.11. 05:26 | Thu 19.11. 18:17 | 61 h 51 min | arrives 5 h 27 min earlier |
+| Madrid | Tue 17.11. 05:32 | Thu 19.11. 18:17 | 61 h 45 min | arrives 5 h 27 min earlier |
 | Bucharest | – | – | – | no gain: take the 17:00 journey |
 | Kyiv | Tue 17.11. 07:30 | Thu 19.11. 09:49 | 50 h 19 min | arrives 24 h 00 min earlier |
-| Andorra la Vella | Tue 17.11. 05:26 | Thu 19.11. 18:15 | 61 h 49 min | arrives 16 h 00 min earlier |
+| Andorra la Vella | Tue 17.11. 05:32 | Thu 19.11. 18:15 | 61 h 43 min | arrives 16 h 00 min earlier |
 | Dublin | – | – | – | no gain: take the 17:00 journey |
 | Tirana | – | – | – | no gain: take the 17:00 journey |
 | Belfast | – | – | – | no gain: take the 17:00 journey |
@@ -144,7 +144,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Chisinau | – | – | – | no gain: take the 17:00 journey |
 | Valletta | – | – | – | no gain: take the 17:00 journey |
 | Lisbon | – | – | – | no gain: take the 17:00 journey |
-| Athens | Tue 17.11. 05:26 | Fri 20.11. 17:30 | 84 h 04 min | arrives 24 h 00 min earlier |
+| Athens | Tue 17.11. 05:32 | Fri 20.11. 17:30 | 83 h 58 min | arrives 24 h 00 min earlier |
 | Algiers | – | – | – | no gain: take the 17:00 journey |
 | Tunis | – | – | – | no gain: take the 17:00 journey |
 | Ankara | – | – | – | no gain: take the 17:00 journey |
@@ -368,7 +368,7 @@ _Fastest: 39 h 21 min, arrive Thu 19.11. 07:56, 7 changes, 0 hotel nights_
 - Wed 18.11. 07:22 → Wed 18.11. 11:53  **Stockholm → Malmö**  X2 523
 - Wed 18.11. 12:20 → Wed 18.11. 12:58  **Malmö → Copenhagen**  6802
 - Wed 18.11. 14:22 → Wed 18.11. 19:01  **Copenhagen → Hamburg**  ECE
-- Wed 18.11. 19:29 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
+- Wed 18.11. 19:42 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
 - Wait 3 h 31 min in Frankfurt
 - Thu 19.11. 02:45 → Thu 19.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Thu 19.11. 06:58 → Thu 19.11. 07:56  **Basel → Bern**  IC61
@@ -609,7 +609,7 @@ _Fastest: 47 h 14 min, arrive Thu 19.11. 15:49, 9 changes, 0 hotel nights_
 - Wed 18.11. 07:22 → Wed 18.11. 11:53  **Stockholm → Malmö**  X2 523
 - Wed 18.11. 12:20 → Wed 18.11. 12:58  **Malmö → Copenhagen**  6802
 - Wed 18.11. 14:22 → Wed 18.11. 19:01  **Copenhagen → Hamburg**  ECE
-- Wed 18.11. 19:29 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
+- Wed 18.11. 19:42 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
 - Wait 3 h 31 min in Frankfurt
 - Thu 19.11. 02:45 → Thu 19.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Thu 19.11. 06:43 → Thu 19.11. 07:52  **Basel → Zürich**  IC3
@@ -636,7 +636,7 @@ _Fastest: 47 h 25 min, arrive Thu 19.11. 16:00, 11 changes, 0 hotel nights_
 - Wed 18.11. 07:22 → Wed 18.11. 11:53  **Stockholm → Malmö**  X2 523
 - Wed 18.11. 12:20 → Wed 18.11. 12:58  **Malmö → Copenhagen**  6802
 - Wed 18.11. 14:22 → Wed 18.11. 19:01  **Copenhagen → Hamburg**  ECE
-- Wed 18.11. 19:29 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
+- Wed 18.11. 19:42 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
 - Wait 3 h 31 min in Frankfurt
 - Thu 19.11. 02:45 → Thu 19.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Thu 19.11. 06:43 → Thu 19.11. 07:52  **Basel → Zürich**  IC3
@@ -666,7 +666,7 @@ _Fastest: 47 h 54 min, arrive Thu 19.11. 16:29, 10 changes, 0 hotel nights_
 - Wed 18.11. 07:22 → Wed 18.11. 11:53  **Stockholm → Malmö**  X2 523
 - Wed 18.11. 12:20 → Wed 18.11. 12:58  **Malmö → Copenhagen**  6802
 - Wed 18.11. 14:22 → Wed 18.11. 19:01  **Copenhagen → Hamburg**  ECE
-- Wed 18.11. 19:29 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
+- Wed 18.11. 19:42 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
 - Wait 3 h 31 min in Frankfurt
 - Thu 19.11. 02:45 → Thu 19.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Thu 19.11. 06:43 → Thu 19.11. 07:52  **Basel → Zürich**  IC3
@@ -954,7 +954,7 @@ _Fastest: 68 h 05 min, arrive Fri 20.11. 12:40, 11 changes, 0 hotel nights_
 - Wed 18.11. 07:22 → Wed 18.11. 11:53  **Stockholm → Malmö**  X2 523
 - Wed 18.11. 12:20 → Wed 18.11. 12:58  **Malmö → Copenhagen**  6802
 - Wed 18.11. 14:22 → Wed 18.11. 19:01  **Copenhagen → Hamburg**  ECE
-- Wed 18.11. 19:29 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
+- Wed 18.11. 19:42 → Wed 18.11. 23:14  **Hamburg → Frankfurt**  ICE
 - Wait 3 h 31 min in Frankfurt
 - Thu 19.11. 02:45 → Thu 19.11. 06:21  **Frankfurt → Basel**  ICE  (night)
 - Thu 19.11. 06:43 → Thu 19.11. 07:52  **Basel → Zürich**  IC3
