@@ -76,10 +76,19 @@ jobs:
       - name: Build the map
         run: python3 build.py "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee build.log
 
+      # a real browser opens every journey on every map (FIX-14); pinned like the actions
+      - name: Install a browser for the page check
+        run: |
+          pip install playwright==1.63.0
+          python3 -m playwright install --with-deps chromium
+
       - name: Check before publishing
         id: check
         run: |
-          if python3 check_build.py > check.md; then echo "ok=true" >> "$GITHUB_OUTPUT"
+          ok=true
+          python3 check_build.py > check.md || ok=false
+          { echo; python3 tests/check_pages.py out/site; } >> check.md || ok=false
+          if [ "$ok" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"
           elif [ "${{ inputs.force }}" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
           else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
           cat check.md >> "$GITHUB_STEP_SUMMARY"

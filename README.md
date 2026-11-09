@@ -38,7 +38,7 @@ routes_to_pairs.py    route lists ('Madrid – Zaragoza – Barcelona') -> pairs
 check_timetables.py   re-checks the legs against Transitous and writes a report
 coverage_check.py     which European countries, links and ferries Transitous has timetables for
 src/journeys.py       loading, validation and the journey router
-tests/                routing tests (python3 -m unittest discover -s tests)
+tests/                routing tests (python3 -m unittest discover -s tests) and the browser check of the built pages (check_pages.py)
 src/make_map.py       the map pages (out/site/)
 src/co2.py            rough CO2 per journey vs flying
 src/transitous.py     talking to the Transitous API (used by add_leg.py and the checker)
@@ -119,6 +119,12 @@ been shared; to refresh it, paste the link into the
   within minutes.
 - Run it now: Actions → *Update map* → *Run workflow*.
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
+- Before publishing, a real browser opens every map and every journey in it – each travel day,
+  start time, with and without night trains, the alternatives – and checks that the timetable
+  shows, every bahn.de link starts at a departure of that journey, the controls work and there
+  are no JavaScript errors (`tests/check_pages.py`, FIX-14; ~2 min per map). A problem holds the
+  update back like a lost capital. Locally: `pip install playwright && python3 -m playwright
+  install chromium`, then `python3 tests/check_pages.py out/site`.
 - If the lookup finds something that needs you (a line lost its trains, an impossibly fast leg,
   a new place), an issue lists just that; GitHub emails it. No email means nothing to do.
   There is one issue per week: later runs that week add a comment only when they find something
