@@ -194,110 +194,150 @@ def slugify(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
-def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, main_origin: bool) -> dict:
-    """Journeys, route table and map page for one origin (IDEA-04). Returns its summary."""
+# --- one origin (IDEA-04) ---------------------------------------------------------
+# build_origin() puts the pieces below together; each piece does one thing (FIX-16).
+
+def origin_settings(net, args, cfg: dict) -> dict:
+    """The general settings, with the origin's own start times (unless given on the command line)."""
     s = dict(net.settings)
     for k in ("start_time", "start_times"):                # an origin may have its own start times
         if k in cfg and not (k == "start_time" and args.start is not None) and not (k == "start_times" and args.starts):
             s[k] = cfg[k]
-    today = dt.date.today()
-    start_date = dt.date.fromisoformat(str(args.date or s.get("start_date") or
-                                           (today + dt.timedelta(days=(7 - today.weekday()) % 7 or 7))))
-    version = (f"leave {origin} {start_date:%a %-d.%-m.%Y} from {s.get('start_time', '00:00')}"
-               f" · generated {today:%-d.%-m.%Y}")
+    return s
 
-    outdir = ROOT / "out"
-    outdir.mkdir(exist_ok=True)
-    suffix = "" if main_origin else "-" + slugify(origin)    # routes-stockholm.md, network-stockholm.json
-    start = hm(s.get("start_time", "00:00"))
+
+def first_travel_date(args, s: dict, today: dt.date) -> dt.date:
+    """date= on the command line, else settings.start_date, else next Monday."""
+    return dt.date.fromisoformat(str(args.date or s.get("start_date") or
+                                     (today + dt.timedelta(days=(7 - today.weekday()) % 7 or 7))))
+
+
+def travel_dates(args, s: dict, start_date: dt.date) -> list[dt.date]:
+    """The travel dates offered on the map, the first travel date first."""
+    if args.dates:
+        dates = [dt.date.fromisoformat(x.strip()) for x in args.dates.split(",") if x.strip()]
+    elif s.get("travel_dates"):
+        dates = [dt.date.fromisoformat(str(x)) for x in s["travel_dates"]]
+    else:
+        dates = [start_date] + [start_date + dt.timedelta(days=k) for k in range(1, 7)
+                                if (start_date + dt.timedelta(days=k)).weekday() in (4, 5, 6)]
+    return [start_date] + [d for d in dict.fromkeys(dates) if d != start_date]
+
+
+def start_times(args, s: dict, start_time: str, ap) -> list[str]:
+    """Departure times to switch between on the map (D-32); the default start time is one of them."""
+    def clock_arg(x: str) -> str:
+        m = re.fullmatch(r"(\d{1,2})(?::?(\d{2}))?", str(x).strip())
+        if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
+            ap.error(f"start times must look like 06:00 or 17 (got {x!r})")
+        return f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
+    raw = args.starts.split(",") if args.starts else s.get("start_times") or ["06:00", start_time]
+    return sorted({clock_arg(x) for x in raw if str(x).strip()} | {start_time})
+
+
+class Journeys:
+    """Every journey from one origin: the fastest to each place, its alternatives (fewest
+    changes, fewest hotel nights), and the variants per travel date, start time and with or
+    without night trains."""
+
     ALTERNATIVES = [("Fewest changes", "changes", lambda c, h, t: (c, t, h)),
                     ("Fewest hotel nights", "hotel_nights", lambda c, h, t: (h, t, c))]
-    max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
-    co2 = CO2(s.get("co2"), net.places)                   # rough CO2 vs flying (IDEA-07, D-41)
 
-    stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0, "loops": set()}
+    def __init__(self, net, origin: str, s: dict, start: int):
+        self.net, self.origin, self.start = net, origin, start
+        self.max_extra = int(float(s.get("alternative_max_extra_hours", 12)) * 60)
+        self.co2 = CO2(s.get("co2"), net.places)          # rough CO2 vs flying (IDEA-07, D-41)
+        self.stats = {"compute": 0, "sweep": 0, "t_sweep": 0.0, "t_compute": 0.0, "loops": set()}
 
-    def compute(night_trains: bool, date: dt.date, start: int = start, only: set | None = None,
-                journeys: dict | None = None):
-        """All journeys (fastest + alternatives) leaving on `date` from `start`, with or without night trains."""
-        stats["compute"] += 1
-        router = Router(net, date, night_trains=night_trains)
+    # -- one journey ------------------------------------------------------------
+    def route(self, router, cap: str, j: list | None = None) -> dict | None:
+        """A router journey to `cap` as the map and the route table show it."""
+        net, origin = self.net, self.origin
 
         def when(t: int) -> str:
             return f"{router.date_of(t):%a %-d.%-m.} {fmt_clock(t)}"
 
-        def build_route(cap: str, j: list | None = None) -> dict | None:
-            j = j if j is not None else router.journey(cap)
-            if not j:
-                return None
-            legs = [x for x in j if x["kind"] == "leg"]
-            first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
-            visited = [legs[0]["leg"].frm] + [x["leg"].to for x in legs]
-            if len(set(visited)) < len(visited):          # e.g. Paris - London - Paris to kill time (max_stay_nights)
-                stats["loops"].add(cap)
-            # clock times are local; door to door is corrected for the time-zone difference
-            shift = (utc_offset(net.places[cap], router.date_of(arr), arr % DAY)
-                     - utc_offset(net.places[origin], router.date_of(first_dep), first_dep % DAY))
-            steps = []
-            for st in j:
-                if st["kind"] != "leg":
-                    steps.append({"kind": st["kind"], "place": st["place"], "from_t": when(st["from"]),
-                                  "to_t": when(st["to"]), "minutes": st["to"] - st["from"],
-                                  "nights": st.get("nights", 0), "t0": st["from"], "t1": st["to"]})
-                    continue
-                leg = st["leg"]
-                steps.append({"kind": "leg", "i": leg.idx, "from": leg.frm, "to": leg.to, "service": leg.service,
-                              "mode": leg.mode, "night": leg.night, "dep": st["dep"], "arr": st["arr"],
-                              "dep_txt": when(st["dep"]), "arr_txt": when(st["arr"]),
-                              "timed": leg.timed, "issue": leg.issue, "note": leg.note})
-            return {"capital": cap, "depart": first_dep, "arrive": arr,
-                    "depart_txt": when(first_dep), "arrive_txt": when(arr),
-                    "door_to_door_min": arr - first_dep - shift,
-                    "arrive_abs": arr - shift,              # arrival in the origin's clock, for sorting
-                    "tz_shift": shift,
-                    "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
-                    "nights_on_board": sum(1 for x in legs if x["leg"].night),
-                    "hotel_nights": sum(x["nights"] for x in steps if x["kind"] == "stay"),
-                    "stays": [x["place"] for x in steps if x["kind"] == "stay"],
-                    "has_issue": any(x.get("issue") for x in steps),
-                    "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
-                    **(co2.journey([x["leg"] for x in legs], origin, cap) or {}),
-                    "steps": steps}
+        j = j if j is not None else router.journey(cap)
+        if not j:
+            return None
+        legs = [x for x in j if x["kind"] == "leg"]
+        first_dep, arr = legs[0]["dep"], legs[-1]["arr"]
+        visited = [legs[0]["leg"].frm] + [x["leg"].to for x in legs]
+        if len(set(visited)) < len(visited):          # e.g. Paris - London - Paris to kill time (max_stay_nights)
+            self.stats["loops"].add(cap)
+        # clock times are local; door to door is corrected for the time-zone difference
+        shift = (utc_offset(net.places[cap], router.date_of(arr), arr % DAY)
+                 - utc_offset(net.places[origin], router.date_of(first_dep), first_dep % DAY))
+        steps = []
+        for st in j:
+            if st["kind"] != "leg":
+                steps.append({"kind": st["kind"], "place": st["place"], "from_t": when(st["from"]),
+                              "to_t": when(st["to"]), "minutes": st["to"] - st["from"],
+                              "nights": st.get("nights", 0), "t0": st["from"], "t1": st["to"]})
+                continue
+            leg = st["leg"]
+            steps.append({"kind": "leg", "i": leg.idx, "from": leg.frm, "to": leg.to, "service": leg.service,
+                          "mode": leg.mode, "night": leg.night, "dep": st["dep"], "arr": st["arr"],
+                          "dep_txt": when(st["dep"]), "arr_txt": when(st["arr"]),
+                          "timed": leg.timed, "issue": leg.issue, "note": leg.note})
+        return {"capital": cap, "depart": first_dep, "arrive": arr,
+                "depart_txt": when(first_dep), "arrive_txt": when(arr),
+                "door_to_door_min": arr - first_dep - shift,
+                "arrive_abs": arr - shift,              # arrival in the origin's clock, for sorting
+                "tz_shift": shift,
+                "changes": sum(1 for x in steps if x["kind"] in ("change", "stay")),
+                "nights_on_board": sum(1 for x in legs if x["leg"].night),
+                "hotel_nights": sum(x["nights"] for x in steps if x["kind"] == "stay"),
+                "stays": [x["place"] for x in steps if x["kind"] == "stay"],
+                "has_issue": any(x.get("issue") for x in steps),
+                "signature": [(x["i"], x["dep"]) for x in steps if x["kind"] == "leg"],
+                **(self.co2.journey([x["leg"] for x in legs], origin, cap) or {}),
+                "steps": steps}
 
+    def with_alternatives(self, router, front: dict, place: str, j: list | None = None) -> dict | None:
+        """The fastest journey to `place` plus the alternatives worth showing (from the Pareto front)."""
+        r = self.route(router, place, j)
+        if not r:
+            return None
+        r["label"] = "Fastest"
+        r["capital"] = place                     # the destination's name (capital or not)
+        r["is_capital"] = bool(self.net.places[place].get("capital"))
+        r["alternatives"], seen = [], [r["signature"]]
+        for name, field_, order in self.ALTERNATIVES:
+            ok = [l for l in front.get(place, []) if l[2] <= r["arrive"] + self.max_extra]
+            if not ok:
+                continue
+            alt = None
+            for c, h, t, lid in sorted(ok, key=lambda l: order(*l[:3]))[:20]:
+                j = router.pareto_journey(lid)
+                pl = [x["leg"] for x in j if x["kind"] == "leg"]
+                visited = [pl[0].frm] + [x.to for x in pl]
+                if len(set(visited)) == len(visited):   # no back-and-forth to dodge a hotel night
+                    alt = self.route(router, place, j)
+                    break
+            if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
+                alt["label"] = name
+                r["alternatives"].append(alt)
+                seen.append(alt["signature"])
+        return r
+
+    # -- all journeys for one date and start ----------------------------------------
+    def compute(self, night_trains: bool, date: dt.date, start: int | None = None, only: set | None = None,
+                journeys: dict | None = None):
+        """All journeys (fastest + alternatives) leaving on `date` from `start`, with or without night
+        trains. Returns (router, capital routes, other routes, unreached capitals, unreached others)."""
+        net, origin = self.net, self.origin
+        start = self.start if start is None else start
+        self.stats["compute"] += 1
+        router = Router(net, date, night_trains=night_trains)
         front = router.pareto(origin, start)            # all sensible trade-offs, for the alternatives
-
-        def journey_with_alternatives(place: str, j: list | None = None) -> dict | None:
-            r = build_route(place, j)
-            if not r:
-                return None
-            r["label"] = "Fastest"
-            r["capital"] = place                     # the destination's name (capital or not)
-            r["is_capital"] = bool(net.places[place].get("capital"))
-            r["alternatives"], seen = [], [r["signature"]]
-            for name, field_, order in ALTERNATIVES:
-                ok = [l for l in front.get(place, []) if l[2] <= r["arrive"] + max_extra]
-                if not ok:
-                    continue
-                alt = None
-                for c, h, t, lid in sorted(ok, key=lambda l: order(*l[:3]))[:20]:
-                    j = router.pareto_journey(lid)
-                    pl = [x["leg"] for x in j if x["kind"] == "leg"]
-                    visited = [pl[0].frm] + [x.to for x in pl]
-                    if len(set(visited)) == len(visited):   # no back-and-forth to dodge a hotel night
-                        alt = build_route(place, j)
-                        break
-                if alt and alt[field_] < r[field_] and alt["signature"] not in seen:
-                    alt["label"] = name
-                    r["alternatives"].append(alt)
-                    seen.append(alt["signature"])
-            return r
 
         if journeys is not None:
             # other start times: the fastest journeys were found already (latest departure that
             # still arrives first); add the alternatives from this one Pareto search (FIX-09)
             rs, crs = [], []
             for place, j in journeys.items():
-                r = journey_with_alternatives(place, j)
+                r = self.with_alternatives(router, front, place, j)
                 if r:
                     (rs if r["is_capital"] else crs).append(r)
             return router, rs, crs, [], []
@@ -310,7 +350,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                 continue
             if place == origin:
                 continue
-            r = journey_with_alternatives(place)
+            r = self.with_alternatives(router, front, place)
             if r is None:
                 (unreached if net.places[place].get("capital") else unreached_cities).append(place)
                 continue
@@ -319,46 +359,22 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
         city_routes.sort(key=lambda r: r["arrive_abs"])
         return router, routes, city_routes, unreached, unreached_cities
 
-    # travel dates to offer on the map: the travel date first
-    if args.dates:
-        dates = [dt.date.fromisoformat(x.strip()) for x in args.dates.split(",") if x.strip()]
-    elif s.get("travel_dates"):
-        dates = [dt.date.fromisoformat(str(x)) for x in s["travel_dates"]]
-    else:
-        dates = [start_date] + [start_date + dt.timedelta(days=k) for k in range(1, 7)
-                                if (start_date + dt.timedelta(days=k)).weekday() in (4, 5, 6)]
-    dates = [start_date] + [d for d in dict.fromkeys(dates) if d != start_date]
-    start_time = fmt_clock(start)
-    # departure times to switch between on the map (D-32); the start time is the default
-    def clock_arg(x: str) -> str:
-        m = re.fullmatch(r"(\d{1,2})(?::?(\d{2}))?", str(x).strip())
-        if not m or int(m.group(1)) > 23 or int(m.group(2) or 0) > 59:
-            ap.error(f"start times must look like 06:00 or 17 (got {x!r})")
-        return f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
-    raw = args.starts.split(",") if args.starts else s.get("start_times") or ["06:00", start_time]
-    starts = sorted({clock_arg(x) for x in raw if str(x).strip()} | {start_time})
-
-    tx = i18n.texts(cfg.get("lang", "en"))                 # the map's language (IDEA-13)
-    # "from Helsinki" where the language inflects the name (fi: Helsingistä); else the shown name
-    origin_from = cfg.get("from") or local_names(cfg.get("lang", "en"), net.places).get(origin, origin)
-
-    def version_line(d: dt.date, t: str) -> str:
-        return i18n.t(tx, "version", origin=origin, origin_from=origin_from, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
-                      time=t, today=f"{today.day}.{today.month}.{today.year}")
-
-    def one_variant(d: dt.date, t: str) -> dict:
-        v = {"version": version_line(d, t)}
+    # -- variants shown on the map ------------------------------------------------
+    def variant(self, d: dt.date, t: str) -> dict:
+        """With and without night trains, leaving on `d` from `t`."""
+        v = {}
         for key, nt in (("yes", True), ("no", False)):
-            _, rs, crs, un, unc = compute(nt, d, hm(t))
+            _, rs, crs, un, unc = self.compute(nt, d, hm(t))
             v[key] = {"routes": rs, "city_routes": crs, "unreached": un, "unreached_cities": unc}
         return v
 
-    def other_start(d: dt.date, t: str, base: dict) -> dict:
+    def earlier_start(self, d: dt.date, t: str, base: dict) -> dict:
         """Journeys when you may leave from `t` (earlier than the default start).
         For each place: the earliest arrival from `t`, on the latest departure that still
         makes it. Where leaving early doesn't arrive sooner, the default journey is kept
         and marked same_as_default."""
-        v = {"version": version_line(d, t)}
+        net, origin, stats = self.net, self.origin, self.stats
+        v = {}
         for key, nt in (("yes", True), ("no", False)):
             ev = {r["capital"]: r for r in base[key]["routes"] + base[key]["city_routes"]}
             router = Router(net, d, night_trains=nt)
@@ -388,7 +404,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
             ts = time.monotonic()
             # the journeys the sweep found, as routes (fastest only - no second search per start time)
             gain = {p for p, (_, a) in best.items() if p not in ev or a < ev[p]["arrive"]}
-            _, rs, crs, _, _ = compute(nt, d, hm(t), journeys={p: jbest[p] for p in gain})
+            _, rs, crs, _, _ = self.compute(nt, d, hm(t), journeys={p: jbest[p] for p in gain})
             found: dict[str, dict] = {r["capital"]: r for r in rs + crs}
             stats["t_compute"] += time.monotonic() - ts
             rs, crs, un, unc = [], [], [], []
@@ -408,21 +424,29 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                       "unreached": un, "unreached_cities": unc}
         return v
 
-    variants = {}
-    t_main = t_other = 0.0
-    for d in dates:
-        t0 = time.monotonic()
-        v = {"label": f"{i18n.weekday(tx, d)} {d.day}.{d.month}.", **one_variant(d, start_time)}
-        t1 = time.monotonic(); t_main += t1 - t0
-        v["starts"] = {t: (other_start(d, t, v) if t < start_time else one_variant(d, t))
-                       for t in starts if t != start_time}
-        t_other += time.monotonic() - t1
-        variants[d.isoformat()] = v
-    router, routes, city_routes, unreached, _ = compute(True, start_date)
+    def all_variants(self, dates: list, starts: list, start_time: str, tx: dict, version_line):
+        """{date: {label, version, yes, no, starts: {time: {version, yes, no}}}} and the time taken
+        (seconds for the default start, seconds for the other start times)."""
+        variants = {}
+        t_main = t_other = 0.0
+        for d in dates:
+            t0 = time.monotonic()
+            v = {"label": f"{i18n.weekday(tx, d)} {d.day}.{d.month}.", "version": version_line(d, start_time),
+                 **self.variant(d, start_time)}
+            t1 = time.monotonic(); t_main += t1 - t0
+            v["starts"] = {t: {"version": version_line(d, t),
+                               **(self.earlier_start(d, t, v) if t < start_time else self.variant(d, t))}
+                           for t in starts if t != start_time}
+            t_other += time.monotonic() - t1
+            variants[d.isoformat()] = v
+        return variants, t_main, t_other
+
+
+# --- route table (out/routes*.md) ---------------------------------------------------
+def routes_markdown(origin: str, version: str, router, routes: list, city_routes: list, unreached: list,
+                    variants: dict, start_date: dt.date, start_time: str, starts: list, net, warnings: list) -> str:
     day_routes, day_city_routes, day_unreached = (variants[start_date.isoformat()]["no"][k]
                                                   for k in ("routes", "city_routes", "unreached"))
-
-    # --- route table -----------------------------------------------------------
     md = [f"# Journeys from {origin}", "",
           f"_{version}. Change {router.min_transfer} min (more at some stations), ferry check-in "
           f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait "
@@ -479,33 +503,36 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                 f"{x['hotel_nights']} hotel nights")
 
     for r0 in routes:
-      for r in [r0] + r0["alternatives"]:
-        title = r0["capital"] if r is r0 else f"{r0['capital']} — {r['label'].lower()}"
-        md.append(f"### {title}{' ⚠' if r['has_issue'] else ''}")
-        md.append(f"_{r['label']}: {summary(r)}_")
-        md.append("")
-        for x in r["steps"]:
-            if x["kind"] == "leg":
-                md.append(f"- {x['dep_txt']} → {x['arr_txt']}  **{x['from']} → {x['to']}**  {x['service']}"
-                          f"{'  (night)' if x['night'] else ''}{'  ⚠ ' + x['issue'] if x['issue'] else ''}")
-            elif x["kind"] == "stay":
-                md.append(f"- 🛏 Overnight in {x['place']} ({x['from_t']} → {x['to_t']})")
-            elif x["minutes"] >= 90:
-                md.append(f"- Wait {fmt_dur(x['minutes'])} in {x['place']}")
-        md.append("")
+        for r in [r0] + r0["alternatives"]:
+            title = r0["capital"] if r is r0 else f"{r0['capital']} — {r['label'].lower()}"
+            md.append(f"### {title}{' ⚠' if r['has_issue'] else ''}")
+            md.append(f"_{r['label']}: {summary(r)}_")
+            md.append("")
+            for x in r["steps"]:
+                if x["kind"] == "leg":
+                    md.append(f"- {x['dep_txt']} → {x['arr_txt']}  **{x['from']} → {x['to']}**  {x['service']}"
+                              f"{'  (night)' if x['night'] else ''}{'  ⚠ ' + x['issue'] if x['issue'] else ''}")
+                elif x["kind"] == "stay":
+                    md.append(f"- 🛏 Overnight in {x['place']} ({x['from_t']} → {x['to_t']})")
+                elif x["minutes"] >= 90:
+                    md.append(f"- Wait {fmt_dur(x['minutes'])} in {x['place']}")
+            md.append("")
     md += ["## Capitals not reachable with the current legs", ""]
     md += [f"- {c}" for c in unreached + list(net.not_covered)] or ["- none"]
     md += ["", "## Data issues", ""] + ([f"- {w}" for w in warnings] or ["- none"])
-    (outdir / f"routes{suffix}.md").write_text("\n".join(md) + "\n")
+    return "\n".join(md) + "\n"
 
-    # --- data for the map ---------------------------------------------------------
-    # IDEA-12: draw only the connections this map's journeys use (any day, mode, start time,
-    # option); the page gets every departure of those pairs (for the hover box) and just the
-    # names of the other pairs, for the "all connections" switch
+
+# --- data for the map (out/network*.json) ---------------------------------------------
+def map_legs(net, variants: dict, start_date: dt.date):
+    """IDEA-12: draw only the connections this map's journeys use (any day, mode, start time,
+    option); the page gets every departure of those pairs (for the hover box) and just the
+    names of the other pairs, for the "all connections" switch.
+    Returns (legs for the page, used pairs, used departures, other pairs)."""
     used = used_legs(variants)
     by_idx = {l.idx: l for l in net.legs}
     used_pairs = {(by_idx[i].frm, by_idx[i].to) for i in used if i in by_idx}
-    map_legs = [l for l in net.legs if (l.frm, l.to) in used_pairs]
+    drawn = [l for l in net.legs if (l.frm, l.to) in used_pairs]
     other_pairs = sorted({(l.frm, l.to, l.mode, bool(l.night)) for l in net.legs
                           if (l.frm, l.to) not in used_pairs and l.frm in net.places and l.to in net.places})
     other_pairs = [list(x) for x in {(a, b): (a, b, m, n) for a, b, m, n in other_pairs}.values()]
@@ -517,10 +544,21 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                   "duration_true": l.duration - (
                       (utc_offset(net.places[l.to], start_date, ((l.dep or 0) + l.duration) % DAY)
                        - utc_offset(net.places[l.frm], start_date, (l.dep or 0) % DAY))
-                      if l.frm in net.places and l.to in net.places else 0)} for l in map_legs]
-    (outdir / f"network{suffix}.json").write_text(json.dumps({
-        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages, "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"), "lang": cfg.get("lang", "en"), "origin_from": origin_from,
-        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(), "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version, "places": net.places, "not_covered": net.not_covered,
+                      if l.frm in net.places and l.to in net.places else 0)} for l in drawn]
+    return legs_json, used_pairs, drawn, other_pairs
+
+
+def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: dict, origin_from: str,
+                 start_date: dt.date, version: str, legs_json: list, other_pairs: list, dates: list,
+                 variants: dict, starts: list, start_time: str, router) -> dict:
+    """Everything the map page needs (make_map.py puts it into the page)."""
+    return {
+        "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages,
+        "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"),
+        "lang": cfg.get("lang", "en"), "origin_from": origin_from,
+        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(),
+        "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version,
+        "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
@@ -528,38 +566,80 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                      "quiet": f"{fmt_clock(router.quiet[0])}–{fmt_clock(router.quiet[1])}",
                      "start": s.get("start_time", "00:00"),
                      "morning": fmt_clock(router.morning)}, "warnings": warnings,
-    }, ensure_ascii=False, indent=1))
+    }
 
-    import make_map
-    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin)
 
-    # a small summary, committed every week, so the next run can tell if something broke
-    summary = {
+def summary_of(net, warnings: list, cfg: dict, today: dt.date, dates: list, variants: dict) -> dict:
+    """A small summary, committed every week, so the next run can tell if something broke (check_build.py)."""
+    first = variants[dates[0].isoformat()]
+    return {
         "generated": today.isoformat(), "dates": [d.isoformat() for d in dates], "draft": bool(cfg.get("draft")),
         "departures": len(net.legs), "warnings": len(warnings),
         "capitals": {k: {"with_night_trains": len(v["yes"]["routes"]), "without": len(v["no"]["routes"])}
                      for k, v in variants.items()},
         "places_reached": {k: len(v["yes"]["routes"]) + len(v["yes"]["city_routes"]) for k, v in variants.items()},
         # names too, so the weekly check can say what went missing (first travel date)
-        "reached": {"capitals": sorted(r["capital"] for r in variants[dates[0].isoformat()]["yes"]["routes"]),
-                    "capitals_without_night_trains": sorted(r["capital"] for r in variants[dates[0].isoformat()]["no"]["routes"]),
-                    "places": sorted(r["capital"] for r in variants[dates[0].isoformat()]["yes"]["routes"]
-                                     + variants[dates[0].isoformat()]["yes"]["city_routes"])},
+        "reached": {"capitals": sorted(r["capital"] for r in first["yes"]["routes"]),
+                    "capitals_without_night_trains": sorted(r["capital"] for r in first["no"]["routes"]),
+                    "places": sorted(r["capital"] for r in first["yes"]["routes"] + first["yes"]["city_routes"])},
     }
 
+
+def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, main_origin: bool) -> dict:
+    """Journeys, route table and map page for one origin (IDEA-04). Returns its summary."""
+    s = origin_settings(net, args, cfg)
+    today = dt.date.today()
+    start_date = first_travel_date(args, s, today)
+    version = (f"leave {origin} {start_date:%a %-d.%-m.%Y} from {s.get('start_time', '00:00')}"
+               f" · generated {today:%-d.%-m.%Y}")
+    outdir = ROOT / "out"
+    outdir.mkdir(exist_ok=True)
+    suffix = "" if main_origin else "-" + slugify(origin)    # routes-stockholm.md, network-stockholm.json
+
+    start = hm(s.get("start_time", "00:00"))
+    start_time = fmt_clock(start)
+    dates = travel_dates(args, s, start_date)
+    starts = start_times(args, s, start_time, ap)
+
+    tx = i18n.texts(cfg.get("lang", "en"))                 # the map's language (IDEA-13)
+    # "from Helsinki" where the language inflects the name (fi: Helsingistä); else the shown name
+    origin_from = cfg.get("from") or local_names(cfg.get("lang", "en"), net.places).get(origin, origin)
+
+    def version_line(d: dt.date, t: str) -> str:
+        return i18n.t(tx, "version", origin=origin, origin_from=origin_from, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
+                      time=t, today=f"{today.day}.{today.month}.{today.year}")
+
+    journeys = Journeys(net, origin, s, start)
+    variants, t_main, t_other = journeys.all_variants(dates, starts, start_time, tx, version_line)
+    router, routes, city_routes, unreached, _ = journeys.compute(True, start_date)
+
+    (outdir / f"routes{suffix}.md").write_text(
+        routes_markdown(origin, version, router, routes, city_routes, unreached, variants,
+                        start_date, start_time, starts, net, warnings))
+
+    legs_json, used_pairs, drawn, other_pairs = map_legs(net, variants, start_date)
+    (outdir / f"network{suffix}.json").write_text(json.dumps(
+        network_json(net, warnings, origin, cfg, pages, s, origin_from, start_date, version, legs_json,
+                     other_pairs, dates, variants, starts, start_time, router),
+        ensure_ascii=False, indent=1))
+
+    import make_map
+    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin)
+
+    stats = journeys.stats
     print(f"From {origin}: main journeys {t_main:.0f} s; other start times {t_other:.0f} s "
           f"(sweep {stats['sweep']} searches {stats['t_sweep']:.0f} s, routes {stats['t_compute']:.0f} s)")
     if stats["loops"]:
         print(f"From {origin}: WARNING - journeys that pass the same place twice (waiting would need more than "
               f"max_stay_nights?): {', '.join(sorted(stats['loops']))}")
-    print(f"From {origin}: map draws {len(used_pairs)} connections ({len(map_legs)} departures), "
+    print(f"From {origin}: map draws {len(used_pairs)} connections ({len(drawn)} departures), "
           f"{len(other_pairs)} connections unused")
     print(f"From {origin}: {len(net.legs)} legs, {len(routes)} capitals reached, {len(unreached)} unreached, "
           f"{len(warnings)} warnings -> {outdir}/")
     if main_origin:
         for w in warnings:
             print("  !", w)
-    return summary
+    return summary_of(net, warnings, cfg, today, dates, variants)
 
 
 if __name__ == "__main__":
