@@ -5,21 +5,23 @@ starting city, updated every week.
 
 **Maps.** https://matti-mane-kinnunen.github.io/maatapitkin/ – one page per origin, listed under
 `origins` in places.yaml: `index.html` (Helsinki), `stockholm.html` (Tågsemester),
-`copenhagen.html` (Togferie), `london.html` (Train holiday), `berlin.html` (Zugurlaub); each links to
-the others at the top and has a short user guide at the end.
+`copenhagen.html` (Togferie), `london.html` (Train holiday), `berlin.html` (Zugurlaub). Each map is in
+its city's language – Finnish, Swedish, Danish, English, German (D-53) – links to the others at the
+top, has a short user guide at the end, and under each stretch of trains a *Check on bahn.de* link
+that opens Deutsche Bahn's planner at that departure (D-55).
 
 **Purpose.** To help people wondering how to plan an Interrail trip get over the first fear
 that train travel is difficult and slow: a map that shows it can be done, how long it takes,
 and a sensible way to do it. It is not a journey planner – for booking, use the operators,
 bahn.de or Transitous. So the network is a curated backbone of good trains, journeys are
 realistic rather than optimal to the minute, and the map has to stay readable on a phone.
-This started from a hand-made Graphviz graph (MaataPitkin v1.9, April 2023, kept in data/) and replaces it
+This started from a hand-made Graphviz graph (MaataPitkin v1.9, April 2023, kept as data/original_MaataPitkin_v1.9.dot) and replaces it
 with data, a journey router and interactive maps.
 
 See DECISIONS.md for what was decided and why, BACKLOG.md for what is still open.
 
 ```
-pairs.txt             the connections ("A -> B : *" or own times) – the main input
+pairs.txt             the connections ("A -> B : *" or own times) – the main input (pairs.example.txt: the format)
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs
 data/places.yaml      coordinates, capitals, DB station numbers (db:), change times per station, the maps (origins), routing and CO2 settings
 data/names.yaml       place names in each map's language (Tukholma, Köpenhamn, København …), D-50
@@ -28,7 +30,8 @@ src/guide/<lang>.html the user guide per language
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
 data/sources/         route lists (Eurostar, Frecce, railjet …) used with routes_to_pairs.py
 static/               files copied into the site as they are (link-preview pictures)
-build.py              builds every map, route table and summary in out/
+build.py              builds every map, route table and summary in out/ (class Journeys: the journeys;
+                      routes_markdown, network_json, summary_of: the outputs; build_origin joins them, FIX-16)
 add_leg.py            looks pairs.txt lines up in Transitous and writes legs.yaml (new places get a DB station number)
 fill_db_ids.py        adds missing DB station numbers to places.yaml (one-off; add_leg.py does new places)
 tidy_legs.py          legs.yaml entries that no pairs.txt line looks after any more; --apply removes them
@@ -39,12 +42,14 @@ check_timetables.py   re-checks the legs against Transitous and writes a report
 coverage_check.py     which European countries, links and ferries Transitous has timetables for
 src/journeys.py       loading, validation and the journey router
 tests/                routing tests (python3 -m unittest discover -s tests) and the browser check of the built pages (check_pages.py)
-src/make_map.py       the map pages (out/site/)
+src/make_map.py       the map pages (out/site/) from src/map_template.html (the page: HTML, CSS and JavaScript)
+src/i18n.py           page texts in the map's language (data/i18n/), with English as the fallback
 src/co2.py            rough CO2 per journey vs flying
 src/transitous.py     talking to the Transitous API (used by add_leg.py and the checker)
 src/db_stations.py    DB station numbers from Trainline's open station list (for bahn.de links, D-54)
 .github/weekly_issue.py  one issue per week for the workflow's reports (D-49)
-.githooks/pre-commit  refuses broken YAML and malformed pairs.txt lines (git config core.hooksPath .githooks)
+.githooks/pre-commit  refuses broken YAML, malformed pairs.txt lines and failing routing tests (git config core.hooksPath .githooks)
+.github/workflows/update-map.yml  the weekly update (below)
 ```
 
 ## Use
@@ -115,8 +120,8 @@ network changes a lot (ask Claude, or screenshot the map). Facebook keeps a prev
 been shared; to refresh it, paste the link into the
 [Sharing Debugger](https://developers.facebook.com/tools/debug/) and press *Scrape again*.
 
-- Add a connection: edit `pairs.txt` (on github.com or locally + push); the map is updated
-  within minutes.
+- Add a connection: edit `pairs.txt` (on github.com or locally + push); a run starts by itself,
+  looks up only the new lines, and the map is updated when it finishes (lookup, build and page check).
 - Run it now: Actions → *Update map* → *Run workflow*.
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
 - Before publishing, a real browser opens every map and every journey in it – each travel day,
@@ -166,9 +171,11 @@ its test too.
 Each journey is built for a real travel date, not just by adding up leg durations:
 
 - A leg runs only on its `runs` weekdays and inside `valid_from`/`valid_to`.
-- A change takes `min_transfer` minutes (20), or a station's own time: longer where you change station (Paris 60 min, London 60, Madrid 40, Istanbul 60), shorter at small border stations with planned connections (Valga, Riga, Mockava, Abrantes 10). Staying on the same train needs no change time. Ferries need 45 min check-in (30 at Villa San Giovanni) and Eurostar 60 min.
-- A wait that runs through 01:00 counts as a **hotel night**. After a hotel night, nothing departs before 06:00. No one waits more than 2 nights at one place.
-- Night trains and night ferries count as nights on board, not hotel nights.
+- A change takes `min_transfer` minutes (20), or a station's own time: longer where you change station (Paris 60 min, London 60, Madrid 40, Istanbul 60), shorter at small border stations with planned connections (Valga, Riga, Mockava, Abrantes 10). Staying on the same train needs no change time. Ferries need 45 min check-in, or the port's own (Umeå 75 with the bus to Holmsund, Athens 75 to Piraeus, Villa San Giovanni 30, Tarifa 15), and Eurostar 60 min.
+- A wait that runs through 01:00 counts as a **hotel night**, and lasts at least 8 hours (`min_hotel_stay`: arrive 01:30, leave 09:30 at the earliest). After a hotel night, nothing departs before 06:00 – or a place's own `morning_departure` (Budapest 05:00, for the only day train to Bucharest).
+- Between 00:00 and 05:00 (`quiet_hours`) only night trains and night ferries run; a wait that touches those hours before an ordinary train is a hotel night too.
+- No one waits more than 6 nights at one place (`max_stay_nights`): enough for a train that runs once a week.
+- Night trains and night ferries count as nights on board, not hotel nights – also a ferry that leaves after midnight (Palermo 02:30): you board in the evening.
 
 - Besides the fastest journey, each capital can get two alternatives: **fewest changes** and
   **fewest hotel nights**. They are shown only when they really save a change or a night and are at most
