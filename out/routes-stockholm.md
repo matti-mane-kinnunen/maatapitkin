@@ -1,6 +1,6 @@
 # Journeys from Stockholm
 
-_leave Stockholm Tue 17.11.2026 from 16:00 · generated 9.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Stockholm Tue 17.11.2026 from 16:00 · generated 11.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -25,7 +25,7 @@ _leave Stockholm Tue 17.11.2026 from 16:00 · generated 9.11.2026. Change 20 min
 | Edinburgh | Tue 17.11. 17:29 | Wed 18.11. 23:35 | 31 h 06 min | 4 | 1 | 0 |  |
 | Monaco | Tue 17.11. 17:29 | Thu 19.11. 06:47 | 37 h 18 min | 4 | 1 | 1 (Nice) | fewest hotel nights: 40 h 27 min, 4 ch., 0 hotel |
 | Tallinn | Tue 17.11. 16:00 | Thu 19.11. 09:30 | 40 h 30 min | 1 | 1 | 1 (Helsinki) |  |
-| San Marino | Tue 17.11. 17:29 | Thu 19.11. 09:00 | 39 h 31 min | 6 | 1 | 1 (Rimini) | fewest changes: 49 h 31 min, 4 ch., 0 hotel; fewest hotel nights: 44 h 31 min, 5 ch., 0 hotel |
+| San Marino | Tue 17.11. 17:29 | Thu 19.11. 09:00 | 39 h 31 min | 6 | 1 | 1 (Rimini) | fewest changes: 49 h 31 min, 4 ch., 0 hotel; fewest hotel nights: 42 h 31 min, 8 ch., 0 hotel |
 | Dublin | Tue 17.11. 17:29 | Thu 19.11. 11:00 | 42 h 31 min | 5 | 1 | 1 (Holyhead) |  |
 | Ljubljana | Tue 17.11. 17:29 | Thu 19.11. 13:53 | 44 h 24 min | 3 | 2 | 0 | fewest changes: 47 h 11 min, 2 ch., 0 hotel |
 | Belgrade | Tue 17.11. 17:29 | Thu 19.11. 15:15 | 45 h 46 min | 6 | 1 | 1 (Budapest) | fewest hotel nights: 49 h 06 min, 6 ch., 0 hotel |
@@ -478,17 +478,17 @@ _Fewest changes: 49 h 31 min, arrive Thu 19.11. 19:00, 4 changes, 0 hotel nights
 - Thu 19.11. 18:10 → Thu 19.11. 19:00  **Rimini → San Marino**  Bonelli
 
 ### San Marino — fewest hotel nights
-_Fewest hotel nights: 44 h 31 min, arrive Thu 19.11. 14:00, 5 changes, 0 hotel nights_
+_Fewest hotel nights: 42 h 31 min, arrive Thu 19.11. 12:00, 8 changes, 0 hotel nights_
 
 - Tue 17.11. 17:29 → Wed 18.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Wait 2 h 08 min in Hamburg
-- Wed 18.11. 08:01 → Wed 18.11. 14:05  **Hamburg → Munich**  ICE
-- Wed 18.11. 15:13 → Wed 18.11. 19:32  **Munich → Vienna**  IC
-- Wait 2 h 07 min in Vienna
-- Wed 18.11. 21:39 → Thu 19.11. 08:34  **Vienna → Venice**  RJX  (night)
-- Thu 19.11. 09:40 → Thu 19.11. 11:45  **Venice → Bologna**  FR
-- Thu 19.11. 11:45 → Thu 19.11. 12:38  **Bologna → Rimini**  FR
-- Thu 19.11. 13:10 → Thu 19.11. 14:00  **Rimini → San Marino**  Bonelli
+- Wed 18.11. 06:29 → Wed 18.11. 13:21  **Hamburg → Basel**  ICE
+- Wed 18.11. 13:43 → Wed 18.11. 14:52  **Basel → Zürich**  IC3
+- Wed 18.11. 15:33 → Wed 18.11. 18:50  **Zürich → Milan**  EC
+- Wed 18.11. 20:05 → Wed 18.11. 21:44  **Milan → Genoa**  IC
+- Wed 18.11. 22:07 → Thu 19.11. 05:43  **Genoa → Rome**  FB  (night)
+- Thu 19.11. 06:10 → Thu 19.11. 08:33  **Rome → Bologna**  FR
+- Thu 19.11. 09:45 → Thu 19.11. 10:38  **Bologna → Rimini**  FR
+- Thu 19.11. 11:10 → Thu 19.11. 12:00  **Rimini → San Marino**  Bonelli
 
 ### Dublin
 _Fastest: 42 h 31 min, arrive Thu 19.11. 11:00, 5 changes, 1 hotel nights_

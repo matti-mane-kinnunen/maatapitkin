@@ -1,6 +1,6 @@
 # Journeys from Helsinki
 
-_leave Helsinki Tue 17.11.2026 from 17:00 · generated 9.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Helsinki Tue 17.11.2026 from 17:00 · generated 11.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -221,6 +221,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Hendaye | Thu 19.11. 17:04 | 48 h 29 min | 8 | 0 |
 | Naples | Thu 19.11. 17:33 | 48 h 58 min | 10 | 0 |
 | Irun | Thu 19.11. 17:37 | 49 h 02 min | 9 | 0 |
+| Ventimiglia | Thu 19.11. 18:02 | 49 h 27 min | 10 | 0 |
 | Trieste | Thu 19.11. 18:37 | 50 h 02 min | 10 | 0 |
 | Nice | Thu 19.11. 18:39 | 50 h 04 min | 8 | 0 |
 | Donostia | Thu 19.11. 18:43 | 50 h 08 min | 10 | 0 |
@@ -230,7 +231,6 @@ Not reachable without night trains: Valletta, Kyiv
 | Subotica | Thu 19.11. 19:24 | 50 h 49 min | 9 | 0 |
 | Bari | Thu 19.11. 19:27 | 50 h 52 min | 9 | 0 |
 | Holyhead | Thu 19.11. 18:54 | 51 h 19 min | 8 | 0 |
-| Ventimiglia | Thu 19.11. 20:18 | 51 h 43 min | 9 | 0 |
 | Ayr | Thu 19.11. 19:23 | 51 h 48 min | 10 | 0 |
 | Penzance | Thu 19.11. 19:25 | 51 h 50 min | 9 | 0 |
 | L'Hospitalet | Thu 19.11. 21:10 | 52 h 35 min | 9 | 0 |

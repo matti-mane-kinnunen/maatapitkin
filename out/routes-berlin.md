@@ -1,6 +1,6 @@
 # Journeys from Berlin
 
-_leave Berlin Tue 17.11.2026 from 06:00 · generated 9.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Berlin Tue 17.11.2026 from 06:00 · generated 11.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -174,7 +174,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Wroclaw | Tue 17.11. 17:26 | 9 h 42 min | 1 | 0 |
 | Lugano | Tue 17.11. 17:58 | 11 h 15 min | 1 | 0 |
 | Lille | Tue 17.11. 18:30 | 12 h 21 min | 4 | 0 |
-| Stuttgart | Tue 17.11. 19:14 | 12 h 31 min | 2 | 0 |
+| Stuttgart | Tue 17.11. 19:09 | 12 h 26 min | 2 | 0 |
 | Lyon | Tue 17.11. 19:54 | 13 h 11 min | 2 | 0 |
 | Mockava | Tue 17.11. 20:55 | 12 h 11 min | 1 | 0 |
 | Göteborg | Tue 17.11. 20:05 | 13 h 56 min | 2 | 0 |
@@ -214,6 +214,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Penzance | Wed 18.11. 07:55 | 23 h 46 min | 2 | 0 |
 | Nice | Wed 18.11. 09:09 | 26 h 26 min | 2 | 0 |
 | Storlien | Wed 18.11. 09:17 | 27 h 08 min | 5 | 0 |
+| Ventimiglia | Wed 18.11. 09:22 | 26 h 39 min | 4 | 1 |
 | Kaunas | Wed 18.11. 10:30 | 25 h 46 min | 2 | 1 |
 | Ayr | Wed 18.11. 08:51 | 24 h 42 min | 3 | 0 |
 | Trieste | Wed 18.11. 09:56 | 27 h 20 min | 2 | 0 |
@@ -221,7 +222,6 @@ Not reachable without night trains: Valletta, Kyiv
 | Newcastle | Wed 18.11. 09:15 | 25 h 06 min | 1 | 0 |
 | Kaisiadorys | Wed 18.11. 11:36 | 26 h 52 min | 3 | 1 |
 | Lecce | Wed 18.11. 10:45 | 28 h 09 min | 6 | 0 |
-| Ventimiglia | Wed 18.11. 10:48 | 28 h 05 min | 3 | 0 |
 | Boden | Wed 18.11. 11:35 | 29 h 26 min | 5 | 0 |
 | Villa San Giovanni | Wed 18.11. 12:47 | 30 h 11 min | 3 | 0 |
 | Holyhead | Wed 18.11. 11:52 | 27 h 43 min | 2 | 1 |
