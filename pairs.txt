@@ -520,3 +520,27 @@ Seinäjoki -> Helsinki : *
 
 # Greece 
 Athens -> Thessaloniki : * 
+
+# -- Rome northwards (11.11.2026): our Italian legs ran mostly south; a test map from Rome reached
+#    Berlin only via Paris (34 h). These are for a Rome map later (and help any journey out of Italy).
+Rome -> Milan : *
+Rome -> Bologna : *
+Bologna -> Munich : *            # EC over the Brenner (Verona, Innsbruck)
+Verona -> Innsbruck : *
+Innsbruck -> Munich : *
+Venice -> Vienna : *             # ÖBB railjet
+Venice -> Munich : *
+Rome -> Munich : *               # Nightjet
+Rome -> Vienna : *               # Nightjet
+Milan -> Vienna : *              # Nightjet
+Milan -> Zürich : *
+Milan -> Lugano : *
+Milan -> Basel : *
+Milan -> Geneve : *
+Torino -> Paris : *              # Paris -> Torino exists, not the reverse
+Genoa -> Ventimiglia : *
+Ventimiglia -> Nice : *          # Rome -> Monaco went via Avignon (31 h)
+Zürich -> Munich : *
+Zürich -> Stuttgart : *
+Vienna -> Prague : *             # Rome -> Prague went via Paris (39 h)
+Trieste -> Ljubljana : *         # train or bus? if nothing is found, own times are needed
