@@ -2205,3 +2205,16 @@ legs:
   - {from: Rome, to: Munich, dep: "18:10", arr: "09:33", service: "NJ 294", mode: train, night: true, checked: 2026-11-11, source: manual}
   - {from: Rome, to: Vienna, dep: "18:10", arr: "09:06", service: "NJ 40294", mode: train, night: true, checked: 2026-11-11, source: manual}
   - {from: Zürich, to: Vienna, dep: "21:07", arr: "06:32", service: "EN 40467", mode: train, night: true, checked: 2026-11-11, source: manual}
+  - {from: Rome, to: Trieste, service: "IC", mode: train, runs: "fri", times: ["15:30-23:38"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Rome, to: Trieste, service: "IC", mode: train, runs: "mon-fri", times: ["10:20-18:37", "22:35-09:56"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Rome, to: Trieste, service: "IC", mode: train, runs: "mon-thu", times: ["16:30-21:55", "16:40-21:55"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Rome, to: Trieste, service: "IC", mode: train, runs: "sat", times: ["21:40-09:57"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Rome, to: Trieste, service: "IC", mode: train, runs: "sat,sun", times: ["10:20-19:25", "15:30-00:50"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Rome, to: Trieste, service: "IC", mode: train, runs: "sun", times: ["22:35-09:57"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "mon-fri", times: ["05:01-08:04", "06:39-08:44", "07:39-09:44", "09:39-11:48", "10:39-12:44", "12:39-14:44",
+      "13:39-15:44", "14:39-16:44", "15:39-17:44", "16:39-18:44", "17:39-19:44", "18:39-20:44",
+      "19:39-21:44", "21:01-22:55", "22:39-00:20"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "mon-thu", times: ["21:51-23:38"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sat", times: ["06:35-09:56", "07:01-10:02", "07:13-10:42"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sat,sun", times: ["10:01-13:02", "12:01-15:02", "14:01-17:02", "16:01-19:02", "18:01-21:04", "20:01-23:02"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sun", times: ["06:35-09:57", "08:01-11:02", "19:01-22:44"], query: "*", checked: 2026-11-11, source: transitous}

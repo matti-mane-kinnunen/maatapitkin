@@ -28,7 +28,7 @@ _leave Berlin Tue 17.11.2026 from 06:00 · generated 11.11.2026. Change 20 min (
 | Bucharest | Tue 17.11. 06:12 | Wed 18.11. 10:37 | 27 h 25 min | 2 | 1 | 0 |  |
 | Monaco | Tue 17.11. 06:43 | Wed 18.11. 09:56 | 27 h 13 min | 3 | 1 | 0 |  |
 | Vilnius | Tue 17.11. 07:44 | Wed 18.11. 11:35 | 26 h 51 min | 2 | 0 | 1 (Mockava) | fewest hotel nights: 34 h 13 min, 3 ch., 0 hotel |
-| Ljubljana | Tue 17.11. 06:12 | Wed 18.11. 10:57 | 28 h 45 min | 2 | 0 | 1 (Zagreb) | fewest changes: 17 h 42 min, 1 ch., 0 hotel |
+| Ljubljana | Tue 17.11. 06:12 | Wed 18.11. 10:57 | 28 h 45 min | 2 | 0 | 1 (Zagreb) | fewest changes: 17 h 42 min, 1 ch., 0 hotel; fewest hotel nights: 30 h 29 min, 3 ch., 0 hotel |
 | Oslo | Tue 17.11. 10:34 | Wed 18.11. 13:16 | 26 h 42 min | 2 | 0 | 1 (Göteborg) | fewest hotel nights: 26 h 49 min, 3 ch., 0 hotel |
 | Andorra la Vella | Tue 17.11. 06:43 | Wed 18.11. 16:00 | 33 h 17 min | 4 | 1 | 0 | fewest changes: 35 h 32 min, 3 ch., 1 hotel |
 | Madrid | Tue 17.11. 06:43 | Wed 18.11. 16:29 | 33 h 46 min | 4 | 1 | 0 | fewest changes: 35 h 34 min, 3 ch., 1 hotel |
@@ -216,8 +216,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Storlien | Wed 18.11. 09:17 | 27 h 08 min | 5 | 0 |
 | Ventimiglia | Wed 18.11. 09:22 | 26 h 39 min | 4 | 1 |
 | Kaunas | Wed 18.11. 10:30 | 25 h 46 min | 2 | 1 |
+| Trieste | Wed 18.11. 09:44 | 27 h 08 min | 3 | 1 |
 | Ayr | Wed 18.11. 08:51 | 24 h 42 min | 3 | 0 |
-| Trieste | Wed 18.11. 09:56 | 27 h 20 min | 2 | 0 |
 | L'Hospitalet | Wed 18.11. 10:05 | 27 h 22 min | 3 | 1 |
 | Newcastle | Wed 18.11. 09:15 | 25 h 06 min | 1 | 0 |
 | Kaisiadorys | Wed 18.11. 11:36 | 26 h 52 min | 3 | 1 |
@@ -552,6 +552,17 @@ _Fewest changes: 17 h 42 min, arrive Wed 18.11. 13:53, 1 changes, 0 hotel nights
 
 - Tue 17.11. 20:11 → Wed 18.11. 07:00  **Berlin → Vienna**  IC  (night)
 - Wed 18.11. 07:53 → Wed 18.11. 13:53  **Vienna → Ljubljana**  EC
+
+### Ljubljana — fewest hotel nights
+_Fewest hotel nights: 30 h 29 min, arrive Wed 18.11. 13:05, 3 changes, 0 hotel nights_
+
+- Tue 17.11. 06:36 → Tue 17.11. 11:20  **Berlin → Munich**  ICE
+- Wait 2 h 02 min in Munich
+- Tue 17.11. 13:22 → Tue 17.11. 20:16  **Munich → Bologna**  ICE
+- Wait 8 h 25 min in Bologna
+- Wed 18.11. 04:41 → Wed 18.11. 09:56  **Bologna → Trieste**  IC  (night)
+- Wait 1 h 34 min in Trieste
+- Wed 18.11. 11:30 → Wed 18.11. 13:05  **Trieste → Ljubljana**  FlixBus 11:30
 
 ### Oslo
 _Fastest: 26 h 42 min, arrive Wed 18.11. 13:16, 2 changes, 1 hotel nights_

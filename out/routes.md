@@ -79,11 +79,11 @@ _Night trains and night buses left out; night ferries still used._
 | Vatican | Thu 19.11. 21:19 | 52 h 44 min | 10 | 1 (Frankfurt) | +4 h 50 min |
 | Zagreb | Thu 19.11. 22:20 | 53 h 45 min | 7 | 1 (Berlin) | +2 h 22 min |
 | Edinburgh | Thu 19.11. 21:34 | 53 h 59 min | 8 | 1 (Köln) | +3 h 56 min |
+| Ljubljana | Fri 20.11. 07:59 | 63 h 24 min | 10 | 2 (Frankfurt, Trieste) | +15 h 19 min |
 | San Marino | Fri 20.11. 09:00 | 64 h 25 min | 6 | 2 (Hamburg, Rimini) | +17 h 00 min |
 | Belgrade | Fri 20.11. 09:15 | 64 h 40 min | 10 | 2 (Berlin, Subotica) | +12 h 00 min |
 | Madrid | Fri 20.11. 09:52 | 65 h 17 min | 8 | 2 (Köln, Barcelona) | +10 h 08 min |
 | Andorra la Vella | Fri 20.11. 10:15 | 65 h 40 min | 8 | 2 (Köln, Barcelona) | same |
-| Ljubljana | Fri 20.11. 10:57 | 66 h 22 min | 8 | 2 (Berlin, Zagreb) | +18 h 17 min |
 | Dublin | Fri 20.11. 11:00 | 67 h 25 min | 7 | 2 (Hamburg, Holyhead) | same |
 | Belfast | Fri 20.11. 15:58 | 72 h 23 min | 8 | 2 (Hamburg, Holyhead) | same |
 | Sarajevo | Fri 20.11. 20:55 | 76 h 20 min | 8 | 2 (Berlin, Zagreb) | same |
@@ -221,8 +221,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Hendaye | Thu 19.11. 17:04 | 48 h 29 min | 8 | 0 |
 | Naples | Thu 19.11. 17:33 | 48 h 58 min | 10 | 0 |
 | Irun | Thu 19.11. 17:37 | 49 h 02 min | 9 | 0 |
+| Trieste | Thu 19.11. 17:44 | 49 h 09 min | 10 | 0 |
 | Ventimiglia | Thu 19.11. 18:02 | 49 h 27 min | 10 | 0 |
-| Trieste | Thu 19.11. 18:37 | 50 h 02 min | 10 | 0 |
 | Nice | Thu 19.11. 18:39 | 50 h 04 min | 8 | 0 |
 | Donostia | Thu 19.11. 18:43 | 50 h 08 min | 10 | 0 |
 | Glasgow | Thu 19.11. 18:01 | 50 h 26 min | 9 | 0 |

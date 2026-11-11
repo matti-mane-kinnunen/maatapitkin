@@ -8,45 +8,45 @@ _leave Rome Tue 17.11.2026 from 06:00 · generated 11.11.2026. Change 20 min (mo
 | San Marino | Tue 17.11. 06:00 | Tue 17.11. 12:00 | 6 h 00 min | 2 | 0 | 0 |  |
 | Bern | Tue 17.11. 06:25 | Tue 17.11. 15:58 | 9 h 33 min | 2 | 0 | 0 |  |
 | Monaco | Tue 17.11. 06:25 | Tue 17.11. 18:29 | 12 h 04 min | 4 | 0 | 0 |  |
+| Ljubljana | Tue 17.11. 06:00 | Tue 17.11. 18:40 | 12 h 40 min | 3 | 0 | 0 | fewest changes: 10 h 50 min, 1 ch., 0 hotel |
 | Paris | Tue 17.11. 06:25 | Tue 17.11. 19:38 | 13 h 13 min | 2 | 0 | 0 | fewest changes: 16 h 11 min, 1 ch., 0 hotel |
 | Brussels | Tue 17.11. 06:25 | Tue 17.11. 22:47 | 16 h 22 min | 3 | 0 | 0 | fewest changes: 25 h 49 min, 2 ch., 1 hotel |
+| Zagreb | Tue 17.11. 06:00 | Tue 17.11. 23:00 | 17 h 00 min | 4 | 0 | 0 | fewest changes: 23 h 24 min, 2 ch., 1 hotel |
 | Amsterdam | Tue 17.11. 06:25 | Tue 17.11. 23:29 | 17 h 04 min | 3 | 0 | 0 | fewest changes: 28 h 25 min, 2 ch., 1 hotel |
 | London | Tue 17.11. 06:25 | Tue 17.11. 22:30 | 17 h 05 min | 3 | 0 | 0 | fewest changes: 27 h 05 min, 2 ch., 1 hotel |
-| Vienna | Tue 17.11. 12:20 | Wed 18.11. 00:07 | 11 h 47 min | 1 | 0 | 0 |  |
+| Vienna | Tue 17.11. 12:20 | Wed 18.11. 00:07 | 11 h 47 min | 1 | 0 | 0 | fewest changes: 14 h 56 min, 0 ch., 0 hotel |
 | Berlin | Tue 17.11. 06:45 | Wed 18.11. 00:25 | 17 h 40 min | 3 | 0 | 0 | fewest changes: 24 h 30 min, 2 ch., 0 hotel |
+| Bratislava | Tue 17.11. 06:25 | Wed 18.11. 08:10 | 25 h 45 min | 3 | 1 | 0 | fewest changes: 16 h 34 min, 1 ch., 0 hotel |
 | Edinburgh | Tue 17.11. 06:25 | Wed 18.11. 07:30 | 26 h 05 min | 4 | 1 | 0 | fewest changes: 32 h 13 min, 3 ch., 1 hotel |
-| Bratislava | Tue 17.11. 12:20 | Wed 18.11. 09:10 | 20 h 50 min | 2 | 0 | 1 (Vienna) | fewest hotel nights: 21 h 24 min, 2 ch., 0 hotel |
 | Cardiff | Tue 17.11. 06:25 | Wed 18.11. 08:39 | 27 h 14 min | 4 | 0 | 1 (London) | fewest changes: 30 h 15 min, 3 ch., 1 hotel; fewest hotel nights: 31 h 51 min, 7 ch., 0 hotel |
 | Luxembourg | Tue 17.11. 06:25 | Wed 18.11. 09:45 | 27 h 20 min | 2 | 0 | 1 (Paris) | fewest hotel nights: 28 h 08 min, 6 ch., 0 hotel |
-| Prague | Tue 17.11. 06:25 | Wed 18.11. 10:22 | 27 h 57 min | 4 | 1 | 0 | fewest changes: 25 h 03 min, 2 ch., 0 hotel |
-| Budapest | Tue 17.11. 12:20 | Wed 18.11. 11:29 | 23 h 09 min | 2 | 1 | 0 |  |
+| Prague | Tue 17.11. 06:25 | Wed 18.11. 10:22 | 27 h 57 min | 4 | 1 | 0 | fewest changes: 21 h 13 min, 1 ch., 0 hotel |
+| Budapest | Tue 17.11. 06:25 | Wed 18.11. 10:35 | 28 h 10 min | 3 | 1 | 0 | fewest changes: 18 h 25 min, 1 ch., 0 hotel |
 | Tirana | Tue 17.11. 08:00 | Wed 18.11. 12:40 | 28 h 40 min | 2 | 1 | 0 |  |
-| Warsaw | Tue 17.11. 06:00 | Wed 18.11. 13:00 | 31 h 00 min | 3 | 1 | 0 |  |
+| Warsaw | Tue 17.11. 06:00 | Wed 18.11. 13:00 | 31 h 00 min | 3 | 1 | 0 | fewest changes: 26 h 50 min, 2 ch., 0 hotel |
 | Copenhagen | Tue 17.11. 06:25 | Wed 18.11. 15:38 | 33 h 13 min | 3 | 1 | 0 |  |
 | Andorra la Vella | Tue 17.11. 06:25 | Wed 18.11. 16:00 | 33 h 35 min | 5 | 1 | 0 | fewest changes: 35 h 50 min, 3 ch., 1 hotel |
-| Zagreb | Tue 17.11. 08:20 | Wed 18.11. 16:04 | 31 h 44 min | 2 | 1 | 0 |  |
 | Madrid | Tue 17.11. 06:25 | Wed 18.11. 16:29 | 34 h 04 min | 5 | 1 | 0 | fewest changes: 35 h 52 min, 3 ch., 1 hotel |
 | Athens | Tue 17.11. 08:00 | Wed 18.11. 17:30 | 32 h 30 min | 2 | 1 | 0 |  |
-| Ljubljana | Tue 17.11. 06:00 | Wed 18.11. 16:40 | 34 h 40 min | 2 | 0 | 1 (Munich) | fewest hotel nights: 34 h 15 min, 4 ch., 0 hotel |
-| Belgrade | Tue 17.11. 12:20 | Wed 18.11. 21:15 | 32 h 55 min | 5 | 1 | 0 |  |
+| Belgrade | Tue 17.11. 06:25 | Wed 18.11. 18:35 | 36 h 10 min | 6 | 1 | 0 | fewest changes: 27 h 05 min, 4 ch., 0 hotel |
+| Sarajevo | Tue 17.11. 10:20 | Wed 18.11. 20:55 | 34 h 35 min | 3 | 0 | 1 (Ljubljana) | fewest hotel nights: 39 h 35 min, 3 ch., 0 hotel |
 | Stockholm | Tue 17.11. 06:25 | Wed 18.11. 21:35 | 39 h 10 min | 5 | 1 | 0 |  |
 | Belfast | Tue 17.11. 06:25 | Wed 18.11. 22:07 | 40 h 42 min | 8 | 1 | 0 |  |
 | Valletta | Tue 17.11. 23:00 | Wed 18.11. 23:15 | 24 h 15 min | 2 | 1 | 0 |  |
-| Sarajevo | Tue 17.11. 08:20 | Wed 18.11. 23:55 | 39 h 35 min | 3 | 1 | 0 |  |
-| Bucharest | Tue 17.11. 12:20 | Thu 19.11. 08:23 | 43 h 03 min | 3 | 2 | 0 |  |
-| Kyiv | Tue 17.11. 06:00 | Thu 19.11. 09:49 | 50 h 49 min | 4 | 2 | 0 |  |
-| Vilnius | Tue 17.11. 06:00 | Thu 19.11. 11:35 | 52 h 35 min | 5 | 1 | 1 (Mockava) | fewest changes: 52 h 05 min, 4 ch., 0 hotel |
+| Bucharest | Tue 17.11. 18:10 | Thu 19.11. 08:23 | 37 h 13 min | 2 | 2 | 0 |  |
+| Kyiv | Tue 17.11. 06:00 | Thu 19.11. 09:49 | 50 h 49 min | 4 | 2 | 0 | fewest changes: 49 h 00 min, 3 ch., 0 hotel |
+| Vilnius | Tue 17.11. 06:00 | Thu 19.11. 11:35 | 52 h 35 min | 5 | 1 | 1 (Mockava) | fewest changes: 46 h 15 min, 3 ch., 0 hotel |
 | Dublin | Tue 17.11. 06:25 | Thu 19.11. 11:00 | 53 h 35 min | 4 | 0 | 2 (Paris, Holyhead) | fewest hotel nights: 53 h 35 min, 6 ch., 1 hotel |
 | Oslo | Tue 17.11. 06:25 | Thu 19.11. 13:16 | 54 h 51 min | 5 | 1 | 1 (Göteborg) | fewest hotel nights: 54 h 58 min, 6 ch., 0 hotel |
 | Helsinki | Tue 17.11. 06:25 | Thu 19.11. 20:39 | 61 h 14 min | 8 | 2 | 0 |  |
-| Sofia | Tue 17.11. 12:20 | Thu 19.11. 20:41 | 55 h 21 min | 5 | 2 | 0 |  |
+| Sofia | Tue 17.11. 18:10 | Thu 19.11. 20:41 | 49 h 31 min | 4 | 2 | 0 |  |
 | Rabat | Tue 17.11. 06:25 | Thu 19.11. 20:22 | 62 h 57 min | 7 | 0 | 2 (Paris, Madrid) | fewest hotel nights: 62 h 57 min, 9 ch., 1 hotel |
-| Chisinau | Tue 17.11. 12:20 | Thu 19.11. 23:00 | 57 h 40 min | 5 | 2 | 0 | fewest changes: 66 h 50 min, 4 ch., 0 hotel |
+| Chisinau | Tue 17.11. 18:10 | Thu 19.11. 23:00 | 51 h 50 min | 4 | 2 | 0 | fewest changes: 61 h 00 min, 3 ch., 0 hotel |
 | Lisbon | Tue 17.11. 06:25 | Thu 19.11. 22:20 | 64 h 55 min | 6 | 0 | 2 (Paris, Madrid) | fewest hotel nights: 64 h 55 min, 8 ch., 1 hotel |
-| Tallinn | Tue 17.11. 06:25 | Fri 20.11. 09:30 | 74 h 05 min | 9 | 2 | 1 (Helsinki) | fewest changes: 76 h 55 min, 7 ch., 1 hotel; fewest hotel nights: 74 h 05 min, 10 ch., 0 hotel |
-| Riga | Tue 17.11. 12:20 | Fri 20.11. 11:34 | 70 h 14 min | 5 | 2 | 1 (Vilnius) | fewest hotel nights: 81 h 19 min, 12 ch., 0 hotel |
-| Ankara | Tue 17.11. 12:20 | Sat 21.11. 13:16 | 94 h 56 min | 7 | 3 | 1 (Istanbul) |  |
-| Algiers | Tue 17.11. 06:25 | Sat 21.11. 17:00 | 106 h 35 min | 3 | 1 | 3 (Paris, Marseille) | fewest hotel nights: 106 h 35 min, 3 ch., 2 hotel |
+| Tallinn | Tue 17.11. 06:25 | Fri 20.11. 09:30 | 74 h 05 min | 9 | 2 | 1 (Helsinki) | fewest changes: 71 h 05 min, 6 ch., 1 hotel; fewest hotel nights: 74 h 05 min, 10 ch., 0 hotel |
+| Riga | Tue 17.11. 18:10 | Fri 20.11. 11:34 | 64 h 24 min | 4 | 2 | 1 (Vilnius) | fewest hotel nights: 81 h 19 min, 12 ch., 0 hotel |
+| Ankara | Tue 17.11. 18:10 | Sat 21.11. 13:16 | 89 h 06 min | 6 | 3 | 1 (Istanbul) |  |
+| Algiers | Tue 17.11. 06:25 | Sat 21.11. 17:00 | 106 h 35 min | 3 | 1 | 3 (Paris, Marseille) | fewest hotel nights: 94 h 50 min, 4 ch., 1 hotel |
 | Tunis | Tue 17.11. 20:31 | Sat 21.11. 22:30 | 97 h 59 min | 1 | 1 | 3 (Palermo) |  |
 
 ## Without night trains
@@ -59,44 +59,44 @@ _Night trains and night buses left out; night ferries still used._
 | San Marino | Tue 17.11. 12:00 | 6 h 00 min | 2 | 0 | same |
 | Bern | Tue 17.11. 15:58 | 9 h 33 min | 2 | 0 | same |
 | Monaco | Tue 17.11. 18:29 | 12 h 04 min | 4 | 0 | same |
+| Ljubljana | Tue 17.11. 18:40 | 12 h 40 min | 3 | 0 | same |
 | Paris | Tue 17.11. 19:38 | 13 h 13 min | 2 | 0 | same |
 | Brussels | Tue 17.11. 22:47 | 16 h 22 min | 3 | 0 | same |
+| Zagreb | Tue 17.11. 23:00 | 17 h 00 min | 4 | 0 | same |
 | Amsterdam | Tue 17.11. 23:29 | 17 h 04 min | 3 | 0 | same |
 | London | Tue 17.11. 22:30 | 17 h 05 min | 3 | 0 | same |
 | Vienna | Wed 18.11. 00:07 | 11 h 47 min | 1 | 0 | same |
 | Berlin | Wed 18.11. 00:25 | 17 h 40 min | 3 | 0 | same |
-| Bratislava | Wed 18.11. 09:10 | 20 h 50 min | 2 | 1 (Vienna) | same |
+| Bratislava | Wed 18.11. 09:10 | 20 h 50 min | 2 | 1 (Vienna) | – |
 | Cardiff | Wed 18.11. 08:39 | 27 h 14 min | 4 | 1 (London) | same |
 | Luxembourg | Wed 18.11. 09:45 | 27 h 20 min | 2 | 1 (Paris) | same |
-| Budapest | Wed 18.11. 11:29 | 23 h 09 min | 2 | 1 (Vienna) | same |
+| Budapest | Wed 18.11. 11:29 | 23 h 09 min | 2 | 1 (Vienna) | – |
 | Edinburgh | Wed 18.11. 10:38 | 29 h 13 min | 4 | 1 (London) | +3 h 08 min |
 | Tirana | Wed 18.11. 12:40 | 28 h 40 min | 2 | 0 | same |
 | Prague | Wed 18.11. 13:23 | 25 h 03 min | 2 | 1 (Vienna) | – |
 | Copenhagen | Wed 18.11. 15:38 | 33 h 13 min | 3 | 1 (Hamburg) | same |
 | Andorra la Vella | Wed 18.11. 16:00 | 33 h 35 min | 6 | 1 (Marseille) | same |
-| Zagreb | Wed 18.11. 16:04 | 31 h 44 min | 2 | 0 | same |
 | Madrid | Wed 18.11. 16:29 | 34 h 04 min | 6 | 1 (Marseille) | same |
 | Athens | Wed 18.11. 17:30 | 32 h 30 min | 2 | 0 | same |
-| Ljubljana | Wed 18.11. 16:40 | 34 h 40 min | 2 | 1 (Munich) | same |
+| Sarajevo | Wed 18.11. 20:55 | 34 h 35 min | 3 | 1 (Ljubljana) | same |
 | Warsaw | Wed 18.11. 21:00 | 39 h 00 min | 3 | 1 (Munich) | +8 h 00 min |
-| Belgrade | Wed 18.11. 21:15 | 32 h 55 min | 5 | 1 (Vienna) | same |
+| Belgrade | Wed 18.11. 21:15 | 32 h 55 min | 5 | 1 (Vienna) | – |
 | Stockholm | Wed 18.11. 21:35 | 39 h 10 min | 5 | 1 (Hamburg) | same |
 | Belfast | Wed 18.11. 22:07 | 40 h 42 min | 8 | 1 (London) | same |
-| Sarajevo | Wed 18.11. 23:55 | 39 h 35 min | 3 | 0 | same |
 | Dublin | Thu 19.11. 11:00 | 53 h 35 min | 4 | 2 (Paris, Holyhead) | same |
 | Oslo | Thu 19.11. 13:16 | 54 h 51 min | 5 | 2 (Hamburg, Göteborg) | same |
 | Vilnius | Thu 19.11. 17:25 | 58 h 25 min | 5 | 2 (Munich, Warsaw) | +5 h 50 min |
 | Rabat | Thu 19.11. 20:22 | 62 h 57 min | 7 | 2 (Paris, Madrid) | same |
-| Bucharest | Thu 19.11. 22:37 | 57 h 17 min | 3 | 2 (Vienna, Budapest) | +14 h 14 min |
+| Bucharest | Thu 19.11. 22:37 | 57 h 17 min | 3 | 2 (Vienna, Budapest) | +20 h 04 min |
 | Lisbon | Thu 19.11. 22:20 | 64 h 55 min | 6 | 2 (Paris, Madrid) | same |
 | Helsinki | Fri 20.11. 10:10 | 74 h 45 min | 6 | 2 (Hamburg, Stockholm) | +13 h 31 min |
-| Riga | Fri 20.11. 11:34 | 76 h 34 min | 6 | 3 (Munich, Warsaw, Vilnius) | +6 h 20 min |
-| Chisinau | Fri 20.11. 17:00 | 75 h 40 min | 5 | 3 (Vienna, Budapest, Bucharest) | +18 h 00 min |
+| Riga | Fri 20.11. 11:34 | 76 h 34 min | 6 | 3 (Munich, Warsaw, Vilnius) | +12 h 10 min |
+| Chisinau | Fri 20.11. 17:00 | 75 h 40 min | 5 | 3 (Vienna, Budapest, Bucharest) | +23 h 50 min |
 | Tallinn | Fri 20.11. 18:15 | 83 h 15 min | 8 | 3 (Munich, Warsaw, Vilnius) | +9 h 10 min |
-| Sofia | Fri 20.11. 20:41 | 79 h 21 min | 5 | 3 (Vienna, Budapest, Bucharest) | +24 h 00 min |
+| Sofia | Fri 20.11. 20:41 | 79 h 21 min | 5 | 3 (Vienna, Budapest, Bucharest) | +29 h 50 min |
 | Algiers | Sat 21.11. 17:00 | 106 h 35 min | 3 | 3 (Paris, Marseille) | same |
 | Tunis | Sat 21.11. 22:30 | 111 h 04 min | 1 | 4 (Palermo) | +13 h 05 min |
-| Ankara | Sun 22.11. 13:16 | 118 h 56 min | 7 | 5 (Vienna, Budapest, Bucharest, Sofia, Istanbul) | +24 h 00 min |
+| Ankara | Sun 22.11. 13:16 | 118 h 56 min | 7 | 5 (Vienna, Budapest, Bucharest, Sofia, Istanbul) | +29 h 50 min |
 
 Not reachable without night trains: Valletta, Kyiv
 
@@ -108,44 +108,44 @@ Not reachable without night trains: Valletta, Kyiv
 | San Marino | Tue 17.11. 17:00 | Wed 18.11. 09:00 | 16 h 00 min | arrives 21 h 00 min later |
 | Bern | Tue 17.11. 17:20 | Wed 18.11. 11:58 | 18 h 38 min | arrives 20 h 00 min later |
 | Monaco | Tue 17.11. 17:20 | Wed 18.11. 11:49 | 18 h 29 min | arrives 17 h 20 min later |
+| Ljubljana | Tue 17.11. 17:00 | Wed 18.11. 10:00 | 17 h 00 min | arrives 15 h 20 min later |
 | Paris | Tue 17.11. 17:20 | Wed 18.11. 13:14 | 19 h 54 min | arrives 17 h 36 min later |
 | Brussels | Tue 17.11. 17:20 | Wed 18.11. 15:44 | 22 h 24 min | arrives 16 h 57 min later |
-| Amsterdam | Tue 17.11. 17:20 | Wed 18.11. 17:50 | 24 h 30 min | arrives 18 h 21 min later |
+| Zagreb | Tue 17.11. 22:35 | Wed 18.11. 17:23 | 18 h 48 min | arrives 18 h 23 min later |
+| Amsterdam | Tue 17.11. 18:10 | Wed 18.11. 17:29 | 23 h 19 min | arrives 18 h 00 min later |
 | London | Tue 17.11. 17:20 | Wed 18.11. 16:00 | 23 h 40 min | arrives 17 h 30 min later |
-| Vienna | Wed 18.11. 05:10 | Wed 18.11. 18:36 | 13 h 26 min | arrives 18 h 29 min later |
-| Berlin | Tue 17.11. 17:00 | Wed 18.11. 19:23 | 26 h 23 min | arrives 18 h 58 min later |
+| Vienna | Tue 17.11. 18:10 | Wed 18.11. 09:06 | 14 h 56 min | arrives 8 h 59 min later |
+| Berlin | Tue 17.11. 18:10 | Wed 18.11. 15:23 | 21 h 13 min | arrives 14 h 58 min later |
+| Bratislava | Tue 17.11. 18:10 | Wed 18.11. 10:44 | 16 h 34 min | arrives 2 h 34 min later |
 | Edinburgh | Tue 17.11. 17:20 | Wed 18.11. 21:34 | 29 h 14 min | arrives 14 h 04 min later |
-| Bratislava | Wed 18.11. 05:10 | Wed 18.11. 20:10 | 15 h 00 min | arrives 11 h 00 min later |
 | Cardiff | Tue 17.11. 17:20 | Wed 18.11. 19:10 | 26 h 50 min | arrives 10 h 31 min later |
 | Luxembourg | Tue 17.11. 17:20 | Wed 18.11. 19:53 | 26 h 33 min | arrives 10 h 08 min later |
-| Prague | Wed 18.11. 05:10 | Wed 18.11. 23:32 | 18 h 22 min | arrives 13 h 10 min later |
-| Budapest | Wed 18.11. 05:10 | Wed 18.11. 21:33 | 16 h 23 min | arrives 10 h 04 min later |
+| Prague | Tue 17.11. 18:10 | Wed 18.11. 15:23 | 21 h 13 min | arrives 5 h 01 min later |
+| Budapest | Tue 17.11. 18:10 | Wed 18.11. 12:35 | 18 h 25 min | arrives 2 h 00 min later |
 | Tirana | Wed 18.11. 08:00 | Thu 19.11. 12:40 | 28 h 40 min | arrives 24 h 00 min later |
-| Warsaw | Wed 18.11. 05:10 | Thu 19.11. 08:08 | 26 h 58 min | arrives 19 h 08 min later |
-| Copenhagen | Tue 17.11. 23:51 | Thu 19.11. 15:38 | 39 h 47 min | arrives 24 h 00 min later |
+| Warsaw | Tue 17.11. 18:10 | Wed 18.11. 21:00 | 26 h 50 min | arrives 8 h 00 min later |
+| Copenhagen | Tue 17.11. 18:10 | Wed 18.11. 23:42 | 29 h 32 min | arrives 8 h 04 min later |
 | Andorra la Vella | Tue 17.11. 17:20 | Thu 19.11. 10:15 | 40 h 55 min | arrives 18 h 15 min later |
-| Zagreb | Wed 18.11. 05:10 | Thu 19.11. 17:23 | 36 h 13 min | arrives 25 h 19 min later |
 | Madrid | Tue 17.11. 17:20 | Wed 18.11. 23:44 | 30 h 24 min | arrives 7 h 15 min later |
 | Athens | Wed 18.11. 08:00 | Thu 19.11. 17:30 | 32 h 30 min | arrives 24 h 00 min later |
-| Ljubljana | Wed 18.11. 05:10 | Thu 19.11. 13:53 | 32 h 43 min | arrives 21 h 13 min later |
-| Belgrade | Wed 18.11. 05:10 | Thu 19.11. 13:15 | 32 h 05 min | arrives 16 h 00 min later |
-| Stockholm | Tue 17.11. 23:51 | Thu 19.11. 21:35 | 45 h 44 min | arrives 24 h 00 min later |
+| Belgrade | Tue 17.11. 18:10 | Wed 18.11. 21:15 | 27 h 05 min | arrives 2 h 40 min later |
+| Sarajevo | Tue 17.11. 18:10 | Thu 19.11. 20:55 | 50 h 45 min | arrives 24 h 00 min later |
+| Stockholm | Tue 17.11. 18:10 | Thu 19.11. 09:45 | 39 h 35 min | arrives 12 h 10 min later |
 | Belfast | Tue 17.11. 17:20 | Thu 19.11. 15:58 | 47 h 38 min | arrives 17 h 51 min later |
 | Valletta | Tue 17.11. 23:00 | Wed 18.11. 23:15 | 24 h 15 min | same arrival |
-| Sarajevo | Wed 18.11. 12:20 | Fri 20.11. 20:55 | 56 h 35 min | arrives 45 h 00 min later |
-| Bucharest | Wed 18.11. 05:10 | Thu 19.11. 13:38 | 31 h 28 min | arrives 5 h 15 min later |
-| Kyiv | Tue 17.11. 17:00 | Fri 20.11. 09:49 | 63 h 49 min | arrives 24 h 00 min later |
-| Vilnius | Wed 18.11. 05:10 | Thu 19.11. 17:25 | 35 h 15 min | arrives 5 h 50 min later |
+| Bucharest | Tue 17.11. 18:10 | Thu 19.11. 08:23 | 37 h 13 min | same arrival |
+| Kyiv | Tue 17.11. 18:10 | Thu 19.11. 20:10 | 49 h 00 min | arrives 10 h 21 min later |
+| Vilnius | Tue 17.11. 18:10 | Thu 19.11. 17:25 | 46 h 15 min | arrives 5 h 50 min later |
 | Dublin | Tue 17.11. 17:20 | Thu 19.11. 11:00 | 42 h 40 min | same arrival |
-| Oslo | Tue 17.11. 17:00 | Fri 20.11. 13:16 | 68 h 16 min | arrives 24 h 00 min later |
-| Helsinki | Tue 17.11. 23:51 | Fri 20.11. 20:39 | 67 h 48 min | arrives 24 h 00 min later |
-| Sofia | Wed 18.11. 12:20 | Fri 20.11. 20:41 | 55 h 21 min | arrives 24 h 00 min later |
+| Oslo | Tue 17.11. 18:10 | Thu 19.11. 16:08 | 45 h 58 min | arrives 2 h 52 min later |
+| Helsinki | Tue 17.11. 18:10 | Fri 20.11. 08:35 | 61 h 25 min | arrives 11 h 56 min later |
+| Sofia | Tue 17.11. 18:10 | Thu 19.11. 20:41 | 49 h 31 min | same arrival |
 | Rabat | Tue 17.11. 17:20 | Thu 19.11. 20:22 | 52 h 02 min | same arrival |
-| Chisinau | Wed 18.11. 05:10 | Fri 20.11. 08:10 | 50 h 00 min | arrives 9 h 10 min later |
+| Chisinau | Tue 17.11. 18:10 | Thu 19.11. 23:00 | 51 h 50 min | same arrival |
 | Lisbon | Tue 17.11. 17:20 | Thu 19.11. 22:20 | 54 h 00 min | same arrival |
-| Tallinn | Wed 18.11. 05:10 | Fri 20.11. 18:15 | 60 h 05 min | arrives 8 h 45 min later |
-| Riga | Wed 18.11. 05:10 | Fri 20.11. 11:34 | 53 h 24 min | same arrival |
-| Ankara | Wed 18.11. 12:20 | Sun 22.11. 13:16 | 94 h 56 min | arrives 24 h 00 min later |
+| Tallinn | Tue 17.11. 18:10 | Fri 20.11. 18:15 | 71 h 05 min | arrives 8 h 45 min later |
+| Riga | Tue 17.11. 18:10 | Fri 20.11. 11:34 | 64 h 24 min | same arrival |
+| Ankara | Tue 17.11. 18:10 | Sat 21.11. 13:16 | 89 h 06 min | same arrival |
 | Algiers | Tue 17.11. 17:20 | Sat 21.11. 17:00 | 95 h 40 min | same arrival |
 | Tunis | Tue 17.11. 20:31 | Sat 21.11. 22:30 | 97 h 59 min | same arrival |
 
@@ -172,13 +172,13 @@ Not reachable without night trains: Valletta, Kyiv
 | Foggia | Tue 17.11. 14:28 | 6 h 28 min | 1 | 0 |
 | Salerno | Tue 17.11. 14:30 | 7 h 30 min | 1 | 0 |
 | Innsbruck | Tue 17.11. 14:32 | 7 h 47 min | 1 | 0 |
+| Trieste | Tue 17.11. 14:44 | 8 h 44 min | 2 | 0 |
 | Basel | Tue 17.11. 14:55 | 8 h 30 min | 1 | 0 |
 | Messina | Tue 17.11. 15:00 | 7 h 30 min | 1 | 0 |
 | Ventimiglia | Tue 17.11. 16:03 | 9 h 38 min | 2 | 0 |
 | Taormina | Tue 17.11. 17:16 | 9 h 46 min | 2 | 0 |
 | Nice | Tue 17.11. 17:39 | 11 h 14 min | 3 | 0 |
 | Stuttgart | Tue 17.11. 18:21 | 11 h 56 min | 2 | 0 |
-| Trieste | Tue 17.11. 18:37 | 12 h 37 min | 1 | 0 |
 | Munich | Tue 17.11. 18:38 | 12 h 38 min | 2 | 0 |
 | Köln | Tue 17.11. 19:05 | 12 h 40 min | 2 | 0 |
 | Palermo | Tue 17.11. 19:13 | 11 h 47 min | 0 | 0 |
@@ -219,16 +219,16 @@ Not reachable without night trains: Valletta, Kyiv
 | Stranraer | Wed 18.11. 12:57 | 31 h 32 min | 6 | 0 |
 | Offenburg | Wed 18.11. 13:58 | 31 h 33 min | 3 | 0 |
 | Bastia | Wed 18.11. 14:15 | 31 h 50 min | 2 | 1 |
+| Szeged | Wed 18.11. 14:16 | 31 h 51 min | 4 | 0 |
 | Cairnryan | Wed 18.11. 13:50 | 32 h 25 min | 7 | 0 |
 | Aarhus | Wed 18.11. 15:08 | 32 h 43 min | 4 | 0 |
-| Szeged | Wed 18.11. 15:16 | 26 h 56 min | 3 | 0 |
 | Pozzallo | Wed 18.11. 15:58 | 16 h 58 min | 1 | 0 |
 | Gdansk | Wed 18.11. 16:12 | 34 h 12 min | 4 | 0 |
+| Subotica | Wed 18.11. 16:24 | 33 h 59 min | 5 | 0 |
 | Krakow | Wed 18.11. 16:27 | 34 h 27 min | 4 | 0 |
 | Malmö | Wed 18.11. 16:40 | 34 h 15 min | 4 | 0 |
 | Wroclaw | Wed 18.11. 17:26 | 35 h 26 min | 4 | 0 |
 | Valencia | Wed 18.11. 19:02 | 36 h 37 min | 3 | 1 |
-| Subotica | Wed 18.11. 19:24 | 31 h 04 min | 4 | 0 |
 | Mockava | Wed 18.11. 20:55 | 37 h 55 min | 4 | 0 |
 | Göteborg | Wed 18.11. 20:05 | 37 h 40 min | 4 | 0 |
 | Santiago de Compostela | Wed 18.11. 20:18 | 37 h 53 min | 6 | 0 |
@@ -240,7 +240,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Palma | Thu 19.11. 05:30 | 47 h 05 min | 3 | 1 |
 | Chania | Thu 19.11. 07:00 | 46 h 00 min | 3 | 0 |
 | Östersund | Thu 19.11. 06:25 | 48 h 00 min | 6 | 0 |
-| Przemyśl | Thu 19.11. 06:25 | 42 h 05 min | 3 | 0 |
+| Przemyśl | Thu 19.11. 06:25 | 36 h 15 min | 2 | 0 |
 | Umeå | Thu 19.11. 07:11 | 48 h 46 min | 6 | 0 |
 | Storlien | Thu 19.11. 09:17 | 50 h 52 min | 7 | 0 |
 | Kaunas | Thu 19.11. 10:30 | 51 h 30 min | 5 | 1 |
@@ -248,14 +248,14 @@ Not reachable without night trains: Valletta, Kyiv
 | Granada | Thu 19.11. 10:25 | 52 h 00 min | 5 | 2 |
 | Kaisiadorys | Thu 19.11. 11:36 | 52 h 36 min | 6 | 1 |
 | Boden | Thu 19.11. 11:35 | 53 h 10 min | 7 | 0 |
-| Ruse | Thu 19.11. 13:40 | 48 h 20 min | 4 | 0 |
+| Ruse | Thu 19.11. 13:40 | 42 h 30 min | 3 | 0 |
 | Algeciras | Thu 19.11. 13:59 | 55 h 34 min | 4 | 2 |
 | Galway | Thu 19.11. 13:51 | 56 h 26 min | 5 | 2 |
 | Vaasa | Thu 19.11. 16:00 | 56 h 35 min | 7 | 0 |
 | Badajoz | Thu 19.11. 16:11 | 57 h 46 min | 4 | 2 |
 | Seinäjoki | Thu 19.11. 17:14 | 57 h 49 min | 8 | 0 |
 | Tarifa | Thu 19.11. 16:45 | 58 h 20 min | 5 | 2 |
-| Iasi | Thu 19.11. 18:08 | 52 h 48 min | 4 | 0 |
+| Iasi | Thu 19.11. 18:08 | 46 h 58 min | 3 | 0 |
 | Tanger Med | Thu 19.11. 16:30 | 59 h 05 min | 5 | 2 |
 | Tanger | Thu 19.11. 18:00 | 60 h 35 min | 6 | 2 |
 | Oulu | Thu 19.11. 20:36 | 61 h 11 min | 9 | 0 |
@@ -266,14 +266,14 @@ Not reachable without night trains: Valletta, Kyiv
 | Tampere | Thu 19.11. 23:25 | 64 h 00 min | 9 | 0 |
 | Stavanger | Thu 19.11. 23:14 | 64 h 49 min | 6 | 1 |
 | Bergen | Thu 19.11. 23:18 | 64 h 53 min | 6 | 1 |
-| Varna | Fri 20.11. 06:50 | 65 h 30 min | 6 | 0 |
-| Istanbul | Fri 20.11. 08:00 | 65 h 40 min | 6 | 0 |
+| Varna | Fri 20.11. 06:50 | 59 h 40 min | 5 | 0 |
+| Istanbul | Fri 20.11. 08:00 | 59 h 50 min | 5 | 0 |
 | Rovaniemi | Fri 20.11. 07:20 | 71 h 55 min | 9 | 0 |
 | Porto | Fri 20.11. 09:43 | 76 h 18 min | 7 | 3 |
 | Kuopio | Fri 20.11. 12:29 | 77 h 04 min | 9 | 1 |
 | Faro | Fri 20.11. 11:27 | 78 h 02 min | 7 | 3 |
 | Narvik | Fri 20.11. 12:37 | 78 h 12 min | 6 | 0 |
-| Valga | Fri 20.11. 14:13 | 72 h 53 min | 6 | 1 |
+| Valga | Fri 20.11. 14:13 | 67 h 03 min | 5 | 1 |
 | Marrakech | Fri 20.11. 12:37 | 79 h 12 min | 8 | 3 |
 
 ## Itineraries
@@ -308,6 +308,22 @@ _Fastest: 12 h 04 min, arrive Tue 17.11. 18:29, 4 changes, 0 hotel nights_
 - Tue 17.11. 16:40 → Tue 17.11. 17:39  **Ventimiglia → Nice**  TER C3
 - Tue 17.11. 18:05 → Tue 17.11. 18:29  **Nice → Monaco**  TER C3
 
+### Ljubljana
+_Fastest: 12 h 40 min, arrive Tue 17.11. 18:40, 3 changes, 0 hotel nights_
+
+- Tue 17.11. 06:00 → Tue 17.11. 08:33  **Rome → Bologna**  FR
+- Tue 17.11. 09:01 → Tue 17.11. 10:34  **Bologna → Venice**  FR
+- Wait 2 h 05 min in Venice
+- Tue 17.11. 12:39 → Tue 17.11. 14:44  **Venice → Trieste**  RV
+- Wait 2 h 21 min in Trieste
+- Tue 17.11. 17:05 → Tue 17.11. 18:40  **Trieste → Ljubljana**  FlixBus 17:05
+
+### Ljubljana — fewest changes
+_Fewest changes: 10 h 50 min, arrive Tue 17.11. 21:10, 1 changes, 0 hotel nights_
+
+- Tue 17.11. 10:20 → Tue 17.11. 18:37  **Rome → Trieste**  IC
+- Tue 17.11. 19:40 → Tue 17.11. 21:10  **Trieste → Ljubljana**  Itabus 19:40
+
 ### Paris
 _Fastest: 13 h 13 min, arrive Tue 17.11. 19:38, 2 changes, 0 hotel nights_
 
@@ -341,6 +357,26 @@ _Fewest changes: 25 h 49 min, arrive Wed 18.11. 08:14, 2 changes, 1 hotel nights
 - Tue 17.11. 15:53 → Tue 17.11. 22:36  **Milan → Paris**  FR
 - 🛏 Overnight in Paris (Tue 17.11. 22:36 → Wed 18.11. 06:48)
 - Wed 18.11. 06:48 → Wed 18.11. 08:14  **Paris → Brussels**  EST FRPNO
+
+### Zagreb
+_Fastest: 17 h 00 min, arrive Tue 17.11. 23:00, 4 changes, 0 hotel nights_
+
+- Tue 17.11. 06:00 → Tue 17.11. 08:33  **Rome → Bologna**  FR
+- Tue 17.11. 09:01 → Tue 17.11. 10:34  **Bologna → Venice**  FR
+- Wait 2 h 05 min in Venice
+- Tue 17.11. 12:39 → Tue 17.11. 14:44  **Venice → Trieste**  RV
+- Wait 2 h 21 min in Trieste
+- Tue 17.11. 17:05 → Tue 17.11. 18:40  **Trieste → Ljubljana**  FlixBus 17:05
+- Wait 2 h 05 min in Ljubljana
+- Tue 17.11. 20:45 → Tue 17.11. 23:00  **Ljubljana → Zagreb**  EN
+
+### Zagreb — fewest changes
+_Fewest changes: 23 h 24 min, arrive Wed 18.11. 09:44, 2 changes, 1 hotel nights_
+
+- Tue 17.11. 10:20 → Tue 17.11. 18:37  **Rome → Trieste**  IC
+- Tue 17.11. 19:40 → Tue 17.11. 21:10  **Trieste → Ljubljana**  Itabus 19:40
+- 🛏 Overnight in Ljubljana (Tue 17.11. 21:10 → Wed 18.11. 06:50)
+- Wed 18.11. 06:50 → Wed 18.11. 09:44  **Ljubljana → Zagreb**  EN
 
 ### Amsterdam
 _Fastest: 17 h 04 min, arrive Tue 17.11. 23:29, 3 changes, 0 hotel nights_
@@ -386,6 +422,11 @@ _Fastest: 11 h 47 min, arrive Wed 18.11. 00:07, 1 changes, 0 hotel nights_
 - Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
 - Tue 17.11. 16:52 → Wed 18.11. 00:07  **Venice → Vienna**  RJX
 
+### Vienna — fewest changes
+_Fewest changes: 14 h 56 min, arrive Wed 18.11. 09:06, 0 changes, 0 hotel nights_
+
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+
 ### Berlin
 _Fastest: 17 h 40 min, arrive Wed 18.11. 00:25, 3 changes, 0 hotel nights_
 
@@ -403,6 +444,22 @@ _Fewest changes: 24 h 30 min, arrive Wed 18.11. 06:30, 2 changes, 0 hotel nights
 - Tue 17.11. 13:52 → Tue 17.11. 20:37  **Bologna → Munich**  ICE
 - Wait 2 h 35 min in Munich
 - Tue 17.11. 23:12 → Wed 18.11. 06:30  **Munich → Berlin**  ICE  (night)
+
+### Bratislava
+_Fastest: 25 h 45 min, arrive Wed 18.11. 08:10, 3 changes, 0 hotel nights_
+
+- Tue 17.11. 06:25 → Tue 17.11. 09:24  **Rome → Milan**  FR
+- Wait 1 h 46 min in Milan
+- Tue 17.11. 11:10 → Tue 17.11. 14:27  **Milan → Zürich**  EC
+- Wait 6 h 40 min in Zürich
+- Tue 17.11. 21:07 → Wed 18.11. 06:32  **Zürich → Vienna**  EN 40467  (night)
+- Wed 18.11. 07:14 → Wed 18.11. 08:10  **Vienna → Bratislava**  REX
+
+### Bratislava — fewest changes
+_Fewest changes: 16 h 34 min, arrive Wed 18.11. 10:44, 1 changes, 0 hotel nights_
+
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:45 → Wed 18.11. 10:44  **Vienna → Bratislava**  REX
 
 ### Edinburgh
 _Fastest: 26 h 05 min, arrive Wed 18.11. 07:30, 4 changes, 0 hotel nights_
@@ -424,24 +481,6 @@ _Fewest changes: 32 h 13 min, arrive Wed 18.11. 13:38, 3 changes, 1 hotel nights
 - 🛏 Overnight in Paris (Tue 17.11. 22:36 → Wed 18.11. 07:09)
 - Wed 18.11. 07:09 → Wed 18.11. 08:30  **Paris → London**  EST FRPNO
 - Wed 18.11. 09:30 → Wed 18.11. 13:38  **London → Edinburgh**  LNER
-
-### Bratislava
-_Fastest: 20 h 50 min, arrive Wed 18.11. 09:10, 2 changes, 1 hotel nights_
-
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Tue 17.11. 16:52 → Wed 18.11. 00:07  **Venice → Vienna**  RJX
-- 🛏 Overnight in Vienna (Wed 18.11. 00:07 → Wed 18.11. 08:14)
-- Wed 18.11. 08:14 → Wed 18.11. 09:10  **Vienna → Bratislava**  REX
-
-### Bratislava — fewest hotel nights
-_Fewest hotel nights: 21 h 24 min, arrive Wed 18.11. 09:44, 2 changes, 0 hotel nights_
-
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:45 → Wed 18.11. 09:44  **Vienna → Bratislava**  REX
 
 ### Cardiff
 _Fastest: 27 h 14 min, arrive Wed 18.11. 08:39, 4 changes, 1 hotel nights_
@@ -511,22 +550,27 @@ _Fastest: 27 h 57 min, arrive Wed 18.11. 10:22, 4 changes, 0 hotel nights_
 - Wed 18.11. 06:12 → Wed 18.11. 10:22  **Berlin → Prague**  RJ
 
 ### Prague — fewest changes
-_Fewest changes: 25 h 03 min, arrive Wed 18.11. 13:23, 2 changes, 0 hotel nights_
+_Fewest changes: 21 h 13 min, arrive Wed 18.11. 15:23, 1 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 09:10 → Wed 18.11. 13:23  **Vienna → Prague**  RJ
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wait 2 h 04 min in Vienna
+- Wed 18.11. 11:10 → Wed 18.11. 15:23  **Vienna → Prague**  RJ
 
 ### Budapest
-_Fastest: 23 h 09 min, arrive Wed 18.11. 11:29, 2 changes, 0 hotel nights_
+_Fastest: 28 h 10 min, arrive Wed 18.11. 10:35, 3 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
+- Tue 17.11. 06:25 → Tue 17.11. 09:24  **Rome → Milan**  FR
+- Wait 1 h 46 min in Milan
+- Tue 17.11. 11:10 → Tue 17.11. 14:27  **Milan → Zürich**  EC
+- Wait 6 h 40 min in Zürich
+- Tue 17.11. 21:07 → Wed 18.11. 06:32  **Zürich → Vienna**  EN 40467  (night)
+- Wed 18.11. 07:40 → Wed 18.11. 10:35  **Vienna → Budapest**  xpress
+
+### Budapest — fewest changes
+_Fewest changes: 18 h 25 min, arrive Wed 18.11. 12:35, 1 changes, 0 hotel nights_
+
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
 
 ### Tirana
 _Fastest: 28 h 40 min, arrive Wed 18.11. 12:40, 2 changes, 0 hotel nights_
@@ -546,6 +590,13 @@ _Fastest: 31 h 00 min, arrive Wed 18.11. 13:00, 3 changes, 0 hotel nights_
 - Wait 2 h 35 min in Munich
 - Tue 17.11. 23:12 → Wed 18.11. 06:30  **Munich → Berlin**  ICE  (night)
 - Wed 18.11. 07:44 → Wed 18.11. 13:00  **Berlin → Warsaw**  IC
+
+### Warsaw — fewest changes
+_Fewest changes: 26 h 50 min, arrive Wed 18.11. 21:00, 2 changes, 0 hotel nights_
+
+- Tue 17.11. 18:10 → Wed 18.11. 09:33  **Rome → Munich**  NJ 294  (night)
+- Wed 18.11. 10:34 → Wed 18.11. 15:23  **Munich → Berlin**  ICE
+- Wed 18.11. 15:44 → Wed 18.11. 21:00  **Berlin → Warsaw**  IC
 
 ### Copenhagen
 _Fastest: 33 h 13 min, arrive Wed 18.11. 15:38, 3 changes, 0 hotel nights_
@@ -578,15 +629,6 @@ _Fewest changes: 35 h 50 min, arrive Wed 18.11. 18:15, 3 changes, 1 hotel nights
 - Wed 18.11. 07:42 → Wed 18.11. 14:32  **Paris → Barcelona**  TGV INOUI
 - Wed 18.11. 15:00 → Wed 18.11. 18:15  **Barcelona → Andorra la Vella**  Alsa 15:00
 
-### Zagreb
-_Fastest: 31 h 44 min, arrive Wed 18.11. 16:04, 2 changes, 0 hotel nights_
-
-- Tue 17.11. 08:20 → Tue 17.11. 11:35  **Rome → Milan**  FR
-- Tue 17.11. 11:35 → Tue 17.11. 14:31  **Milan → Ancona**  FR
-- Wait 5 h 14 min in Ancona
-- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Ancona → Split**  Jadrolinija 53  (night)
-- Wed 18.11. 07:54 → Wed 18.11. 16:04  **Split → Zagreb**  520
-
 ### Madrid
 _Fastest: 34 h 04 min, arrive Wed 18.11. 16:29, 5 changes, 0 hotel nights_
 
@@ -617,38 +659,48 @@ _Fastest: 32 h 30 min, arrive Wed 18.11. 17:30, 2 changes, 0 hotel nights_
 - Wait 1 h 30 min in Patras
 - Wed 18.11. 14:30 → Wed 18.11. 17:30  **Patras → Athens**  ?
 
-### Ljubljana
-_Fastest: 34 h 40 min, arrive Wed 18.11. 16:40, 2 changes, 1 hotel nights_
-
-- Tue 17.11. 06:00 → Tue 17.11. 08:33  **Rome → Bologna**  FR
-- Wait 5 h 19 min in Bologna
-- Tue 17.11. 13:52 → Tue 17.11. 20:37  **Bologna → Munich**  ICE
-- 🛏 Overnight in Munich (Tue 17.11. 20:37 → Wed 18.11. 10:16)
-- Wed 18.11. 10:16 → Wed 18.11. 16:40  **Munich → Ljubljana**  IC
-
-### Ljubljana — fewest hotel nights
-_Fewest hotel nights: 34 h 15 min, arrive Wed 18.11. 16:40, 4 changes, 0 hotel nights_
+### Belgrade
+_Fastest: 36 h 10 min, arrive Wed 18.11. 18:35, 6 changes, 0 hotel nights_
 
 - Tue 17.11. 06:25 → Tue 17.11. 09:24  **Rome → Milan**  FR
-- Tue 17.11. 10:10 → Tue 17.11. 14:55  **Milan → Basel**  EC
-- Tue 17.11. 15:16 → Tue 17.11. 19:05  **Basel → Köln**  ICE
-- Wait 4 h 50 min in Köln
-- Tue 17.11. 23:55 → Wed 18.11. 06:03  **Köln → Munich**  ICE  (night)
-- Wait 4 h 13 min in Munich
-- Wed 18.11. 10:16 → Wed 18.11. 16:40  **Munich → Ljubljana**  IC
+- Wait 1 h 46 min in Milan
+- Tue 17.11. 11:10 → Tue 17.11. 14:27  **Milan → Zürich**  EC
+- Wait 6 h 40 min in Zürich
+- Tue 17.11. 21:07 → Wed 18.11. 06:32  **Zürich → Vienna**  EN 40467  (night)
+- Wed 18.11. 07:40 → Wed 18.11. 10:35  **Vienna → Budapest**  xpress
+- Wed 18.11. 11:48 → Wed 18.11. 14:16  **Budapest → Szeged**  InterCity
+- Wed 18.11. 15:04 → Wed 18.11. 16:24  **Szeged → Subotica**  SZ
+- Wed 18.11. 17:00 → Wed 18.11. 18:35  **Subotica → Belgrade**  IC
 
-### Belgrade
-_Fastest: 32 h 55 min, arrive Wed 18.11. 21:15, 5 changes, 0 hotel nights_
+### Belgrade — fewest changes
+_Fewest changes: 27 h 05 min, arrive Wed 18.11. 21:15, 4 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
-- Wed 18.11. 12:48 → Wed 18.11. 15:16  **Budapest → Szeged**  InterCity
-- Wait 2 h 48 min in Szeged
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
+- Wed 18.11. 13:48 → Wed 18.11. 16:16  **Budapest → Szeged**  InterCity
+- Wait 1 h 48 min in Szeged
 - Wed 18.11. 18:04 → Wed 18.11. 19:24  **Szeged → Subotica**  SZ
 - Wed 18.11. 20:00 → Wed 18.11. 21:15  **Subotica → Belgrade**  IC
+
+### Sarajevo
+_Fastest: 34 h 35 min, arrive Wed 18.11. 20:55, 3 changes, 1 hotel nights_
+
+- Tue 17.11. 10:20 → Tue 17.11. 18:37  **Rome → Trieste**  IC
+- Tue 17.11. 19:40 → Tue 17.11. 21:10  **Trieste → Ljubljana**  Itabus 19:40
+- 🛏 Overnight in Ljubljana (Tue 17.11. 21:10 → Wed 18.11. 06:50)
+- Wed 18.11. 06:50 → Wed 18.11. 09:44  **Ljubljana → Zagreb**  EN
+- Wait 2 h 46 min in Zagreb
+- Wed 18.11. 12:30 → Wed 18.11. 20:55  **Zagreb → Sarajevo**  Coach 12:30
+
+### Sarajevo — fewest hotel nights
+_Fewest hotel nights: 39 h 35 min, arrive Wed 18.11. 23:55, 3 changes, 0 hotel nights_
+
+- Tue 17.11. 08:20 → Tue 17.11. 11:35  **Rome → Milan**  FR
+- Tue 17.11. 11:35 → Tue 17.11. 14:31  **Milan → Ancona**  FR
+- Wait 5 h 14 min in Ancona
+- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Ancona → Split**  Jadrolinija 53  (night)
+- Wed 18.11. 07:54 → Wed 18.11. 16:04  **Split → Zagreb**  520
+- Wed 18.11. 16:45 → Wed 18.11. 23:55  **Zagreb → Sarajevo**  Coach 16:45
 
 ### Stockholm
 _Fastest: 39 h 10 min, arrive Wed 18.11. 21:35, 5 changes, 0 hotel nights_
@@ -688,25 +740,12 @@ _Fastest: 24 h 15 min, arrive Wed 18.11. 23:15, 2 changes, 0 hotel nights_
 - Wait 5 h 32 min in Pozzallo
 - Wed 18.11. 21:30 → Wed 18.11. 23:15  **Pozzallo → Valletta**  VirtuFerries
 
-### Sarajevo
-_Fastest: 39 h 35 min, arrive Wed 18.11. 23:55, 3 changes, 0 hotel nights_
-
-- Tue 17.11. 08:20 → Tue 17.11. 11:35  **Rome → Milan**  FR
-- Tue 17.11. 11:35 → Tue 17.11. 14:31  **Milan → Ancona**  FR
-- Wait 5 h 14 min in Ancona
-- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Ancona → Split**  Jadrolinija 53  (night)
-- Wed 18.11. 07:54 → Wed 18.11. 16:04  **Split → Zagreb**  520
-- Wed 18.11. 16:45 → Wed 18.11. 23:55  **Zagreb → Sarajevo**  Coach 16:45
-
 ### Bucharest
-_Fastest: 43 h 03 min, arrive Thu 19.11. 08:23, 3 changes, 0 hotel nights_
+_Fastest: 37 h 13 min, arrive Thu 19.11. 08:23, 2 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
-- Wait 3 h 41 min in Budapest
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
+- Wait 2 h 35 min in Budapest
 - Wed 18.11. 15:10 → Thu 19.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 
 ### Kyiv
@@ -720,6 +759,17 @@ _Fastest: 50 h 49 min, arrive Thu 19.11. 09:49, 4 changes, 0 hotel nights_
 - Wed 18.11. 07:44 → Wed 18.11. 13:00  **Berlin → Warsaw**  IC
 - Wait 5 h 50 min in Warsaw
 - Wed 18.11. 18:50 → Thu 19.11. 09:49  **Warsaw → Kyiv**  Kyiv Express  (night)
+
+### Kyiv — fewest changes
+_Fewest changes: 49 h 00 min, arrive Thu 19.11. 20:10, 3 changes, 0 hotel nights_
+
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wait 2 h 04 min in Vienna
+- Wed 18.11. 11:10 → Wed 18.11. 15:23  **Vienna → Prague**  RJ
+- Wait 6 h 25 min in Prague
+- Wed 18.11. 21:48 → Thu 19.11. 06:25  **Prague → Przemyśl**  RegioJet  (night)
+- Wait 3 h 24 min in Przemyśl
+- Thu 19.11. 09:49 → Thu 19.11. 20:10  **Przemyśl → Kyiv**  UZ Intercity
 
 ### Vilnius
 _Fastest: 52 h 35 min, arrive Thu 19.11. 11:35, 5 changes, 1 hotel nights_
@@ -736,13 +786,10 @@ _Fastest: 52 h 35 min, arrive Thu 19.11. 11:35, 5 changes, 1 hotel nights_
 - Thu 19.11. 09:09 → Thu 19.11. 11:35  **Mockava → Vilnius**  32
 
 ### Vilnius — fewest changes
-_Fewest changes: 52 h 05 min, arrive Thu 19.11. 17:25, 4 changes, 0 hotel nights_
+_Fewest changes: 46 h 15 min, arrive Thu 19.11. 17:25, 3 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wait 15 h 21 min in Vienna
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wait 14 h 13 min in Vienna
 - Wed 18.11. 23:19 → Thu 19.11. 08:08  **Vienna → Warsaw**  IC  (night)
 - Thu 19.11. 08:53 → Thu 19.11. 14:43  **Warsaw → Mockava**  IC Hańcza
 - Thu 19.11. 15:07 → Thu 19.11. 17:25  **Mockava → Vilnius**  32
@@ -817,14 +864,11 @@ _Fastest: 61 h 14 min, arrive Thu 19.11. 20:39, 8 changes, 0 hotel nights_
 - Thu 19.11. 16:25 → Thu 19.11. 20:39  **Vaasa → Helsinki**  IC
 
 ### Sofia
-_Fastest: 55 h 21 min, arrive Thu 19.11. 20:41, 5 changes, 0 hotel nights_
+_Fastest: 49 h 31 min, arrive Thu 19.11. 20:41, 4 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
-- Wait 3 h 41 min in Budapest
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
+- Wait 2 h 35 min in Budapest
 - Wed 18.11. 15:10 → Thu 19.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 2 h 23 min in Bucharest
 - Thu 19.11. 10:46 → Thu 19.11. 13:40  **Bucharest → Ruse**  1095
@@ -863,28 +907,22 @@ _Fewest hotel nights: 62 h 57 min, arrive Thu 19.11. 20:22, 9 changes, 1 hotel n
 - Thu 19.11. 19:00 → Thu 19.11. 20:22  **Tanger → Rabat**  Al Boraq
 
 ### Chisinau
-_Fastest: 57 h 40 min, arrive Thu 19.11. 23:00, 5 changes, 0 hotel nights_
+_Fastest: 51 h 50 min, arrive Thu 19.11. 23:00, 4 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
-- Wait 3 h 41 min in Budapest
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
+- Wait 2 h 35 min in Budapest
 - Wed 18.11. 15:10 → Thu 19.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 3 h 27 min in Bucharest
 - Thu 19.11. 11:50 → Thu 19.11. 18:08  **Bucharest → Iasi**  IC
 - Thu 19.11. 19:30 → Thu 19.11. 23:00  **Iasi → Chisinau**  SVS 19:30
 
 ### Chisinau — fewest changes
-_Fewest changes: 66 h 50 min, arrive Fri 20.11. 08:10, 4 changes, 0 hotel nights_
+_Fewest changes: 61 h 00 min, arrive Fri 20.11. 08:10, 3 changes, 0 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
-- Wait 3 h 41 min in Budapest
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
+- Wait 2 h 35 min in Budapest
 - Wed 18.11. 15:10 → Thu 19.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 10 h 57 min in Bucharest
 - Thu 19.11. 19:20 → Fri 20.11. 08:10  **Bucharest → Chisinau**  402  (night)
@@ -939,13 +977,10 @@ _Fastest: 74 h 05 min, arrive Fri 20.11. 09:30, 9 changes, 1 hotel nights_
 - Fri 20.11. 07:30 → Fri 20.11. 09:30  **Helsinki → Tallinn**  Megastar
 
 ### Tallinn — fewest changes
-_Fewest changes: 76 h 55 min, arrive Fri 20.11. 18:15, 7 changes, 1 hotel nights_
+_Fewest changes: 71 h 05 min, arrive Fri 20.11. 18:15, 6 changes, 1 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wait 15 h 21 min in Vienna
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wait 14 h 13 min in Vienna
 - Wed 18.11. 23:19 → Thu 19.11. 08:08  **Vienna → Warsaw**  IC  (night)
 - Thu 19.11. 08:53 → Thu 19.11. 14:43  **Warsaw → Mockava**  IC Hańcza
 - Thu 19.11. 15:07 → Thu 19.11. 17:25  **Mockava → Vilnius**  32
@@ -974,13 +1009,10 @@ _Fewest hotel nights: 74 h 05 min, arrive Fri 20.11. 09:30, 10 changes, 0 hotel 
 - Fri 20.11. 07:30 → Fri 20.11. 09:30  **Helsinki → Tallinn**  Megastar
 
 ### Riga
-_Fastest: 70 h 14 min, arrive Fri 20.11. 11:34, 5 changes, 1 hotel nights_
+_Fastest: 64 h 24 min, arrive Fri 20.11. 11:34, 4 changes, 1 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wait 15 h 21 min in Vienna
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wait 14 h 13 min in Vienna
 - Wed 18.11. 23:19 → Thu 19.11. 08:08  **Vienna → Warsaw**  IC  (night)
 - Thu 19.11. 08:53 → Thu 19.11. 14:43  **Warsaw → Mockava**  IC Hańcza
 - Thu 19.11. 15:07 → Thu 19.11. 17:25  **Mockava → Vilnius**  32
@@ -1009,14 +1041,11 @@ _Fewest hotel nights: 81 h 19 min, arrive Fri 20.11. 16:44, 12 changes, 0 hotel 
 - Fri 20.11. 14:25 → Fri 20.11. 16:44  **Valga → Riga**  875
 
 ### Ankara
-_Fastest: 94 h 56 min, arrive Sat 21.11. 13:16, 7 changes, 1 hotel nights_
+_Fastest: 89 h 06 min, arrive Sat 21.11. 13:16, 6 changes, 1 hotel nights_
 
-- Tue 17.11. 12:20 → Tue 17.11. 14:23  **Rome → Bologna**  FR
-- Tue 17.11. 14:23 → Tue 17.11. 16:20  **Bologna → Venice**  FR
-- Wait 4 h 45 min in Venice
-- Tue 17.11. 21:05 → Wed 18.11. 07:58  **Venice → Vienna**  RJX  (night)
-- Wed 18.11. 08:40 → Wed 18.11. 11:29  **Vienna → Budapest**  xpress
-- Wait 3 h 41 min in Budapest
+- Tue 17.11. 18:10 → Wed 18.11. 09:06  **Rome → Vienna**  NJ 40294  (night)
+- Wed 18.11. 09:40 → Wed 18.11. 12:35  **Vienna → Budapest**  xpress
+- Wait 2 h 35 min in Budapest
 - Wed 18.11. 15:10 → Thu 19.11. 08:23  **Budapest → Bucharest**  InterCity  (night)
 - Wait 2 h 23 min in Bucharest
 - Thu 19.11. 10:46 → Thu 19.11. 13:40  **Bucharest → Ruse**  1095
@@ -1038,14 +1067,16 @@ _Fastest: 106 h 35 min, arrive Sat 21.11. 17:00, 3 changes, 3 hotel nights_
 - Fri 20.11. 19:00 → Sat 21.11. 17:00  **Marseille → Algiers**  Nouris Elbahr  (night)
 
 ### Algiers — fewest hotel nights
-_Fewest hotel nights: 106 h 35 min, arrive Sat 21.11. 17:00, 3 changes, 2 hotel nights_
+_Fewest hotel nights: 94 h 50 min, arrive Sat 21.11. 17:00, 4 changes, 1 hotel nights_
 
-- Tue 17.11. 06:25 → Tue 17.11. 09:24  **Rome → Milan**  FR
-- Wait 6 h 29 min in Milan
-- Tue 17.11. 15:53 → Tue 17.11. 22:36  **Milan → Paris**  FR
-- 🛏 Overnight in Paris (Tue 17.11. 22:36 → Wed 18.11. 20:57)
-- Wed 18.11. 20:57 → Thu 19.11. 06:34  **Paris → Marseille**  TGV INOUI  (night)
-- 🛏 Overnight in Marseille (Thu 19.11. 06:34 → Fri 20.11. 19:00)
+- Tue 17.11. 18:10 → Wed 18.11. 09:33  **Rome → Munich**  NJ 294  (night)
+- Wait 18 h 38 min in Munich
+- Thu 19.11. 04:11 → Thu 19.11. 08:29  **Munich → Köln**  ICE  (night)
+- Wait 4 h 10 min in Köln
+- Thu 19.11. 12:39 → Thu 19.11. 16:07  **Köln → Paris**  EST DEKOH
+- Wait 1 h 31 min in Paris
+- Thu 19.11. 17:38 → Thu 19.11. 20:57  **Paris → Marseille**  TGV INOUI
+- 🛏 Overnight in Marseille (Thu 19.11. 20:57 → Fri 20.11. 19:00)
 - Fri 20.11. 19:00 → Sat 21.11. 17:00  **Marseille → Algiers**  Nouris Elbahr  (night)
 
 ### Tunis

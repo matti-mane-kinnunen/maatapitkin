@@ -26,8 +26,8 @@ _leave Stockholm Tue 17.11.2026 from 16:00 · generated 11.11.2026. Change 20 mi
 | Monaco | Tue 17.11. 17:29 | Thu 19.11. 06:47 | 37 h 18 min | 4 | 1 | 1 (Nice) | fewest hotel nights: 40 h 27 min, 4 ch., 0 hotel |
 | Tallinn | Tue 17.11. 16:00 | Thu 19.11. 09:30 | 40 h 30 min | 1 | 1 | 1 (Helsinki) |  |
 | San Marino | Tue 17.11. 17:29 | Thu 19.11. 09:00 | 39 h 31 min | 6 | 1 | 1 (Rimini) | fewest changes: 49 h 31 min, 4 ch., 0 hotel; fewest hotel nights: 42 h 31 min, 8 ch., 0 hotel |
+| Ljubljana | Tue 17.11. 17:29 | Thu 19.11. 10:00 | 40 h 31 min | 5 | 1 | 1 (Trieste) | fewest changes: 47 h 11 min, 2 ch., 0 hotel; fewest hotel nights: 43 h 36 min, 6 ch., 0 hotel |
 | Dublin | Tue 17.11. 17:29 | Thu 19.11. 11:00 | 42 h 31 min | 5 | 1 | 1 (Holyhead) |  |
-| Ljubljana | Tue 17.11. 17:29 | Thu 19.11. 13:53 | 44 h 24 min | 3 | 2 | 0 | fewest changes: 47 h 11 min, 2 ch., 0 hotel |
 | Belgrade | Tue 17.11. 17:29 | Thu 19.11. 15:15 | 45 h 46 min | 6 | 1 | 1 (Budapest) | fewest hotel nights: 49 h 06 min, 6 ch., 0 hotel |
 | Riga | Tue 17.11. 16:00 | Thu 19.11. 16:44 | 47 h 44 min | 3 | 1 | 1 (Helsinki) |  |
 | Andorra la Vella | Tue 17.11. 17:29 | Thu 19.11. 16:00 | 46 h 31 min | 5 | 2 | 0 | fewest changes: 48 h 46 min, 4 ch., 1 hotel |
@@ -75,7 +75,7 @@ _Night trains and night buses left out; night ferries still used._
 | Rome | Thu 19.11. 13:10 | 44 h 51 min | 6 | 2 (Copenhagen, Lugano) | +15 h 41 min |
 | Monaco | Thu 19.11. 13:27 | 45 h 08 min | 7 | 2 (Copenhagen, Paris) | +7 h 50 min |
 | Vatican | Thu 19.11. 13:50 | 45 h 31 min | 7 | 2 (Copenhagen, Lugano) | +15 h 41 min |
-| Ljubljana | Thu 19.11. 13:53 | 45 h 34 min | 5 | 2 (Copenhagen, Vienna) | +1 h 10 min |
+| Ljubljana | Thu 19.11. 13:53 | 45 h 34 min | 5 | 2 (Copenhagen, Vienna) | +5 h 03 min |
 | San Marino | Thu 19.11. 14:00 | 45 h 41 min | 8 | 2 (Copenhagen, Lugano) | +6 h 10 min |
 | Edinburgh | Thu 19.11. 13:38 | 46 h 19 min | 6 | 2 (Copenhagen, Paris) | +15 h 13 min |
 | Riga | Thu 19.11. 16:44 | 47 h 44 min | 3 | 1 (Helsinki) | same |
@@ -126,8 +126,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Monaco | Tue 17.11. 08:23 | Wed 18.11. 19:27 | 35 h 04 min | arrives 11 h 20 min earlier |
 | Tallinn | – | – | – | no gain: take the 16:00 journey |
 | San Marino | Tue 17.11. 08:23 | Wed 18.11. 16:00 | 31 h 37 min | arrives 17 h 00 min earlier |
+| Ljubljana | Tue 17.11. 06:20 | Wed 18.11. 13:53 | 31 h 33 min | arrives 20 h 07 min earlier |
 | Dublin | – | – | – | no gain: take the 16:00 journey |
-| Ljubljana | Tue 17.11. 06:20 | Wed 18.11. 13:53 | 31 h 33 min | arrives 24 h 00 min earlier |
 | Belgrade | Tue 17.11. 06:20 | Wed 18.11. 18:35 | 36 h 15 min | arrives 20 h 40 min earlier |
 | Riga | – | – | – | no gain: take the 16:00 journey |
 | Andorra la Vella | Tue 17.11. 10:43 | Thu 19.11. 10:15 | 47 h 32 min | arrives 5 h 45 min earlier |
@@ -490,6 +490,39 @@ _Fewest hotel nights: 42 h 31 min, arrive Thu 19.11. 12:00, 8 changes, 0 hotel n
 - Thu 19.11. 09:45 → Thu 19.11. 10:38  **Bologna → Rimini**  FR
 - Thu 19.11. 11:10 → Thu 19.11. 12:00  **Rimini → San Marino**  Bonelli
 
+### Ljubljana
+_Fastest: 40 h 31 min, arrive Thu 19.11. 10:00, 5 changes, 1 hotel nights_
+
+- Tue 17.11. 17:29 → Wed 18.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wed 18.11. 06:29 → Wed 18.11. 13:21  **Hamburg → Basel**  ICE
+- Wed 18.11. 13:43 → Wed 18.11. 14:52  **Basel → Zürich**  IC3
+- Wed 18.11. 15:33 → Wed 18.11. 18:50  **Zürich → Milan**  EC
+- Wed 18.11. 19:43 → Wed 18.11. 23:45  **Milan → Trieste**  FR
+- 🛏 Overnight in Trieste (Wed 18.11. 23:45 → Thu 19.11. 08:35)
+- Thu 19.11. 08:35 → Thu 19.11. 10:00  **Trieste → Ljubljana**  FlixBus 08:35
+
+### Ljubljana — fewest changes
+_Fewest changes: 47 h 11 min, arrive Thu 19.11. 16:40, 2 changes, 0 hotel nights_
+
+- Tue 17.11. 17:29 → Wed 18.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wait 14 h 17 min in Hamburg
+- Wed 18.11. 20:10 → Thu 19.11. 05:02  **Hamburg → Munich**  ICE  (night)
+- Wait 5 h 14 min in Munich
+- Thu 19.11. 10:16 → Thu 19.11. 16:40  **Munich → Ljubljana**  IC
+
+### Ljubljana — fewest hotel nights
+_Fewest hotel nights: 43 h 36 min, arrive Thu 19.11. 13:05, 6 changes, 0 hotel nights_
+
+- Tue 17.11. 17:29 → Wed 18.11. 05:53  **Stockholm → Hamburg**  IC  (night)
+- Wed 18.11. 06:29 → Wed 18.11. 13:21  **Hamburg → Basel**  ICE
+- Wed 18.11. 13:43 → Wed 18.11. 14:52  **Basel → Zürich**  IC3
+- Wed 18.11. 15:33 → Wed 18.11. 18:50  **Zürich → Milan**  EC
+- Wed 18.11. 19:10 → Wed 18.11. 20:24  **Milan → Bologna**  FR
+- Wait 8 h 17 min in Bologna
+- Thu 19.11. 04:41 → Thu 19.11. 09:56  **Bologna → Trieste**  IC  (night)
+- Wait 1 h 34 min in Trieste
+- Thu 19.11. 11:30 → Thu 19.11. 13:05  **Trieste → Ljubljana**  FlixBus 11:30
+
 ### Dublin
 _Fastest: 42 h 31 min, arrive Thu 19.11. 11:00, 5 changes, 1 hotel nights_
 
@@ -500,24 +533,6 @@ _Fastest: 42 h 31 min, arrive Thu 19.11. 11:00, 5 changes, 1 hotel nights_
 - Wed 18.11. 19:02 → Wed 18.11. 23:02  **London → Holyhead**  Avanti
 - 🛏 Overnight in Holyhead (Wed 18.11. 23:02 → Thu 19.11. 07:30)
 - Thu 19.11. 07:30 → Thu 19.11. 11:00  **Holyhead → Dublin**  IrishFerry
-
-### Ljubljana
-_Fastest: 44 h 24 min, arrive Thu 19.11. 13:53, 3 changes, 0 hotel nights_
-
-- Tue 17.11. 17:29 → Wed 18.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Wed 18.11. 06:34 → Wed 18.11. 08:22  **Hamburg → Berlin**  ICE
-- Wait 11 h 49 min in Berlin
-- Wed 18.11. 20:11 → Thu 19.11. 07:00  **Berlin → Vienna**  IC  (night)
-- Thu 19.11. 07:53 → Thu 19.11. 13:53  **Vienna → Ljubljana**  EC
-
-### Ljubljana — fewest changes
-_Fewest changes: 47 h 11 min, arrive Thu 19.11. 16:40, 2 changes, 0 hotel nights_
-
-- Tue 17.11. 17:29 → Wed 18.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Wait 14 h 17 min in Hamburg
-- Wed 18.11. 20:10 → Thu 19.11. 05:02  **Hamburg → Munich**  ICE  (night)
-- Wait 5 h 14 min in Munich
-- Thu 19.11. 10:16 → Thu 19.11. 16:40  **Munich → Ljubljana**  IC
 
 ### Belgrade
 _Fastest: 45 h 46 min, arrive Thu 19.11. 15:15, 6 changes, 1 hotel nights_

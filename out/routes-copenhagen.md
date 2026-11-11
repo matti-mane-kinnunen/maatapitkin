@@ -123,7 +123,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Rome | Tue 17.11. 23:52 | Wed 18.11. 22:39 | 22 h 47 min | arrives 9 h 29 min later |
 | Monaco | Tue 17.11. 23:52 | Thu 19.11. 06:47 | 30 h 55 min | arrives 17 h 20 min later |
 | Vatican | Tue 17.11. 23:52 | Wed 18.11. 23:19 | 23 h 27 min | arrives 9 h 29 min later |
-| Ljubljana | Tue 17.11. 23:52 | Thu 19.11. 13:53 | 38 h 01 min | arrives 24 h 00 min later |
+| Ljubljana | Tue 17.11. 23:52 | Thu 19.11. 10:00 | 34 h 08 min | arrives 20 h 07 min later |
 | San Marino | Tue 17.11. 23:52 | Thu 19.11. 09:00 | 33 h 08 min | arrives 19 h 00 min later |
 | Edinburgh | Tue 17.11. 23:52 | Wed 18.11. 23:35 | 24 h 43 min | arrives 9 h 57 min later |
 | Vilnius | Tue 17.11. 23:52 | Thu 19.11. 17:25 | 40 h 33 min | arrives 24 h 00 min later |
