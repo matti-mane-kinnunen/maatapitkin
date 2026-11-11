@@ -2133,3 +2133,63 @@ legs:
   - {from: Vienna, to: Prague, service: "RJ", mode: train, times: ["05:10-09:23", "07:10-11:23", "09:10-13:23", "11:10-15:23", "15:10-19:23", "17:10-21:23",
       "19:10-23:32", "22:10-03:09"], query: "*", checked: 2026-11-11, source: transitous}
   - {from: Vienna, to: Prague, service: "RJ", mode: train, runs: "fri,sat", times: ["13:10-17:26"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, times: ["06:23-09:03", "06:57-09:31", "07:25-10:03", "08:25-11:05", "09:25-12:04", "09:58-12:32",
+      "10:25-13:03", "11:25-14:07", "11:56-14:33", "12:22-15:03", "13:23-16:02", "14:24-17:03",
+      "15:08-17:59", "15:24-18:03", "15:55-18:33", "16:10-19:03", "17:25-20:03", "18:24-21:03",
+      "19:25-22:03"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, runs: "fri,sat", times: ["20:25-23:03"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, runs: "fri,sat,sun", times: ["18:57-21:28"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, runs: "mon-fri", times: ["05:33-08:03"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, runs: "mon-thu", times: ["18:57-21:29"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, runs: "sat", times: ["21:23-00:08"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Nice, to: Marseille, service: "TER SUD_IV15", mode: train, runs: "sat,sun", times: ["07:57-10:33"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Marseille, to: Montpellier, service: "IC", mode: train, times: ["18:22-20:25"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Marseille, to: Montpellier, service: "IC", mode: train, runs: "mon-fri", times: ["07:20-09:01", "08:02-09:29", "09:25-11:00", "13:25-15:00", "17:22-19:00", "19:23-21:00"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Marseille, to: Montpellier, service: "IC", mode: train, runs: "mon-fri,sun", times: ["11:22-13:03", "15:26-17:00"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Marseille, to: Montpellier, service: "IC", mode: train, runs: "sun", times: ["07:20-09:00"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Montpellier, to: Barcelona, service: "AVE INT", mode: train, runs: "mon-fri", times: ["09:34-12:36"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Montpellier, to: Barcelona, service: "AVE INT", mode: train, runs: "mon-fri,sun", times: ["16:28-19:23", "18:17-21:32"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Marseille, to: Barcelona, service: "AVE INT", mode: train, runs: "mon-fri", times: ["08:02-12:36"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Basel, to: Köln, service: "ICE", mode: train, times: ["05:16-09:05", "07:16-11:05", "09:16-13:05", "11:16-15:05", "13:16-17:05", "15:16-19:05",
+      "17:16-21:05", "19:16-23:10"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Basel, to: Köln, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["23:16-05:44"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Basel, to: Köln, service: "ICE", mode: train, runs: "sun", times: ["21:19-05:44"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, times: ["03:11-05:44", "06:34-07:40", "07:10-08:04", "07:34-08:43", "08:11-09:05", "08:33-09:39",
+      "09:10-10:04", "09:34-10:43", "10:11-11:05", "10:34-11:39", "11:10-12:04", "11:34-12:43",
+      "12:11-13:05", "12:34-13:39", "13:10-14:04", "13:34-14:43", "14:11-15:05", "14:34-15:39",
+      "15:10-16:04", "15:34-16:43", "16:11-17:05", "16:34-17:40", "17:49-18:43", "18:11-19:05",
+      "18:33-19:40", "19:10-20:04", "19:34-20:43", "20:11-21:05", "20:14-21:39", "21:41-22:30",
+      "22:11-23:10"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "fri", times: ["14:09-15:14", "15:09-16:14", "16:09-17:14", "19:09-20:14"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "fri,sat", times: ["23:25-00:31"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "fri,sat,sun", times: ["04:46-06:04", "21:10-22:04"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "mon-fri", times: ["05:34-06:43", "05:41-06:57", "07:41-08:29", "08:08-09:14", "08:12-09:32", "09:08-10:14",
+      "11:08-12:14", "12:08-13:14", "13:08-14:14", "15:01-16:25", "17:03-18:25", "17:08-18:14",
+      "18:08-19:14", "20:08-21:14", "23:22-02:05"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["07:08-08:14", "09:41-10:29", "11:41-12:29", "13:41-14:29", "15:41-16:29", "19:41-20:29"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["17:10-18:04", "23:11-00:10"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "mon-thu", times: ["04:48-06:04", "14:08-15:14", "15:08-16:14", "16:08-17:14", "19:08-20:14", "22:08-23:39"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Frankfurt, to: Köln, service: "ICE", mode: train, runs: "sun", times: ["20:48-21:55", "23:25-00:32"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Köln, to: Amsterdam, service: "ICE", mode: train, times: ["05:47-08:59", "08:49-11:29", "10:49-13:29", "12:49-15:29", "14:49-17:29", "16:49-19:29",
+      "20:49-23:29"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Köln, to: Amsterdam, service: "ICE", mode: train, runs: "fri", times: ["06:49-09:29"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Köln, to: Amsterdam, service: "ICE", mode: train, runs: "mon-thu", times: ["06:49-09:32"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Köln, to: Amsterdam, service: "ICE", mode: train, runs: "sat,sun", times: ["06:49-09:28", "18:49-21:29"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, times: ["00:08-01:16", "05:08-06:16", "05:59-06:52", "06:08-07:16", "06:34-07:26", "06:59-07:52",
+      "07:08-08:16", "07:59-08:52", "08:08-09:16", "08:34-09:26", "08:59-09:52", "09:08-10:16",
+      "09:34-10:26", "09:59-10:52", "10:08-11:16", "10:34-11:26", "10:59-11:52", "11:08-12:16",
+      "11:34-12:26", "11:59-12:52", "12:08-13:16", "12:34-13:26", "12:59-13:52", "13:08-14:16",
+      "13:34-14:26", "13:59-14:52", "14:08-15:16", "14:34-15:26", "14:59-15:52", "15:08-16:16",
+      "15:34-16:26", "15:59-16:52", "16:08-17:16", "16:34-17:26", "16:59-17:52", "17:08-18:16",
+      "17:34-18:26", "17:59-18:52", "18:08-19:16", "18:34-19:26", "18:59-19:52", "19:08-20:16",
+      "19:34-20:26", "19:59-20:52", "20:34-21:26", "20:59-21:52", "21:08-22:16", "21:34-22:26",
+      "21:59-22:52", "22:08-23:16", "23:08-00:16"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "fri", times: ["19:10-20:23"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "fri,sat", times: ["22:59-23:52"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "mon-fri", times: ["07:10-08:23", "07:34-08:26", "08:10-09:23", "09:10-10:23", "10:10-11:23", "11:10-12:23",
+      "12:10-13:23", "14:10-15:23", "15:10-16:23", "16:10-17:23", "18:10-19:23", "21:10-22:23",
+      "23:36-00:52"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "mon-thu", times: ["11:36-12:52", "16:36-17:52", "20:10-21:23", "22:10-23:23", "22:36-23:52", "23:10-00:23"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "mon-thu,sat", times: ["20:08-21:16"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "sat,sun", times: ["01:08-02:16", "07:34-08:25"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Zürich, to: Basel, service: "IR37", mode: train, runs: "sun", times: ["19:40-20:49"], query: "*", checked: 2026-11-11, source: transitous}

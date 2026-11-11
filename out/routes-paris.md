@@ -115,8 +115,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Berlin | Tue 17.11. 17:52 | Wed 18.11. 05:39 | 11 h 47 min | arrives 13 h 22 min later |
 | Rome | Tue 17.11. 18:22 | Wed 18.11. 13:49 | 19 h 27 min | arrives 20 h 09 min later |
 | San Marino | Tue 17.11. 18:22 | Wed 18.11. 14:00 | 19 h 38 min | arrives 20 h 00 min later |
-| Andorra la Vella | Wed 18.11. 07:42 | Wed 18.11. 18:15 | 10 h 33 min | arrives 24 h 00 min later |
-| Madrid | Wed 18.11. 07:42 | Wed 18.11. 18:17 | 10 h 35 min | arrives 24 h 00 min later |
+| Andorra la Vella | Tue 17.11. 20:57 | Wed 18.11. 16:00 | 19 h 03 min | arrives 21 h 45 min later |
+| Madrid | Tue 17.11. 20:57 | Wed 18.11. 16:29 | 19 h 32 min | arrives 22 h 12 min later |
 | Vatican | Tue 17.11. 18:22 | Wed 18.11. 14:29 | 20 h 07 min | arrives 20 h 09 min later |
 | Prague | Tue 17.11. 17:52 | Wed 18.11. 10:22 | 16 h 30 min | arrives 13 h 07 min later |
 | Vienna | Tue 17.11. 17:52 | Wed 18.11. 11:32 | 17 h 40 min | arrives 14 h 00 min later |

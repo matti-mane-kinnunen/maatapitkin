@@ -11,7 +11,7 @@ _leave Helsinki Tue 17.11.2026 from 17:00 · generated 11.11.2026. Change 20 min
 | Riga | Wed 18.11. 07:30 | Wed 18.11. 16:44 | 9 h 14 min | 2 | 0 | 0 |  |
 | Vilnius | Wed 18.11. 07:30 | Wed 18.11. 21:28 | 13 h 58 min | 3 | 0 | 0 |  |
 | Berlin | Tue 17.11. 17:35 | Wed 18.11. 21:23 | 28 h 48 min | 5 | 1 | 0 | fewest changes: 39 h 47 min, 3 ch., 0 hotel |
-| Amsterdam | Tue 17.11. 17:35 | Thu 19.11. 07:28 | 38 h 53 min | 6 | 2 | 0 | fewest changes: 45 h 26 min, 4 ch., 0 hotel |
+| Amsterdam | Tue 17.11. 17:35 | Thu 19.11. 07:28 | 38 h 53 min | 6 | 2 | 0 | fewest changes: 44 h 54 min, 4 ch., 0 hotel |
 | Bern | Tue 17.11. 17:35 | Thu 19.11. 07:56 | 39 h 21 min | 7 | 2 | 0 | fewest changes: 45 h 51 min, 4 ch., 0 hotel |
 | Paris | Tue 17.11. 17:35 | Thu 19.11. 10:05 | 41 h 30 min | 7 | 2 | 0 | fewest changes: 44 h 16 min, 4 ch., 0 hotel |
 | Vienna | Tue 17.11. 17:35 | Thu 19.11. 10:13 | 41 h 38 min | 6 | 2 | 0 | fewest changes: 44 h 12 min, 4 ch., 0 hotel |
@@ -34,7 +34,7 @@ _leave Helsinki Tue 17.11.2026 from 17:00 · generated 11.11.2026. Change 20 min
 | Madrid | Tue 17.11. 17:35 | Thu 19.11. 23:44 | 55 h 09 min | 9 | 2 | 0 | fewest changes: 65 h 17 min, 6 ch., 1 hotel |
 | Bucharest | Tue 17.11. 17:35 | Fri 20.11. 08:23 | 62 h 48 min | 8 | 3 | 0 | fewest changes: 65 h 02 min, 6 ch., 0 hotel |
 | Kyiv | Wed 18.11. 07:30 | Fri 20.11. 09:49 | 50 h 19 min | 6 | 1 | 1 (Vilnius) | fewest hotel nights: 64 h 14 min, 8 ch., 0 hotel |
-| Andorra la Vella | Tue 17.11. 17:35 | Fri 20.11. 10:15 | 65 h 40 min | 6 | 2 | 1 (Barcelona) |  |
+| Andorra la Vella | Tue 17.11. 17:35 | Fri 20.11. 10:15 | 65 h 40 min | 6 | 2 | 1 (Barcelona) | fewest hotel nights: 71 h 25 min, 7 ch., 0 hotel |
 | Dublin | Tue 17.11. 17:35 | Fri 20.11. 11:00 | 67 h 25 min | 7 | 2 | 1 (Holyhead) |  |
 | Tirana | Tue 17.11. 17:35 | Fri 20.11. 12:40 | 68 h 05 min | 11 | 3 | 0 |  |
 | Belfast | Tue 17.11. 17:35 | Fri 20.11. 15:58 | 72 h 23 min | 8 | 2 | 1 (Holyhead) | fewest hotel nights: 78 h 32 min, 10 ch., 0 hotel |
@@ -350,15 +350,16 @@ _Fastest: 38 h 53 min, arrive Thu 19.11. 07:28, 6 changes, 0 hotel nights_
 - Wed 18.11. 22:51 → Thu 19.11. 07:28  **Berlin → Amsterdam**  ICE  (night)
 
 ### Amsterdam — fewest changes
-_Fewest changes: 45 h 26 min, arrive Thu 19.11. 14:01, 4 changes, 0 hotel nights_
+_Fewest changes: 44 h 54 min, arrive Thu 19.11. 13:29, 4 changes, 0 hotel nights_
 
 - Tue 17.11. 17:35 → Tue 17.11. 19:49  **Helsinki → Turku**  IC
 - Tue 17.11. 20:55 → Wed 18.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
-- Wait 10 h 59 min in Stockholm
-- Wed 18.11. 17:29 → Thu 19.11. 05:53  **Stockholm → Hamburg**  IC  (night)
-- Thu 19.11. 06:45 → Thu 19.11. 08:34  **Hamburg → Osnabrück**  ICE
-- Wait 2 h 32 min in Osnabrück
-- Thu 19.11. 11:06 → Thu 19.11. 14:01  **Osnabrück → Amsterdam**  ICE
+- Wait 4 h 13 min in Stockholm
+- Wed 18.11. 10:43 → Wed 18.11. 21:57  **Stockholm → Hamburg**  IC
+- Wait 6 h 44 min in Hamburg
+- Thu 19.11. 04:41 → Thu 19.11. 08:48  **Hamburg → Köln**  ICE  (night)
+- Wait 2 h 01 min in Köln
+- Thu 19.11. 10:49 → Thu 19.11. 13:29  **Köln → Amsterdam**  ICE
 
 ### Bern
 _Fastest: 39 h 21 min, arrive Thu 19.11. 07:56, 7 changes, 0 hotel nights_
@@ -929,6 +930,21 @@ _Fastest: 65 h 40 min, arrive Fri 20.11. 10:15, 6 changes, 1 hotel nights_
 - Thu 19.11. 14:42 → Thu 19.11. 21:32  **Paris → Barcelona**  TGV INOUI
 - 🛏 Overnight in Barcelona (Thu 19.11. 21:32 → Fri 20.11. 07:00)
 - Fri 20.11. 07:00 → Fri 20.11. 10:15  **Barcelona → Andorra la Vella**  Alsa 07:00
+
+### Andorra la Vella — fewest hotel nights
+_Fewest hotel nights: 71 h 25 min, arrive Fri 20.11. 16:00, 7 changes, 0 hotel nights_
+
+- Tue 17.11. 17:35 → Tue 17.11. 19:49  **Helsinki → Turku**  IC
+- Tue 17.11. 20:55 → Wed 18.11. 06:30  **Turku → Stockholm**  Viking Line  (night)
+- Wait 4 h 13 min in Stockholm
+- Wed 18.11. 10:43 → Wed 18.11. 21:57  **Stockholm → Hamburg**  IC
+- Wed 18.11. 22:45 → Thu 19.11. 07:03  **Hamburg → Frankfurt**  ICE  (night)
+- Wait 1 h 50 min in Frankfurt
+- Thu 19.11. 08:53 → Thu 19.11. 12:51  **Frankfurt → Paris**  ICE
+- Wait 8 h 06 min in Paris
+- Thu 19.11. 20:57 → Fri 20.11. 06:34  **Paris → Marseille**  TGV INOUI  (night)
+- Fri 20.11. 08:02 → Fri 20.11. 12:36  **Marseille → Barcelona**  AVE INT
+- Fri 20.11. 13:00 → Fri 20.11. 16:00  **Barcelona → Andorra la Vella**  Alsa 13:00
 
 ### Dublin
 _Fastest: 67 h 25 min, arrive Fri 20.11. 11:00, 7 changes, 1 hotel nights_

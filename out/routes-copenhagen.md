@@ -7,7 +7,7 @@ _leave Copenhagen Tue 17.11.2026 from 06:00 · generated 11.11.2026. Change 20 m
 | Stockholm | Tue 17.11. 06:03 | Tue 17.11. 11:35 | 5 h 32 min | 1 | 0 | 0 |  |
 | Berlin | Tue 17.11. 06:22 | Tue 17.11. 13:23 | 7 h 01 min | 1 | 0 | 0 |  |
 | Prague | Tue 17.11. 06:22 | Tue 17.11. 19:15 | 12 h 53 min | 2 | 0 | 0 |  |
-| Amsterdam | Tue 17.11. 06:22 | Tue 17.11. 20:01 | 13 h 39 min | 2 | 0 | 0 |  |
+| Amsterdam | Tue 17.11. 06:22 | Tue 17.11. 19:29 | 13 h 07 min | 2 | 0 | 0 |  |
 | Paris | Tue 17.11. 06:22 | Tue 17.11. 20:42 | 14 h 20 min | 2 | 0 | 0 |  |
 | Bern | Tue 17.11. 06:22 | Tue 17.11. 20:56 | 14 h 34 min | 2 | 0 | 0 |  |
 | Warsaw | Tue 17.11. 06:22 | Tue 17.11. 21:00 | 14 h 38 min | 2 | 0 | 0 |  |
@@ -58,7 +58,7 @@ _Night trains and night buses left out; night ferries still used._
 | Stockholm | Tue 17.11. 11:35 | 5 h 32 min | 1 | 0 | same |
 | Berlin | Tue 17.11. 13:23 | 7 h 01 min | 1 | 0 | same |
 | Prague | Tue 17.11. 19:15 | 12 h 53 min | 2 | 0 | same |
-| Amsterdam | Tue 17.11. 20:01 | 13 h 39 min | 2 | 0 | same |
+| Amsterdam | Tue 17.11. 19:29 | 13 h 07 min | 2 | 0 | same |
 | Paris | Tue 17.11. 20:42 | 14 h 20 min | 2 | 0 | same |
 | Bern | Tue 17.11. 20:56 | 14 h 34 min | 2 | 0 | same |
 | Warsaw | Tue 17.11. 21:00 | 14 h 38 min | 2 | 0 | same |
@@ -107,7 +107,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Stockholm | Tue 17.11. 16:14 | Tue 17.11. 22:36 | 6 h 22 min | arrives 11 h 01 min later |
 | Berlin | Tue 17.11. 23:52 | Wed 18.11. 08:22 | 8 h 30 min | arrives 18 h 59 min later |
 | Prague | Tue 17.11. 23:52 | Wed 18.11. 15:15 | 15 h 23 min | arrives 20 h 00 min later |
-| Amsterdam | Tue 17.11. 23:52 | Wed 18.11. 14:01 | 14 h 09 min | arrives 18 h 00 min later |
+| Amsterdam | Tue 17.11. 23:52 | Wed 18.11. 14:01 | 14 h 09 min | arrives 18 h 32 min later |
 | Paris | Tue 17.11. 23:52 | Wed 18.11. 14:51 | 14 h 59 min | arrives 18 h 09 min later |
 | Bern | Tue 17.11. 23:52 | Wed 18.11. 14:56 | 15 h 04 min | arrives 18 h 00 min later |
 | Warsaw | Tue 17.11. 23:52 | Wed 18.11. 21:00 | 21 h 08 min | arrives 24 h 00 min later |
@@ -128,8 +128,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Edinburgh | Tue 17.11. 23:52 | Wed 18.11. 23:35 | 24 h 43 min | arrives 9 h 57 min later |
 | Vilnius | Tue 17.11. 23:52 | Thu 19.11. 17:25 | 40 h 33 min | arrives 24 h 00 min later |
 | Zagreb | Tue 17.11. 23:52 | Thu 19.11. 17:23 | 41 h 31 min | arrives 24 h 00 min later |
-| Andorra la Vella | Tue 17.11. 23:52 | Thu 19.11. 18:15 | 42 h 23 min | arrives 24 h 00 min later |
-| Madrid | Tue 17.11. 23:52 | Thu 19.11. 18:17 | 42 h 25 min | arrives 24 h 00 min later |
+| Andorra la Vella | Tue 17.11. 23:52 | Thu 19.11. 16:00 | 40 h 08 min | arrives 21 h 45 min later |
+| Madrid | Tue 17.11. 23:52 | Thu 19.11. 16:29 | 40 h 37 min | arrives 22 h 12 min later |
 | Belgrade | Tue 17.11. 23:52 | Thu 19.11. 15:15 | 39 h 23 min | arrives 20 h 40 min later |
 | Kyiv | Tue 17.11. 23:52 | Thu 19.11. 20:10 | 43 h 18 min | arrives 24 h 00 min later |
 | Bucharest | Tue 17.11. 23:52 | Fri 20.11. 08:23 | 55 h 31 min | arrives 24 h 00 min later |
@@ -299,12 +299,11 @@ _Fastest: 12 h 53 min, arrive Tue 17.11. 19:15, 2 changes, 0 hotel nights_
 - Tue 17.11. 15:28 → Tue 17.11. 19:15  **Berlin → Prague**  RJ
 
 ### Amsterdam
-_Fastest: 13 h 39 min, arrive Tue 17.11. 20:01, 2 changes, 0 hotel nights_
+_Fastest: 13 h 07 min, arrive Tue 17.11. 19:29, 2 changes, 0 hotel nights_
 
 - Tue 17.11. 06:22 → Tue 17.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Tue 17.11. 11:23 → Tue 17.11. 13:01  **Hamburg → Osnabrück**  ICE
-- Wait 4 h 05 min in Osnabrück
-- Tue 17.11. 17:06 → Tue 17.11. 20:01  **Osnabrück → Amsterdam**  ICE
+- Tue 17.11. 12:09 → Tue 17.11. 15:48  **Hamburg → Köln**  ICE
+- Tue 17.11. 16:49 → Tue 17.11. 19:29  **Köln → Amsterdam**  ICE
 
 ### Paris
 _Fastest: 14 h 20 min, arrive Tue 17.11. 20:42, 2 changes, 0 hotel nights_
@@ -342,9 +341,9 @@ _Fastest: 15 h 11 min, arrive Tue 17.11. 21:14, 2 changes, 0 hotel nights_
 _Fastest: 16 h 44 min, arrive Tue 17.11. 23:06, 3 changes, 0 hotel nights_
 
 - Tue 17.11. 06:22 → Tue 17.11. 10:48  **Copenhagen → Hamburg**  ECE
-- Tue 17.11. 11:23 → Tue 17.11. 13:01  **Hamburg → Osnabrück**  ICE
-- Wait 4 h 05 min in Osnabrück
-- Tue 17.11. 17:06 → Tue 17.11. 20:01  **Osnabrück → Amsterdam**  ICE
+- Tue 17.11. 12:09 → Tue 17.11. 15:48  **Hamburg → Köln**  ICE
+- Tue 17.11. 16:49 → Tue 17.11. 19:29  **Köln → Amsterdam**  ICE
+- Wait 1 h 41 min in Amsterdam
 - Tue 17.11. 21:10 → Tue 17.11. 23:06  **Amsterdam → Brussels**  EST Eurostar
 
 ### Vienna

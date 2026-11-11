@@ -24,7 +24,7 @@ _leave London Tue 17.11.2026 from 06:00 · generated 11.11.2026. Change 20 min (
 | Bratislava | Tue 17.11. 06:16 | Wed 18.11. 08:44 | 25 h 28 min | 4 | 1 | 0 | fewest changes: 29 h 09 min, 3 ch., 1 hotel |
 | San Marino | Tue 17.11. 06:01 | Wed 18.11. 09:00 | 25 h 59 min | 4 | 0 | 1 (Rimini) | fewest changes: 27 h 59 min, 3 ch., 1 hotel |
 | Stockholm | Tue 17.11. 06:16 | Wed 18.11. 09:45 | 26 h 29 min | 4 | 1 | 0 |  |
-| Andorra la Vella | Tue 17.11. 06:01 | Wed 18.11. 10:15 | 27 h 14 min | 2 | 0 | 1 (Barcelona) |  |
+| Andorra la Vella | Tue 17.11. 06:01 | Wed 18.11. 10:15 | 27 h 14 min | 2 | 0 | 1 (Barcelona) | fewest hotel nights: 32 h 59 min, 3 ch., 0 hotel |
 | Warsaw | Tue 17.11. 06:16 | Wed 18.11. 10:20 | 27 h 04 min | 4 | 1 | 0 | fewest changes: 29 h 44 min, 3 ch., 0 hotel |
 | Dublin | Tue 17.11. 08:00 | Wed 18.11. 11:00 | 27 h 00 min | 1 | 0 | 1 (Holyhead) |  |
 | Ljubljana | Tue 17.11. 06:16 | Wed 18.11. 13:53 | 30 h 37 min | 4 | 1 | 0 | fewest changes: 33 h 39 min, 2 ch., 1 hotel |
@@ -517,6 +517,15 @@ _Fastest: 27 h 14 min, arrive Wed 18.11. 10:15, 2 changes, 1 hotel nights_
 - Tue 17.11. 14:42 → Tue 17.11. 21:32  **Paris → Barcelona**  TGV INOUI
 - 🛏 Overnight in Barcelona (Tue 17.11. 21:32 → Wed 18.11. 07:00)
 - Wed 18.11. 07:00 → Wed 18.11. 10:15  **Barcelona → Andorra la Vella**  Alsa 07:00
+
+### Andorra la Vella — fewest hotel nights
+_Fewest hotel nights: 32 h 59 min, arrive Wed 18.11. 16:00, 3 changes, 0 hotel nights_
+
+- Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
+- Wait 11 h 35 min in Paris
+- Tue 17.11. 20:57 → Wed 18.11. 06:34  **Paris → Marseille**  TGV INOUI  (night)
+- Wed 18.11. 08:02 → Wed 18.11. 12:36  **Marseille → Barcelona**  AVE INT
+- Wed 18.11. 13:00 → Wed 18.11. 16:00  **Barcelona → Andorra la Vella**  Alsa 13:00
 
 ### Warsaw
 _Fastest: 27 h 04 min, arrive Wed 18.11. 10:20, 4 changes, 0 hotel nights_
