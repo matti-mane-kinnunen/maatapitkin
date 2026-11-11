@@ -6,8 +6,8 @@ starting city, updated every week.
 **Maps.** https://matti-mane-kinnunen.github.io/maatapitkin/ – one page per origin, listed under
 `origins` in places.yaml: `index.html` (Helsinki), `stockholm.html` (Tågsemester),
 `copenhagen.html` (Togferie), `london.html` (Train holiday), `berlin.html` (Zugurlaub), `paris.html`
-(Voyage en train). Each map is in its city's language – Finnish, Swedish, Danish, English, German,
-French (D-53) – links to the others at the
+(Voyage en train), `rome.html` (Viaggio in treno). Each map is in its city's language – Finnish, Swedish, Danish, English, German,
+French, Italian (D-53) – links to the others at the
 top, has a short user guide at the end, and under each stretch of trains a *Check on bahn.de* link
 that opens Deutsche Bahn's planner at that departure (D-55).
 
@@ -26,7 +26,7 @@ pairs.txt             the connections ("A -> B : *" or own times) – the main i
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs
 data/places.yaml      coordinates, capitals, DB station numbers (db:), change times per station, the maps (origins), routing and CO2 settings
 data/names.yaml       place names in each map's language (Tukholma, Köpenhamn, København …), D-50
-data/i18n/<lang>.yaml page texts per language (en master; fi, sv, da, de, fr), D-53 – check_i18n.py lists gaps
+data/i18n/<lang>.yaml page texts per language (en master; fi, sv, da, de, fr, it), D-53 – check_i18n.py lists gaps
 src/guide/<lang>.html the user guide per language
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
 data/sources/         route lists (Eurostar, Frecce, railjet …) used with routes_to_pairs.py
@@ -95,7 +95,7 @@ Outputs in `out/`:
 Every Monday at 03:00 (Finnish winter time) GitHub Actions looks up next week's trains,
 rebuilds the map for Tue, Fri, Sat and Sun, checks it and publishes it at
 https://matti-mane-kinnunen.github.io/maatapitkin/ (Helsinki), with `stockholm.html`,
-`copenhagen.html`, `london.html`, `berlin.html` and `paris.html` next to it.
+`copenhagen.html`, `london.html`, `berlin.html`, `paris.html` and `rome.html` next to it.
 
 **In a blog post** (Blogger: *HTML view*), a link that opens the map full screen works best – a blog
 column is too narrow for the map and the list side by side:

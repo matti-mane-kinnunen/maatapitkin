@@ -65,6 +65,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-55 | "Check on bahn.de" link under each rail stretch | 4.11.2026 | Accepted |
 | D-56 | Visitor counts with GoatCounter, sent by our own code | 9.11.2026 | Accepted |
 | D-57 | Paris as the sixth map, in French | 11.11.2026 | Accepted |
+| D-58 | Rome as the seventh map, in Italian | 11.11.2026 | Accepted |
 
 ---
 
@@ -1131,6 +1132,32 @@ everything only via Paris (Berlin 34 h, Vienna 39 h) – those lines were added 
 
 **Consequences.** Six maps for the weekly run to build and check (~2 min more each). French is the
 fifth translation to keep up when page texts change (check_i18n.py lists gaps).
+
+---
+
+## D-58 Rome as the seventh map, in Italian
+**Date:** 11.11.2026 · **Status:** Accepted
+
+**Context.** After Paris, Matti wanted a map from the south. The first test build from Rome reached
+northern Europe only via Paris (D-57), so 29 Rome-northwards and Riviera/Rhine lines were added to
+pairs.txt and looked up on 11.11.2026.
+
+**Decision.** `rome.html`, title *Viaggio in treno*, starts 06:00 (Frecciarossa) and 17:00 (night
+trains). Texts in data/i18n/it.yaml and src/guide/it.html (informal *tu*, as Italian websites
+usually write); 60 Italian place names in names.yaml (Parigi, Londra, Monaco di Baviera – while
+*Monaco* stays the principality – Berlino, Lubiana, Vaticano …); preview picture
+static/preview-rome.png. Test build 17.11.2026: all 44 capitals, 42 without night trains (not Valletta, Kyiv);
+Vienna 11 h 47, Paris 13 h 13, Amsterdam 17 h 04 (same day), Berlin 17 h 40, Madrid 34 h via the
+Paris–Marseille night train. Page check: 1,973 journeys, 3,646 bahn.de links, no errors.
+Side fix: the version line under the title used the origin's data key; it now uses the shown name
+("partenza da Roma", and on the Danish map "afgang fra København").
+
+**Why.** Rome is the main hub for Italy and the south (Sicily, Malta, Bari–Greece ferries), and the
+data built for it also strengthens the other maps' southern routes.
+
+**Consequences.** Seven maps for the weekly run. Italian is the sixth translation to keep up.
+Still open: Nightjets Rome → Munich / Vienna and Milan → Vienna, and Trieste → Ljubljana (Ljubljana
+now 34 h via a hotel in Munich) – Matti finds own times.
 
 ---
 

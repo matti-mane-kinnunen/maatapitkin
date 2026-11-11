@@ -4,81 +4,81 @@
 # name in that language, else `all` (the right spelling for every map), else the key.
 # Only list what differs from the key. Local names also work in pairs.txt and in the search.
 #   fi Finnish (Helsinki) · sv Swedish (Stockholm) · da Danish (Copenhagen)
-#   de German (Berlin) · en English (London) · fr French (Paris)
+#   de German (Berlin) · en English (London) · fr French (Paris) · it Italian (Rome)
 
 # --- capitals ---
-Athens:      {fi: Ateena, sv: Aten, da: Athen, de: Athen, fr: Athènes}
-Belgrade:    {fi: Belgrad, sv: Belgrad, da: Beograd, de: Belgrad}
-Brussels:    {fi: Bryssel, sv: Bryssel, da: Bruxelles, de: Brüssel, fr: Bruxelles}
-Bucharest:   {fi: Bukarest, sv: Bukarest, da: Bukarest, de: Bukarest, fr: Bucarest}
+Athens:      {fi: Ateena, sv: Aten, da: Athen, de: Athen, fr: Athènes, it: Atene}
+Belgrade:    {fi: Belgrad, sv: Belgrad, da: Beograd, de: Belgrad, it: Belgrado}
+Brussels:    {fi: Bryssel, sv: Bryssel, da: Bruxelles, de: Brüssel, fr: Bruxelles, it: Bruxelles}
+Bucharest:   {fi: Bukarest, sv: Bukarest, da: Bukarest, de: Bukarest, fr: Bucarest, it: Bucarest}
 Chisinau:    {all: Chișinău}
 Iasi:        {all: Iași}
-Copenhagen:  {fi: Kööpenhamina, sv: Köpenhamn, da: København, de: Kopenhagen, fr: Copenhague}
+Copenhagen:  {fi: Kööpenhamina, sv: Köpenhamn, da: København, de: Kopenhagen, fr: Copenhague, it: Copenaghen}
 Helsinki:    {sv: Helsingfors}
-Kyiv:        {fi: Kiova, de: Kyjiw}
-Lisbon:      {fi: Lissabon, sv: Lissabon, da: Lissabon, de: Lissabon, fr: Lisbonne}
-London:      {fi: Lontoo, fr: Londres}
-Luxembourg:  {fi: Luxemburg, sv: Luxemburg, de: Luxemburg}
-Paris:       {fi: Pariisi}
-Prague:      {fi: Praha, sv: Prag, da: Prag, de: Prag}
+Kyiv:        {fi: Kiova, de: Kyjiw, it: Kiev}
+Lisbon:      {fi: Lissabon, sv: Lissabon, da: Lissabon, de: Lissabon, fr: Lisbonne, it: Lisbona}
+London:      {fi: Lontoo, fr: Londres, it: Londra}
+Luxembourg:  {fi: Luxemburg, sv: Luxemburg, de: Luxemburg, it: Lussemburgo}
+Paris:       {fi: Pariisi, it: Parigi}
+Prague:      {fi: Praha, sv: Prag, da: Prag, de: Prag, it: Praga}
 Riga:        {fi: Riika}
-Rome:        {fi: Rooma, sv: Rom, da: Rom, de: Rom}
-Stockholm:   {fi: Tukholma}
+Rome:        {fi: Rooma, sv: Rom, da: Rom, de: Rom, it: Roma}
+Stockholm:   {fi: Tukholma, it: Stoccolma}
 Tallinn:     {fi: Tallinna}
-Vatican:     {fi: Vatikaani, sv: Vatikanstaten, da: Vatikanstaten, de: Vatikanstadt}
+Vatican:     {fi: Vatikaani, sv: Vatikanstaten, da: Vatikanstaten, de: Vatikanstadt, it: Vaticano}
 Vienna:      {fi: Wien, sv: Wien, da: Wien, de: Wien, fr: Vienne}
 Vilnius:     {fi: Vilna}
-Warsaw:      {fi: Varsova, sv: Warszawa, da: Warszawa, de: Warschau, fr: Varsovie}
-Algiers:     {fi: Alger, sv: Alger, da: Algier, de: Algier, fr: Alger}
+Warsaw:      {fi: Varsova, sv: Warszawa, da: Warszawa, de: Warschau, fr: Varsovie, it: Varsavia}
+Algiers:     {fi: Alger, sv: Alger, da: Algier, de: Algier, fr: Alger, it: Algeri}
 # not covered yet
 Nicosia:     {fi: Nikosia, de: Nikosia, fr: Nicosie}
 Reykjavik:   {all: Reykjavík}
 
 # --- other cities ---
 Aix en Provence: {all: Aix-en-Provence}
-Chania:      {fi: Hania, fr: La Canée}
-Donostia:    {en: San Sebastián, fi: San Sebastián, sv: San Sebastián, da: San Sebastián, de: San Sebastián, fr: Saint-Sébastien}
-Florence:    {fi: Firenze, sv: Florens, da: Firenze, de: Florenz}
-Gdansk:      {all: Gdańsk}
-Geneve:      {en: Geneva, fi: Geneve, sv: Genève, da: Genève, de: Genf, fr: Genève}
-Genoa:       {fi: Genova, sv: Genua, da: Genova, de: Genua, fr: Gênes}
+Chania:      {fi: Hania, fr: La Canée, it: La Canea}
+Donostia:    {en: San Sebastián, fi: San Sebastián, sv: San Sebastián, da: San Sebastián, de: San Sebastián, fr: Saint-Sébastien, it: San Sebastián}
+Florence:    {fi: Firenze, sv: Florens, da: Firenze, de: Florenz, it: Firenze}
+Gdansk:      {all: Gdańsk, it: Danzica}
+Geneve:      {en: Geneva, fi: Geneve, sv: Genève, da: Genève, de: Genf, fr: Genève, it: Ginevra}
+Genoa:       {fi: Genova, sv: Genua, da: Genova, de: Genua, fr: Gênes, it: Genova}
 Göteborg:    {en: Gothenburg}
-Hamburg:     {fi: Hampuri, fr: Hambourg}
+Hamburg:     {fi: Hampuri, fr: Hambourg, it: Amburgo}
 Kaisiadorys: {all: Kaišiadorys}
-Krakow:      {all: Kraków, fi: Krakova, de: Krakau, fr: Cracovie}
-Köln:        {en: Cologne, fr: Cologne}
-Liège:       {de: Lüttich}
-Malaga:      {all: Málaga, fr: Malaga}
+Krakow:      {all: Kraków, fi: Krakova, de: Krakau, fr: Cracovie, it: Cracovia}
+Köln:        {en: Cologne, fr: Cologne, it: Colonia}
+Liège:       {de: Lüttich, it: Liegi}
+Malaga:      {all: Málaga, fr: Malaga, it: Malaga}
 Marrakech:   {de: Marrakesch}
-Milan:       {fi: Milano, sv: Milano, da: Milano, de: Mailand}
-Munich:      {fi: München, sv: München, da: München, de: München}
-Naples:      {fi: Napoli, sv: Neapel, da: Napoli, de: Neapel}
-Nice:        {fi: Nizza, de: Nizza}
+Milan:       {fi: Milano, sv: Milano, da: Milano, de: Mailand, it: Milano}
+Munich:      {fi: München, sv: München, da: München, de: München, it: Monaco di Baviera}
+Naples:      {fi: Napoli, sv: Neapel, da: Napoli, de: Neapel, it: Napoli}
+Nice:        {fi: Nizza, de: Nizza, it: Nizza}
 Oulu:        {sv: Uleåborg}
-Sevilla:     {en: Seville, fr: Séville}
-Strasbourg:  {de: Straßburg}
-Syracuse:    {fi: Syrakusa, sv: Syrakusa, da: Syrakus, de: Syrakus}
+Sevilla:     {en: Seville, fr: Séville, it: Siviglia}
+Strasbourg:  {de: Straßburg, it: Strasburgo}
+Syracuse:    {fi: Syrakusa, sv: Syrakusa, da: Syrakus, de: Syrakus, it: Siracusa}
 Tampere:     {sv: Tammerfors}
-Tanger:      {en: Tangier}
+Tanger:      {en: Tangier, it: Tangeri}
 Torino:      {en: Turin, sv: Turin, de: Turin, fr: Turin}
 Trieste:     {de: Triest}
 Turku:       {sv: Åbo}
 Umeå:        {fi: Uumaja}
 Vaasa:       {sv: Vasa}
-Venice:      {fi: Venetsia, sv: Venedig, da: Venedig, de: Venedig, fr: Venise}
-Wroclaw:     {all: Wrocław}
+Venice:      {fi: Venetsia, sv: Venedig, da: Venedig, de: Venedig, fr: Venise, it: Venezia}
+Wroclaw:     {all: Wrocław, it: Breslavia}
 
 # --- French names only (Paris map) ---
-Bern:        {fr: Berne}
-Edinburgh:   {fr: Édimbourg}
-Valletta:    {fr: La Valette}
+Bern:        {fr: Berne, it: Berna}
+Edinburgh:   {fr: Édimbourg, it: Edimburgo}
+Valletta:    {fr: La Valette, it: La Valletta}
 San Marino:  {fr: Saint-Marin}
 Andorra la Vella: {fr: Andorre-la-Vieille}
-Basel:       {fr: Bâle}
-Zürich:      {fr: Zurich}
-Frankfurt:   {fr: Francfort}
+Basel:       {fr: Bâle, it: Basilea}
+Zürich:      {fr: Zurich, it: Zurigo}
+Frankfurt:   {fr: Francfort, it: Francoforte}
 Hannover:    {fr: Hanovre}
-Koblenz:     {fr: Coblence}
+Koblenz:     {fr: Coblence, it: Coblenza}
 Verona:      {fr: Vérone}
 Bologna:     {fr: Bologne}
 Ancona:      {fr: Ancône}
@@ -89,9 +89,26 @@ Granada:     {fr: Grenade}
 Santiago de Compostela: {fr: Saint-Jacques-de-Compostelle}
 Valencia:    {fr: Valence}
 Algeciras:   {fr: Algésiras}
-Thessaloniki: {fr: Thessalonique}
+Thessaloniki: {fr: Thessalonique, it: Salonicco}
 Ruse:        {fr: Roussé}
 Ventimiglia: {fr: Vintimille}
 Salerno:     {fr: Salerne}
-Reggio di Calabria: {fr: Reggio de Calabre}
+Reggio di Calabria: {fr: Reggio de Calabre, it: Reggio Calabria}
 "L'Hospitalet": {fr: L’Hospitalet-près-l’Andorre}
+
+# --- Italian names only (Rome map) ---
+Berlin:      {it: Berlino}
+Dublin:      {it: Dublino}
+Ljubljana:   {it: Lubiana}
+Zagreb:      {it: Zagabria}
+Tunis:       {it: Tunisi}
+Barcelona:   {it: Barcellona}
+Durrës:      {it: Durazzo}
+Izmir:       {it: Smirne}
+Lyon:        {it: Lione}
+Marseille:   {it: Marsiglia}
+Patras:      {it: Patrasso}
+Split:       {it: Spalato}
+Stuttgart:   {it: Stoccarda}
+Toulouse:    {it: Tolosa}
+Avignon:     {it: Avignone}

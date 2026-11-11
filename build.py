@@ -603,10 +603,11 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
 
     tx = i18n.texts(cfg.get("lang", "en"))                 # the map's language (IDEA-13)
     # "from Helsinki" where the language inflects the name (fi: Helsingistä); else the shown name
-    origin_from = cfg.get("from") or local_names(cfg.get("lang", "en"), net.places).get(origin, origin)
+    origin_shown = local_names(cfg.get("lang", "en"), net.places).get(origin, origin)   # Roma, København
+    origin_from = cfg.get("from") or origin_shown
 
     def version_line(d: dt.date, t: str) -> str:
-        return i18n.t(tx, "version", origin=origin, origin_from=origin_from, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
+        return i18n.t(tx, "version", origin=origin_shown, origin_from=origin_from, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
                       time=t, today=f"{today.day}.{today.month}.{today.year}")
 
     journeys = Journeys(net, origin, s, start)
