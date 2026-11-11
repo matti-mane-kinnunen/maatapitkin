@@ -553,6 +553,8 @@ Trieste -> Ljubljana : Coach 13:16 bus 13:16-15:00
 Trieste -> Ljubljana : FlixBus 13:50 bus 13:50-15:20
 Trieste -> Ljubljana : FlixBus 17:05 bus 17:05-18:40
 Trieste -> Ljubljana : Itabus 19:40 bus 19:40-21:10
+Rome -> Trieste : *              # direct Frecciarossa via Venice; Rome -> Ljubljana went Bologna -> Trieste IC with a 6-h wait
+Venice -> Trieste : *
 
 # -- for the Rome map (11.11.2026): westwards along the coast (Rome -> Madrid went via a hotel in Paris)
 Nice -> Marseille : *
