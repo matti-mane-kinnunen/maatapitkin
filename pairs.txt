@@ -544,3 +544,15 @@ Zürich -> Munich : *
 Zürich -> Stuttgart : *
 Vienna -> Prague : *             # Rome -> Prague went via Paris (39 h)
 Trieste -> Ljubljana : *         # train or bus? if nothing is found, own times are needed
+
+# -- for the Rome map (11.11.2026): westwards along the coast (Rome -> Madrid went via a hotel in Paris)
+Nice -> Marseille : *
+Marseille -> Montpellier : *
+Montpellier -> Barcelona : *
+Marseille -> Barcelona : *       # direct TGV
+# -- and up the Rhine (Rome -> Amsterdam went Basel -> Paris -> Brussels, hotel in Brussels)
+Basel -> Köln : *
+Frankfurt -> Köln : *
+Köln -> Amsterdam : *
+Zürich -> Basel : *
+# still to come (own times from Matti): Nightjets Rome -> Munich, Rome -> Vienna, Milan -> Vienna; Trieste -> Ljubljana
