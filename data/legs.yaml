@@ -2202,3 +2202,6 @@ legs:
   - {from: Trieste, to: Ljubljana, dep: "13:50", arr: "15:20", service: "FlixBus 13:50", mode: bus, checked: 2026-11-11, source: manual}
   - {from: Trieste, to: Ljubljana, dep: "17:05", arr: "18:40", service: "FlixBus 17:05", mode: bus, checked: 2026-11-11, source: manual}
   - {from: Trieste, to: Ljubljana, dep: "19:40", arr: "21:10", service: "Itabus 19:40", mode: bus, checked: 2026-11-11, source: manual}
+  - {from: Rome, to: Munich, dep: "18:10", arr: "09:33", service: "NJ 294", mode: train, night: true, checked: 2026-11-11, source: manual}
+  - {from: Rome, to: Vienna, dep: "18:10", arr: "09:06", service: "NJ 40294", mode: train, night: true, checked: 2026-11-11, source: manual}
+  - {from: Zürich, to: Vienna, dep: "21:07", arr: "06:32", service: "EN 40467", mode: train, night: true, checked: 2026-11-11, source: manual}

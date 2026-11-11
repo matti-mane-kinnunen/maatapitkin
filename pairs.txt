@@ -530,9 +530,11 @@ Verona -> Innsbruck : *
 Innsbruck -> Munich : *
 Venice -> Vienna : *             # ÖBB railjet
 Venice -> Munich : *
-Rome -> Munich : *               # Nightjet
-Rome -> Vienna : *               # Nightjet
-Milan -> Vienna : *              # Nightjet
+# Nightjets from Rome (Matti, bahn.de, Nov 2026; not in Transitous): one train from Roma Tiburtina that splits; entered as daily
+Rome -> Munich : NJ 294 night 18:10-09:33
+Rome -> Vienna : NJ 40294 night 18:10-09:06
+# Milan -> Vienna has no direct night train now (bahn.de): EC Milan 17:10 -> Zürich 20:27, then the EN to Budapest
+Zürich -> Vienna : EN 40467 night 21:07-06:32   # Matti, bahn.de, Nov 2026; Zürich -> Budapest night train, entered as daily
 Milan -> Zürich : *
 Milan -> Lugano : *
 Milan -> Basel : *
@@ -566,4 +568,3 @@ Basel -> Köln : *
 Frankfurt -> Köln : *
 Köln -> Amsterdam : *
 Zürich -> Basel : *
-# still to come (own times from Matti): Nightjets Rome -> Munich, Rome -> Vienna, Milan -> Vienna
