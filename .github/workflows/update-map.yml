@@ -80,7 +80,13 @@ jobs:
       - name: Install a browser for the page check
         run: |
           pip install playwright==1.63.0
-          python3 -m playwright install --with-deps chromium
+          # --with-deps also apt-installs extra fonts; if the Ubuntu mirrors can't be reached (DNS
+          # failure on the runner, 11.11.2026) fall back to the browser alone - the runner image
+          # already has every library Chromium needs, only optional fonts are missing then
+          python3 -m playwright install --with-deps chromium || {
+            echo "::warning::apt failed - installing Chromium without the extra system packages"
+            python3 -m playwright install chromium
+          }
 
       - name: Check before publishing
         id: check
