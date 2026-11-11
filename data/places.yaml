@@ -8,6 +8,7 @@ settings:
     Copenhagen: {page: copenhagen.html, lang: da, title: Togferie, start_time: "06:00", start_times: ["06:00", "16:00"]}  # day trains from early morning; evening for night trains
     London: {page: london.html, lang: en, title: Train holiday, start_time: "06:00", start_times: ["06:00", "17:00"]}  # Eurostar from early morning; evening for the sleepers
     Berlin: {page: berlin.html, lang: de, title: Zugurlaub, start_time: "06:00", start_times: ["06:00", "17:00"]}  # day ICEs from early morning; evening for night trains
+    Paris: {page: paris.html, lang: fr, title: Voyage en train, start_time: "06:00", start_times: ["06:00", "17:00"]}  # TGVs and Eurostar from early morning; evening for the night trains
   start_time: "17:00"        # leave Helsinki from this time on day 1 (17:00 = the evening train)
   start_times: ["05:00", "17:00"]  # morning / evening switch on the map; 05:00 catches IC 941 05:26 to the Turku day ferry (IDEA-02)
   min_transfer: 20           # minutes, train -> train

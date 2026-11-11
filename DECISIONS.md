@@ -64,6 +64,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-54 | DB station numbers for places, from Trainline's open list | 4.11.2026 | Accepted |
 | D-55 | "Check on bahn.de" link under each rail stretch | 4.11.2026 | Accepted |
 | D-56 | Visitor counts with GoatCounter, sent by our own code | 9.11.2026 | Accepted |
+| D-57 | Paris as the sixth map, in French | 11.11.2026 | Accepted |
 
 ---
 
@@ -1109,6 +1110,27 @@ no third-party code – the same thinking as pinned actions (supply chain).
 **Consequences.** Counts are a little low: privacy settings, ad blockers and visits from automated
 browsers are not counted. Checked 9.11.2026 with a simulated github.io visit: counted once, not
 counted in the four other cases.
+
+---
+
+## D-57 Paris as the sixth map, in French
+**Date:** 11.11.2026 · **Status:** Accepted
+
+**Context.** Matti: Paris is Europe's biggest rail hub after the five Nordic, British and German
+starting cities, and a French map reaches many more travellers.
+
+**Decision.** `paris.html`, title *Voyage en train*, starts 06:00 (TGVs, Eurostar) and 17:00 (night
+trains). Texts in data/i18n/fr.yaml and src/guide/fr.html; 47 French place names in names.yaml
+(Londres, Bruxelles, Varsovie, Vienne, La Valette, Saint-Marin …); link-preview picture
+static/preview-paris.png. No new legs were needed: a test build reached all 44 capitals on sensible
+routes (Brussels 1 h 24, London 2 h 21, Rome 11 h 10, Berlin under 10 h).
+
+**Why.** The data built for the other maps already runs outwards from Paris (London's journeys pass
+through it). A Rome map, by contrast, needs new northbound legs first: a test build from Rome reached
+everything only via Paris (Berlin 34 h, Vienna 39 h) – those lines were added to pairs.txt.
+
+**Consequences.** Six maps for the weekly run to build and check (~2 min more each). French is the
+fifth translation to keep up when page texts change (check_i18n.py lists gaps).
 
 ---
 
