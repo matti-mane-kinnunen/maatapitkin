@@ -543,7 +543,16 @@ Ventimiglia -> Nice : *          # Rome -> Monaco went via Avignon (31 h)
 Zürich -> Munich : *
 Zürich -> Stuttgart : *
 Vienna -> Prague : *             # Rome -> Prague went via Paris (39 h)
-Trieste -> Ljubljana : *         # train or bus? if nothing is found, own times are needed
+# Trieste -> Ljubljana: no trains found by the run; buses (Matti, Nov 2026, booking site; run days not shown - entered as daily)
+Trieste -> Ljubljana : FlixBus 06:30 bus 06:30-07:59
+Trieste -> Ljubljana : FlixBus 08:35 bus 08:35-10:00
+Trieste -> Ljubljana : FlixBus 09:00 bus 09:00-10:25
+Trieste -> Ljubljana : FlixBus 10:10 bus 10:10-11:44
+Trieste -> Ljubljana : FlixBus 11:30 bus 11:30-13:05
+Trieste -> Ljubljana : Coach 13:16 bus 13:16-15:00
+Trieste -> Ljubljana : FlixBus 13:50 bus 13:50-15:20
+Trieste -> Ljubljana : FlixBus 17:05 bus 17:05-18:40
+Trieste -> Ljubljana : Itabus 19:40 bus 19:40-21:10
 
 # -- for the Rome map (11.11.2026): westwards along the coast (Rome -> Madrid went via a hotel in Paris)
 Nice -> Marseille : *
@@ -555,4 +564,4 @@ Basel -> Köln : *
 Frankfurt -> Köln : *
 Köln -> Amsterdam : *
 Zürich -> Basel : *
-# still to come (own times from Matti): Nightjets Rome -> Munich, Rome -> Vienna, Milan -> Vienna; Trieste -> Ljubljana
+# still to come (own times from Matti): Nightjets Rome -> Munich, Rome -> Vienna, Milan -> Vienna
