@@ -66,6 +66,8 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-56 | Visitor counts with GoatCounter, sent by our own code | 9.11.2026 | Accepted |
 | D-57 | Paris as the sixth map, in French | 11.11.2026 | Accepted |
 | D-58 | Rome as the seventh map, in Italian | 11.11.2026 | Accepted |
+| D-59 | Hamburg as the eighth map, in German | 12.11.2026 | Accepted |
+| D-60 | Four small usability features: hours slider, calendar file, continue link, problem report | 12.11.2026 | Accepted |
 
 ---
 
@@ -1158,6 +1160,62 @@ data built for it also strengthens the other maps' southern routes.
 **Consequences.** Seven maps for the weekly run. Italian is the sixth translation to keep up.
 Still open: Nightjets Rome → Munich / Vienna and Milan → Vienna, and Trieste → Ljubljana (Ljubljana
 now 34 h via a hotel in Munich) – Matti finds own times.
+
+## D-59 Hamburg as the eighth map, in German
+**Date:** 12.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-16 (Matti): Hamburg is the main rail hub towards Scandinavia, and German texts and a
+guide already existed (Berlin, D-53), so a map costs no translation.
+
+**Decision.** `hamburg.html`, title *Zugreise ab Hamburg* (Matti; Berlin keeps *Zugurlaub*), starts
+06:00 and 17:00 like Berlin. Test build 17.11./21.11.2026: all 45 capitals, 43 without night trains
+(not Valletta, Kyiv), no loops. Gaps the test showed, filled in pairs.txt (Matti's OK): Köln → Brussels
+(Brussels went via Osnabrück–Amsterdam and Eurostar, 10 h 21; this also helps the Berlin map),
+Hamburg → Prague (3-h wait in Berlin), Hamburg → Vienna (change in Munich), Hamburg → Stockholm (the
+night train; Helsinki's "fewest changes" waited 11 h 49 in Copenhagen to board it at 03:27). Own time
+IC 306 Hamburg 09:51 → København 14:55 from bahn.de (the day's first train; the data started at 10:53).
+Page check 1,849 journeys / 2,988 links OK; preview picture static/preview-hamburg.png with a German
+text panel (the Berlin picture's panel is English).
+
+**Why.** Hamburg is where many trips to Denmark, Sweden and Norway start or change, so it serves people
+whose way north does not pass Berlin.
+
+**Consequences.** Eight maps for the weekly run. Still odd: Lisbon in the evening goes Hamburg →
+Berlin → Köln (night ICE), back east first; Oslo needs a hotel night in Göteborg (probably real).
+The rebase over the bot's weekly commit stopped on legs.yaml – both sides had appended lines; keep both.
+
+## D-60 Four small usability features: hours slider, calendar file, continue link, problem report
+**Date:** 12.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-17…20 (Matti): small things that make the map more useful without turning it into a
+journey planner (D-37).
+
+**Decision.**
+- **How far in N hours** (IDEA-17): a slider above the map, 6-hour steps, starting at no limit;
+  capitals beyond the door-to-door time fade on the map and in the list. It uses the journeys already
+  on the page and follows the travel day, start time and night-train choice.
+- **Add to calendar** (IDEA-18): an .ics file built in the browser – one event per leg and per hotel
+  night, with the journey link and "check and book with the operator". Times are written in UTC,
+  worked out from each place's time zone (the TZ table from journeys.py is passed to the page), so no
+  VTIMEZONE blocks are needed; lines are folded at 75 bytes as RFC 5545 asks.
+- **Continue from X** (IDEA-19): when the destination has a map of its own, the timetable ends with a
+  link to it – a multi-city trip by hand, map by map.
+- **Report a problem** (IDEA-20): a link per leg to GitHub's new-issue page, with title
+  "Data: A -> B service (weekday hh:mm)" and the map, journey link, leg and data version filled in;
+  the address is `settings.repo_url` (remove it to switch the links off).
+
+**Why.** All four reuse data the page already has and add no server, no outside script and no
+tracking: the calendar file never leaves the browser, and the report link sends nothing until the
+visitor submits it on GitHub. Issues go through GitHub's own form, so no form or service of ours
+collects anything. UTC times were chosen over TZID + VTIMEZONE because every calendar app reads them
+and the page needs no time-zone rules of its own. Issue text from visitors is untrusted: no workflow
+reads issues, and one that does later must never put their text into a shell command (D-47).
+
+**Consequences.** Ten new texts per language and four guide bullets in each of the seven languages.
+tests/check_pages.py skips the new `li.cont` row when it counts timetable rows. Tested on the Hamburg
+map (page check, .ics parsed with Python's icalendar, times checked in three time zones); the other
+maps get the features at the next weekly build. A "report" issue is a lead to check, not a fact:
+the fix still goes through pairs.txt or an own-time line.
 
 ---
 
