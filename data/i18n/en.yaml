@@ -109,6 +109,17 @@ bahn_check: "Check {from} → {to} on bahn.de"
 bahn_title: "Opens Deutsche Bahn's journey planner at this departure. It may suggest other trains; night trains and Eurostar may show no price."
 link_copied: "Link copied"
 link_aria: "Link to this journey"
+# IDEA-17…20 (12.11.2026)
+reach_label: "How far in"
+reach_out: "{h} h: {n} of {total} capitals"
+reach_all: "no time limit: all {total} capitals"
+add_calendar: "Add to calendar"
+calendar_title: "Download this journey as a calendar file (.ics): every train, ferry and hotel night, in local times"
+ics_check: "From the Maata pitkin train map. Check the times and book with the operator before you travel."
+continue_from: "Continue from {place}: the map of journeys from {place}"
+report_problem: "Report a problem"
+report_title: "Report a problem with this connection on GitHub (needs a GitHub account)"
+report_prompt: "What is wrong? (e.g. the train does not run that day, other times, a better connection)"
 
 # --- CO2 ---
 how: "How?"

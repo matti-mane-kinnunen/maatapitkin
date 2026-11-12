@@ -106,6 +106,17 @@ bahn_check: "Tjek {from} → {to} på bahn.de"
 bahn_title: "Åbner Deutsche Bahns rejseplanlægger ved denne afgang. Den kan foreslå andre tog; nattog og Eurostar vises måske uden pris."
 link_copied: "Linket er kopieret"
 link_aria: "Link til denne rejse"
+# IDEA-17…20 (12.11.2026)
+reach_label: "Hvor langt på"
+reach_out: "{h} t: {n} af {total} hovedstæder"
+reach_all: "ingen tidsgrænse: alle {total} hovedstæder"
+add_calendar: "Føj til kalender"
+calendar_title: "Hent rejsen som kalenderfil (.ics): hvert tog, hver færge og hotelnat, i lokal tid"
+ics_check: "Fra togkortet Maata pitkin. Tjek tiderne og book hos operatøren før rejsen."
+continue_from: "Fortsæt fra {place}: kortet over rejser fra {place}"
+report_problem: "Rapportér en fejl"
+report_title: "Rapportér en fejl ved denne forbindelse på GitHub (kræver en GitHub-konto)"
+report_prompt: "Hvad er forkert? (f.eks. toget kører ikke den dag, andre tider, en bedre forbindelse)"
 
 # --- CO2 ---
 how: "Hvordan?"

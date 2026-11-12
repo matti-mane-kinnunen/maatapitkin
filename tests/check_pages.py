@@ -52,7 +52,7 @@ CHECK_JOURNEYS = r"""
             if (!curRoute || curRoute.capital !== r.capital) { P(`${where}: not selected`); continue; }
             if (curDate !== date || curStart !== start || (F.nightTrains === false) === night) P(`${where}: wrong view`);
             const legs = curRoute.steps.filter(s => s.kind === "leg");
-            const shown = document.querySelectorAll("#steps li:not(.dayhead):not(.pause):not(.stay):not(.bahn)").length;
+            const shown = document.querySelectorAll("#steps li:not(.dayhead):not(.pause):not(.stay):not(.bahn):not(.cont)").length;
             if (!legs.length || shown !== legs.length) P(`${where}: ${shown} rows for ${legs.length} legs`);
             const text = document.querySelector(".itin").innerText;
             for (const bad of ["undefined", "NaN", "{{", "__ORIGIN", "null"])

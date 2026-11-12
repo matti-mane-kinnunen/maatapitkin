@@ -23,7 +23,7 @@ import yaml
 
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
-from journeys import DAY, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
+from journeys import DAY, TZ, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
 from co2 import CO2  # noqa: E402
 import i18n  # noqa: E402
 
@@ -555,6 +555,7 @@ def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: di
     return {
         "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages,
         "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"),
+        "repo_url": s.get("repo_url"), "tz": TZ,   # issue links (IDEA-20); calendar times (IDEA-18)
         "lang": cfg.get("lang", "en"), "origin_from": origin_from,
         "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(),
         "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version,

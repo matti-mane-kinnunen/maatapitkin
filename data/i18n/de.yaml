@@ -106,6 +106,17 @@ bahn_check: "{from} → {to} auf bahn.de prüfen"
 bahn_title: "Öffnet die Reiseauskunft der Deutschen Bahn ab dieser Abfahrt. Sie kann andere Züge vorschlagen; Nachtzüge und Eurostar erscheinen evtl. ohne Preis."
 link_copied: "Link kopiert"
 link_aria: "Link zu dieser Reise"
+# IDEA-17…20 (12.11.2026)
+reach_label: "Wie weit in"
+reach_out: "{h} Std.: {n} von {total} Hauptstädten"
+reach_all: "ohne Zeitgrenze: alle {total} Hauptstädte"
+add_calendar: "In den Kalender"
+calendar_title: "Diese Reise als Kalenderdatei (.ics) laden: jeder Zug, jede Fähre und Hotelnacht, in Ortszeit"
+ics_check: "Von der Zugkarte Maata pitkin. Zeiten vor der Reise prüfen und beim Anbieter buchen."
+continue_from: "Weiter ab {place}: die Karte der Reisen ab {place}"
+report_problem: "Fehler melden"
+report_title: "Einen Fehler bei dieser Verbindung auf GitHub melden (GitHub-Konto nötig)"
+report_prompt: "Was stimmt nicht? (z. B. der Zug fährt an dem Tag nicht, andere Zeiten, eine bessere Verbindung)"
 
 # --- CO2 ---
 how: "Wie?"

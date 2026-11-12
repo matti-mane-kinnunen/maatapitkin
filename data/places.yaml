@@ -25,6 +25,7 @@ settings:
   start_date: 2026-12-08   # travel date; default is next Monday (or use --date)
   site_url: "https://matti-mane-kinnunen.github.io/maatapitkin/"  # for link previews (Open Graph, IDEA-11)
   goatcounter: "https://maatapitkin.goatcounter.com/count"  # visitor counts, no cookies (IDEA-15, D-56); remove to switch off
+  repo_url: "https://github.com/matti-mane-kinnunen/maatapitkin"  # "Report a problem" links open a new issue here (IDEA-20); remove to switch off
   co2:                       # rough CO2 per journey vs a direct flight (IDEA-07, D-41, D-51); remove to switch off
     source: "Klimatsmart semester (Chalmers), Jörgen Larsson, method report v5.1, factors for 2026"
     source_url: "https://klimatsmartsemester.se/sa-har-vi-raknat"

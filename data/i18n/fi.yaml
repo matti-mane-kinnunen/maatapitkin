@@ -108,6 +108,17 @@ bahn_check: "Tarkista {from} → {to} bahn.de:stä"
 bahn_title: "Avaa Deutsche Bahnin reittihaun tästä lähdöstä. Se voi ehdottaa muita junia; yöjunille ja Eurostarille ei aina näy hintaa."
 link_copied: "Linkki kopioitu"
 link_aria: "Linkki tähän matkaan"
+# IDEA-17…20 (12.11.2026)
+reach_label: "Kuinka pitkälle"
+reach_out: "{h} h: {n}/{total} pääkaupunkia"
+reach_all: "ei aikarajaa: kaikki {total} pääkaupunkia"
+add_calendar: "Lisää kalenteriin"
+calendar_title: "Lataa matka kalenteritiedostona (.ics): jokainen juna, lautta ja hotelliyö paikallisin ajoin"
+ics_check: "Maata pitkin -junakartalta. Tarkista ajat ja varaa liikennöitsijältä ennen matkaa."
+continue_from: "Jatka matkaa · {place}: kartta sieltä lähtevistä matkoista"
+report_problem: "Ilmoita virheestä"
+report_title: "Ilmoita tämän yhteyden virheestä GitHubissa (vaatii GitHub-tilin)"
+report_prompt: "Mikä on väärin? (esim. juna ei kulje sinä päivänä, eri ajat, parempi yhteys)"
 
 # --- CO2 ---
 how: "Miten?"

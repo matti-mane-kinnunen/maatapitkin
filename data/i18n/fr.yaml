@@ -106,6 +106,17 @@ bahn_check: "Vérifier {from} → {to} sur bahn.de"
 bahn_title: "Ouvre la recherche d’itinéraires de la Deutsche Bahn à partir de ce départ. Elle peut proposer d’autres trains ; les trains de nuit et l’Eurostar peuvent s’afficher sans prix."
 link_copied: "Lien copié"
 link_aria: "Lien vers ce voyage"
+# IDEA-17…20 (12.11.2026)
+reach_label: "Jusqu’où en"
+reach_out: "{h} h : {n} capitales sur {total}"
+reach_all: "sans limite : les {total} capitales"
+add_calendar: "Ajouter à l’agenda"
+calendar_title: "Télécharger ce voyage en fichier agenda (.ics) : chaque train, ferry et nuit d’hôtel, en heure locale"
+ics_check: "Depuis la carte Maata pitkin. Vérifiez les horaires et réservez auprès de l’opérateur avant de partir."
+continue_from: "Continuer depuis {place} : la carte des voyages au départ de {place}"
+report_problem: "Signaler un problème"
+report_title: "Signaler un problème sur cette liaison sur GitHub (compte GitHub nécessaire)"
+report_prompt: "Qu’est-ce qui ne va pas ? (p. ex. le train ne circule pas ce jour-là, autres horaires, meilleure correspondance)"
 
 # --- CO2 ---
 how: "Comment ?"

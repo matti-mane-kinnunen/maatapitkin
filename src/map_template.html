@@ -176,6 +176,16 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .share button { all: unset; cursor: pointer; font: 600 11px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase;
   border: 1px solid var(--rule); border-radius: 4px; padding: 5px 8px; color: var(--ink) }
 .share button:hover { border-color: var(--accent) }
+/* how far in N hours (IDEA-17) */
+.reach { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12px; color: var(--muted); padding: 6px 2px 0 }
+.reach label { font-weight: 500; color: var(--fg) }
+.reach input { flex: 1 1 10rem; max-width: 22rem; accent-color: var(--accent) }
+.reach output { font-variant-numeric: tabular-nums }
+#nodes .far, #labels .far { opacity: 0.12 }
+.board li.far { opacity: 0.35 }
+/* continue on another origin's map (IDEA-19); report a problem (IDEA-20) */
+.steps li.cont a { font-weight: 600; color: var(--accent) }
+.svc a.report { color: inherit; font-size: 12px; white-space: nowrap }
 .share button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
 .share input { flex: 1; min-width: 0; font: 12px var(--mono); color: var(--ink); background: transparent; border: 1px solid var(--rule); border-radius: 4px; padding: 4px 6px }
 .opts button { all: unset; cursor: pointer; border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px;
@@ -260,6 +270,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark day d3"><rect x="-9" y="-7" width="18" height="14" rx="4"/><text>3</text></g></svg>{{leg_day_begins}}</span>
         <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark hotel"><rect x="-10" y="-7" width="20" height="14" rx="4"/><path d="M-6 3.5V-3.5 M-6 1.5h12v2 M6 1.5v-1.5a1.5 1.5 0 0 0-1.5-1.5H-1v3 M-3.4 -1.3a0.01 0.01 0 1 0 0.02 0"/></g></svg>{{leg_hotel}}</span>
       </div>
+      <div class="reach" id="reach-box"><label for="reach">{{reach_label}}</label>
+        <input type="range" id="reach" min="6" step="6" aria-describedby="reach-out"><output id="reach-out" for="reach" aria-live="polite"></output></div>
       <div class="mapbox">
         <svg id="map" viewBox="0 0 __W__ __H__" role="img" aria-label="{{map_aria}}">
           <g id="land">__BASEMAP__</g>
@@ -282,7 +294,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
           <p>{{co2_factors_label}}<span id="co2-factors"></span>.
           {{co2_how_2}} <a id="co2-src" href="#" target="_blank" rel="noopener">{{co2_source}}</a></p>
         </div>
-        <div class="share"><button type="button" id="share">{{copy_link}}</button><span id="share-msg" role="status"></span></div>
+        <div class="share"><button type="button" id="share">{{copy_link}}</button><button type="button" id="ics" title="{{calendar_title}}">{{add_calendar}}</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
   </div>
@@ -847,7 +859,7 @@ function setVariant(date, allowed, start = curStart) {
   const v = allowed || !V.no ? V.yes : V.no;
   NET.routes = v.routes; NET.city_routes = v.city_routes || []; NET.unreached = v.unreached || [];
   ALL_ROUTES = [...NET.routes, ...NET.city_routes];
-  buildRows(); updateNodeDays(); updateSummary(); placeHits(); applyFilters();
+  buildRows(); updateNodeDays(); updateSummary(); placeHits(); applyFilters(); updateReach();
   const cur = curRoute && curRoute.capital;
   select(cur && routeOf(cur) ? cur : routeOf("Paris") ? "Paris" : NET.routes[0].capital);
 }
@@ -986,7 +998,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
     const chip = s.mode === "ferry" || s.mode === "local" ? `<span class="chip ${s.mode}">${T(s.mode === "local" ? "chip_metro" : s.night ? "chip_night_ferry" : "chip_ferry")}</span>`
       : s.night ? `<span class="chip night">${T("chip_night_train")}</span>` : "";
     li.innerHTML = `<div class="t">${s.timed ? s.dep_txt : `<em>${T("any_time")}</em>`}<br>${s.arr_txt}${s.timed ? "" : ` <em>${T("est")}</em>`}</div>
-      <div class="what"><b>${LN(s.from)} → ${LN(s.to)}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}</div>
+      <div class="what"><b>${LN(s.from)} → ${LN(s.to)}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}${NET.repo_url ? ` · <a class="report" href="${reportUrl(s, cap)}" target="_blank" rel="noopener" title="${T("report_title")}">${T("report_problem")}</a>` : ""}</div>
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
     const st = stretches.get(idx), url = st && bahnUrl(st.from, st.to, st.dep);
@@ -997,6 +1009,13 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       ol.appendChild(b);
     }
   });
+  // the destination has a map of its own: carry on from there (IDEA-19)
+  const pg = (NET.pages || []).find(p => p.name === cap && p.name !== NET.origin);
+  if (pg) {
+    const li = document.createElement("li"); li.className = "cont";
+    li.innerHTML = `<div class="t"></div><div class="what"><a href="${pg.page}">${T("continue_from", { place: LN(cap) })} →</a></div>`;
+    ol.appendChild(li);
+  }
   if (fromMap || fromList) {
     // the timetable sits beside the map (below it on narrow screens), the list below both:
     // a click in the list or on the map brings the timetable into view, never the list
@@ -1086,6 +1105,94 @@ document.getElementById("guide-link").addEventListener("click", e => {   // keep
   e.preventDefault();
   document.getElementById("user-guide").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
 });
+// --- How far in N hours (IDEA-17): capitals within the door-to-door time light up -----------
+const reachEl = document.getElementById("reach"), reachOut = document.getElementById("reach-out");
+function updateReach() {
+  const caps = NET.routes, max = Math.max(6, Math.ceil(Math.max(...caps.map(r => r.door_to_door_min)) / 360) * 6);
+  // starts at "no limit"; stays there when the travel day or night-train choice changes the longest journey
+  reachEl.max = max; if (reachEl.dataset.all !== "0" || +reachEl.value > max) reachEl.value = max;
+  const h = +reachEl.value, lim = h >= max ? Infinity : h * 60;
+  const n = caps.filter(r => r.door_to_door_min <= lim).length;
+  reachOut.textContent = lim === Infinity ? T("reach_all", { total: caps.length }) : T("reach_out", { h, n, total: caps.length });
+  reachEl.setAttribute("aria-valuetext", reachOut.textContent);
+  const far = new Set(caps.filter(r => r.door_to_door_min > lim).map(r => r.capital));
+  for (const [name, n] of Object.entries(nodeEls)) if (name !== NET.origin) {
+    const isFar = far.has(name) || (lim !== Infinity && !caps.some(r => r.capital === name) && !!(P[name] && P[name].capital));
+    n.classList.toggle("far", isFar); labelEls[name]?.classList.toggle("far", isFar);
+  }
+  for (const { r, li } of rows) li.classList.toggle("far", lim !== Infinity && r.door_to_door_min > lim);
+}
+reachEl.addEventListener("input", () => { reachEl.dataset.all = +reachEl.value >= +reachEl.max ? "1" : "0"; updateReach(); });
+updateReach();
+
+// --- Add to calendar (IDEA-18): the selected journey as an .ics file, made here in the browser ------
+// Times in the data are local clock times (minutes from the travel date's midnight) at each place;
+// the file carries them in UTC, worked out with the place's time zone (journeys.py TZ).
+const tzOf = n => (NET.tz || {})[String((P[n] || {}).country || "").toUpperCase()] || "Europe/Berlin";
+function tzOffsetMin(tz, ms) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit",
+    day: "2-digit", hour: "2-digit", minute: "2-digit" }).formatToParts(new Date(ms)).map(x => [x.type, x.value]));
+  return Math.round((Date.UTC(+p.year, p.month - 1, +p.day, +p.hour, +p.minute) - Math.floor(ms / 60000) * 60000) / 60000);
+}
+function utcAt(t, place) {
+  const [y, m, d] = curDate.split("-").map(Number), local = Date.UTC(y, m - 1, d) + t * 60000, tz = tzOf(place);
+  let ms = local - tzOffsetMin(tz, local) * 60000;
+  return local - tzOffsetMin(tz, ms) * 60000;                 // second pass: right across a summer-time change
+}
+const icsTime = ms => new Date(ms).toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+const icsText = x => String(x).replace(/<[^>]*>/g, "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+const utf8 = new TextEncoder();
+const icsFold = line => {                     // lines of at most 75 bytes (RFC 5545), never splitting a character
+  const out = []; let cur = "", n = 0;
+  for (const ch of line) {
+    const b = utf8.encode(ch).length;
+    if (n + b > 74) { out.push(cur); cur = " "; n = 1; }
+    cur += ch; n += b;
+  }
+  out.push(cur); return out.join("\r\n");
+};
+function icsFor(r, cap) {
+  const now = icsTime(Date.now()), link = location.href.split("#")[0] + location.hash, ev = [];
+  const add = (start, end, summary, where, desc) => ev.push(["BEGIN:VEVENT", `UID:${now}-${ev.length}-${slug(cap)}@maatapitkin`, `DTSTAMP:${now}`,
+    `DTSTART:${icsTime(start)}`, `DTEND:${icsTime(Math.max(end, start + 60000))}`, `SUMMARY:${icsText(summary)}`,
+    where ? `LOCATION:${icsText(where)}` : "", `DESCRIPTION:${icsText(desc)}`, "END:VEVENT"].filter(Boolean));
+  const note = `${T("ics_check")}\n${link}`;
+  let lastArr = null, lastPlace = null;
+  for (const s of r.steps) {
+    if (s.kind === "leg") {
+      const kind = s.mode === "ferry" ? T(s.night ? "chip_night_ferry" : "chip_ferry") : s.mode === "local" ? T("chip_metro") : s.night ? T("chip_night_train") : "";
+      add(utcAt(s.dep, s.from), utcAt(s.arr, s.to), `${s.service ? s.service + " " : ""}${LN(s.from)} → ${LN(s.to)}`, LN(s.from),
+          `${kind ? kind + " · " : ""}${s.dep_txt} → ${s.arr_txt}${s.timed ? "" : " (" + T("est") + ")"}\n${note}`);
+      lastArr = s.arr; lastPlace = s.to;
+    } else if (s.kind === "stay" && lastArr != null) {
+      const next = r.steps[r.steps.indexOf(s) + 1], until = next && next.kind === "leg" ? next.dep : lastArr + s.minutes;
+      add(utcAt(lastArr, lastPlace), utcAt(until, lastPlace), T("overnight_in", { place: LN(s.place) }), LN(s.place), note);
+    }
+  }
+  return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Maata pitkin//Train map//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    `X-WR-CALNAME:${icsText(`${LN(NET.origin)} → ${LN(cap)}`)}`, ...ev.flat(), "END:VCALENDAR"].map(icsFold).join("\r\n") + "\r\n";
+}
+document.getElementById("ics").addEventListener("click", () => {
+  if (!curRoute) return;
+  const cap = [...Object.keys(buttons)].find(c => buttons[c].getAttribute("aria-pressed") === "true") || curRoute.capital;
+  const blob = new Blob([icsFor(curRoute, cap)], { type: "text/calendar;charset=utf-8" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `${slug(NET.origin)}-${slug(cap)}-${curDate}.ics`;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+});
+
+// --- "Report a problem" (IDEA-20): a GitHub issue, filled in, for one leg -------------------
+// Only a link: nothing is sent until the visitor submits it on GitHub. Issue text is untrusted -
+// no workflow reads it into a shell (D-47).
+function reportUrl(s, cap) {
+  const page = (NET.pages || []).find(p => p.name === NET.origin), link = location.href.split("#")[0] + hashFor(cap, 0);
+  const title = `Data: ${s.from} -> ${s.to} ${s.service || s.mode} (${weekdayOf(curDate)} ${s.dep_txt.split(" ").pop()})`;
+  const body = [`**Map:** ${page ? page.page : ""} (from ${NET.origin})`, `**Journey:** ${link}`,
+    `**Leg:** ${s.from} -> ${s.to}, ${s.service || s.mode}, ${s.dep_txt} -> ${s.arr_txt} (travel date ${curDate})`,
+    `**Data version:** ${String(NET.version || "").replace(/<[^>]*>/g, "")}`, "", `**${T("report_prompt")}**`, "", ""].join("\n");
+  return `${NET.repo_url.replace(/\/$/, "")}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+}
+
 fromHash(true);
 // copy a link to the journey on screen (works inside the blog's iframe too: it copies the map's own address)
 const shareBt = document.getElementById("share"), shareMsg = document.getElementById("share-msg");
