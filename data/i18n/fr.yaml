@@ -117,6 +117,10 @@ continue_from: "Continuer depuis {place} : la carte des voyages au départ de {p
 report_problem: "Signaler un problème"
 report_title: "Signaler un problème sur cette liaison sur GitHub (compte GitHub nécessaire)"
 report_prompt: "Qu’est-ce qui ne va pas ? (p. ex. le train ne circule pas ce jour-là, autres horaires, meilleure correspondance)"
+# IDEA-22 city texts (12.11.2026)
+wiki_about: "À propos de {place}"
+wiki_credit_pre: "Texte : "
+wiki_credit_post: " – contributeurs, CC BY-SA"
 
 # --- CO2 ---
 how: "Comment ?"

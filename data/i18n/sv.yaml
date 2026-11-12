@@ -117,6 +117,10 @@ continue_from: "Fortsätt från {place}: kartan över resor från {place}"
 report_problem: "Rapportera fel"
 report_title: "Rapportera ett fel i den här förbindelsen på GitHub (kräver ett GitHub-konto)"
 report_prompt: "Vad är fel? (t.ex. tåget går inte den dagen, andra tider, en bättre förbindelse)"
+# IDEA-22 city texts (12.11.2026)
+wiki_about: "Om {place}"
+wiki_credit_pre: "Text: "
+wiki_credit_post: " – skribenter, CC BY-SA"
 
 # --- CO2 ---
 how: "Hur?"

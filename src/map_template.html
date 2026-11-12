@@ -176,6 +176,12 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .share button { all: unset; cursor: pointer; font: 600 11px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase;
   border: 1px solid var(--rule); border-radius: 4px; padding: 5px 8px; color: var(--ink) }
 .share button:hover { border-color: var(--accent) }
+/* city texts from Wikivoyage / Wikipedia (IDEA-22) */
+.wiki { margin: 6px 14px 2px; padding: 6px 10px; border-left: 2px solid var(--accent); font-size: 13px; line-height: 1.45 }
+.wiki .src, .stay .src { display: block; margin-top: 2px; font-size: 11px; color: var(--muted) }
+.wiki a, .stay .src a { color: inherit }
+.stay details { margin-top: 4px; font-size: 13px; line-height: 1.45 }
+.stay summary { cursor: pointer; color: var(--muted); font-size: 12px }
 /* how far in N hours (IDEA-17) */
 .reach { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12px; color: var(--muted); padding: 6px 2px 0 }
 .reach label { font-weight: 500; color: var(--fg) }
@@ -294,6 +300,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
           <p>{{co2_factors_label}}<span id="co2-factors"></span>.
           {{co2_how_2}} <a id="co2-src" href="#" target="_blank" rel="noopener">{{co2_source}}</a></p>
         </div>
+        <div class="wiki" id="wiki" hidden></div>
         <div class="share"><button type="button" id="share">{{copy_link}}</button><button type="button" id="ics" title="{{calendar_title}}">{{add_calendar}}</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
@@ -969,7 +976,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
   document.getElementById("itin-sum").textContent = T("sum_arrive", { dur: dur(r.door_to_door_min), when: r.arrive_txt }) +
     (typeof F !== "undefined" && F.nightTrains === false ? T("sum_no_night") : "") +
     (curStart !== DEF_START ? (r0.same_as_default ? T("sum_same", { part: partLabel(DEF_START) }) : T("sum_from", { t: curStart })) : "");
-  showCO2(r);
+  showCO2(r); showWiki(cap);
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   const stretches = railStretches(r.steps);
@@ -987,6 +994,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
     if (s.kind === "stay") {
       li.className = "stay";
       li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>${T("overnight_in", { place: LN(s.place) })}</b><span class="chip hotel">${T("chip_hotel")}</span><div class="svc">${T("between_trains", { dur: dur(s.minutes) })}</div></div>`;
+      const w = wikiBox(s.place, true); if (w) li.querySelector(".what").appendChild(w);
       ol.appendChild(li); return;
     }
     if (s.kind === "change") {
@@ -1025,6 +1033,30 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       itinEl.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
   }
   try { const h = hashFor(cap, options.indexOf(r)); if (location.hash !== h) history.replaceState(null, "", h); } catch (e) {}
+}
+
+// City texts (IDEA-22): Wikivoyage, else Wikipedia, fetched weekly by fetch_wiki.py into the data.
+// Third-party text: always set as textContent, never as HTML; the credit links the article (CC BY-SA).
+function wikiCredit(e) {
+  const src = document.createElement("span"); src.className = "src";
+  const a = document.createElement("a"); a.href = e.url; a.target = "_blank"; a.rel = "noopener";
+  a.textContent = e.source === "wikipedia" ? "Wikipedia" : "Wikivoyage";
+  src.append(T("wiki_credit_pre"), a, T("wiki_credit_post"));
+  return src;
+}
+function wikiBox(place, folded) {
+  const e = (NET.wiki || {})[place]; if (!e) return null;
+  const p = document.createElement("p"); p.style.margin = "4px 0 0"; p.textContent = e.text;
+  if (!folded) return [p, wikiCredit(e)];
+  const d = document.createElement("details"), sm = document.createElement("summary");
+  sm.textContent = T("wiki_about", { place: LN(place) });
+  d.append(sm, p, wikiCredit(e));
+  return d;
+}
+function showWiki(cap) {
+  const box = document.getElementById("wiki"), parts = wikiBox(cap, false);
+  box.replaceChildren(...(parts || [])); box.firstChild && (box.firstChild.style.margin = "0");
+  box.hidden = !parts;
 }
 
 // "Check on bahn.de" (IDEA-14, D-54): one link per rail stretch - the trains between the start,

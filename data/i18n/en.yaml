@@ -120,6 +120,10 @@ continue_from: "Continue from {place}: the map of journeys from {place}"
 report_problem: "Report a problem"
 report_title: "Report a problem with this connection on GitHub (needs a GitHub account)"
 report_prompt: "What is wrong? (e.g. the train does not run that day, other times, a better connection)"
+# IDEA-22 city texts (12.11.2026)
+wiki_about: "About {place}"
+wiki_credit_pre: "Text: "
+wiki_credit_post: " contributors, CC BY-SA"
 
 # --- CO2 ---
 how: "How?"

@@ -190,6 +190,22 @@ def local_names(lang: str, places: dict) -> dict:
     return out
 
 
+def wiki_texts(lang: str, places: dict) -> dict:
+    """{key: {text, source, url}} for one map's language (IDEA-22): data/wiki/<lang>.yaml, written
+    by fetch_wiki.py, with data/wiki/overrides.yaml (<lang>: {place: {...}}) on top. Read only -
+    the build never fetches. Only plain fields are passed; the page shows the text as text."""
+    d = ROOT / "data" / "wiki"
+    f, o = d / f"{lang}.yaml", d / "overrides.yaml"
+    texts = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
+    over = ((yaml.safe_load(o.read_text()) or {}).get(lang) or {}) if o.exists() else {}
+    out = {}
+    for key in places:
+        e = {**(texts.get(key) or {}), **(over.get(key) or {})}
+        if e.get("text") and str(e.get("url", "")).startswith("https://"):
+            out[key] = {"text": str(e["text"]), "source": str(e.get("source", "")), "url": str(e["url"])}
+    return out
+
+
 def slugify(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
@@ -556,6 +572,7 @@ def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: di
         "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages,
         "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"),
         "repo_url": s.get("repo_url"), "tz": TZ,   # issue links (IDEA-20); calendar times (IDEA-18)
+        "wiki": wiki_texts(cfg.get("lang", "en"), net.places),   # city texts (IDEA-22)
         "lang": cfg.get("lang", "en"), "origin_from": origin_from,
         "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(),
         "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version,

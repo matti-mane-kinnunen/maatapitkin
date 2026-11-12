@@ -119,6 +119,10 @@ continue_from: "Jatka matkaa · {place}: kartta sieltä lähtevistä matkoista"
 report_problem: "Ilmoita virheestä"
 report_title: "Ilmoita tämän yhteyden virheestä GitHubissa (vaatii GitHub-tilin)"
 report_prompt: "Mikä on väärin? (esim. juna ei kulje sinä päivänä, eri ajat, parempi yhteys)"
+# IDEA-22 city texts (12.11.2026)
+wiki_about: "Tietoa: {place}"
+wiki_credit_pre: "Teksti: "
+wiki_credit_post: " – kirjoittajat, CC BY-SA"
 
 # --- CO2 ---
 how: "Miten?"
