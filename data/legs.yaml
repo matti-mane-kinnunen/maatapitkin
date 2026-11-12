@@ -2219,3 +2219,15 @@ legs:
   - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sat,sun", times: ["10:01-13:02", "12:01-15:02", "14:01-17:02", "16:01-19:02", "18:01-21:04", "20:01-23:02"], query: "*", checked: 2026-11-11, source: transitous}
   - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sun", times: ["06:35-09:57", "08:01-11:02", "19:01-22:44"], query: "*", checked: 2026-11-11, source: transitous}
   - {from: Hamburg, to: Copenhagen, dep: "09:51", arr: "14:55", service: "IC 306", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Köln, to: Brussels, service: "ICE", mode: train, times: ["07:43-09:35", "08:39-10:35", "09:43-11:35", "11:43-13:35", "12:39-14:35", "13:42-15:35",
+      "15:41-17:35", "16:43-18:35", "17:43-19:35", "19:43-21:35", "21:42-23:35"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Köln, to: Brussels, service: "ICE", mode: train, runs: "fri,sat,sun", times: ["10:39-12:35"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Köln, to: Brussels, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["06:39-08:35"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Köln, to: Brussels, service: "ICE", mode: train, runs: "mon-fri,sun", times: ["18:44-20:35"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Köln, to: Brussels, service: "ICE", mode: train, runs: "sun", times: ["14:43-16:35"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Prague, service: "ICE", mode: train, times: ["09:34-15:15", "13:32-19:15", "17:33-23:31"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Prague, service: "ICE", mode: train, runs: "fri", times: ["11:33-17:15", "15:33-21:25"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Prague, service: "ICE", mode: train, runs: "mon-thu,sat,sun", times: ["11:33-17:25", "15:33-21:15"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Vienna, service: "ICE", mode: train, times: ["13:32-23:49", "20:10-09:48"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Stockholm, service: "083 000306", mode: train, runs: "fri", times: ["21:53-11:10"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Stockholm, service: "083 000306", mode: train, runs: "mon-fri", times: ["09:51-21:17"], query: "*", checked: 2026-11-12, source: transitous}

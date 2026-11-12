@@ -1,6 +1,6 @@
 # Journeys from Paris
 
-_leave Paris Tue 17.11.2026 from 06:00 · generated 11.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Paris Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -120,12 +120,12 @@ Not reachable without night trains: Valletta, Kyiv
 | Vatican | Tue 17.11. 18:22 | Wed 18.11. 14:29 | 20 h 07 min | arrives 20 h 09 min later |
 | Prague | Tue 17.11. 17:52 | Wed 18.11. 10:22 | 16 h 30 min | arrives 13 h 07 min later |
 | Vienna | Tue 17.11. 17:52 | Wed 18.11. 11:32 | 17 h 40 min | arrives 14 h 00 min later |
-| Copenhagen | Tue 17.11. 17:52 | Wed 18.11. 15:38 | 21 h 46 min | arrives 17 h 46 min later |
+| Copenhagen | Tue 17.11. 17:52 | Wed 18.11. 14:55 | 21 h 03 min | arrives 17 h 03 min later |
 | Bratislava | Tue 17.11. 17:52 | Wed 18.11. 13:10 | 19 h 18 min | arrives 13 h 58 min later |
 | Ljubljana | Tue 17.11. 17:52 | Wed 18.11. 16:40 | 22 h 48 min | arrives 8 h 41 min later |
 | Warsaw | Tue 17.11. 17:52 | Wed 18.11. 13:00 | 19 h 08 min | arrives 4 h 52 min later |
 | Budapest | Tue 17.11. 17:52 | Wed 18.11. 15:35 | 21 h 43 min | arrives 7 h 06 min later |
-| Stockholm | Tue 17.11. 17:52 | Wed 18.11. 21:35 | 27 h 43 min | arrives 12 h 57 min later |
+| Stockholm | Tue 17.11. 17:52 | Wed 18.11. 21:17 | 27 h 25 min | arrives 12 h 39 min later |
 | Dublin | Wed 18.11. 07:09 | Thu 19.11. 11:00 | 28 h 51 min | arrives 24 h 00 min later |
 | Zagreb | Tue 17.11. 17:52 | Wed 18.11. 19:58 | 26 h 06 min | arrives 3 h 54 min later |
 | Oslo | Tue 17.11. 17:52 | Thu 19.11. 13:16 | 43 h 24 min | arrives 21 h 08 min later |
