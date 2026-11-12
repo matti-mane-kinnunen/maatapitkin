@@ -43,8 +43,6 @@ legs:
   - {from: Pozzallo, to: Valletta, dep: "21:30", arr: "23:15", service: "VirtuFerries", mode: ferry, checked: 2026-10-31, source: manual}
 
   # --- Iberia ---------------------------------------------------------------
-  - {from: Madrid,    to: Badajoz,   dep: "10:55", arr: "16:11", service: MD, mode: train}
-  - {from: Badajoz,   to: Abrantes,  dep: "19:41", arr: "20:52", service: R, mode: train}
   - {from: Abrantes,  to: Lisbon,    dep: "21:02", arr: "22:20", service: IC, mode: train}
 
   # --- Ireland --------------------------------------------------------------
@@ -2238,3 +2236,7 @@ legs:
   - {from: Madrid, to: Badajoz, dep: "08:51", arr: "13:38", service: "A 190", mode: train, checked: 2026-11-12, source: manual}
   - {from: Badajoz, to: Entroncamento, dep: "14:09", arr: "15:55", service: "R 482", mode: train, checked: 2026-11-12, source: manual}
   - {from: Entroncamento, to: Lisbon, dep: "15:59", arr: "17:00", service: "IC 512", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Madrid, to: Badajoz, dep: "16:17", arr: "21:15", service: "A 192", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Madrid, to: Badajoz, dep: "18:20", arr: "23:12", service: "A 194", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Badajoz, to: Abrantes, dep: "14:09", arr: "15:22", service: "R 482", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Badajoz, to: Abrantes, dep: "19:41", arr: "20:53", service: "R 486", mode: train, checked: 2026-11-12, source: manual}

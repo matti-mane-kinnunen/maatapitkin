@@ -240,8 +240,9 @@ Syracuse -> Pozzallo : *
 Barcelona -> Madrid : *
 Madrid -> Sevilla : *
 Sevilla -> Granada : *
-Madrid -> Badajoz : MD 10:55-16:11   # 2023 times - Transitous has no trains here; check by hand
-Badajoz -> Abrantes : R 19:41-20:52   # 2023 times - Transitous has no trains here; check by hand
+# Madrid -> Badajoz : MD 10:55-16:11 – 2023 times, no longer runs (bahn.de 12.11.2026: three direct Alvias, below)
+Badajoz -> Abrantes : R 482 14:09-15:22   # daily (Matti, bahn.de 12.11.2026); Transitous has no trains here
+Badajoz -> Abrantes : R 486 19:41-20:53   # daily (Matti, bahn.de 12.11.2026); replaces the 2023 time R 19:41-20:52
 Abrantes -> Lisbon : IC 21:02-22:20   # 2023 times - Transitous has no trains here; check by hand
 Dublin -> Belfast : *
 Dublin -> Galway : *
@@ -585,6 +586,8 @@ Göteborg -> Oslo : IC 398 20:10-23:47    # the lookup found only the 09:16 (and
 # -- Hamburg -> Lisbon via Brussels, Lyon and Madrid (Matti, bahn.de 24.11.2026; arrive Thu 17:00, the map had Thu 22:20)
 Brussels -> Lyon : *
 Barcelona -> Madrid : IRY 6200 19:40-22:42      # Iryo, not in Transitous; run days not checked, entered as daily
-Madrid -> Badajoz : A 190 08:51-13:38           # Alvia; run days not checked, entered as daily
+Madrid -> Badajoz : A 190 08:51-13:38           # Alvia (Chamartín 08:30, Atocha 08:51); daily (Matti, bahn.de)
+Madrid -> Badajoz : A 192 16:17-21:15           # Alvia, from Chamartín (Matti, bahn.de); daily (Matti, bahn.de)
+Madrid -> Badajoz : A 194 18:20-23:12           # Alvia, from Chamartín (Matti, bahn.de); daily (Matti, bahn.de)
 Badajoz -> Entroncamento : R 482 14:09-15:55    # via Elvas and Abrantes; run days not checked, entered as daily
 Entroncamento -> Lisbon : IC 512 15:59-17:00    # run days not checked, entered as daily
