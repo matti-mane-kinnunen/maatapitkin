@@ -183,6 +183,7 @@ places:
   Villa San Giovanni: {lat: 38.215, lon: 15.634, country: "IT", aliases: [Villa, "Villa S.Giovanni", "Villa S. Giovanni"], ferry_checkin: 30, db: 8300342}  # foot-passenger boats leave next to the station (D-36)
   Lugano: {lat: 46.005, lon: 8.947, country: "CH", db: 8505300}  # station; corrected by hand 1.11.2026 (was the Resega stop)
   Koblenz: {lat: 50.349, lon: 7.590, country: "DE", db: 8000206}  # added by add_leg.py
+  Bonn: {lat: 50.732, lon: 7.097, country: DE, db: 8000044}  # Bonn Hbf, set by hand 12.11.2026 (Trainline list); NJ 448 to Brussels stops here (Matti, bahn.de)
   Stranraer: {lat: 54.906, lon: -5.003, country: "GB", aliases: ["Stranraer Academy"], db: 7002152}  # added by add_leg.py
   Lille: {lat: 50.639, lon: 3.076, country: "FR", aliases: ["Lille Europe"], db: 8796003}  # added by add_leg.py
   Liège: {lat: 50.625, lon: 5.567, country: "BE", aliases: ["Liège-Guillemins"], db: 8800012}  # added by add_leg.py

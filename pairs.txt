@@ -574,3 +574,7 @@ Hamburg -> Prague : *
 Hamburg -> Vienna : *
 Hamburg -> Stockholm : *
 Hamburg -> Copenhagen : IC 306 09:51-14:55   # to København Syd; earliest of the day, no price on bahn.de (Matti, 12.11.2026)
+# -- Hamburg -> Lisbon (Matti, bahn.de 24.11.2026): ICE 921 Hamburg 22:45 -> Bonn 04:11, then the Nightjet to Brussels (43 h 15 to Lisbon; the map had 49 h 29 via Berlin)
+Hamburg -> Bonn : *
+Bonn -> Hamburg : *
+Bonn -> Brussels : NJ 448 night 05:18-09:59   # Nightjet (Berlin -> Brussels), reservation required; run days not checked, entered as daily
