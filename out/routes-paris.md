@@ -31,11 +31,11 @@ _leave Paris Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (m
 | Oslo | Tue 17.11. 07:16 | Wed 18.11. 16:08 | 32 h 52 min | 4 | 1 | 0 |  |
 | Vilnius | Tue 17.11. 07:51 | Wed 18.11. 17:25 | 32 h 34 min | 5 | 1 | 0 |  |
 | Belfast | Tue 17.11. 07:09 | Wed 18.11. 15:58 | 33 h 49 min | 3 | 0 | 1 (Holyhead) | fewest hotel nights: 39 h 58 min, 5 ch., 0 hotel |
+| Lisbon | Tue 17.11. 07:42 | Wed 18.11. 17:00 | 34 h 18 min | 4 | 0 | 1 (Madrid) |  |
 | Belgrade | Tue 17.11. 07:22 | Wed 18.11. 18:35 | 35 h 13 min | 5 | 1 | 0 |  |
 | Kyiv | Tue 17.11. 07:16 | Wed 18.11. 20:10 | 35 h 54 min | 4 | 1 | 0 |  |
 | Rabat | Tue 17.11. 07:42 | Wed 18.11. 20:22 | 37 h 40 min | 5 | 0 | 1 (Madrid) |  |
 | Valletta | Tue 17.11. 06:30 | Wed 18.11. 23:15 | 40 h 45 min | 4 | 1 | 0 |  |
-| Lisbon | Tue 17.11. 07:42 | Wed 18.11. 22:20 | 39 h 38 min | 4 | 0 | 1 (Madrid) |  |
 | Sarajevo | Tue 17.11. 06:30 | Wed 18.11. 23:55 | 41 h 25 min | 4 | 1 | 0 |  |
 | Bucharest | Tue 17.11. 07:22 | Thu 19.11. 08:23 | 48 h 01 min | 3 | 2 | 0 |  |
 | Helsinki | Tue 17.11. 07:16 | Thu 19.11. 08:35 | 48 h 19 min | 8 | 3 | 0 | fewest changes: 49 h 54 min, 4 ch., 0 hotel |
@@ -80,10 +80,10 @@ _Night trains and night buses left out; night ferries still used._
 | Warsaw | Wed 18.11. 13:00 | 29 h 44 min | 2 | 1 (Berlin) | +5 h 27 min |
 | Zagreb | Wed 18.11. 16:04 | 33 h 34 min | 3 | 0 | same |
 | Belfast | Wed 18.11. 15:58 | 33 h 49 min | 3 | 1 (Holyhead) | same |
+| Lisbon | Wed 18.11. 17:00 | 34 h 18 min | 4 | 1 (Madrid) | same |
 | Belgrade | Wed 18.11. 18:35 | 34 h 44 min | 6 | 1 (Vienna) | – |
 | Oslo | Wed 18.11. 21:14 | 37 h 58 min | 5 | 1 (Malmö) | +5 h 06 min |
 | Rabat | Wed 18.11. 20:22 | 37 h 40 min | 5 | 1 (Madrid) | same |
-| Lisbon | Wed 18.11. 22:20 | 39 h 38 min | 4 | 1 (Madrid) | same |
 | Sarajevo | Wed 18.11. 23:55 | 41 h 25 min | 4 | 0 | same |
 | Helsinki | Thu 19.11. 10:10 | 49 h 54 min | 5 | 1 (Malmö) | +1 h 35 min |
 | Vilnius | Thu 19.11. 11:35 | 51 h 19 min | 4 | 2 (Berlin, Mockava) | +18 h 45 min |
@@ -125,17 +125,17 @@ Not reachable without night trains: Valletta, Kyiv
 | Ljubljana | Tue 17.11. 17:52 | Wed 18.11. 16:40 | 22 h 48 min | arrives 8 h 41 min later |
 | Warsaw | Tue 17.11. 17:52 | Wed 18.11. 13:00 | 19 h 08 min | arrives 4 h 52 min later |
 | Budapest | Tue 17.11. 17:52 | Wed 18.11. 15:35 | 21 h 43 min | arrives 7 h 06 min later |
-| Stockholm | Tue 17.11. 17:52 | Wed 18.11. 21:17 | 27 h 25 min | arrives 12 h 39 min later |
+| Stockholm | Tue 17.11. 17:52 | Wed 18.11. 20:34 | 26 h 42 min | arrives 11 h 56 min later |
 | Dublin | Wed 18.11. 07:09 | Thu 19.11. 11:00 | 28 h 51 min | arrives 24 h 00 min later |
 | Zagreb | Tue 17.11. 17:52 | Wed 18.11. 19:58 | 26 h 06 min | arrives 3 h 54 min later |
-| Oslo | Tue 17.11. 17:52 | Thu 19.11. 13:16 | 43 h 24 min | arrives 21 h 08 min later |
+| Oslo | Tue 17.11. 17:52 | Wed 18.11. 23:47 | 29 h 55 min | arrives 7 h 39 min later |
 | Vilnius | Tue 17.11. 17:52 | Thu 19.11. 11:35 | 40 h 43 min | arrives 18 h 10 min later |
 | Belfast | Tue 17.11. 17:09 | Wed 18.11. 22:07 | 29 h 58 min | arrives 6 h 09 min later |
+| Lisbon | Wed 18.11. 07:42 | Thu 19.11. 17:00 | 34 h 18 min | arrives 24 h 00 min later |
 | Belgrade | Tue 17.11. 17:52 | Thu 19.11. 09:15 | 39 h 23 min | arrives 14 h 40 min later |
 | Kyiv | Tue 17.11. 17:52 | Thu 19.11. 09:49 | 38 h 57 min | arrives 13 h 39 min later |
 | Rabat | Wed 18.11. 07:42 | Thu 19.11. 20:22 | 37 h 40 min | arrives 24 h 00 min later |
 | Valletta | Wed 18.11. 06:30 | Thu 19.11. 23:15 | 40 h 45 min | arrives 24 h 00 min later |
-| Lisbon | Wed 18.11. 07:42 | Thu 19.11. 22:20 | 39 h 38 min | arrives 24 h 00 min later |
 | Sarajevo | Tue 17.11. 17:52 | Thu 19.11. 20:55 | 51 h 03 min | arrives 21 h 00 min later |
 | Bucharest | Tue 17.11. 17:52 | Thu 19.11. 10:37 | 39 h 45 min | arrives 2 h 14 min later |
 | Helsinki | Tue 17.11. 17:52 | Thu 19.11. 20:39 | 49 h 47 min | arrives 12 h 04 min later |
@@ -205,6 +205,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Kolding | Tue 17.11. 19:44 | 12 h 28 min | 2 | 0 |
 | Holyhead | Tue 17.11. 18:54 | 12 h 45 min | 1 | 0 |
 | Stranraer | Tue 17.11. 18:57 | 12 h 48 min | 3 | 0 |
+| Bonn | Tue 17.11. 20:13 | 12 h 57 min | 2 | 0 |
 | Cairnryan | Tue 17.11. 19:43 | 13 h 34 min | 4 | 0 |
 | Foggia | Tue 17.11. 21:19 | 14 h 49 min | 2 | 0 |
 | Bari | Tue 17.11. 21:30 | 15 h 00 min | 1 | 0 |
@@ -233,6 +234,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Syracuse | Wed 18.11. 11:29 | 28 h 59 min | 2 | 0 |
 | Szeged | Wed 18.11. 12:16 | 29 h 00 min | 4 | 0 |
 | Sundsvall | Wed 18.11. 12:56 | 29 h 40 min | 5 | 0 |
+| Badajoz | Wed 18.11. 13:38 | 29 h 56 min | 2 | 1 |
 | Mockava | Wed 18.11. 14:43 | 29 h 52 min | 4 | 0 |
 | Algeciras | Wed 18.11. 13:59 | 30 h 17 min | 2 | 1 |
 | Bastia | Wed 18.11. 14:15 | 31 h 45 min | 2 | 1 |
@@ -240,17 +242,19 @@ Not reachable without night trains: Valletta, Kyiv
 | Galway | Wed 18.11. 13:51 | 31 h 42 min | 3 | 1 |
 | Kaunas | Wed 18.11. 16:20 | 31 h 29 min | 5 | 0 |
 | Pozzallo | Wed 18.11. 15:58 | 33 h 28 min | 3 | 0 |
-| Badajoz | Wed 18.11. 16:11 | 32 h 29 min | 2 | 1 |
+| Abrantes | Wed 18.11. 15:22 | 32 h 40 min | 3 | 1 |
 | Subotica | Wed 18.11. 16:24 | 33 h 02 min | 4 | 0 |
 | Östersund | Wed 18.11. 16:31 | 33 h 15 min | 6 | 0 |
 | Tarifa | Wed 18.11. 16:45 | 33 h 03 min | 3 | 1 |
+| Entroncamento | Wed 18.11. 15:55 | 33 h 13 min | 3 | 1 |
 | Kaisiadorys | Wed 18.11. 18:18 | 33 h 27 min | 6 | 0 |
 | Umeå | Wed 18.11. 17:27 | 34 h 11 min | 6 | 0 |
 | Tanger Med | Wed 18.11. 16:30 | 33 h 48 min | 3 | 1 |
 | Storlien | Wed 18.11. 18:27 | 35 h 11 min | 6 | 0 |
 | Tanger | Wed 18.11. 18:00 | 35 h 18 min | 4 | 1 |
 | Trondheim | Wed 18.11. 20:47 | 37 h 31 min | 7 | 0 |
-| Abrantes | Wed 18.11. 20:52 | 38 h 10 min | 3 | 1 |
+| Faro | Wed 18.11. 20:23 | 37 h 41 min | 5 | 1 |
+| Porto | Wed 18.11. 20:43 | 38 h 01 min | 5 | 1 |
 | Boden | Wed 18.11. 22:09 | 38 h 53 min | 7 | 0 |
 | Casablanca | Wed 18.11. 21:17 | 38 h 35 min | 5 | 1 |
 | Vaasa | Thu 19.11. 00:00 | 39 h 44 min | 7 | 0 |
@@ -260,9 +264,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Stavanger | Thu 19.11. 07:21 | 48 h 05 min | 5 | 0 |
 | Seinäjoki | Thu 19.11. 09:15 | 48 h 59 min | 8 | 1 |
 | Tampere | Thu 19.11. 10:53 | 50 h 37 min | 9 | 0 |
-| Porto | Thu 19.11. 09:43 | 51 h 01 min | 5 | 2 |
 | Patras | Thu 19.11. 13:00 | 53 h 30 min | 2 | 0 |
-| Faro | Thu 19.11. 11:27 | 52 h 45 min | 5 | 2 |
 | Narvik | Thu 19.11. 12:37 | 53 h 21 min | 5 | 0 |
 | Ruse | Thu 19.11. 13:40 | 53 h 18 min | 4 | 0 |
 | Valga | Thu 19.11. 14:13 | 53 h 22 min | 7 | 1 |
@@ -569,6 +571,16 @@ _Fewest hotel nights: 39 h 58 min, arrive Wed 18.11. 22:07, 5 changes, 0 hotel n
 - Wait 5 h 15 min in Cairnryan
 - Wed 18.11. 19:05 → Wed 18.11. 22:07  **Cairnryan → Belfast**  Stenaline
 
+### Lisbon
+_Fastest: 34 h 18 min, arrive Wed 18.11. 17:00, 4 changes, 1 hotel nights_
+
+- Tue 17.11. 07:42 → Tue 17.11. 14:32  **Paris → Barcelona**  TGV INOUI
+- Tue 17.11. 15:00 → Tue 17.11. 18:17  **Barcelona → Madrid**  AVE
+- 🛏 Overnight in Madrid (Tue 17.11. 18:17 → Wed 18.11. 08:51)
+- Wed 18.11. 08:51 → Wed 18.11. 13:38  **Madrid → Badajoz**  A 190
+- Wed 18.11. 14:09 → Wed 18.11. 15:55  **Badajoz → Entroncamento**  R 482
+- Wed 18.11. 15:59 → Wed 18.11. 17:00  **Entroncamento → Lisbon**  IC 512
+
 ### Belgrade
 _Fastest: 35 h 13 min, arrive Wed 18.11. 18:35, 5 changes, 0 hotel nights_
 
@@ -613,17 +625,6 @@ _Fastest: 40 h 45 min, arrive Wed 18.11. 23:15, 4 changes, 0 hotel nights_
 - Wed 18.11. 14:45 → Wed 18.11. 15:58  **Syracuse → Pozzallo**  R 12936
 - Wait 5 h 32 min in Pozzallo
 - Wed 18.11. 21:30 → Wed 18.11. 23:15  **Pozzallo → Valletta**  VirtuFerries
-
-### Lisbon
-_Fastest: 39 h 38 min, arrive Wed 18.11. 22:20, 4 changes, 1 hotel nights_
-
-- Tue 17.11. 07:42 → Tue 17.11. 14:32  **Paris → Barcelona**  TGV INOUI
-- Tue 17.11. 15:00 → Tue 17.11. 18:17  **Barcelona → Madrid**  AVE
-- 🛏 Overnight in Madrid (Tue 17.11. 18:17 → Wed 18.11. 10:55)
-- Wed 18.11. 10:55 → Wed 18.11. 16:11  **Madrid → Badajoz**  MD
-- Wait 3 h 30 min in Badajoz
-- Wed 18.11. 19:41 → Wed 18.11. 20:52  **Badajoz → Abrantes**  R
-- Wed 18.11. 21:02 → Wed 18.11. 22:20  **Abrantes → Lisbon**  IC
 
 ### Sarajevo
 _Fastest: 41 h 25 min, arrive Wed 18.11. 23:55, 4 changes, 0 hotel nights_

@@ -7,7 +7,7 @@
   "2026-11-22"
  ],
  "draft": false,
- "departures": 6672,
+ "departures": 6702,
  "warnings": 0,
  "capitals": {
   "2026-11-17": {
@@ -28,10 +28,10 @@
   }
  },
  "places_reached": {
-  "2026-11-17": 166,
-  "2026-11-20": 166,
-  "2026-11-21": 166,
-  "2026-11-22": 166
+  "2026-11-17": 168,
+  "2026-11-20": 168,
+  "2026-11-21": 168,
+  "2026-11-22": 168
  },
  "reached": {
   "capitals": [
@@ -149,6 +149,7 @@
    "Bern",
    "Boden",
    "Bologna",
+   "Bonn",
    "Bordeaux",
    "Bratislava",
    "Brescia",
@@ -166,6 +167,7 @@
    "Dublin",
    "Durr\u00ebs",
    "Edinburgh",
+   "Entroncamento",
    "Faro",
    "Florence",
    "Foggia",
@@ -303,7 +305,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -324,10 +326,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -445,6 +447,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -462,6 +465,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",
@@ -599,7 +603,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -620,10 +624,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -741,6 +745,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -757,6 +762,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",
@@ -895,7 +901,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -916,10 +922,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -1037,6 +1043,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -1054,6 +1061,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",
@@ -1191,7 +1199,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -1212,10 +1220,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -1332,6 +1340,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -1349,6 +1358,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",
@@ -1487,7 +1497,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -1508,10 +1518,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -1629,6 +1639,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -1646,6 +1657,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",
@@ -1783,7 +1795,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -1804,10 +1816,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -1925,6 +1937,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -1942,6 +1955,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",
@@ -2079,7 +2093,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6672,
+   "departures": 6702,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -2100,10 +2114,10 @@
     }
    },
    "places_reached": {
-    "2026-11-17": 166,
-    "2026-11-20": 166,
-    "2026-11-21": 166,
-    "2026-11-22": 166
+    "2026-11-17": 168,
+    "2026-11-20": 168,
+    "2026-11-21": 168,
+    "2026-11-22": 168
    },
    "reached": {
     "capitals": [
@@ -2223,6 +2237,7 @@
      "Bern",
      "Boden",
      "Bologna",
+     "Bonn",
      "Bordeaux",
      "Bratislava",
      "Brescia",
@@ -2240,6 +2255,7 @@
      "Dublin",
      "Durr\u00ebs",
      "Edinburgh",
+     "Entroncamento",
      "Faro",
      "Florence",
      "Foggia",

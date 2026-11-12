@@ -2240,3 +2240,20 @@ legs:
   - {from: Madrid, to: Badajoz, dep: "18:20", arr: "23:12", service: "A 194", mode: train, checked: 2026-11-12, source: manual}
   - {from: Badajoz, to: Abrantes, dep: "14:09", arr: "15:22", service: "R 482", mode: train, checked: 2026-11-12, source: manual}
   - {from: Badajoz, to: Abrantes, dep: "19:41", arr: "20:53", service: "R 486", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Hamburg, to: Bonn, service: "ICE", mode: train, runs: "fri", times: ["22:22-04:11"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Bonn, service: "ICE", mode: train, runs: "mon-fri", times: ["12:09-16:13", "16:09-20:13"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Bonn, service: "ICE", mode: train, runs: "mon-thu,sat", times: ["22:45-04:11"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Bonn, service: "ICE", mode: train, runs: "sun", times: ["22:22-04:22"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Bonn, to: Hamburg, service: "ICE", mode: train, runs: "mon-fri", times: ["09:44-13:49", "11:44-15:49"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Bonn, to: Hamburg, service: "ICE", mode: train, runs: "mon-fri,sat", times: ["01:37-06:50"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Malmö, service: "083 000306", mode: train, runs: "fri", times: ["23:59-06:30"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Malmö, service: "083 000306", mode: train, runs: "mon-fri", times: ["09:51-15:35"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Hamburg, to: Malmö, service: "083 000306", mode: train, runs: "sun", times: ["21:50-06:30"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, times: ["08:17-12:00", "13:17-16:59", "16:17-20:02"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "fri", times: ["18:02-21:59"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "mon-fri", times: ["06:37-10:28"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "mon-fri,sun", times: ["10:09-14:00"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "mon-thu", times: ["18:09-21:59"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "sat", times: ["10:17-14:00"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "sat,sun", times: ["06:27-10:28"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "sun", times: ["18:00-21:59"], query: "*", checked: 2026-11-12, source: transitous}
