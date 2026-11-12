@@ -6,7 +6,7 @@ starting city, updated every week.
 **Maps.** https://matti-mane-kinnunen.github.io/maatapitkin/ – one page per origin, listed under
 `origins` in places.yaml: `index.html` (Helsinki), `stockholm.html` (Tågsemester),
 `copenhagen.html` (Togferie), `london.html` (Train holiday), `berlin.html` (Zugurlaub), `paris.html`
-(Voyage en train), `rome.html` (Viaggio in treno). Each map is in its city's language – Finnish, Swedish, Danish, English, German,
+(Voyage en train), `rome.html` (Viaggio in treno), `hamburg.html` (Zugreise ab Hamburg). Each map is in its city's language – Finnish, Swedish, Danish, English, German,
 French, Italian (D-53) – links to the others at the
 top, has a short user guide at the end, and under each stretch of trains a *Check on bahn.de* link
 that opens Deutsche Bahn's planner at that departure (D-55).
@@ -95,7 +95,7 @@ Outputs in `out/`:
 Every Monday at 03:00 (Finnish winter time) GitHub Actions looks up next week's trains,
 rebuilds the map for Tue, Fri, Sat and Sun, checks it and publishes it at
 https://matti-mane-kinnunen.github.io/maatapitkin/ (Helsinki), with `stockholm.html`,
-`copenhagen.html`, `london.html`, `berlin.html`, `paris.html` and `rome.html` next to it.
+`copenhagen.html`, `london.html`, `berlin.html`, `paris.html`, `rome.html` and `hamburg.html` next to it.
 
 **In a blog post** (Blogger: *HTML view*), a link that opens the map full screen works best – a blog
 column is too narrow for the map and the list side by side:
