@@ -568,3 +568,9 @@ Basel -> Köln : *
 Frankfurt -> Köln : *
 Köln -> Amsterdam : *
 Zürich -> Basel : *
+# -- Hamburg map (IDEA-16, 12.11.2026): gaps from the test build
+Köln -> Brussels : *
+Hamburg -> Prague : *
+Hamburg -> Vienna : *
+Hamburg -> Stockholm : *
+Hamburg -> Copenhagen : IC 306 09:51-14:55   # to København Syd; earliest of the day, no price on bahn.de (Matti, 12.11.2026)

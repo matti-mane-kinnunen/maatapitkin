@@ -2218,3 +2218,4 @@ legs:
   - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sat", times: ["06:35-09:56", "07:01-10:02", "07:13-10:42"], query: "*", checked: 2026-11-11, source: transitous}
   - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sat,sun", times: ["10:01-13:02", "12:01-15:02", "14:01-17:02", "16:01-19:02", "18:01-21:04", "20:01-23:02"], query: "*", checked: 2026-11-11, source: transitous}
   - {from: Venice, to: Trieste, service: "RV", mode: train, runs: "sun", times: ["06:35-09:57", "08:01-11:02", "19:01-22:44"], query: "*", checked: 2026-11-11, source: transitous}
+  - {from: Hamburg, to: Copenhagen, dep: "09:51", arr: "14:55", service: "IC 306", mode: train, checked: 2026-11-12, source: manual}
