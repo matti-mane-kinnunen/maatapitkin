@@ -95,13 +95,14 @@ places:
   Syracuse:   {lat: 37.069, lon: 15.282, country: IT, db: 8300338}
   Pozzallo:   {lat: 36.727, lon: 14.849, country: IT, db: 8302642}
   Valletta:   {lat: 35.898, lon: 14.514, capital: true, country: MT}
-  Barcelona:  {lat: 41.379, lon: 2.140, country: ES, db: 7100064}
+  Barcelona:  {lat: 41.379, lon: 2.140, country: ES, min_transfer: 15, db: 7100064}  # Sants: bahn.de plans 17 min AVE -> Iryo (Lisbon from Hamburg, Matti 12.11.2026)
   Madrid:     {lat: 40.407, lon: -3.691, capital: true, country: ES, min_transfer: 40, db: 7100049}  # Chamartín <-> Atocha
   Sevilla:    {lat: 37.392, lon: -5.975, country: ES, aliases: [Seville], db: 7100180}
   Granada:    {lat: 37.184, lon: -3.610, country: ES, db: 7100182}
   Malaga:     {lat: 36.712, lon: -4.433, country: ES, db: 7100045}
   Badajoz:    {lat: 38.888, lon: -6.968, country: ES, db: 7100035}
   Abrantes:   {lat: 39.448, lon: -8.196, country: PT, min_transfer: 10, db: 9400005}  # small border/junction station, planned connections (D-36)
+  Entroncamento: {lat: 39.462, lon: -8.474, country: PT, min_transfer: 4, db: 9400010}  # junction; R 482 from Badajoz meets IC 512 to Lisbon in 4 min, a planned connection (D-36; Matti, bahn.de 12.11.2026)
   Lisbon:     {lat: 38.714, lon: -9.123, capital: true, country: PT, aliases: [Lisboa, Lissabon], db: 9400009}
   Bucharest:  {lat: 44.447, lon: 26.075, capital: true, country: RO, aliases: [București, Bucuresti, Bukarest], db: 5300007}
   Chisinau:   {lat: 47.003, lon: 28.861, capital: true, country: MD, aliases: [Chișinău, Kishinev], db: 2300010}

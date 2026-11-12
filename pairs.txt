@@ -577,8 +577,14 @@ Hamburg -> Copenhagen : IC 306 09:51-14:55   # to København Syd; earliest of th
 # -- Hamburg -> Lisbon (Matti, bahn.de 24.11.2026): ICE 921 Hamburg 22:45 -> Bonn 04:11, then the Nightjet to Brussels (43 h 15 to Lisbon; the map had 49 h 29 via Berlin)
 Hamburg -> Bonn : *
 Bonn -> Hamburg : *
-Bonn -> Brussels : NJ 448 night 05:18-09:59   # Nightjet (Berlin -> Brussels), reservation required; run days not checked, entered as daily
+Bonn -> Brussels : NJ 448 night 05:18-09:59 mon,wed,fri   # Nightjet Berlin -> Brussels, leaves Berlin Tue, Thu, Sun (bahn.de, 15.11.–10.12.2026), so Bonn Wed, Fri, Mon mornings; reservation required
 # -- Hamburg -> Oslo same day (Matti, bahn.de): IC 306 Hamburg 09:51 -> Malmö 15:35, X2 450 Malmö 17:31 -> Göteborg 19:50, IC 398 Göteborg 20:10 -> Oslo 23:47 (13 h 56; the map had 26 h 23 with a hotel night in Göteborg)
 Hamburg -> Malmö : *
 Malmö -> Göteborg : X2 450 17:31-19:50   # SJ, reservation required; run days not checked, entered as daily
 Göteborg -> Oslo : IC 398 20:10-23:47    # the lookup found only the 09:16 (and a Sunday 16:10); run days not checked, entered as daily
+# -- Hamburg -> Lisbon via Brussels, Lyon and Madrid (Matti, bahn.de 24.11.2026; arrive Thu 17:00, the map had Thu 22:20)
+Brussels -> Lyon : *
+Barcelona -> Madrid : IRY 6200 19:40-22:42      # Iryo, not in Transitous; run days not checked, entered as daily
+Madrid -> Badajoz : A 190 08:51-13:38           # Alvia; run days not checked, entered as daily
+Badajoz -> Entroncamento : R 482 14:09-15:55    # via Elvas and Abrantes; run days not checked, entered as daily
+Entroncamento -> Lisbon : IC 512 15:59-17:00    # run days not checked, entered as daily

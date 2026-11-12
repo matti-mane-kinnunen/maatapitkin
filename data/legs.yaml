@@ -2231,6 +2231,10 @@ legs:
   - {from: Hamburg, to: Vienna, service: "ICE", mode: train, times: ["13:32-23:49", "20:10-09:48"], query: "*", checked: 2026-11-12, source: transitous}
   - {from: Hamburg, to: Stockholm, service: "083 000306", mode: train, runs: "fri", times: ["21:53-11:10"], query: "*", checked: 2026-11-12, source: transitous}
   - {from: Hamburg, to: Stockholm, service: "083 000306", mode: train, runs: "mon-fri", times: ["09:51-21:17"], query: "*", checked: 2026-11-12, source: transitous}
-  - {from: Bonn, to: Brussels, dep: "05:18", arr: "09:59", service: "NJ 448", mode: train, night: true, checked: 2026-11-12, source: manual}
+  - {from: Bonn, to: Brussels, dep: "05:18", arr: "09:59", service: "NJ 448", mode: train, runs: "mon,wed,fri", night: true, checked: 2026-11-12, source: manual}
   - {from: Malmö, to: Göteborg, dep: "17:31", arr: "19:50", service: "X2 450", mode: train, checked: 2026-11-12, source: manual}
   - {from: Göteborg, to: Oslo, dep: "20:10", arr: "23:47", service: "IC 398", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Barcelona, to: Madrid, dep: "19:40", arr: "22:42", service: "IRY 6200", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Madrid, to: Badajoz, dep: "08:51", arr: "13:38", service: "A 190", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Badajoz, to: Entroncamento, dep: "14:09", arr: "15:55", service: "R 482", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Entroncamento, to: Lisbon, dep: "15:59", arr: "17:00", service: "IC 512", mode: train, checked: 2026-11-12, source: manual}
