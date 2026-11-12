@@ -2232,3 +2232,5 @@ legs:
   - {from: Hamburg, to: Stockholm, service: "083 000306", mode: train, runs: "fri", times: ["21:53-11:10"], query: "*", checked: 2026-11-12, source: transitous}
   - {from: Hamburg, to: Stockholm, service: "083 000306", mode: train, runs: "mon-fri", times: ["09:51-21:17"], query: "*", checked: 2026-11-12, source: transitous}
   - {from: Bonn, to: Brussels, dep: "05:18", arr: "09:59", service: "NJ 448", mode: train, night: true, checked: 2026-11-12, source: manual}
+  - {from: Malmö, to: Göteborg, dep: "17:31", arr: "19:50", service: "X2 450", mode: train, checked: 2026-11-12, source: manual}
+  - {from: Göteborg, to: Oslo, dep: "20:10", arr: "23:47", service: "IC 398", mode: train, checked: 2026-11-12, source: manual}

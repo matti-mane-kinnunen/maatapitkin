@@ -578,3 +578,7 @@ Hamburg -> Copenhagen : IC 306 09:51-14:55   # to København Syd; earliest of th
 Hamburg -> Bonn : *
 Bonn -> Hamburg : *
 Bonn -> Brussels : NJ 448 night 05:18-09:59   # Nightjet (Berlin -> Brussels), reservation required; run days not checked, entered as daily
+# -- Hamburg -> Oslo same day (Matti, bahn.de): IC 306 Hamburg 09:51 -> Malmö 15:35, X2 450 Malmö 17:31 -> Göteborg 19:50, IC 398 Göteborg 20:10 -> Oslo 23:47 (13 h 56; the map had 26 h 23 with a hotel night in Göteborg)
+Hamburg -> Malmö : *
+Malmö -> Göteborg : X2 450 17:31-19:50   # SJ, reservation required; run days not checked, entered as daily
+Göteborg -> Oslo : IC 398 20:10-23:47    # the lookup found only the 09:16 (and a Sunday 16:10); run days not checked, entered as daily
