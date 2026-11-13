@@ -2,10 +2,11 @@
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
 Lisbon:
   fetched: '2026-11-13'
-  revid: 1384546981
-  source: wikipedia
-  text: Lisbon is the capital and most populous city of Portugal, with an estimated population of 658,236 as of
-    2025, within its administrative limits and 3,353,000 within the metropolis, as of 2025. The city lies in the
-    western part of the Iberian Peninsula, fronting the northern shore of the River Tagus.
+  revid: 5409287
+  source: wikivoyage
+  text: Lisbon is the capital of Portugal situated on seven hills at the wide mouth of the river Tagus where it
+    meets the Atlantic Ocean. With 545,000 residents in the city and 3.0 million in the Lisbon Region and a thriving
+    mix of Portugal's rich history and vivid contemporary culture, Lisbon enchants travellers with its white bleached
+    limestone buildings, intimate alleyways, and an easy going charm that makes it a popular year round destination.
   title: Lisbon
-  url: https://en.wikipedia.org/wiki/Lisbon
+  url: https://en.wikivoyage.org/wiki/Lisbon
