@@ -1,0 +1,9 @@
+# City texts in 'de' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
+# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Lisbon:
+  fetched: '2026-11-13'
+  revid: 1807935
+  source: wikivoyage
+  text: Die bunte Metropole Lissabon ist die Hauptstadt und größte Stadt Portugals.
+  title: Lissabon
+  url: https://de.wikivoyage.org/wiki/Lissabon

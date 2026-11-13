@@ -1,0 +1,9 @@
+# City texts in 'fi' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
+# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Lisbon:
+  fetched: '2026-11-13'
+  revid: 53149
+  source: wikivoyage
+  text: Lissabon on Portugalin pääkaupunki, jossa myös järjestettiin maailmannäyttely 1998.
+  title: Lissabon
+  url: https://fi.wikivoyage.org/wiki/Lissabon

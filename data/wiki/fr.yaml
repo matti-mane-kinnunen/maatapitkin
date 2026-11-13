@@ -1,0 +1,9 @@
+# City texts in 'fr' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
+# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Lisbon:
+  fetched: '2026-11-13'
+  revid: 672822
+  source: wikivoyage
+  text: Lisbonne est la capitale et la plus grande ville du Portugal.
+  title: Lisbonne
+  url: https://fr.wikivoyage.org/wiki/Lisbonne

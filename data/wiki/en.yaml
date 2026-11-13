@@ -1,0 +1,10 @@
+# City texts in 'en' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
+# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Lisbon:
+  fetched: '2026-11-13'
+  revid: 5409287
+  source: wikivoyage
+  text: Lisbon is the capital of Portugal situated on seven hills at the wide mouth of the river Tagus where it
+    meets the Atlantic Ocean.
+  title: Lisbon
+  url: https://en.wikivoyage.org/wiki/Lisbon

@@ -1,0 +1,9 @@
+# City texts in 'sv' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
+# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Lisbon:
+  fetched: '2026-11-13'
+  revid: 91027
+  source: wikivoyage
+  text: Lissabon (Lisboa) är Portugals huvudstad. Det är en gammal historisk stad med hamn mot Atlanten.
+  title: Lissabon
+  url: https://sv.wikivoyage.org/wiki/Lissabon

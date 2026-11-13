@@ -1,0 +1,11 @@
+# City texts in 'it' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
+# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Lisbon:
+  fetched: '2026-11-13'
+  revid: 153210280
+  source: wikipedia
+  text: Lisbona è la capitale e la principale città del Portogallo. Con una popolazione censita di 545 923 abitanti
+    all'interno dei suoi confini amministrativi, e circa 3 milioni nella sua area urbana è la città più popolosa
+    del Paese.
+  title: Lisbona
+  url: https://it.wikipedia.org/wiki/Lisbona
