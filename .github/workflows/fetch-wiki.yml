@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: "Places, comma-separated (English names in places.yaml); empty = all places"
+        description: "Places, comma-separated (English names in places.yaml), or all"
         type: string
-        default: "Lisbon"
+        default: "all"          # an emptied field gets the default back (13.11.2026), so "all" is a word
 
 permissions:
   contents: write          # commit data/wiki; nothing else
@@ -47,7 +47,9 @@ jobs:
       - name: Fetch the texts
         env:
           ONLY: ${{ inputs.only }}
-        run: python3 fetch_wiki.py --only "$ONLY" | tee fetch.log
+        run: |
+          if [ "$ONLY" = "all" ]; then ONLY=""; fi
+          python3 fetch_wiki.py --only "$ONLY" --pause 0.3 | tee fetch.log
 
       - name: Commit data/wiki
         run: |
