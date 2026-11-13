@@ -29,10 +29,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      # until IDEA-22 is merged the script lives on its branch: say so instead of failing obscurely
+      - name: Check the branch has the script
+        run: |
+          if [ ! -f fetch_wiki.py ]; then
+            echo "::error::fetch_wiki.py is not on '${GITHUB_REF_NAME}'. Run this workflow with 'Use workflow from' set to feature/wiki-texts."
+            exit 1
+          fi
+
       - run: pip install pyyaml
 
       - name: Test the text handling
-        run: python3 -m unittest tests.test_wiki -v
+        run: python3 -m unittest discover -s tests -p "test_wiki.py" -v
 
       # the input goes in through an environment variable, never pasted into the command (D-47);
       # fetch_wiki.py refuses names that are not in places.yaml
