@@ -1,6 +1,7 @@
 # City texts in 'it' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
 Lisbon:
+  checked: '2026-11-13'
   fetched: '2026-11-13'
   revid: 922880
   section: Da sapere

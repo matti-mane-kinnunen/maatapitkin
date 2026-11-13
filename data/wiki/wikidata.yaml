@@ -1,0 +1,3 @@
+# Wikidata items for places.yaml, found by fetch_wiki.py by name and distance (IDEA-22).
+# A wrong one: put the right wd: on the place in places.yaml - that always wins.
+{}

@@ -1,12 +1,13 @@
 # City texts in 'da' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
 Lisbon:
+  checked: '2026-11-13'
   fetched: '2026-11-13'
   revid: 12275508
   source: wikipedia
   text: Lissabon er Portugals hovedstad og største by med 545.796 indbyggere inden for det administrative område,
     der dækker 100,05 km2. Byområdet er større end byens administrative grænser, og har en samlet befolkning på
     omkring 2,71 mio. personer, hvilket gør det til det 11.-største byområde i EU. Der bor omkring 3 millioner personer
-    i Lissabon metropolområde, inklusive den Portugisiske Riviera,.
+    i Lissabon metropolområde, inklusive den Portugisiske Riviera.
   title: Lissabon
   url: https://da.wikipedia.org/wiki/Lissabon
