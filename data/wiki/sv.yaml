@@ -2,11 +2,12 @@
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
 Lisbon:
   fetched: '2026-11-13'
-  revid: 59723296
-  source: wikipedia
-  text: Lissabon är Portugals huvudstad. Lissabon har ungefär en halv miljon invånare i den centrala kommunen, och
-    2,8 miljoner invånare i hela storstadsområdet. Själva staden Lissabon är centralort för kommunen Lissabon, samtidigt
-    som stadens gränser sammanfaller med kommunens gränser. Utöver det är Lissabon också residensstad i Lissabons
-    distrikt.
+  revid: 91027
+  section: Fakta om Lissabon
+  source: wikivoyage
+  text: Lissabon är Portugals huvudstad. Det är en gammal historisk stad med hamn mot Atlanten. Lissabon är en storstad
+    med allt det erbjuder. Staden är känd för sin gamla stad med vit- och gul-putsade fasader och sin speciella
+    sorgesamt längtande Fado-musik som spelas på restauranger inne i staden. Det är även nära till Atlantkustens
+    stränder.
   title: Lissabon
-  url: https://sv.wikipedia.org/wiki/Lissabon
+  url: https://sv.wikivoyage.org/wiki/Lissabon
