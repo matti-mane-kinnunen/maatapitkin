@@ -5,10 +5,9 @@ Aarhus:
   fetched: '2026-11-13'
   revid: 24057861
   source: wikipedia
-  text: Aarhus (myös Århus; suom. [oːrhuːs], tansk. [ˈɒːˌhuˀs]) on Tanskassa Keski-Jyllannin alueella sijaitsevan
-    Aarhusin kunnan keskustaajama. Vuoden 2017 alussa taajamassa oli 269 022 asukasta. Vuonna 2017 Aarhusin kunnassa
-    oli 335 684 asukasta. Aarhus on myös entinen kaupunki, mutta vuoden 1970 kuntauudistuksessa kaupunkikäsitteestä
-    luovuttiin Tanskassa.
+  text: Aarhus on Tanskassa Keski-Jyllannin alueella sijaitsevan Aarhusin kunnan keskustaajama. Vuoden 2017 alussa
+    taajamassa oli 269 022 asukasta. Vuonna 2017 Aarhusin kunnassa oli 335 684 asukasta. Aarhus on myös entinen
+    kaupunki, mutta vuoden 1970 kuntauudistuksessa kaupunkikäsitteestä luovuttiin Tanskassa.
   title: Aarhus
   url: https://fi.wikipedia.org/wiki/Aarhus
 Abrantes:
@@ -18,8 +17,8 @@ Abrantes:
   source: wikipedia
   text: Abrantes on noin 40 000 asukkaan kaupunki Keski-Portugalissa. Se perustettiin 300-luvulla eaa., jolloin
     keltit asuttivat aluetta. Kaupungissa on runsaasti jäänteitä roomalaiskaudelta. Erityisesti Abrantesin linna
-    osoittaa paikan olleen roomalaisille keskeinen. Abrantesista tuli kaupunki 14. kesäkuuta 1916. Abrantesin alue
-    on vuoristojen, metsien ja jokien värittämää.
+    (Fortaleza de Abrantes) osoittaa paikan olleen roomalaisille keskeinen. Abrantesista tuli kaupunki 14. kesäkuuta
+    1916. Abrantesin alue on vuoristojen, metsien ja jokien värittämää.
   title: Abrantes
   url: https://fi.wikipedia.org/wiki/Abrantes
 Aix en Provence:
@@ -27,9 +26,9 @@ Aix en Provence:
   fetched: '2026-11-13'
   revid: 21796822
   source: wikipedia
-  text: Aix-en-Provence on kaupunki Etelä-Ranskassa Bouches-du-Rhônen departementissa Provence-Alpit-Rivieran alueella.
-    Aix on departementtinsa pääkaupunki. Kaupunki sijaitsee lähellä Välimerta, noin 30 kilometriä Marseillesta pohjoiseen
-    Arc-joen muodostamassa altaassa. Vuonna 2006 kaupungissa oli 142 534 asukasta.
+  text: Aix-en-Provence (tai pelkkä Aix) on kaupunki Etelä-Ranskassa Bouches-du-Rhônen departementissa Provence-Alpit-Rivieran
+    alueella. Aix on departementtinsa pääkaupunki. Kaupunki sijaitsee lähellä Välimerta, noin 30 kilometriä Marseillesta
+    pohjoiseen Arc-joen muodostamassa altaassa. Vuonna 2006 kaupungissa oli 142 534 asukasta.
   title: Aix-en-Provence
   url: https://fi.wikipedia.org/wiki/Aix-en-Provence
 Algeciras:
@@ -37,10 +36,10 @@ Algeciras:
   fetched: '2026-11-13'
   revid: 23800918
   source: wikipedia
-  text: Algeciras on kaupunki Andalusiassa, Espanjassa. Kaupungin asukasluku on 118 920. Kaupunki sijaitsee Gibraltaria
-    vastapäätä Gibraltarinsalmen rannalla Välimeren puolella vähän pohjoiseen Tarifasta, joka on Espanjan eteläisin
-    kaupunki. Kaupungin nimi tulee arabialaisesta nimestä Al-Jazeera Al-Khadra, joka merkitsee vihreää saarta. Algecirasista
-    on laivayhteys Tangeriin ja Ceutaan Afrikkaan.
+  text: Algeciras on kaupunki Andalusiassa, Espanjassa. Kaupungin asukasluku on 118 920 (vuonna 2015). Kaupunki
+    sijaitsee Gibraltaria vastapäätä Gibraltarinsalmen rannalla Välimeren puolella vähän pohjoiseen Tarifasta, joka
+    on Espanjan eteläisin kaupunki. Kaupungin nimi tulee arabialaisesta nimestä Al-Jazeera Al-Khadra, joka merkitsee
+    vihreää saarta. Algecirasista on laivayhteys Tangeriin ja Ceutaan Afrikkaan.
   title: Algeciras
   url: https://fi.wikipedia.org/wiki/Algeciras
 Algiers:
@@ -48,10 +47,9 @@ Algiers:
   fetched: '2026-11-13'
   revid: 23647570
   source: wikipedia
-  text: Alger (arab. الجزائر‎, al-Jazā'ir, ’Saaret’, ransk. Alger) on Algerian pääkaupunki ja suurin kaupunki. Se
-    sijaitsee Pohjois-Afrikassa Välimeren rannalla. Kaupungissa on asukkaita noin 3,15 miljoonaa. Algerin vanhakaupunki
-    Kasbah on valittu Unescon maailmanperintölistalle. Siellä sijaitsevat linnoituksen, vanhan moskeijan ja osmanityylisten
-    palatsien jäänteet.
+  text: Alger on Algerian pääkaupunki ja suurin kaupunki. Se sijaitsee Pohjois-Afrikassa Välimeren rannalla. Kaupungissa
+    on asukkaita noin 3,15 miljoonaa. Algerin vanhakaupunki Kasbah on valittu Unescon maailmanperintölistalle. Siellä
+    sijaitsevat linnoituksen, vanhan moskeijan ja osmanityylisten palatsien jäänteet.
   title: Alger
   url: https://fi.wikipedia.org/wiki/Alger
 Amsterdam:
@@ -59,8 +57,8 @@ Amsterdam:
   fetched: '2026-11-13'
   revid: 23996168
   source: wikipedia
-  text: Amsterdam () on Alankomaiden pääkaupunki. Amsterdam on väkiluvultaan Alankomaiden suurin kaupunki. Vuonna
-    2022 siellä asui 910 146 asukasta eli noin joka 20. Hollannin asukas asuu Amsterdamissa. Yhteensä Amsterdamissa
+  text: Amsterdam ( (ohje)) on Alankomaiden pääkaupunki. Amsterdam on väkiluvultaan Alankomaiden suurin kaupunki.
+    Vuonna 2022 siellä asui 910 146 asukasta eli noin joka 20. Hollannin asukas asuu Amsterdamissa. Yhteensä Amsterdamissa
     ja sitä ympäröivällä kaupunkialueella asuu noin 1 550 000 ihmistä eli vajaa kymmenesosa Alankomaiden asukkaista.
   title: Amsterdam
   url: https://fi.wikipedia.org/wiki/Amsterdam
@@ -79,9 +77,10 @@ Andorra la Vella:
   fetched: '2026-11-13'
   revid: 24070488
   source: wikipedia
-  text: Andorra la Vella on Andorran pääkaupunki ja väkiluvultaan maan suurin kaupunki. Siellä oli vuonna 2018 arviolta
-    noin 19 800 asukasta, kun koko kaupunkialueen väkiluku on noin 40 000. Andorra la Vella sijaitsee Pyreneiden
-    vuoristossa Espanjan ja Ranskan välissä. Kaupunki on Andorran politiikan, talouden, matkailun ja urheilun keskus.
+  text: Andorra la Vella (suom. Andorran kaupunki) on Andorran pääkaupunki ja väkiluvultaan maan suurin kaupunki.
+    Siellä oli vuonna 2018 arviolta noin 19 800 asukasta, kun koko kaupunkialueen väkiluku on noin 40 000. Andorra
+    la Vella sijaitsee Pyreneiden vuoristossa Espanjan ja Ranskan välissä. Kaupunki on Andorran politiikan, talouden,
+    matkailun ja urheilun keskus.
   title: Andorra la Vella
   url: https://fi.wikipedia.org/wiki/Andorra_la_Vella
 Ankara:
@@ -89,9 +88,10 @@ Ankara:
   fetched: '2026-11-13'
   revid: 24136237
   source: wikipedia
-  text: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki Istanbulin jälkeen. Ankarassa on noin viisi
-    miljoonaa asukasta ja se sijaitsee Anatolian ylängöllä keskimäärin 938 metriä merenpinnan yläpuolella.. 1960-luvulla
-    Ankarassa oli vain n. 650 000 asukasta. Kaupunki on "pessyt kasvojaan" nopeaan tahtiin viime vuosien aikana.
+  text: Ankara (aiemmalta nimeltään Angora, lat. Ancyra) on Turkin pääkaupunki ja maan toiseksi suurin kaupunki
+    Istanbulin jälkeen. Ankarassa on noin viisi miljoonaa asukasta ja se sijaitsee Anatolian ylängöllä keskimäärin
+    938 metriä merenpinnan yläpuolella.. 1960-luvulla Ankarassa oli vain n. 650 000 asukasta. Kaupunki on "pessyt
+    kasvojaan" nopeaan tahtiin viime vuosien aikana.
   title: Ankara
   url: https://fi.wikipedia.org/wiki/Ankara
 Athens:
@@ -139,8 +139,8 @@ Barcelona:
   fetched: '2026-11-13'
   revid: 55019
   source: wikivoyage
-  text: Barcelona [1] on Espanjan toiseksi suurin kaupunki ja Katalonian itsehallintoalueen pääkaupunki. Barcelona
-    on yksi Euroopan suosituimmista matkakohteista, yli 10 miljoonaa matkailijaa vuosittain vierailee kaupungissa.
+  text: Barcelona on Espanjan toiseksi suurin kaupunki ja Katalonian itsehallintoalueen pääkaupunki. Barcelona on
+    yksi Euroopan suosituimmista matkakohteista, yli 10 miljoonaa matkailijaa vuosittain vierailee kaupungissa.
   title: Barcelona
   url: https://fi.wikivoyage.org/wiki/Barcelona
 Bari:
@@ -179,8 +179,8 @@ Belfast:
   fetched: '2026-11-13'
   revid: 24077290
   source: wikipedia
-  text: Belfast [ˈbɛlfɑːst] (iiriksi Béal Feirste) on Pohjois-Irlannin pääkaupunki. Sen läpi virtaa Laganjoki. Belfastissa
-    on noin 333 000 asukasta.
+  text: Belfast (iiriksi Béal Feirste) on Pohjois-Irlannin pääkaupunki. Sen läpi virtaa Laganjoki. Belfastissa on
+    noin 333 000 asukasta.
   title: Belfast
   url: https://fi.wikipedia.org/wiki/Belfast
 Belgrade:
@@ -188,9 +188,10 @@ Belgrade:
   fetched: '2026-11-13'
   revid: 24037143
   source: wikipedia
-  text: Belgrad (serb. Београд, Beograd 'valkoinen kaupunki') on Serbian pääkaupunki. Vuosina 1918–2003 se oli Jugoslavian
-    pääkaupunki ja vuosina 2003–2006 Serbia ja Montenegron pääkaupunki. Kaupunki sijaitsee Savajoen ja Tonavan yhtymäkohdassa
-    Keski-Serbian pohjoisosassa. Belgradin kaupunkialueen väkiluku oli 1 576 124 ja ydinkaupungin osalta 1 273 651.
+  text: Belgrad on Serbian pääkaupunki. Vuosina 1918–2003 se oli Jugoslavian pääkaupunki ja vuosina 2003–2006 Serbia
+    ja Montenegron pääkaupunki. Kaupunki sijaitsee Savajoen ja Tonavan yhtymäkohdassa Keski-Serbian pohjoisosassa.
+    Belgradin kaupunkialueen väkiluku oli 1 576 124 ja ydinkaupungin osalta 1 273 651. Alueellinen arvo on vuoden
+    2002 maaliskuun väestönlaskennan mukainen luku Belgradin kaupungille.
   title: Belgrad
   url: https://fi.wikipedia.org/wiki/Belgrad
 Bergen:
@@ -198,10 +199,10 @@ Bergen:
   fetched: '2026-11-13'
   revid: 24251106
   source: wikipedia
-  text: Bergen on kaupunki Vestlandin läänissä Norjassa. Se sijaitsee Norjan länsirannikolla, ja sitä kutsutaan
-    yleisesti Vestlandetin pääkaupungiksi. Vuoden 2024 alussa Bergenissä oli yli 294 000 asukasta, joten se oli
-    asukasluvultaan Norjan toiseksi suurin kunta ja Pohjoismaiden kahdeksanneksi suurin kaupunki. Bergenin satama
-    on tonnimääriltään Pohjoismaiden suurin tavaraliikenteen satama.
+  text: Bergen (ent. Bergvin ja Bjørgvin, kveeniksi Peruna) on kaupunki Vestlandin läänissä Norjassa. Se sijaitsee
+    Norjan länsirannikolla, ja sitä kutsutaan yleisesti Vestlandetin pääkaupungiksi. Vuoden 2024 alussa Bergenissä
+    oli yli 294 000 asukasta, joten se oli asukasluvultaan Norjan toiseksi suurin kunta ja Pohjoismaiden kahdeksanneksi
+    suurin kaupunki.
   title: Bergen
   url: https://fi.wikipedia.org/wiki/Bergen
 Berlin:
@@ -222,8 +223,7 @@ Bern:
   source: wikipedia
   text: Bern on Sveitsin de facto pääkaupunki ja asukasluvultaan maan viidenneksi suurin kaupunki. Kaupungissa on
     vakinaisia asukkaita 126 000. Bern on saksankielinen kaupunki. Sveitsillä ei ole virallista pääkaupunkia, vaan
-    Bern toimii ns. "liittokaupunkina", jossa sijaitsevat liittovaltion hallintoelimet; suomen kielessä Berniin
-    viitataan kuitenkin tavallisesti pääkaupunkina myös virallisissa yhteyksissä.
+    Bern toimii ns.
   title: Bern
   url: https://fi.wikipedia.org/wiki/Bern
 Boden:
@@ -231,9 +231,10 @@ Boden:
   fetched: '2026-11-13'
   revid: 23383127
   source: wikipedia
-  text: Boden on samannimisen Bodenin kunnan keskustaajama. Se sijaitsee Norrbottenin läänissä ja Norrbottenin historiallisessa
-    maakunnassa Pohjois-Ruotsissa. Vuoden 2010 lopussa taajamassa oli 18 277 asukasta. Boden oli 1970-luvun alun
-    kuntauudistukseen asti kaupunki. Boden on merkittävä varuskuntakaupunki sekä runkoradan ja malmiradan risteysasema.
+  text: Boden (joskus suom. Puuti) on samannimisen Bodenin kunnan keskustaajama. Se sijaitsee Norrbottenin läänissä
+    ja Norrbottenin historiallisessa maakunnassa Pohjois-Ruotsissa. Vuoden 2010 lopussa taajamassa oli 18 277 asukasta.
+    Boden oli 1970-luvun alun kuntauudistukseen asti kaupunki. Boden on merkittävä varuskuntakaupunki sekä runkoradan
+    ja malmiradan risteysasema.
   title: Boden (taajama)
   url: https://fi.wikipedia.org/wiki/Boden_%28taajama%29
 Bologna:
@@ -241,7 +242,7 @@ Bologna:
   fetched: '2026-11-13'
   revid: 51712
   source: wikivoyage
-  text: Bologna [1] on kaupunki Emilia-Romagnassa Italiassa. Kaunis ja ihana Bologna! Vietin siellä seitsemän vuotta
+  text: Bologna on kaupunki Emilia-Romagnassa Italiassa. Kaunis ja ihana Bologna! Vietin siellä seitsemän vuotta
     elämästäni. Ehkä elämäni kauneimmat. Pier Paolo Pasolini (1922-1975)
   title: Bologna
   url: https://fi.wikivoyage.org/wiki/Bologna
@@ -250,10 +251,10 @@ Bonn:
   fetched: '2026-11-13'
   revid: 23697598
   source: wikipedia
-  text: Bonn [bɔn] (Bundesstadt Bonn) on kaupunki Saksan Nordrhein-Westfalenin osavaltiossa, 20 kilometriä Kölnistä
-    etelään Reinin varrella. Bonn oli Saksan liittotasavallan (Länsi-Saksa) pääkaupunki 1949–1990. Kaupungissa asui
-    vuoden 2022 lopussa noin 336 465 asukasta. Bonn muodostaa oman kaupunkipiirinsä (kreisfreie Stadt), eli se ei
-    kuulu mihinkään Saksan piirikunnista.
+  text: Bonn (Bundesstadt Bonn) on kaupunki Saksan Nordrhein-Westfalenin osavaltiossa, 20 kilometriä Kölnistä etelään
+    Reinin varrella. Bonn oli Saksan liittotasavallan (Länsi-Saksa) pääkaupunki 1949–1990. Kaupungissa asui vuoden
+    2022 lopussa noin 336 465 asukasta. Bonn muodostaa oman kaupunkipiirinsä (kreisfreie Stadt), eli se ei kuulu
+    mihinkään Saksan piirikunnista.
   title: Bonn
   url: https://fi.wikipedia.org/wiki/Bonn
 Bordeaux:
@@ -271,10 +272,9 @@ Bratislava:
   fetched: '2026-11-13'
   revid: 24344043
   source: wikipedia
-  text: Bratislava /ˈbracislaʋa/ on Slovakian pääkaupunki. Bratislavassa oli vuoden 2021 alussa 475 000 asukasta,
-    ja se on väkiluvultaan maan suurin kaupunki. Bratislava sijaitsee Slovakian lounaisosassa Tonavan varrella.
-    Sillä on yhteinen raja kahden naapurivaltion, Itävallan ja Unkarin, kanssa. Kyseessä on ainoa itsenäisen valtion
-    pääkaupunki, jolla on maarajaa kahden toisen valtion kanssa.
+  text: Bratislava (ent. Prešporok, saks. Pressburg, unk. Pozsony) on Slovakian pääkaupunki. Bratislavassa oli vuoden
+    2021 alussa 475 000 asukasta, ja se on väkiluvultaan maan suurin kaupunki. Bratislava sijaitsee Slovakian lounaisosassa
+    Tonavan varrella. Sillä on yhteinen raja kahden naapurivaltion, Itävallan ja Unkarin, kanssa.
   title: Bratislava
   url: https://fi.wikipedia.org/wiki/Bratislava
 Brescia:
@@ -303,7 +303,7 @@ Brussels:
   revid: 57133
   section: Ymmärrä
   source: wikivoyage
-  text: Bryssel [1] (ransk. Bruxelles holl. Brussels) on kaupunki Belgiassa. Bryssel on Belgian pääkaupunki. Kaupungissa
+  text: Bryssel (ransk. Bruxelles holl. Brussels) on kaupunki Belgiassa. Bryssel on Belgian pääkaupunki. Kaupungissa
     sijaitsee myös EU:n ja NATO:n päämajat. Kaupunki on kaksikielinen esim. kaduilla on sekä ranskan- että hollanninkieliset
     nimet. Useimmat ymmärtävät englantia.
   title: Bryssel
@@ -313,10 +313,10 @@ Bucharest:
   fetched: '2026-11-13'
   revid: 56150
   source: wikivoyage
-  text: Pikku Pariisinakin tunnettu Bukarest on Romanian pääkaupunki. Noin 2,6 miljoonan asukkaan väestöllään Bukarest
-    on paitsi Romanian suurin kaupunki, myös yksi Itä-Euroopan suurimpia kaupunkeja. Vastakohtien kaupunki on yhä
-    huonossa kunnossa Nicolae Ceausescun ja kommunistien jäljiltä, mutta sitä ja sen mainetta on pyritty vuosien
-    saatossa parantamaan.
+  text: Pikku Pariisinakin tunnettu Bukarest (Bucureşti) on Romanian pääkaupunki. Noin 2,6 miljoonan asukkaan väestöllään
+    Bukarest on paitsi Romanian suurin kaupunki, myös yksi Itä-Euroopan suurimpia kaupunkeja. Vastakohtien kaupunki
+    on yhä huonossa kunnossa Nicolae Ceausescun ja kommunistien jäljiltä, mutta sitä ja sen mainetta on pyritty
+    vuosien saatossa parantamaan.
   title: Bukarest
   url: https://fi.wikivoyage.org/wiki/Bukarest
 Budapest:
@@ -325,7 +325,7 @@ Budapest:
   revid: 56930
   section: Ymmärrä
   source: wikivoyage
-  text: Budapest [1] on Unkarin pääkaupunki Tonavan varrella. Asukkaita siellä on noin 1,7 miljoonaa. Unkarin matkasanakirja
+  text: Budapest on Unkarin pääkaupunki Tonavan varrella. Asukkaita siellä on noin 1,7 miljoonaa. Unkarin matkasanakirja
     Budapest muodostuu kahdesta alunperin erillisestä kaupungista, Budasta ja Pestistä. Buda sijaitsee Tonavan länsirannalla,
     Pest itärannalla.
   title: Budapest
@@ -347,7 +347,7 @@ Casablanca:
   text: Casablanca on Marokon suurin kaupunki. Se sijaitsee maan länsirannikolla. Kaupungissa oli vuoden 2014 väestönlaskennan
     mukaan noin 3,4 miljoonaa asukasta, ja sen metropolialueella oli 4,3 miljoonaa asukasta. Casablanca on Marokon
     merkittävin talouselämän keskus ja tärkein satama. Kaupunki on tunnettu yhdestä maailman suurimmista moskeijoista
-    sekä Hollywoodin klassikkoelokuvasta Casablanca.
+    sekä Hollywoodin klassikkoelokuvasta Casablanca (1942).
   title: Casablanca
   url: https://fi.wikipedia.org/wiki/Casablanca
 Chania:
@@ -357,8 +357,8 @@ Chania:
   source: wikipedia
   text: Chaniá on Kreikan kaupunki ja samanniminen kunta, joka sijaitsee Chanián alueyksikössä Kreetan alueella.
     Kaupunki on alueyksikkönsä hallinnollinen keskus. Koko kunnan pinta-ala on 356,12 neliökilometriä ja väkiluku
-    108 642. Varsinaisen Chanián kaupungin väkiluku on 53 910. Chaniá on Kreetan saaren toiseksi suurin kaupunki
-    Iraklionin jälkeen.
+    108 642. Varsinaisen Chanián kaupungin väkiluku on 53 910 (vuonna 2011). Chaniá on Kreetan saaren toiseksi suurin
+    kaupunki Iraklionin jälkeen.
   title: Chaniá
   url: https://fi.wikipedia.org/wiki/Chani%C3%A1
 Chisinau:
@@ -378,7 +378,7 @@ Copenhagen:
   revid: 55306
   section: Ymmärrä
   source: wikivoyage
-  text: Kööpenhamina [1] on Tanskan pääkaupunki ja samalla myös suurin kaupunki. Se sijaitse Juutinrauman länsipuolella
+  text: Kööpenhamina on Tanskan pääkaupunki ja samalla myös suurin kaupunki. Se sijaitse Juutinrauman länsipuolella
     Själlannin saarella. Kööpenhamina on pohjoismainen kaupunki mutta samalla myös keskieurooppalainen kaupunki.
     Vaikka kaupunki onkin merkittävimpiä pohjoismaisia pääkaupunkeja, keskustassa välimatkat ovat lyhyitä, ja kaupungissa
     pärjää hyvin jalan.
@@ -389,10 +389,9 @@ Donostia:
   fetched: '2026-11-13'
   revid: 21824066
   source: wikipedia
-  text: Donostia eli San Sebastián on Gipuzkoan maakunnan pääkaupunki Baskimaan itsehallintoalueella Pohjois-Espanjassa.
-    Kaupungin asukasluku on 186 095. Donostia sijaitsee Biskajanlahden rannalla lähellä Ranskan rajaa. Donostiasta
-    on kotoisin jalkapallojoukkue Real Sociedad, joka pelaa Espanjan Primera Divisiónissa. Kaupungissa järjestetään
-    vuosittain San Sebastiánin kansainväliset elokuvajuhlat.
+  text: Donostia (baskiksi) eli San Sebastián (espanjaksi) on Gipuzkoan maakunnan pääkaupunki Baskimaan itsehallintoalueella
+    Pohjois-Espanjassa. Kaupungin asukasluku on 186 095 (2015). Donostia sijaitsee Biskajanlahden rannalla lähellä
+    Ranskan rajaa. Donostiasta on kotoisin jalkapallojoukkue Real Sociedad, joka pelaa Espanjan Primera Divisiónissa.
   title: San Sebastián
   url: https://fi.wikipedia.org/wiki/San_Sebasti%C3%A1n
 Dublin:
@@ -401,8 +400,8 @@ Dublin:
   revid: 54050
   section: Ymmärrä
   source: wikivoyage
-  text: Dublin[1] (iiriksi Baile Átha Cliath) on Irlannin pääkaupunki. Dublinin kaupunginosat on numeroitu, niin
-    kuin mm. Pariisin ja Prahan kaupunginosat. Tässä artikkelissa esim. Dublin 4 tarkoittaa neljättä kaupunginosaa.
+  text: Dublin (iiriksi Baile Átha Cliath) on Irlannin pääkaupunki. Dublinin kaupunginosat on numeroitu, niin kuin
+    mm. Pariisin ja Prahan kaupunginosat. Tässä artikkelissa esim. Dublin 4 tarkoittaa neljättä kaupunginosaa.
   title: Dublin
   url: https://fi.wikivoyage.org/wiki/Dublin
 Durrës:
@@ -410,10 +409,10 @@ Durrës:
   fetched: '2026-11-13'
   revid: 24271144
   source: wikipedia
-  text: Durrës,, slaav. Драч) on yksi Albanian vanhimmista kaupungeista ja tärkeä satamakaupunki. Se sijaitsee rannikolla
-    30 kilometriä länteen Albanian pääkaupungista Tiranasta. Se sijaitsee yhden Adrianmeren kapeimman kohdan rannalla
-    Italian satamia Baria ja Brindisiä vastapäätä. Kaupungin asukasluku oli vuoden 2011 väestönlaskennan mukaan
-    113 249.
+  text: Durrës, (ital. Durazzo), slaav. Драч) on yksi Albanian vanhimmista kaupungeista ja tärkeä satamakaupunki.
+    Se sijaitsee rannikolla 30 kilometriä länteen Albanian pääkaupungista Tiranasta. Se sijaitsee yhden Adrianmeren
+    kapeimman kohdan rannalla Italian satamia Baria ja Brindisiä vastapäätä. Kaupungin asukasluku oli vuoden 2011
+    väestönlaskennan mukaan 113 249.
   title: Durrës
   url: https://fi.wikipedia.org/wiki/Durr%C3%ABs
 Edinburgh:
@@ -454,9 +453,9 @@ Foggia:
   revid: 22460037
   source: wikipedia
   text: Foggia on Foggian maakunnan pääkaupunki Italiassa Apulian hallintoalueella. Se on viljavan Tavoliere delle
-    Puglien tasankoalueen tärkein kaupunki. Foggiassa on arviolta 151 991 asukasta ja sen pinta-ala on 505,9 neliökilometriä.
-    Foggian nimi tulee latinan kuoppia tarkoittavasta foveas-sanasta. Kaupungissa sijaitsee muun muassa Madonna
-    dei Sette Velin katedraali ja U.S. Foggian kotistadionina toimiva Pino Zaccheria.
+    Puglien tasankoalueen tärkein kaupunki. Foggiassa on arviolta 151 991 asukasta (vuonna 2015) ja sen pinta-ala
+    on 505,9 neliökilometriä. Foggian nimi tulee latinan kuoppia tarkoittavasta foveas-sanasta. Kaupungissa sijaitsee
+    muun muassa Madonna dei Sette Velin katedraali ja U.S.
   title: Foggia
   url: https://fi.wikipedia.org/wiki/Foggia
 Frankfurt:
@@ -464,9 +463,9 @@ Frankfurt:
   fetched: '2026-11-13'
   revid: 54577
   source: wikivoyage
-  text: Frankfurt [1] on noin 670 000 asukkaan kaupunki Saksassa. Sitä ei pidä sekoittaa Oder-joen ja Puolan rajan
-    varressa olevaan samannimiseen kaupunkiin. Frankfurt am Main on tunnettu talouselämän keskuksena, ja siellä
-    onkin Euroopan keskuspankin että useiden muiden suurten saksalaisten finanssialan toimijoiden päämajat.
+  text: Frankfurt (Frankfurt am Main) on noin 670 000 asukkaan kaupunki Saksassa. Sitä ei pidä sekoittaa Oder-joen
+    ja Puolan rajan varressa olevaan samannimiseen kaupunkiin. Frankfurt am Main on tunnettu talouselämän keskuksena,
+    ja siellä onkin Euroopan keskuspankin että useiden muiden suurten saksalaisten finanssialan toimijoiden päämajat.
   title: Frankfurt
   url: https://fi.wikivoyage.org/wiki/Frankfurt
 Galway:
@@ -474,10 +473,10 @@ Galway:
   fetched: '2026-11-13'
   revid: 24108441
   source: wikipedia
-  text: Galway on samannimisen kreivikunnan pääkaupunki Irlannin länsirannikolla. Kaupungissa asuu noin 75 500 asukasta,
-    joten se on Irlannin tasavallan neljänneksi suurin. Kaupungissa on yliopisto, tai oikeammin yksi Irlannin kansallisen
-    yliopiston haaraosastoista. Sen länsipuolella sijaitsevat Connemaran iirinkieliset alueet. Galway sijaitsee
-    Corrib-joen suulla, Galwaynlahden pohjukassa.
+  text: Galway (iiriksi Gaillimh) on samannimisen kreivikunnan pääkaupunki Irlannin länsirannikolla. Kaupungissa
+    asuu noin 75 500 asukasta, joten se on Irlannin tasavallan neljänneksi suurin. Kaupungissa on yliopisto, tai
+    oikeammin yksi Irlannin kansallisen yliopiston haaraosastoista. Sen länsipuolella sijaitsevat Connemaran iirinkieliset
+    alueet. Galway sijaitsee Corrib-joen suulla, Galwaynlahden pohjukassa.
   title: Galway
   url: https://fi.wikipedia.org/wiki/Galway
 Gdansk:
@@ -485,10 +484,10 @@ Gdansk:
   fetched: '2026-11-13'
   revid: 24311374
   source: wikipedia
-  text: Gdańsk ([ˈgdanʲsk] saks. Danzig, kašubiksi Gduńsk) on tärkeä satamakaupunki Gdańskinlahden rannalla Pohjois-Puolassa,
-    Motławan ja Veikselin Martwa Wisła suuhaaran varrella. Gdańsk on Pommerin voivodikunnan pääkaupunki ja Puolan
-    kuudenneksi suurin kaupunki. Sen arvioitu asukasluku on 489 402 ja esikaupunkeineen Trójmiasto yhdessä Gdynian
-    ja Sopotin kanssa yli miljoona.
+  text: Gdańsk ( (ohje) saks. Danzig, kašubiksi Gduńsk) on tärkeä satamakaupunki Gdańskinlahden rannalla Pohjois-Puolassa,
+    Motławan ja Veikselin Martwa Wisła (Tote Weichsel) suuhaaran varrella. Gdańsk on Pommerin voivodikunnan pääkaupunki
+    ja Puolan kuudenneksi suurin kaupunki. Sen arvioitu asukasluku on 489 402 (2026) ja esikaupunkeineen Trójmiasto
+    yhdessä Gdynian ja Sopotin kanssa yli miljoona.
   title: Gdańsk
   url: https://fi.wikipedia.org/wiki/Gda%C5%84sk
 Geneve:
@@ -496,10 +495,9 @@ Geneve:
   fetched: '2026-11-13'
   revid: 24016321
   source: wikipedia
-  text: Geneve on Sveitsin toiseksi suurin kaupunki sekä Geneven kantonin pääkaupunki. Geneve sijaitsee Alppien
-    kupeessa, Sveitsin lounaiskulmassa ulottuen Ranskaan. Geneve on yksi Euroopan kansainvälisimmistä kaupungeista.
-    Kaupunki on toiminut mallina tasavaltaisille hallituksille sekä korostanut inhimillisten tekijöiden etusijaa
-    maantieteellisen sijainnin sijasta. Geneve tunnetaan kelloteollisuudestaan ja pankeistaan.
+  text: Geneve (ransk. Genève, saks. Genf, ital. Ginevra, retoromaaniksi Genevra) on Sveitsin toiseksi suurin kaupunki
+    sekä Geneven kantonin pääkaupunki. Geneve sijaitsee Alppien kupeessa, Sveitsin lounaiskulmassa ulottuen Ranskaan.
+    Geneve on yksi Euroopan kansainvälisimmistä kaupungeista.
   title: Geneve
   url: https://fi.wikipedia.org/wiki/Geneve
 Genoa:
@@ -519,7 +517,7 @@ Glasgow:
   revid: 23450280
   source: wikipedia
   text: Glasgow on Skotlannin suurin kaupunki Clydejoen varrella Yhdistyneessä kuningaskunnassa ja vuodesta 1996
-    se on ollut yksi Skotlannin paikallishallintoalueista. Sen väkiluku on noin 592 820. Suur-Glasgow’n alueella
+    se on ollut yksi Skotlannin paikallishallintoalueista. Sen väkiluku on noin 592 820 (2010). Suur-Glasgow’n alueella
     elää yli 1,2 miljoonaa ihmistä ja koko metropolialueella noin 1,8 miljoonaa ihmistä. Kaupunki on tunnettu ulkopaikkakuntalaisille
     vaikeaselkoisesta murteestaan, joka juontuu skotin kielestä.
   title: Glasgow
@@ -541,10 +539,10 @@ Göteborg:
   revid: 55216
   section: Ymmärrä
   source: wikivoyage
-  text: Göteborg [1] on kaupunki Ruotsissa. Göteborg on Ruotsin toiseksi suurin kaupunki ja asukkaita on noin 480
-    000. Kaupunki sijaitsee Göta-joen suulla Ruotsin länsirannikolla, ja sen perusti Kustaa II Adolf vuonna 1621.
-    Kaupunki on merkittävä teollisuus- ja satamakaupunki. Hieman toisen maailmansodan jälkeen alueelle on muuttanut
-    paljon suomalaisia, ja monesti törmää etenkin vanhempiin ihmisiin, jotka osaavat suomea.
+  text: Göteborg on kaupunki Ruotsissa. Göteborg on Ruotsin toiseksi suurin kaupunki ja asukkaita on noin 480 000.
+    Kaupunki sijaitsee Göta-joen suulla Ruotsin länsirannikolla, ja sen perusti Kustaa II Adolf vuonna 1621. Kaupunki
+    on merkittävä teollisuus- ja satamakaupunki. Hieman toisen maailmansodan jälkeen alueelle on muuttanut paljon
+    suomalaisia, ja monesti törmää etenkin vanhempiin ihmisiin, jotka osaavat suomea.
   title: Göteborg
   url: https://fi.wikivoyage.org/wiki/G%C3%B6teborg
 Hamburg:
@@ -552,7 +550,7 @@ Hamburg:
   fetched: '2026-11-13'
   revid: 52419
   source: wikivoyage
-  text: Hampuri (Hamburg) [1] on osavaltio ja kaupunki Pohjois-Saksassa Elbe-joen varrella. Kaupunki on maan toiseksi
+  text: Hampuri (Hamburg) on osavaltio ja kaupunki Pohjois-Saksassa Elbe-joen varrella. Kaupunki on maan toiseksi
     suurin ja asukkaita on noin 1,8 miljoonaa. Hampuri on jo kauan ollut merkittävä satamakaupunki. Keskiajalla
     Hampuri kuului hansaliittoon, mistä juontuu sen virallinen nimi Freie und Hansestadt Hamburg. Nykyisin Hampuri
     on Euroopan toiseksi suurin satamakaupunki heti Rotterdamin jälkeen.
@@ -563,8 +561,8 @@ Hannover:
   fetched: '2026-11-13'
   revid: 52128
   source: wikivoyage
-  text: Hannover [1] on kaupunki Niedersachsenin osavaltiossa Saksassa. Kaupunki on tunnettu messualueestaan [2]
-    jossa järjestetään vuosittain useita isoja messuja kuten Hannover Messe-teollisuusmessut ja CeBit-tietotekniikkamessut.
+  text: Hannover on kaupunki Niedersachsenin osavaltiossa Saksassa. Kaupunki on tunnettu messualueestaan jossa järjestetään
+    vuosittain useita isoja messuja kuten Hannover Messe-teollisuusmessut ja CeBit-tietotekniikkamessut.
   title: Hannover
   url: https://fi.wikivoyage.org/wiki/Hannover
 Helsinki:
@@ -572,10 +570,10 @@ Helsinki:
   fetched: '2026-11-13'
   revid: 57037
   source: wikivoyage
-  text: Helsinki on Suomen pääkaupunki ja on Suomen suurin kaupunki. Se sijaitsee Etelä-Suomen läänissä Suomenlahden
-    rannalla. Helsingin rajanaapureita ovat lännessä Espoo, pohjoisessa ja idässä Vantaa ja Sipoo. Helsingissä asui
-    630 072 ihmistä vuonna 2016 ja on tällä hetkellä Suomen nopeimmin kasvava kunta. 700 000:n raja tullaan rikkomaan
-    vuoteen 2030 mennessä.
+  text: Helsinki (ruots. Helsingfors, slangiksi Stadi, pöndeksi Hesa, savoksi Tsadi) on Suomen pääkaupunki ja on
+    Suomen suurin kaupunki. Se sijaitsee Etelä-Suomen läänissä Suomenlahden rannalla. Helsingin rajanaapureita ovat
+    lännessä Espoo, pohjoisessa ja idässä Vantaa ja Sipoo. Helsingissä asui 630 072 ihmistä vuonna 2016 ja on tällä
+    hetkellä Suomen nopeimmin kasvava kunta.
   title: Helsinki
   url: https://fi.wikivoyage.org/wiki/Helsinki
 Hendaye:
@@ -593,10 +591,10 @@ Holyhead:
   fetched: '2026-11-13'
   revid: 23482063
   source: wikipedia
-  text: Holyhead on Angleseyn hallintoalueen suurin kaupunki Pohjois-Walesissa. Kaupunki sijaitsee Holy Islandin
-    saarella hallintoalueen suurimman saaren Angleseyn luoteispuolella. Lauttaliikenne Holyheadin satamasta Irlantiin
-    alkoi vuonna 1801, mutta kaupungin kasvu kiihtyi parikymmentä vuotta myöhemmin, kun sinne vedettiin maantie
-    Englannin puolelta Shrewsburystä ja sitten rautatie Chesteristä.
+  text: Holyhead (kymriksi Caergybi) on Angleseyn hallintoalueen suurin kaupunki Pohjois-Walesissa. Kaupunki sijaitsee
+    Holy Islandin saarella hallintoalueen suurimman saaren Angleseyn luoteispuolella. Lauttaliikenne Holyheadin
+    satamasta Irlantiin alkoi vuonna 1801, mutta kaupungin kasvu kiihtyi parikymmentä vuotta myöhemmin, kun sinne
+    vedettiin maantie Englannin puolelta Shrewsburystä ja sitten rautatie Chesteristä.
   title: Holyhead
   url: https://fi.wikipedia.org/wiki/Holyhead
 Iasi:
@@ -635,7 +633,7 @@ Istanbul:
   fetched: '2026-11-13'
   revid: 57643
   source: wikivoyage
-  text: Istanbul [1] on Turkin suurin kaupunki, asukkaita on arviolta n. 16 miljoonaa (vuoden 2007 väestönlaskennassa
+  text: Istanbul on Turkin suurin kaupunki, asukkaita on arviolta n. 16 miljoonaa (vuoden 2007 väestönlaskennassa
     12,6 M). Kaupunkia jakaa Bosporin salmi, jossa kulkee myös Euroopan ja Aasian raja. Näin ollen kaupungin länsiosa
     sijaitsee Euroopassa ja itäosa Asiassa. Kaupunki tunnettiin ennen nimellä Konstantinopoli ja tätä ennen Byzantiumina.
   title: Istanbul
@@ -645,9 +643,8 @@ Izmir:
   fetched: '2026-11-13'
   revid: 24259546
   source: wikipedia
-  text: İzmir (kreikkalaiselta nimeltään Smyrna, kreik. Σμύρνη, Smýrni) on Turkin kolmanneksi suurin kaupunki ja
-    İzmirin maakunnan pääkaupunki, jossa sijaitsee Turkin toiseksi suurin satama. Asukkaita kaupungissa oli 2,9
-    miljoonaa vuonna 2022.
+  text: İzmir on Turkin kolmanneksi suurin kaupunki ja İzmirin maakunnan pääkaupunki, jossa sijaitsee Turkin toiseksi
+    suurin satama. Asukkaita kaupungissa oli 2,9 miljoonaa vuonna 2022.
   title: İzmir
   url: https://fi.wikipedia.org/wiki/%C4%B0zmir
 Kaisiadorys:
@@ -665,9 +662,9 @@ Kaunas:
   revid: 56281
   section: Ymmärrä
   source: wikivoyage
-  text: Kaunas [1] on Liettuan toiseksi suurin kaupunki, joka sijaitsee maan keskustassa, Neris- ja Niemen-jokien
-    haarassa. Kaupungissa on noin 350 000 asukasta sekä kaksi lentokenttää. Kaunas on Kaunas, kuuluu paikallinen
-    sanonta. Tätä kaupunkia on joskus vaikea ymmärtää.
+  text: Kaunas on Liettuan toiseksi suurin kaupunki, joka sijaitsee maan keskustassa, Neris- ja Niemen-jokien haarassa.
+    Kaupungissa on noin 350 000 asukasta sekä kaksi lentokenttää. Kaunas on Kaunas, kuuluu paikallinen sanonta.
+    Tätä kaupunkia on joskus vaikea ymmärtää.
   title: Kaunas
   url: https://fi.wikivoyage.org/wiki/Kaunas
 Koblenz:
@@ -696,9 +693,9 @@ Krakow:
   fetched: '2026-11-13'
   revid: 24248579
   source: wikipedia
-  text: Krakova (puol. Kraków, saks. Krakau, jidd. ‏קראָקע‎, Kroke) on Puolan suurimpia ja vanhimpia kaupunkeja.
-    Krakovan asukasluku on 810 590 (vuonna 2025) ja esikaupunkeineen noin 1,5 miljoonaa (vuonna 2023). Se on Puolan
-    toiseksi suurin kaupunki pääkaupunki Varsovan jälkeen ja ennen Łódźia.
+  text: Krakova on Puolan suurimpia ja vanhimpia kaupunkeja. Krakovan asukasluku on 810 590 (vuonna 2025) ja esikaupunkeineen
+    noin 1,5 miljoonaa (vuonna 2023). Se on Puolan toiseksi suurin kaupunki pääkaupunki Varsovan jälkeen ja ennen
+    Łódźia.
   title: Krakova
   url: https://fi.wikipedia.org/wiki/Krakova
 Kuopio:
@@ -718,10 +715,10 @@ Kyiv:
   revid: 57256
   section: Ymmärrä
   source: wikivoyage
-  text: Kiova [1] on Ukrainan pääkaupunki ja suurin kaupunki. Kaupungissa on 2,7 miljoonaa asukasta. Kiova sijaitsee
+  text: Kiova on Ukrainan pääkaupunki ja suurin kaupunki. Kaupungissa on 2,7 miljoonaa asukasta. Kiova sijaitsee
     Ukrainan pohjoisosassa, Dnepr-joen rannalla. Kiova on eräs itäisen Euroopan vanhimmista kaupungeista. Sen historia
     alkaa virallisesti 400-luvulta, vaikkakin asutusta alueella on ollut jo paljon aiemminkin. Kiova oli mahtavimmillaan
-    800-luvulta 1200-luvulle, jolloin se toimi ns. Kiovan Venäjän pääkaupunkina.
+    800-luvulta 1200-luvulle, jolloin se toimi ns.
   title: Kiova
   url: https://fi.wikivoyage.org/wiki/Kiova
 Köln:
@@ -729,9 +726,9 @@ Köln:
   fetched: '2026-11-13'
   revid: 24213635
   source: wikipedia
-  text: Köln on Saksan neljänneksi suurin kaupunki. Vuoden 2022 lopussa kaupungissa oli noin 1,1 miljoonaa asukasta.
-    Köln sijaitsee maan länsiosassa, Nordrhein-Westfalenin osavaltiossa Reinjoen rannalla. Kaupunkia pidetään Reinin
-    alueen taloudellisena, kulttuurisena ja historiallisena pääkaupunkina.
+  text: Köln (lat. Colonia Claudia Ara Agrippinensium) on Saksan neljänneksi suurin kaupunki. Vuoden 2022 lopussa
+    kaupungissa oli noin 1,1 miljoonaa asukasta. Köln sijaitsee maan länsiosassa, Nordrhein-Westfalenin osavaltiossa
+    Reinjoen rannalla. Kaupunkia pidetään Reinin alueen taloudellisena, kulttuurisena ja historiallisena pääkaupunkina.
   title: Köln
   url: https://fi.wikipedia.org/wiki/K%C3%B6ln
 L'Hospitalet:
@@ -758,10 +755,10 @@ Lille:
   fetched: '2026-11-13'
   revid: 24337090
   source: wikipedia
-  text: Lille [lil] on kaupunki Pohjois-Ranskassa Deûle-joen varrella aivan Belgian rajan tuntumassa. Se on Hauts-de-Francein
-    alueen ja Nordin departementin pääkaupunki. Kaupungin asukasluku vuonna 2021 oli 236 710. Lillen suurkaupunkialue
-    käsittää myös Belgialle kuuluvia alueita, kuten Kortrijkin kaupungin, ja sen arvioitu väkimäärä oli 1 727 525
-    vuonna 2000, mikä teki siitä yhden Euroopan merkittävistä suurkaupunkialueista.
+  text: Lille (holl. Rijsel) on kaupunki Pohjois-Ranskassa Deûle-joen varrella aivan Belgian rajan tuntumassa. Se
+    on Hauts-de-Francein alueen ja Nordin departementin pääkaupunki. Kaupungin asukasluku vuonna 2021 oli 236 710.
+    Lillen suurkaupunkialue käsittää myös Belgialle kuuluvia alueita, kuten Kortrijkin (Courtrai) kaupungin, ja
+    sen arvioitu väkimäärä oli 1 727 525 vuonna 2000, mikä teki siitä yhden Euroopan merkittävistä suurkaupunkialueista.
   title: Lille
   url: https://fi.wikipedia.org/wiki/Lille
 Lisbon:
@@ -778,10 +775,10 @@ Liège:
   fetched: '2026-11-13'
   revid: 24249739
   source: wikipedia
-  text: Liège on samannimisen Liègen provinssin pääkaupunki ja Belgian kolmanneksi suurin kaupunkimainen seutu,
-    suurin Valloniassa. Kaupungissa on noin 185 000 asukasta, mutta niin sanotun kaupunkikeskuksen eli Suur-Liègen
-    alueella asukkaita on noin 600 000. Kaupungin pinta-ala on noin 7 000 hehtaaria. Sen alin kohta on 58 metriä
-    ja korkein 238 metriä merenpinnasta.
+  text: Liège (ransk. Liège, valloniksi Lîdje, holl. Luik, saks. Lüttich, lat. Leodium) on samannimisen Liègen provinssin
+    pääkaupunki ja Belgian kolmanneksi suurin kaupunkimainen seutu, suurin Valloniassa. Kaupungissa on noin 185
+    000 asukasta, mutta niin sanotun kaupunkikeskuksen eli Suur-Liègen alueella asukkaita on noin 600 000. Kaupungin
+    pinta-ala on noin 7 000 hehtaaria.
   title: Liège
   url: https://fi.wikipedia.org/wiki/Li%C3%A8ge
 Ljubljana:
@@ -789,10 +786,10 @@ Ljubljana:
   fetched: '2026-11-13'
   revid: 24296298
   source: wikipedia
-  text: Ljubljana on Slovenian pääkaupunki ja maan kulttuurinen, taloudellinen ja poliittinen keskus. Se sijaitsee
-    Ljubljanica-joen varrella ja siellä oli vuonna 2020 noin 295 000 asukasta. Paikalla on ollut asutusta jo esihistoriallisista
-    ajoista, ja sitä ovat asuttaneet ainakin keltit, illyrialaiset ja germaanit. Kaupunki on kuulunut myös roomalaisille,
-    ja siitä ovat kiinnostuneet hunnit, ottomaanit ja slaavit.
+  text: Ljubljana (saks. Laibach, ital. Lubiana) on Slovenian pääkaupunki ja maan kulttuurinen, taloudellinen ja
+    poliittinen keskus. Se sijaitsee Ljubljanica-joen varrella ja siellä oli vuonna 2020 noin 295 000 asukasta.
+    Paikalla on ollut asutusta jo esihistoriallisista ajoista, ja sitä ovat asuttaneet ainakin keltit, illyrialaiset
+    ja germaanit.
   title: Ljubljana
   url: https://fi.wikipedia.org/wiki/Ljubljana
 London:
@@ -801,7 +798,7 @@ London:
   revid: 55511
   section: Ymmärrä
   source: wikivoyage
-  text: Lontoo [1] on Yhdistyneiden kuningaskuntien sekä Englannin pääkaupunki. Lontoo on Länsi-Euroopan suurin
+  text: Lontoo (London) on Yhdistyneiden kuningaskuntien sekä Englannin pääkaupunki. Lontoo on Länsi-Euroopan suurin
     kaupunki. Kaupungissa asuu virallisesti noin 7,5 miljoonaa ihmistä, mutta Lontoon seudulla asukkaita on lähemmäs
     14 miljoonaa. Thames-joen varrella kohoava Lontoo on yksi maailman tärkeimmistä kaupungeista, niin historiallisin,
     poliittisen että taloudellisin syin.
@@ -824,8 +821,9 @@ Luxembourg:
   revid: 24325505
   source: wikipedia
   text: Luxemburg on Luxemburgin suurherttuakunnan suurin kunta, jolla on kaupungin asema. Se on valtion pääkaupunki.
-    Luxemburg sijaitsee Alzette- ja Pétrussejokien yhtymäkohdassa. Kaupungissa on asukkaita 136 208, mikä on noin
-    19 prosenttia koko valtion väkiluvusta ja lähes kolme kertaa enemmän kuin toiseksi väkirikkaimman kunnan asukasluku.
+    Luxemburg sijaitsee Alzette- ja Pétrussejokien yhtymäkohdassa. Kaupungissa on asukkaita 136 208 (2025), mikä
+    on noin 19 prosenttia koko valtion väkiluvusta ja lähes kolme kertaa enemmän kuin toiseksi väkirikkaimman kunnan
+    asukasluku.
   title: Luxemburg (kaupunki)
   url: https://fi.wikipedia.org/wiki/Luxemburg_%28kaupunki%29
 Lyon:
@@ -834,9 +832,9 @@ Lyon:
   revid: 24190382
   source: wikipedia
   text: Lyon on kaupunki itäisessä Ranskassa. Sen asukasluku on noin 520 774 ja esikaupungit mukaan luettuina yli
-    2,3 miljoonaa. Lyonin metropolialue on Ranskan toiseksi suurin. Lyon on Rhônen ja Lyon Metropoliksen departamentin
-    Auvergne-Rhône-Alpesin hallintoalueen ja nykyään epävirallisen Lyonnais’n provinssin pääkaupunki. Kaupungin
-    keskusta sijaitsee Rhônen ja sen sivujoen Saônen yhtymäkohdassa.
+    2,3 miljoonaa (2022). Lyonin metropolialue on Ranskan toiseksi suurin. Lyon on Rhônen ja Lyon Metropoliksen
+    departamentin Auvergne-Rhône-Alpesin hallintoalueen ja nykyään epävirallisen Lyonnais’n provinssin pääkaupunki.
+    Kaupungin keskusta sijaitsee Rhônen ja sen sivujoen Saônen yhtymäkohdassa.
   title: Lyon
   url: https://fi.wikipedia.org/wiki/Lyon
 Madrid:
@@ -845,8 +843,11 @@ Madrid:
   revid: 55461
   section: Ymmärrä
   source: wikivoyage
-  text: Madrid [1] on Espanjan pääkaupunki. Kaupungissa on noin 3.2 miljoonaa asukasta. Madrid on Etelä-Euroopan
-    suurimpia kaupunkeja. Kaupungissa on paljon nähtävyyksiä; vanhoja rakennuksia, muistomerkkejä, patsaita ja puistoja.
+  text: Madrid on Espanjan pääkaupunki. Kaupungissa on noin 3.2 miljoonaa asukasta. Madrid on Etelä-Euroopan suurimpia
+    kaupunkeja. Kaupungissa on paljon nähtävyyksiä; vanhoja rakennuksia, muistomerkkejä, patsaita ja puistoja. Sillä
+    ei ole Eiffeltornin, kaltevan tornin tai Big Benin kaltaista keskeistä/"pakollista" nähtävyyttä, vaan se on
+    kaupunki jota parhaiten koetaan kävelemällä katuja ja puistoja sekä istumassa kahvilassa katsomassa paikallista
+    menoa.
   title: Madrid
   url: https://fi.wikivoyage.org/wiki/Madrid
 Malaga:
@@ -855,9 +856,9 @@ Malaga:
   revid: 23048366
   source: wikipedia
   text: 'Málaga on satamakaupunki Etelä-Espanjassa, Andalusiassa, Aurinkorannikolla. Se on myös Málagan maakunnan
-    pääkaupunki. Kaupungin väkiluku on noin 570 000. Metropolialueella asuu laskentatavasta riippuen noin 865 000
-    – 1 000 000 ihmistä. Málagaa ympäröivät vuoret ja kaksi jokea: Guadalmedina ja Guadalhorce, jotka laskevat Välimereen
-    kaupungin lähellä.'
+    pääkaupunki. Kaupungin väkiluku on noin 570 000 (2015). Metropolialueella (Málaga–Marbella) asuu laskentatavasta
+    riippuen noin 865 000 – 1 000 000 ihmistä. Málagaa ympäröivät vuoret ja kaksi jokea: Guadalmedina ja Guadalhorce,
+    jotka laskevat Välimereen kaupungin lähellä.'
   title: Málaga
   url: https://fi.wikipedia.org/wiki/M%C3%A1laga
 Malmö:
@@ -876,10 +877,10 @@ Manchester:
   fetched: '2026-11-13'
   revid: 24256155
   source: wikipedia
-  text: Manchester on noin 590 000 asukkaan kaupunki ja metropolihallintopiiri Suur-Manchesterin metropolikreivikunnassa
-    Luoteis-Englannissa. Koko metropolialueella, joka Manchesterin kaupungin lisäksi käsittää Boltonin, Buryn, Oldhamin,
-    Rochdalen, Salfordin, Stockportin, Tamesiden, Traffordin ja Wiganin, asuu 2,8 miljoonaa ihmistä. Manchester
-    tunnetaan historiallisesti maailman ensimmäisenä teollistuneena kaupunkina.
+  text: Manchester on noin 590 000 asukkaan kaupunki (city) ja metropolihallintopiiri (metropolitan borough) Suur-Manchesterin
+    metropolikreivikunnassa Luoteis-Englannissa. Koko metropolialueella, joka Manchesterin kaupungin lisäksi käsittää
+    Boltonin, Buryn, Oldhamin, Rochdalen, Salfordin, Stockportin, Tamesiden, Traffordin ja Wiganin, asuu 2,8 miljoonaa
+    ihmistä.
   title: Manchester
   url: https://fi.wikipedia.org/wiki/Manchester
 Marrakech:
@@ -890,8 +891,8 @@ Marrakech:
   source: wikivoyage
   text: Marrakech on kaupunki Marokossa. Marrakech on nykyisin Marokon suurin turistikohde, sen kävijämäärät ovat
     ylittäneet Agadirin. Marrakech on erityisen suosittu mm. ranskalaisten, brittien ja italialaisten parissa. Marrakech
-    sijaitsee aavikolla ja ilmasto on kuivaa. Kaupungin takana kohoavat korkeat Atlasvuoret, jotka tarjoavat mahdollisuuksia
-    monipuolisille päiväretkille.
+    sijaitsee aavikolla ja ilmasto on kuivaa. Kaupungin takana kohoavat korkeat Atlasvuoret (talvella huiput lumen
+    peitossa), jotka tarjoavat mahdollisuuksia monipuolisille päiväretkille.
   title: Marrakech
   url: https://fi.wikivoyage.org/wiki/Marrakech
 Marseille:
@@ -911,22 +912,23 @@ Messina:
   fetched: '2026-11-13'
   revid: 24261105
   source: wikipedia
-  text: Messina on Sisilian kolmanneksi suurin kaupunki Italiassa Messinansalmen rannalla. Se on Messinan metropolikaupungin
-    pääkaupunki. Messinan asukasluku on noin 238 000. Messina on merkittävä kauppa- ja satamakaupunki. Sen satama
-    on merkittävä sekä Manner-Italiaan suuntautuvan laivaliikenteen että muun muassa sitrushedelmien viennin ansiosta.
-    Messinassa on tekstiili-, huonekalu- ja kemianteollisuutta.
+  text: Messina (sisiliaksi Missina, lat. Messana) on Sisilian kolmanneksi suurin kaupunki Italiassa Messinansalmen
+    rannalla. Se on Messinan metropolikaupungin pääkaupunki. Messinan asukasluku on noin 238 000. Messina on merkittävä
+    kauppa- ja satamakaupunki. Sen satama on merkittävä sekä Manner-Italiaan suuntautuvan laivaliikenteen että muun
+    muassa sitrushedelmien viennin ansiosta.
   title: Messina
   url: https://fi.wikipedia.org/wiki/Messina
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
-  revid: 57325
-  section: Ymmärrä
-  source: wikivoyage
-  text: Milano [1] on Italian toiseksi suurin kaupunki. Italian talouselämän keskus, Milano, sijaitsee tasangolla
-    50 kilometriä Alppien eteläpuolella ja 3,5 h junamatkan päässä ikuisesta kaupungista Roomasta.
+  revid: 23966994
+  source: wikipedia
+  text: Milano (ital. Milano, lomb. Milán) on kaupunki Pohjois-Italiassa Lombardian alueella. Se on myös samannimisen
+    metropolikaupungin keskus. Milanon asukasluku on noin 1,38 miljoonaa, joten se on Italian toiseksi suurin kaupunki.
+    Milanon metropolialueen (muun muassa Milano, Como, Lecco, Varese) asukasluku on arviolta noin 4,2 miljoonaa
+    (2012, Eurostat).
   title: Milano
-  url: https://fi.wikivoyage.org/wiki/Milano
+  url: https://fi.wikipedia.org/wiki/Milano
 Monaco:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -954,9 +956,10 @@ Munich:
   fetched: '2026-11-13'
   revid: 55520
   source: wikivoyage
-  text: München [1] on Saksan kolmanneksi suurin kaupunki, joka sijaitsee Etelä-Saksassa, Baijerin osavaltiossa,
-    on myös osavaltion pääkaupunki. Väkiluku n. 1,4 milj joka tekee Münchenistä Saksan kolmanneksi suurimman kaupungin
-    Hampurin jälkeen. München sijaitsee Isar joen varrella Baijerin osavaltiossa etelä-saksassa.
+  text: München on Saksan kolmanneksi suurin kaupunki, joka sijaitsee Etelä-Saksassa, Baijerin osavaltiossa, on
+    myös osavaltion pääkaupunki. Väkiluku n. 1,4 milj joka tekee Münchenistä Saksan kolmanneksi suurimman kaupungin
+    Hampurin jälkeen. München sijaitsee Isar joen varrella Baijerin osavaltiossa etelä-saksassa. Kaupunki on kuuluisa
+    kauniista arkkitehtuurista, kulttuurista, ja vuosittaisesta Oktoberfest olutjuhlastaan.
   title: München
   url: https://fi.wikivoyage.org/wiki/M%C3%BCnchen
 Nantes:
@@ -965,9 +968,8 @@ Nantes:
   revid: 23488348
   source: wikipedia
   text: Nantes on kaupunki Länsi-Ranskassa Atlantin rannikon tuntumassa Loirejoen suulta 55 kilometriä yläjuoksuun.
-    Se on Pays de la Loiren alueen pääkaupunki ja Loire-Atlantiquen departementin prefektuuri sekä lisäksi historiallisen
-    Bretagnen provinssin pääkaupunki. Nantesin asukasluku oli vuonna 2006 yhteensä 282 853 ja metropolialueen väkiluku
-    763 118 vuonna 2006.
+    Se on Pays de la Loiren alueen pääkaupunki ja Loire-Atlantiquen departementin prefektuuri (pääkaupunki) sekä
+    lisäksi historiallisen Bretagnen provinssin pääkaupunki.
   title: Nantes
   url: https://fi.wikipedia.org/wiki/Nantes
 Naples:
@@ -976,7 +978,7 @@ Naples:
   revid: 55464
   section: Ymmärrä
   source: wikivoyage
-  text: Napoli [1] on Italian kolmanneksi suurin kaupunki. Se sijaitsee Etelä-Italiassa Campanian maakunnassa. Napolin
+  text: Napoli on Italian kolmanneksi suurin kaupunki. Se sijaitsee Etelä-Italiassa Campanian maakunnassa. Napolin
     asukasluku on noin 1 000 000. Napolissa puhutaan paikallista italian murretta, joka poikkeaa kirjakielestä huomattavasti.
     Nähdä Napoli ja kuolla. Vanha italialainen sananlasku
   title: Napoli
@@ -995,10 +997,9 @@ Newcastle:
   fetched: '2026-11-13'
   revid: 24358557
   source: wikipedia
-  text: Newcastle upon Tyne on Englannin koillisosassa sijaitseva Tyne ja Wearin metropolikreivikunnan pääkaupunki.
-    Ennen hallinnonuudistuksia se oli Northumberlandin pääkaupunki. Newcastle tunnetaan pitkästä historiasta, yliopistoista,
-    jalkapallojoukkueesta, panimosta ja geordieiksi kutsuttujen asukkaidensa murteesta. Newcastle on sijainnut lähellä
-    Tynejoen suuta sopivan joenylityspaikan kohdalla jo roomalaisajoista asti.
+  text: Newcastle upon Tyne (tavallisesti Newcastle) on Englannin koillisosassa sijaitseva Tyne ja Wearin metropolikreivikunnan
+    pääkaupunki. Ennen hallinnonuudistuksia se oli Northumberlandin pääkaupunki. Newcastle tunnetaan pitkästä historiasta,
+    yliopistoista, jalkapallojoukkueesta, panimosta ja geordieiksi kutsuttujen asukkaidensa murteesta.
   title: Newcastle upon Tyne
   url: https://fi.wikipedia.org/wiki/Newcastle_upon_Tyne
 Nice:
@@ -1029,8 +1030,8 @@ Oslo:
   revid: 23944246
   source: wikipedia
   text: Oslo on Norjan pääkaupunki ja suurin kaupunki. Se on Norjan poliittinen, taloudellinen ja kulttuurillinen
-    keskus, vaikka valtaa on yritetty hajauttaa myös muualle maahan. Oslossa on noin 702 000 asukasta, joista 28,5
-    prosenttia on ulkomaalaisia. Oslon metropolialueella on noin 1,5 miljoonaa asukasta. Oslo muodostaa yksinään
+    keskus, vaikka valtaa on yritetty hajauttaa myös muualle maahan. Oslossa on noin 702 000 asukasta (2022), joista
+    28,5 prosenttia on ulkomaalaisia. Oslon metropolialueella on noin 1,5 miljoonaa asukasta. Oslo muodostaa yksinään
     samannimisen läänin eli fylken.
   title: Oslo
   url: https://fi.wikipedia.org/wiki/Oslo
@@ -1049,10 +1050,10 @@ Oulu:
   fetched: '2026-11-13'
   revid: 24363459
   source: wikipedia
-  text: Oulu on Suomen kaupunki ja Pohjois-Pohjanmaan maakuntakeskus. Se sijaitsee Oulujoen suulla Perämeren rannikolla.
-    Oulun kaupungissa asuu noin 217 000 ja laajemmin koko seudulla asuu noin 265 000 henkilöä. Asukasluvultaan Oulu
-    on Suomen 5:nneksi suurin kunta ja lähikuntineen neljänneksi suurin kaupunkialue. Vuonna 1605 perustettu Oulu
-    on Pohjois-Suomen vanhin kaupunki.
+  text: Oulu (ruots. Uleåborg) on Suomen kaupunki ja Pohjois-Pohjanmaan maakuntakeskus. Se sijaitsee Oulujoen suulla
+    Perämeren rannikolla. Oulun kaupungissa asuu noin 217 000 ja laajemmin koko seudulla asuu noin 265 000 henkilöä.
+    Asukasluvultaan Oulu on Suomen 5:nneksi suurin kunta ja lähikuntineen neljänneksi suurin kaupunkialue. Vuonna
+    1605 perustettu Oulu on Pohjois-Suomen vanhin kaupunki.
   title: Oulu
   url: https://fi.wikipedia.org/wiki/Oulu
 Palermo:
@@ -1070,9 +1071,9 @@ Palma:
   fetched: '2026-11-13'
   revid: 23956100
   source: wikipedia
-  text: Palma on kunta ja kaupunki Mallorcan saarella Espanjan Baleaareilla. Se sijaitsee saaren eteläosassa, Palmanlahden
-    rannikolla. Palma on Baleaarien itsehallintoalueen pääkaupunki. Kaupungin asukasluku on noin 400 000 ja koko
-    kaupunkialueen 462 000. Lähes puolet Mallorcan väestöstä asuu Palmassa.
+  text: Palma (aiemmin Palma de Mallorca) on kunta ja kaupunki Mallorcan saarella Espanjan Baleaareilla. Se sijaitsee
+    saaren eteläosassa, Palmanlahden rannikolla. Palma on Baleaarien itsehallintoalueen pääkaupunki. Kaupungin asukasluku
+    on noin 400 000 (2015) ja koko kaupunkialueen 462 000. Lähes puolet Mallorcan väestöstä asuu Palmassa.
   title: Palma de Mallorca
   url: https://fi.wikipedia.org/wiki/Palma_de_Mallorca
 Paris:
@@ -1081,10 +1082,9 @@ Paris:
   revid: 57464
   section: Ymmärrä
   source: wikivoyage
-  text: Pariisi [1] on Ranskan pääkaupunki ja samalla yksi Euroopan suurimmista kaupungeista. Kaupungin väkiluku
-    on arviolta 2,2 miljoonaa. Pariisia pidetään maineensa mukaan maailman kauneimpana ja romanttisimpana kaupunkina.
-    Kaupungin menneisyys on täynnä historiallisia tapahtumia ja kaupunki on edelleen huomattava vaikuttaja maailman
-    kulttuuriin, taiteeseen, muotiin, ruokaan ja muotoiluun.
+  text: Pariisi (Paris) on Ranskan pääkaupunki ja samalla yksi Euroopan suurimmista kaupungeista. Kaupungin väkiluku
+    on arviolta 2,2 miljoonaa (lähiöt mukaanlukien luku nousee lähes kahteentoista miljoonaan). Pariisia pidetään
+    maineensa mukaan maailman kauneimpana ja romanttisimpana kaupunkina.
   title: Pariisi
   url: https://fi.wikivoyage.org/wiki/Pariisi
 Patras:
@@ -1094,8 +1094,8 @@ Patras:
   source: wikipedia
   text: Patras on Kreikan kaupunki ja samanniminen kunta, joka sijaitsee Akhaian alueyksikössä Länsi-Kreikan alueella.
     Kaupunki on Länsi-Kreikan pääkaupunki sekä Akhaian hallinnollinen keskus. Koko kunnan pinta-ala on 333,1 neliökilometriä
-    ja väkiluku 213 984. Varsinaisen Patraksen kaupungin väkiluku on 168 034. Patras on Kreikan kolmanneksi suurin
-    kaupunki ja läntisen Kreikan merkittävin satamakaupunki.
+    ja väkiluku 213 984. Varsinaisen Patraksen kaupungin väkiluku on 168 034 (vuonna 2011). Patras on Kreikan kolmanneksi
+    suurin kaupunki ja läntisen Kreikan merkittävin satamakaupunki.
   title: Patras
   url: https://fi.wikipedia.org/wiki/Patras
 Porto:
@@ -1125,7 +1125,7 @@ Prague:
   revid: 56656
   section: Ymmärrä
   source: wikivoyage
-  text: Praha [1] on Tšekin pääkaupunki ja samalla myös suurin kaupunki. Kaupungissa asuu noin 1,2 miljoonaa ihmistä
+  text: Praha on Tšekin pääkaupunki ja samalla myös suurin kaupunki. Kaupungissa asuu noin 1,2 miljoonaa ihmistä
     ja esikaupunkialueineen asukasluku on vajaa 2 miljoonaa. Praha on Euroopan suosituimpia kaupunkimatkakohteita,
     ja varsinkin Vanhassakaupungissa on kesäisin enemmän turisteja kuin paikkakuntalaisia. Kaupungissa on paljon
     hyvin säilyneitä nähtävyyksiä ja vanha keskusta on UNESCOn maailmanperintölistalla.
@@ -1148,9 +1148,9 @@ Rabat:
   revid: 49232
   section: Ymmärrä
   source: wikivoyage
-  text: Rabat (الرباط) on Marokon pääkaupunki, joka sijaitsee Atlantin rannikolla vajaan sadan kilometrin päässä
-    Casablancasta. Rabatin vieressä Bouregreg-joen toisella puolella on sisarkaupunki Salé. Asukkaita Rabatissa
-    on n. 600 000 ja Saléssa noin 800 000.
+  text: Rabat on Marokon pääkaupunki, joka sijaitsee Atlantin rannikolla vajaan sadan kilometrin päässä Casablancasta.
+    Rabatin vieressä Bouregreg-joen toisella puolella on sisarkaupunki Salé. Asukkaita Rabatissa on n. 600 000 ja
+    Saléssa noin 800 000.
   title: Rabat
   url: https://fi.wikivoyage.org/wiki/Rabat
 Reggio di Calabria:
@@ -1199,10 +1199,10 @@ Rostock:
   fetched: '2026-11-13'
   revid: 23651706
   source: wikipedia
-  text: Rostock [ˈʁɔstɔk], virallisesti Rostockin hansa- ja yliopistokaupunki on satamakaupunki pohjoisessa Saksassa
-    Itämeren rannalla. Se on Mecklenburg–Etu-Pommerin osavaltion suurin kaupunki. Rostock sijaitsee keskellä Mecklenburgin
-    pohjoisrannikkoa Warnowjoen ympärillä. Se on niin kutsuttu piiritön kaupunki eli se ei kuulu mihinkään Saksan
-    piirikunnista. Vuoden 2011 väestönlaskennassa Rostockissa oli 200 265 asukasta.
+  text: Rostock, virallisesti Rostockin hansa- ja yliopistokaupunki (saks. Hanse- und Universitätsstadt Rostock)
+    on satamakaupunki pohjoisessa Saksassa Itämeren rannalla. Se on Mecklenburg–Etu-Pommerin osavaltion suurin kaupunki.
+    Rostock sijaitsee keskellä Mecklenburgin pohjoisrannikkoa Warnowjoen ympärillä. Se on niin kutsuttu piiritön
+    kaupunki (saks. kreisfreie Stadt) eli se ei kuulu mihinkään Saksan piirikunnista (saks.
   title: Rostock
   url: https://fi.wikipedia.org/wiki/Rostock
 Rovaniemi:
@@ -1221,10 +1221,10 @@ Ruse:
   fetched: '2026-11-13'
   revid: 23200191
   source: wikipedia
-  text: Ruse on kaupunki Bulgariassa ja samannimisen piirikunnan pääkaupunki. Asukasluku on 169 000. Ruse sijaitsee
-    maan pohjoisosassa, 244 kilometriä Sofiasta koilliseen. Kaupunki on Tonavan rannalla vastapäätä Romanian Giurgiuta
-    ja kaupunkien välillä on silta, joka on ainoa Romanian ja Bulgarian välinen Tonavan ylittävä silta. Kaupunki
-    on Bulgarian tärkein jokisatama ja huomattava teollisuuskeskus.
+  text: Ruse on kaupunki Bulgariassa ja samannimisen piirikunnan pääkaupunki. Asukasluku on 169 000 (15.3.2007).
+    Ruse sijaitsee maan pohjoisosassa, 244 kilometriä Sofiasta koilliseen. Kaupunki on Tonavan rannalla vastapäätä
+    Romanian Giurgiuta ja kaupunkien välillä on silta, joka on ainoa Romanian ja Bulgarian välinen Tonavan ylittävä
+    silta. Kaupunki on Bulgarian tärkein jokisatama ja huomattava teollisuuskeskus.
   title: Ruse
   url: https://fi.wikipedia.org/wiki/Ruse
 Salerno:
@@ -1243,7 +1243,7 @@ San Marino:
   revid: 53927
   section: Ymmärrä
   source: wikivoyage
-  text: San Marino [1] sijaitsee Euroopassa. San Marino on pieni tasavalta keskellä Italiaa lähellä Riminin rantalomakaupunkia.
+  text: San Marino sijaitsee Euroopassa. San Marino on pieni tasavalta keskellä Italiaa lähellä Riminin rantalomakaupunkia.
     Maa koostuu pienistä kylistä jotka sijaitsevat vuoren rinteellä ja sen lähellä. Vuoren huipulla sijaitsee pääkaupunki,
     jonka nimi on myös San Marino. Maa on myös maailman vanhin tasavalta, se on perustettu vuonna 301.
   title: San Marino
@@ -1274,10 +1274,10 @@ Seinäjoki:
   fetched: '2026-11-13'
   revid: 24368986
   source: wikipedia
-  text: Seinäjoki on Suomen kaupunki ja Etelä-Pohjanmaan maakuntakeskus, joka sijaitsee samannimisen joen molemmin
-    puolin. Seinäjoen kaupungissa asuu noin 67 000 ihmistä. Asukasluvultaan kaupunki on Suomen 16:nneksi suurin.
-    Seinäjoki on Suomen pisimpään yhtämittaisesti väestöään kasvattanut maakuntakeskus. Sen väkiluku on kasvanut
-    joka vuosi 1950-luvun alusta lähtien. Seinäjoen alue kuului alun perin Ilmajoen pitäjään.
+  text: Seinäjoki (vanh. ruots. Östermyra) on Suomen kaupunki ja Etelä-Pohjanmaan maakuntakeskus, joka sijaitsee
+    samannimisen joen molemmin puolin. Seinäjoen kaupungissa asuu noin 67 000 ihmistä. Asukasluvultaan kaupunki
+    on Suomen 16:nneksi suurin. Seinäjoki on Suomen pisimpään yhtämittaisesti väestöään kasvattanut maakuntakeskus.
+    Sen väkiluku on kasvanut joka vuosi 1950-luvun alusta lähtien.
   title: Seinäjoki
   url: https://fi.wikipedia.org/wiki/Sein%C3%A4joki
 Sevilla:
@@ -1285,9 +1285,9 @@ Sevilla:
   fetched: '2026-11-13'
   revid: 23976495
   source: wikipedia
-  text: Sevilla [se'βi.ʝa] on eteläisen Espanjan kulttuurin, taiteen ja liike-elämän keskus Guadalquivirjoen rannalla.
-    Se on myös Andalusian itsehallintoalueen ja Sevillan maakunnan pääkaupunki. Kaupungin väkiluku on noin 700 000
-    (2016). Metropolialueen väkiluku on 1,5 miljoonaa (2014).
+  text: Sevilla on eteläisen Espanjan kulttuurin, taiteen ja liike-elämän keskus Guadalquivirjoen rannalla. Se on
+    myös Andalusian itsehallintoalueen ja Sevillan maakunnan pääkaupunki. Kaupungin väkiluku on noin 700 000 (2016).
+    Metropolialueen väkiluku on 1,5 miljoonaa (2014).
   title: Sevilla
   url: https://fi.wikipedia.org/wiki/Sevilla
 Sofia:
@@ -1295,8 +1295,8 @@ Sofia:
   fetched: '2026-11-13'
   revid: 52363
   source: wikivoyage
-  text: Sofia (bulgariaksi София) on Bulgarian pääkaupunki ja suurin kaupunki. Sofiassa asuu noin 1.4 miljoonaa
-    ihmistä. Sofia sijaitsee läntisessä Bulgariassa noin 40 kilometrin päässä Serbian rajalta.
+  text: Sofia on Bulgarian pääkaupunki ja suurin kaupunki. Sofiassa asuu noin 1.4 miljoonaa ihmistä. Sofia sijaitsee
+    läntisessä Bulgariassa noin 40 kilometrin päässä Serbian rajalta.
   title: Sofia
   url: https://fi.wikivoyage.org/wiki/Sofia
 Split:
@@ -1306,7 +1306,7 @@ Split:
   source: wikivoyage
   text: Split on Kroatian toiseksi suurin kaupunki. Se on 200 000 asukkaallaan yksi Adrianmeren rannikon suurimmista
     ja tunnetuimmista kaupungeista. Se on rakentunut keskustassa olevan historiallisen Diocletianuksen palatsin
-    ympärille. Kaupungin keskusta on UNESCO:n maailmanperintökohde [1]. Split on keskieurooppalaisten suosima rantalomakohde,
+    ympärille. Kaupungin keskusta on UNESCO:n maailmanperintökohde. Split on keskieurooppalaisten suosima rantalomakohde,
     jossa käyvät etenkin saksalaiset, ranskalaiset ja italialaiset.
   title: Split
   url: https://fi.wikivoyage.org/wiki/Split
@@ -1347,10 +1347,10 @@ Strasbourg:
   revid: 52006
   section: Ymmärrä
   source: wikivoyage
-  text: Strasbourg on kaupunki Alsacessa Ranskassa. Strasbourg on Alsacen pääkaupunki, jossa sijaitsee Euroopan
-    ihmisoikeustuomioistuin ja Euroopan parlamentti kokoontuu. Strasbourgissa yhdistyvät nykyajan metropoli sekä
-    keskiaikainen ydinkeskusta. Kaupunki sijaitsee Ill-joen rannalla. Strasbourgin jokisatama Reinin varrella on
-    Ranskan vilkkaimpia.
+  text: Strasbourg on kaupunki Alsacessa Ranskassa. Strasbourg on Alsacen (saks. Elsass) pääkaupunki, jossa sijaitsee
+    Euroopan ihmisoikeustuomioistuin ja Euroopan parlamentti kokoontuu. Strasbourgissa yhdistyvät nykyajan metropoli
+    sekä keskiaikainen ydinkeskusta. Kaupunki sijaitsee Ill-joen rannalla. Strasbourgin jokisatama Reinin varrella
+    on Ranskan vilkkaimpia.
   title: Strasbourg
   url: https://fi.wikivoyage.org/wiki/Strasbourg
 Stuttgart:
@@ -1360,8 +1360,8 @@ Stuttgart:
   source: wikipedia
   text: Stuttgart on Saksan Baden-Württembergin osavaltion pääkaupunki. Kesäkuun 2022 lopussa kaupungissa oli noin
     632 000 asukasta, ja se on osavaltionsa runsasväkisin ja koko Saksan kuudenneksi suurin kaupunki. Kaupunki sijaitsee
-    Neckarjoen varrella, Schwabenin Juran ja Schwarzwaldin metsäalueen välissä. Stuttgart on niin kutsuttu kaupunkipiiri.
-    Näin ollen se ei kuulu mihinkään Saksan piirikunnista.
+    Neckarjoen varrella, Schwabenin Juran ja Schwarzwaldin metsäalueen välissä. Stuttgart on niin kutsuttu kaupunkipiiri
+    (Stadtkreis). Näin ollen se ei kuulu mihinkään Saksan piirikunnista.
   title: Stuttgart
   url: https://fi.wikipedia.org/wiki/Stuttgart
 Subotica:
@@ -1370,9 +1370,8 @@ Subotica:
   revid: 23081351
   source: wikipedia
   text: Subotica on kaupunki ja kunta pohjoisessa Serbiassa, Vojvodinan autonomisen maakunnan alueella. Se sijaitsee
-    noin kymmenen kilometrin päässä Unkarin rajalta. Se on 141 554 asukkaallaan Vojvodinan toiseksi suurin kaupunki
-    Novi Sadin jälkeen. Subotica on myös Pohjois-Bačkan alueen pääkaupunki ja hallinnollinen keskus. Ensimmäinen
-    säilynyt kirjallinen maininta Suboticasta on vuodelta 1391 unkarilaisella nimellä Zabadka.
+    noin kymmenen kilometrin päässä Unkarin rajalta. Se on 141 554 asukkaallaan (2011) Vojvodinan toiseksi suurin
+    kaupunki Novi Sadin jälkeen. Subotica on myös Pohjois-Bačkan alueen pääkaupunki ja hallinnollinen keskus.
   title: Subotica
   url: https://fi.wikipedia.org/wiki/Subotica
 Sundsvall:
@@ -1402,8 +1401,11 @@ Szeged:
   fetched: '2026-11-13'
   revid: 21805575
   source: wikipedia
-  text: Szeged [ˈsɛgɛd] on Unkarin kolmanneksi suurin kaupunki. Se sijaitsee Tisza- ja Marosjoen yhtymäkohdassa
-    Csongrád-Csanádin läänissä lähellä maan etelärajaa. Kaupungissa on yliopisto ja kumi-, tekstiili- ja rautateollisuutta.
+  text: Szeged on Unkarin kolmanneksi suurin kaupunki. Se sijaitsee Tisza- ja Marosjoen yhtymäkohdassa Csongrád-Csanádin
+    läänissä lähellä maan etelärajaa. Kaupungissa on yliopisto ja kumi-, tekstiili- ja rautateollisuutta. Kaupungin
+    tärkeimpiä nähtävyyksiä on Tiszan rantakatu ja -puistot, Votiivikirkko, Ferenc Móran museo, Sunshine Aquapolis
+    -kylpyläkeskus, keskustan kävelykadut jugend-tyylisine kaupunkipalatseineen sekä alakaupungin vanha kirkko ja
+    fransiskaaniluostari.
   title: Szeged
   url: https://fi.wikipedia.org/wiki/Szeged
 Tallinn:
@@ -1411,9 +1413,9 @@ Tallinn:
   fetched: '2026-11-13'
   revid: 24283672
   source: wikipedia
-  text: Tallinna (vir. Tallinn [ˈtɑlʲˑinˑ]; vanh. suom. Keso, Kesoniemi, Rääveli) on Viron pääkaupunki, hallinnollinen,
-    taloudellinen ja kulttuurinen keskus ja maan pääasiallinen portti merelle. Tallinna on Viron suurin asutuskeskus.
-    Vuoden 2026 alussa kaupungissa oli 452 563 asukasta, mikä vastasi kolmannesta koko maan väestöstä.
+  text: Tallinna on Viron pääkaupunki, hallinnollinen, taloudellinen ja kulttuurinen keskus ja maan pääasiallinen
+    portti merelle. Tallinna on Viron suurin asutuskeskus. Vuoden 2026 alussa kaupungissa oli 452 563 asukasta,
+    mikä vastasi kolmannesta koko maan väestöstä (33,3 %).
   title: Tallinna
   url: https://fi.wikipedia.org/wiki/Tallinna
 Tampere:
@@ -1421,10 +1423,10 @@ Tampere:
   fetched: '2026-11-13'
   revid: 57640
   source: wikivoyage
-  text: Tampere [1] on Suomen kolmanneksi suurin kaupunki ja Pohjoismaiden suurin sisämaakaupunki. Lisäksi se on
-    Suomen toiseksi suurin kaupunkikeskittymä pääkaupunkiseudun jälkeen ja Pirkanmaan maakuntakeskus. Tampereella
-    asuu yli 263 000 asukasta ja Suur-Tampereen alueella lähes 500 000. Asukasluku on kasvanut ja tulee kasvamaan
-    lähivuosikymmeninäkin hyvin voimakkaasti.
+  text: Tampere (ruots. Tammerfors) on Suomen kolmanneksi suurin kaupunki ja Pohjoismaiden suurin sisämaakaupunki.
+    Lisäksi se on Suomen toiseksi suurin kaupunkikeskittymä pääkaupunkiseudun jälkeen ja Pirkanmaan maakuntakeskus.
+    Tampereella asuu yli 263 000 asukasta ja Suur-Tampereen alueella lähes 500 000. Asukasluku on kasvanut ja tulee
+    kasvamaan lähivuosikymmeninäkin hyvin voimakkaasti.
   title: Tampere
   url: https://fi.wikivoyage.org/wiki/Tampere
 Tanger:
@@ -1432,8 +1434,8 @@ Tanger:
   fetched: '2026-11-13'
   revid: 24275530
   source: wikipedia
-  text: Tanger (arab. طنجة‎, Ṭanja, berb. ⵜⵉⵏ ⵉⴳⴳⵉ Tin Iggi) on satamakaupunki Pohjois-Marokossa, Gibraltarinsalmen
-    etelärannalla. Vuoden 2024 väestönlaskennan mukaan kaupungissa oli 1 275 428 asukasta.
+  text: Tanger on satamakaupunki Pohjois-Marokossa, Gibraltarinsalmen etelärannalla. Vuoden 2024 väestönlaskennan
+    mukaan kaupungissa oli 1 275 428 asukasta.
   title: Tanger
   url: https://fi.wikipedia.org/wiki/Tanger
 Tanger Med:
@@ -1462,9 +1464,10 @@ Tarifa:
   fetched: '2026-11-13'
   revid: 21077987
   source: wikipedia
-  text: Tarifa on kaupunki Lounais-Espanjassa, Andalusiassa ja Cádizin maakunnassa. Kaupungissa on 18 116 asukasta.
-    Kaupunki sijaitsee Manner-Espanjan eteläisimmässä osassa Gibraltarinsalmen rannikolla paikassa jossa Välimeri
-    ja Atlantin valtameri kohtaavat. Tarifan alueelta löytyykin Pyreneiden niemimaan eteläisin kohta, Punta de Tarifa.
+  text: Tarifa on kaupunki Lounais-Espanjassa, Andalusiassa ja Cádizin maakunnassa. Kaupungissa on 18 116 asukasta
+    (2016). Kaupunki sijaitsee Manner-Espanjan eteläisimmässä osassa Gibraltarinsalmen rannikolla paikassa jossa
+    Välimeri ja Atlantin valtameri kohtaavat. Tarifan alueelta löytyykin Pyreneiden niemimaan eteläisin kohta, Punta
+    de Tarifa.
   title: Tarifa
   url: https://fi.wikipedia.org/wiki/Tarifa
 Thessaloniki:
@@ -1475,7 +1478,7 @@ Thessaloniki:
   text: Thessaloniki on Kreikan kaupunki ja samanniminen kunta, joka sijaitsee Thessalonikin alueyksikössä Keski-Makedonian
     alueella. Kaupunki on Keski-Makedonian pääkaupunki sekä alueyksikkönsä hallinnollinen keskus. Koko kunnan pinta-ala
     on 20,85 neliökilometriä ja väkiluku 325 182. Varsinaisen Thessalonikin kaupungin väkiluku on 315 196 ja koko
-    metropolialueen väkiluku 1 012 058.
+    metropolialueen väkiluku 1 012 058 (vuonna 2011).
   title: Thessaloniki
   url: https://fi.wikipedia.org/wiki/Thessaloniki
 Tirana:
@@ -1484,7 +1487,7 @@ Tirana:
   revid: 56653
   section: Ymmärrä
   source: wikivoyage
-  text: Tirana [1] on Albanian pääkaupunki. Vuonna 2008 Tiranan kaupunkialueella asukkaita oli yli 615 000. Albania
+  text: Tirana on Albanian pääkaupunki. Vuonna 2008 Tiranan kaupunkialueella asukkaita oli yli 615 000. Albania
     oli pitkään suljettu valtio. Turismia on vähän ja asiakaspalvelu kangertelee, mutta ihmiset ovat ystävällisiä
     ja erittän avuliaita. Asiakaspalvelijat eivät useinkaan puhu englantia, mutta yleensä paikalta löytyy avulias
     paikallinen, joka pystyy tulkkaamaan.
@@ -1495,10 +1498,10 @@ Torino:
   fetched: '2026-11-13'
   revid: 23588665
   source: wikipedia
-  text: Torino on teollisuus- ja yliopistokaupunki Luoteis-Italiassa. Se on Piemonten alueen ja Torinon metropolikaupungin
-    pääkaupunki. Torino sijaitsee Po-joen varrella, lähellä Alppeja. Torinon kaupungin väkiluku on noin 900 000,
-    mutta Torinon suurkaupunkialueella on yhteensä noin 1,5 miljoonaa asukasta. Torino tunnetaan Fiat-autotehtaan
-    hallinnon ja päätuotantolaitosten sijaintipaikkana.
+  text: Torino (paikallisella piemonten kielellä Turin) on teollisuus- ja yliopistokaupunki Luoteis-Italiassa. Se
+    on Piemonten alueen ja Torinon metropolikaupungin pääkaupunki. Torino sijaitsee Po-joen varrella, lähellä Alppeja.
+    Torinon kaupungin väkiluku on noin 900 000, mutta Torinon suurkaupunkialueella on yhteensä noin 1,5 miljoonaa
+    asukasta.
   title: Torino
   url: https://fi.wikipedia.org/wiki/Torino
 Toulouse:
@@ -1527,9 +1530,8 @@ Trondheim:
   fetched: '2026-11-13'
   revid: 23722009
   source: wikipedia
-  text: 'Trondheim (aiemmin Trondhjem, eteläsaameksi: Tråante, kveeniksi: Tronjami) on kaupunki Norjan länsirannikolla
-    Trøndelagin läänissä. Se on Norjan kolmanneksi suurin kaupunki Oslon ja Bergenin jälkeen. Vuoden 2024 alussa
-    kaupungin asukasluku oli 214 565.'
+  text: Trondheim on kaupunki Norjan länsirannikolla Trøndelagin läänissä. Se on Norjan kolmanneksi suurin kaupunki
+    Oslon ja Bergenin jälkeen. Vuoden 2024 alussa kaupungin asukasluku oli 214 565.
   title: Trondheim
   url: https://fi.wikipedia.org/wiki/Trondheim
 Tunis:
@@ -1537,9 +1539,8 @@ Tunis:
   fetched: '2026-11-13'
   revid: 24337807
   source: wikipedia
-  text: Tunis (arab. تونس‎, Tūnis) on pohjoisafrikkalaisen Tunisian pääkaupunki Välimeren rannikolla. Vuoden 2014
-    väestönlaskennassa kaupungissa oli 638 845 asukasta. Kaupungin lähellä sijaitsevat muinaisen Karthagon kaupungin
-    rauniot.
+  text: Tunis on pohjoisafrikkalaisen Tunisian pääkaupunki Välimeren rannikolla. Vuoden 2014 väestönlaskennassa
+    kaupungissa oli 638 845 asukasta. Kaupungin lähellä sijaitsevat muinaisen Karthagon kaupungin rauniot.
   title: Tunis
   url: https://fi.wikipedia.org/wiki/Tunis
 Turku:
@@ -1547,7 +1548,7 @@ Turku:
   fetched: '2026-11-13'
   revid: 57038
   source: wikivoyage
-  text: Turku on Suomen vanhin kaupunki ja Suomen entinen pääkaupunki. Vuosi 1229 mainitaan usein perustamisvuotena.
+  text: Turku (ruots. Åbo) on Suomen vanhin kaupunki ja Suomen entinen pääkaupunki. Vuosi 1229 mainitaan usein perustamisvuotena.
     Turku on tunnettu etenkin kulttuurikaupunkina. Pitkän historiansa vuoksi se on ollut näyttämönä useissa historiallisissa
     tapahtumissa, mikä on vaikuttanut laajalti koko Suomen historiaan.
   title: Turku
@@ -1558,10 +1559,9 @@ Umeå:
   revid: 55324
   section: Ymmärrä
   source: wikivoyage
-  text: Uumaja [1] (Umeå) on kaupunki Västerbottenin (Länsipohja) läänissä Norlannissa Ruotsissa. Uumaja on Västerbottenin
+  text: Uumaja (Umeå) on kaupunki Västerbottenin (Länsipohja) läänissä Norlannissa Ruotsissa. Uumaja on Västerbottenin
     pääkaupunki. Uumaja on myös yliopistokaupunki ja alueen liike-elämän keskus. Uumaja esiintyy koivujen kaupunkina,
-    missä sanotaan olevan n. 3000 istutettua koivua. Uuumaja oli myös vuoden 2014 Euroopan kulttuuripääkaupunki
-    [2].
+    missä sanotaan olevan n. 3000 istutettua koivua. Uuumaja oli myös vuoden 2014 Euroopan kulttuuripääkaupunki.
   title: Uumaja
   url: https://fi.wikivoyage.org/wiki/Uumaja
 Vaasa:
@@ -1570,9 +1570,9 @@ Vaasa:
   revid: 55256
   section: Ymmärrä
   source: wikivoyage
-  text: 'Vaasa (ruots.: Vasa) on läntisessä Suomessa, Pohjanmaan maakunnassa meren rannalla sijaitseva kaupunki.
-    Kaksikielinen (suomi ja ruotsi) kaupunki Suomen länsirannikolla. Kutsutaan joskus nimellä "Valkoinen kaupunki"
-    koska valkoisella osapuolella oli vankka tuki alueella Suomen sisällissodan aikana.'
+  text: Vaasa on läntisessä Suomessa, Pohjanmaan maakunnassa meren rannalla sijaitseva kaupunki. Kaksikielinen (suomi
+    ja ruotsi) kaupunki Suomen länsirannikolla. Kutsutaan joskus nimellä "Valkoinen kaupunki" koska valkoisella
+    osapuolella oli vankka tuki alueella Suomen sisällissodan aikana.
   title: Vaasa
   url: https://fi.wikivoyage.org/wiki/Vaasa
 Valencia:
@@ -1580,9 +1580,10 @@ Valencia:
   fetched: '2026-11-13'
   revid: 24277754
   source: wikipedia
-  text: Valencia on Espanjan kolmanneksi suurin kaupunki, joka sijaitsee maan itäosassa, Välimereen kuuluvan Valencianlahden
-    rannalla samannimisellä itsehallintoalueella. Kaupungin väkiluku oli noin 840 000 vuonna 2025. Valencian maakunnan
-    väkiluku on noin 2,8 miljoonaa. Valencian tunnetuin ruoka on la paella valenciana.
+  text: Valencia (kat. València) on Espanjan kolmanneksi suurin kaupunki, joka sijaitsee maan itäosassa, Välimereen
+    kuuluvan Valencianlahden rannalla samannimisellä itsehallintoalueella (kat. Comunitat Valenciana, esp. Comunidad
+    Valenciana). Kaupungin väkiluku oli noin 840 000 vuonna 2025. Valencian maakunnan (kat. Província de València,
+    esp. Provincia de Valencia) väkiluku on noin 2,8 miljoonaa (2025).
   title: Valencia
   url: https://fi.wikipedia.org/wiki/Valencia
 Valga:
@@ -1590,23 +1591,22 @@ Valga:
   fetched: '2026-11-13'
   revid: 24005133
   source: wikipedia
-  text: Valga on epäitsenäinen kaupunki Valgan kunnassa Valgamaalla Virossa. Se on Valgan kunnan ja Valgamaan maakunnan
-    keskuspaikka maan eteläisellä, Latvian-vastaisella rajalla. Valga oli itsenäinen kaupunki vuoteen 2017 asti.
-    Vuoden 2017 kuntauudistuksessa Valgan kaupunki sekä Karulan, Tahevan, Tõllisten ja Õrun kunnat yhdistettiin
-    Valgan kunnaksi.
+  text: Valga (saks. Walk) on epäitsenäinen kaupunki (vir. linn, asustusüksus) Valgan kunnassa Valgamaalla Virossa.
+    Se on Valgan kunnan ja Valgamaan maakunnan keskuspaikka maan eteläisellä, Latvian-vastaisella rajalla. Valga
+    oli itsenäinen kaupunki vuoteen 2017 asti. Vuoden 2017 kuntauudistuksessa Valgan kaupunki sekä Karulan, Tahevan,
+    Tõllisten ja Õrun kunnat yhdistettiin Valgan kunnaksi.
   title: Valga
   url: https://fi.wikipedia.org/wiki/Valga
 Valletta:
   checked: '2026-11-13'
   fetched: '2026-11-13'
-  revid: 52005
-  source: wikivoyage
-  text: Valletta on Maltan pääkaupunki. Siellä asuu hieman yli 6000 ihmistä. Koska monet Maltan kaupungeista ovat
-    niin pieniä, ettei niitä monessa paikassa pidettäisi edes kaupunkeina vaan enneminkin kaupunginosina, käsittää
-    tämä artikkeli myös Vallettaa ympäröivät kaupungit, kuten mm. Slieman, St. Julian'sin (San Giljan), Gziran,
-    Ta' Xbiexin ja Florianan.
+  revid: 23461751
+  source: wikipedia
+  text: Valletta on Maltan pääkaupunki. Sen asukasluku oli vuoden 2021 väestönlaskennassa 5 157. Nimensä kaupunki
+    on saanut Johanniittain ritarikunnan (eli Maltan ritarikunnan) suurmestarin Jean Parisot de La Valetten mukaan.
+    Valletta ja sen 320 historiallista muistomerkkiä ovat Unescon maailmanperintöluettelossa.
   title: Valletta
-  url: https://fi.wikivoyage.org/wiki/Valletta
+  url: https://fi.wikipedia.org/wiki/Valletta
 Varna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1633,10 +1633,10 @@ Venice:
   fetched: '2026-11-13'
   revid: 23833318
   source: wikipedia
-  text: Venetsia on Koillis-Italiassa Adrianmeren rannikolla sijaitseva kaupunki. Se on rakennettu 118 saarelle,
-    jotka sijaitsevat lähellä toisiaan keskellä Venetsian laguunia ja joita yhdistää toisiinsa 354 siltaa. Laguunin
-    erottaa avomerestä pitkien ja kapeiden saarten jono, jonka saarista suurin on Lido. Venetsia on Veneton alueen
-    ja Venetsian metropolikaupungin pääkaupunki.
+  text: Venetsia (ital. Venezia, venetsian kielellä Venesia) on Koillis-Italiassa Adrianmeren rannikolla sijaitseva
+    kaupunki. Se on rakennettu 118 saarelle, jotka sijaitsevat lähellä toisiaan keskellä Venetsian laguunia ja joita
+    yhdistää toisiinsa 354 siltaa. Laguunin erottaa avomerestä pitkien ja kapeiden saarten jono, jonka saarista
+    suurin on Lido. Venetsia on Veneton alueen ja Venetsian metropolikaupungin pääkaupunki.
   title: Venetsia
   url: https://fi.wikipedia.org/wiki/Venetsia
 Verona:
@@ -1655,9 +1655,9 @@ Vienna:
   fetched: '2026-11-13'
   revid: 23913465
   source: wikipedia
-  text: Wien [viːn] on Itävallan pääkaupunki ja yksi Itävallan osavaltioista. Se sijaitsee Tonavan rannalla, vain
-    60 kilometrin päässä Itävallan itäisestä rajasta, lähellä Tšekkiä, Unkaria ja Slovakiaa. Noin kahden miljoonan
-    asukkaan Wien on Itävallan suurin kaupunki. Se on myös Itävallan kulttuurin, talouden ja politiikan keskus.
+  text: Wien on Itävallan pääkaupunki ja yksi Itävallan osavaltioista. Se sijaitsee Tonavan rannalla, vain 60 kilometrin
+    päässä Itävallan itäisestä rajasta, lähellä Tšekkiä, Unkaria ja Slovakiaa. Noin kahden miljoonan asukkaan Wien
+    on Itävallan suurin kaupunki. Se on myös Itävallan kulttuurin, talouden ja politiikan keskus.
   title: Wien
   url: https://fi.wikipedia.org/wiki/Wien
 Villa San Giovanni:
@@ -1684,10 +1684,9 @@ Vitoria-Gasteiz:
   fetched: '2026-11-13'
   revid: 21798044
   source: wikipedia
-  text: Vitoria-Gasteiz on Álavan maakunnan pääkaupunki Pohjois-Espanjassa. Kaupunki on Baskimaan itsehallintoalueen
-    epävirallinen pääkaupunki. Kaupungin väkiluku vuonna 2015 oli 243 918. Se on väkiluvultaan itsehallintoalueen
-    toiseksi suurin kaupunki. Vitorian perusti 1181 Navarran kuningas Sancho VI vanhan asutuksen paikalle ja linnoitti
-    sen. Vuonna 1200 se päätyi Kastilialle Alfonso VIII:n valloittamana.
+  text: Vitoria-Gasteiz (esp. Vitoria, baskiksi Gasteiz, virallisesti molemmilla kielillä Vitoria-Gasteiz) on Álavan
+    maakunnan pääkaupunki Pohjois-Espanjassa. Kaupunki on Baskimaan itsehallintoalueen epävirallinen pääkaupunki.
+    Kaupungin väkiluku vuonna 2015 oli 243 918. Se on väkiluvultaan itsehallintoalueen toiseksi suurin kaupunki.
   title: Vitoria-Gasteiz
   url: https://fi.wikipedia.org/wiki/Vitoria-Gasteiz
 Warsaw:
@@ -1696,9 +1695,9 @@ Warsaw:
   revid: 52972
   section: Ymmärrä
   source: wikivoyage
-  text: Varsova [1] (puol. Warszawa) on Puolan pääkaupunki ja suurin kaupunki. Puolassa puhutaan yllättäen puolaa,
-    mutta englannillakin saattaa paikoitellen pärjätä. Tämän varaan kannattaa kuitenkaan harvoin laskea, joten oma
-    etukäteissuunnittelu kannattaa kyllä.
+  text: Varsova (puol. Warszawa) on Puolan pääkaupunki ja suurin kaupunki. Puolassa puhutaan yllättäen puolaa, mutta
+    englannillakin saattaa paikoitellen pärjätä. Tämän varaan kannattaa kuitenkaan harvoin laskea, joten oma etukäteissuunnittelu
+    kannattaa kyllä.
   title: Varsova
   url: https://fi.wikivoyage.org/wiki/Varsova
 Wroclaw:
@@ -1706,9 +1705,9 @@ Wroclaw:
   fetched: '2026-11-13'
   revid: 23744760
   source: wikipedia
-  text: Wrocław [ˈvrɔt​͡swaf] (saks. Breslau, tšek. Vratislav) on kaupunki Sleesiassa Lounais-Puolassa, Oderjoen
-    rannalla. Se on Ala-Sleesian voivodikunnan (puol. Dolny Śląsk) pääkaupunki. Vuoden 2019 arvion mukaan kaupungin
-    väkiluku oli 642 296, mikä tekee siitä asukasluvultaan Puolan neljänneksi suurimman kaupungin.
+  text: Wrocław (saks. Breslau, tšek. Vratislav) on kaupunki Sleesiassa Lounais-Puolassa, Oderjoen rannalla. Se
+    on Ala-Sleesian voivodikunnan (puol. Dolny Śląsk) pääkaupunki. Vuoden 2019 arvion mukaan kaupungin väkiluku
+    oli 642 296, mikä tekee siitä asukasluvultaan Puolan neljänneksi suurimman kaupungin.
   title: Wrocław
   url: https://fi.wikipedia.org/wiki/Wroc%C5%82aw
 Zagreb:
@@ -1716,10 +1715,9 @@ Zagreb:
   fetched: '2026-11-13'
   revid: 24234754
   source: wikipedia
-  text: Zagreb on Kroatian pääkaupunki ja piirikunta. Zagreb sijaitsee Kroatian pohjoisosassa Medvednicavuoren rinteiden
-    ja Savajoen välissä, 120 metrin korkeudella merenpinnasta. Vuonna 2021 kaupungissa asui noin 767 000 ihmistä.
-    Zagrebin suotuisa maantieteellinen sijainti Pannonian tasangon lounaisessa osassa tarjoaa loistavan yhteyspaikan
-    keskisen Euroopan ja Adrianmeren väliselle liikenteelle.
+  text: Zagreb (kroatiaksi Zagreb, vanh. saks. Agram) on Kroatian pääkaupunki ja piirikunta. Zagreb sijaitsee Kroatian
+    pohjoisosassa Medvednicavuoren rinteiden ja Savajoen välissä, 120 metrin korkeudella merenpinnasta. Vuonna 2021
+    kaupungissa asui noin 767 000 ihmistä.
   title: Zagreb
   url: https://fi.wikipedia.org/wiki/Zagreb
 Zürich:
@@ -1728,10 +1726,10 @@ Zürich:
   revid: 57344
   section: Ymmärrä
   source: wikivoyage
-  text: Zürich [1] on Sveitsin suurin kaupunki. Koko metropolialueella asuu yhteensä lähes miljoona ihmistä. Zürich
-    sijoittuu Zürichjärven pohjoispuolelle ja Limmat-joki kulkee kaupungin halki. Huolimatta merkittävästä asemastaan
-    kulttuurin, tieteen ja talouden keskuksena, ei Zürich ole Sveitsin pääkaupunki, vaan se on Bern. Zürich on Geneven
-    lisäksi Sveitsin kaupungeista eräs liberaaleimpia ja monikulttuurisimpia.
+  text: Zürich on Sveitsin suurin kaupunki (as. 364 500). Koko metropolialueella asuu yhteensä lähes miljoona ihmistä.
+    Zürich sijoittuu Zürichjärven pohjoispuolelle ja Limmat-joki kulkee kaupungin halki. Huolimatta merkittävästä
+    asemastaan kulttuurin, tieteen ja talouden keskuksena, ei Zürich ole Sveitsin pääkaupunki, vaan se on Bern.
+    Zürich on Geneven lisäksi Sveitsin kaupungeista eräs liberaaleimpia ja monikulttuurisimpia.
   title: Zürich
   url: https://fi.wikivoyage.org/wiki/Z%C3%BCrich
 Östersund:

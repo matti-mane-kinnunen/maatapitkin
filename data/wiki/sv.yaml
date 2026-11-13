@@ -7,7 +7,8 @@ Aarhus:
   source: wikipedia
   text: Århus är Danmarks näst största tätort, stad och kommun och ligger på mellersta Jyllands östkust, vid Århusbukten
     av Kattegatt. Staden ligger i Østjylland och ingår i Byregion Østjylland, en planeringsregion med cirka 1,4
-    miljon invånare. Av dessa bor cirka 330 000 i själva kommunen Århus. Staden har en stor djuphamn, Århus hamn.
+    miljon invånare. Av dessa bor cirka 330 000 i själva kommunen Århus (2016). Staden har en stor djuphamn, Århus
+    hamn.
   title: Århus
   url: https://sv.wikipedia.org/wiki/%C3%85rhus
 Abrantes:
@@ -15,9 +16,9 @@ Abrantes:
   fetched: '2026-11-13'
   revid: 58973863
   source: wikipedia
-  text: 'Abrantes (portugisiska: [ɐˈβɾɐ̃tɨʃ] ) är en stad i mellersta Portugal. Staden har cirka 17 800 invånare,
-    och är huvudorten i Abrantes kommun med ungefär 39 900 invånare. Floden Tejo blir härifrån och ned till kusten
-    segelbar för mindre fartyg. General Jean-Andoche Junot erhöll 1807 av Napoleon titeln hertig av Abrantes.'
+  text: Abrantes är en stad i mellersta Portugal. Staden har cirka 17 800 invånare, och är huvudorten i Abrantes
+    kommun med ungefär 39 900 invånare. Floden Tejo blir härifrån och ned till kusten segelbar för mindre fartyg.
+    General Jean-Andoche Junot erhöll 1807 av Napoleon titeln hertig av Abrantes.
   title: Abrantes
   url: https://sv.wikipedia.org/wiki/Abrantes
 Aix en Provence:
@@ -35,10 +36,9 @@ Algeciras:
   fetched: '2026-11-13'
   revid: 59550973
   source: wikipedia
-  text: Algeciras [alxeθiʹras] är en hamnstad i Andalusien i sydligaste Spanien, belägen cirka 15 kilometer från
-    Iberiska halvöns sydligaste punkt och cirka 10 kilometer från Gibraltar. Folkmängden uppgår till cirka 120 000
-    invånare, med cirka 230 000 invånare i storstadsområdet. Algeciras har en av världens mest trafikerade hamnar
-    med mycket trafik till och från Afrika tack vare sitt läge.
+  text: Algeciras är en hamnstad i Andalusien i sydligaste Spanien, belägen cirka 15 kilometer från Iberiska halvöns
+    sydligaste punkt och cirka 10 kilometer från Gibraltar. Folkmängden uppgår till cirka 120 000 invånare, med
+    cirka 230 000 invånare i storstadsområdet (inklusive bland annat La Línea de la Concepción, men exklusive Gibraltar).
   title: Algeciras
   url: https://sv.wikipedia.org/wiki/Algeciras
 Algiers:
@@ -59,8 +59,7 @@ Amsterdam:
   source: wikivoyage
   text: Amsterdam är huvudstad i Nederländerna. Staden har en imponerande arkitektur, kanaler som löper kors och
     tvärs genom staden och bra shoppingmöjligheter. Det finns något för varje resenärs smak. Amsterdam har över
-    en miljon invånare och ligger i provinsen Nord-Holland. Amsterdam är inte regeringens huvudsäte, men är den
-    största staden i landet och är ett kulturellt centrum i Nederländerna.
+    en miljon invånare och ligger i provinsen Nord-Holland.
   title: Amsterdam
   url: https://sv.wikivoyage.org/wiki/Amsterdam
 Ancona:
@@ -69,9 +68,9 @@ Ancona:
   revid: 55408265
   source: wikipedia
   text: Ancona är en kommun i Italien vid Adriatiska havet. Staden är huvudort i provinsen Ancona och huvudstad
-    i regionen Marche. Staden är biskopssäte. Kommunen hade 101 043 invånare. Ancona ligger mellan Monte Ciriaco
-    och Monte Astagno. Staden, som från äldre tider hade ett fast citadell, ombildades under 1800-talet till en
-    förstklassig fästning; dess hamn utvidgades och fördjupades samt förklarades för örlogshamn.
+    i regionen Marche. Staden är biskopssäte. Kommunen hade 101 043 invånare (2018). Ancona ligger mellan Monte
+    Ciriaco och Monte Astagno. Staden, som från äldre tider hade ett fast citadell, ombildades under 1800-talet
+    till en förstklassig fästning; dess hamn utvidgades och fördjupades samt förklarades för örlogshamn.
   title: Ancona
   url: https://sv.wikipedia.org/wiki/Ancona
 Andorra la Vella:
@@ -80,9 +79,9 @@ Andorra la Vella:
   revid: 59615911
   source: wikipedia
   text: Andorra la Vella är huvudstaden i Furstendömet Andorra, beläget i Pyrenéerna. Staden är också en av Andorras
-    sju parròquies. Andorra la Vella ligger i sydvästra delen av furstendömet. Orten hade 19 659 invånare. Kommunen
-    hade 22 873 invånare, på en yta om 27 km². Stadens huvudnäring är turism, även om man också bringar inkomster
-    från att vara ett skatteparadis.
+    sju parròquies (kommuner). Andorra la Vella ligger i sydvästra delen av furstendömet. Orten hade 19 659 invånare
+    (2021). Kommunen (parròquia) hade 22 873 invånare (2021), på en yta om 27 km². Stadens huvudnäring är turism,
+    även om man också bringar inkomster från att vara ett skatteparadis.
   title: Andorra la Vella
   url: https://sv.wikipedia.org/wiki/Andorra_la_Vella
 Ankara:
@@ -90,10 +89,9 @@ Ankara:
   fetched: '2026-11-13'
   revid: 56026969
   source: wikipedia
-  text: Ankara (före 1930 Engürü; i Europa tidigare kallad Angora; under antiken Ancyra på latin och Ἄγκυρα på grekiska)
-    är Turkiets huvudstad sedan 1923 och också namnet på den provins i centrala Anatolien som staden ligger i. Ankaras
-    storstadskommun administrerar 25 distrikt med en total folkmängd på 5,7 miljoner invånare vilket gör den till
-    landets näst största stad, efter Istanbul.
+  text: Ankara är Turkiets huvudstad sedan 1923 och också namnet på den provins i centrala Anatolien som staden
+    ligger i. Ankaras storstadskommun administrerar 25 distrikt med en total folkmängd på 5,7 miljoner invånare
+    (2022) vilket gör den till landets näst största stad, efter Istanbul.
   title: Ankara
   url: https://sv.wikipedia.org/wiki/Ankara
 Athens:
@@ -134,8 +132,8 @@ Badajoz:
   source: wikipedia
   text: Badajoz är en stad och kommun i den autonoma regionen Extremadura i västra Spanien. Staden ligger vid floden
     Guadiana nära gränsen till Portugal, cirka 328 kilometer sydväst om Madrid samt cirka 189 kilometer öster om
-    Lissabon. Badajoz är huvudort i provinsen med samma namn. Kommunen har 150 209 invånare, på en yta av 1 440,66
-    km². Badajoz grundades på 800-talet, då morerna dominerade den Iberiska halvön.
+    Lissabon. Badajoz är huvudort i provinsen med samma namn. Kommunen har 150 209 invånare (2025), på en yta av
+    1 440,66 km². Badajoz grundades på 800-talet, då morerna dominerade den Iberiska halvön.
   title: Badajoz
   url: https://sv.wikipedia.org/wiki/Badajoz
 Barcelona:
@@ -166,9 +164,9 @@ Basel:
   revid: 96496
   source: wikivoyage
   text: Basel är en stad i nordvästra Schweiz. Staden gränsar till Frankrike och Tyskland och är hjärtat i denna
-    trehörniga region – Dreiländereck. Förutom sina egna attraktioner kan det fungera som en bra utgångspunkt för
-    ett besök i Alsace, Schwarzwald eller kantonen Basel-Land. Floden Rhen flyter genom staden och delar den i två
-    delar.
+    trehörniga region – Dreiländereck ("Hörnet av tre länder2). Förutom sina egna attraktioner kan det fungera som
+    en bra utgångspunkt för ett besök i Alsace, Schwarzwald eller kantonen Basel-Land. Floden Rhen flyter genom
+    staden och delar den i två delar.
   title: Basel
   url: https://sv.wikivoyage.org/wiki/Basel
 Bastia:
@@ -176,8 +174,8 @@ Bastia:
   fetched: '2026-11-13'
   revid: 57339774
   source: wikipedia
-  text: 'Bastia (korsikanska: Bastìa) är en ort belägen på nordöstra Korsika och préfecture i departementet Haute-Corse.
-    År 2023 hade Bastia 46 867 invånare och är Korsikas näst största ort efter Ajaccio.'
+  text: Bastia är en ort belägen på nordöstra Korsika och préfecture i departementet Haute-Corse. År 2023 hade Bastia
+    46 867 invånare och är Korsikas näst största ort efter Ajaccio.
   title: Bastia
   url: https://sv.wikipedia.org/wiki/Bastia
 Belfast:
@@ -209,7 +207,8 @@ Bergen:
   source: wikipedia
   text: Bergen är Norges näst största stad med 285 601 invånare 1 januari 2021. Storstadsregionen Bergen hade vid
     samma tid 430 883 invånare, medan tätorten Bergen hade 259 958 invånare 2020. Bergen är residensstad i Hordaland
-    fylke, stiftsstad i Bjørgvin bispedømme inom Norska kyrkan samt säte för Gulating lagmannsrett.
+    fylke (Vestland fylke), stiftsstad i Bjørgvin bispedømme inom Norska kyrkan samt säte för Gulating lagmannsrett
+    (motsvarar svensk hovrätt).
   title: Bergen
   url: https://sv.wikipedia.org/wiki/Bergen
 Berlin:
@@ -229,9 +228,9 @@ Bern:
   revid: 57498497
   source: wikipedia
   text: Bern är de facto-huvudstad och en kommun i förbundsrepubliken Schweiz och kantonen Bern. Kommunen har 137
-    995 invånare. Bern var 2023 den femte största staden/kommunen i landet, efter Zürich, Genève, Basel och – numera
-    – Lausanne. I Berns storstadsområde bor cirka 350 000 invånare. Berns officiella språk är tyska, men Bärndütsch,
-    den lokala varianten av schweizertyska, är det egentliga lokalspråket.
+    995 invånare (2024). Bern var 2023 den femte största staden/kommunen i landet, efter Zürich, Genève, Basel och
+    – numera – Lausanne. I Berns storstadsområde bor cirka 350 000 invånare. Berns officiella språk är tyska, men
+    Bärndütsch, den lokala varianten av schweizertyska, är det egentliga lokalspråket.
   title: Bern
   url: https://sv.wikipedia.org/wiki/Bern
 Boden:
@@ -239,7 +238,7 @@ Boden:
   fetched: '2026-11-13'
   revid: 97743
   source: wikivoyage
-  text: Boden [1] är en stad i Norrbotten och centralort i Bodens kommun. Orten är starkt präglad av sin långa militära
+  text: Boden är en stad i Norrbotten och centralort i Bodens kommun. Orten är starkt präglad av sin långa militära
     historia.
   title: Boden
   url: https://sv.wikivoyage.org/wiki/Boden
@@ -249,9 +248,9 @@ Bologna:
   revid: 59050972
   source: wikipedia
   text: Bologna är en stad och kommun i Italien, huvudort i provinsen Bologna och huvudstad i regionen Emilia-Romagna.
-    Kommunen hade 390 636 invånare och är därmed Italiens sjunde största stad. Bologna har Europas äldsta universitet
-    grundat 1088, Universitetet i Bologna. Staden har givit namn åt den så kallade Bolognaprocessen som är ett samarbete
-    mellan europeiska utbildningsministrar. Bologna är ett ärkebiskopssäte.
+    Kommunen hade 390 636 invånare (2018) och är därmed Italiens sjunde största stad. Bologna har Europas äldsta
+    universitet grundat 1088, Universitetet i Bologna. Staden har givit namn åt den så kallade Bolognaprocessen
+    som är ett samarbete mellan europeiska utbildningsministrar. Bologna är ett ärkebiskopssäte.
   title: Bologna
   url: https://sv.wikipedia.org/wiki/Bologna
 Bonn:
@@ -270,10 +269,9 @@ Bordeaux:
   fetched: '2026-11-13'
   revid: 59530906
   source: wikipedia
-  text: Bordeaux är en hamnstad i sydvästra Frankrike med 243 626 invånare. Bordeaux är huvudstad i regionen Nouvelle-Aquitaine
-    men också prefektur i departementet Gironde. Dess invånare kallas för ”Bordelais”. Bordeauxvinerna har fått
-    sitt namn från staden och har producerats här sedan 1700-talet. Staden anses som världens vinhuvudstad och är
-    värd för Vinexpo, vinindustrins i särklass största evenemang.
+  text: Bordeaux är en hamnstad i sydvästra Frankrike med 243 626 invånare (863 391 invånare inklusive kranskommuner
+    enligt 2012 års folkräkning, vilket är det sjunde största storstadsområdet i Frankrike). Bordeaux är huvudstad
+    i regionen Nouvelle-Aquitaine men också prefektur i departementet Gironde. Dess invånare kallas för ”Bordelais”.
   title: Bordeaux
   url: https://sv.wikipedia.org/wiki/Bordeaux
 Bratislava:
@@ -281,10 +279,9 @@ Bratislava:
   fetched: '2026-11-13'
   revid: 59443096
   source: wikipedia
-  text: 'Bratislava (; tyska: Pressburg; ungerska: Pozsony) är huvudstad i Slovakien och har omkring 462 000 invånare
-    (2012). Staden ligger vid Donaus strand, nära gränsen till Österrike. Avståndet till Wien är endast omkring
-    60 kilometer och utgör därmed den kortaste sträckan mellan två europeiska huvudstäder. Bratislava är Slovakiens
-    politiska, kulturella och ekonomiska centrum.'
+  text: Bratislava är huvudstad i Slovakien och har omkring 462 000 invånare (2012). Staden ligger vid Donaus strand,
+    nära gränsen till Österrike. Avståndet till Wien är endast omkring 60 kilometer och utgör därmed den kortaste
+    sträckan mellan två europeiska huvudstäder. Bratislava är Slovakiens politiska, kulturella och ekonomiska centrum.
   title: Bratislava
   url: https://sv.wikipedia.org/wiki/Bratislava
 Brescia:
@@ -292,9 +289,8 @@ Brescia:
   fetched: '2026-11-13'
   revid: 57252020
   source: wikipedia
-  text: 'Denna artikel handlar om staden. Se även Brescia (provins) och fotbollslaget Brescia Calcio. Brescia (lombardiska:
-    Brèsa) är en stad, kommun och huvudort i provinsen Brescia i regionen Lombardiet i norra Italien. Kommunen hade
-    198 536 invånare (2018). och är näst Milano Lombardiets största och viktigaste stad.'
+  text: Brescia är en stad, kommun och huvudort i provinsen Brescia i regionen Lombardiet i norra Italien. Kommunen
+    hade 198 536 invånare (2018). och är näst Milano Lombardiets största och viktigaste stad.
   title: Brescia
   url: https://sv.wikipedia.org/wiki/Brescia
 Brest:
@@ -312,7 +308,7 @@ Brussels:
   fetched: '2026-11-13'
   revid: 90763
   source: wikivoyage
-  text: Bryssel [1] är Belgiens huvudstad och platsen för EU:s och NATO:s högkvarter. Belgien är uppdelat i en flamländsk
+  text: Bryssel är Belgiens huvudstad och platsen för EU:s och NATO:s högkvarter. Belgien är uppdelat i en flamländsk
     (holländsktalande) och en vallonsk (fransktalande) del. I Bryssel talar man både och, gatuskyltarna är på båda
     språken. Som turist klarar man sig rätt långt på engelska.
   title: Bryssel
@@ -334,8 +330,8 @@ Budapest:
   revid: 59327770
   source: wikipedia
   text: Budapest är huvudstaden i Ungern. Staden består av stadshalvorna Buda och Pest, väster respektive öster
-    om floden Donau. Budapest har 1,69 miljoner invånare, på en yta av 525,11 km². År 1873 slogs Buda, Pest och
-    Óbuda samman till en enda stad. Innan dess var de tre skilda städer. Strax utanför Óbuda finns än idag spåren
+    om floden Donau. Budapest har 1,69 miljoner invånare (2025), på en yta av 525,11 km². År 1873 slogs Buda, Pest
+    och Óbuda samman till en enda stad. Innan dess var de tre skilda städer. Strax utanför Óbuda finns än idag spåren
     av en romersk stad från 100-talet, vid namn Aquincum. 1361 blev Buda Ungerns huvudstad.
   title: Budapest
   url: https://sv.wikipedia.org/wiki/Budapest
@@ -355,10 +351,10 @@ Casablanca:
   fetched: '2026-11-13'
   revid: 59104950
   source: wikipedia
-  text: 'Casablanca (spanska för ”vita huset”; arabiska: الدارالبيضاء, ad-Dar al-Bayda, berberspråk ⴰⵏⴼⴰ, Anfa)
-    är en stad i västra Marocko, cirka 10 mil sydväst om Rabat. Centrala Casablanca hade cirka 3,4 miljoner invånare
-    vid folkräkningen 2014, medan storstadsområdet hade cirka 4,3 miljoner invånare. Casablanca är Marockos största
-    stad, ekonomiska centrum och även centrum för landets kommunikationer.'
+  text: Casablanca är en stad i västra Marocko, cirka 10 mil sydväst om Rabat. Centrala Casablanca hade cirka 3,4
+    miljoner invånare vid folkräkningen 2014, medan storstadsområdet (den dåvarande administrativa regionen Grand
+    Casablanca) hade cirka 4,3 miljoner invånare. Casablanca är Marockos största stad, ekonomiska centrum och även
+    centrum för landets kommunikationer.
   title: Casablanca
   url: https://sv.wikipedia.org/wiki/Casablanca
 Chania:
@@ -378,9 +374,9 @@ Chisinau:
   revid: 58944284
   source: wikipedia
   text: Chișinău är huvudstad och industriellt och kommersiellt centrum i Moldavien; det är också landets största
-    stad med cirka 723 500 invånare. Staden ligger i mitten av landet, vid floden Bîc. Ekonomiskt är staden den
-    överlägset rikaste i Moldavien och ett av regionens huvudsakliga industriella centra och transportnav. Då staden
-    är Moldaviens viktigaste, innehåller den ett brett urval utbildningsinstitutioner.
+    stad med cirka 723 500 invånare (2012). Staden ligger i mitten av landet, vid floden Bîc. Ekonomiskt är staden
+    den överlägset rikaste i Moldavien och ett av regionens huvudsakliga industriella centra och transportnav. Då
+    staden är Moldaviens viktigaste, innehåller den ett brett urval utbildningsinstitutioner.
   title: Chișinău
   url: https://sv.wikipedia.org/wiki/Chi%C8%99in%C4%83u
 Copenhagen:
@@ -389,9 +385,8 @@ Copenhagen:
   revid: 59097832
   source: wikipedia
   text: Köpenhamn är Danmarks huvudstad. Staden ligger i östligaste Danmark, på öarna Själland och Amager, vid Öresund.
-    Köpenhamn är Danmarks ekonomiska, kulturella och vetenskapliga centrum, samt säte för parlamentet, för regeringen
-    samt för Danmarks kung. Köpenhamns kommun har cirka 660 000 invånare, medan Hovedstadsområdet, som motsvarar
-    Köpenhamns tätort, har cirka 1,4 miljoner invånare, storstadsområdet har ca.
+    Köpenhamn är Danmarks ekonomiska, kulturella och vetenskapliga centrum, samt säte för parlamentet (Folketinget),
+    för regeringen samt för Danmarks kung.
   title: Köpenhamn
   url: https://sv.wikipedia.org/wiki/K%C3%B6penhamn
 Donostia:
@@ -411,10 +406,10 @@ Dublin:
   fetched: '2026-11-13'
   revid: 59110191
   source: wikipedia
-  text: 'Dublin (IPA: [dʌblɪn], [dʊblɪn] eller [dʊbəlɪn]; iriska: Baile Átha Cliath, IPA: [bˠalʲə a:ha klʲiəh] eller
-    [bˠɫaː cliə]) är den största staden på Irland och huvudstad i Republiken Irland. Den är belägen nära mittpunkten
+  text: Dublin är den största staden på Irland och huvudstad i Republiken Irland. Den är belägen nära mittpunkten
     på Irlands östkust vid mynningen av floden Liffey och i mitten av grevskapet Dublin. Dublin grundades som en
-    vikingabosättning och har varit Irlands viktigaste stad sedan medeltiden.'
+    vikingabosättning och har varit Irlands viktigaste stad sedan medeltiden. Idag är Dublin Irlands ekonomiska,
+    administrativa och kulturella huvudstad, och är en av Europas snabbast växande huvudstäder.
   title: Dublin
   url: https://sv.wikipedia.org/wiki/Dublin
 Durrës:
@@ -433,9 +428,9 @@ Edinburgh:
   fetched: '2026-11-13'
   revid: 59458088
   source: wikipedia
-  text: 'Edinburgh (ˈɛdɪnbrə, skotsk gaeliska: Dùn Èideann) är huvudstad i Skottland och är den näst största staden,
-    efter Glasgow. Edinburgh ligger 72 kilometer från Glasgow, 24 från Livingston och 160 kilometer från Carlisle
-    och Aberdeen. Folkmängden uppgår till strax under en halv miljon invånare.'
+  text: Edinburgh är huvudstad i Skottland och är den näst största staden, efter Glasgow. Edinburgh ligger 72 kilometer
+    från Glasgow, 24 från Livingston och 160 kilometer från Carlisle och Aberdeen. Folkmängden uppgår till strax
+    under en halv miljon invånare.
   title: Edinburgh
   url: https://sv.wikipedia.org/wiki/Edinburgh
 Faro:
@@ -443,10 +438,10 @@ Faro:
   fetched: '2026-11-13'
   revid: 57185838
   source: wikipedia
-  text: Faro är den största staden i provinsen Algarve i södra Portugal. Staden har 57 679 invånare. Den har ett
-    universitet, en internationell flygplats, en hamn, en marina, en järnvägsstation och fullständiga interregionala
-    busslinjer. Kommunen har 65 019 invånare och en yta på 202,00 km². Den ingår i distriktet Faro och är också
-    en del av regionen Algarve samt av "Algarves kommunalförbund".
+  text: Faro är den största staden i provinsen Algarve i södra Portugal. Staden har 57 679 invånare (2004). Den
+    har ett universitet (Algarves universitet), en internationell flygplats (Faros flygplats), en hamn, en marina,
+    en järnvägsstation och fullständiga interregionala busslinjer. Kommunen har 65 019 invånare (2020) och en yta
+    på 202,00 km².
   title: Faro
   url: https://sv.wikipedia.org/wiki/Faro
 Florence:
@@ -476,9 +471,9 @@ Frankfurt:
   revid: 90844
   section: Fakta om Frankfurt am Main
   source: wikivoyage
-  text: Frankfurt är en stad i Tyskland. Frankfurt eller Frankfurt am Main som staden också heter är inte en av
-    de allra största städerna i Europa. Med omgivande städer inom några mils avstånd bor det ändå bortåt 4 miljoner
-    invånare.
+  text: Frankfurt är en stad i Tyskland. Frankfurt eller Frankfurt am Main som staden också heter (för att skilja
+    den från Frankfurt an der Oder) är inte en av de allra största städerna i Europa. Med omgivande städer inom
+    några mils avstånd bor det ändå bortåt 4 miljoner invånare.
   title: Frankfurt am Main
   url: https://sv.wikivoyage.org/wiki/Frankfurt_am_Main
 Galway:
@@ -498,10 +493,10 @@ Gdansk:
   fetched: '2026-11-13'
   revid: 94479
   source: wikivoyage
-  text: 'Gdańsk [1] också känt under det tyska namnet Danzig (polska: Gdańsk) är en stad i Polen vid Östersjön.
-    Den är huvudstad i Pommerns vojvodskap (som utgör den största delen av vad som tidigare ofta kallades "Östpommern").
-    Tillsammans med de närliggande städerna Sopot och Gdynia kallas Gdańsk ibland för "Trestad" (pl: Trójmiasto).
-    Med sin magnifika arkitektur räknas Gdańsk till en av Östersjöns vackraste städer.'
+  text: Gdańsk också känt under det tyska namnet Danzig är en stad i Polen vid Östersjön. Den är huvudstad i Pommerns
+    vojvodskap (som utgör den största delen av vad som tidigare ofta kallades "Östpommern"). Tillsammans med de
+    närliggande städerna Sopot och Gdynia kallas Gdańsk ibland för "Trestad". Med sin magnifika arkitektur räknas
+    Gdańsk till en av Östersjöns vackraste städer.
   title: Gdańsk
   url: https://sv.wikivoyage.org/wiki/Gda%C5%84sk
 Geneve:
@@ -509,10 +504,10 @@ Geneve:
   fetched: '2026-11-13'
   revid: 59834817
   source: wikipedia
-  text: Genève är en stad och kommun i sydvästra Schweiz. Den är huvudstad i kantonen Genève och är, näst efter
-    Zürich, den största staden i landet med 209 061 invånare. Den utbreder sig på bägge sidor av den sydvästra delen
-    av Genèvesjön. Det lokala huvudspråket är franska. Genève förknippas med Genèvekonventionen samt är känd som
-    Jean-Jacques Rousseaus födelsestad och Jean Calvins hemstad.
+  text: Genève (franska) är en stad och kommun i sydvästra Schweiz. Den är huvudstad i kantonen Genève och är, näst
+    efter Zürich, den största staden i landet med 209 061 invånare (2024). Den utbreder sig på bägge sidor av den
+    sydvästra delen av Genèvesjön (Lac Léman). Det lokala huvudspråket är franska. Genève förknippas med Genèvekonventionen
+    samt är känd som Jean-Jacques Rousseaus födelsestad och Jean Calvins hemstad.
   title: Genève
   url: https://sv.wikipedia.org/wiki/Gen%C3%A8ve
 Genoa:
@@ -566,8 +561,7 @@ Hamburg:
   source: wikivoyage
   text: Hamburg är en viktig hamnstad vid floden Elbe i norra Tyskland. Staden har 1 740 000 invånare vilket gör
     den till Tysklands näst största stad. Hamburgregionen har totalt över fyra miljoner invånare. Hamburg är både
-    en stad och en region. Detta gör att man rankar sin status som en "fri stad" mycket högt eftersom man anser
-    att man är så långt möjligt fristående från andra delstater som finns och har funnits i Tyskland.
+    en stad och en region (Bundesland).
   title: Hamburg
   url: https://sv.wikivoyage.org/wiki/Hamburg
 Hannover:
@@ -585,9 +579,9 @@ Helsinki:
   fetched: '2026-11-13'
   revid: 92728
   source: wikivoyage
-  text: Helsingfors [1] är Finlands vackra huvudstad, belägen vid Finska viken. Helsingfors bildar tillsammans med
-    grannkommunerna Esbo, Vanda och Grankulla ett område som kallas huvudstadsregionen. Huvudstadsregionen är landets
-    kommersiella och vetenskapliga centrum.
+  text: Helsingfors är Finlands vackra huvudstad, belägen vid Finska viken. Helsingfors bildar tillsammans med grannkommunerna
+    Esbo, Vanda och Grankulla ett område som kallas huvudstadsregionen. Huvudstadsregionen är landets kommersiella
+    och vetenskapliga centrum.
   title: Helsingfors
   url: https://sv.wikivoyage.org/wiki/Helsingfors
 Hendaye:
@@ -606,10 +600,10 @@ Holyhead:
   fetched: '2026-11-13'
   revid: 54086025
   source: wikipedia
-  text: Holyhead är en ort och community i nordvästra Wales. Det är den största orten i grevskapet och kommunen
-    Anglesey. Befolkningen uppgick till 11 431 invånare vid folkräkningen 2011. Orten ligger inte på själva ön Anglesey,
-    utan på Holy Island, som har broförbindelse med huvudön. Även om Llangefni är mycket mindre, är det fortfarande
-    öns administrativa centrum. Centrum ligger runt St.
+  text: Holyhead (kymriska Caergybi, "St. Cybis fort") är en ort och community i nordvästra Wales. Det är den största
+    orten i grevskapet och kommunen Anglesey. Befolkningen uppgick till 11 431 invånare vid folkräkningen 2011.
+    Orten ligger inte på själva ön Anglesey, utan på Holy Island, som har broförbindelse med huvudön. Även om Llangefni
+    är mycket mindre, är det fortfarande öns administrativa centrum.
   title: Holyhead
   url: https://sv.wikipedia.org/wiki/Holyhead
 Iasi:
@@ -617,9 +611,9 @@ Iasi:
   fetched: '2026-11-13'
   revid: 59765260
   source: wikipedia
-  text: 'Iași (uttalas /jaʃʲ/; äldre svensk stavning: Jassy; ryska: Яссы) är en stad (municipiu) i det historiska
-    landskapet Moldova i nordöstra Rumänien. Staden är belägen vid floden Bahlui, nära gränsen till dagens Moldavien.
-    Den utgör residensstad i länet Iași och hade 290 422 invånare enligt folkräkningen i oktober 2011.'
+  text: Iași är en stad (municipiu) i det historiska landskapet Moldova i nordöstra Rumänien. Staden är belägen
+    vid floden Bahlui, nära gränsen till dagens Moldavien. Den utgör residensstad i länet Iași och hade 290 422
+    invånare enligt folkräkningen i oktober 2011.
   title: Iași
   url: https://sv.wikipedia.org/wiki/Ia%C8%99i
 Innsbruck:
@@ -627,7 +621,7 @@ Innsbruck:
   fetched: '2026-11-13'
   revid: 96848
   source: wikivoyage
-  text: Innsbruck [1] är huvudstad i den österrikiska Tyrolen och är den femte största staden i Österrike. Innbruck
+  text: Innsbruck är huvudstad i den österrikiska Tyrolen och är den femte största staden i Österrike. Innbruck
     anses av vissa vara en av världens vackraste städer. Den är belägen i en dalgång mellan Nordkette och Tuxer
     Alpen. Innsbruck är även en stor studentstad, med ungefär 20 000 studenter.
   title: Innsbruck
@@ -637,10 +631,10 @@ Irun:
   fetched: '2026-11-13'
   revid: 57571786
   source: wikipedia
-  text: 'Irun (spanska: Irún) är en stad och kommun i provinsen Gipuzkoa i den autonoma regionen Baskien i norra
-    Spanien. Staden ligger vid gränsen till Frankrike, cirka 16 kilometer öster om San Sebastián. Kommunen har 63
-    835 invånare (2025), på en yta av 41,77 km². Fotbollsklubben Real Unión Club de Irún och handbollsklubben CD
-    Bidasoa har sin hemvist i staden.'
+  text: Irun är en stad och kommun i provinsen Gipuzkoa i den autonoma regionen Baskien i norra Spanien. Staden
+    ligger vid gränsen till Frankrike, cirka 16 kilometer öster om San Sebastián. Kommunen har 63 835 invånare (2025),
+    på en yta av 41,77 km². Fotbollsklubben Real Unión Club de Irún och handbollsklubben CD Bidasoa har sin hemvist
+    i staden.
   title: Irun
   url: https://sv.wikipedia.org/wiki/Irun
 Istanbul:
@@ -678,10 +672,10 @@ Kaunas:
   fetched: '2026-11-13'
   revid: 58497704
   source: wikipedia
-  text: Kaunas är med 315 993 invånare Litauens näst största och Baltikums fjärde största stad. Kaunas är beläget
-    i södra Litauen vid sammanflödet av landets två största floder Njemen och Neris. Staden har kommunikationsmässigt
-    ett utmärkt läge i skärningspunkten mellan motorvägen A1 från Klaipėda till Vilnius och Via Baltica från Warszawa
-    till Riga och Tallinn. Avståndet till Vilnius är cirka 90 kilometer.
+  text: Kaunas är med 315 993 invånare (2011) Litauens näst största och Baltikums fjärde största stad. Kaunas är
+    beläget i södra Litauen vid sammanflödet av landets två största floder Njemen och Neris. Staden har kommunikationsmässigt
+    ett utmärkt läge i skärningspunkten mellan motorvägen A1 från Klaipėda till Vilnius och Via Baltica (E67) från
+    Warszawa till Riga och Tallinn. Avståndet till Vilnius är cirka 90 kilometer.
   title: Kaunas
   url: https://sv.wikipedia.org/wiki/Kaunas
 Koblenz:
@@ -709,9 +703,9 @@ Krakow:
   fetched: '2026-11-13'
   revid: 90983
   source: wikivoyage
-  text: Kraków [1] är huvudstad i provinsen Malopolskie (Mindre Polen eller Lilla Polen) i södra Polen. Den ligger
-    på båda sidor av floden Wisła (eller Vistula). Det är Polens tredje största stad, med en Folkmängd på 756 000
-    personer (2007). Räknar man med ytterområdena bor där cirka 1,4 miljoner personer.
+  text: Kraków är huvudstad i provinsen Malopolskie (Mindre Polen eller Lilla Polen) i södra Polen. Den ligger på
+    båda sidor av floden Wisła (eller Vistula). Det är Polens tredje största stad, med en Folkmängd på 756 000 personer
+    (2007). Räknar man med ytterområdena bor där cirka 1,4 miljoner personer.
   title: Kraków
   url: https://sv.wikivoyage.org/wiki/Krak%C3%B3w
 Kuopio:
@@ -720,9 +714,8 @@ Kuopio:
   revid: 59540149
   source: wikipedia
   text: För asteroiden, se 1503 Kuopio. Kuopio är en stad och kommun i landskapet Norra Savolax i Finland. Kuopio
-    stad har 121 543 invånare, och är därmed östra Finlands största stad. Stadens totala areal uppgår till 3 740,1
-    km². Kuopio stads språkliga status är enspråkig finsk. Vehmersalmi kommun sammanslogs vid årsskiftet 2004/2005,
-    Karttula kommun den 1 januari 2011 och Nilsiä stad den 1 januari 2013 med Kuopio stad.
+    stad har 121 543 invånare (2020), och är därmed östra Finlands största stad. Stadens totala areal uppgår till
+    3 740,1 km². Kuopio stads språkliga status är enspråkig finsk.
   title: Kuopio
   url: https://sv.wikipedia.org/wiki/Kuopio
 Kyiv:
@@ -731,7 +724,7 @@ Kyiv:
   revid: 96453
   section: Fakta om Kiev
   source: wikivoyage
-  text: Kiev[1] är Ukrainas huvudstad och största stad med över 2.5 miljoner invånare. Kiev är ett viktigt industriellt,
+  text: Kiev är Ukrainas huvudstad och största stad med över 2.5 miljoner invånare. Kiev är ett viktigt industriellt,
     vetenskapligt, pedagogiskt och kulturellt centrum i Östeuropa. Det är platsen för många högteknologiska industrier,
     högskolor men även historiska landmärken. Staden har en omfattande infrastruktur och ett väl utvecklat kollektivtrafiksystem,
     däribland Kievs tunnelbana.
@@ -762,8 +755,7 @@ Lecce:
   fetched: '2026-11-13'
   revid: 55894319
   source: wikipedia
-  text: Denna artikel handlar om staden Lecce. Se också Lecce (provins). Lecce är en stad i Italien, i regionen
-    Apulien. Lecce är huvudort i provinsen Lecce.
+  text: Lecce är en stad i Italien, i regionen Apulien. Lecce är huvudort i provinsen Lecce.
   title: Lecce
   url: https://sv.wikipedia.org/wiki/Lecce
 Lille:
@@ -771,9 +763,10 @@ Lille:
   fetched: '2026-11-13'
   revid: 57705685
   source: wikipedia
-  text: För andra betydelser, se Lille är en stad och kommun i norra Frankrike. Den är huvudstad i departementet
-    Nord och regionen Hauts-de-France, och har 231 491 invånare. Den är belägen nära gränsen till Belgien och bildar
-    där ett storstadsområde med nästan 1,2 miljoner invånare, tillsammans med bland annat städerna Roubaix och Tourcoing.
+  text: För andra betydelser, se Lille (olika betydelser) är en stad och kommun i norra Frankrike. Den är huvudstad
+    i departementet Nord och regionen Hauts-de-France, och har 231 491 invånare (2013). Den är belägen nära gränsen
+    till Belgien och bildar där ett storstadsområde med nästan 1,2 miljoner invånare, tillsammans med bland annat
+    städerna Roubaix och Tourcoing.
   title: Lille
   url: https://sv.wikipedia.org/wiki/Lille
 Lisbon:
@@ -782,10 +775,10 @@ Lisbon:
   revid: 91027
   section: Fakta om Lissabon
   source: wikivoyage
-  text: Lissabon är Portugals huvudstad. Det är en gammal historisk stad med hamn mot Atlanten. Lissabon är en storstad
-    med allt det erbjuder. Staden är känd för sin gamla stad med vit- och gul-putsade fasader och sin speciella
-    sorgesamt längtande Fado-musik som spelas på restauranger inne i staden. Det är även nära till Atlantkustens
-    stränder.
+  text: Lissabon (Lisboa) är Portugals huvudstad. Det är en gammal historisk stad med hamn mot Atlanten. Lissabon
+    är en storstad med allt det erbjuder. Staden är känd för sin gamla stad med vit- och gul-putsade fasader och
+    sin speciella sorgesamt längtande Fado-musik som spelas på restauranger inne i staden. Det är även nära till
+    Atlantkustens stränder.
   title: Lissabon
   url: https://sv.wikivoyage.org/wiki/Lissabon
 Liège:
@@ -793,10 +786,9 @@ Liège:
   fetched: '2026-11-13'
   revid: 49193055
   source: wikipedia
-  text: 'Liège (nederländska: Luik; tyska: Lüttich; vallonska: Lîdje; luxemburgiska: Léck) är huvudstad i provinsen
-    Liège i östra Belgien belägen vid floden Meuse. Staden, som har en yta på 69,39 km² och en befolkning som uppgår
-    till 187 086 invånare (1 januari 2006), är Valloniens största metropol och en av Belgiens främsta stålproducerande
-    orter. Staden är hemort för fotbollslaget Standard de Liège.'
+  text: Liège är huvudstad i provinsen Liège i östra Belgien belägen vid floden Meuse. Staden, som har en yta på
+    69,39 km² och en befolkning som uppgår till 187 086 invånare (1 januari 2006), är Valloniens största metropol
+    och en av Belgiens främsta stålproducerande orter. Staden är hemort för fotbollslaget Standard de Liège.
   title: Liège
   url: https://sv.wikipedia.org/wiki/Li%C3%A8ge
 Ljubljana:
@@ -804,9 +796,9 @@ Ljubljana:
   fetched: '2026-11-13'
   revid: 59445974
   source: wikipedia
-  text: Ljubljana, Laibach, Lubiana, Labacum eller Aemona är Sloveniens huvudstad och dess största stad. Med 280
-    000 invånare är staden en av Europeiska Unionens minsta huvudstäder. Den ligger centralt i Slovenien, i Ljubljana-bäckenet
-    mellan Alperna och Dinariska Alperna.
+  text: Ljubljana (lokalt Lublana), Laibach (tyska), Lubiana (italienska), Labacum eller Aemona (latin) är Sloveniens
+    huvudstad och dess största stad. Med 280 000 invånare är staden en av Europeiska Unionens minsta huvudstäder.
+    Den ligger centralt i Slovenien, i Ljubljana-bäckenet mellan Alperna och Dinariska Alperna.
   title: Ljubljana
   url: https://sv.wikipedia.org/wiki/Ljubljana
 London:
@@ -814,10 +806,9 @@ London:
   fetched: '2026-11-13'
   revid: 97253
   source: wikivoyage
-  text: Den här artikeln handlar om London i Storbritannien. För andra platser med namnet London, se London. London
-    [1] är huvudstad i både staten Storbritannien och i riksdelen/konstituerande landet England. London grundades
-    av romarna under namnet Londinium som huvudstad i den romerska provinsen Britannia, för vilken staden också
-    utgjorde hamnstad vid floden Themsen.
+  text: För andra platser med namnet London, se London (olika betydelser). London är huvudstad i både staten Storbritannien
+    och i riksdelen/konstituerande landet England. London grundades av romarna under namnet Londinium som huvudstad
+    i den romerska provinsen Britannia, för vilken staden också utgjorde hamnstad vid floden Themsen.
   title: London (Storbritannien)
   url: https://sv.wikivoyage.org/wiki/London_%28Storbritannien%29
 Lugano:
@@ -825,9 +816,8 @@ Lugano:
   fetched: '2026-11-13'
   revid: 59167770
   source: wikipedia
-  text: 'Lugano (italienskt uttal: [luˈɡaːno], äldre tyskt namn: Lauis, rätoromanska: Ligiaun ) är en stad och kommun
-    i distriktet Lugano i södra delen av den italienskspråkiga kantonen Ticino i Schweiz. Kommunen har 63 629 invånare
-    (2024).'
+  text: Lugano är en stad och kommun i distriktet Lugano i södra delen av den italienskspråkiga kantonen Ticino
+    i Schweiz. Kommunen har 63 629 invånare (2024).
   title: Lugano
   url: https://sv.wikipedia.org/wiki/Lugano
 Luxembourg:
@@ -836,9 +826,9 @@ Luxembourg:
   revid: 59795708
   source: wikipedia
   text: Luxemburg är huvudstad i landet Luxemburg. Staden är belägen vid floden Pétrusses utlopp i floden Alzette.
-    De tre viktigaste stadsdelarna, Uewerstad, Gare och Kirchberg, ligger på varsin platå avgränsade av djupa flodraviner.
-    Staden hade 119 215 invånare i början av 2019 och kantonen Luxemburg 186 533. Två tredjedelar av stadens befolkning
-    är invandrare.
+    De tre viktigaste stadsdelarna, Uewerstad (Gamla stan), Gare och Kirchberg, ligger på varsin platå avgränsade
+    av djupa flodraviner. Staden hade 119 215 invånare i början av 2019 och kantonen Luxemburg 186 533. Två tredjedelar
+    av stadens befolkning är invandrare.
   title: Luxemburg (stad)
   url: https://sv.wikipedia.org/wiki/Luxemburg_%28stad%29
 Lyon:
@@ -857,10 +847,9 @@ Madrid:
   fetched: '2026-11-13'
   revid: 59224133
   source: wikipedia
-  text: 'Madrid (spanskt uttal: [maˈð̞ɾið̞], eller [maˈð̞ɾi]) är Spaniens huvudstad och den största staden på Iberiska
-    halvön. Med sina 3,4 miljoner invånare (2025) i kommunen och 6 miljoner i storstadsområdet, är Madrid en av
-    de folkrikaste städerna inom EU. Madrid är beläget på vänstra stranden av Manzanares, ett litet tillflöde till
-    Tajos biflod Jarama.'
+  text: Madrid är Spaniens huvudstad och den största staden på Iberiska halvön. Med sina 3,4 miljoner invånare (2025)
+    i kommunen och 6 miljoner i storstadsområdet, är Madrid en av de folkrikaste städerna inom EU. Madrid är beläget
+    på vänstra stranden av Manzanares, ett litet tillflöde till Tajos biflod Jarama.
   title: Madrid
   url: https://sv.wikipedia.org/wiki/Madrid
 Malaga:
@@ -889,7 +878,7 @@ Manchester:
   fetched: '2026-11-13'
   revid: 92442
   source: wikivoyage
-  text: Manchester[1] är en stad i nordvästra England. Själva Manchester har en befolkning på omkring 570 000 invånare,
+  text: Manchester är en stad i nordvästra England. Själva Manchester har en befolkning på omkring 570 000 invånare,
     men medräknat ytterområdena uppgår den till över 2,9 miljoner invånare (2022). Manchester är känt för sin industri-,
     sport- och musikhistoria. Staden har många studenter. Manchester, som är Storbritanniens näst största stad,
     kallas för norra Englands huvudstad.
@@ -900,10 +889,9 @@ Marrakech:
   fetched: '2026-11-13'
   revid: 59321914
   source: wikipedia
-  text: 'Marrakech (alternativ stavning Marrakesh, arabiska: مراكش, murrakuch, berberspråk: ⴰⵎⵓⵔⴰⴽⵓⵛ, Ameṛṛakec)
-    är en stad i sydvästra Marocko, vid foten av Atlasbergen. Marrakech har cirka 900 000 invånare och är administrativ
-    huvudort för prefekturen med samma namn samt för regionen Marrakech-Tensift-Al Haouz. Marrakech betyder på berbiska
-    "Guds land", och har även smeknamnet "Söderns pärla".'
+  text: Marrakech är en stad i sydvästra Marocko, vid foten av Atlasbergen. Marrakech har cirka 900 000 invånare
+    och är administrativ huvudort för prefekturen med samma namn samt för regionen Marrakech-Tensift-Al Haouz. Marrakech
+    betyder på berbiska "Guds land", och har även smeknamnet "Söderns pärla".
   title: Marrakech
   url: https://sv.wikipedia.org/wiki/Marrakech
 Marseille:
@@ -913,9 +901,9 @@ Marseille:
   section: Fakta om Marseille
   source: wikivoyage
   text: Marseille är en stad i Frankrike och landets näst största, sett till folkmängd. Själva staden har 870 731
-    invånare, men i hela Marseilles storstadsområde lever 1 873 270 personer. Staden Massalia, idag Marseille, grundades
-    år 600 före Kristus av greker längst inne i viken Lacydon, och är därmed en av de äldsta städerna i Europa.
-    Det vi idag kallar den gamla hamnen, Vieux-Port, var mittpunkten av staden.
+    invånare, men i hela Marseilles storstadsområde lever 1 873 270 personer (2019). Staden Massalia, idag Marseille,
+    grundades år 600 före Kristus av greker längst inne i viken Lacydon, och är därmed en av de äldsta städerna
+    i Europa. Det vi idag kallar den gamla hamnen, Vieux-Port, var mittpunkten av staden.
   title: Marseille
   url: https://sv.wikivoyage.org/wiki/Marseille
 Messina:
@@ -955,9 +943,9 @@ Montpellier:
   fetched: '2026-11-13'
   revid: 59578469
   source: wikipedia
-  text: 'Montpellier (franska: [mɔ̃pəlje], occitanska: Montpelhièr) är en stad och kommun i departementet Hérault
-    i regionen Occitanien i södra Frankrike. År 2017 hade Montpellier 285 121 invånare. Montpellier är en universitets-
-    och industristad, men även ett betydande turistcentrum.'
+  text: Montpellier är en stad och kommun i departementet Hérault i regionen Occitanien i södra Frankrike. År 2017
+    hade Montpellier 285 121 invånare. Montpellier är en universitets- och industristad, men även ett betydande
+    turistcentrum.
   title: Montpellier
   url: https://sv.wikipedia.org/wiki/Montpellier
 Munich:
@@ -966,9 +954,8 @@ Munich:
   revid: 59175890
   source: wikipedia
   text: München är en stad, belägen i regeringsområdet Oberbayern i södra Tyskland. Den är huvudstad och största
-    stad i förbundslandet Bayern. Staden är en kretsfri stad med cirka 1 487 000 invånare. Det gör München till
-    Tysklands tredje största stad. I hela metropolregionen bor omkring 6,2 miljoner människor. München är känd för
-    Oktoberfest, en folkfest som hålls varje år från slutet av september till början av oktober.
+    stad i förbundslandet Bayern. Staden är en kretsfri stad med cirka 1 487 000 invånare (2023). Det gör München
+    till Tysklands tredje största stad. I hela metropolregionen bor omkring 6,2 miljoner människor.
   title: München
   url: https://sv.wikipedia.org/wiki/M%C3%BCnchen
 Nantes:
@@ -978,8 +965,8 @@ Nantes:
   source: wikipedia
   text: Nantes är en stad och kommun i västra Frankrike. Nantes är den sjätte största staden i Frankrike och största
     staden i departementet Loire-Atlantique och i den administrativa regionen Pays de la Loire. År 2017 hade Nantes
-    309 346 invånare. År 2009 hade det närmaste storstadsområdet 569 961 invånare och den fulla storstadsregionen
-    totalt 768 305 invånare.
+    309 346 invånare. År 2009 hade det närmaste storstadsområdet (unité urbaine) 569 961 invånare och den fulla
+    storstadsregionen (aire urbaine) totalt 768 305 invånare.
   title: Nantes
   url: https://sv.wikipedia.org/wiki/Nantes
 Naples:
@@ -987,10 +974,10 @@ Naples:
   fetched: '2026-11-13'
   revid: 58789250
   source: wikipedia
-  text: 'Neapel (italienska: Napoli) är huvudstad i den italienska regionen Kampanien och huvudort i storstadsregionen
-    Neapel, innan 2015 provinsen Neapel. Neapel har cirka 2,18 miljoner invånare och ligger nära den berömda vulkanen
-    Vesuvius. Det är Italiens tredje största stad, efter Rom och Milano. Stadens tunnelbana (med sex linjer och
-    87 stationer) är Italiens äldsta.'
+  text: Neapel är huvudstad i den italienska regionen Kampanien och huvudort i storstadsregionen Neapel, innan 2015
+    provinsen Neapel. Neapel har cirka 2,18 miljoner invånare och ligger nära den berömda vulkanen Vesuvius. Det
+    är Italiens tredje största stad, efter Rom och Milano. Stadens tunnelbana (med sex linjer och 87 stationer)
+    är Italiens äldsta.
   title: Neapel
   url: https://sv.wikipedia.org/wiki/Neapel
 Narvik:
@@ -998,8 +985,7 @@ Narvik:
   fetched: '2026-11-13'
   revid: 59210714
   source: wikipedia
-  text: 'Narvik (nordsamiska: Áhkanjárga) är en tätort och stad som utgör centralort i Narviks kommun i Nordland
-    fylke i norra Norge.'
+  text: Narvik är en tätort och stad som utgör centralort i Narviks kommun i Nordland fylke i norra Norge.
   title: Narvik
   url: https://sv.wikipedia.org/wiki/Narvik
 Newcastle:
@@ -1060,9 +1046,9 @@ Oulu:
   revid: 91336
   section: Fakta om Uleåborg
   source: wikivoyage
-  text: Uleåborg (fi. Oulu) [1] är den fjärde största staden i Finland med ca 129 000 invånare. Det är också den
-    absolut största staden i norra Finland. Det finns många IT-företag i staden, samt ett av landets största tekniska
-    universitet. Till största delen finskatalande.
+  text: Uleåborg (fi. Oulu) är den fjärde största staden i Finland med ca 129 000 invånare. Det är också den absolut
+    största staden i norra Finland. Det finns många IT-företag i staden, samt ett av landets största tekniska universitet.
+    Till största delen finskatalande.
   title: Uleåborg
   url: https://sv.wikivoyage.org/wiki/Ule%C3%A5borg
 Palermo:
@@ -1070,9 +1056,9 @@ Palermo:
   fetched: '2026-11-13'
   revid: 56042541
   source: wikipedia
-  text: 'Palermo (sicilianska: Palermu) är huvudort på Sicilien, en av Italiens autonoma regioner, en kommun och
-    huvudort i storstadsregionen Palermo (en), som 2015 ersatte provinsen Palermo. Staden är belägen på öns nordvästkust.
-    Kommunen hade 626 320 invånare (2022). Det är den största staden på ön Sicilien och den femte största i Italien.'
+  text: Palermo är huvudort på Sicilien, en av Italiens autonoma regioner, en kommun och huvudort i storstadsregionen
+    Palermo (en), som 2015 ersatte provinsen Palermo. Staden är belägen på öns nordvästkust. Kommunen hade 626 320
+    invånare (2022). Det är den största staden på ön Sicilien och den femte största i Italien.
   title: Palermo
   url: https://sv.wikipedia.org/wiki/Palermo
 Palma:
@@ -1091,10 +1077,9 @@ Paris:
   fetched: '2026-11-13'
   revid: 91152
   source: wikivoyage
-  text: Paris [1] är Frankrikes huvudstad. Med 2,2 miljoner invànare i innerstaden och med nästan 12 miljoner i
-    hela storstadsområdet - är Paris en av de största globala storstäder i Europa. Paris är beläget i norra delen
-    av landet vid floden Seine och har ryktet om sig att vara den vackraste och mest romantiska av alla världens
-    städer.
+  text: Paris är Frankrikes huvudstad. Med 2,2 miljoner invànare i innerstaden och med nästan 12 miljoner i hela
+    storstadsområdet - är Paris en av de största globala storstäder i Europa. Paris är beläget i norra delen av
+    landet vid floden Seine och har ryktet om sig att vara den vackraste och mest romantiska av alla världens städer.
   title: Paris
   url: https://sv.wikivoyage.org/wiki/Paris
 Patras:
@@ -1113,9 +1098,9 @@ Penzance:
   fetched: '2026-11-13'
   revid: 56115994
   source: wikipedia
-  text: 'Penzance (korniska: Pennsans) är en stad och civil parish i Cornwall. Folkmängden uppgår till lite mer
-    än 16 000 invånare. Penzance är en hamnstad och Englands västligaste stad. Den har ett milt klimat vilket möjliggör
-    odling av tidiga frukter och grönsaker. Staden är en turist- och badort.'
+  text: Penzance är en stad och civil parish i Cornwall. Folkmängden uppgår till lite mer än 16 000 invånare. Penzance
+    är en hamnstad och Englands västligaste stad. Den har ett milt klimat vilket möjliggör odling av tidiga frukter
+    och grönsaker. Staden är en turist- och badort.
   title: Penzance
   url: https://sv.wikipedia.org/wiki/Penzance
 Porto:
@@ -1124,9 +1109,8 @@ Porto:
   revid: 59652581
   source: wikipedia
   text: Porto är den näst största staden i Portugal, belägen i den norra delen av landet, cirka 6 km från floden
-    Douros mynning i Atlanten. Den har 237 600 invånare i den centrala kommunen och 1,4 miljoner invånare i hela
-    storstadsområdet. Porto är en stad med livlig sjöfart och tillverkningsindustrier. I området öster om staden
-    vid floden Douros lopp produceras ett välkänt starkvin – portvin – som till stor del exporteras.
+    Douros mynning i Atlanten. Den har 237 600 invånare (2011) i den centrala kommunen och 1,4 miljoner invånare
+    i hela storstadsområdet. Porto är en stad med livlig sjöfart och tillverkningsindustrier.
   title: Porto
   url: https://sv.wikipedia.org/wiki/Porto
 Porto Torres:
@@ -1134,9 +1118,8 @@ Porto Torres:
   fetched: '2026-11-13'
   revid: 55120588
   source: wikipedia
-  text: 'Porto Torres (sassaresiska: Posthudorra; sardiska: Portu Turre) är en stad och kommun med 22 367 invånare
-    (2017) på Sardinien i provinsen Sassari, Italien. Porto Torres gränsar till kommunen Sassari. Ön Asinara ligger
-    i kommunen.'
+  text: Porto Torres är en stad och kommun med 22 367 invånare (2017) på Sardinien i provinsen Sassari, Italien.
+    Porto Torres gränsar till kommunen Sassari. Ön Asinara ligger i kommunen.
   title: Porto Torres
   url: https://sv.wikipedia.org/wiki/Porto_Torres
 Pozzallo:
@@ -1153,7 +1136,7 @@ Prague:
   fetched: '2026-11-13'
   revid: 94497
   source: wikivoyage
-  text: 'Prag [1] är huvudstad i Tjeckien. Prag är en fantastisk stad: broar, katedraler, förgyllda torn och spiror
+  text: 'Prag är huvudstad i Tjeckien. Prag är en fantastisk stad: broar, katedraler, förgyllda torn och spiror
     återspeglas i floden Vltava, där svanar lojt simmar omkring, och har så gjort i över tusen år. Staden skonades
     nästan helt under andra världskriget och har gjort att Prags medeltida stadskärna fortfarande bjuder på stenlagda
     gator, kringmurade gårdsplaner, katedraler och otaliga takspiror.'
@@ -1164,10 +1147,10 @@ Przemyśl:
   fetched: '2026-11-13'
   revid: 59795692
   source: wikipedia
-  text: Przemyśl [ˈpʃɛmɨɕl] är en stad i Nedre Karpaternas vojvodskap i sydöstra Polen. Przemyśl, som för första
-    gången nämns i ett dokument från år 981, hade 63 638 invånare år 2013. Staden var en viktig österrikisk-ungersk
-    fästning under första världskriget. Här genomfördes den längsta belägringen under hela kriget, vilken varade
-    i 133 dagar och där Ryssland avgick med seger.
+  text: Przemyśl är en stad i Nedre Karpaternas vojvodskap i sydöstra Polen. Przemyśl, som för första gången nämns
+    i ett dokument från år 981, hade 63 638 invånare år 2013. Staden var en viktig österrikisk-ungersk fästning
+    under första världskriget. Här genomfördes den längsta belägringen under hela kriget, vilken varade i 133 dagar
+    och där Ryssland avgick med seger.
   title: Przemyśl
   url: https://sv.wikipedia.org/wiki/Przemy%C5%9Bl
 Rabat:
@@ -1196,7 +1179,7 @@ Riga:
   fetched: '2026-11-13'
   revid: 92070
   source: wikivoyage
-  text: Riga [1] är Lettlands huvudstad. Riga marknadsför sig gärna som City of Art Noveau, det vill säga jugendstilens
+  text: Riga är Lettlands huvudstad. Riga marknadsför sig gärna som City of Art Noveau, det vill säga jugendstilens
     huvudstad. Det vackra och välbevarade stadscentrat, Vecrīga, är sedan 1997 ett världsarv. Riga har bland annat
     också status som frihamn, vilket gör att många företag valt att etablera sig här för handel med det forna östblocket.
   title: Riga
@@ -1240,7 +1223,7 @@ Rovaniemi:
   source: wikipedia
   text: Rovaniemi är en stad belägen vid Ounasjokis utflöde i Kemi älv i landskapet Lappland i Finland. Det är den
     fjärde största staden på Nordkalotten. Historiskt sett tillhör staden det historiska landskapet Österbotten.
-    Rovaniemi har 64 180 invånare och en total areal på 8 016,73 kvadratkilometer, varav 434,87 km² är vatten.
+    Rovaniemi har 64 180 invånare (2021) och en total areal på 8 016,73 kvadratkilometer, varav 434,87 km² är vatten.
   title: Rovaniemi
   url: https://sv.wikipedia.org/wiki/Rovaniemi
 Ruse:
@@ -1248,8 +1231,8 @@ Ruse:
   fetched: '2026-11-13'
   revid: 59795739
   source: wikipedia
-  text: Ruse är en stad med 145 765 invånare i norra Bulgarien. Staden, som ligger vid Donau, har en viktig flodhamn
-    och är handelscentrum i ett jordbruksdistrikt. Ruse är Bulgariens sjätte största stad. Den utgör centralort
+  text: Ruse är en stad med 145 765 invånare (2015) i norra Bulgarien. Staden, som ligger vid Donau, har en viktig
+    flodhamn och är handelscentrum i ett jordbruksdistrikt. Ruse är Bulgariens sjätte största stad. Den utgör centralort
     i kommunen Ruse samt huvudort i regionen Ruse och är gränsstad till Rumänien. På andra sidan Donau ligger den
     rumänska staden Giurgiu. Ruse Peak på Antarktis är namngiven efter staden.
   title: Ruse
@@ -1271,7 +1254,7 @@ San Marino:
   revid: 96316
   section: Fakta om San Marino
   source: wikivoyage
-  text: San Marino [1] är ett land på Apenninska halvön i Sydeuropa, helt omslutet av Italien. San Marino är Europas
+  text: San Marino är ett land på Apenninska halvön i Sydeuropa, helt omslutet av Italien. San Marino är Europas
     tredje minsta land efter Vatikanstaten och Monaco. Landet gränsar endast till Italien. San Marino grundades
     år 301 och är således ett av världens äldsta länder. Medelhavsklimat. Varmt och torrt på sommaren, milt och
     regnigt på vintern.
@@ -1292,9 +1275,9 @@ Sarajevo:
   fetched: '2026-11-13'
   revid: 58104648
   source: wikipedia
-  text: Sarajevo är huvudstaden i Bosnien och Hercegovina. Sarajevo har ca 642 000 invånare under juni 2008. Kommunens
-    area är 1 900 km². Den är belägen på Sarajevofältet, omgiven av bergskedjorna Bjelasnica, Igman, Jahorina och
-    Trebevic.
+  text: Sarajevo är huvudstaden i Bosnien och Hercegovina. Sarajevo har ca 642 000 invånare (fyra kommuner) under
+    juni 2008. Kommunens area är 1 900 km² (augusti 2009). Den är belägen på Sarajevofältet (500 meter över havet),
+    omgiven av bergskedjorna Bjelasnica, Igman, Jahorina och Trebevic.
   title: Sarajevo
   url: https://sv.wikipedia.org/wiki/Sarajevo
 Seinäjoki:
@@ -1325,7 +1308,7 @@ Sofia:
   source: wikipedia
   text: Sofia är huvudstad och största stad i Bulgarien. Staden ligger i västra Bulgarien, vid foten av bergsmassivet
     Vitosja, och är administrativt, kulturellt och industriellt centrum i landet. Staden är huvudort i en administrativ
-    region, Sofia, som också utgör kommunen Stolitjna obsjtina med 1 325 429 invånare.
+    region (oblast), Sofia, som också utgör kommunen Stolitjna obsjtina med 1 325 429 invånare (2017).
   title: Sofia
   url: https://sv.wikipedia.org/wiki/Sofia
 Split:
@@ -1346,8 +1329,9 @@ Stavanger:
   revid: 59248476
   source: wikipedia
   text: Stavangers kommun är en kommun i landskapet Jæren i Rogaland fylke i sydvästra Norge, vars centralort är
-    staden Stavanger. Den ingår i Stavangerregionen, som definierats som en av Norges stadsregioner. Kommunen gränsar
-    till kommunerna Randaberg, Sandnes och Sola. Centralorten Stavanger utgör en del av den tätorten Stavanger/Sandnes.
+    staden Stavanger. Den ingår i Stavangerregionen (med cirka 365 000 invånare), som definierats som en av Norges
+    stadsregioner. Kommunen gränsar till kommunerna Randaberg, Sandnes och Sola. Centralorten Stavanger utgör en
+    del av den tätorten Stavanger/Sandnes.
   title: Stavangers kommun
   url: https://sv.wikipedia.org/wiki/Stavangers_kommun
 Stockholm:
@@ -1356,7 +1340,7 @@ Stockholm:
   revid: 96379
   section: Fakta om Stockholm
   source: wikivoyage
-  text: Stockholm [1] är Sveriges största stad och huvudstad. Det är även den största staden i Norden och man marknadsför
+  text: Stockholm är Sveriges största stad och huvudstad. Det är även den största staden i Norden och man marknadsför
     sig med devisen The Capital of Scandinavia, något som vållat viss irritation i grannländerna som gör anspråk
     på samma titel. Officiellt grundad av jarl Birger Magnusson av Bjälboätten och hans son Valdemar.
   title: Stockholm
@@ -1366,10 +1350,10 @@ Storlien:
   fetched: '2026-11-13'
   revid: 58554193
   source: wikipedia
-  text: Storlien är en småort i Åre distrikt i Åre kommun i Jämtland. Storlien ligger två kilometer från gränsen
-    till Norge. Orten är uppbyggd kring turism och friluftsliv - alpin skidåkning, snöskoter, längdskidåkning, jakt,
-    fiske och fjällvandring, samt till stor del dagligvaruhandel inriktad mot norska kunder där det under 2000-talet
-    har blivit allt viktigare med kunder från Norge, och de flesta turisterna i Storlien är norrmän.
+  text: Storlien är en småort i Åre distrikt (Åre socken) i Åre kommun i Jämtland. Storlien ligger två kilometer
+    från gränsen till Norge. Orten är uppbyggd kring turism och friluftsliv - alpin skidåkning, snöskoter, längdskidåkning,
+    jakt, fiske och fjällvandring, samt till stor del dagligvaruhandel inriktad mot norska kunder där det under
+    2000-talet har blivit allt viktigare med kunder från Norge, och de flesta turisterna i Storlien är norrmän.
   title: Storlien
   url: https://sv.wikipedia.org/wiki/Storlien
 Stranraer:
@@ -1389,9 +1373,9 @@ Strasbourg:
   revid: 59842706
   source: wikipedia
   text: Strasbourg är en stad och kommun i departementet Bas-Rhin i regionen Grand Est i nordöstra Frankrike. Staden
-    är säte för Europaparlamentet, Europarådet, Europadomstolen och Eurokåren. År 2017 hade Strasbourg 280 966 invånare.
-    Storstadsområdet hade 780 715 invånare år 2015. Strasbourg är huvudort i regionen Grand Est och var huvudort
-    i den tidigare provinsen Alsace.
+    är säte för Europaparlamentet, Europarådet, Europadomstolen (Europeiska domstolen för mänskliga rättigheter)
+    och Eurokåren. År 2017 hade Strasbourg 280 966 invånare. Storstadsområdet hade 780 715 invånare år 2015. Strasbourg
+    är huvudort i regionen Grand Est och var huvudort i den tidigare provinsen Alsace.
   title: Strasbourg
   url: https://sv.wikipedia.org/wiki/Strasbourg
 Stuttgart:
@@ -1412,8 +1396,8 @@ Subotica:
   source: wikipedia
   text: Subotica är en stad och kommun belägen i distriktet Norra Bačka i provinsen Vojvodina i norra Serbien, nära
     gränsen till Ungern. Staden hade 98 000 invånare år 2011, varav kommunen har cirka 142 000 invånare. Subotica
-    är en multietnisk stad med många folkgrupper. De flesta av invånarna är serber följt av ungrare och kroater
-    med flera.
+    är en multietnisk stad med många folkgrupper. De flesta av invånarna är serber (38,5%) följt av ungrare (24,1%)
+    och kroater (11,2%) med flera.
   title: Subotica
   url: https://sv.wikipedia.org/wiki/Subotica
 Sundsvall:
@@ -1421,7 +1405,7 @@ Sundsvall:
   fetched: '2026-11-13'
   revid: 96471
   source: wikivoyage
-  text: Sundsvall [1] är en stad i Medelpad och centralort i Sundsvalls kommun. Näringslivet domineras av skogsindustri,
+  text: Sundsvall är en stad i Medelpad och centralort i Sundsvalls kommun. Näringslivet domineras av skogsindustri,
     banker, försäkringsbolag och myndigheters IT-konsulter. Största arbetsgivaren är SCA. Sundsvall marknadsförs
     som Drakstaden. I staden finns sommartid ett 30-tal konstnärligt utformade drakar utplacerade. Några kilometer
     norr om staden finns det välbesökta handelsområdet Birsta.
@@ -1443,9 +1427,9 @@ Szeged:
   revid: 59233434
   source: wikipedia
   text: Szeged är en stad i provinsen Csongrád-Csanád i södra Ungern. Staden är huvudort i regionen Södra Slättlandet
-    samt provinsen Csongrád-Csanád. Szeged hade 160 766 invånare. Invånarantalet gör staden till Ungerns tredje
-    största. Den är belägen vid floden Maros mynning på båda sidor av floden Tisza, nära gränsen mot Serbien. Vid
-    Szeged går den viktiga motorvägen M5 som går mellan Budapest och Belgrad.
+    samt provinsen Csongrád-Csanád. Szeged hade 160 766 invånare (2019). Invånarantalet gör staden till Ungerns
+    tredje största. Den är belägen vid floden Maros mynning på båda sidor av floden Tisza, nära gränsen mot Serbien.
+    Vid Szeged går den viktiga motorvägen M5 som går mellan Budapest och Belgrad.
   title: Szeged
   url: https://sv.wikipedia.org/wiki/Szeged
 Tallinn:
@@ -1453,7 +1437,7 @@ Tallinn:
   fetched: '2026-11-13'
   revid: 92048
   source: wikivoyage
-  text: Tallinn[1] är Estlands huvudstad och största stad. Den ligger vid Finska viken, många turister åker färjorna
+  text: Tallinn är Estlands huvudstad och största stad. Den ligger vid Finska viken, många turister åker färjorna
     över viken från Helsingfors. Tallinns gamla stad är en historisk skönhet i 1500-talsstil, Pastellfärgade flervåningshus
     med höga gavlar kantar de kullerstensbelagda gatorna omgivna av imponerande kyrkotorn och en medeltida stadsmur.
     Stämningsfullt både på vinter och sommar.
@@ -1466,7 +1450,7 @@ Tampere:
   section: Fakta om Tammerfors
   source: wikivoyage
   text: Tammerfors (fi. Tampere) är en stad och kommun i Finland, Den är landets tredje största kommun efter Helsingfors
-    och Esbo. Tammerfors [1] är Finlands näst största stad, belägen cirka 180 kilometer från Helsingfors. Tammerfors
+    och Esbo. Tammerfors är Finlands näst största stad, belägen cirka 180 kilometer från Helsingfors. Tammerfors
     kallas ibland "Finlands Manchester", då den största delen av Finlands industri fanns här på 1800-talet. Staden
     grundades år 1779.
   title: Tammerfors
@@ -1489,8 +1473,8 @@ Tanger Med:
   source: wikipedia
   text: Tanger Med är en hamn utanför Tanger i Marocko. Den ligger vid Gibraltarsundet, i regionen Tanger-Tétouan-Al
     Hoceïma, i den norra delen av landet, cirka 40 km nordost om staden Tanger och 240 km nordost om huvudstaden
-    Rabat. Hamnen är huvudsakligen en last- och industrihamn och kan hantera cirka 9 miljoner containrar per år.
-    Den har även passagerartrafik. Tanger Med började byggas 2004 och öppnades 2007.
+    Rabat. Hamnen är huvudsakligen en last- och industrihamn och kan hantera cirka 9 miljoner containrar (TEU) per
+    år. Den har även passagerartrafik. Tanger Med började byggas 2004 och öppnades 2007.
   title: Tanger Med
   url: https://sv.wikipedia.org/wiki/Tanger_Med
 Taormina:
@@ -1510,9 +1494,9 @@ Tarifa:
   revid: 55179796
   source: wikipedia
   text: Tarifa är en stad och kommun i provinsen Cádiz i den autonoma regionen Andalusien i södra Spanien. Staden
-    ligger längs Costa de la Luz vid Medelhavet, cirka 84,5 kilometer sydost om Cádiz. Kommunen har 18 613 invånare,
-    på en yta av 419,18 km². Tarifa har en stadsmur och ett moriskt kastell. Staden har blivit ett etablerat säte
-    för olika former av surfing för såväl professionella som för amatörer.
+    ligger längs Costa de la Luz vid Medelhavet, cirka 84,5 kilometer sydost om Cádiz. Kommunen har 18 613 invånare
+    (2025), på en yta av 419,18 km². Tarifa har en stadsmur och ett moriskt kastell. Staden har blivit ett etablerat
+    säte för olika former av surfing för såväl professionella som för amatörer.
   title: Tarifa
   url: https://sv.wikipedia.org/wiki/Tarifa
 Thessaloniki:
@@ -1542,10 +1526,10 @@ Torino:
   fetched: '2026-11-13'
   revid: 59560852
   source: wikipedia
-  text: 'Turin ([tʊˈriːn]; italienska: Torino [tori:ʹno] ) är en stad och kommun i norra Italien. Den är huvudstad
-    i regionen Piemonte och huvudort i storstadsregionen Turin (före 2015 provinsen Turin). Turin är stadens namn
-    på piemontesiska. Kommunen hade 852 223 invånare 2021. I Stor-Turin bor ungefär 1,7 miljoner invånare och är
-    därmed Italiens fjärde största stad. Staden var värd för de olympiska vinterspelen 2006.'
+  text: Turin är en stad och kommun i norra Italien. Den är huvudstad i regionen Piemonte och huvudort i storstadsregionen
+    Turin (före 2015 provinsen Turin). Turin är stadens namn på piemontesiska. Kommunen hade 852 223 invånare 2021.
+    I Stor-Turin bor ungefär 1,7 miljoner invånare och är därmed Italiens fjärde största stad. Staden var värd för
+    de olympiska vinterspelen 2006.
   title: Turin
   url: https://sv.wikipedia.org/wiki/Turin
 Toulouse:
@@ -1564,10 +1548,10 @@ Trieste:
   fetched: '2026-11-13'
   revid: 59588538
   source: wikipedia
-  text: Trieste, slovenska och kroatiska Trst, samt tyska Triest, är en stad och kommun i regionen Friuli-Venezia
-    Giulia i nordöstra Italien, nära gränsen till Slovenien. Trieste var tidigare huvudort för provinsen Trieste
-    som upphörde 2017. Staden tillhörde 1382–1918 den habsburgska monarkin och blev under 1700- och 1800-talen rikets
-    viktigaste hamnstad. Trieste var länge en mångkulturell stad.
+  text: Trieste, slovenska och kroatiska Trst, samt tyska (och i äldre svensk litteratur) Triest, är en stad och
+    kommun i regionen Friuli-Venezia Giulia i nordöstra Italien, nära gränsen till Slovenien. Trieste var tidigare
+    huvudort för provinsen Trieste som upphörde 2017. Staden tillhörde 1382–1918 den habsburgska monarkin och blev
+    under 1700- och 1800-talen rikets viktigaste hamnstad.
   title: Trieste
   url: https://sv.wikipedia.org/wiki/Trieste
 Trondheim:
@@ -1576,9 +1560,9 @@ Trondheim:
   revid: 96479
   section: Fakta om Trondheim
   source: wikivoyage
-  text: Trondheim [1], eller Nidaros är en stad med en gammal historia och ligger i mitten av Norge. Universitetet
-    dominerar staden; av Trondheims 160 000 invånare är mer än 25 000 studerande. Av Norges större städer är Trondheim
-    den äldsta, och spår av dess långa historia kan fortfarande ses i och omkring staden. Trondheim tillhörde Sverige
+  text: Trondheim, eller Nidaros är en stad med en gammal historia och ligger i mitten av Norge. Universitetet dominerar
+    staden; av Trondheims 160 000 invånare är mer än 25 000 studerande. Av Norges större städer är Trondheim den
+    äldsta, och spår av dess långa historia kan fortfarande ses i och omkring staden. Trondheim tillhörde Sverige
     1658-1660, och fick stadsrättigheter 1838.
   title: Trondheim
   url: https://sv.wikivoyage.org/wiki/Trondheim
@@ -1587,9 +1571,9 @@ Tunis:
   fetched: '2026-11-13'
   revid: 57951169
   source: wikipedia
-  text: Tunis (arabiska تونس, Tūnis) är huvudstad i Tunisien och är belägen nära medelhavskusten i norra delen av
-    landet. Folkmängden uppgick till cirka 650 000 invånare i början av 2013, med 2,5 miljoner invånare i hela storstadsområdet.
-    Tidigare användes namnet Tunis även oriktigt på hela Tunisien.
+  text: Tunis är huvudstad i Tunisien och är belägen nära medelhavskusten i norra delen av landet. Folkmängden uppgick
+    till cirka 650 000 invånare i början av 2013, med 2,5 miljoner invånare i hela storstadsområdet. Tidigare användes
+    namnet Tunis även oriktigt på hela Tunisien.
   title: Tunis
   url: https://sv.wikipedia.org/wiki/Tunis
 Turku:
@@ -1598,9 +1582,9 @@ Turku:
   revid: 96414
   section: Fakta om Åbo
   source: wikivoyage
-  text: Åbo [1] är Finlands femte största stad efter huvudstadsregionens städer och Tammerfors. Staden är Finlands
-    äldsta och var den viktigaste fram till 1800-talet. Staden ligger vid Skärgårdshavet i sydvästra Finland. Åbo
-    är Finlands äldsta stad, grundad på 1200-talet. Staden förstördes nästan helt vid en brand år 1827. Därefter
+  text: Åbo (fi. Turku) är Finlands femte största stad efter huvudstadsregionens städer och Tammerfors. Staden är
+    Finlands äldsta och var den viktigaste fram till 1800-talet. Staden ligger vid Skärgårdshavet i sydvästra Finland.
+    Åbo är Finlands äldsta stad, grundad på 1200-talet. Staden förstördes nästan helt vid en brand år 1827. Därefter
     byggdes den upp på nytt efter en modern stadsplan med breda gator i rutnätsmönster.
   title: Åbo
   url: https://sv.wikivoyage.org/wiki/%C3%85bo
@@ -1610,9 +1594,9 @@ Umeå:
   revid: 91339
   section: Fakta om Umeå
   source: wikivoyage
-  text: Umeå [1] är en stad i Västerbotten och centralort i Umeå kommun. Umeå kallades tidigare Björkarnas stad,
-    med hänvisning till följd av de ca 3 000 björkar som planterades i innerstaden efter stadsbranden 1888. Umeå
-    är en universitets- och förvaltningsstad. Vid Umeå universitet finns högskolorna Handelshögskolan, Konsthögskolan,
+  text: Umeå är en stad i Västerbotten och centralort i Umeå kommun. Umeå kallades tidigare Björkarnas stad, med
+    hänvisning till följd av de ca 3 000 björkar som planterades i innerstaden efter stadsbranden 1888. Umeå är
+    en universitets- och förvaltningsstad. Vid Umeå universitet finns högskolorna Handelshögskolan, Konsthögskolan,
     Miljöhögskolan, Restauranghögskolan och Tekniska högskolan.
   title: Umeå
   url: https://sv.wikivoyage.org/wiki/Ume%C3%A5
@@ -1621,9 +1605,9 @@ Vaasa:
   fetched: '2026-11-13'
   revid: 59700694
   source: wikipedia
-  text: 'Vasa (finska: Vaasa; åren 1855–1917 officiellt Nikolajstad, finska: Nikolainkaupunki) är en stad i Finland
-    och landskapet Österbottens centralort. Staden ligger vid Bottniska vikens östra strand. Vasa är en universitetsstad
-    och ett betydande kulturellt centrum för Svenskfinland. Staden har 70 118 invånare (september 2024).'
+  text: Vasa är en stad i Finland och landskapet Österbottens centralort. Staden ligger vid Bottniska vikens östra
+    strand. Vasa är en universitetsstad och ett betydande kulturellt centrum för Svenskfinland. Staden har 70 118
+    invånare (september 2024).
   title: Vasa
   url: https://sv.wikipedia.org/wiki/Vasa
 Valencia:
@@ -1643,9 +1627,9 @@ Valga:
   revid: 51530861
   source: wikipedia
   text: Valga är residensstaden i Valgamaa i Estland, på gränsen mot Lettland. 14 055 invånare bor i den estländska
-    delen. På andra sidan gränsen ligger den lettiska staden Valka. Orten fick stadsrättigheter 1584 och var känd
-    under sitt tyska namn Walk. Valga ockuperades i januari 1918 av Tyskland. Under den estniska och lettiska självständighetskampen
-    uppstod dragkamp om staden.
+    delen (2004). På andra sidan gränsen ligger den lettiska staden Valka. Orten fick stadsrättigheter 1584 och
+    var känd under sitt tyska namn Walk. Valga ockuperades i januari 1918 av Tyskland. Under den estniska och lettiska
+    självständighetskampen uppstod dragkamp om staden.
   title: Valga
   url: https://sv.wikipedia.org/wiki/Valga
 Valletta:
@@ -1665,7 +1649,7 @@ Varna:
   revid: 59565806
   source: wikipedia
   text: Varna är en stad vid Svarta havets kust i regionen Varna i nordöstra Bulgarien. Den är landets tredje största
-    stad med 344 748 invånare i kommunen och med cirka 425 000 invånare i hela storstadsområdet. Staden grundades
+    stad med 344 748 invånare i kommunen (2017) och med cirka 425 000 invånare i hela storstadsområdet. Staden grundades
     som den grekiska kolonin Odessos år 580 f.Kr. och har länge varit en betydande hamnstad. Idag har hamnen och
     de närbelägna turistorterna stor betydelse för ekonomin.
   title: Varna
@@ -1675,7 +1659,7 @@ Vatican:
   fetched: '2026-11-13'
   revid: 81626
   source: wikivoyage
-  text: Vatikanstaten [1] är en liten enklav belägen i Rom i Italien. Runt Vatikanen löper en cirka 3200 meter lång
+  text: Vatikanstaten är en liten enklav belägen i Rom i Italien. Runt Vatikanen löper en cirka 3200 meter lång
     mur. De delar som är öppna för allmänheten är Peterskyrkan och Vatikanmuseet. Sixtinska kapellet ingår i museet.
   title: Vatikanstaten
   url: https://sv.wikivoyage.org/wiki/Vatikanstaten
@@ -1736,9 +1720,9 @@ Vilnius:
   revid: 96912
   section: Fakta om Vilnius
   source: wikivoyage
-  text: 'Vilnius, äldre Vilna och Vilnia (litauiska: Vilnius, polska: Wilno) är Litauens huvudstad och största stad.
-    Första gången Vilnius omnämns är år 1323. Svenska trupper förstörde delar av staden 1702, som en del av händelseförloppet
-    under Stora Nordiska Kriget (1700–1721).'
+  text: Vilnius, äldre Vilna och Vilnia är Litauens huvudstad och största stad. Första gången Vilnius omnämns är
+    år 1323. Svenska trupper förstörde delar av staden 1702, som en del av händelseförloppet under Stora Nordiska
+    Kriget (1700–1721).
   title: Vilnius
   url: https://sv.wikivoyage.org/wiki/Vilnius
 Vitoria-Gasteiz:
@@ -1746,10 +1730,10 @@ Vitoria-Gasteiz:
   fetched: '2026-11-13'
   revid: 58681785
   source: wikipedia
-  text: 'Vitoria-Gasteiz (spanska: Vitoria [biˈtoɾja], baskiska: Gasteiz [ɣas̺teis̻]) är en stad och kommun i den
-    autonoma regionen Baskien i norra Spanien. Staden ligger cirka 283 kilometer nordost om Madrid. Vitoria-Gasteiz
-    är centralort i provinsen Álava samt i regionen Baskien. Kommunen har 260 699 invånare (2025), på en yta av
-    276,96 km². Slaget vid Vitoria under spanska självständighetskriget utspelade sig nära staden.'
+  text: Vitoria-Gasteiz är en stad och kommun i den autonoma regionen Baskien i norra Spanien. Staden ligger cirka
+    283 kilometer nordost om Madrid. Vitoria-Gasteiz är centralort i provinsen Álava samt i regionen Baskien. Kommunen
+    har 260 699 invånare (2025), på en yta av 276,96 km². Slaget vid Vitoria under spanska självständighetskriget
+    utspelade sig nära staden.
   title: Vitoria-Gasteiz
   url: https://sv.wikipedia.org/wiki/Vitoria-Gasteiz
 Warsaw:
@@ -1758,9 +1742,9 @@ Warsaw:
   revid: 59752086
   source: wikipedia
   text: 'Warszawa, äldre svenska och tyska: Warschau, är Polens huvudstad och den största staden i landet, med 1,7
-    miljoner invånare i själva staden och cirka 3,2 miljoner invånare i storstadsområdet inklusive förorter. Historiskt
-    i svenskan har också namnet Varsjava använts. Genom staden rinner floden Wisła. Warszawa är Polens huvudstad
-    sedan 1596, då kungafamiljen flyttade dit från Kraków.'
+    miljoner invånare i själva staden och cirka 3,2 miljoner invånare i storstadsområdet (Obszar Metropolitalny
+    Warszawy) inklusive förorter. Historiskt i svenskan har också namnet Varsjava använts. Genom staden rinner floden
+    Wisła. Warszawa är Polens huvudstad sedan 1596, då kungafamiljen flyttade dit från Kraków.'
   title: Warszawa
   url: https://sv.wikipedia.org/wiki/Warszawa
 Wroclaw:
@@ -1779,7 +1763,7 @@ Zagreb:
   fetched: '2026-11-13'
   revid: 96482
   source: wikivoyage
-  text: Zagreb [1] är Kroatiens huvudstad och största stad. Stadsbilden är unik med sin blandning av medeltida arkitektur
+  text: Zagreb är Kroatiens huvudstad och största stad. Stadsbilden är unik med sin blandning av medeltida arkitektur
     lik den i Wien, Budapest, Prag och andra centraleuropeiska städer, blandad med starka italienska influenser.
     2005 besöktes Zagreb av över en halv miljon turister, de flesta från Italien, Tyskland och Österrike.
   title: Zagreb
@@ -1789,10 +1773,10 @@ Zürich:
   fetched: '2026-11-13'
   revid: 58955083
   source: wikipedia
-  text: Zürich är den största staden i Schweiz med 436 551 invånare.. Staden är huvudort i kantonen med samma namn.
-    Den ligger vid Zürichsjön. Zürich blev medlem av det schweiziska edsförbundet år 1351. Schweiz reformator Zwingli,
-    levde och predikade där, samt styrde staden och kantonen under senare delen av sitt liv. Det schweizisk-svenska
-    företaget ABB har sitt huvudkontor i staden.
+  text: Zürich är den största staden i Schweiz med 436 551 invånare (2024). (Stor-Zürich cirka 1 332 900 invånare).
+    Staden är huvudort i kantonen med samma namn. Den ligger vid Zürichsjön. Zürich blev medlem av det schweiziska
+    edsförbundet år 1351. Schweiz reformator Zwingli (död 1531), levde och predikade där, samt styrde staden och
+    kantonen under senare delen av sitt liv.
   title: Zürich
   url: https://sv.wikipedia.org/wiki/Z%C3%BCrich
 Östersund:
@@ -1802,7 +1786,7 @@ Zürich:
   source: wikipedia
   text: Östersund är en tätort som är centralort i Östersunds kommun och residensstad i Jämtlands län. I tätorten
     ingår delar av de två kommunerna Östersunds och Krokoms kommun. Östersund ligger vid Storsjön och är Storsjöbygdens,
-    Jämtlands läns och landskaps enda stad. Östersund är Sveriges 22:a största tätort med 52 797 invånare 2020.
-    Östersund är den enda stad inom Sveriges nuvarande gränser som grundats på 1700-talet.
+    Jämtlands läns och landskaps enda stad. Östersund är Sveriges 22:a största tätort (och fjärde störst i Norrland
+    efter Umeå, Gävle och Sundsvall) med 52 797 invånare 2020.
   title: Östersund
   url: https://sv.wikipedia.org/wiki/%C3%96stersund
