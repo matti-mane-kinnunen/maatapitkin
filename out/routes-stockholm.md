@@ -1,6 +1,6 @@
 # Journeys from Stockholm
 
-_leave Stockholm Tue 17.11.2026 from 16:00 · generated 12.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Stockholm Tue 17.11.2026 from 16:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -85,17 +85,17 @@ _Night trains and night buses left out; night ferries still used._
 | Madrid | Thu 19.11. 18:17 | 49 h 58 min | 6 | 2 (Copenhagen, Paris) | +2 h 58 min |
 | Belgrade | Thu 19.11. 18:35 | 50 h 16 min | 8 | 2 (Copenhagen, Vienna) | +4 h 30 min |
 | Belfast | Thu 19.11. 22:07 | 54 h 48 min | 9 | 2 (Copenhagen, London) | +7 h 19 min |
-| Dublin | Fri 20.11. 11:00 | 49 h 17 min | 4 | 2 (Hamburg, Holyhead) | +6 h 46 min |
+| Dublin | Fri 20.11. 11:00 | 54 h 38 min | 6 | 2 (Hamburg, Holyhead) | +12 h 07 min |
 | Tirana | Fri 20.11. 12:40 | 68 h 21 min | 8 | 2 (Copenhagen, Lugano) | +1 h 10 min |
 | Athens | Fri 20.11. 17:30 | 72 h 11 min | 8 | 2 (Copenhagen, Lugano) | +1 h 10 min |
 | Lisbon | Fri 20.11. 17:00 | 73 h 41 min | 9 | 3 (Copenhagen, Paris, Madrid) | +1 h 10 min |
 | Sarajevo | Fri 20.11. 20:55 | 76 h 36 min | 5 | 3 (Copenhagen, Vienna, Zagreb) | +1 h 10 min |
 | Rabat | Fri 20.11. 20:22 | 77 h 03 min | 10 | 3 (Copenhagen, Paris, Madrid) | +1 h 10 min |
 | Bucharest | Fri 20.11. 23:50 | 65 h 28 min | 5 | 2 (Prague, Budapest) | +3 h 34 min |
-| Algiers | Sat 21.11. 17:00 | 78 h 17 min | 4 | 2 (Hamburg, Marseille) | – |
+| Algiers | Sat 21.11. 17:00 | 83 h 38 min | 6 | 2 (Köln, Marseille) | – |
 | Sofia | Sat 21.11. 20:41 | 86 h 19 min | 7 | 3 (Prague, Budapest, Bucharest) | +12 h 07 min |
 | Chisinau | Sat 21.11. 23:00 | 88 h 38 min | 7 | 3 (Prague, Budapest, Bucharest) | +12 h 07 min |
-| Tunis | Sat 21.11. 22:30 | 83 h 47 min | 5 | 3 (Hamburg, Rome, Palermo) | – |
+| Tunis | Sat 21.11. 22:30 | 89 h 08 min | 7 | 3 (Munich, Rome, Palermo) | – |
 | Ankara | Mon 23.11. 13:16 | 125 h 54 min | 9 | 5 (Prague, Budapest, Bucharest, Sofia, Istanbul) | +12 h 07 min |
 
 Not reachable without night trains: Valletta, Kyiv
@@ -130,7 +130,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Dublin | – | – | – | no gain: take the 16:00 journey |
 | Belgrade | Tue 17.11. 06:20 | Wed 18.11. 18:35 | 36 h 15 min | arrives 20 h 40 min earlier |
 | Riga | – | – | – | no gain: take the 16:00 journey |
-| Andorra la Vella | Tue 17.11. 10:43 | Thu 19.11. 10:15 | 47 h 32 min | arrives 5 h 45 min earlier |
+| Andorra la Vella | Tue 17.11. 08:23 | Thu 19.11. 10:15 | 49 h 52 min | arrives 5 h 45 min earlier |
 | Vilnius | Tue 17.11. 08:23 | Thu 19.11. 11:35 | 50 h 12 min | arrives 5 h 50 min earlier |
 | Madrid | Tue 17.11. 08:23 | Wed 18.11. 22:42 | 38 h 19 min | arrives 17 h 47 min earlier |
 | Belfast | – | – | – | no gain: take the 16:00 journey |
@@ -142,9 +142,9 @@ Not reachable without night trains: Valletta, Kyiv
 | Athens | – | – | – | no gain: take the 16:00 journey |
 | Lisbon | Tue 17.11. 08:23 | Thu 19.11. 17:00 | 57 h 37 min | arrives 24 h 00 min earlier |
 | Sofia | Tue 17.11. 08:23 | Thu 19.11. 20:41 | 59 h 18 min | arrives 24 h 00 min earlier |
-| Sarajevo | Tue 17.11. 10:43 | Thu 19.11. 20:55 | 58 h 12 min | arrives 24 h 00 min earlier |
+| Sarajevo | Tue 17.11. 08:23 | Thu 19.11. 20:55 | 60 h 32 min | arrives 24 h 00 min earlier |
 | Rabat | Tue 17.11. 08:23 | Thu 19.11. 20:22 | 60 h 59 min | arrives 24 h 00 min earlier |
-| Chisinau | Tue 17.11. 10:43 | Thu 19.11. 23:00 | 59 h 17 min | arrives 24 h 00 min earlier |
+| Chisinau | Tue 17.11. 08:23 | Thu 19.11. 23:00 | 61 h 37 min | arrives 24 h 00 min earlier |
 | Algiers | – | – | – | no gain: take the 16:00 journey |
 | Tunis | – | – | – | no gain: take the 16:00 journey |
 | Ankara | Tue 17.11. 08:23 | Sat 21.11. 13:16 | 98 h 53 min | arrives 24 h 00 min earlier |
@@ -244,7 +244,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Subotica | Thu 19.11. 13:24 | 43 h 55 min | 5 | 1 |
 | Mockava | Thu 19.11. 14:43 | 44 h 14 min | 3 | 1 |
 | Bastia | Thu 19.11. 14:15 | 44 h 46 min | 5 | 1 |
-| Salerno | Thu 19.11. 14:30 | 45 h 01 min | 6 | 1 |
+| Salerno | Thu 19.11. 14:30 | 45 h 01 min | 5 | 1 |
 | Galway | Thu 19.11. 13:51 | 45 h 22 min | 5 | 1 |
 | Kaunas | Thu 19.11. 16:20 | 45 h 51 min | 4 | 1 |
 | Pozzallo | Thu 19.11. 15:58 | 46 h 29 min | 6 | 0 |

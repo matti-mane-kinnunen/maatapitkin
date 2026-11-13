@@ -1,6 +1,6 @@
 # Journeys from Rome
 
-_leave Rome Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Rome Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -164,7 +164,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Torino | Tue 17.11. 10:48 | 4 h 23 min | 1 | 0 |
 | Lugano | Tue 17.11. 11:50 | 5 h 25 min | 1 | 0 |
 | Ancona | Tue 17.11. 12:23 | 6 h 23 min | 2 | 0 |
-| Bari | Tue 17.11. 12:41 | 4 h 41 min | 0 | 0 |
+| Bari | Tue 17.11. 12:40 | 4 h 40 min | 0 | 0 |
 | Genoa | Tue 17.11. 12:44 | 6 h 19 min | 1 | 0 |
 | Villa San Giovanni | Tue 17.11. 12:47 | 5 h 17 min | 0 | 0 |
 | Lecce | Tue 17.11. 14:23 | 6 h 23 min | 1 | 0 |
@@ -575,8 +575,8 @@ _Fewest changes: 18 h 25 min, arrive Wed 18.11. 12:35, 1 changes, 0 hotel nights
 ### Tirana
 _Fastest: 28 h 40 min, arrive Wed 18.11. 12:40, 2 changes, 0 hotel nights_
 
-- Tue 17.11. 08:00 → Tue 17.11. 12:41  **Rome → Bari**  FR
-- Wait 9 h 19 min in Bari
+- Tue 17.11. 08:00 → Tue 17.11. 12:40  **Rome → Bari**  FR
+- Wait 9 h 20 min in Bari
 - Tue 17.11. 22:00 → Wed 18.11. 07:00  **Bari → Durrës**  ?  (night)
 - Wait 3 h 00 min in Durrës
 - Wed 18.11. 10:00 → Wed 18.11. 12:40  **Durrës → Tirana**  ?
@@ -653,8 +653,8 @@ _Fewest changes: 35 h 52 min, arrive Wed 18.11. 18:17, 3 changes, 1 hotel nights
 ### Athens
 _Fastest: 32 h 30 min, arrive Wed 18.11. 17:30, 2 changes, 0 hotel nights_
 
-- Tue 17.11. 08:00 → Tue 17.11. 12:41  **Rome → Bari**  FR
-- Wait 6 h 49 min in Bari
+- Tue 17.11. 08:00 → Tue 17.11. 12:40  **Rome → Bari**  FR
+- Wait 6 h 50 min in Bari
 - Tue 17.11. 19:30 → Wed 18.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
 - Wait 1 h 30 min in Patras
 - Wed 18.11. 14:30 → Wed 18.11. 17:30  **Patras → Athens**  ?

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12",
+ "generated": "2026-11-13",
  "dates": [
   "2026-11-17",
   "2026-11-20",
@@ -7,7 +7,7 @@
   "2026-11-22"
  ],
  "draft": false,
- "departures": 6702,
+ "departures": 6733,
  "warnings": 0,
  "capitals": {
   "2026-11-17": {
@@ -297,7 +297,7 @@
  },
  "origins": {
   "Stockholm": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -305,7 +305,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -595,7 +595,7 @@
    }
   },
   "Copenhagen": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -603,7 +603,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -893,7 +893,7 @@
    }
   },
   "London": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -901,7 +901,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -1191,7 +1191,7 @@
    }
   },
   "Berlin": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -1199,7 +1199,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -1489,7 +1489,7 @@
    }
   },
   "Paris": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -1497,7 +1497,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -1787,7 +1787,7 @@
    }
   },
   "Rome": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -1795,7 +1795,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
@@ -2085,7 +2085,7 @@
    }
   },
   "Hamburg": {
-   "generated": "2026-11-12",
+   "generated": "2026-11-13",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -2093,7 +2093,7 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6702,
+   "departures": 6733,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {

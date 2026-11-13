@@ -1,6 +1,6 @@
 # Journeys from London
 
-_leave London Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave London Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -38,8 +38,8 @@ _leave London Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (
 | Kyiv | Tue 17.11. 06:16 | Thu 19.11. 09:49 | 49 h 33 min | 4 | 2 | 0 |  |
 | Helsinki | Tue 17.11. 06:16 | Thu 19.11. 10:10 | 49 h 54 min | 5 | 2 | 0 |  |
 | Vilnius | Tue 17.11. 06:16 | Thu 19.11. 11:35 | 51 h 19 min | 5 | 1 | 1 (Mockava) | fewest hotel nights: 57 h 24 min, 5 ch., 0 hotel |
-| Tirana | Tue 17.11. 06:01 | Thu 19.11. 12:40 | 53 h 39 min | 4 | 1 | 1 (Milan) | fewest hotel nights: 53 h 39 min, 5 ch., 0 hotel |
-| Athens | Tue 17.11. 06:01 | Thu 19.11. 17:30 | 57 h 29 min | 4 | 1 | 1 (Milan) | fewest hotel nights: 57 h 29 min, 5 ch., 0 hotel |
+| Tirana | Tue 17.11. 06:01 | Thu 19.11. 12:40 | 53 h 39 min | 4 | 2 | 0 |  |
+| Athens | Tue 17.11. 06:01 | Thu 19.11. 17:30 | 57 h 29 min | 4 | 2 | 0 |  |
 | Sofia | Tue 17.11. 06:01 | Thu 19.11. 20:41 | 60 h 40 min | 6 | 2 | 0 |  |
 | Sarajevo | Tue 17.11. 06:01 | Thu 19.11. 20:55 | 61 h 54 min | 4 | 1 | 1 (Zagreb) |  |
 | Chisinau | Tue 17.11. 06:01 | Thu 19.11. 23:00 | 62 h 59 min | 6 | 2 | 0 | fewest changes: 72 h 09 min, 5 ch., 0 hotel |
@@ -138,8 +138,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Kyiv | Tue 17.11. 17:04 | Thu 19.11. 09:49 | 38 h 45 min | same arrival |
 | Helsinki | Tue 17.11. 17:04 | Thu 19.11. 20:39 | 49 h 35 min | arrives 10 h 29 min later |
 | Vilnius | Tue 17.11. 17:04 | Thu 19.11. 11:35 | 40 h 31 min | same arrival |
-| Tirana | Tue 17.11. 17:31 | Fri 20.11. 12:40 | 66 h 09 min | arrives 24 h 00 min later |
-| Athens | Tue 17.11. 17:31 | Fri 20.11. 17:30 | 69 h 59 min | arrives 24 h 00 min later |
+| Tirana | Wed 18.11. 06:01 | Fri 20.11. 12:40 | 53 h 39 min | arrives 24 h 00 min later |
+| Athens | Wed 18.11. 06:01 | Fri 20.11. 17:30 | 57 h 29 min | arrives 24 h 00 min later |
 | Sofia | Wed 18.11. 06:01 | Fri 20.11. 20:41 | 60 h 40 min | arrives 24 h 00 min later |
 | Sarajevo | Tue 17.11. 17:04 | Thu 19.11. 20:55 | 50 h 51 min | same arrival |
 | Chisinau | Tue 17.11. 17:04 | Thu 19.11. 23:00 | 51 h 56 min | same arrival |
@@ -233,7 +233,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Algeciras | Wed 18.11. 13:59 | 30 h 58 min | 4 | 1 |
 | Gdansk | Wed 18.11. 14:12 | 30 h 56 min | 5 | 0 |
 | Bastia | Wed 18.11. 14:15 | 31 h 14 min | 3 | 1 |
-| Salerno | Wed 18.11. 14:30 | 31 h 29 min | 4 | 1 |
+| Salerno | Wed 18.11. 14:30 | 31 h 29 min | 3 | 1 |
 | Galway | Wed 18.11. 13:51 | 29 h 51 min | 2 | 1 |
 | Sundsvall | Wed 18.11. 14:53 | 31 h 37 min | 5 | 0 |
 | Pozzallo | Wed 18.11. 15:58 | 32 h 57 min | 5 | 0 |
@@ -254,14 +254,14 @@ Not reachable without night trains: Valletta, Kyiv
 | Bergen | Thu 19.11. 06:23 | 47 h 07 min | 6 | 0 |
 | Przemyśl | Thu 19.11. 06:25 | 47 h 09 min | 4 | 0 |
 | Turku | Thu 19.11. 07:35 | 47 h 19 min | 5 | 0 |
-| Durrës | Thu 19.11. 07:00 | 47 h 59 min | 3 | 1 |
+| Durrës | Thu 19.11. 07:00 | 47 h 59 min | 3 | 0 |
 | Stavanger | Thu 19.11. 07:21 | 48 h 05 min | 6 | 0 |
 | Porto Torres | Thu 19.11. 07:30 | 48 h 29 min | 3 | 1 |
 | Storlien | Thu 19.11. 09:17 | 50 h 01 min | 5 | 0 |
 | Kaunas | Thu 19.11. 10:30 | 50 h 14 min | 5 | 1 |
 | Kaisiadorys | Thu 19.11. 11:36 | 51 h 20 min | 6 | 1 |
 | Tampere | Thu 19.11. 12:53 | 52 h 37 min | 6 | 0 |
-| Patras | Thu 19.11. 13:00 | 52 h 59 min | 3 | 1 |
+| Patras | Thu 19.11. 13:00 | 52 h 59 min | 3 | 0 |
 | Narvik | Thu 19.11. 12:37 | 53 h 21 min | 6 | 0 |
 | Ruse | Thu 19.11. 13:40 | 53 h 39 min | 5 | 0 |
 | Seinäjoki | Thu 19.11. 14:12 | 53 h 56 min | 6 | 0 |
@@ -271,10 +271,10 @@ Not reachable without night trains: Valletta, Kyiv
 | Oulu | Thu 19.11. 17:48 | 57 h 32 min | 6 | 0 |
 | Iasi | Thu 19.11. 18:08 | 58 h 07 min | 5 | 0 |
 | Rovaniemi | Thu 19.11. 20:23 | 60 h 07 min | 6 | 0 |
-| Thessaloniki | Thu 19.11. 23:10 | 63 h 09 min | 5 | 1 |
+| Thessaloniki | Thu 19.11. 23:10 | 63 h 09 min | 5 | 0 |
 | Varna | Fri 20.11. 06:50 | 70 h 49 min | 7 | 0 |
 | Istanbul | Fri 20.11. 08:00 | 70 h 59 min | 7 | 0 |
-| Chania | Fri 20.11. 07:00 | 70 h 59 min | 5 | 1 |
+| Chania | Fri 20.11. 07:00 | 70 h 59 min | 5 | 0 |
 | Valga | Fri 20.11. 14:13 | 78 h 12 min | 7 | 1 |
 | Split | Sat 21.11. 07:00 | 95 h 59 min | 2 | 3 |
 
@@ -725,51 +725,27 @@ _Fewest hotel nights: 57 h 24 min, arrive Thu 19.11. 17:25, 5 changes, 0 hotel n
 - Thu 19.11. 15:07 → Thu 19.11. 17:25  **Mockava → Vilnius**  32
 
 ### Tirana
-_Fastest: 53 h 39 min, arrive Thu 19.11. 12:40, 4 changes, 1 hotel nights_
+_Fastest: 53 h 39 min, arrive Thu 19.11. 12:40, 4 changes, 0 hotel nights_
 
 - Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
 - Wait 3 h 24 min in Paris
 - Tue 17.11. 12:46 → Tue 17.11. 19:50  **Paris → Milan**  FR
-- 🛏 Overnight in Milan (Tue 17.11. 19:50 → Wed 18.11. 06:10)
-- Wed 18.11. 06:10 → Wed 18.11. 14:23  **Milan → Bari**  FR
-- Wait 7 h 37 min in Bari
-- Wed 18.11. 22:00 → Thu 19.11. 07:00  **Bari → Durrës**  ?  (night)
-- Wait 3 h 00 min in Durrës
-- Thu 19.11. 10:00 → Thu 19.11. 12:40  **Durrës → Tirana**  ?
-
-### Tirana — fewest hotel nights
-_Fewest hotel nights: 53 h 39 min, arrive Thu 19.11. 12:40, 5 changes, 0 hotel nights_
-
-- Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
-- Tue 17.11. 10:22 → Tue 17.11. 14:26  **Paris → Zürich**  TGV Lyria
-- Tue 17.11. 15:33 → Tue 17.11. 18:50  **Zürich → Milan**  EC
-- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Milan → Bari**  FR  (night)
-- Wait 15 h 00 min in Bari
+- Wait 2 h 00 min in Milan
+- Tue 17.11. 21:50 → Wed 18.11. 07:40  **Milan → Bari**  FR  (night)
+- Wait 14 h 20 min in Bari
 - Wed 18.11. 22:00 → Thu 19.11. 07:00  **Bari → Durrës**  ?  (night)
 - Wait 3 h 00 min in Durrës
 - Thu 19.11. 10:00 → Thu 19.11. 12:40  **Durrës → Tirana**  ?
 
 ### Athens
-_Fastest: 57 h 29 min, arrive Thu 19.11. 17:30, 4 changes, 1 hotel nights_
+_Fastest: 57 h 29 min, arrive Thu 19.11. 17:30, 4 changes, 0 hotel nights_
 
 - Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
 - Wait 3 h 24 min in Paris
 - Tue 17.11. 12:46 → Tue 17.11. 19:50  **Paris → Milan**  FR
-- 🛏 Overnight in Milan (Tue 17.11. 19:50 → Wed 18.11. 06:10)
-- Wed 18.11. 06:10 → Wed 18.11. 14:23  **Milan → Bari**  FR
-- Wait 5 h 07 min in Bari
-- Wed 18.11. 19:30 → Thu 19.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
-- Wait 1 h 30 min in Patras
-- Thu 19.11. 14:30 → Thu 19.11. 17:30  **Patras → Athens**  ?
-
-### Athens — fewest hotel nights
-_Fewest hotel nights: 57 h 29 min, arrive Thu 19.11. 17:30, 5 changes, 0 hotel nights_
-
-- Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
-- Tue 17.11. 10:22 → Tue 17.11. 14:26  **Paris → Zürich**  TGV Lyria
-- Tue 17.11. 15:33 → Tue 17.11. 18:50  **Zürich → Milan**  EC
-- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Milan → Bari**  FR  (night)
-- Wait 12 h 30 min in Bari
+- Wait 2 h 00 min in Milan
+- Tue 17.11. 21:50 → Wed 18.11. 07:40  **Milan → Bari**  FR  (night)
+- Wait 11 h 50 min in Bari
 - Wed 18.11. 19:30 → Thu 19.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
 - Wait 1 h 30 min in Patras
 - Thu 19.11. 14:30 → Thu 19.11. 17:30  **Patras → Athens**  ?

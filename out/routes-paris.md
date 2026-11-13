@@ -1,6 +1,6 @@
 # Journeys from Paris
 
-_leave Paris Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Paris Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -187,8 +187,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Bologna | Tue 17.11. 15:24 | 8 h 54 min | 1 | 0 |
 | Munich | Tue 17.11. 15:40 | 9 h 20 min | 2 | 0 |
 | Verona | Tue 17.11. 15:58 | 9 h 28 min | 2 | 0 |
-| Penzance | Tue 17.11. 15:03 | 8 h 54 min | 1 | 0 |
 | Florence | Tue 17.11. 16:04 | 9 h 34 min | 1 | 0 |
+| Penzance | Tue 17.11. 15:08 | 8 h 59 min | 1 | 0 |
 | Genoa | Tue 17.11. 16:18 | 9 h 48 min | 1 | 0 |
 | L'Hospitalet | Tue 17.11. 16:19 | 10 h 08 min | 1 | 0 |
 | Ayr | Tue 17.11. 15:24 | 9 h 15 min | 2 | 0 |
@@ -238,7 +238,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Mockava | Wed 18.11. 14:43 | 29 h 52 min | 4 | 0 |
 | Algeciras | Wed 18.11. 13:59 | 30 h 17 min | 2 | 1 |
 | Bastia | Wed 18.11. 14:15 | 31 h 45 min | 2 | 1 |
-| Salerno | Wed 18.11. 14:30 | 32 h 00 min | 3 | 1 |
+| Salerno | Wed 18.11. 14:30 | 32 h 00 min | 2 | 1 |
 | Galway | Wed 18.11. 13:51 | 31 h 42 min | 3 | 1 |
 | Kaunas | Wed 18.11. 16:20 | 31 h 29 min | 5 | 0 |
 | Pozzallo | Wed 18.11. 15:58 | 33 h 28 min | 3 | 0 |

@@ -1,6 +1,6 @@
 # Journeys from Hamburg
 
-_leave Hamburg Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Hamburg Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -39,8 +39,8 @@ _leave Hamburg Tue 17.11.2026 from 06:00 · generated 12.11.2026. Change 20 min 
 | Chisinau | Tue 17.11. 06:01 | Thu 19.11. 08:10 | 49 h 09 min | 4 | 2 | 0 |  |
 | Helsinki | Tue 17.11. 09:51 | Thu 19.11. 08:35 | 45 h 44 min | 3 | 3 | 0 | fewest changes: 47 h 19 min, 1 ch., 1 hotel |
 | Riga | Tue 17.11. 06:34 | Thu 19.11. 11:34 | 52 h 00 min | 4 | 0 | 2 (Warsaw, Vilnius) | fewest hotel nights: 52 h 33 min, 5 ch., 1 hotel |
-| Tirana | Tue 17.11. 06:01 | Thu 19.11. 12:40 | 54 h 39 min | 4 | 1 | 1 (Bologna) | fewest hotel nights: 54 h 11 min, 5 ch., 0 hotel |
-| Athens | Tue 17.11. 06:01 | Thu 19.11. 17:30 | 58 h 29 min | 4 | 1 | 1 (Bologna) | fewest hotel nights: 58 h 01 min, 5 ch., 0 hotel |
+| Tirana | Tue 17.11. 06:01 | Thu 19.11. 12:40 | 54 h 39 min | 4 | 2 | 0 |  |
+| Athens | Tue 17.11. 06:01 | Thu 19.11. 17:30 | 58 h 29 min | 4 | 2 | 0 |  |
 | Tallinn | Tue 17.11. 06:34 | Thu 19.11. 18:15 | 58 h 41 min | 6 | 0 | 2 (Warsaw, Vilnius) | fewest hotel nights: 59 h 14 min, 7 ch., 1 hotel |
 | Lisbon | Tue 17.11. 06:29 | Thu 19.11. 17:00 | 59 h 31 min | 6 | 0 | 2 (Paris, Madrid) | fewest hotel nights: 59 h 31 min, 7 ch., 1 hotel |
 | Sofia | Tue 17.11. 09:34 | Thu 19.11. 20:41 | 58 h 07 min | 4 | 2 | 0 |  |
@@ -252,12 +252,12 @@ Not reachable without night trains: Valletta, Kyiv
 | Badajoz | Wed 18.11. 23:12 | 40 h 43 min | 5 | 0 |
 | Palma | Thu 19.11. 05:30 | 31 h 39 min | 3 | 0 |
 | Turku | Thu 19.11. 07:35 | 44 h 44 min | 1 | 1 |
-| Durrës | Thu 19.11. 07:00 | 48 h 59 min | 3 | 1 |
+| Durrës | Thu 19.11. 07:00 | 48 h 59 min | 3 | 0 |
 | Porto Torres | Thu 19.11. 07:30 | 33 h 19 min | 4 | 0 |
 | Seinäjoki | Thu 19.11. 09:15 | 46 h 24 min | 3 | 1 |
 | Tampere | Thu 19.11. 10:53 | 48 h 02 min | 4 | 0 |
 | Granada | Thu 19.11. 10:25 | 51 h 56 min | 5 | 2 |
-| Patras | Thu 19.11. 13:00 | 53 h 59 min | 3 | 1 |
+| Patras | Thu 19.11. 13:00 | 53 h 59 min | 3 | 0 |
 | Narvik | Thu 19.11. 12:37 | 50 h 46 min | 2 | 1 |
 | Ruse | Thu 19.11. 13:40 | 51 h 06 min | 3 | 0 |
 | Valga | Thu 19.11. 14:13 | 54 h 39 min | 5 | 2 |
@@ -272,13 +272,13 @@ Not reachable without night trains: Valletta, Kyiv
 | Tanger | Thu 19.11. 18:00 | 60 h 31 min | 6 | 2 |
 | Faro | Thu 19.11. 20:23 | 62 h 54 min | 7 | 2 |
 | Porto | Thu 19.11. 20:43 | 63 h 14 min | 7 | 2 |
-| Thessaloniki | Thu 19.11. 23:10 | 64 h 09 min | 5 | 1 |
+| Thessaloniki | Thu 19.11. 23:10 | 64 h 09 min | 5 | 0 |
 | Casablanca | Thu 19.11. 21:17 | 63 h 48 min | 7 | 2 |
 | Varna | Fri 20.11. 06:50 | 68 h 16 min | 5 | 0 |
 | Istanbul | Fri 20.11. 08:00 | 68 h 26 min | 5 | 0 |
-| Chania | Fri 20.11. 07:00 | 71 h 59 min | 5 | 1 |
+| Chania | Fri 20.11. 07:00 | 71 h 59 min | 5 | 0 |
 | Marrakech | Fri 20.11. 12:37 | 79 h 08 min | 8 | 3 |
-| Split | Sat 21.11. 07:00 | 82 h 50 min | 3 | 2 |
+| Split | Sat 21.11. 07:00 | 96 h 59 min | 3 | 2 |
 
 ## Itineraries
 
@@ -734,50 +734,25 @@ _Fewest hotel nights: 52 h 33 min, arrive Thu 19.11. 11:34, 5 changes, 1 hotel n
 - Thu 19.11. 07:04 → Thu 19.11. 11:34  **Vilnius → Riga**  889/890
 
 ### Tirana
-_Fastest: 54 h 39 min, arrive Thu 19.11. 12:40, 4 changes, 1 hotel nights_
+_Fastest: 54 h 39 min, arrive Thu 19.11. 12:40, 4 changes, 0 hotel nights_
 
 - Tue 17.11. 06:01 → Tue 17.11. 12:05  **Hamburg → Munich**  ICE
 - Tue 17.11. 13:22 → Tue 17.11. 20:16  **Munich → Bologna**  ICE
-- 🛏 Overnight in Bologna (Tue 17.11. 20:16 → Wed 18.11. 10:26)
-- Wed 18.11. 10:26 → Wed 18.11. 11:35  **Bologna → Milan**  FR
-- Wed 18.11. 11:35 → Wed 18.11. 18:27  **Milan → Bari**  FR
-- Wait 3 h 33 min in Bari
-- Wed 18.11. 22:00 → Thu 19.11. 07:00  **Bari → Durrës**  ?  (night)
-- Wait 3 h 00 min in Durrës
-- Thu 19.11. 10:00 → Thu 19.11. 12:40  **Durrës → Tirana**  ?
-
-### Tirana — fewest hotel nights
-_Fewest hotel nights: 54 h 11 min, arrive Thu 19.11. 12:40, 5 changes, 0 hotel nights_
-
-- Tue 17.11. 06:29 → Tue 17.11. 13:21  **Hamburg → Basel**  ICE
-- Tue 17.11. 13:43 → Tue 17.11. 14:52  **Basel → Zürich**  IC3
-- Tue 17.11. 15:33 → Tue 17.11. 18:50  **Zürich → Milan**  EC
-- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Milan → Bari**  FR  (night)
-- Wait 15 h 00 min in Bari
+- Tue 17.11. 20:36 → Tue 17.11. 21:50  **Bologna → Milan**  FR
+- Tue 17.11. 21:50 → Wed 18.11. 07:40  **Milan → Bari**  FR  (night)
+- Wait 14 h 20 min in Bari
 - Wed 18.11. 22:00 → Thu 19.11. 07:00  **Bari → Durrës**  ?  (night)
 - Wait 3 h 00 min in Durrës
 - Thu 19.11. 10:00 → Thu 19.11. 12:40  **Durrës → Tirana**  ?
 
 ### Athens
-_Fastest: 58 h 29 min, arrive Thu 19.11. 17:30, 4 changes, 1 hotel nights_
+_Fastest: 58 h 29 min, arrive Thu 19.11. 17:30, 4 changes, 0 hotel nights_
 
 - Tue 17.11. 06:01 → Tue 17.11. 12:05  **Hamburg → Munich**  ICE
 - Tue 17.11. 13:22 → Tue 17.11. 20:16  **Munich → Bologna**  ICE
-- 🛏 Overnight in Bologna (Tue 17.11. 20:16 → Wed 18.11. 10:26)
-- Wed 18.11. 10:26 → Wed 18.11. 11:35  **Bologna → Milan**  FR
-- Wed 18.11. 11:35 → Wed 18.11. 18:27  **Milan → Bari**  FR
-- Wed 18.11. 19:30 → Thu 19.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
-- Wait 1 h 30 min in Patras
-- Thu 19.11. 14:30 → Thu 19.11. 17:30  **Patras → Athens**  ?
-
-### Athens — fewest hotel nights
-_Fewest hotel nights: 58 h 01 min, arrive Thu 19.11. 17:30, 5 changes, 0 hotel nights_
-
-- Tue 17.11. 06:29 → Tue 17.11. 13:21  **Hamburg → Basel**  ICE
-- Tue 17.11. 13:43 → Tue 17.11. 14:52  **Basel → Zürich**  IC3
-- Tue 17.11. 15:33 → Tue 17.11. 18:50  **Zürich → Milan**  EC
-- Tue 17.11. 19:45 → Wed 18.11. 07:00  **Milan → Bari**  FR  (night)
-- Wait 12 h 30 min in Bari
+- Tue 17.11. 20:36 → Tue 17.11. 21:50  **Bologna → Milan**  FR
+- Tue 17.11. 21:50 → Wed 18.11. 07:40  **Milan → Bari**  FR  (night)
+- Wait 11 h 50 min in Bari
 - Wed 18.11. 19:30 → Thu 19.11. 13:00  **Bari → Patras**  Anek Superfast  (night)
 - Wait 1 h 30 min in Patras
 - Thu 19.11. 14:30 → Thu 19.11. 17:30  **Patras → Athens**  ?
