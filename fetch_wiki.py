@@ -5,7 +5,7 @@
     python3 fetch_wiki.py                        # every place in places.yaml with a wd: (Wikidata) id
 
 For each place with `wd:` in data/places.yaml and each map language (settings.origins), Wikidata
-gives the article title in that language; the intro comes from that language's Wikivoyage, or
+gives the article title in that language; the intro section comes from that language's Wikivoyage, or
 Wikipedia when Wikivoyage has no article. The result goes to data/wiki/<lang>.yaml with its
 source, link and revision (CC BY-SA needs the credit; the revision pins what we used).
 
@@ -68,28 +68,29 @@ def clean(text: str) -> str:
     return out if len(out) <= HARD_MAX else out[:HARD_MAX].rsplit(" ", 1)[0] + " …"
 
 
-def from_summary(data: dict, site: str, lang: str, today: str) -> dict | None:
-    """One entry from a REST page summary, or None if it is not a usable article."""
-    if not data or data.get("type") not in (None, "standard") or not data.get("extract"):
+def from_page(page: dict, site: str, lang: str, today: str) -> dict | None:
+    """One entry from the query API's page (whole intro section as plain text), or None if it is
+    missing, a disambiguation page or a stub. Paragraphs are joined; clean() cuts the length."""
+    if not page or page.get("missing") or "disambiguation" in (page.get("pageprops") or {}):
         return None
-    text = clean(data["extract"])
+    text = clean(page.get("extract", ""))
     if len(text) < 40:
         return None
-    url = ((data.get("content_urls") or {}).get("desktop") or {}).get("page") \
-        or f"https://{lang}.{site}.org/wiki/{urllib.parse.quote(str(data.get('title', '')).replace(' ', '_'))}"
-    return {"text": text, "source": site, "title": data.get("title"), "url": url,
-            "revid": int(data["revision"]) if str(data.get("revision", "")).isdigit() else data.get("revision"),
-            "fetched": today}
+    title = page.get("title", "")
+    revs = page.get("revisions") or [{}]
+    return {"text": text, "source": site, "title": title,
+            "url": f"https://{lang}.{site}.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
+            "revid": revs[0].get("revid"), "fetched": today}
 
 
-def summary(lang: str, site: str, title: str) -> dict | None:
-    url = f"https://{lang}.{site}.org/api/rest_v1/page/summary/{urllib.parse.quote(title.replace(' ', '_'), safe='')}"
-    try:
-        return get_json(url)
-    except urllib.error.HTTPError as e:
-        if e.code == 404:
-            return None
-        raise
+def intro(lang: str, site: str, title: str) -> dict | None:
+    """The article's intro section as plain text, with its revision id (TextExtracts). The REST
+    summary gave only the first paragraph - on Wikivoyage often a one-line teaser (13.11.2026)."""
+    q = urllib.parse.urlencode({"action": "query", "format": "json", "formatversion": 2, "redirects": 1,
+                                "prop": "extracts|revisions|pageprops", "exintro": 1, "explaintext": 1,
+                                "rvprop": "ids", "ppprop": "disambiguation", "titles": title})
+    pages = (get_json(f"https://{lang}.{site}.org/w/api.php?{q}").get("query") or {}).get("pages") or []
+    return pages[0] if pages else None
 
 
 def main() -> int:
@@ -126,7 +127,7 @@ def main() -> int:
                 title = links.get(qid, {}).get(key)
                 if not title:
                     continue
-                entry = from_summary(summary(lang, site, title), site, lang, today)
+                entry = from_page(intro(lang, site, title), site, lang, today)
                 time.sleep(args.pause)
                 if entry:
                     break

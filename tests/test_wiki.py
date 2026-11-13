@@ -26,23 +26,29 @@ class CleanText(unittest.TestCase):
         self.assertTrue(out.endswith("…"))
 
 
-class FromSummary(unittest.TestCase):
-    SAMPLE = {"type": "standard", "title": "Lissabon", "revision": "123456",
-              "extract": "Lissabon ist die Hauptstadt Portugals. Die Stadt liegt am Tejo.",
-              "content_urls": {"desktop": {"page": "https://de.wikivoyage.org/wiki/Lissabon"}}}
+class FromPage(unittest.TestCase):
+    SAMPLE = {"pageid": 1, "title": "Lissabon", "revisions": [{"revid": 123456}],
+              "extract": "Die bunte Metropole Lissabon ist die Hauptstadt Portugals.\n\nDie Stadt liegt auf sieben Hügeln am Tejo."}
 
     def test_entry_has_credit_and_revision(self):
-        e = fw.from_summary(self.SAMPLE, "wikivoyage", "de", "2026-11-12")
+        e = fw.from_page(self.SAMPLE, "wikivoyage", "de", "2026-11-13")
         self.assertEqual(e["url"], "https://de.wikivoyage.org/wiki/Lissabon")
         self.assertEqual(e["revid"], 123456)
         self.assertEqual(e["source"], "wikivoyage")
-        self.assertEqual(e["fetched"], "2026-11-12")
+        self.assertEqual(e["fetched"], "2026-11-13")
+
+    def test_paragraphs_joined(self):
+        e = fw.from_page(self.SAMPLE, "wikivoyage", "de", "x")
+        self.assertIn("Portugals. Die Stadt", e["text"])
 
     def test_disambiguation_page_skipped(self):
-        self.assertIsNone(fw.from_summary({**self.SAMPLE, "type": "disambiguation"}, "wikipedia", "de", "x"))
+        self.assertIsNone(fw.from_page({**self.SAMPLE, "pageprops": {"disambiguation": ""}}, "wikipedia", "de", "x"))
+
+    def test_missing_page_skipped(self):
+        self.assertIsNone(fw.from_page({"title": "X", "missing": True}, "wikivoyage", "de", "x"))
 
     def test_stub_skipped(self):
-        self.assertIsNone(fw.from_summary({**self.SAMPLE, "extract": "Lissabon."}, "wikivoyage", "de", "x"))
+        self.assertIsNone(fw.from_page({**self.SAMPLE, "extract": "Lissabon."}, "wikivoyage", "de", "x"))
 
 
 if __name__ == "__main__":
