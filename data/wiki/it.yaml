@@ -2,10 +2,12 @@
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
 Lisbon:
   fetched: '2026-11-13'
-  revid: 153210280
-  source: wikipedia
-  text: Lisbona è la capitale e la principale città del Portogallo. Con una popolazione censita di 545 923 abitanti
-    all'interno dei suoi confini amministrativi, e circa 3 milioni nella sua area urbana è la città più popolosa
-    del Paese.
+  revid: 922880
+  section: Da sapere
+  source: wikivoyage
+  text: Lisbona è la capitale del Portogallo. Secondo la leggenda Lisbona fu fondata da Ulisse, durante il suo viaggio
+    di ritorno ad Itaca. Più verosimilmente la città fu uno scalo fenicio come avrebbero dimostrato scavi nei sotterranei
+    della Sé, la cattedrale di Lisbona. Al termine delle guerre puniche i Romani presero possesso di tutta la penisola
+    iberica.
   title: Lisbona
-  url: https://it.wikipedia.org/wiki/Lisbona
+  url: https://it.wikivoyage.org/wiki/Lisbona
