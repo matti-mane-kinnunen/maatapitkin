@@ -35,6 +35,37 @@ class CleanText(unittest.TestCase):
         self.assertTrue(out.endswith("…"))
 
 
+class CleanLeftovers(unittest.TestCase):
+    """What the first full run (13.11.2026) left in the texts."""
+    def test_footnote_marks(self):
+        self.assertEqual(fw.clean("Lontoo [1] on Englannin pääkaupunki."), "Lontoo on Englannin pääkaupunki.")
+
+    def test_pronunciations(self):
+        self.assertEqual(fw.clean("Kraków (IPA: [ˈkrakuf]) is the chief city."), "Kraków is the chief city.")
+        self.assertEqual(fw.clean("Bratislava /ˈbracislaʋa/ on Slovakian pääkaupunki."), "Bratislava on Slovakian pääkaupunki.")
+
+    def test_nested_brackets(self):
+        self.assertEqual(fw.clean("Abrantes (uh-BRUHN-t(ih)sh, /ɐ.ˈbɾɐ̃.tɨʃ/) municipality has 34,336 residents."),
+                         "Abrantes municipality has 34,336 residents.")
+        self.assertEqual(fw.clean("Patras (Modern Greek: Πάτρα, Classical Greek: Πάτραι (pl.)) is a port."), "Patras is a port.")
+
+    def test_other_scripts(self):
+        self.assertEqual(fw.clean("Casablanca (arabiska: الدارالبيضاء) är en stad."), "Casablanca är en stad.")
+
+    def test_plain_brackets_kept(self):
+        self.assertEqual(fw.clean("It lies on the River Tagus (Rio Tejo)."), "It lies on the River Tagus (Rio Tejo).")
+
+    def test_listings_end_the_text(self):
+        self.assertEqual(fw.clean("Abrantes lies on the Tagus. 1 Welcome Center, ☏ +351 241 330 100. 10:00–13:00 daily."),
+                         "Abrantes lies on the Tagus.")
+        self.assertEqual(fw.clean("Koblenz liegt am Rhein. Tourist-Info, lun.–dim.: 10 h – 18 h. (dernière mise à jour: fév. 2018)"),
+                         "Koblenz liegt am Rhein.")
+
+    def test_disambiguation_notes(self):
+        self.assertEqual(fw.clean("For alternative betydninger, se Split (flertydig). (Se også artikler, som begynder med Split) "
+                                  "Split er en kroatisk by i Dalmatien."), "Split er en kroatisk by i Dalmatien.")
+
+
 class FromPage(unittest.TestCase):
     SAMPLE = {"pageid": 1, "title": "Lissabon", "revisions": [{"revid": 123456}],
               "extract": "Die bunte Metropole Lissabon ist die Hauptstadt Portugals.\n\nDie Stadt liegt auf sieben "

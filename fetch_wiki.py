@@ -58,17 +58,50 @@ def sitelinks(qids: list[str]) -> dict:
     return out
 
 
+# What the first full run (13.11.2026) left in the texts:
+# footnote marks "[1]", pronunciations "[ˈkrakuf]" "/ˈbracislaʋa/" "(IPA: ...)", name lists in other
+# scripts "(arabiska: الدارالبيضاء ...)", Wikivoyage listings (☏, opening hours, coordinates,
+# "(updated May 2022)", "(dernière mise à jour ...)") and disambiguation notes ("Se även ...").
+ASIDE = re.compile(r"[:;/ˈˌ]|\bIPA\b|\bpron|uttal|udtale|pronounced|aussprache|^\W*$", re.I)
+LISTING = re.compile(r"☏|@|\b\d{1,2}[:.]\d\d\s*[–-]\s*\d{1,2}[:.]\d\d\b|\b\d{1,2}\s?h\s*[–-]\s*\d{1,2}\s?h\b|"
+                     r"\b(lun|mar|mer|jeu|ven|sam|dim)\.\s*[–-]|\d+\.\d{5,}|\b(updated|aktualisiert|mise à jour|"
+                     r"aggiornato|päivitetty|uppdaterad|opdateret)\b|\+\d{2,3}[\s\d]{6,}|https?://", re.I)
+HATNOTE = re.compile(r"\b(se även|se också|se også|flertydig|denna artikel|den här artikeln|handlar om|"
+                     r"betydninger|other uses|see also|autres significations|this article is about|voir aussi|homonymie|siehe auch|"
+                     r"begriffsklärung|vedi anche|disambigua|tämä artikkeli|ks\. myös)\b", re.I)
+
+
+def foreign(text: str) -> bool:
+    """Letters outside the Latin script (Greek, Cyrillic, Arabic, Tifinagh, IPA ...)."""
+    return any(unicodedata.category(c).startswith("L") and ord(c) > 0x24F and not 0x1E00 <= ord(c) <= 0x1EFF for c in text)
+
+
 def clean(text: str) -> str:
-    """Plain text, one paragraph, no control characters, cut at a sentence end near MAX_CHARS."""
-    t = re.sub(r"[\x00-\x08\x0b-\x1f\x7f]", "", str(text or ""))
+    """Plain text, one paragraph, without footnotes, pronunciations, listings and disambiguation notes,
+    cut at a sentence end near MAX_CHARS."""
+    t = re.sub(r"[\x00-\x08\x0b-\x1f\x7f​-‏⁠﻿]", "", str(text or ""))
     t = re.sub(r"\s+", " ", t).strip()
-    t = re.sub(r"\s*\([^()]*\)", "", t) if len(t) > MAX_CHARS else t     # drop pronunciations etc. when long
-    t = re.sub(r"\s+([,.;:!?])", r"\1", t)                 # space before punctuation (removed brackets, footnotes)
-    t = re.sub(r"[,;:]+([.!?])", r"\1", t)                  # "Riviera,." -> "Riviera." (da Lisbon, 13.11.2026)
-    if len(t) <= MAX_CHARS:
-        return t
-    parts, out = re.split(r"(?<=[.!?])\s+(?=[A-ZÄÖÅÜÉÈÀÂÎÔÇØÆ0-9«\"„“])", t), ""
+    t = re.sub(r"\s*\[[^\[\]]{0,80}\]", "", t)                       # [1], [ˈkrakuf], [pas clair]
+    t = re.sub(r"\s*/[^/\s][^/]{0,40}/(?=[\s,.;)])", "", t)           # /ˈbracislaʋa/
+    # brackets, innermost first: an aside goes; a kept one is masked so the one around it can still go
+    # ("(uh-BRUHN-t(ih)sh, /…/)", "(… Πάτραι (pl.))"); a disambiguation note in brackets goes too
+    aside = lambda x: ASIDE.search(x) or foreign(x) or HATNOTE.search(x) or re.search(r"^\s*[,;]|[,;]\s*$", x)
+    for _ in range(4):
+        t = re.sub(r"(\s*)\(([^()]*)\)", lambda m: "" if aside(m.group(2)) else m.group(1) + "\x01" + m.group(2) + "\x02", t)
+    t = t.replace("\x01", "(").replace("\x02", ")")
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)                           # space before punctuation
+    t = re.sub(r"[,;:]+([.!?])", r"\1", t)                            # "Riviera,." -> "Riviera."
+    t = re.sub(r"\(\s*[,;]\s*", "(", t)
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-ZÄÖÅÜÉÈÀÂÎÔÇØÆ0-9«\"„“])", t)
+    kept = []
     for p in parts:
+        if LISTING.search(p):
+            break                                                     # listings follow; the rest is not prose
+        if HATNOTE.search(p):
+            continue
+        kept.append(p)
+    out = ""
+    for p in kept:
         n = len(out) + 1 + len(p)
         if out and n > MAX_CHARS and (len(out) >= MIN_CHARS or n > HARD_MAX):
             break
