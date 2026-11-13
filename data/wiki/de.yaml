@@ -291,16 +291,6 @@ Bratislava:
     historischen Orte sind in der kompakten Altstadt zu finden.
   title: Bratislava
   url: https://de.wikivoyage.org/wiki/Bratislava
-Brescia:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 261956451
-  source: wikipedia
-  text: Der Bahnhof Brescia ist der Bahnhof der norditalienischen Stadt Brescia. Er wird von der Rete Ferroviaria
-    Italiana, einer Organisationseinheit der Ferrovie dello Stato, betrieben. Von 2001 bis 2018 lag die Vermarktung
-    und Vermietung der Ladenflächen in Hand der Gesellschaft Centostazioni.
-  title: Bahnhof Brescia
-  url: https://de.wikipedia.org/wiki/Bahnhof_Brescia
 Brest:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -489,18 +479,6 @@ Foggia:
     Foggia. Von seinem Residenzschloss sind jedoch nur noch geringe Reste erhalten.
   title: Foggia
   url: https://de.wikivoyage.org/wiki/Foggia
-Frankfurt:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 1807889
-  section: Hintergrund
-  source: wikivoyage
-  text: Der Hauptbahnhof von Frankfurt am Main ist der größte Personenbahnhof in Hessen und neben dem Frankfurter
-    Südbahnhof sowie dem Bahnhof Frankfurt Flughafen Fernbahnhof und Frankfurt West einer von vier Fernbahnhöfen
-    in Frankfurt. Der Bahnhof ist ein Kopfbahnhof mit 25 Gleisen. An den Bahnsteigen verkehren Regional und Fernverkehrszüge
-    sowie die S-Bahn Linie 7 nach Riedstadt-Goddelau.
-  title: Frankfurt (Main) Hauptbahnhof
-  url: https://de.wikivoyage.org/wiki/Frankfurt_%28Main%29_Hauptbahnhof
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -522,17 +500,6 @@ Gdansk:
     Durchaus gerechtfertigt trägt Danzig den Beinamen Perle der Ostsee.'
   title: Danzig
   url: https://de.wikivoyage.org/wiki/Danzig
-Geneve:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 1807276
-  section: Hintergrund
-  source: wikivoyage
-  text: Der Kanton Genf liegt im äußersten Westen der Schweiz am unteren Teil des Westufers des Genfersees. Jeûne
-    genevois, der Buss- und Bettag, ist ein Feiertag im Kanton Genf am Donnerstag nach dem ersten Sonntag im September
-    stattfindet. Es ist ein arbeitsfreier Tag, Schulen und die meisten Geschäfte haben geschlossen.
-  title: Genf (Kanton)
-  url: https://de.wikivoyage.org/wiki/Genf_%28Kanton%29
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -588,27 +555,6 @@ Hamburg:
     Niedersachsen.
   title: Hamburg
   url: https://de.wikivoyage.org/wiki/Hamburg
-Hannover:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 1747402
-  source: wikivoyage
-  text: Der Hauptbahnhof von Hannover ist der wichtigste Bahnhof der niedersächsischen Landeshauptstadt, und einer
-    der größten in Niedersachsen. Mit 250.000 Reisenden pro Tag liegt er in der Bahnhofskategorie 1, an seinen 12
-    Bahnsteiggleisen halten sowohl der Nah-, als auch der Fernverkehr verschiedener Eisenbahngesellschaften.
-  title: Hannover Hauptbahnhof
-  url: https://de.wikivoyage.org/wiki/Hannover_Hauptbahnhof
-Helsinki:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 266515135
-  source: wikipedia
-  text: Der Bahnhof Helsinki (finnisch Helsinki asema), auch als Hauptbahnhof Helsinki (finnisch Helsingin päärautatieasema,
-    schwedisch Helsingfors centralstation) bezeichnet, ist der zentrale Knotenpunkt des Nah- und Fernverkehrs in
-    der Region Helsinki und ein bekanntes Wahrzeichen der Stadt. Er ist der Heimatbahnhof der finnischen Staatsbahn
-    VR und Endstation aller Linien des Schienennahverkehrs in der Region Helsinki.
-  title: Bahnhof Helsinki
-  url: https://de.wikipedia.org/wiki/Bahnhof_Helsinki
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -663,17 +609,6 @@ Irun:
     hier die Grenze zu Frankreich bildet.
   title: Irun
   url: https://de.wikivoyage.org/wiki/Irun
-Istanbul:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 269222026
-  source: wikipedia
-  text: Istanbul ist die bevölkerungsreichste türkische Provinz im Nordwesten des Landes, mit der Hauptstadt Istanbul.
-    Ihre Fläche beträgt 5.461 km². Die offizielle Bevölkerungszahl der Provinz Istanbul betrug laut Fortschreibung
-    Ende des Jahres 2020 15.462.452, wobei seit Umwandlung der Provinz in eine Büyükşehir belediyesi die Bevölkerung
-    der Kernstadt nicht mehr eindeutig definierbar ist.
-  title: Istanbul (Provinz)
-  url: https://de.wikipedia.org/wiki/Istanbul_%28Provinz%29
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -732,16 +667,6 @@ Kolding:
     das Opfer von Besatzern. 1866 wurde das Herzogtum Schleswig preußisch.
   title: Kolding
   url: https://de.wikivoyage.org/wiki/Kolding
-Krakow:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 240965589
-  source: wikipedia
-  text: Der Powiat Krakowski ist ein Powiat (Landkreis) in der polnischen Woiwodschaft Kleinpolen mit der Kreisstadt
-    Krakau. Er zählt auf einer Fläche von 1229,62 km² rund 250.000 Einwohner. Der Powiat wurde zum 1. Januar 1999
-    im Zuge der zweiten polnischen Kommunalreform errichtet.
-  title: Powiat Krakowski
-  url: https://de.wikipedia.org/wiki/Powiat_Krakowski
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -821,17 +746,6 @@ Lisbon:
     brachte afrikanische und südamerikanische Einflüsse.
   title: Lissabon
   url: https://de.wikivoyage.org/wiki/Lissabon
-Liège:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 271751033
-  source: wikipedia
-  text: Die Provinz Lüttich ist eine von fünf belgischen Provinzen der Region Wallonien. Im Westen grenzt sie an
-    die Provinz Wallonisch-Brabant, im Süden an die Provinzen Namur und Luxemburg, außerdem an das Großherzogtum
-    Luxemburg und an die deutschen Bundesländer Rheinland-Pfalz und Nordrhein-Westfalen im Osten, im Norden an die
-    niederländische Provinz Limburg und die flämischen Provinzen Limburg und Flämisch-Brabant.
-  title: Provinz Lüttich
-  url: https://de.wikipedia.org/wiki/Provinz_L%C3%BCttich
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -953,17 +867,6 @@ Marseille:
     die älteste Stadt Frankreichs. Die Stadt der Kunst und der Kultur war 2013 Europäische Kulturhauptstadt.
   title: Marseille
   url: https://de.wikivoyage.org/wiki/Marseille
-Messina:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 1602481
-  section: Hintergrund
-  source: wikivoyage
-  text: Die Messina ist die nordöstlichste Provinz der dreieckförmigen Insel Sizilien. Die Provinz Messina erstreckt
-    sich auf einem Landstreifen um die nordöstliche Ecke der Insel Sizilien, die wichtigsten Städte liegen alle
-    in Meernähe, das bergige Hinterland ist dünn besiedelt und oftmals schlecht erschlossen.
-  title: Messina (Provinz)
-  url: https://de.wikivoyage.org/wiki/Messina_%28Provinz%29
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1309,16 +1212,6 @@ Ruse:
     auch Ruse oder Rouse transliteriert. Zur Zeit der Türkenherrschaft sprach man von Rusçuk.
   title: Russe
   url: https://de.wikivoyage.org/wiki/Russe
-Salerno:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 266035820
-  source: wikipedia
-  text: Die Provinz Salerno (italienisch Provincia di Salerno) ist eine italienische Provinz der Region Kampanien.
-    Hauptstadt ist Salerno. Die Provinz hat 1.053.302 Einwohner (Stand 31. Dezember 2025) in 158 Gemeinden. Sie
-    ist der Fläche nach die größte Provinz in Kampanien.
-  title: Provinz Salerno
-  url: https://de.wikipedia.org/wiki/Provinz_Salerno
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1449,18 +1342,6 @@ Strasbourg:
     sind es sogar 430.000.'
   title: Straßburg
   url: https://de.wikivoyage.org/wiki/Stra%C3%9Fburg
-Stuttgart:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 1800199
-  section: Hintergrund
-  source: wikivoyage
-  text: Stuttgart-Süd ist ein innerer Stadtbezirk von Stuttgart. Zum Stadtbezirk Stuttgart-Süd gehören die Stadtteile
-    Südheim, Heslach, Lehen, Weinsteige, Bopser und Kaltental. Häufig wird Stuttgart-Süd aber im Sprachgebrauch
-    der Stuttgarter mit Heslach gleichgesetzt und hat den Ruf einer Arbeitersiedlung. Entstanden ist der Stadtbezirk
-    in seiner heutigen Form im Jahr 1956.
-  title: Stuttgart/Süd
-  url: https://de.wikivoyage.org/wiki/Stuttgart/S%C3%BCd
 Subotica:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1591,17 +1472,6 @@ Tirana:
     Einrichtungen.
   title: Tirana
   url: https://de.wikivoyage.org/wiki/Tirana
-Torino:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 263292505
-  source: wikipedia
-  text: Die Metropolitanstadt Turin (italienisch Città Metropolitana di Torino) ist eine Gebietskörperschaft in
-    der italienischen Region Piemont. Verwaltungssitz der Metropolitanstadt ist die Stadt Turin. Die Metropolitanstadt
-    Turin besteht seit dem 1. Januar 2015 als Rechtsnachfolgerin der Provinz Turin (italienisch Provincia di Torino),
-    auf deren ehemaligem Gebiet sie sich erstreckt.
-  title: Metropolitanstadt Turin
-  url: https://de.wikipedia.org/wiki/Metropolitanstadt_Turin
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1759,16 +1629,6 @@ Ventimiglia:
     und dann wieder durch den Frieden von Paris 1947.'
   title: Ventimiglia
   url: https://de.wikivoyage.org/wiki/Ventimiglia
-Verona:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 1756329
-  source: wikivoyage
-  text: Die Provinz Verona liegt in der Region Venetien in Oberitalien. Die Provinz Verona grenzt im Norden an das
-    Trentino, im Westen an den Gardasee und die lombardischen Provinzen Brescia und Mantua, im Süden und Osten an
-    die zu Venetien gehörenden Provinzen Rovigo, Padua und Vicenza.
-  title: Verona (Provinz)
-  url: https://de.wikivoyage.org/wiki/Verona_%28Provinz%29
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1787,16 +1647,6 @@ Villa San Giovanni:
   text: Villa San Giovanni ist eine Stadt in der Metropolitanstadt Reggio Calabria, Italien.
   title: Villa San Giovanni
   url: https://de.wikipedia.org/wiki/Villa_San_Giovanni
-Vilnius:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 263269442
-  source: wikipedia
-  text: Der Bezirk Vilnius war einer der zehn Verwaltungsbezirke Litauens. Der flächenmäßig größte und auch bevölkerungsreichste
-    Bezirk lag im Südosten des Landes und umfasste auch die Hauptstadt Vilnius. Am 1. Juli 2010 wurden die Bezirke
-    in Litauen als Verwaltungseinheiten ersatzlos gestrichen.
-  title: Bezirk Vilnius
-  url: https://de.wikipedia.org/wiki/Bezirk_Vilnius
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

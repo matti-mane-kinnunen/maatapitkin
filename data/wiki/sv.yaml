@@ -460,17 +460,6 @@ Foggia:
     San Severo, San Marco in Lamis och Troia. Författaren och konstnären Caterina Davinio är född i Foggia.
   title: Foggia
   url: https://sv.wikipedia.org/wiki/Foggia
-Frankfurt:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 58825560
-  source: wikipedia
-  text: Frankfurt Hauptbahnhof är Frankfurt am Mains centralstation. Stationen är stadens mest trafikerade och största
-    knutpunkt, med cirka 350 000 resenärer och besökande per dygn. I Tyskland hade bara centralstationerna i Hamburg
-    och München fler resande per dygn år 2013. Stationen har 29 spår, varav 25 är i huvudhallen och 4 spår är under
-    jord och används bara för pendeltåg.
-  title: Frankfurt Hauptbahnhof
-  url: https://sv.wikipedia.org/wiki/Frankfurt_Hauptbahnhof
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -494,15 +483,6 @@ Gdansk:
     Med sin magnifika arkitektur räknas Gdańsk till en av Östersjöns vackraste städer.'
   title: Gdańsk
   url: https://sv.wikivoyage.org/wiki/Gda%C5%84sk
-Geneve:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 55010115
-  source: wikipedia
-  text: 'Genève (tyska: Genf ) är en kanton i sydvästra Schweiz. Kantonens officiella namn är République et canton
-    de Genève.'
-  title: Genève (kanton)
-  url: https://sv.wikipedia.org/wiki/Gen%C3%A8ve_%28kanton%29
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -558,17 +538,6 @@ Hamburg:
     att man är så långt möjligt fristående från andra delstater som finns och har funnits i Tyskland.
   title: Hamburg
   url: https://sv.wikivoyage.org/wiki/Hamburg
-Helsinki:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 58825591
-  source: wikipedia
-  text: Helsingfors centralstation, är Finlands största och mest trafikerade järnvägsstation. Stationen ligger i
-    stadsdelen Gloet, i Helsingfors innerstad. Stationen är ett känt landmärke i Helsingfors stad och en viktig
-    knutpunkt för den kollektiva trafiken. Stationen är Finlands viktigaste fjärrtågsstation med tågtrafik till
-    de flesta stora städer i landet, och tidigare även till Sankt Petersburg och Moskva i Ryssland.
-  title: Helsingfors centralstation
-  url: https://sv.wikipedia.org/wiki/Helsingfors_centralstation
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -622,17 +591,6 @@ Irun:
     Bidasoa har sin hemvist i staden.'
   title: Irun
   url: https://sv.wikipedia.org/wiki/Irun
-Istanbul:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 57494219
-  source: wikipedia
-  text: İstanbul är en provins i västra Turkiet. Den hade i slutet av 2014 en beräknad folkmängd på 14 377 018 invånare
-    och har en areal på 5 196 km². Provinshuvudstad är Istanbul, Turkiets största stad. Provinsen är belägen på
-    båda sidor om Bosporen, vilket gör att den ligger i både Europa och Asien, och man kan säga att denna provins
-    binder samman dessa kontinenter.
-  title: İstanbul (provins)
-  url: https://sv.wikipedia.org/wiki/%C4%B0stanbul_%28provins%29
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -757,17 +715,6 @@ Lisbon:
     stränder.
   title: Lissabon
   url: https://sv.wikivoyage.org/wiki/Lissabon
-Liège:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 59439014
-  source: wikipedia
-  text: Liège är en vallonsk provins i östra Belgien. Huvudstad i provinsen är Liège. Franska är det dominerande
-    språket i provinsen, men i Eupen-Malmedy finns en betydande minoritet som talar tyska. Inom provinsen verkar
-    därför de bägge federala Franska och Tyskspråkiga gemenskaperna. De tysktalande områdena utgör en integrerad
-    del av distriktet Verviers, förutom i rättsliga frågor utgör de utgör det egna distriktet Eupen.
-  title: Liège (provins)
-  url: https://sv.wikipedia.org/wiki/Li%C3%A8ge_%28provins%29
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -887,16 +834,6 @@ Marseille:
     Det vi idag kallar den gamla hamnen, Vieux-Port, var mittpunkten av staden.
   title: Marseille
   url: https://sv.wikivoyage.org/wiki/Marseille
-Messina:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 55878221
-  source: wikipedia
-  text: Messina var en provins i regionen Sicilien i Italien. Messina var huvudort i provinsen. Provinsen etablerades
-    1860 i samband med Kungariket Sardiniens annektering av Kungariket Bägge Sicilierna. Provinsen upphörde 2015
-    när den ombildades till storstadsregionen Messina.
-  title: Messina (provins)
-  url: https://sv.wikipedia.org/wiki/Messina_%28provins%29
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1223,16 +1160,6 @@ Ruse:
     rumänska staden Giurgiu. Ruse Peak på Antarktis är namngiven efter staden.
   title: Ruse
   url: https://sv.wikipedia.org/wiki/Ruse
-Salerno:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 51144933
-  source: wikipedia
-  text: Salerno är en provins i regionen Kampanien i Italien. Salerno är huvudort i provinsen. Provinsen etablerades
-    1860 när Kungariket Sardinien annekterade Kungariket Bägge Sicilierna där området tillhörde provinsen Principato
-    Citra.
-  title: Salerno (provins)
-  url: https://sv.wikipedia.org/wiki/Salerno_%28provins%29
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1494,15 +1421,6 @@ Tirana:
     och stadsmiljön är ett säreget möte mellan Europa och Orienten.
   title: Tirana
   url: https://sv.wikivoyage.org/wiki/Tirana
-Torino:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 55354425
-  source: wikipedia
-  text: Turin var en provins i regionen Piemonte i nordvästra Italien. Turin var huvudort i provinsen. Den ersattes
-    2015 av storstadsregionen Turin. Provinsen etablerades i Kungariket Sardinien 1859.
-  title: Turin (provins)
-  url: https://sv.wikipedia.org/wiki/Turin_%28provins%29
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1653,17 +1571,6 @@ Ventimiglia:
     Olivetta San Michele och Frankrike.
   title: Ventimiglia
   url: https://sv.wikipedia.org/wiki/Ventimiglia
-Verona:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 55197388
-  source: wikipedia
-  text: Verona är en provins i den italienska regionen Veneto. Verona är huvudort i provinsen. Provinsen gränsar
-    i norr mot Trento, i öster mot provinserna Vicenza och Padova, i söder mot Rovigo samt i söder och väster mot
-    Lombardiet i form av provinserna Mantua och Brescia. Provinsen bildades 1815 efter Wienkongressen när området
-    blev del av Kungariket Lombardiet-Venetien som 1866 tillföll Kungariket Italien i Pragfreden.
-  title: Verona (provins)
-  url: https://sv.wikipedia.org/wiki/Verona_%28provins%29
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1685,15 +1592,6 @@ Villa San Giovanni:
     svårt av jordbävningar 1783 och 1908.
   title: Villa San Giovanni
   url: https://sv.wikipedia.org/wiki/Villa_San_Giovanni
-Vilnius:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 55548431
-  source: wikipedia
-  text: Vilnius är ett län i östra Litauen. Totalt har länet 849 815 invånare och en area på 9 651 km². Huvudstaden
-    är Vilnius.
-  title: Vilnius län
-  url: https://sv.wikipedia.org/wiki/Vilnius_l%C3%A4n
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

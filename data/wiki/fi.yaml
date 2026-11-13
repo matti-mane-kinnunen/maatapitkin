@@ -450,17 +450,6 @@ Foggia:
     dei Sette Velin katedraali ja U.S. Foggian kotistadionina toimiva Pino Zaccheria.
   title: Foggia
   url: https://fi.wikipedia.org/wiki/Foggia
-Frankfurt:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 24202136
-  source: wikipedia
-  text: Frankfurtin päärautatieasema on merkittävä rautatieasema Frankfurtissa, Hessenin osavaltiossa Saksassa.
-    Asema on Saksan vilkkaimmin liikennöity kaukoliikenteen rautatieasema matkustajamäärällä mitattuna ja eräiden
-    arvioiden mukaan maailman kolmanneksi vilkkain rautatieasema. Asemakompleksiin kuuluvat myös erilliset, maan
-    alla sijaitsevat Frankfurtin metron ja S-Bahnin asemat.
-  title: Frankfurtin päärautatieasema
-  url: https://fi.wikipedia.org/wiki/Frankfurtin_p%C3%A4%C3%A4rautatieasema
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -483,16 +472,6 @@ Gdansk:
     ja Sopotin kanssa yli miljoona.
   title: Gdańsk
   url: https://fi.wikipedia.org/wiki/Gda%C5%84sk
-Geneve:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 22690578
-  source: wikipedia
-  text: Geneven tasavalta ja kantoni (ransk. République et Canton de Genève) on yksi Sveitsin 26 kantonista. Geneven
-    kantoni, erityisesti Geneven kaupunki ja sen lähikunnat, on tunnettu monien kansainvälisten järjestöjen päämajoista.
-    Kantoni on Sveitsin kantoneista pinta-alaltaan kuudenneksi pienin ja väestömäärältään kuudenneksi suurin.
-  title: Geneve (kantoni)
-  url: https://fi.wikipedia.org/wiki/Geneve_%28kantoni%29
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -549,28 +528,6 @@ Hamburg:
     on Euroopan toiseksi suurin satamakaupunki heti Rotterdamin jälkeen.
   title: Hampuri
   url: https://fi.wikivoyage.org/wiki/Hampuri
-Hannover:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 20842279
-  source: wikipedia
-  text: Hannoverin päärautatieasema (saks. Hannover Hauptbahnhof) on rautatieasema Hannoverin kaupungin keskustassa
-    Ala-Saksin osavaltiossa Saksassa. Asema on avattu alun perin vuonna 1843 ja nykyinen asemarakennus on peräisin
-    vuodelta 1879. Deutsche Bahn liikennöi asemalta kaukoliikennettä useisiin Saksan suurimpiin kaupunkeihin. Lisäksi
-    asema on Hannoverin paikallisliikenteen solmukohta.
-  title: Hannoverin päärautatieasema
-  url: https://fi.wikipedia.org/wiki/Hannoverin_p%C3%A4%C3%A4rautatieasema
-Helsinki:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 24343738
-  source: wikipedia
-  text: Helsingin päärautatieasema on Helsingin tunnettu maamerkki ja pääkaupunkiseudun julkisen liikenteen keskipiste.
-    Asemalta lähtevät kaikki pääkaupunkiseudun lähijunat ja se on myös Suomen merkittävin kaukojunien lähtöpaikka.
-    Aseman alla sijaitseva Rautatientorin metroasema on Helsingin metron asemista vilkkain. Helsingin päärautatieasemalta
-    lähtivät myös Venäjälle Pietariin ja Moskovaan liikennöivät junat.
-  title: Helsingin päärautatieasema
-  url: https://fi.wikipedia.org/wiki/Helsingin_p%C3%A4%C3%A4rautatieasema
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -623,17 +580,6 @@ Irun:
     18 kilometriä Donostiasta itään päin.
   title: Irun
   url: https://fi.wikipedia.org/wiki/Irun
-Istanbul:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 23115953
-  source: wikipedia
-  text: Istanbulin maakunta (turk. İstanbul il) on yksi Turkin 81 maakunnasta. Istanbulin maakunnan pinta-ala on
-    5 461 neliökilometriä ja väkiluku 14 377 018 (arvio 31.12.2014). Maakunta sijaitsee Mustanmeren ja Marmaranmeren
-    rannalla, ja sen naapurimaakuntia ovat Tekirdağ lännessä ja Kocaeli idässä. Maakunnan pääkaupunki on Istanbul
-    ja maakuntaa pidetään Euroopan ja Aasian välisenä porttina.
-  title: İstanbulin maakunta
-  url: https://fi.wikipedia.org/wiki/%C4%B0stanbulin_maakunta
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -685,18 +631,6 @@ Kolding:
     vuonna 1970 Tanskassa luovuttiin kaupunkikäsitteestä.
   title: Kolding
   url: https://fi.wikipedia.org/wiki/Kolding
-Krakow:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 19334719
-  source: wikipedia
-  text: Kraków on yksi Vähä-Puolan voivodikunnan piirikunnista. Piirikunnan väkiluku oli vuoden 2019 lopussa 279
-    239. Puolan vuoden 2011 väestönlaskennassa Krakówin piirikunnan väestö oli Vähä-Puolan piirikunnista suurin.
-    Kunnat Krakówin piirikunnassa ovat Czernichów, Igołomia-Wawrzeńczyce, Iwanowice, Jerzmanowice-Przeginia, Kocmyrzów-Luborzyca,
-    Krzeszowice, Liszki, Michałowice, Mogilany, Skała, Skawina, Słomniki, Sułoszowa, Świątniki Górne, Wielka Wieś,
-    Zabierzów ja Zielonki.
-  title: Krakówin piirikunta
-  url: https://fi.wikipedia.org/wiki/Krak%C3%B3win_piirikunta
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -769,16 +703,6 @@ Lisbon:
     Metropolialueella asuu 2,8 miljoonaa ihmistä (2012), mikä on noin neljännes koko Portugalin asukasmäärästä.
   title: Lissabon
   url: https://fi.wikipedia.org/wiki/Lissabon
-Liège:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 23716436
-  source: wikipedia
-  text: Liègen provinssi on provinssi Vallonian alueella Belgiassa. Provinssin pääkaupunki on Liège. Liègen provinssissa
-    on arviolta 1 098 688 asukasta ja sen pinta-ala on 3 862,3 neliökilometriä. Liègen provinssi on pääasiassa ranskankielinen,
-    mutta itäosassa, lähellä Saksan ja Luxemburgin rajaa on myös pieni saksankielinen yhteisö.
-  title: Liègen provinssi
-  url: https://fi.wikipedia.org/wiki/Li%C3%A8gen_provinssi
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -901,17 +825,6 @@ Marseille:
     on Pariisin jälkeen Ranskan toiseksi suurin kaupunki.
   title: Marseille
   url: https://fi.wikivoyage.org/wiki/Marseille
-Messina:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 16927895
-  source: wikipedia
-  text: Messinan maakunta oli yksi Italian maakunnista 31.12.2016 asti. Vuoden 2017 alusta alkaen sen korvasi Messinan
-    metropolikaupunki. Maakunta sijaitsi Sisilian saaren pohjoisosassa rajoittuen lännessä Palermon maakuntaan,
-    etelässä Ennan ja Catanian maakuntiin, idässä Joonianmereen ja pohjoisessa Tyrrhenanmereen. Messinan maakunnan
-    pinta-ala oli 3 247 km² ja asukasluku noin 650 000.
-  title: Messinan maakunta
-  url: https://fi.wikipedia.org/wiki/Messinan_maakunta
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1222,17 +1135,6 @@ Ruse:
     on Bulgarian tärkein jokisatama ja huomattava teollisuuskeskus.
   title: Ruse
   url: https://fi.wikipedia.org/wiki/Ruse
-Salerno:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 20941922
-  source: wikipedia
-  text: Salernon maakunta on yksi Italian maakuntatason hallintoalueista. Se sijaitsee Campanian alueella Etelä-Italiassa,
-    ja sen pääkaupunki on Salerno. Maakunta on pinta-alaltaan 4 954 neliökilometriä ja asukkaita siellä on noin
-    1,1 miljoonaa. Maakunnassa on yhteensä 158 kuntaa. Salerno on väkiluvultaan suurin kunta. Muita yli 50 000 asukkaan
-    kaupunkeja ovat Cava de' Tirreni, Battipaglia ja Scafati.
-  title: Salernon maakunta
-  url: https://fi.wikipedia.org/wiki/Salernon_maakunta
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1475,17 +1377,6 @@ Tirana:
     paikallinen, joka pystyy tulkkaamaan.
   title: Tirana
   url: https://fi.wikivoyage.org/wiki/Tirana
-Torino:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 23994193
-  source: wikipedia
-  text: Torinon maakunta oli yksi Italian maakunnista. Sen korvasi 1. tammikuuta 2015 alkaen Torinon metropolikaupunki.
-    Torinon maakunta sijaitsi Piemonten hallintoalueella Luoteis-Italiassa Ranskan vastaisella rajalla, ja sen pääkaupunki
-    oli Torino Maakunta oli pinta-alaltaan 6 817 neliökilometriä, ja vakinaisia asukkaita siellä oli toiminnan loppuessa
-    2 291 719.
-  title: Torinon maakunta
-  url: https://fi.wikipedia.org/wiki/Torinon_maakunta
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1624,17 +1515,6 @@ Venice:
     ja Venetsian metropolikaupungin pääkaupunki.
   title: Venetsia
   url: https://fi.wikipedia.org/wiki/Venetsia
-Verona:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 20300326
-  source: wikipedia
-  text: Veronan maakunta on yksi Italian maakunnista. Se sijaitsee Veneton alueen länsiosassa, Gardajärven itäpuolella
-    Pohjois-Italiassa. Se rajoittuu Vicenzan, Padovan, Rovigon, Mantovan, Brescian ja Trenton maakuntiin ja käsittää
-    98 kuntaa. Veronan maakunnassa on runsaat 900 000 asukasta. Maakunnan pääkaupunki on Verona, jonka väkiluku
-    on noin 250 000.
-  title: Veronan maakunta
-  url: https://fi.wikipedia.org/wiki/Veronan_maakunta
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1654,16 +1534,6 @@ Villa San Giovanni:
     metropolikaupungin länsiosassa noin neljätoista kilometriä Reggio di Calabriasta pohjoiseen.
   title: Villa San Giovanni
   url: https://fi.wikipedia.org/wiki/Villa_San_Giovanni
-Vilnius:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 16249897
-  source: wikipedia
-  text: Vilnan lääni (liett. Vilniaus apskritis) on suurin Liettuan kymmenestä läänistä. Lääni sijaitsee maan itäisessä
-    osassa ja sen keskus on maan pääkaupunki Vilna. Läänissä on arviolta 805 380 asukasta (vuonna 2016) ja sen pinta-ala
-    on 9 731 neliökilometriä.
-  title: Vilnan lääni
-  url: https://fi.wikipedia.org/wiki/Vilnan_l%C3%A4%C3%A4ni
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

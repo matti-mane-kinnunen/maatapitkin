@@ -485,17 +485,6 @@ Foggia:
   text: Foggia est une ville italienne de la province du même nom dans les Pouilles en Italie.
   title: Foggia
   url: https://fr.wikipedia.org/wiki/Foggia
-Frankfurt:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 240324920
-  source: wikipedia
-  text: La gare centrale de Francfort-sur-le-Main est une gare ferroviaire allemande. Située au centre-ville, c'est
-    la plus importante de la ville de Francfort-sur-le-Main, dans le land de Hesse. Avec 164 millions de voyageurs
-    par an, c'est la deuxième gare ayant le trafic voyageurs le plus élevé en Allemagne; elle est également la quatrième
-    gare la plus fréquentée d'Europe.
-  title: Gare centrale de Francfort-sur-le-Main
-  url: https://fr.wikipedia.org/wiki/Gare_centrale_de_Francfort-sur-le-Main
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -519,18 +508,6 @@ Gdansk:
     Schopenhauer.
   title: Gdańsk
   url: https://fr.wikivoyage.org/wiki/Gda%C5%84sk
-Geneve:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 653147
-  section: Comprendre
-  source: wikivoyage
-  text: 'Le canton de Genève, officiellement la République et canton de Genève, est le canton le plus occidental
-    de la Suisse. 1 Genève Tourisme & Congrès, quai du Mont-Blanc 2, 1201 Genève, ☎ +41 22 9097000, info@geneve.com.
-    lun.–sam.: 9 h 15 – 17 h 45 (le jeu. à partir de 10 h), dim.: 10 h – 16 h. (5 marches pour accéder à l''esplanade).
-    (dernière mise à jour: fév. 2020)'
-  title: Canton de Genève
-  url: https://fr.wikivoyage.org/wiki/Canton_de_Gen%C3%A8ve
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -585,27 +562,6 @@ Hamburg:
     c'est la deuxième ville d'Allemagne après Berlin.
   title: Hambourg
   url: https://fr.wikivoyage.org/wiki/Hambourg
-Hannover:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 237977919
-  source: wikipedia
-  text: La gare centrale de Hanovre est la principale gare ferroviaire de Hanovre en Allemagne. Avec environ 250
-    000 voyageurs par jour, elle est la sixième gare longue distance la plus fréquentée de la Deutsche Bahn après
-    Hambourg, Munich, Francfort-sur-le-Main, Berlin et Cologne, ainsi que Düsseldorf. Il s'agit par conséquent d'un
-    nœud important des transports publics et du S-Bahn de Hanovre.
-  title: Gare centrale de Hanovre
-  url: https://fr.wikipedia.org/wiki/Gare_centrale_de_Hanovre
-Helsinki:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 236783227
-  source: wikipedia
-  text: 'La gare centrale d''Helsinki (en finnois: Helsingin päärautatieasema, en suédois: Helsingfors centralstation)
-    est une gare ferroviaire, située sur la place Rautatientori (place de la gare centrale) dans le centre d''Helsinki
-    en Finlande. Principale gare d''Helsinki, c''est également la gare la plus fréquentée de Finlande.'
-  title: Gare centrale d'Helsinki
-  url: https://fr.wikipedia.org/wiki/Gare_centrale_d%27Helsinki
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -658,15 +614,6 @@ Irun:
     passage principal des Pyrénées occidentales.'
   title: Irun
   url: https://fr.wikipedia.org/wiki/Irun
-Istanbul:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 239436077
-  source: wikipedia
-  text: 'La province d''Istanbul est une des 81 provinces (en turc: il, au singulier, et iller au pluriel) de la
-    Turquie. Sa préfecture (en turc: valiliği) se trouve dans la ville éponyme d''Istanbul.'
-  title: Istanbul (province)
-  url: https://fr.wikipedia.org/wiki/Istanbul_%28province%29
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -717,18 +664,6 @@ Kolding:
     du Sud. La ville compte 62 444 habitants au 1er janvier 2024.
   title: Kolding
   url: https://fr.wikipedia.org/wiki/Kolding
-Krakow:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 224949330
-  source: wikipedia
-  text: 'Le powiat de Cracovie est un powiat de la voïvodie de Petite-Pologne, dans le sud de la Pologne. Il a été
-    créé le 1er janvier 1999. Son siège est la ville de Cracovie, bien qu''elle ne soit pas sur son territoire.
-    Il comprend cinq villes: Skawina, à 12 km au sud-ouest de Cracovie, Krzeszowice, à 24 km à l''ouest de Cracovie,
-    Słomniki, à 24 km au nord-est de Cracovie, Skała, à 20 km au nord de Cracovie, et Świątniki Górne, à 15 km au
-    sud de Cracovie.'
-  title: Powiat de Cracovie
-  url: https://fr.wikipedia.org/wiki/Powiat_de_Cracovie
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -804,18 +739,6 @@ Lisbon:
     La ville compte trois funiculaires et un ascenseur, inauguré en 1902.
   title: Lisbonne
   url: https://fr.wikivoyage.org/wiki/Lisbonne
-Liège:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 669467
-  section: Comprendre
-  source: wikivoyage
-  text: 'Pour les autres lieux du même nom, voir Liège. La province de Liège est une des dix provinces de la Belgique.
-    Elle est située en Wallonie et son chef-lieu, Liège, est aussi la capitale économique officielle de la Région
-    wallonne. La province est divisée en quatre arrondissements administratifs: Liège, Huy, Verviers et Waremme
-    et en deux arrondissements judiciaires: Liège et Eupen.'
-  title: Province de Liège
-  url: https://fr.wikivoyage.org/wiki/Province_de_Li%C3%A8ge
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -945,15 +868,6 @@ Marseille:
     Port majeur et carrefour de la Méditerranée depuis ce temps, la ville est cosmopolite et mouvante.
   title: Marseille
   url: https://fr.wikivoyage.org/wiki/Marseille
-Messina:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 655719
-  source: wikivoyage
-  text: 'La province de Messine, ou officiellement Ville métropolitaine de Messine (en italien: Città metropolitana
-    di Messina) depuis 2015, est une région de l''est de la Sicile en Italie.'
-  title: Messine (province)
-  url: https://fr.wikivoyage.org/wiki/Messine_%28province%29
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1289,15 +1203,6 @@ Ruse:
   text: Roussé (Русе, en bulgare) est avec une population de 166 056 habitants la cinquième ville de Bulgarie.
   title: Roussé
   url: https://fr.wikipedia.org/wiki/Rouss%C3%A9
-Salerno:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 239481431
-  source: wikipedia
-  text: 'La province de Salerne (en italien: Provincia di Salerno) est une province italienne, située dans la région
-    de Campanie. Sa capitale provinciale est Salerne.'
-  title: Province de Salerne
-  url: https://fr.wikipedia.org/wiki/Province_de_Salerne
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1558,16 +1463,6 @@ Tirana:
     du pays.
   title: Tirana
   url: https://fr.wikipedia.org/wiki/Tirana
-Torino:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 235692878
-  source: wikipedia
-  text: La province de Turin (provincia di Torino en italien) est une ancienne province italienne, dans la région
-    du Piémont, dont le chef-lieu était Turin. Elle est remplacée par la ville métropolitaine de Turin depuis le
-    1er janvier 2015.
-  title: Province de Turin
-  url: https://fr.wikipedia.org/wiki/Province_de_Turin
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1721,17 +1616,6 @@ Ventimiglia:
     en Ligurie, située à la frontière franco-italienne. Son agglomération regroupe 55 000 habitants.'
   title: Vintimille
   url: https://fr.wikipedia.org/wiki/Vintimille
-Verona:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 240554887
-  source: wikipedia
-  text: La province de Vérone est une province italienne située dans la région de Vénétie. Son chef-lieu est Vérone.
-    Elle confine au nord avec le Trentin-Haut-Adige, à l'est avec la province de Vicence et la province de Padoue,
-    au sud avec la province de Rovigo, au sud et à l'ouest avec la Lombardie. La superficie de la province est de
-    3 109 km2.
-  title: Province de Vérone
-  url: https://fr.wikipedia.org/wiki/Province_de_V%C3%A9rone
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1751,16 +1635,6 @@ Villa San Giovanni:
   text: Villa San Giovanni est une commune de la province de Reggio de Calabre, dans la région Calabre, en Italie.
   title: Villa San Giovanni
   url: https://fr.wikipedia.org/wiki/Villa_San_Giovanni
-Vilnius:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 208600639
-  source: wikipedia
-  text: 'L''apskritis de Vilnius (en lituanien: Vilniaus apskritis) est le plus grand des dix apskritys de Lituanie.
-    Il est situé dans l''Est du pays, autour de la capitale Vilnius. Cet apskritis compte 850 324 habitants et couvre
-    une superficie de 9 731 kilomètres carrés.'
-  title: Apskritis de Vilnius
-  url: https://fr.wikipedia.org/wiki/Apskritis_de_Vilnius
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

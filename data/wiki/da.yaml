@@ -439,17 +439,6 @@ Foggia:
     til bl.a. Igoumenitsa i Grækenland.
   title: Foggia
   url: https://da.wikipedia.org/wiki/Foggia
-Frankfurt:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 12151246
-  source: wikipedia
-  text: Frankfurt Hauptbahnhof er hovedbanegård i Frankfurt am Main. Den er en af de vigtigste jernbaneknudepunkter
-    i Tyskland og bruges af ca. 350.000 passagerer dagligt ekskl. transferpassagerer. Den er ligeledes begyndelsespunktet
-    for Frankfurt U-Bahns linje U4 og U5. Stationsbygningen er designet af Hermann Eggert og Johann Wilhelm Schwedler
-    og åbnede i 1888.
-  title: Frankfurt Hauptbahnhof
-  url: https://da.wikipedia.org/wiki/Frankfurt_Hauptbahnhof
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -471,17 +460,6 @@ Gdansk:
     og akademisk center.
   title: Gdańsk
   url: https://da.wikipedia.org/wiki/Gda%C5%84sk
-Geneve:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 10912537
-  source: wikipedia
-  text: Kanton Genève er en kanton i Schweiz. Hovedstaden hedder Genève ligesom kantonen. Kantonen er på tre sider
-    omgivet af Frankrig. Mod nord omfatter kantonen begge søbredder af den sydvestligste del af den halvmåneformede
-    Genevesø og bortset fra nogle eksklaver på søens vestbred lidt mod nord har kantonen kun landegrænse til resten
-    af Schweiz på en 4,5 kilometers længde vest for søen til kantonen Vaud, hvor der også findes to genèvske eksklaver.
-  title: Kanton Genève
-  url: https://da.wikipedia.org/wiki/Kanton_Gen%C3%A8ve
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -536,17 +514,6 @@ Hamburg:
     munding i Nordsøen.
   title: Hamborg
   url: https://da.wikipedia.org/wiki/Hamborg
-Helsinki:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 12046105
-  source: wikipedia
-  text: Der er for få eller ingen kildehenvisninger i denne artikel, hvilket er et problem. Du kan hjælpe ved at
-    angive troværdige kilder til de påstande, som fremføres i artiklen. Helsinki Hovedbanegård er et pejlemærke
-    og trafikknudepunkt i Helsinki. Dagligt rejser ca. 200.000 passagerer gennem stationen, med busser, sporvogn,
-    metro, nærtog og fjerntog.
-  title: Helsinki Hovedbanegård
-  url: https://da.wikipedia.org/wiki/Helsinki_Hovedbaneg%C3%A5rd
 Holyhead:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -630,16 +597,6 @@ Kolding:
     1100-tallet.
   title: Kolding
   url: https://da.wikipedia.org/wiki/Kolding
-Krakow:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 9933012
-  source: wikipedia
-  text: Powiat krakowski (Kraków Distrikt) er en powiat i Polen i województwo małopolskie (Lillepolen). Kraków er
-    administrationssæde for powiaten, men selve byen er ikke en del heraf. Powiat krakowski indeholder sytten gminaer,
-    har et areal på 1.229,62 km² og et indbyggertal på 251.836 pr. 2009.
-  title: Powiat krakowski
-  url: https://da.wikipedia.org/wiki/Powiat_krakowski
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -705,14 +662,6 @@ Lisbon:
     i Lissabon metropolområde, inklusive den Portugisiske Riviera.
   title: Lissabon
   url: https://da.wikipedia.org/wiki/Lissabon
-Liège:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 11181481
-  source: wikipedia
-  text: 'Liège (tysk: Lüttich, nederlandsk: Luik) er den østligste provins i Vallonien og Belgien.'
-  title: Liège (provins)
-  url: https://da.wikipedia.org/wiki/Li%C3%A8ge_%28provins%29
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -828,15 +777,6 @@ Marseille:
     som nedture. I 1800-tallet var byen centrum for Frankrigs kolonisering af Nordafrika.
   title: Marseille
   url: https://da.wikipedia.org/wiki/Marseille
-Messina:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 10828960
-  source: wikipedia
-  text: Messina er en italienske provins på øen Sicilien. Hovedstaden for provinsen er Messina, som også har givet
-    navn til provinsen.
-  title: Messina (provins)
-  url: https://da.wikipedia.org/wiki/Messina_%28provins%29
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1155,17 +1095,6 @@ Ruse:
     for hovedstaden Sofia og 200 km vest for Sortehavet.
   title: Ruse (by)
   url: https://da.wikipedia.org/wiki/Ruse_%28by%29
-Salerno:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 10833203
-  source: wikipedia
-  text: Provinsen Salerno (Provincia di Salerno) er en provins i den italienske region Campania. Provinsen ligger
-    langs vestkysten syd for Napoli. Den største by i provinsen hedder ligeledes Salerno. Andre byer i regionen
-    er Cava de' Tirreni, Battipaglia, Nocera Inferiore, samt mange andre mindre feriebyer langs kysten, bl.a. Agropoli,
-    Amalfi, Ascea, Magliano Vetere, Maiori, Minori m.fl.
-  title: Salerno (provins)
-  url: https://da.wikipedia.org/wiki/Salerno_%28provins%29
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1396,15 +1325,6 @@ Tirana:
     blev grundlagt af den osmanniske general Sulejman Pasha i 1614 og blev Albaniens hovedstad i 1920.
   title: Tirana
   url: https://da.wikipedia.org/wiki/Tirana
-Torino:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 10773315
-  source: wikipedia
-  text: Provinsen Torino (it. Provincia di Torino) er en provins i regionen Piemonte i det nordlige Italien. Torino
-    er provinsens hovedby. Der var 2.165.619 indbyggere ved folketællingen i 2001.
-  title: Torino (provins)
-  url: https://da.wikipedia.org/wiki/Torino_%28provins%29
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1545,15 +1465,6 @@ Venice:
     italienske bystat.
   title: Venedig
   url: https://da.wikipedia.org/wiki/Venedig
-Verona:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 11460480
-  source: wikipedia
-  text: Provinsen Verona (it. Provincia di Verona) er en provins i regionen Veneto i det nordlige Italien. Verona
-    er provinsens hovedby. Der var 860.796 indbyggere i året 2004.
-  title: Verona (provins)
-  url: https://da.wikipedia.org/wiki/Verona_%28provins%29
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1564,17 +1475,6 @@ Vienna:
     1.983.836 indbyggere inden for byområdet, hvilket gør det til den 7. største by i den Europæiske Union.
   title: Wien
   url: https://da.wikipedia.org/wiki/Wien
-Vilnius:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 10818060
-  source: wikipedia
-  text: 'Vilnius apskritis (litauisk: Vilniaus apskritis) var et af 10 apskritys i Litauen. Vilnius apskritis havde
-    et indbyggertal på 850.321(2010), og et areal på 9.729 km². Vilnius apskritis havde hovedsæde i byen Vilnius,
-    der også var den største by. Apskritys som administrative enheder blev nedlagt ved en reform 1. juli 2010, siden
-    da har Vilnius apskritis været en territorial og statistisk enhed.'
-  title: Vilnius apskritis
-  url: https://da.wikipedia.org/wiki/Vilnius_apskritis
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

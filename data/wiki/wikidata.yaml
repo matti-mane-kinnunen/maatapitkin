@@ -162,12 +162,6 @@ Bratislava:
   km: 0.8
   label: Bratislava
   wd: Q1780
-Brescia:
-  checked: '2026-11-13'
-  description: railway station in Italy
-  km: 0.0
-  label: Brescia railway station
-  wd: Q727319
 Brest:
   checked: '2026-11-13'
   description: port city in the Finistère department, Brittany, France
@@ -276,12 +270,6 @@ Foggia:
   km: 0.8
   label: Foggia
   wd: Q13464
-Frankfurt:
-  checked: '2026-11-13'
-  description: main railway station in Frankfurt, Germany
-  km: 0.0
-  label: Frankfurt (Main) Hbf
-  wd: Q165368
 Galway:
   checked: '2026-11-13'
   description: city in Ireland
@@ -294,12 +282,6 @@ Gdansk:
   km: 8.7
   label: Gdańsk
   wd: Q1792
-Geneve:
-  checked: '2026-11-13'
-  description: canton of Switzerland
-  km: 4.5
-  label: Canton of Geneva
-  wd: Q11917
 Genoa:
   checked: '2026-11-13'
   description: Italian city
@@ -330,18 +312,6 @@ Hamburg:
   km: 0.6
   label: Hamburg
   wd: Q1055
-Hannover:
-  checked: '2026-11-13'
-  description: main railway station for the city of Hanover
-  km: 1.8
-  label: Hannover Hauptbahnhof
-  wd: Q703918
-Helsinki:
-  checked: '2026-11-13'
-  description: railway station in Helsinki, Finland
-  km: 0.1
-  label: Helsinki Central Railway Station
-  wd: Q1044613
 Hendaye:
   checked: '2026-11-13'
   description: commune in Pyrénées-Atlantiques, France
@@ -372,12 +342,6 @@ Irun:
   km: 1.0
   label: Irun
   wd: Q200201
-Istanbul:
-  checked: '2026-11-13'
-  description: province in northwestern Turkey
-  km: 0.3
-  label: Istanbul Province
-  wd: Q534799
 Izmir:
   checked: '2026-11-13'
   description: city in İzmir Province, Turkey
@@ -408,12 +372,6 @@ Kolding:
   km: 0.6
   label: Kolding
   wd: Q27119
-Krakow:
-  checked: '2026-11-13'
-  description: powiat of Poland
-  km: 1.0
-  label: Kraków County
-  wd: Q1164890
 Kuopio:
   checked: '2026-11-13'
   description: city in the region of Northern Savonia in Finland
@@ -450,12 +408,6 @@ Lille:
   km: 1.5
   label: Lille
   wd: Q648
-Liège:
-  checked: '2026-11-13'
-  description: province in Wallonia, Belgium
-  km: 0.9
-  label: Liege
-  wd: Q1127
 Ljubljana:
   checked: '2026-11-13'
   description: capital city of Slovenia
@@ -522,24 +474,12 @@ Marseille:
   km: 0.8
   label: Marseille
   wd: Q23482
-Messina:
-  checked: '2026-11-13'
-  description: province of Italy
-  km: 1.0
-  label: Province of Messina
-  wd: Q16208
 Milan:
   checked: '2026-11-13'
   description: Italian commune and capital city of Lombardy
   km: 2.4
   label: Milan
   wd: Q490
-Mockava:
-  checked: '2026-11-13'
-  description: railway station in Lithuania
-  km: 0.0
-  label: Mockava train station
-  wd: Q746754
 Monaco:
   checked: '2026-11-13'
   description: microstate in Western Europe
@@ -720,12 +660,6 @@ Ruse:
   km: 2.6
   label: Ruse
   wd: Q160173
-Salerno:
-  checked: '2026-11-13'
-  description: province of Campania, Italy
-  km: 0.8
-  label: Province of Salerno
-  wd: Q16271
 San Marino:
   checked: '2026-11-13'
   description: sovereign state in southern Europe, enclaved within Italy
@@ -798,12 +732,6 @@ Strasbourg:
   km: 1.8
   label: Strasbourg
   wd: Q6602
-Stuttgart:
-  checked: '2026-11-13'
-  description: human settlement in Germany
-  km: 6.7
-  label: Stuttgart-Süd
-  wd: Q670294
 Subotica:
   checked: '2026-11-13'
   description: city in Serbia
@@ -876,12 +804,6 @@ Tirana:
   km: 0.0
   label: Tirana
   wd: Q19689
-Torino:
-  checked: '2026-11-13'
-  description: former province in Italy (1859 to 2015)
-  km: 1.0
-  label: Province of Turin
-  wd: Q16287
 Toulouse:
   checked: '2026-11-13'
   description: French commune and city in Haute-Garonne, Occitania
@@ -966,12 +888,6 @@ Ventimiglia:
   km: 0.4
   label: Ventimiglia
   wd: Q191759
-Verona:
-  checked: '2026-11-13'
-  description: one of seven provinces in the Italian region Veneto
-  km: 0.3
-  label: Province of Verona
-  wd: Q16314
 Vienna:
   checked: '2026-11-13'
   description: capital of and state in Austria
@@ -984,12 +900,6 @@ Villa San Giovanni:
   km: 0.2
   label: Villa San Giovanni
   wd: Q54689
-Vilnius:
-  checked: '2026-11-13'
-  description: county of Lithuania
-  km: 0.4
-  label: Vilnius County
-  wd: Q188061
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   description: municipality of Álava, autonomous community of the Basque Country, Spain

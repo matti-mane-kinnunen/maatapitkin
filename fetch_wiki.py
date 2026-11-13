@@ -22,6 +22,7 @@ import argparse
 import datetime as dt
 import json
 import math
+import unicodedata
 import re
 import sys
 import time
@@ -170,9 +171,22 @@ def coords(entity: dict) -> tuple[float, float] | None:
     return None
 
 
-def pick(place: dict, entities: dict) -> dict | None:
-    """The nearest item within MAX_KM, preferring one with a Wikivoyage article (Monaco city vs
-    country, San Marino, Brest FR vs BY are settled by distance and this)."""
+# Items that are not the town itself: a station, a province around it, a district inside it.
+# The first full run (13.11.2026) took Frankfurt Hbf, Kraków County, the Canton of Geneva, Stuttgart-Süd ...
+NOT_THE_TOWN = re.compile(r"^(main |central )?(railway |train )?station|^(former )?(province|county|canton|powiat|district|"
+                          r"borough|quarter|human settlement|metropolitan)|^urban district", re.I)
+NOT_THE_TOWN_LABEL = re.compile(r"\b(province|county|canton|station|hauptbahnhof|hbf)\b|^province of|-süd$|-nord$", re.I)
+
+
+def fold(x: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", str(x)) if unicodedata.category(c) != "Mn").casefold().strip()
+
+
+def pick(place: dict, entities: dict, names: tuple = ()) -> dict | None:
+    """The item for the town: within MAX_KM, and in this order - not a station / province / district,
+    named exactly like the place (or an alias), with a Wikivoyage article, nearest. (Distance alone took
+    stations and provinces; Wikivoyage settles Monaco city vs country, San Marino; distance Brest FR/BY.)"""
+    wanted = {fold(n) for n in names}
     best = None
     for qid, ent in entities.items():
         c = coords(ent)
@@ -181,11 +195,13 @@ def pick(place: dict, entities: dict) -> dict | None:
         d = km(place["lat"], place["lon"], *c)
         if d > MAX_KM:
             continue
+        label = ((ent.get("labels") or {}).get("en") or {}).get("value", "")
+        desc = ((ent.get("descriptions") or {}).get("en") or {}).get("value", "")
+        other = bool(NOT_THE_TOWN.search(desc) or NOT_THE_TOWN_LABEL.search(label))
+        exact = fold(label) in wanted
         voy = any(k.endswith("wikivoyage") for k in (ent.get("sitelinks") or {}))
-        key = (0 if voy else 1, d)
+        key = (other, not exact, not voy, d)
         if best is None or key < best[0]:
-            label = ((ent.get("labels") or {}).get("en") or {}).get("value", "")
-            desc = ((ent.get("descriptions") or {}).get("en") or {}).get("value", "")
             best = (key, {"wd": qid, "label": label, "description": desc, "km": round(d, 1)})
     return best[1] if best else None
 
@@ -201,7 +217,8 @@ def find_item(name: str, place: dict, pause: float) -> dict | None:
             continue
         q = urllib.parse.urlencode({"action": "wbgetentities", "ids": "|".join(ids), "format": "json",
                                     "props": "claims|sitelinks|labels|descriptions", "languages": "en"})
-        found = pick(place, get_json(f"https://www.wikidata.org/w/api.php?{q}").get("entities") or {})
+        found = pick(place, get_json(f"https://www.wikidata.org/w/api.php?{q}").get("entities") or {},
+                     (name, *(place.get("aliases") or [])))
         time.sleep(pause)
         if found:
             return found

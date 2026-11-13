@@ -118,5 +118,36 @@ class PickItem(unittest.TestCase):
         self.assertIsNone(fw.pick(self.BREST, {"Q1": {"claims": {}, "sitelinks": {}}}))
 
 
+class PickTheTown(unittest.TestCase):
+    """13.11.2026 full run: stations, provinces and districts won on distance alone."""
+    ent = staticmethod(PickItem.ent)
+
+    def with_desc(self, lat, lon, label, desc, voy=False):
+        e = self.ent(lat, lon, voy, label); e["descriptions"] = {"en": {"value": desc}}; return e
+
+    def test_station_loses_to_the_city(self):
+        p = {"lat": 50.107, "lon": 8.663}
+        found = fw.pick(p, {"Q1": self.with_desc(50.107, 8.663, "Frankfurt (Main) Hbf", "main railway station in Frankfurt, Germany"),
+                            "Q2": self.with_desc(50.11, 8.68, "Frankfurt am Main", "city in Hesse, Germany", True)}, ("Frankfurt", "Frankfurt am Main"))
+        self.assertEqual(found["wd"], "Q2")
+
+    def test_province_loses_to_the_city(self):
+        p = {"lat": 45.429, "lon": 10.983}
+        found = fw.pick(p, {"Q1": self.with_desc(45.43, 10.98, "Province of Verona", "one of seven provinces in the Italian region Veneto", True),
+                            "Q2": self.with_desc(45.44, 10.99, "Verona", "Italian comune", True)}, ("Verona",))
+        self.assertEqual(found["wd"], "Q2")
+
+    def test_exact_name_beats_a_closer_district(self):
+        p = {"lat": 48.718, "lon": 9.108}
+        found = fw.pick(p, {"Q1": self.with_desc(48.75, 9.16, "Stuttgart-Süd", "human settlement in Germany"),
+                            "Q2": self.with_desc(48.78, 9.18, "Stuttgart", "capital of Baden-Württemberg, Germany", True)}, ("Stuttgart",))
+        self.assertEqual(found["wd"], "Q2")
+
+    def test_capital_of_a_region_is_still_a_town(self):
+        p = {"lat": 41.118, "lon": 16.869}
+        found = fw.pick(p, {"Q1": self.with_desc(41.12, 16.87, "Bari", "Italian city, capital of the Apulia region", True)}, ("Bari",))
+        self.assertEqual(found["wd"], "Q1")
+
+
 if __name__ == "__main__":
     unittest.main()

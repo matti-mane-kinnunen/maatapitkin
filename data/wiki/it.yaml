@@ -311,18 +311,6 @@ Bratislava:
     una collina si staglia un possente castello assurto a simbolo della città.
   title: Bratislava
   url: https://it.wikivoyage.org/wiki/Bratislava
-Brescia:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 932170
-  section: Da sapere
-  source: wikivoyage
-  text: La stazione di Brescia è la principale stazione ferroviaria passeggeri di Brescia e una delle stazioni principali
-    della Lombardia per numero di passeggeri. L'1 ingresso alla stazione si trova in Viale della Stazione 36. Nel
-    lungo processo di costruzione della ferrovia Milano-Venezia, il passaggio della linea a Brescia fu definito
-    nell'ottobre 1849 e approvato nell'estate dell'anno seguente.
-  title: Stazione di Brescia
-  url: https://it.wikivoyage.org/wiki/Stazione_di_Brescia
 Brest:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -516,18 +504,6 @@ Foggia:
     di 291 metri, con un'altitudine compresa tra i 19 e i 310 metri. La casa comunale si trova a 76 m s.l.m.
   title: Foggia
   url: https://it.wikivoyage.org/wiki/Foggia
-Frankfurt:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 152456137
-  source: wikipedia
-  text: La stazione di Francoforte sul Meno Centrale (in tedesco Frankfurt Hbf) è la principale stazione ferroviaria
-    della città tedesca di Francoforte sul Meno. È nella corrispondenza con parecchie linee di trasporto urbano.
-    Con 164,3 milioni di viaggiatori all'anno, è la stazione tedesca più trafficata dopo quella di Amburgo e la
-    quarta stazione in Europa per il traffico di passeggeri dopo le stazioni parigine Nord e Chatelet, e appunto
-    Amburgo.
-  title: Stazione di Francoforte sul Meno Centrale
-  url: https://it.wikipedia.org/wiki/Stazione_di_Francoforte_sul_Meno_Centrale
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -552,16 +528,6 @@ Gdansk:
     della Pomerania.
   title: Danzica
   url: https://it.wikivoyage.org/wiki/Danzica
-Geneve:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 152755081
-  source: wikipedia
-  text: Il Canton Ginevra, ufficialmente Repubblica e cantone di Ginevra, è un cantone svizzero di 504 128 abitanti,
-    con capitale Ginevra. Esso è situato all'estremità sud-occidentale della Svizzera e il suo territorio confina
-    per la maggior parte del suo perimetro con la Francia e per brevi tratti con il canton Vaud.
-  title: Canton Ginevra
-  url: https://it.wikipedia.org/wiki/Canton_Ginevra
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -618,26 +584,6 @@ Hamburg:
     europea. Il suo porto è il maggiore della Germania e il secondo nell'Unione europea.
   title: Amburgo
   url: https://it.wikivoyage.org/wiki/Amburgo
-Hannover:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 147985642
-  source: wikipedia
-  text: La stazione di Hannover Centrale (in tedesco Hannover Hbf – abbreviazione di Hannover Hauptbahnhof, letteralmente
-    "Hannover stazione principale") è la principale stazione ferroviaria della città tedesca di Hannover.
-  title: Stazione di Hannover Centrale
-  url: https://it.wikipedia.org/wiki/Stazione_di_Hannover_Centrale
-Helsinki:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 152731432
-  source: wikipedia
-  text: La stazione centrale di Helsinki è la principale stazione ferroviaria della capitale della Finlandia, nonché
-    un nodo centrale del trasporto pubblico della Grande area di Helsinki. La stazione è usata da circa 200.000
-    passeggeri al giorno, facendo di esso anche l'edificio più visitato. La stazione è raggiunta dalla Metropolitana
-    di Helsinki.
-  title: Stazione centrale di Helsinki
-  url: https://it.wikipedia.org/wiki/Stazione_centrale_di_Helsinki
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -694,15 +640,6 @@ Irun:
     Nel mezzo del fiume c'è l'Isola dei Fagiani in condominio fra le due nazioni.
   title: Irun
   url: https://it.wikipedia.org/wiki/Irun
-Istanbul:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 148589434
-  source: wikipedia
-  text: La provincia di Istanbul (in turco İstanbul ili) è una provincia della Turchia. Dal 2012 il suo territorio
-    coincide con quello del comune metropolitano di Istanbul (İstanbul Büyükşehir Belediyesi).
-  title: Provincia di Istanbul
-  url: https://it.wikipedia.org/wiki/Provincia_di_Istanbul
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -750,15 +687,6 @@ Kolding:
     costruzione navale.
   title: Kolding
   url: https://it.wikipedia.org/wiki/Kolding
-Krakow:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 135803544
-  source: wikipedia
-  text: Il distretto di Cracovia (in polacco powiat krakowski) è un distretto polacco appartenente al voivodato
-    della Piccola Polonia.
-  title: Distretto di Cracovia
-  url: https://it.wikipedia.org/wiki/Distretto_di_Cracovia
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -837,18 +765,6 @@ Lisbon:
     iberica.
   title: Lisbona
   url: https://it.wikivoyage.org/wiki/Lisbona
-Liège:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 736789
-  section: Da sapere
-  source: wikivoyage
-  text: Provincia di Liegi (in francese Liège, in olandese Luik) è una regione delle Vallonia in Belgio. Confina
-    con i Paesi Bassi (Limburgo) a nord, con la Germania (Renania Settentrionale-Vestfalia e Renania-Palatinato)
-    a est, con il Granducato di Lussemburgo a sud e con le province belghe del Lussemburgo a sud, di Namur a sud-ovest,
-    del Brabante Vallone a ovest, del Brabante Fiammingo e del Limburgo a nord.
-  title: Provincia di Liegi
-  url: https://it.wikivoyage.org/wiki/Provincia_di_Liegi
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -978,16 +894,6 @@ Marseille:
     un autentico melting pot di culture e popoli diversi.
   title: Marsiglia
   url: https://it.wikivoyage.org/wiki/Marsiglia
-Messina:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 153143858
-  source: wikipedia
-  text: La provincia di Messina è stata una provincia italiana della Sicilia, comprendente 108 comuni con una popolazione
-    di 647 477 abitanti nell'anno 2014. In ottemperanza alla legge regionale n. 15 del 4 agosto 2015, ha cessato
-    di esistere per essere sostituita dalla città metropolitana di Messina.
-  title: Provincia di Messina
-  url: https://it.wikipedia.org/wiki/Provincia_di_Messina
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1339,16 +1245,6 @@ Ruse:
     a Bucarest.
   title: Ruse
   url: https://it.wikivoyage.org/wiki/Ruse
-Salerno:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 153195772
-  source: wikipedia
-  text: La provincia di Salerno è una provincia italiana della Campania di 1 052 157 abitanti. È la seconda provincia
-    campana e la decima in Italia per popolazione. Si estende su una superficie di circa 4 954 km² e comprende 158
-    comuni, il che ne fa la prima provincia campana per superficie e per numero di comuni.
-  title: Provincia di Salerno
-  url: https://it.wikipedia.org/wiki/Provincia_di_Salerno
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1488,14 +1384,6 @@ Strasbourg:
     interamente classificato come Patrimonio dell'Umanità dall'UNESCO.
   title: Strasburgo
   url: https://it.wikivoyage.org/wiki/Strasburgo
-Stuttgart:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 147720214
-  source: wikipedia
-  text: Il distretto Sud è un distretto di Stoccarda.
-  title: Distretto Sud (Stoccarda)
-  url: https://it.wikipedia.org/wiki/Distretto_Sud_%28Stoccarda%29
 Subotica:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1628,17 +1516,6 @@ Tirana:
     amministrativa, politica, economica e culturale del Paese.
   title: Tirana
   url: https://it.wikivoyage.org/wiki/Tirana
-Torino:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 152112776
-  source: wikipedia
-  text: La provincia di Torino è stata una provincia italiana del Piemonte, nata verso la metà del XIX secolo come
-    provincia del Regno di Sardegna e sostituita nel 2015 dalla città metropolitana di Torino. È stata una delle
-    province più grandi d'Italia, estesa su una superficie di 6 827 km² e comprendente 316 comuni, oltre a essere
-    stata la provincia col più alto numero di comuni. Il capoluogo era Torino.
-  title: Provincia di Torino
-  url: https://it.wikipedia.org/wiki/Provincia_di_Torino
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1800,18 +1677,6 @@ Ventimiglia:
     balneare di Bordighera.'
   title: Ventimiglia
   url: https://it.wikivoyage.org/wiki/Ventimiglia
-Verona:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 946386
-  section: Da sapere
-  source: wikivoyage
-  text: Veronese è un territorio del Veneto. A nord di Verona sui Monti Lessini e sull'altopiano di Asiago esistono
-    ancora alcuni paesi che parlano un antico dialetto bavarese chiamato "cimbro" dal nome dei primi coloni che
-    nel 1200 D.C. emigrarono dalla Baviera e si stabilirono nei 13 comuni veronesi della Lessinia e nei 7 comuni
-    dell'altopiano di Asiago.
-  title: Veronese
-  url: https://it.wikivoyage.org/wiki/Veronese
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1835,16 +1700,6 @@ Villa San Giovanni:
     ovest è delimitato dal mare dello Stretto di Messina.
   title: Villa San Giovanni
   url: https://it.wikivoyage.org/wiki/Villa_San_Giovanni
-Vilnius:
-  checked: '2026-11-13'
-  fetched: '2026-11-13'
-  revid: 148746711
-  source: wikipedia
-  text: La contea di Vilnius (in lituano Vilniaus apskritis) è una delle dieci contee della Lituania. Parte del
-    parco nazionale dell'Aukštaitija rientra in quest’areale. Dal 1º luglio 2010 ne sono stati soppressi gli organi
-    amministrativi, dunque la contea ha solo valore statistico-territoriale.
-  title: Contea di Vilnius
-  url: https://it.wikipedia.org/wiki/Contea_di_Vilnius
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'
