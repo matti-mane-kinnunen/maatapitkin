@@ -68,6 +68,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-58 | Rome as the seventh map, in Italian | 11.11.2026 | Accepted |
 | D-59 | Hamburg as the eighth map, in German | 12.11.2026 | Accepted |
 | D-60 | Four small usability features: hours slider, calendar file, continue link, problem report | 12.11.2026 | Accepted |
+| D-61 | City texts from Wikivoyage / Wikipedia, fetched on GitHub, stored in the repo | 13.11.2026 | Accepted |
 
 ---
 
@@ -1216,6 +1217,41 @@ tests/check_pages.py skips the new `li.cont` row when it counts timetable rows. 
 map (page check, .ics parsed with Python's icalendar, times checked in three time zones); the other
 maps get the features at the next weekly build. A "report" issue is a lead to check, not a fact:
 the fix still goes through pairs.txt or an own-time line.
+
+## D-61 City texts from Wikivoyage / Wikipedia, fetched on GitHub, stored in the repo
+**Date:** 13.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-22: a few sentences about each destination and hotel-night city make the map more
+inviting ("4 nights in Paris – what to do"). The texts must be in each map's language, credited, and must
+not make visitors' browsers call outside services (D-56 thinking).
+
+**Decision.**
+- `fetch_wiki.py` finds each place's Wikidata item – `wd:` in places.yaml by hand, else by name, accepted only
+  within 25 km of our coordinates and preferring an item with a Wikivoyage article (Brest FR/BY, Monaco city/
+  country) – and through its sitelinks the article in each map language.
+- Text: Wikivoyage's intro; when that is a one-line teaser (< 250 chars, as on en/fr/fi/sv), plus the
+  background section (heading starting with *Understand*, *Hintergrund*, *Comprendre*, *Da sapere*,
+  *Fakta om …*, *Ymmärrä*); Wikipedia's intro if Wikivoyage still has < 200 chars and Wikipedia more.
+  Cut at a sentence end near 420 chars (one long sentence more allowed while < 220, max 600).
+- Stored in `data/wiki/<lang>.yaml` (text, source, title, url, revid, fetched, checked) and
+  `data/wiki/wikidata.yaml` (items found, with label, description, km); hand fixes in
+  `data/wiki/overrides.yaml` and `wd:` in places.yaml, never overwritten. The build only reads them.
+- Fetched only on GitHub: weekly step (`--max-age 28`, about a quarter a week, `continue-on-error`) and
+  *Fetch city texts* by hand. Neither Claude's cloud workspace nor the Mac's shell reaches Wikimedia.
+- Page: the destination's text under the CO₂ line, an *About …* fold at hotel nights; always `textContent`,
+  with "Text: Wikivoyage – contributors, CC BY-SA" linking the article.
+
+**Why.** Committed data keeps builds reproducible and offline, shows every text change in the weekly diff
+(vandalism, a wrong city), and pins the revision for the licence. Wikidata ids avoid matching by name in
+seven languages (the Ruše/Ruse, Stuttgart P+R kind of mistake). Wikivoyage reads like travel advice;
+Wikipedia's intros lead with population figures, so it is only the fallback. REST summaries and the bare
+intro were tried first (13.11.2026, on Lisbon): one sentence in five languages.
+
+**Consequences.** `data/wiki/` is CC BY-SA 4.0 (README), not the repository's licence. About 2,000
+requests for a first full run, ~500 a week after. A workflow_dispatch workflow must exist on the default
+branch to be listed in Actions (the cause of a mistaken *Update map* run on the branch, 13.11.). Texts are
+third-party data: never HTML, never into a shell (D-47). Finnish and Danish fall back to Wikipedia more
+often (thin fi.wikivoyage, no Danish Wikivoyage).
 
 ---
 

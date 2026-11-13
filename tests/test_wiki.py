@@ -92,5 +92,31 @@ class FromPage(unittest.TestCase):
         self.assertIsNone(fw.from_page({**self.SAMPLE, "extract": "Lissabon."}, "wikivoyage", "de", "x"))
 
 
+class PickItem(unittest.TestCase):
+    """Wikidata item chosen by distance, preferring one with a Wikivoyage article."""
+    BREST = {"lat": 48.388, "lon": -4.480}
+
+    @staticmethod
+    def ent(lat, lon, voy=False, label="x"):
+        return {"claims": {"P625": [{"mainsnak": {"datavalue": {"value": {"latitude": lat, "longitude": lon}}}}]},
+                "sitelinks": {"enwikivoyage": {"title": label}} if voy else {}, "labels": {"en": {"value": label}}}
+
+    def test_far_namesake_rejected(self):
+        found = fw.pick(self.BREST, {"Q1": self.ent(52.09, 23.69, True, "Brest, Belarus"), "Q2": self.ent(48.39, -4.49, False, "Brest")})
+        self.assertEqual(found["wd"], "Q2")
+
+    def test_nothing_near(self):
+        self.assertIsNone(fw.pick(self.BREST, {"Q1": self.ent(52.09, 23.69, True)}))
+
+    def test_wikivoyage_article_preferred_among_near_items(self):
+        monaco = {"lat": 43.739, "lon": 7.420}
+        found = fw.pick(monaco, {"Q1": self.ent(43.739, 7.421, False, "Monaco (quarter)"), "Q2": self.ent(43.733, 7.417, True, "Monaco")})
+        self.assertEqual(found["wd"], "Q2")
+        self.assertLess(found["km"], 2)
+
+    def test_item_without_coordinates_ignored(self):
+        self.assertIsNone(fw.pick(self.BREST, {"Q1": {"claims": {}, "sitelinks": {}}}))
+
+
 if __name__ == "__main__":
     unittest.main()

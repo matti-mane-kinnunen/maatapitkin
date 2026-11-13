@@ -26,6 +26,7 @@ pairs.txt             the connections ("A -> B : *" or own times) – the main i
 data/legs.yaml        every leg: from, to, dep+arr (or times: [...] or every: N), service, mode, night, runs
 data/places.yaml      coordinates, capitals, DB station numbers (db:), change times per station, the maps (origins), routing and CO2 settings
 data/names.yaml       place names in each map's language (Tukholma, Köpenhamn, København …), D-50
+data/wiki/            city texts per language from Wikivoyage / Wikipedia (CC BY-SA, written by fetch_wiki.py), Wikidata items, overrides.yaml
 data/i18n/<lang>.yaml page texts per language (en master; fi, sv, da, de, fr, it), D-53 – check_i18n.py lists gaps
 src/guide/<lang>.html the user guide per language
 data/basemap.geojson  country outlines for the map (Natural Earth, public domain)
@@ -34,6 +35,7 @@ static/               files copied into the site as they are (link-preview pictu
 build.py              builds every map, route table and summary in out/ (class Journeys: the journeys;
                       routes_markdown, network_json, summary_of: the outputs; build_origin joins them, FIX-16)
 add_leg.py            looks pairs.txt lines up in Transitous and writes legs.yaml (new places get a DB station number)
+fetch_wiki.py         city texts: Wikidata item per place, article intro per language -> data/wiki/ (runs on GitHub only)
 fill_db_ids.py        adds missing DB station numbers to places.yaml (one-off; add_leg.py does new places)
 tidy_legs.py          legs.yaml entries that no pairs.txt line looks after any more; --apply removes them
 lookup_report.py      from the lookup log, only what needs a person (the weekly issue)
@@ -51,6 +53,7 @@ src/db_stations.py    DB station numbers from Trainline's open station list (for
 .github/weekly_issue.py  one issue per week for the workflow's reports (D-49)
 .githooks/pre-commit  refuses broken YAML, malformed pairs.txt lines and failing routing tests (git config core.hooksPath .githooks)
 .github/workflows/update-map.yml  the weekly update (below)
+.github/workflows/fetch-wiki.yml  city texts by hand (Actions → Fetch city texts), e.g. for one place
 ```
 
 ## Use
@@ -248,6 +251,31 @@ The numbers come from Trainline's open station list,
 downloaded to `.cache/` when needed. Places it does not cover were looked up by hand in bahn.de's own
 station search. Places with no `db:` (ferry ports, islands, North Africa, Albania, Sarajevo, Andorra,
 San Marino) get no bahn.de link; `db: 0` keeps a place without one.
+
+## City texts
+
+Under each destination, and behind *About …* at a hotel night, the map shows two or three sentences
+about the city (IDEA-22, D-61). They come from [Wikivoyage](https://www.wikivoyage.org) in the map's
+language – the intro, plus the background section (*Understand*, *Hintergrund*, *Comprendre*, *Fakta om …*)
+when the intro is a one-line teaser – or from Wikipedia where Wikivoyage has little or no article
+(Danish has no Wikivoyage). Texts are cut at a sentence end near 420 characters.
+
+**How.** `fetch_wiki.py` finds each place's Wikidata item – `wd:` in places.yaml if set by hand, else by
+name, accepted only within 25 km of our coordinates (`data/wiki/wikidata.yaml`, with label, description and
+distance to review) – and through it the article in each language. The weekly run refreshes texts not
+checked for four weeks (about a quarter each week); a failure keeps last week's texts and never stops
+the update. The build only reads `data/wiki/`; visitors' browsers never contact the wikis. Wikimedia's
+servers are not reachable from Claude's shells, so fetching runs only on GitHub
+(Actions → *Fetch city texts* does one place by hand).
+
+**Fixing a text.** A wrong city: put the right `wd:` on the place in places.yaml. A poor text:
+`data/wiki/overrides.yaml`, e.g. `de: {Lisbon: {text: "…", url: "https://…"}}` – it wins over the
+fetched one and is never overwritten.
+
+**Licence and safety.** The texts are by Wikivoyage / Wikipedia contributors under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); each carries its article link, shown
+under the text, and `data/wiki/` is under that licence, not the repository's. They are third-party data:
+the page sets them as plain text, never as HTML, and no workflow passes them to a shell (D-47).
 
 ## Next steps
 

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: "Places, comma-separated (English names in places.yaml; empty = all with a wd:)"
+        description: "Places, comma-separated (English names in places.yaml); empty = all places"
         type: string
         default: "Lisbon"
 
@@ -21,7 +21,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75          # a first run over all places: ~2,000 requests at 0.5 s
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 

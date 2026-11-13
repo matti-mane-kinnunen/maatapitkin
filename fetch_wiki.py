@@ -2,9 +2,11 @@
 """Short city texts from Wikivoyage (else Wikipedia) for the maps (IDEA-22).
 
     python3 fetch_wiki.py --only Lisbon          # one or more places, comma-separated
-    python3 fetch_wiki.py                        # every place in places.yaml with a wd: (Wikidata) id
+    python3 fetch_wiki.py                        # every place in places.yaml
+    python3 fetch_wiki.py --max-age 28           # weekly run: only texts not checked for four weeks
 
-For each place with `wd:` in data/places.yaml and each map language (settings.origins), Wikidata
+Each place's Wikidata item is `wd:` in data/places.yaml (by hand) or else looked up by name and
+checked by distance (data/wiki/wikidata.yaml). For each map language (settings.origins) Wikidata
 gives the article title in that language; the intro section comes from that language's Wikivoyage, or
 Wikipedia when Wikivoyage has no article. The result goes to data/wiki/<lang>.yaml with its
 source, link and revision (CC BY-SA needs the credit; the revision pins what we used).
@@ -19,6 +21,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import math
 import re
 import sys
 import time
@@ -149,10 +152,77 @@ def page_text(lang: str, site: str, title: str) -> dict | None:
     return pages[0] if pages else None
 
 
+MAX_KM = 25                # a Wikidata item found by name must lie this close to our coordinates
+RETRY_DAYS = 28            # places with no item / texts are looked at again after this many days
+
+
+def km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    r = math.radians
+    a = math.sin(r(lat2 - lat1) / 2) ** 2 + math.cos(r(lat1)) * math.cos(r(lat2)) * math.sin(r(lon2 - lon1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(a))
+
+
+def coords(entity: dict) -> tuple[float, float] | None:
+    for c in (entity.get("claims") or {}).get("P625") or []:
+        v = ((c.get("mainsnak") or {}).get("datavalue") or {}).get("value") or {}
+        if "latitude" in v:
+            return v["latitude"], v["longitude"]
+    return None
+
+
+def pick(place: dict, entities: dict) -> dict | None:
+    """The nearest item within MAX_KM, preferring one with a Wikivoyage article (Monaco city vs
+    country, San Marino, Brest FR vs BY are settled by distance and this)."""
+    best = None
+    for qid, ent in entities.items():
+        c = coords(ent)
+        if not c:
+            continue
+        d = km(place["lat"], place["lon"], *c)
+        if d > MAX_KM:
+            continue
+        voy = any(k.endswith("wikivoyage") for k in (ent.get("sitelinks") or {}))
+        key = (0 if voy else 1, d)
+        if best is None or key < best[0]:
+            label = ((ent.get("labels") or {}).get("en") or {}).get("value", "")
+            desc = ((ent.get("descriptions") or {}).get("en") or {}).get("value", "")
+            best = (key, {"wd": qid, "label": label, "description": desc, "km": round(d, 1)})
+    return best[1] if best else None
+
+
+def find_item(name: str, place: dict, pause: float) -> dict | None:
+    """Search Wikidata by the place's name (then its aliases) and pick an item near our coordinates."""
+    for term in [name, *(place.get("aliases") or [])[:2]]:
+        q = urllib.parse.urlencode({"action": "wbsearchentities", "search": term, "language": "en", "uselang": "en",
+                                    "type": "item", "limit": 10, "format": "json"})
+        ids = [x["id"] for x in get_json(f"https://www.wikidata.org/w/api.php?{q}").get("search") or []]
+        time.sleep(pause)
+        if not ids:
+            continue
+        q = urllib.parse.urlencode({"action": "wbgetentities", "ids": "|".join(ids), "format": "json",
+                                    "props": "claims|sitelinks|labels|descriptions", "languages": "en"})
+        found = pick(place, get_json(f"https://www.wikidata.org/w/api.php?{q}").get("entities") or {})
+        time.sleep(pause)
+        if found:
+            return found
+    return None
+
+
+def days_since(d) -> int:
+    try:
+        return (dt.date.today() - dt.date.fromisoformat(str(d))).days
+    except ValueError:
+        return 10 ** 6
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--only", default="", help="comma-separated place names (English keys in places.yaml)")
+    ap.add_argument("--only", default="", help="comma-separated place names (English keys in places.yaml); "
+                                               "these are fetched whatever their age")
+    ap.add_argument("--max-age", type=int, default=0,
+                    help="skip texts checked fewer than this many days ago (weekly run: 28, so a quarter a week)")
     ap.add_argument("--pause", type=float, default=0.5, help="seconds between requests (be gentle)")
+    ap.add_argument("--max-errors", type=int, default=20, help="stop after this many failed requests")
     args = ap.parse_args()
 
     cfg = yaml.safe_load((ROOT / "data/places.yaml").read_text())
@@ -163,48 +233,90 @@ def main() -> int:
     if unknown:
         print(f"not in places.yaml: {', '.join(unknown)}", file=sys.stderr)
         return 2
-    wanted = {n: p["wd"] for n, p in places.items() if p.get("wd") and (not only or n in only)}
-    missing_wd = [x for x in only if not places[x].get("wd")]
-    if missing_wd:
-        print(f"no wd: (Wikidata id) in places.yaml: {', '.join(missing_wd)}", file=sys.stderr)
-    if not wanted:
-        print("nothing to fetch")
-        return 0
-    links = sitelinks(sorted(set(wanted.values())))
+    names = sorted(only or places)
     today = dt.date.today().isoformat()
     out_dir = ROOT / "data/wiki"
     out_dir.mkdir(exist_ok=True)
+    errors = 0
+
+    # 1. Wikidata items: wd: in places.yaml (by hand) wins; else data/wiki/wikidata.yaml (found here, by name
+    #    and distance - check its label/description/km when it changes)
+    idf = out_dir / "wikidata.yaml"
+    ids = (yaml.safe_load(idf.read_text()) or {}) if idf.exists() else {}
+    for name in names:
+        if places[name].get("wd"):
+            continue
+        old = ids.get(name) or {}
+        if old.get("wd") or (old and days_since(old.get("checked")) < RETRY_DAYS and name not in only):
+            continue
+        try:
+            found = find_item(name, places[name], args.pause)
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            errors += 1
+            print(f"  wikidata {name}: {e}")
+            if errors >= args.max_errors:
+                break
+            continue
+        ids[name] = {**found, "checked": today} if found else {"wd": None, "checked": today}
+        print(f"wikidata {name}: " + (f"{found['wd']} {found['label']!r} ({found['description']}), {found['km']} km"
+                                      if found else f"nothing within {MAX_KM} km"))
+    idf.write_text("# Wikidata items for places.yaml, found by fetch_wiki.py by name and distance (IDEA-22).\n"
+                   "# A wrong one: put the right wd: on the place in places.yaml - that always wins.\n"
+                   + yaml.safe_dump(dict(sorted(ids.items())), allow_unicode=True, sort_keys=True, width=110))
+    qid_of = {n: places[n].get("wd") or (ids.get(n) or {}).get("wd") for n in names}
+    qid_of = {n: q for n, q in qid_of.items() if q}
+
+    # 2. texts per language
+    try:
+        links = sitelinks(sorted(set(qid_of.values()))) if qid_of else {}
+    except (urllib.error.URLError, TimeoutError, ValueError) as e:
+        print(f"  wikidata sitelinks: {e} - texts left as they were")
+        return 0
     for lang in langs:
         f = out_dir / f"{lang}.yaml"
         texts = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
-        for name, qid in sorted(wanted.items()):
+        for name, qid in sorted(qid_of.items()):
+            old = texts.get(name) or {}
+            if name not in only and args.max_age and days_since(old.get("checked", old.get("fetched"))) < args.max_age:
+                continue
+            if errors >= args.max_errors:
+                break
             entry = None
-            for site, key in (("wikivoyage", f"{lang}wikivoyage"), ("wikipedia", f"{lang}wiki")):
-                title = links.get(qid, {}).get(key)
-                if not title:
-                    continue
-                e = from_page(page_text(lang, site, title), site, lang, today)
-                time.sleep(args.pause)
-                if e and entry and len(e["text"]) > len(entry["text"]):
-                    print(f"  {lang} {name}: {entry['source']} gave only {len(entry['text'])} chars"
-                          + (f" (with section {entry['section']!r})" if entry.get("section") else "")
-                          + f" - {e['source']} is longer and is used")
-                if e and (not entry or len(e["text"]) > len(entry["text"])):
-                    entry = e
-                if entry and len(entry["text"]) >= TOO_SHORT:
-                    break
+            try:
+                for site, key in (("wikivoyage", f"{lang}wikivoyage"), ("wikipedia", f"{lang}wiki")):
+                    title = links.get(qid, {}).get(key)
+                    if not title:
+                        continue
+                    e = from_page(page_text(lang, site, title), site, lang, today)
+                    time.sleep(args.pause)
+                    if e and entry and len(e["text"]) > len(entry["text"]):
+                        print(f"  {lang} {name}: {entry['source']} gave only {len(entry['text'])} chars"
+                              + (f" (with section {entry['section']!r})" if entry.get("section") else "")
+                              + f" - {e['source']} is longer and is used")
+                    if e and (not entry or len(e["text"]) > len(entry["text"])):
+                        entry = e
+                    if entry and len(entry["text"]) >= TOO_SHORT:
+                        break
+            except (urllib.error.URLError, TimeoutError, ValueError) as e:
+                errors += 1
+                print(f"  {lang} {name}: {e} - kept as it was")
+                continue
             if entry:
-                old = texts.get(name) or {}
                 if old.get("revid") == entry["revid"] and old.get("text") == entry["text"]:
-                    entry["fetched"] = old.get("fetched", today)     # unchanged: keep the file quiet
+                    entry["fetched"] = old.get("fetched", today)     # unchanged: only 'checked' moves
+                entry["checked"] = today
                 texts[name] = entry
                 print(f"{lang} {name}: {entry['source']} {entry['title']!r} rev {entry['revid']}, {len(entry['text'])} chars"
                       + (f", + section {entry['section']!r}" if entry.get("section") else ""))
             else:
+                if old:
+                    old["checked"] = today                         # the article went away: keep the old text
                 print(f"{lang} {name}: no article")
         head = (f"# City texts in '{lang}' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,\n"
                 "# use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).\n")
         f.write_text(head + yaml.safe_dump(dict(sorted(texts.items())), allow_unicode=True, sort_keys=True, width=110))
+    if errors:
+        print(f"{errors} request(s) failed - those places keep their old data")
     return 0
 
 

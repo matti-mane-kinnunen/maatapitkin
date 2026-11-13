@@ -73,6 +73,13 @@ jobs:
       - name: Tidy legs.yaml
         run: python3 tidy_legs.py --apply | tee tidy.log
 
+      # city texts (IDEA-22): texts not checked for four weeks, so about a quarter each week; new places
+      # get their Wikidata item first. A failure keeps last week's texts and never stops the update.
+      - name: Fetch city texts from Wikivoyage / Wikipedia
+        continue-on-error: true
+        timeout-minutes: 40
+        run: python3 fetch_wiki.py --max-age 28 --pause 0.3 | tee wiki.log
+
       - name: Build the map
         run: python3 build.py "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee build.log
 
@@ -99,6 +106,7 @@ jobs:
           else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
           cat check.md >> "$GITHUB_STEP_SUMMARY"
           { echo; echo "## Lookup"; echo '```'; sed -n '/^=====/,$p' lookup.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          if [ -f wiki.log ]; then { echo; echo "## City texts"; echo '```'; grep -E "^wikidata|failed|no article|^  " wiki.log | head -60; echo '```'; } >> "$GITHUB_STEP_SUMMARY"; fi
 
       - name: Commit the new timetable data
         if: steps.check.outputs.ok == 'true'
