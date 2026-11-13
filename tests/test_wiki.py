@@ -28,7 +28,12 @@ class CleanText(unittest.TestCase):
 
 class FromPage(unittest.TestCase):
     SAMPLE = {"pageid": 1, "title": "Lissabon", "revisions": [{"revid": 123456}],
-              "extract": "Die bunte Metropole Lissabon ist die Hauptstadt Portugals.\n\nDie Stadt liegt auf sieben Hügeln am Tejo."}
+              "extract": "Die bunte Metropole Lissabon ist die Hauptstadt Portugals.\n\nDie Stadt liegt auf sieben "
+                         "Hügeln am Tejo, wo er in den Atlantik mündet, und hat viel zu bieten." + " Mehr Text." * 15
+                         + "\n\n== Hintergrund ==\nGeschichte.\n\n== Anreise ==\nZug."}
+    SHORT = {"pageid": 2, "title": "Lisbon", "revisions": [{"revid": 7}],
+             "extract": "Lisbon is the capital of Portugal.\n\n\n== Districts ==\nMany.\n\n\n== Understand ==\n\n"
+                        "=== History ===\nLisbon is one of the oldest cities in Western Europe.\n\n== Get in ==\nBy train."}
 
     def test_entry_has_credit_and_revision(self):
         e = fw.from_page(self.SAMPLE, "wikivoyage", "de", "2026-11-13")
@@ -37,9 +42,20 @@ class FromPage(unittest.TestCase):
         self.assertEqual(e["source"], "wikivoyage")
         self.assertEqual(e["fetched"], "2026-11-13")
 
-    def test_paragraphs_joined(self):
+    def test_long_intro_alone(self):
         e = fw.from_page(self.SAMPLE, "wikivoyage", "de", "x")
         self.assertIn("Portugals. Die Stadt", e["text"])
+        self.assertNotIn("Geschichte", e["text"])
+        self.assertNotIn("section", e)
+
+    def test_short_intro_gets_the_background_section(self):
+        e = fw.from_page(self.SHORT, "wikivoyage", "en", "x")
+        self.assertEqual(e["text"], "Lisbon is the capital of Portugal. Lisbon is one of the oldest cities in Western Europe.")
+        self.assertEqual(e["section"], "Understand")
+
+    def test_wikipedia_takes_the_intro_only(self):
+        e = fw.from_page(self.SHORT, "wikipedia", "en", "x")
+        self.assertIsNone(e)            # 34 characters, no sections taken on Wikipedia: a stub
 
     def test_disambiguation_page_skipped(self):
         self.assertIsNone(fw.from_page({**self.SAMPLE, "pageprops": {"disambiguation": ""}}, "wikipedia", "de", "x"))

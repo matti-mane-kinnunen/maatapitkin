@@ -68,26 +68,66 @@ def clean(text: str) -> str:
     return out if len(out) <= HARD_MAX else out[:HARD_MAX].rsplit(" ", 1)[0] + " …"
 
 
+# A short Wikivoyage intro is often a one-line teaser; the description follows in the background
+# section. Its name differs per language - these are tried in order (13.11.2026: unverified guesses
+# for some languages; the log says which matched).
+BACKGROUND = {"en": ["Understand"], "de": ["Hintergrund", "Verstehen"], "fr": ["Comprendre"],
+              "sv": ["Förstå", "Bakgrund"], "fi": ["Ymmärrä", "Tausta"], "it": ["Da sapere", "Conoscere"],
+              "da": ["Forstå", "Baggrund"]}
+SHORT_INTRO = 250          # below this, add the background section
+TOO_SHORT = 200            # below this after all, try Wikipedia instead (main())
+HEADING = re.compile(r"^(={2,6})\s*(.*?)\s*\1\s*$", re.M)
+
+
+def split_sections(extract: str) -> tuple[str, list[tuple[str, str]]]:
+    """Plain-text extract with '== Heading ==' lines -> (intro, [(heading, text up to the next heading)])."""
+    parts = HEADING.split(extract or "")
+    intro, out = parts[0], []
+    for i in range(1, len(parts) - 2, 3):
+        out.append((parts[i + 1], parts[i + 2]))
+    return intro.strip(), out
+
+
+def compose(extract: str, lang: str) -> tuple[str, str]:
+    """(text, section used or '') - the intro, plus the background section's opening if the intro is short."""
+    intro, sections = split_sections(extract)
+    if len(intro) >= SHORT_INTRO:
+        return intro, ""
+    names = [n.casefold() for n in BACKGROUND.get(lang, [])]
+    for i, (head, body) in enumerate(sections):
+        if head.casefold() in names:
+            # the section may open straight with a sub-heading: take the first text under it
+            texts = [body.strip()] + [b.strip() for _, b in sections[i + 1:i + 3]]
+            first = next((t for t in texts if t), "")
+            if first:
+                return f"{intro}\n\n{first}".strip(), head
+    return intro, ""
+
+
 def from_page(page: dict, site: str, lang: str, today: str) -> dict | None:
-    """One entry from the query API's page (whole intro section as plain text), or None if it is
-    missing, a disambiguation page or a stub. Paragraphs are joined; clean() cuts the length."""
+    """One entry from the query API's page (plain text with headings), or None if it is missing,
+    a disambiguation page or a stub. clean() joins the paragraphs and cuts the length."""
     if not page or page.get("missing") or "disambiguation" in (page.get("pageprops") or {}):
         return None
-    text = clean(page.get("extract", ""))
+    raw, section = compose(page.get("extract", ""), lang) if site == "wikivoyage" else (split_sections(page.get("extract", ""))[0], "")
+    text = clean(raw)
     if len(text) < 40:
         return None
     title = page.get("title", "")
     revs = page.get("revisions") or [{}]
-    return {"text": text, "source": site, "title": title,
-            "url": f"https://{lang}.{site}.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
-            "revid": revs[0].get("revid"), "fetched": today}
+    e = {"text": text, "source": site, "title": title,
+         "url": f"https://{lang}.{site}.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
+         "revid": revs[0].get("revid"), "fetched": today}
+    if section:
+        e["section"] = section
+    return e
 
 
-def intro(lang: str, site: str, title: str) -> dict | None:
-    """The article's intro section as plain text, with its revision id (TextExtracts). The REST
-    summary gave only the first paragraph - on Wikivoyage often a one-line teaser (13.11.2026)."""
+def page_text(lang: str, site: str, title: str) -> dict | None:
+    """The article as plain text with '== Heading ==' lines, plus its revision id (TextExtracts).
+    13.11.2026: the REST summary, then the intro alone, were too short on most Wikivoyages."""
     q = urllib.parse.urlencode({"action": "query", "format": "json", "formatversion": 2, "redirects": 1,
-                                "prop": "extracts|revisions|pageprops", "exintro": 1, "explaintext": 1,
+                                "prop": "extracts|revisions|pageprops", "explaintext": 1, "exsectionformat": "wiki",
                                 "rvprop": "ids", "ppprop": "disambiguation", "titles": title})
     pages = (get_json(f"https://{lang}.{site}.org/w/api.php?{q}").get("query") or {}).get("pages") or []
     return pages[0] if pages else None
@@ -127,16 +167,19 @@ def main() -> int:
                 title = links.get(qid, {}).get(key)
                 if not title:
                     continue
-                entry = from_page(intro(lang, site, title), site, lang, today)
+                e = from_page(page_text(lang, site, title), site, lang, today)
                 time.sleep(args.pause)
-                if entry:
+                if e and (not entry or len(e["text"]) > len(entry["text"])):
+                    entry = e
+                if entry and len(entry["text"]) >= TOO_SHORT:
                     break
             if entry:
                 old = texts.get(name) or {}
                 if old.get("revid") == entry["revid"] and old.get("text") == entry["text"]:
                     entry["fetched"] = old.get("fetched", today)     # unchanged: keep the file quiet
                 texts[name] = entry
-                print(f"{lang} {name}: {entry['source']} {entry['title']!r} rev {entry['revid']}, {len(entry['text'])} chars")
+                print(f"{lang} {name}: {entry['source']} {entry['title']!r} rev {entry['revid']}, {len(entry['text'])} chars"
+                      + (f", + section {entry['section']!r}" if entry.get("section") else ""))
             else:
                 print(f"{lang} {name}: no article")
         head = (f"# City texts in '{lang}' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,\n"
