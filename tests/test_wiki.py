@@ -53,6 +53,17 @@ class FromPage(unittest.TestCase):
         self.assertEqual(e["text"], "Lisbon is the capital of Portugal. Lisbon is one of the oldest cities in Western Europe.")
         self.assertEqual(e["section"], "Understand")
 
+    def test_heading_matched_by_its_beginning(self):
+        page = {**self.SHORT, "extract": "Lissabon är Portugals huvudstad.\n\n== Fakta om Lissabon ==\nEn gammal stad vid Tejo med sju kullar."}
+        e = fw.from_page(page, "wikivoyage", "sv", "x")
+        self.assertEqual(e["section"], "Fakta om Lissabon")
+
+    def test_whole_section_used_with_sub_sections(self):
+        page = {**self.SHORT, "extract": "Lisbon is the capital of Portugal.\n\n== Understand ==\nShort.\n\n"
+                                         "=== History ===\nVery old.\n\n== Get in ==\nBy plane."}
+        e = fw.from_page(page, "wikivoyage", "en", "x")
+        self.assertEqual(e["text"], "Lisbon is the capital of Portugal. Short. Very old.")
+
     def test_empty_section_never_takes_the_next_one(self):
         page = {**self.SHORT, "extract": "Lisbon is the capital of Portugal.\n\n== Understand ==\n\n== Get in ==\nBy plane: the airport is 7 km out."}
         e = fw.from_page(page, "wikivoyage", "en", "x")

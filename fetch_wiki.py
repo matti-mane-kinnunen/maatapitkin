@@ -69,10 +69,11 @@ def clean(text: str) -> str:
 
 
 # A short Wikivoyage intro is often a one-line teaser; the description follows in the background
-# section. Its name differs per language - these are tried in order (13.11.2026: unverified guesses
-# for some languages; the log says which matched).
+# section. Its name differs per language; a heading matches if it starts with one of these (Swedish:
+# "Fakta om Lissabon"). Checked on Lisbon 13.11.2026: en, fr, it, fi, sv; de and da have their own way
+# (German intros are long; Danish has no Wikivoyage).
 BACKGROUND = {"en": ["Understand"], "de": ["Hintergrund", "Verstehen"], "fr": ["Comprendre"],
-              "sv": ["Förstå", "Bakgrund"], "fi": ["Ymmärrä", "Tausta"], "it": ["Da sapere", "Conoscere"],
+              "sv": ["Fakta om", "Förstå", "Bakgrund"], "fi": ["Ymmärrä", "Tausta"], "it": ["Da sapere", "Conoscere"],
               "da": ["Forstå", "Baggrund"]}
 SHORT_INTRO = 250          # below this, add the background section
 TOO_SHORT = 200            # below this after all, try Wikipedia instead (main())
@@ -96,7 +97,7 @@ def compose(extract: str, lang: str) -> tuple[str, str, list[str]]:
         return intro, "", []
     names = [n.casefold() for n in BACKGROUND.get(lang, [])]
     for i, (level, head, body) in enumerate(sections):
-        if head.casefold() in names:
+        if any(head.casefold().startswith(n) for n in names):
             # it may open straight with a sub-heading: take the first text inside it - never the
             # next section's (13.11.2026: Finnish 'Ymmärrä' was empty and 'Saapuminen' got taken)
             texts = [body.strip()]
@@ -104,9 +105,11 @@ def compose(extract: str, lang: str) -> tuple[str, str, list[str]]:
                 if lv <= level:
                     break
                 texts.append(b.strip())
-            first = next((t for t in texts if t), "")
-            if first:
-                return f"{intro}\n\n{first}".strip(), head, []
+            # the whole section, sub-sections included; clean() cuts it at a sentence end near
+            # MAX_CHARS (13.11.2026: English 'Understand' opens with one short paragraph)
+            body = "\n\n".join(t for t in texts if t)
+            if body:
+                return f"{intro}\n\n{body}".strip(), head, []
     return intro, "", [h for lv, h, _ in sections if lv == 2][:12]
 
 
