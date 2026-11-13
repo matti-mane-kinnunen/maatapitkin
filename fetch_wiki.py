@@ -79,29 +79,35 @@ TOO_SHORT = 200            # below this after all, try Wikipedia instead (main()
 HEADING = re.compile(r"^(={2,6})\s*(.*?)\s*\1\s*$", re.M)
 
 
-def split_sections(extract: str) -> tuple[str, list[tuple[str, str]]]:
-    """Plain-text extract with '== Heading ==' lines -> (intro, [(heading, text up to the next heading)])."""
+def split_sections(extract: str) -> tuple[str, list[tuple[int, str, str]]]:
+    """Plain-text extract with '== Heading ==' lines -> (intro, [(level, heading, text up to the next heading)])."""
     parts = HEADING.split(extract or "")
     intro, out = parts[0], []
     for i in range(1, len(parts) - 2, 3):
-        out.append((parts[i + 1], parts[i + 2]))
+        out.append((len(parts[i]), parts[i + 1], parts[i + 2]))
     return intro.strip(), out
 
 
-def compose(extract: str, lang: str) -> tuple[str, str]:
-    """(text, section used or '') - the intro, plus the background section's opening if the intro is short."""
+def compose(extract: str, lang: str) -> tuple[str, str, list[str]]:
+    """(text, section used or '', headings when none matched) - the intro, plus the background
+    section's opening if the intro is short."""
     intro, sections = split_sections(extract)
     if len(intro) >= SHORT_INTRO:
-        return intro, ""
+        return intro, "", []
     names = [n.casefold() for n in BACKGROUND.get(lang, [])]
-    for i, (head, body) in enumerate(sections):
+    for i, (level, head, body) in enumerate(sections):
         if head.casefold() in names:
-            # the section may open straight with a sub-heading: take the first text under it
-            texts = [body.strip()] + [b.strip() for _, b in sections[i + 1:i + 3]]
+            # it may open straight with a sub-heading: take the first text inside it - never the
+            # next section's (13.11.2026: Finnish 'Ymmärrä' was empty and 'Saapuminen' got taken)
+            texts = [body.strip()]
+            for lv, _, b in sections[i + 1:]:
+                if lv <= level:
+                    break
+                texts.append(b.strip())
             first = next((t for t in texts if t), "")
             if first:
-                return f"{intro}\n\n{first}".strip(), head
-    return intro, ""
+                return f"{intro}\n\n{first}".strip(), head, []
+    return intro, "", [h for lv, h, _ in sections if lv == 2][:12]
 
 
 def from_page(page: dict, site: str, lang: str, today: str) -> dict | None:
@@ -109,7 +115,10 @@ def from_page(page: dict, site: str, lang: str, today: str) -> dict | None:
     a disambiguation page or a stub. clean() joins the paragraphs and cuts the length."""
     if not page or page.get("missing") or "disambiguation" in (page.get("pageprops") or {}):
         return None
-    raw, section = compose(page.get("extract", ""), lang) if site == "wikivoyage" else (split_sections(page.get("extract", ""))[0], "")
+    raw, section, heads = compose(page.get("extract", ""), lang) if site == "wikivoyage" \
+        else (split_sections(page.get("extract", ""))[0], "", [])
+    if heads:
+        print(f"  {lang}.{site} {page.get('title', '')!r}: short intro, no background section among {heads}")
     text = clean(raw)
     if len(text) < 40:
         return None

@@ -53,6 +53,11 @@ class FromPage(unittest.TestCase):
         self.assertEqual(e["text"], "Lisbon is the capital of Portugal. Lisbon is one of the oldest cities in Western Europe.")
         self.assertEqual(e["section"], "Understand")
 
+    def test_empty_section_never_takes_the_next_one(self):
+        page = {**self.SHORT, "extract": "Lisbon is the capital of Portugal.\n\n== Understand ==\n\n== Get in ==\nBy plane: the airport is 7 km out."}
+        e = fw.from_page(page, "wikivoyage", "en", "x")
+        self.assertIsNone(e)            # intro alone is a stub; 'Get in' must not be used
+
     def test_wikipedia_takes_the_intro_only(self):
         e = fw.from_page(self.SHORT, "wikipedia", "en", "x")
         self.assertIsNone(e)            # 34 characters, no sections taken on Wikipedia: a stub
