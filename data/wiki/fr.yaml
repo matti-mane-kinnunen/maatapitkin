@@ -303,6 +303,17 @@ Bratislava:
     siège de la présidence, du parlement et du gouvernement slovaques.
   title: Bratislava
   url: https://fr.wikivoyage.org/wiki/Bratislava
+Brescia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672837
+  source: wikivoyage
+  text: Bresia est une ville du nord de l'Italie, chef-lieu de la province de Brescia en Lombardie.Située entre
+    les lacs de Garde et d'Iseo, à 100 km à l'est de Milan, elle abrite l'ancien monastère Santa Giulia classé au
+    patrimoine mondial de l'humanité au titre du bien ''Les Lombards en Italie. Lieux de pouvoir (568-774 après
+    J.-C.)".En 2023, elle fut co-capitale européenne de la culture, avec sa voisine 1 Bergame.
+  title: Brescia
+  url: https://fr.wikivoyage.org/wiki/Brescia
 Brest:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -485,6 +496,16 @@ Foggia:
   text: Foggia est une ville italienne de la province du même nom dans les Pouilles en Italie.
   title: Foggia
   url: https://fr.wikipedia.org/wiki/Foggia
+Frankfurt:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241146235
+  source: wikipedia
+  text: Francfort-sur-le-Main est une ville d'Allemagne, généralement appelée simplement Francfort. Située sur la
+    rivière du Main, elle est, avec près de 800 000 habitants en 2015, la cinquième ville d'Allemagne par sa population
+    et la plus grande du Land de Hesse.
+  title: Francfort-sur-le-Main
+  url: https://fr.wikipedia.org/wiki/Francfort-sur-le-Main
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -508,6 +529,18 @@ Gdansk:
     Schopenhauer.
   title: Gdańsk
   url: https://fr.wikivoyage.org/wiki/Gda%C5%84sk
+Geneve:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669693
+  section: Comprendre
+  source: wikivoyage
+  text: Genève est une ville et la capitale du canton éponyme. Elle est située au bord du lac Léman, en Suisse.
+    L'agglomération urbaine occupe une grande partie du canton et s'étale au-delà de la frontière franco-suisse.
+    Genève est probablement plus connue comme l'un des centres de la diplomatie internationale avec en tête l'Office
+    des Nations Unies.
+  title: Genève
+  url: https://fr.wikivoyage.org/wiki/Gen%C3%A8ve
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -562,6 +595,29 @@ Hamburg:
     c'est la deuxième ville d'Allemagne après Berlin.
   title: Hambourg
   url: https://fr.wikivoyage.org/wiki/Hambourg
+Hannover:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 237799351
+  source: wikipedia
+  text: Hanovre est une ville du nord de l'Allemagne, capitale du Land de Basse-Saxe et située au bord de la rivière
+    Leine. Avec environ 535 930 habitants, elle est la plus grande ville du Land et la troisième plus grande du
+    Nord de l'Allemagne après Hambourg et Brême. Elle fait partie de la région métropolitaine de Hanovre-Brunswick-Göttingen-Wolfsbourg,
+    la huitième d'Allemagne.
+  title: Hanovre
+  url: https://fr.wikipedia.org/wiki/Hanovre
+Helsinki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 666414
+  section: Comprendre
+  source: wikivoyage
+  text: Helsinki est la capitale de la Finlande. Helsinki a été fondée en 1550 par le roi Gustav Vasa de Suède.
+    Il s’agissait alors de créer un centre commercial susceptible de concurrencer Tallinn plus au sud en Estonie.
+    En 1809, la Finlande a été annexée à la Russie à la suite d’une guerre et la capitale de la Finlande a été transférée
+    de Turku à Helsinki en 1812.
+  title: Helsinki
+  url: https://fr.wikivoyage.org/wiki/Helsinki
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -614,6 +670,18 @@ Irun:
     passage principal des Pyrénées occidentales.'
   title: Irun
   url: https://fr.wikipedia.org/wiki/Irun
+Istanbul:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672145
+  section: Comprendre
+  source: wikivoyage
+  text: Plus grande ville de Turquie, sur le détroit du Bosphore, Istanbul est la porte d'entrée du Moyen-Orient
+    et de l'Asie. Istanbul est l'une des plus vieilles et grandes villes d'Europe, avec une importance historique
+    toute particulière, aux portes de l'Asie mineure, sur la mer de Marmara. La Ville des villes est aussi située
+    sur le Bosphore et ses banlieues s'étendent sur les deux rives.
+  title: Istanbul
+  url: https://fr.wikivoyage.org/wiki/Istanbul
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -664,6 +732,17 @@ Kolding:
     du Sud. La ville compte 62 444 habitants au 1er janvier 2024.
   title: Kolding
   url: https://fr.wikipedia.org/wiki/Kolding
+Krakow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 650082
+  source: wikivoyage
+  text: Cracovie est actuellement la deuxième plus grande ville de Pologne, pays dont elle a été la capitale royale
+    du XIe siècle à la fin du XVI. La ville couvre les deux rives de la Vistule, le plus grand fleuve du pays. Région
+    de plateau au pied des Carpates. Elle est la deuxième plus grande ville de Pologne, avec une population de 800
+    000 habitants.
+  title: Cracovie
+  url: https://fr.wikivoyage.org/wiki/Cracovie
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -739,6 +818,17 @@ Lisbon:
     La ville compte trois funiculaires et un ascenseur, inauguré en 1902.
   title: Lisbonne
   url: https://fr.wikivoyage.org/wiki/Lisbonne
+Liège:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 670006
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Liège. Liège est le chef-lieu de la province de Liège et la capitale
+    économique de la Région wallonne en Belgique. Son surnom le plus connu, et toujours utilisé régulièrement de
+    nos jours, est « La cité ardente » du titre d'un roman chevaleresque écrit par Henry Carton de Wiart édité en
+    1904 et racontant le sac de la ville par les troupes de Charles le Téméraire en 1468.
+  title: Liège
+  url: https://fr.wikivoyage.org/wiki/Li%C3%A8ge
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -868,6 +958,17 @@ Marseille:
     Port majeur et carrefour de la Méditerranée depuis ce temps, la ville est cosmopolite et mouvante.
   title: Marseille
   url: https://fr.wikivoyage.org/wiki/Marseille
+Messina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 659712
+  section: Comprendre
+  source: wikivoyage
+  text: 'Messine est une ville italienne et le chef-lieu de la province éponyme en Sicile. 1 Messina tourism bureau,
+    Corso Cavour 85, ☎ +39 090 7761048, infopointurismo@cittametropolitana.me.it. (3 marches à l''entrée). (dernière
+    mise à jour: nov. 2022)'
+  title: Messine
+  url: https://fr.wikivoyage.org/wiki/Messine
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1203,6 +1304,17 @@ Ruse:
   text: Roussé (Русе, en bulgare) est avec une population de 166 056 habitants la cinquième ville de Bulgarie.
   title: Roussé
   url: https://fr.wikipedia.org/wiki/Rouss%C3%A9
+Salerno:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 237150837
+  source: wikipedia
+  text: Salerne est une ville du sud de l’Italie située sur la mer Tyrrhénienne, dans la région de la Campanie,
+    et dernière capitale d’Italie avant Rome. Chef-lieu de la province de Salerne, elle compte environ 133 364 habitants
+    et couvre une superficie de 59 km². Bordée par le golfe de Salerne, la ville est une porte d’entrée vers la
+    côte amalfitaine, classée au patrimoine mondial de l’UNESCO.
+  title: Salerne
+  url: https://fr.wikipedia.org/wiki/Salerne
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1336,6 +1448,18 @@ Strasbourg:
     l'Europe, la ville héberge de multiples institutions européennes.
   title: Strasbourg
   url: https://fr.wikivoyage.org/wiki/Strasbourg
+Stuttgart:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651308
+  section: Comprendre
+  source: wikivoyage
+  text: Stuttgart est une ville d'Allemagne et capitale du Land Bade-Wurtemberg. La ville est aussi la capitale
+    du district de Stuttgart. Stuttgart se compose de 23 districts, qui sont divisés en pas moins de 152 localités.
+    Les cinq quartiers intérieurs sont appelés Mitte, Nord, Ost, Süd et West. Les quartiers extérieurs sont pour
+    la plupart d'anciennes villes avec leurs propres noms - Zuffenhausen et Bad Canstatt.
+  title: Stuttgart
+  url: https://fr.wikivoyage.org/wiki/Stuttgart
 Subotica:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1463,6 +1587,18 @@ Tirana:
     du pays.
   title: Tirana
   url: https://fr.wikipedia.org/wiki/Tirana
+Torino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 657875
+  section: Comprendre
+  source: wikivoyage
+  text: Turin est une grande ville d'environ 900 000 habitants. Elle est le chef-lieu de la région du Piémont dans
+    le nord-ouest de l'Italie. Turin fut la première capitale de l'Italie moderne. Bien qu'elle ne soit pas aussi
+    célèbre que Rome ou Florence, elle est aussi un centre culturel. La ville est traversée par le Pô et par la
+    Doire baltée et est bordée par les Alpes italiennes.
+  title: Turin
+  url: https://fr.wikivoyage.org/wiki/Turin
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1616,6 +1752,18 @@ Ventimiglia:
     en Ligurie, située à la frontière franco-italienne. Son agglomération regroupe 55 000 habitants.'
   title: Vintimille
   url: https://fr.wikipedia.org/wiki/Vintimille
+Verona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 657877
+  section: Comprendre
+  source: wikivoyage
+  text: Vérone est une ville italienne, dans la région de Vénétie La ville de Vérone est une destination touristique
+    importante, visitée chaque année par plus de trois millions de personnes en raison de nombreux événements internationaux,
+    mais surtout pour sa richesse artistique, de sorte que le centre historique a été déclaré site du patrimoine
+    mondial de l'UNESCO.
+  title: Vérone
+  url: https://fr.wikivoyage.org/wiki/V%C3%A9rone
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1635,6 +1783,18 @@ Villa San Giovanni:
   text: Villa San Giovanni est une commune de la province de Reggio de Calabre, dans la région Calabre, en Italie.
   title: Villa San Giovanni
   url: https://fr.wikipedia.org/wiki/Villa_San_Giovanni
+Vilnius:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 666302
+  section: Comprendre
+  source: wikivoyage
+  text: Vilnius est la capitale de la Lituanie. D'un point de vue architectural, le centre historique de Vilnius
+    est particulièrement bien conservé. Il est entièrement classé au patrimoine mondial de l'UNESCO, notamment le
+    quartier des ambassades avec ses façades typiques des pays du Nord de l'Europe, plutôt colorées et, souvent,
+    largement sculptées.
+  title: Vilnius
+  url: https://fr.wikivoyage.org/wiki/Vilnius
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

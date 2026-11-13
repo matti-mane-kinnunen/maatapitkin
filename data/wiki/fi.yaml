@@ -277,6 +277,15 @@ Bratislava:
     pääkaupunki, jolla on maarajaa kahden toisen valtion kanssa.
   title: Bratislava
   url: https://fi.wikipedia.org/wiki/Bratislava
+Brescia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 23923105
+  source: wikipedia
+  text: Brescia on vajaan 200 000 asukkaan kaupunki Lombardiassa Pohjois-Italiassa. Se on Lombardian toiseksi suurin
+    kaupunki Milanon jälkeen.
+  title: Brescia
+  url: https://fi.wikipedia.org/wiki/Brescia
 Brest:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -450,6 +459,16 @@ Foggia:
     dei Sette Velin katedraali ja U.S. Foggian kotistadionina toimiva Pino Zaccheria.
   title: Foggia
   url: https://fi.wikipedia.org/wiki/Foggia
+Frankfurt:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 54577
+  source: wikivoyage
+  text: Frankfurt [1] on noin 670 000 asukkaan kaupunki Saksassa. Sitä ei pidä sekoittaa Oder-joen ja Puolan rajan
+    varressa olevaan samannimiseen kaupunkiin. Frankfurt am Main on tunnettu talouselämän keskuksena, ja siellä
+    onkin Euroopan keskuspankin että useiden muiden suurten saksalaisten finanssialan toimijoiden päämajat.
+  title: Frankfurt
+  url: https://fi.wikivoyage.org/wiki/Frankfurt
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -472,6 +491,17 @@ Gdansk:
     ja Sopotin kanssa yli miljoona.
   title: Gdańsk
   url: https://fi.wikipedia.org/wiki/Gda%C5%84sk
+Geneve:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 24016321
+  source: wikipedia
+  text: Geneve on Sveitsin toiseksi suurin kaupunki sekä Geneven kantonin pääkaupunki. Geneve sijaitsee Alppien
+    kupeessa, Sveitsin lounaiskulmassa ulottuen Ranskaan. Geneve on yksi Euroopan kansainvälisimmistä kaupungeista.
+    Kaupunki on toiminut mallina tasavaltaisille hallituksille sekä korostanut inhimillisten tekijöiden etusijaa
+    maantieteellisen sijainnin sijasta. Geneve tunnetaan kelloteollisuudestaan ja pankeistaan.
+  title: Geneve
+  url: https://fi.wikipedia.org/wiki/Geneve
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -528,6 +558,26 @@ Hamburg:
     on Euroopan toiseksi suurin satamakaupunki heti Rotterdamin jälkeen.
   title: Hampuri
   url: https://fi.wikivoyage.org/wiki/Hampuri
+Hannover:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 52128
+  source: wikivoyage
+  text: Hannover [1] on kaupunki Niedersachsenin osavaltiossa Saksassa. Kaupunki on tunnettu messualueestaan [2]
+    jossa järjestetään vuosittain useita isoja messuja kuten Hannover Messe-teollisuusmessut ja CeBit-tietotekniikkamessut.
+  title: Hannover
+  url: https://fi.wikivoyage.org/wiki/Hannover
+Helsinki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 57037
+  source: wikivoyage
+  text: Helsinki on Suomen pääkaupunki ja on Suomen suurin kaupunki. Se sijaitsee Etelä-Suomen läänissä Suomenlahden
+    rannalla. Helsingin rajanaapureita ovat lännessä Espoo, pohjoisessa ja idässä Vantaa ja Sipoo. Helsingissä asui
+    630 072 ihmistä vuonna 2016 ja on tällä hetkellä Suomen nopeimmin kasvava kunta. 700 000:n raja tullaan rikkomaan
+    vuoteen 2030 mennessä.
+  title: Helsinki
+  url: https://fi.wikivoyage.org/wiki/Helsinki
 Hendaye:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -580,6 +630,16 @@ Irun:
     18 kilometriä Donostiasta itään päin.
   title: Irun
   url: https://fi.wikipedia.org/wiki/Irun
+Istanbul:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 57643
+  source: wikivoyage
+  text: Istanbul [1] on Turkin suurin kaupunki, asukkaita on arviolta n. 16 miljoonaa (vuoden 2007 väestönlaskennassa
+    12,6 M). Kaupunkia jakaa Bosporin salmi, jossa kulkee myös Euroopan ja Aasian raja. Näin ollen kaupungin länsiosa
+    sijaitsee Euroopassa ja itäosa Asiassa. Kaupunki tunnettiin ennen nimellä Konstantinopoli ja tätä ennen Byzantiumina.
+  title: Istanbul
+  url: https://fi.wikivoyage.org/wiki/Istanbul
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -631,6 +691,16 @@ Kolding:
     vuonna 1970 Tanskassa luovuttiin kaupunkikäsitteestä.
   title: Kolding
   url: https://fi.wikipedia.org/wiki/Kolding
+Krakow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 24248579
+  source: wikipedia
+  text: Krakova (puol. Kraków, saks. Krakau, jidd. ‏קראָקע‎, Kroke) on Puolan suurimpia ja vanhimpia kaupunkeja.
+    Krakovan asukasluku on 810 590 (vuonna 2025) ja esikaupunkeineen noin 1,5 miljoonaa (vuonna 2023). Se on Puolan
+    toiseksi suurin kaupunki pääkaupunki Varsovan jälkeen ja ennen Łódźia.
+  title: Krakova
+  url: https://fi.wikipedia.org/wiki/Krakova
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -703,6 +773,17 @@ Lisbon:
     Metropolialueella asuu 2,8 miljoonaa ihmistä (2012), mikä on noin neljännes koko Portugalin asukasmäärästä.
   title: Lissabon
   url: https://fi.wikipedia.org/wiki/Lissabon
+Liège:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 24249739
+  source: wikipedia
+  text: Liège on samannimisen Liègen provinssin pääkaupunki ja Belgian kolmanneksi suurin kaupunkimainen seutu,
+    suurin Valloniassa. Kaupungissa on noin 185 000 asukasta, mutta niin sanotun kaupunkikeskuksen eli Suur-Liègen
+    alueella asukkaita on noin 600 000. Kaupungin pinta-ala on noin 7 000 hehtaaria. Sen alin kohta on 58 metriä
+    ja korkein 238 metriä merenpinnasta.
+  title: Liège
+  url: https://fi.wikipedia.org/wiki/Li%C3%A8ge
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -825,6 +906,17 @@ Marseille:
     on Pariisin jälkeen Ranskan toiseksi suurin kaupunki.
   title: Marseille
   url: https://fi.wikivoyage.org/wiki/Marseille
+Messina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 24261105
+  source: wikipedia
+  text: Messina on Sisilian kolmanneksi suurin kaupunki Italiassa Messinansalmen rannalla. Se on Messinan metropolikaupungin
+    pääkaupunki. Messinan asukasluku on noin 238 000. Messina on merkittävä kauppa- ja satamakaupunki. Sen satama
+    on merkittävä sekä Manner-Italiaan suuntautuvan laivaliikenteen että muun muassa sitrushedelmien viennin ansiosta.
+    Messinassa on tekstiili-, huonekalu- ja kemianteollisuutta.
+  title: Messina
+  url: https://fi.wikipedia.org/wiki/Messina
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1135,6 +1227,16 @@ Ruse:
     on Bulgarian tärkein jokisatama ja huomattava teollisuuskeskus.
   title: Ruse
   url: https://fi.wikipedia.org/wiki/Ruse
+Salerno:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 22462286
+  source: wikipedia
+  text: Salerno (antiikin Salernum) on kaupunki Campaniassa Lounais-Italiassa. Siellä asuu noin 135 000 asukasta.
+    Keskiajalla kaupunki oli kuuluisa lääketieteellisestä korkeakoulustaan. Liittoutuneet nousivat maihin Salernossa
+    vuonna 1943 ja se oli sen jälkeen hetken ajan Italian pääkaupunki ennen Rooman valloitusta.
+  title: Salerno
+  url: https://fi.wikipedia.org/wiki/Salerno
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1251,6 +1353,17 @@ Strasbourg:
     Ranskan vilkkaimpia.
   title: Strasbourg
   url: https://fi.wikivoyage.org/wiki/Strasbourg
+Stuttgart:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 24196839
+  source: wikipedia
+  text: Stuttgart on Saksan Baden-Württembergin osavaltion pääkaupunki. Kesäkuun 2022 lopussa kaupungissa oli noin
+    632 000 asukasta, ja se on osavaltionsa runsasväkisin ja koko Saksan kuudenneksi suurin kaupunki. Kaupunki sijaitsee
+    Neckarjoen varrella, Schwabenin Juran ja Schwarzwaldin metsäalueen välissä. Stuttgart on niin kutsuttu kaupunkipiiri.
+    Näin ollen se ei kuulu mihinkään Saksan piirikunnista.
+  title: Stuttgart
+  url: https://fi.wikipedia.org/wiki/Stuttgart
 Subotica:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1377,6 +1490,17 @@ Tirana:
     paikallinen, joka pystyy tulkkaamaan.
   title: Tirana
   url: https://fi.wikivoyage.org/wiki/Tirana
+Torino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 23588665
+  source: wikipedia
+  text: Torino on teollisuus- ja yliopistokaupunki Luoteis-Italiassa. Se on Piemonten alueen ja Torinon metropolikaupungin
+    pääkaupunki. Torino sijaitsee Po-joen varrella, lähellä Alppeja. Torinon kaupungin väkiluku on noin 900 000,
+    mutta Torinon suurkaupunkialueella on yhteensä noin 1,5 miljoonaa asukasta. Torino tunnetaan Fiat-autotehtaan
+    hallinnon ja päätuotantolaitosten sijaintipaikkana.
+  title: Torino
+  url: https://fi.wikipedia.org/wiki/Torino
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1515,6 +1639,17 @@ Venice:
     ja Venetsian metropolikaupungin pääkaupunki.
   title: Venetsia
   url: https://fi.wikipedia.org/wiki/Venetsia
+Verona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 23161916
+  source: wikipedia
+  text: Verona on samannimisen maakunnan pääkaupunki Adigejoen varrella Pohjois-Italiassa Veneton hallintoalueella.
+    Se on Italian huomattavimpia ja parhaiten säilyneitä historiallisia kaupunkeja. Sen kaupunkirakenteessa on säilynyt
+    kerrostumia historian eri kausilta roomalaisajasta lähtien. Lähes 10 kilometrin pituisen muurikehän ympäröimä
+    historiallinen keskusta on kuulunut vuodesta 2000 Unescon maailmanperintöluetteloon.
+  title: Verona
+  url: https://fi.wikipedia.org/wiki/Verona
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1534,6 +1669,16 @@ Villa San Giovanni:
     metropolikaupungin länsiosassa noin neljätoista kilometriä Reggio di Calabriasta pohjoiseen.
   title: Villa San Giovanni
   url: https://fi.wikipedia.org/wiki/Villa_San_Giovanni
+Vilnius:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 54855
+  section: Ymmärrä
+  source: wikivoyage
+  text: Vilna on Liettuan pääkaupunki, asukkaita siellä on yli 540 000. Arkkitehtuurin puolesta Vilna on mielenkiintoinen
+    sekoitus keskiaikaista vanhaa kaupunkia, neuvostoaikojen betonikammotuksia ja bisneskeskustan pilvenpiirtäjiä.
+  title: Vilna
+  url: https://fi.wikivoyage.org/wiki/Vilna
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'

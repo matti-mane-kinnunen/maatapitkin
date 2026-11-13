@@ -162,6 +162,12 @@ Bratislava:
   km: 0.8
   label: Bratislava
   wd: Q1780
+Brescia:
+  checked: '2026-11-13'
+  description: Italian city in Lombardy
+  km: 1.0
+  label: Brescia
+  wd: Q6221
 Brest:
   checked: '2026-11-13'
   description: port city in the Finistère department, Brittany, France
@@ -270,6 +276,12 @@ Foggia:
   km: 0.8
   label: Foggia
   wd: Q13464
+Frankfurt:
+  checked: '2026-11-13'
+  description: most populated city of Hesse, Germany
+  km: 1.4
+  label: Frankfurt
+  wd: Q1794
 Galway:
   checked: '2026-11-13'
   description: city in Ireland
@@ -282,6 +294,12 @@ Gdansk:
   km: 8.7
   label: Gdańsk
   wd: Q1792
+Geneve:
+  checked: '2026-11-13'
+  description: capital of the canton of Geneva, Switzerland
+  km: 4.7
+  label: Geneva
+  wd: Q71
 Genoa:
   checked: '2026-11-13'
   description: Italian city
@@ -312,6 +330,18 @@ Hamburg:
   km: 0.6
   label: Hamburg
   wd: Q1055
+Hannover:
+  checked: '2026-11-13'
+  description: capital city of the German federated state of Lower Saxony
+  km: 2.1
+  label: Hanover
+  wd: Q1715
+Helsinki:
+  checked: '2026-11-13'
+  description: capital and most populous city of Finland
+  km: 0.2
+  label: Helsinki
+  wd: Q1757
 Hendaye:
   checked: '2026-11-13'
   description: commune in Pyrénées-Atlantiques, France
@@ -342,6 +372,12 @@ Irun:
   km: 1.0
   label: Irun
   wd: Q200201
+Istanbul:
+  checked: '2026-11-13'
+  description: largest city in Turkey
+  km: 1.5
+  label: Istanbul
+  wd: Q406
 Izmir:
   checked: '2026-11-13'
   description: city in İzmir Province, Turkey
@@ -372,6 +408,12 @@ Kolding:
   km: 0.6
   label: Kolding
   wd: Q27119
+Krakow:
+  checked: '2026-11-13'
+  description: capital city of Lesser Poland Voivodeship in southern Poland
+  km: 1.0
+  label: Kraków
+  wd: Q31487
 Kuopio:
   checked: '2026-11-13'
   description: city in the region of Northern Savonia in Finland
@@ -408,6 +450,12 @@ Lille:
   km: 1.5
   label: Lille
   wd: Q648
+Liège:
+  checked: '2026-11-13'
+  description: city of the province of Liège within the region of Wallonia, in Belgium, Europe
+  km: 1.7
+  label: Liège
+  wd: Q3992
 Ljubljana:
   checked: '2026-11-13'
   description: capital city of Slovenia
@@ -474,12 +522,24 @@ Marseille:
   km: 0.8
   label: Marseille
   wd: Q23482
+Messina:
+  checked: '2026-11-13'
+  description: Italian comune in Sicily
+  km: 1.0
+  label: Messina
+  wd: Q13666
 Milan:
   checked: '2026-11-13'
   description: Italian commune and capital city of Lombardy
   km: 2.4
   label: Milan
   wd: Q490
+Mockava:
+  checked: '2026-11-13'
+  description: village in Lithuania
+  km: 3.9
+  label: Mockava
+  wd: Q12665773
 Monaco:
   checked: '2026-11-13'
   description: microstate in Western Europe
@@ -660,6 +720,12 @@ Ruse:
   km: 2.6
   label: Ruse
   wd: Q160173
+Salerno:
+  checked: '2026-11-13'
+  description: Italian city and commune of Campania
+  km: 1.4
+  label: Salerno
+  wd: Q1083
 San Marino:
   checked: '2026-11-13'
   description: sovereign state in southern Europe, enclaved within Italy
@@ -732,6 +798,12 @@ Strasbourg:
   km: 1.8
   label: Strasbourg
   wd: Q6602
+Stuttgart:
+  checked: '2026-11-13'
+  description: city on the Neckar river and capital of the federal state Baden-Württemberg, Germany
+  km: 8.5
+  label: Stuttgart
+  wd: Q1022
 Subotica:
   checked: '2026-11-13'
   description: city in Serbia
@@ -804,6 +876,12 @@ Tirana:
   km: 0.0
   label: Tirana
   wd: Q19689
+Torino:
+  checked: '2026-11-13'
+  description: city and commune in Italy
+  km: 1.4
+  label: Turin
+  wd: Q495
 Toulouse:
   checked: '2026-11-13'
   description: French commune and city in Haute-Garonne, Occitania
@@ -888,6 +966,12 @@ Ventimiglia:
   km: 0.4
   label: Ventimiglia
   wd: Q191759
+Verona:
+  checked: '2026-11-13'
+  description: city in Veneto, northern Italy
+  km: 1.3
+  label: Verona
+  wd: Q2028
 Vienna:
   checked: '2026-11-13'
   description: capital of and state in Austria
@@ -900,6 +984,12 @@ Villa San Giovanni:
   km: 0.2
   label: Villa San Giovanni
   wd: Q54689
+Vilnius:
+  checked: '2026-11-13'
+  description: capital and largest city of Lithuania
+  km: 1.9
+  label: Vilnius
+  wd: Q216
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   description: municipality of Álava, autonomous community of the Basque Country, Spain

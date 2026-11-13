@@ -276,6 +276,16 @@ Bratislava:
     Bratislava er det politiske, kulturelle og økonomiske centrum i Slovakiet.
   title: Bratislava
   url: https://da.wikipedia.org/wiki/Bratislava
+Brescia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12047418
+  source: wikipedia
+  text: Brescia er en by i regionen Lombardiet i det nordlige Italien med 196.446 indbyggere. Den er hovedstaden
+    i provinsen Brescia, og er Lombardiets største by efter Milano. Byen hed Brixia i antikken og har eksisteret
+    før Romerriget. Meget er bevaret i byen fra romertiden og middelalderen.
+  title: Brescia
+  url: https://da.wikipedia.org/wiki/Brescia
 Brest:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -439,6 +449,16 @@ Foggia:
     til bl.a. Igoumenitsa i Grækenland.
   title: Foggia
   url: https://da.wikipedia.org/wiki/Foggia
+Frankfurt:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12270940
+  source: wikipedia
+  text: Frankfurt er den største by i den tyske delstat Hessen og den femtestørste by i Tyskland med et 760.656
+    indbyggere. I Stor-Frankfurt er indbyggertallet 2,8 mio. Indtil 1866 var byen en fri rigsstad, der i perioder
+    fungerede som en slags hovedstad for Tyskland.
+  title: Frankfurt am Main
+  url: https://da.wikipedia.org/wiki/Frankfurt_am_Main
 Galway:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -460,6 +480,17 @@ Gdansk:
     og akademisk center.
   title: Gdańsk
   url: https://da.wikipedia.org/wiki/Gda%C5%84sk
+Geneve:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12226071
+  source: wikipedia
+  text: Geneve er den næststørste by i Schweiz efter Zürich. Byen er hovedby i den fransktalende kanton af samme
+    navn. Kantonen Geneve er den vestligste af de schweiziske kantoner og omgivet af Frankrig på næsten alle sider.
+    Byen ligger, hvor Genevesøen har sit udløb i floden Rhône. Geneve er en international by med en kosmopolitisk
+    atmosfære. Mange internationale organisationer har hovedsæde i Geneve.
+  title: Genève
+  url: https://da.wikipedia.org/wiki/Gen%C3%A8ve
 Genoa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -514,6 +545,27 @@ Hamburg:
     munding i Nordsøen.
   title: Hamborg
   url: https://da.wikipedia.org/wiki/Hamborg
+Hannover:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12377266
+  source: wikipedia
+  text: For alternative betydninger, se Hannover. Hannover er hovedstaden i delstaten Niedersachsen ved floden Leine
+    i det nordvestlige Tyskland, og byen havde i 2013 518.386 indbyggere. Hannover er beliggende 285 km vest for
+    Berlin, 151 km syd for Hamborg, 631 km nord for München og 137 km øst for Osnabrück.
+  title: Hannover
+  url: https://da.wikipedia.org/wiki/Hannover
+Helsinki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12399841
+  source: wikipedia
+  text: Helsinki eller Helsingfors er Finlands hovedstad og største by. Byen ligger i landskabet Nyland i Sydfinland
+    ved Finske Bugt. Helsinki har 694.392 indbyggere, mens den større hovedstadsregion har 1,4 millioner indbyggere.
+    Helsinki ligger 80 kilometer nord for Tallinn, 400 kilometer øst for Stockholm, og 390 kilometer vest for Sankt
+    Petersborg. Helsinki har tætte historiske bånd til alle tre byer.
+  title: Helsinki
+  url: https://da.wikipedia.org/wiki/Helsinki
 Holyhead:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -554,6 +606,16 @@ Irun:
     af Vuelta a España 2020 havde start i Irun.'
   title: Irun
   url: https://da.wikipedia.org/wiki/Irun
+Istanbul:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12379111
+  source: wikipedia
+  text: Der er for få eller ingen kildehenvisninger i denne artikel, hvilket er et problem. Du kan hjælpe ved at
+    angive troværdige kilder til de påstande, som fremføres i artiklen. Istanbul er Tyrkiets største og tættest
+    befolkede by. Byen var tidligere kendt under navnet Konstantinopolis og før det, Byzantion.
+  title: Istanbul
+  url: https://da.wikipedia.org/wiki/Istanbul
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -597,6 +659,17 @@ Kolding:
     1100-tallet.
   title: Kolding
   url: https://da.wikipedia.org/wiki/Kolding
+Krakow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12345075
+  source: wikipedia
+  text: Ikke at forveksle med Krackow. Kraków er en storby i den sydlige del af Polen. Byen ligger ved floden Wisła
+    tæt på landets grænse til Slovakiet. Med et areal på 327 km2og et indbyggertal på 804.237 indbyggere er den
+    Polens næststørste by. Kraków er hovedstad i voivodskabet Lillepolen. Den var Europæisk kulturhovedstad i 2000.
+    Kraków er en gammel by, der tidligere var Polens hovedstad, ligesom den har været kongeby.
+  title: Kraków
+  url: https://da.wikipedia.org/wiki/Krak%C3%B3w
 Kuopio:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -662,6 +735,17 @@ Lisbon:
     i Lissabon metropolområde, inklusive den Portugisiske Riviera.
   title: Lissabon
   url: https://da.wikipedia.org/wiki/Lissabon
+Liège:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 11509777
+  source: wikipedia
+  text: 'Liège (vallonsk: Lîdje, nederlandsk: Luik, tysk: Lüttich) er en by i det østlige Belgien med 195.278 (2022)
+    indbyggere. Byen ligger nær grænsen til Nederlandene og Tyskland, hvor floden Maas møder floden Ourthe. Liège
+    er administrativ hovedstad i provinsen Liège og den største by i den frankofone region Vallonien. Byen er kendt
+    for cykelløbet Liège-Bastogne-Liège.'
+  title: Liège
+  url: https://da.wikipedia.org/wiki/Li%C3%A8ge
 Ljubljana:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -777,6 +861,16 @@ Marseille:
     som nedture. I 1800-tallet var byen centrum for Frankrigs kolonisering af Nordafrika.
   title: Marseille
   url: https://da.wikipedia.org/wiki/Marseille
+Messina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 10809344
+  source: wikipedia
+  text: Messina er den tredjestørste by på den italienske ø Sicilien og hovedstaden i provinsen Messina. Byen har
+    218.786(2023)indbyggere. Messina blev grundlagt af græske kolonister i det 8. århundrede f.Kr. Nær Messina ligger
+    vulkanen Etna.
+  title: Messina
+  url: https://da.wikipedia.org/wiki/Messina
 Milan:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1095,6 +1189,15 @@ Ruse:
     for hovedstaden Sofia og 200 km vest for Sortehavet.
   title: Ruse (by)
   url: https://da.wikipedia.org/wiki/Ruse_%28by%29
+Salerno:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 10774363
+  source: wikipedia
+  text: Salerno er en italiensk by og kommune i regionen Campania. Byen har 127.186(2023)indbyggere og er hovedby
+    i Salerno-provinsen. Den ligger ved Salernobugten ud mod Det Tyrrhenske Hav.
+  title: Salerno
+  url: https://da.wikipedia.org/wiki/Salerno
 San Marino:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1211,6 +1314,16 @@ Strasbourg:
     erindringer, Digt og Sandhed.
   title: Strasbourg
   url: https://da.wikipedia.org/wiki/Strasbourg
+Stuttgart:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12098415
+  source: wikipedia
+  text: 'Stuttgart er hovedstaden i delstaten Baden-Württemberg i Tyskland. Byen ligger i centrum af regionen Mittlerer
+    Neckarraum og har cirka 600.000 indbyggere. Byen har en betydelig industri, bl.a. findes her bilfabrikkerne:
+    Mercedes-Benz og Porsche, et Teknisk universitet med et verdensberømt botanisk institut og et kunstakademi.'
+  title: Stuttgart
+  url: https://da.wikipedia.org/wiki/Stuttgart
 Subotica:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1325,6 +1438,17 @@ Tirana:
     blev grundlagt af den osmanniske general Sulejman Pasha i 1614 og blev Albaniens hovedstad i 1920.
   title: Tirana
   url: https://da.wikipedia.org/wiki/Tirana
+Torino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12388101
+  source: wikipedia
+  text: Der er for få eller ingen kildehenvisninger i denne artikel, hvilket er et problem. Du kan hjælpe ved at
+    angive troværdige kilder til de påstande, som fremføres i artiklen. Torino (på piemontesisk, fransk, tysk, engelsk
+    kendt som Turin) er en stor italiensk industriby i den nordvestlige del af landet. Byen er hovedstad i regionen
+    Piemonte. Torino ligger hovedsagelig på den venstre bred af floden Po.
+  title: Torino
+  url: https://da.wikipedia.org/wiki/Torino
 Toulouse:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1465,6 +1589,17 @@ Venice:
     italienske bystat.
   title: Venedig
   url: https://da.wikipedia.org/wiki/Venedig
+Verona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 11496191
+  source: wikipedia
+  text: Verona er en italiensk by med 255.588indbyggere. Byen er hovedstad i provinsen af samme navn og er beliggende
+    i regionen Veneto. Verona er et trafikknudepunkt, hvor jernbanen gennem Brennerpasset videre til Bologna mødes
+    med Jernbanen mellem Milano og Venezia. Floden Adige løber igennem Verona. Byen er på UNESCOs verdensarvsliste.
+    Det er i Verona, at handlingen i William Shakespeares skuespil Romeo og Julie foregår.
+  title: Verona
+  url: https://da.wikipedia.org/wiki/Verona
 Vienna:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1475,6 +1610,17 @@ Vienna:
     1.983.836 indbyggere inden for byområdet, hvilket gør det til den 7. største by i den Europæiske Union.
   title: Wien
   url: https://da.wikipedia.org/wiki/Wien
+Vilnius:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 12248462
+  source: wikipedia
+  text: Vilnius er Litauens hovedstad. Byen ligger i den sydøstligste del af Litauen og er landets største by med
+    619.405 indbyggere. Vilnius var Litauens historiske hovedstad i middelalderen, og blev hovedstad i det selvstændige
+    Litauen i 1990. Den er administrations- og handelsby, der ligger på begge sider af floden Neris. Byen er hovedsæde
+    for Vilnius apskritis og Vilnius distriktskommune.
+  title: Vilnius
+  url: https://da.wikipedia.org/wiki/Vilnius
 Vitoria-Gasteiz:
   checked: '2026-11-13'
   fetched: '2026-11-13'
