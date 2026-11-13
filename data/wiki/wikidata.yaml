@@ -1,3 +1,1028 @@
 # Wikidata items for places.yaml, found by fetch_wiki.py by name and distance (IDEA-22).
 # A wrong one: put the right wd: on the place in places.yaml - that always wins.
-{}
+Aarhus:
+  checked: '2026-11-13'
+  description: city in Central Denmark Region
+  km: 0.8
+  label: Aarhus
+  wd: Q25319
+Abrantes:
+  checked: '2026-11-13'
+  description: municipality in Santarém District, Portugal
+  km: 1.8
+  label: Abrantes
+  wd: Q331191
+Aix en Provence:
+  checked: '2026-11-13'
+  description: French commune in Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
+  km: 13.2
+  label: Aix-en-Provence
+  wd: Q47465
+Algeciras:
+  checked: '2026-11-13'
+  description: municipality and city in the province of Cádiz, Spain
+  km: 1.5
+  label: Algeciras
+  wd: Q484552
+Algiers:
+  checked: '2026-11-13'
+  description: capital city of Algeria
+  km: 0.7
+  label: Algiers
+  wd: Q3561
+Amsterdam:
+  checked: '2026-11-13'
+  description: capital and most populous city of the Netherlands
+  km: 1.8
+  label: Amsterdam
+  wd: Q727
+Ancona:
+  checked: '2026-11-13'
+  description: Italian city in the Marches region
+  km: 1.8
+  label: Ancona
+  wd: Q3415
+Andorra la Vella:
+  checked: '2026-11-13'
+  description: capital of Andorra
+  km: 0.1
+  label: Andorra la Vella
+  wd: Q1863
+Ankara:
+  checked: '2026-11-13'
+  description: capital of Turkey
+  km: 0.5
+  label: Ankara
+  wd: Q3640
+Athens:
+  checked: '2026-11-13'
+  description: capital and largest city of Greece
+  km: 2.2
+  label: Athens
+  wd: Q1524
+Avignon:
+  checked: '2026-11-13'
+  description: commune in Vaucluse, France
+  km: 3.5
+  label: Avignon
+  wd: Q6397
+Ayr:
+  checked: '2026-11-13'
+  description: town, port and former Royal Burgh situated on the west coast of Ayrshire in Scotland
+  km: 0.7
+  label: Ayr
+  wd: Q654216
+Badajoz:
+  checked: '2026-11-13'
+  description: municipality in Extremadura, Spain
+  km: 1.1
+  label: Badajoz
+  wd: Q15679
+Barcelona:
+  checked: '2026-11-13'
+  description: city in Catalonia, Spain
+  km: 3.1
+  label: Barcelona
+  wd: Q1492
+Bari:
+  checked: '2026-11-13'
+  description: Italian city, capital of the Apulia region
+  km: 0.8
+  label: Bari
+  wd: Q3519
+Basel:
+  checked: '2026-11-13'
+  description: city on the Rhine in Switzerland
+  km: 1.2
+  label: Basel
+  wd: Q78
+Bastia:
+  checked: '2026-11-13'
+  description: French commune, city and prefecture of Haute-Corse, Corsica
+  km: 0.2
+  label: Bastia
+  wd: Q134698
+Belfast:
+  checked: '2026-11-13'
+  description: capital city of Northern Ireland
+  km: 0.8
+  label: Belfast
+  wd: Q10686
+Belgrade:
+  checked: '2026-11-13'
+  description: capital and largest city of Serbia
+  km: 0.0
+  label: Belgrade
+  wd: Q3711
+Bergen:
+  checked: '2026-11-13'
+  description: Norwegian city in Vestland, Norway
+  km: 0.6
+  label: Bergen
+  wd: Q26793
+Berlin:
+  checked: '2026-11-13'
+  description: federated state, capital and largest city of Germany
+  km: 1.3
+  label: Berlin
+  wd: Q64
+Bern:
+  checked: '2026-11-13'
+  description: city in Switzerland, capital of the canton of Bern and de facto capital of Switzerland
+  km: 0.6
+  label: Bern
+  wd: Q70
+Boden:
+  checked: '2026-11-13'
+  description: urban area in Boden Municipality, Sweden
+  km: 1.2
+  label: Boden
+  wd: Q586179
+Bologna:
+  checked: '2026-11-13'
+  description: city and commune in Emilia-Romagna, Italy
+  km: 1.3
+  label: Bologna
+  wd: Q1891
+Bonn:
+  checked: '2026-11-13'
+  description: city in Germany and capital of former West Germany
+  km: 0.5
+  label: Bonn
+  wd: Q586
+Bordeaux:
+  checked: '2026-11-13'
+  description: city and commune in Gironde, New Aquitaine, France
+  km: 2.3
+  label: Bordeaux
+  wd: Q1479
+Bratislava:
+  checked: '2026-11-13'
+  description: capital city of Slovakia
+  km: 0.8
+  label: Bratislava
+  wd: Q1780
+Brescia:
+  checked: '2026-11-13'
+  description: railway station in Italy
+  km: 0.0
+  label: Brescia railway station
+  wd: Q727319
+Brest:
+  checked: '2026-11-13'
+  description: port city in the Finistère department, Brittany, France
+  km: 0.5
+  label: Brest
+  wd: Q12193
+Brussels:
+  checked: '2026-11-13'
+  description: municipality in the Brussels-Capital Region and capital of Belgium
+  km: 1.6
+  label: Brussels
+  wd: Q239
+Bucharest:
+  checked: '2026-11-13'
+  description: capital and largest city of Romania
+  km: 4.2
+  label: Bucharest
+  wd: Q19660
+Budapest:
+  checked: '2026-11-13'
+  description: capital and largest city of Hungary
+  km: 3.2
+  label: Budapest
+  wd: Q1781
+Cairnryan:
+  checked: '2026-11-13'
+  description: ''
+  km: 0.1
+  label: Cairnryan Port
+  wd: Q24677731
+Cardiff:
+  checked: '2026-11-13'
+  description: capital city of Wales, United Kingdom
+  km: 0.6
+  label: Cardiff
+  wd: Q10690
+Casablanca:
+  checked: '2026-11-13'
+  description: largest city of Morocco
+  km: 2.9
+  label: Casablanca
+  wd: Q7903
+Chania:
+  checked: '2026-11-13'
+  description: city in Crete, Greece
+  km: 0.3
+  label: Chania
+  wd: Q182299
+Chisinau:
+  checked: '2026-11-13'
+  description: capital of Moldova
+  km: 2.9
+  label: Chișinău
+  wd: Q21197
+Copenhagen:
+  checked: '2026-11-13'
+  description: capital and largest city of Denmark
+  km: 0.4
+  label: Copenhagen
+  wd: Q1748
+Donostia:
+  checked: '2026-11-13'
+  description: municipality in Basque Country, Spain
+  km: 0.4
+  label: San Sebastián
+  wd: Q10313
+Dublin:
+  checked: '2026-11-13'
+  description: capital and largest city of Ireland
+  km: 1.0
+  label: Dublin
+  wd: Q1761
+Durrës:
+  checked: '2026-11-13'
+  description: city in Albania
+  km: 0.9
+  label: Durrës
+  wd: Q83285
+Edinburgh:
+  checked: '2026-11-13'
+  description: capital city of Scotland, UK
+  km: 0.1
+  label: Edinburgh
+  wd: Q23436
+Entroncamento:
+  checked: '2026-11-13'
+  description: municipality in Portugal
+  km: 0.8
+  label: Entroncamento
+  wd: Q990422
+Faro:
+  checked: '2026-11-13'
+  description: municipality in Portugal
+  km: 0.7
+  label: Faro
+  wd: Q159457
+Florence:
+  checked: '2026-11-13'
+  description: Italian city and commune, located in Tuscany
+  km: 0.7
+  label: Florence
+  wd: Q2044
+Foggia:
+  checked: '2026-11-13'
+  description: Italian comune
+  km: 0.8
+  label: Foggia
+  wd: Q13464
+Frankfurt:
+  checked: '2026-11-13'
+  description: main railway station in Frankfurt, Germany
+  km: 0.0
+  label: Frankfurt (Main) Hbf
+  wd: Q165368
+Galway:
+  checked: '2026-11-13'
+  description: city in Ireland
+  km: 0.3
+  label: Galway
+  wd: Q129610
+Gdansk:
+  checked: '2026-11-13'
+  description: city and capital of the Pomeranian Voivodeship on the Baltic coast of northern Poland
+  km: 8.7
+  label: Gdańsk
+  wd: Q1792
+Geneve:
+  checked: '2026-11-13'
+  description: canton of Switzerland
+  km: 4.5
+  label: Canton of Geneva
+  wd: Q11917
+Genoa:
+  checked: '2026-11-13'
+  description: Italian city
+  km: 1.5
+  label: Genoa
+  wd: Q1449
+Glasgow:
+  checked: '2026-11-13'
+  description: city in Scotland, United Kingdom
+  km: 0.5
+  label: Glasgow
+  wd: Q4093
+Granada:
+  checked: '2026-11-13'
+  description: municipality and capital of the province of Granada, Spain
+  km: 1.3
+  label: Granada
+  wd: Q8810
+Göteborg:
+  checked: '2026-11-13'
+  description: second-largest city in Sweden and capital of the Västra Götaland County
+  km: 3.7
+  label: Gothenburg
+  wd: Q25287
+Hamburg:
+  checked: '2026-11-13'
+  description: city and state in the North of Germany
+  km: 0.6
+  label: Hamburg
+  wd: Q1055
+Hannover:
+  checked: '2026-11-13'
+  description: main railway station for the city of Hanover
+  km: 1.8
+  label: Hannover Hauptbahnhof
+  wd: Q703918
+Helsinki:
+  checked: '2026-11-13'
+  description: railway station in Helsinki, Finland
+  km: 0.1
+  label: Helsinki Central Railway Station
+  wd: Q1044613
+Hendaye:
+  checked: '2026-11-13'
+  description: commune in Pyrénées-Atlantiques, France
+  km: 0.9
+  label: Hendaye
+  wd: Q191754
+Holyhead:
+  checked: '2026-11-13'
+  description: town in the county of Anglesey in Wales, UK
+  km: 1.0
+  label: Holyhead
+  wd: Q257446
+Iasi:
+  checked: '2026-11-13'
+  description: capital of the county of Iași, Romania
+  km: 1.5
+  label: Iași
+  wd: Q46852
+Innsbruck:
+  checked: '2026-11-13'
+  description: capital of the state of Tyrol, Austria
+  km: 0.8
+  label: Innsbruck
+  wd: Q1735
+Irun:
+  checked: '2026-11-13'
+  description: municipality of Basque Country, Spain
+  km: 1.0
+  label: Irun
+  wd: Q200201
+Istanbul:
+  checked: '2026-11-13'
+  description: province in northwestern Turkey
+  km: 0.3
+  label: Istanbul Province
+  wd: Q534799
+Izmir:
+  checked: '2026-11-13'
+  description: city in İzmir Province, Turkey
+  km: 6.9
+  label: İzmir
+  wd: Q35997
+Kaisiadorys:
+  checked: '2026-11-13'
+  description: city in Lithuania
+  km: 1.6
+  label: Kaišiadorys
+  wd: Q614855
+Kaunas:
+  checked: '2026-11-13'
+  description: city and administrative center of Kaunas County in Lithuania
+  km: 1.2
+  label: Kaunas
+  wd: Q4115712
+Koblenz:
+  checked: '2026-11-13'
+  description: German city on the banks of the Rhine and of the Moselle
+  km: 1.3
+  label: Koblenz
+  wd: Q3104
+Kolding:
+  checked: '2026-11-13'
+  description: city in Denmark
+  km: 0.6
+  label: Kolding
+  wd: Q27119
+Krakow:
+  checked: '2026-11-13'
+  description: powiat of Poland
+  km: 1.0
+  label: Kraków County
+  wd: Q1164890
+Kuopio:
+  checked: '2026-11-13'
+  description: city in the region of Northern Savonia in Finland
+  km: 0.5
+  label: Kuopio
+  wd: Q162279
+Kyiv:
+  checked: '2026-11-13'
+  description: capital and largest city of Ukraine
+  km: 2.8
+  label: Kyiv
+  wd: Q1899
+Köln:
+  checked: '2026-11-13'
+  description: most populous city in North Rhine-Westphalia, Germany
+  km: 0.1
+  label: Cologne
+  wd: Q365
+L'Hospitalet:
+  checked: '2026-11-13'
+  description: commune in Ariège, France
+  km: 0.4
+  label: L'Hospitalet-près-l'Andorre
+  wd: Q1018525
+Lecce:
+  checked: '2026-11-13'
+  description: Italian comune
+  km: 5.3
+  label: Lecce
+  wd: Q13386
+Lille:
+  checked: '2026-11-13'
+  description: city and commune in Nord, Hauts-de-France, Northern France
+  km: 1.5
+  label: Lille
+  wd: Q648
+Liège:
+  checked: '2026-11-13'
+  description: province in Wallonia, Belgium
+  km: 0.9
+  label: Liege
+  wd: Q1127
+Ljubljana:
+  checked: '2026-11-13'
+  description: capital city of Slovenia
+  km: 0.8
+  label: Ljubljana
+  wd: Q437
+London:
+  checked: '2026-11-13'
+  description: capital and largest city of England and the United Kingdom
+  km: 2.8
+  label: London
+  wd: Q84
+Lugano:
+  checked: '2026-11-13'
+  description: city in the canton of Ticino, Switzerland
+  km: 1.3
+  label: Lugano
+  wd: Q7024
+Luxembourg:
+  checked: '2026-11-13'
+  description: capital and largest city of Luxembourg
+  km: 1.3
+  label: Luxembourg
+  wd: Q1842
+Lyon:
+  checked: '2026-11-13'
+  description: city of France
+  km: 2.0
+  label: Lyon
+  wd: Q456
+Madrid:
+  checked: '2026-11-13'
+  description: capital of Spain
+  km: 1.5
+  label: Madrid
+  wd: Q2807
+Malaga:
+  checked: '2026-11-13'
+  description: municipality and capital of the province of Málaga, in Spain
+  km: 1.5
+  label: Málaga
+  wd: Q8851
+Malmö:
+  checked: '2026-11-13'
+  description: city in Skåne County, Sweden
+  km: 2.9
+  label: Malmö
+  wd: Q2211
+Manchester:
+  checked: '2026-11-13'
+  description: city in Greater Manchester, England
+  km: 0.1
+  label: Manchester
+  wd: Q18125
+Marrakech:
+  checked: '2026-11-13'
+  description: city in Marrakesh-Safi, Morocco
+  km: 3.4
+  label: Marrakech
+  wd: Q101625
+Marseille:
+  checked: '2026-11-13'
+  description: French commune
+  km: 0.8
+  label: Marseille
+  wd: Q23482
+Messina:
+  checked: '2026-11-13'
+  description: province of Italy
+  km: 1.0
+  label: Province of Messina
+  wd: Q16208
+Milan:
+  checked: '2026-11-13'
+  description: Italian commune and capital city of Lombardy
+  km: 2.4
+  label: Milan
+  wd: Q490
+Mockava:
+  checked: '2026-11-13'
+  description: railway station in Lithuania
+  km: 0.0
+  label: Mockava train station
+  wd: Q746754
+Monaco:
+  checked: '2026-11-13'
+  description: microstate in Western Europe
+  km: 0.9
+  label: Monaco
+  wd: Q235
+Montpellier:
+  checked: '2026-11-13'
+  description: city in Hérault, France
+  km: 0.7
+  label: Montpellier
+  wd: Q6441
+Munich:
+  checked: '2026-11-13'
+  description: capital and most populous city of Bavaria, Germany
+  km: 1.3
+  label: Munich
+  wd: Q1726
+Nantes:
+  checked: '2026-11-13'
+  description: city in Loire-Atlantique, Pays de la Loire, France
+  km: 0.9
+  label: Nantes
+  wd: Q12191
+Naples:
+  checked: '2026-11-13'
+  description: capital city of Campania, Italy
+  km: 2.7
+  label: Naples
+  wd: Q2634
+Narvik:
+  checked: '2026-11-13'
+  description: settlement in Narvik Municipality, Norway
+  km: 0.6
+  label: Narvik
+  wd: Q59101
+Newcastle:
+  checked: '2026-11-13'
+  description: city in Tyne and Wear, England, UK
+  km: 1.1
+  label: Newcastle upon Tyne
+  wd: Q1425428
+Nice:
+  checked: '2026-11-13'
+  description: city and commune in Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France
+  km: 0.6
+  label: Nice
+  wd: Q33959
+Offenburg:
+  checked: '2026-11-13'
+  description: city in Baden-Württemberg, Germany
+  km: 0.7
+  label: Offenburg
+  wd: Q4044
+Oslo:
+  checked: '2026-11-13'
+  description: capital city of Norway
+  km: 0.8
+  label: Oslo
+  wd: Q585
+Osnabrück:
+  checked: '2026-11-13'
+  description: independent city of Germany, Lower Saxony, capital of the Osnabrück District
+  km: 1.4
+  label: Osnabrück
+  wd: Q2916
+Oulu:
+  checked: '2026-11-13'
+  description: city in the North Ostrobothnia region, Finland
+  km: 0.7
+  label: Oulu
+  wd: Q47048
+Palermo:
+  checked: '2026-11-13'
+  description: capital of Sicily, Italy
+  km: 0.8
+  label: Palermo
+  wd: Q2656
+Palma:
+  checked: '2026-11-13'
+  description: city in Mallorca and capital of the Balearic Islands, Spain
+  km: 1.2
+  label: Palma
+  wd: Q8826
+Paris:
+  checked: '2026-11-13'
+  description: capital and most populous city in France
+  km: 2.2
+  label: Paris
+  wd: Q90
+Patras:
+  checked: '2026-11-13'
+  description: city in Greece
+  km: 0.2
+  label: Patras
+  wd: Q133123
+Penzance:
+  checked: '2026-11-13'
+  description: town and civil parish in Cornwall, England, UK
+  km: 0.4
+  label: Penzance
+  wd: Q208209
+Porto:
+  checked: '2026-11-13'
+  description: municipality in Portugal
+  km: 2.2
+  label: Porto
+  wd: Q36433
+Porto Torres:
+  checked: '2026-11-13'
+  description: Italian comune
+  km: 0.3
+  label: Porto Torres
+  wd: Q391316
+Pozzallo:
+  checked: '2026-11-13'
+  description: town and comune in the province of Ragusa, Sicily, Italy
+  km: 0.4
+  label: Pozzallo
+  wd: Q34111
+Prague:
+  checked: '2026-11-13'
+  description: capital city of the Czech Republic
+  km: 1.1
+  label: Prague
+  wd: Q1085
+Przemyśl:
+  checked: '2026-11-13'
+  description: city in southeastern Poland
+  km: 1.4
+  label: Przemyśl
+  wd: Q208473
+Rabat:
+  checked: '2026-11-13'
+  description: capital city of Morocco
+  km: 0.8
+  label: Rabat
+  wd: Q3551
+Reggio di Calabria:
+  checked: '2026-11-13'
+  description: commune of Italy
+  km: 7.8
+  label: Reggio Calabria
+  wd: Q8471
+Riga:
+  checked: '2026-11-13'
+  description: capital and largest city of Latvia
+  km: 0.5
+  label: Riga
+  wd: Q1773
+Rimini:
+  checked: '2026-11-13'
+  description: Italian comune
+  km: 0.6
+  label: Rimini
+  wd: Q13369
+Rome:
+  checked: '2026-11-13'
+  description: capital and largest city of Italy
+  km: 1.7
+  label: Rome
+  wd: Q220
+Rostock:
+  checked: '2026-11-13'
+  description: city in Mecklenburg-Vorpommern, Germany
+  km: 0.6
+  label: Rostock
+  wd: Q2861
+Rovaniemi:
+  checked: '2026-11-13'
+  description: city in the region of Lapland in Finland
+  km: 1.2
+  label: Rovaniemi
+  wd: Q103717
+Ruse:
+  checked: '2026-11-13'
+  description: city in Ruse municipality, Ruse oblast, Bulgaria
+  km: 2.6
+  label: Ruse
+  wd: Q160173
+Salerno:
+  checked: '2026-11-13'
+  description: province of Campania, Italy
+  km: 0.8
+  label: Province of Salerno
+  wd: Q16271
+San Marino:
+  checked: '2026-11-13'
+  description: sovereign state in southern Europe, enclaved within Italy
+  km: 1.2
+  label: San Marino
+  wd: Q238
+Santiago de Compostela:
+  checked: '2026-11-13'
+  description: capital of Galicia, Spain
+  km: 1.1
+  label: Santiago de Compostela
+  wd: Q14314
+Sarajevo:
+  checked: '2026-11-13'
+  description: capital city of Bosnia and Herzegovina
+  km: 1.2
+  label: Sarajevo
+  wd: Q11194
+Seinäjoki:
+  checked: '2026-11-13'
+  description: city in the region of Southern Ostrobothnia in Finland
+  km: 0.3
+  label: Seinäjoki
+  wd: Q6157
+Sevilla:
+  checked: '2026-11-13'
+  description: municipality of Andalusia, Spain
+  km: 1.8
+  label: Seville
+  wd: Q8717
+Sofia:
+  checked: '2026-11-13'
+  description: capital city of Bulgaria
+  km: 1.6
+  label: Sofia
+  wd: Q472
+Split:
+  checked: '2026-11-13'
+  description: city in Split-Dalmatia County, Croatia
+  km: 0.7
+  label: Split
+  wd: Q1663
+Stavanger:
+  checked: '2026-11-13'
+  description: municipality in Rogaland, Norway
+  km: 0.5
+  label: Stavanger
+  wd: Q25416
+Stockholm:
+  checked: '2026-11-13'
+  description: capital and largest city of Sweden
+  km: 0.6
+  label: Stockholm
+  wd: Q1754
+Storlien:
+  checked: '2026-11-13'
+  description: minor locality in Åre Municipality, Sweden
+  km: 0.3
+  label: Storlien
+  wd: Q2299668
+Stranraer:
+  checked: '2026-11-13'
+  description: town in Wigtownshire, Dumfries and Galloway, Scotland, UK
+  km: 2.1
+  label: Stranraer
+  wd: Q1001935
+Strasbourg:
+  checked: '2026-11-13'
+  description: capital and largest city of Grand Est, located in the historical region of Alsace
+  km: 1.8
+  label: Strasbourg
+  wd: Q6602
+Stuttgart:
+  checked: '2026-11-13'
+  description: human settlement in Germany
+  km: 6.7
+  label: Stuttgart-Süd
+  wd: Q670294
+Subotica:
+  checked: '2026-11-13'
+  description: city in Serbia
+  km: 0.5
+  label: Subotica
+  wd: Q170287
+Sundsvall:
+  checked: '2026-11-13'
+  description: urban area in Sundsvall Municipality, Sweden
+  km: 1.5
+  label: Sundsvall
+  wd: Q26476
+Syracuse:
+  checked: '2026-11-13'
+  description: Italian municipality
+  km: 0.5
+  label: Syracuse
+  wd: Q13670
+Szeged:
+  checked: '2026-11-13'
+  description: city in Csongrád-Csanád County, Hungary
+  km: 2.1
+  label: Szeged
+  wd: Q81581
+Tallinn:
+  checked: '2026-11-13'
+  description: capital and most populous city of Estonia
+  km: 0.6
+  label: Tallinn
+  wd: Q1770
+Tampere:
+  checked: '2026-11-13'
+  description: city in the region of Pirkanmaa in Finland
+  km: 0.7
+  label: Tampere
+  wd: Q40840
+Tanger:
+  checked: '2026-11-13'
+  description: city in and capital of Tanger-Tetouan-Al Hoceima, Morocco
+  km: 1.7
+  label: Tangier
+  wd: Q126148
+Tanger Med:
+  checked: '2026-11-13'
+  description: Moroccan port
+  km: 0.3
+  label: Tanger-Med
+  wd: Q518888
+Taormina:
+  checked: '2026-11-13'
+  description: Italian comune
+  km: 0.2
+  label: Taormina
+  wd: Q199952
+Tarifa:
+  checked: '2026-11-13'
+  description: municipality and town in the Province of Cádiz, Andalusia, Spain
+  km: 0.8
+  label: Tarifa
+  wd: Q222702
+Thessaloniki:
+  checked: '2026-11-13'
+  description: city in Macedonia, Greece
+  km: 0.6
+  label: Thessaloniki
+  wd: Q17151
+Tirana:
+  checked: '2026-11-13'
+  description: capital and the largest city of Albania
+  km: 0.0
+  label: Tirana
+  wd: Q19689
+Torino:
+  checked: '2026-11-13'
+  description: former province in Italy (1859 to 2015)
+  km: 1.0
+  label: Province of Turin
+  wd: Q16287
+Toulouse:
+  checked: '2026-11-13'
+  description: French commune and city in Haute-Garonne, Occitania
+  km: 1.1
+  label: Toulouse
+  wd: Q7880
+Trieste:
+  checked: '2026-11-13'
+  description: city and seaport in northeastern Italy
+  km: 0.7
+  label: Trieste
+  wd: Q546
+Trondheim:
+  checked: '2026-11-13'
+  description: city in Trøndelag, Norway
+  km: 0.4
+  label: Trondheim
+  wd: Q25804
+Tunis:
+  checked: '2026-11-13'
+  description: capital of Tunisia
+  km: 0.6
+  label: Tunis
+  wd: Q3572
+Turku:
+  checked: '2026-11-13'
+  description: city in the region of Southwest Finland, Finland
+  km: 3.2
+  label: Turku
+  wd: Q38511
+Umeå:
+  checked: '2026-11-13'
+  description: urban area in Umeå Municipality, Sweden
+  km: 0.1
+  label: Umeå
+  wd: Q25579
+Vaasa:
+  checked: '2026-11-13'
+  description: city in the region of Ostrobothnia in Finland
+  km: 0.0
+  label: Vaasa
+  wd: Q125080
+Valencia:
+  checked: '2026-11-13'
+  description: capital city of the Valencian Community, Spain
+  km: 4.4
+  label: Valencia
+  wd: Q8818
+Valga:
+  checked: '2026-11-13'
+  description: town in southern Estonia
+  km: 1.3
+  label: Valga
+  wd: Q193905
+Valletta:
+  checked: '2026-11-13'
+  description: capital of Malta
+  km: 0.1
+  label: Valletta
+  wd: Q23800
+Varna:
+  checked: '2026-11-13'
+  description: city in Varna municipality, Varna oblast, Bulgaria
+  km: 1.4
+  label: Varna
+  wd: Q6506
+Vatican:
+  checked: '2026-11-13'
+  description: Holy See's independent state, an enclave within Rome, Italy
+  km: 0.0
+  label: Vatican City
+  wd: Q237
+Venice:
+  checked: '2026-11-13'
+  description: capital city of Veneto, Italy
+  km: 0.9
+  label: Venice
+  wd: Q641
+Ventimiglia:
+  checked: '2026-11-13'
+  description: city and comune in Liguria, northern Italy
+  km: 0.4
+  label: Ventimiglia
+  wd: Q191759
+Verona:
+  checked: '2026-11-13'
+  description: one of seven provinces in the Italian region Veneto
+  km: 0.3
+  label: Province of Verona
+  wd: Q16314
+Vienna:
+  checked: '2026-11-13'
+  description: capital of and state in Austria
+  km: 2.6
+  label: Vienna
+  wd: Q1741
+Villa San Giovanni:
+  checked: '2026-11-13'
+  description: Italian comune
+  km: 0.2
+  label: Villa San Giovanni
+  wd: Q54689
+Vilnius:
+  checked: '2026-11-13'
+  description: county of Lithuania
+  km: 0.4
+  label: Vilnius County
+  wd: Q188061
+Vitoria-Gasteiz:
+  checked: '2026-11-13'
+  description: municipality of Álava, autonomous community of the Basque Country, Spain
+  km: 0.5
+  label: Vitoria-Gasteiz
+  wd: Q14318
+Warsaw:
+  checked: '2026-11-13'
+  description: capital and largest city of Poland
+  km: 0.6
+  label: Warsaw
+  wd: Q270
+Wroclaw:
+  checked: '2026-11-13'
+  description: city in the Lower Silesian Voivodeship, southwestern Poland, and historical capital of Silesia
+  km: 1.4
+  label: Wrocław
+  wd: Q1799
+Zagreb:
+  checked: '2026-11-13'
+  description: capital city of Croatia
+  km: 0.9
+  label: Zagreb
+  wd: Q1435
+Zürich:
+  checked: '2026-11-13'
+  description: most populous city in Switzerland and capital of the canton of Zurich
+  km: 0.5
+  label: Zurich
+  wd: Q72
+Östersund:
+  checked: '2026-11-13'
+  description: urban area in Östersund Municipality, Sweden
+  km: 0.4
+  label: Östersund
+  wd: Q26515

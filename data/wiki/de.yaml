@@ -1,5 +1,815 @@
 # City texts in 'de' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Aarhus:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799640
+  source: wikivoyage
+  text: Aarhus oder Århus ist mit rund 290.000 Einwohnern die zweitgrößte Stadt Dänemarks. Die Stadt liegt an der
+    Ostsee in der Region Jütland. 2017 war Århus zusammen mit Paphos auf Zypern Kulturhauptstadt Europas.
+  title: Aarhus
+  url: https://de.wikivoyage.org/wiki/Aarhus
+Abrantes:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 271423869
+  source: wikipedia
+  text: Abrantes [ɐˈbɾɐ̃tɯʃ] ist eine Stadt in Portugal mit etwa 14.800 Einwohnern.
+  title: Abrantes
+  url: https://de.wikipedia.org/wiki/Abrantes
+Aix en Provence:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1786472
+  source: wikivoyage
+  text: Aix-en-Provence ist die alte Hauptstadt der Provence. Sie liegt im französischen Departement Bouches-du-Rhône
+    in der Region Provence-Alpes-Côte d'Azur im Süden Frankreichs, knapp 30 km nördlich von Marseille. Sie ist eine
+    Stadt der Kunst und Kultur, viele alte Paläste und Kunstschätze in Museen und Kirchen zeugen von einer glanzvollen
+    Vergangenheit.
+  title: Aix-en-Provence
+  url: https://de.wikivoyage.org/wiki/Aix-en-Provence
+Algeciras:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1776513
+  source: wikivoyage
+  text: 'Algeciras (spanisch: IPA: [alxeˈθiɾas] ) ist eine Hafen- und Industriestadt im Süden Andalusiens an der
+    Straße von Gibraltar, direkt gegenüber der britischen Exklave. Die im Vergleich zu den angrenzenden Tourismusregionen
+    nicht schöne Stadt wird von Reisenden oft nur wegen der Überfahrten nach Afrika genutzt, viele bleiben nur ein
+    paar Stunden oder eine Nacht.'
+  title: Algeciras
+  url: https://de.wikivoyage.org/wiki/Algeciras
+Algiers:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799662
+  section: Hintergrund
+  source: wikivoyage
+  text: Algier ist die Hauptstadt Algeriens. Sie liegt in der gleichnamigen Provinz im westlichen Teil einer Mittelmeer-Bucht
+    und an den Berghängen des Tellatlas, welches ein Ausläufer des Atlas-Gebirges ist. Algier ist mit gut zwei Millionen
+    Einwohnern die größte Stadt des Landes. Es sind eine Universität und zahlreiche Institutionen hier angesiedelt.
+    In den um Algier herum gebildeten Agglomerationen wohnen ca.
+  title: Algier
+  url: https://de.wikivoyage.org/wiki/Algier
+Amsterdam:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1814074
+  source: wikivoyage
+  text: Amsterdam ist die Hauptstadt des Königreichs der Niederlande. Amsterdam ist multikulturell und sehr offen.
+    Charakteristisch an Amsterdam sind die vielen Grachten (Kanäle), welche die Innenstadt in einem sogenannten
+    Gürtel umziehen. Seit dem 1. August 2010 gehört der Grachtengürtel - Herengracht, Keizersgracht und Prinsengracht
+    - zum Weltkulturerbe der UNESCO.
+  title: Amsterdam
+  url: https://de.wikivoyage.org/wiki/Amsterdam
+Ancona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1755934
+  section: Hintergrund
+  source: wikivoyage
+  text: Ancona ist die Hauptstadt der italienischen Region Marken. Die Stadt liegt an der Adria und verfügt über
+    einen bedeutenden Fährhafen. Ancona wurde 387 v.Chr. von griechischen Kolonisten aus dem auf Sizilien gelegenen
+    Syrakus gegründet. Der alte Name Ancon bedeutet Ellbogen. Dieser weist auf die Lage der Stadt auf einer Halbinsel
+    hin.
+  title: Ancona
+  url: https://de.wikivoyage.org/wiki/Ancona
+Andorra la Vella:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 265689905
+  source: wikipedia
+  text: Andorra la Vella [ənˈdorə lə βeʎə] (katalanisch für „Alt-Andorra“; spanisch Andorra la Vieja, französisch
+    ) ist die Hauptstadt und mit 24.575 (Stand 31. Dezember 2024) Einwohnern zugleich größte Stadt Andorras. Sie
+    ist die höchstgelegene Hauptstadt Europas.
+  title: Andorra la Vella
+  url: https://de.wikipedia.org/wiki/Andorra_la_Vella
+Ankara:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1763648
+  section: Hintergrund
+  source: wikivoyage
+  text: Ankara ist die Hauptstadt der Türkei und liegt in Zentralanatolien. Mit über 5 Mio. Einwohnern ist sie nach
+    Istanbul die zweitgrößte Stadt des Landes. Ankara ist seit 1923 die Hauptstadt der Türkei und der gleichnamigen
+    Provinz Ankara. Ankara liegt rund 960 m bis 1200 m über dem Meeresspiegel und hat ein trockenes Kontinentalklima,
+    das durch heiße trockene Sommer und kalte schneereiche Winter geprägt ist.
+  title: Ankara
+  url: https://de.wikivoyage.org/wiki/Ankara
+Athens:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 271152268
+  source: wikipedia
+  text: Athen – neugriechisch [aˈθina], Katharevousa und altgriechisch Ἀθῆναι Athênai – ist die Hauptstadt Griechenlands.
+    Athen ist die bevölkerungsreichste und flächengrößte Stadt des Landes. Die Gemeinde Athen im Zentrum des gleichnamigen
+    Ballungsraums ist mit einer Fläche von etwa 39 km² dabei relativ klein.
+  title: Athen
+  url: https://de.wikipedia.org/wiki/Athen
+Avignon:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1777782
+  section: Hintergrund
+  source: wikivoyage
+  text: 'Avignon ist eine Stadt in der Provence in Südfrankreich am linken Ufer der Rhône im Département Vaucluse.
+    Teile der Altstadt und der Papstpalast mit der Kathedrale Notre-Dame des Doms gehören zum UNESCO-Weltkulturerbe.
+    Die am linken Rhône-Ufer gelegene Stadt Avignon ist vor allem aus zwei Gründen bekannt: Die Stadt war von 1309
+    bis 1423 Sitz des Papstes, da dieser sich in Rom nicht mehr sicher fühlen konnte.'
+  title: Avignon
+  url: https://de.wikivoyage.org/wiki/Avignon
+Ayr:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1759005
+  section: Hintergrund
+  source: wikivoyage
+  text: Ayr ist eine Stadt in Schottland. Die Stadt liegt am Ostufer des Forth of Clyde auf Höhe der Südspitze der
+    gegenüberliegenden Isle of Arran, etwa 60 km südlich von Glasgow. An Sehenswürdigkeiten ist die Stadt, die im
+    Norden an ihre Zwillingsstadt Prestwick angrenzt, nicht allzu reich.
+  title: Ayr
+  url: https://de.wikivoyage.org/wiki/Ayr
+Badajoz:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1668250
+  source: wikivoyage
+  text: Badajoz ist eine Großstadt in der autonomen Gemeinschaft Extremadura in Spanien. Sie ist auch die Hauptstadt
+    der Provinz Badajoz. Badajoz liegt am Guadiana in der Nähe der Grenze zu Portugal und ist Bischofssitz und Universitätsstadt.
+  title: Badajoz
+  url: https://de.wikivoyage.org/wiki/Badajoz
+Barcelona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807272
+  section: Hintergrund
+  source: wikivoyage
+  text: Barcelona ist eine Stadt in Spanien und die Hauptstadt der autonomen Region Katalonien. Über die Entstehung
+    der Stadt gibt es etliche Sagen. Gesicherte Erkenntnisse gibt es aus der Zeit der Römer, die im Gebiet der Altstadt
+    ein Militärlager Barcino angelegt hatten, Reste aus jener Zeit findet man in der Nähe der Kathedrale sowie im
+    Museum MUHBA. Um 415 n.
+  title: Barcelona
+  url: https://de.wikivoyage.org/wiki/Barcelona
+Bari:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1810834
+  section: Hintergrund
+  source: wikivoyage
+  text: Bari ist die Hauptstadt der Region Apulien und gleichzeitig Provinzhauptstadt der gleichnamigen Provinz.
+    Betrachtet man den Stadtplan von Bari, so kann man drei verschiedene Bauabschnitte aus verschiedenen Epochen
+    erkennen. Zunächst die Altstadt Bari vecchia, die sich auf einer Halbinsel befindet. Sie hat ein ungeordnetes
+    Strassennetz mit vielen engen und verwinkelten Gassen.
+  title: Bari
+  url: https://de.wikivoyage.org/wiki/Bari
+Basel:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1811558
+  source: wikivoyage
+  text: Basel ist mit 175'000 Einwohnern die drittgrösste Stadt der Schweiz und liegt im Dreiländereck Schweiz,
+    Deutschland und Frankreich am Rhein. Basel ist das Zentrum dieser trinationalen Agglomeration, in welcher rund
+    eine Million Menschen lebt. Die Stadt am Rheinknie wird auch oft als die Schweizer Hauptstadt der Museen bezeichnet,
+    denn die Museendichte ist hier so hoch wie sonst selten in Europa.
+  title: Basel
+  url: https://de.wikivoyage.org/wiki/Basel
+Bastia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1778348
+  source: wikivoyage
+  text: Die Hafenstadt Bastia ist die größte Stadt Korsikas und gleichzeitig Hauptstadt des Departements Haute-Corse.
+    Sehenswert sind die Altstadt am Hafen und das Zitadellenviertel. Bastia ist mit Flughafen und Fährhafen ferner
+    eine der wichtigsten Einreisestationen für die Insel Korsika.
+  title: Bastia
+  url: https://de.wikivoyage.org/wiki/Bastia
+Belfast:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1745292
+  source: wikivoyage
+  text: Belfast ist die Hauptstadt von Nordirland. Der Ortsteil Strandtown am rechten Ufer des Lagan ist vor allem
+    Wohngebiet. Wichtigere Vororte sind im Südwesten 1​ Lisburn ​ ​54.516666666667-6.0333333333333, nordwestlich
+    2​ Antrim ​ ​54.7173-6.2055 und östlich 3​ Newtownards ​ ​54.591-5.68 sowie 4​ Bangor ​ ​54.66-5.67.
+  title: Belfast
+  url: https://de.wikivoyage.org/wiki/Belfast
+Belgrade:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1777280
+  source: wikivoyage
+  text: 'Belgrad (serbisch: Београд / Beograd ) ist die Hauptstadt von Serbien. An der Mündung der Save in die Donau
+    gelegen, hat sie eine Bevölkerung von 1,6 Millionen (im Ballungsraum) und ist damit nach Budapest und Wien die
+    drittgrößte Stadt an der Donau.'
+  title: Belgrad
+  url: https://de.wikivoyage.org/wiki/Belgrad
+Bergen:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1797013
+  section: Hintergrund
+  source: wikivoyage
+  text: Bergen ist eine Stadt im Fylke Vestland im Westen von Norwegen. Bergen im Fylke Hordaland ist nach Oslo
+    die zweitgrößte Stadt in Norwegen. Die Stadt liegt im südlichen Fjordland von Norwegen direkt am Meer. Bergen
+    gilt als die regenreichste Stadt Europas, dieses Vorurteil weist die Stadt aber mit Zahlen aus 2008 zurück,
+    die aussagen, dass beispielsweise Halle an der Saale und Köln mehr Regentage erleben als Bergen.
+  title: Bergen (Norwegen)
+  url: https://de.wikivoyage.org/wiki/Bergen_%28Norwegen%29
+Berlin:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1813537
+  source: wikivoyage
+  text: Berlin ist die Hauptstadt und seit 1999 auch Regierungssitz der Bundesrepublik Deutschland und mit über
+    3,7 Millionen Einwohnern die bevölkerungsreichste Stadt Deutschlands und Mitteleuropas. Berlin ist ein eigenständiges
+    Bundesland, das vom Land Brandenburg umschlossen ist.
+  title: Berlin
+  url: https://de.wikivoyage.org/wiki/Berlin
+Bern:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1806850
+  source: wikivoyage
+  text: Bern ist die Bundesstadt der Schweiz und die Hauptstadt des Kantons Bern. Die Berner Altstadt liegt in einer
+    Flussschlaufe der Aare. Bern ist eine Stadt mit einer sehr gemütlichen Atmosphäre. Die Altstadt von Bern besteht
+    vorwiegend aus alten Häusern und ist bekannt für die Lauben, beispielsweise entlang der Spitalgasse.
+  title: Bern
+  url: https://de.wikivoyage.org/wiki/Bern
+Boden:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 268275396
+  source: wikipedia
+  text: Boden ['bu:dən] (samisch Suttes, finnisch Puuti, Putas) ist eine Stadt in der schwedischen Provinz Norrbottens
+    län und der historischen Provinz Norrbotten. Der Hauptort der gleichnamigen Gemeinde liegt etwa 35 Kilometer
+    nordwestlich von Luleå am Lule älv.
+  title: Boden (Stadt in Schweden)
+  url: https://de.wikipedia.org/wiki/Boden_%28Stadt_in_Schweden%29
+Bologna:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807177
+  section: Hintergrund
+  source: wikivoyage
+  text: Bologna ist eine Stadt in Italien. Sie ist Hauptstadt der Region Emilia-Romagna und war im Jahr 2000 Kulturhauptstadt
+    Europas. Wer an Bologna denkt, denkt vermutlich zuerst an die Bolognese-Sauce, die zusammen mit Spaghetti-Nudeln
+    das berühmte Gericht formen.
+  title: Bologna
+  url: https://de.wikivoyage.org/wiki/Bologna
+Bonn:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1809572
+  source: wikivoyage
+  text: Die Bundesstadt Bonn liegt am Rhein südlich von Köln. Das kleine Universitätsstädtchen, einst von den Römern
+    gegründet, entwickelte sich im 20. Jahrhundert zu einer modernen Großstadt, nicht zuletzt durch zahlreiche Eingemeindungen.
+    Dabei ist die eigentliche Altstadt sehr überschaubar geblieben. Von 1949 bis 1999 war Bonn Sitz von Bundestag,
+    Bundesrat und der Bundesregierung.
+  title: Bonn
+  url: https://de.wikivoyage.org/wiki/Bonn
+Bordeaux:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1742689
+  section: Hintergrund
+  source: wikivoyage
+  text: Bordeaux ist eine Großstadt im Département Gironde in der Region Neu-Aquitanien im Südwesten Frankreichs.
+    Die für ihre Kulinarik, insbesondere den namensgleichen Wein, bekannte Stadt ist die fünftgrößte Frankreichs
+    und die mit Abstand größte im Südwesten des Landes. Sie wird von der Garonne durchflossen und liegt unweit des
+    Atlantik.
+  title: Bordeaux
+  url: https://de.wikivoyage.org/wiki/Bordeaux
+Bratislava:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1798940
+  section: Hintergrund
+  source: wikivoyage
+  text: Bratislava ist die Hauptstadt und mit etwa 425.000 Einwohnern gleichzeitig größte Stadt der Slowakei. Bratislava
+    liegt an der Donau direkt an der Grenze zu Ungarn und Österreich. Bis 1918 gehörte die Stadt zum ungarischen
+    Reichsteil der k u. k-Monarchie und war Krönungsort der ungarischen Könige. Fast alle touristisch interessanten,
+    historischen Orte sind in der kompakten Altstadt zu finden.
+  title: Bratislava
+  url: https://de.wikivoyage.org/wiki/Bratislava
+Brescia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 261956451
+  source: wikipedia
+  text: Der Bahnhof Brescia ist der Bahnhof der norditalienischen Stadt Brescia. Er wird von der Rete Ferroviaria
+    Italiana, einer Organisationseinheit der Ferrovie dello Stato, betrieben. Von 2001 bis 2018 lag die Vermarktung
+    und Vermietung der Ladenflächen in Hand der Gesellschaft Centostazioni.
+  title: Bahnhof Brescia
+  url: https://de.wikipedia.org/wiki/Bahnhof_Brescia
+Brest:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1779843
+  section: Hintergrund
+  source: wikivoyage
+  text: Brest ist die größte Stadt des Départements Finistère in der Bretagne. Es ist die am weitesten westlich
+    gelegene Großstadt Frankreichs und hat eine lange Tradition als Hafenstadt und Marinebasis. Brest liegt an einer
+    tief eingeschnittenen und geschützten Bucht des Atlantik, die an dieser Stelle einen Naturhafen bildet, unweit
+    des westlichsten Zipfels Frankreichs.
+  title: Brest (Frankreich)
+  url: https://de.wikivoyage.org/wiki/Brest_%28Frankreich%29
+Brussels:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803033
+  source: wikivoyage
+  text: Brüssel ist die Hauptstadt Belgiens sowie Sitz verschiedener europäischer Institutionen. Das eigentliche
+    Brüssel hat eine mittelalterliche Altstadt, dazu pompöse Bauten aus dem 19. Jahrhundert, und schließlich auch
+    viel Moderne. Touristischer Höhepunkt dürfte der Marktplatz mit dem alten Rathaus sein. Brüssel ist aber in
+    weiten Bereichen des Zentrums weder eine „schöne,“ noch eine saubere Stadt.
+  title: Brüssel
+  url: https://de.wikivoyage.org/wiki/Br%C3%BCssel
+Bucharest:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1812465
+  source: wikivoyage
+  text: 'Bukarest (rumänisch: București, IPA: [bukuˈreʃtʲ] ) ist die Hauptstadt Rumäniens und kulturelles, kommerzielles
+    und industrielles Zentrum des Landes. Mit rund 2 Millionen Einwohnern in der Stadt und weiteren ca. 2,4 Mio.
+    in der Umgebung ist die Stadt eine der größten in Osteuropa.'
+  title: Bukarest
+  url: https://de.wikivoyage.org/wiki/Bukarest
+Budapest:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1813208
+  source: wikivoyage
+  text: Budapest ist die Hauptstadt von Ungarn und mit einer Bevölkerung von etwa 1,7 Millionen Einwohnern noch
+    vor Belgrad und nach Wien die zweitgrößte Stadt an der Donau. Der bis dahin nicht gebräuchliche Name (üblicherweise
+    wurde von Pest-Buda gesprochen) entstand erst 1873 als Folge der Zusammenlegung der bis dahin selbständigen
+    Städte Buda, Pest und Óbuda.
+  title: Budapest
+  url: https://de.wikivoyage.org/wiki/Budapest
+Cardiff:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1748505
+  source: wikivoyage
+  text: Cardiff - ihr walisischer Name ist Caerdydd - ist die Hauptstadt und gleichzeitig größte Stadt von Wales.
+    Die Stadt bildet das wirtschaftliche Zentrum des Landes. Cardiff liegt an der Mündung des Flusses Severn in
+    den Bristol Channel sowie am River Taff.
+  title: Cardiff
+  url: https://de.wikivoyage.org/wiki/Cardiff
+Casablanca:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1746019
+  section: Hintergrund
+  source: wikivoyage
+  text: Casablanca liegt an der marokkanischen Atlantikküste und ist mit ca. 3,6 Mio. Einwohnern die größte Stadt
+    des Landes. Casablanca ist Marokkos Wirtschaftshauptstadt. Ihre wirtschaftliche und kulturelle Dynamik verdankt
+    sie ihrer rasanten Entwicklung während des französischen Protektorats. Die wirtschaftliche Verflechtung mit
+    Frankreich ist auch nach der Unabhängigkeit geblieben.
+  title: Casablanca
+  url: https://de.wikivoyage.org/wiki/Casablanca
+Chania:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803757
+  source: wikivoyage
+  text: Die Hafenstadt Chania liegt an der Nordwestküste der griechischen Insel Kreta und ist mit ca. 54.000 Einwohnern
+    deren zweitgrößte Stadt. Chania ist Verwaltungssitz der gleichnamigen Provinz, die den gesamten Westteil Kretas
+    umfasst. Der internationale Flughafen von Chania befindet sich in etwa zwölf Kilometer Entfernung von der Stadt
+    auf einer Ebene der Akrotiri-Halbinsel.
+  title: Chania
+  url: https://de.wikivoyage.org/wiki/Chania
+Chisinau:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1746922
+  section: Hintergrund
+  source: wikivoyage
+  text: Chișinău ist die Hauptstadt der Republik Moldau. Die Stadt ist die bevölkerungsreichste Stadt des Landes.
+    Sie ist ein wichtiger Wirtschaftsstandort, Universitätsstadt und Kulturzentrum. Durch das große Erdbeben von
+    1940 und den Kriegshandlungen des Zweiten Weltkriegs wurden über siebzig Prozent der Gebäude in Chișinău zerstört.
+    Der Wiederaufbau fand im Stile des sozialistischen Klassizismus statt.
+  title: Chișinău
+  url: https://de.wikivoyage.org/wiki/Chi%C8%99in%C4%83u
+Copenhagen:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1806871
+  source: wikivoyage
+  text: Kopenhagen ist die Hauptstadt Dänemarks. Auf der Insel Seeland gelegen, gehört sie mit einem Teil des südlichen
+    Schwedens zur Öresund-Region. Sie ist mit 1,7 Millionen Einwohnern im gesamten Ballungsraum die größte Stadt
+    in Skandinavien. Die dänische Hauptstadt ist ein extremer Kontrast zum kleinräumigen und sehr ruhigen ländlichen
+    Dänemark.
+  title: Kopenhagen
+  url: https://de.wikivoyage.org/wiki/Kopenhagen
+Donostia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1774815
+  section: Hintergrund
+  source: wikivoyage
+  text: Donostia ist die Hauptstadt der Provinz Gipuzkoa in spanischen Baskenland. Der spanische Name der Stadt
+    ist San Sebastián. Der baskische Stadtname Donostia ist ebenso wie der spanische Name San Sebastián aus dem
+    Namen des Heiligen Sebastian entstanden. Die Stadt wurde zur Kulturhauptstadt Europas des Jahres 2016 gewählt.
+  title: Donostia-San Sebastián
+  url: https://de.wikivoyage.org/wiki/Donostia-San_Sebasti%C3%A1n
+Dublin:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1781255
+  source: wikivoyage
+  text: Dublin ist die an der irischen See gelegene Hauptstadt der Republik Irland. Sie gilt als europäische Wachstumsmetropole
+    und ist die Boomtown Irlands. Für viele Irlandreisende ist Dublin der Ausgangspunkt ihrer Reise. Fast ein Drittel
+    der Bevölkerung des Landes lebt in der näheren Umgebung von Dublin. Das Stadtzentrum ist jedoch klein und kann
+    zu Fuß erkundet werden.
+  title: Dublin
+  url: https://de.wikivoyage.org/wiki/Dublin
+Durrës:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 270212519
+  source: wikipedia
+  text: Durrës (albanisch indefinit [durs], definit Durrësi [dursi]; italienisch Durazzo, lateinisch Dyrrachium
+    oder Dyrrhachium; griechisch Δυρράχιο Dyrráchio; im antiken Griechenland Επίδαμνος Epídamnos) ist eine Großstadt
+    an der adriatischen Küste Albaniens. In Mittelalbanien gelegen ist sie die wichtigste Hafenstadt und dementsprechend
+    für die Wirtschaft des Landes von hoher Bedeutung.
+  title: Durrës
+  url: https://de.wikipedia.org/wiki/Durr%C3%ABs
+Edinburgh:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799812
+  section: Hintergrund
+  source: wikivoyage
+  text: Edinburgh ist die Hauptstadt von Schottland. Sie ist mit ihren etwa 450.000 Einwohnern zwar deutlich kleiner
+    als Glasgow, bildet allerdings mit der hochaufragenden Burg schon seit Jahrhunderten das politische Zentrum
+    Schottlands. Edinburgh beherbergt nicht nur das weltbekannte Edinburgh Castle als ehemaligen Sitz der schottischen
+    Könige, sondern auch das 1999 wieder einberufene schottische Parlament.
+  title: Edinburgh
+  url: https://de.wikivoyage.org/wiki/Edinburgh
+Entroncamento:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 271379449
+  source: wikipedia
+  text: Entroncamento ist eine Stadt in Portugal und Verwaltungssitz des gleichnamigen Kreises. Sie liegt im Distrikt
+    Santarém und hat 20.065 Einwohner (2004).
+  title: Entroncamento
+  url: https://de.wikipedia.org/wiki/Entroncamento
+Faro:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1769114
+  section: Hintergrund
+  source: wikivoyage
+  text: Faro ist die Hauptstadt des gleichnamigen Distriktes und der Region Algarve im Süden von Portugal. Faro
+    ist die größte Kreisstadt und Hauptstadt des gleichnamigen Distriktes Faro, der südlichsten Region von Portugal
+    auf dem europäischen Festland. Seit 1979 ist Faro Universitätsstadt. Zum Kreis Faro gehören neben dem Kernort
+    Faro die Orte Conceição e Estoi, Montenegro und Santa Bárbara de Nexe.
+  title: Faro
+  url: https://de.wikivoyage.org/wiki/Faro
+Florence:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807659
+  source: wikivoyage
+  text: Florenz ist eine Stadt in Mittelitalien und Hauptstadt der Toskana. Sie ist eine der bedeutendsten Kulturmetropolen
+    Europas und beherbergt zahlreiche Bauwerke, Museen und Gemäldegalerien von Weltgeltung. Zudem war sie Heimat
+    bzw. Wirkungsstätte zahlreicher Künstler, Philosophen und Wissenschaftler, wie z. B. Dante Alighieri, Niccolò
+    Machiavelli, Leonardo da Vinci, Michelangelo, Sandro Botticelli, Galileo Galilei.
+  title: Florenz
+  url: https://de.wikivoyage.org/wiki/Florenz
+Foggia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1756604
+  section: Hintergrund
+  source: wikivoyage
+  text: Foggia ist eine Stadt in Apulien, sie ist Hauptstadt der gleichnamigen Provinz. In römischer Zeit war der
+    Ort unter dem Namen Herdonia bekannt. Der Staufer Friedrich II verlegte 1222 seine Residenz von Palermo nach
+    Foggia. Von seinem Residenzschloss sind jedoch nur noch geringe Reste erhalten.
+  title: Foggia
+  url: https://de.wikivoyage.org/wiki/Foggia
+Frankfurt:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807889
+  section: Hintergrund
+  source: wikivoyage
+  text: Der Hauptbahnhof von Frankfurt am Main ist der größte Personenbahnhof in Hessen und neben dem Frankfurter
+    Südbahnhof sowie dem Bahnhof Frankfurt Flughafen Fernbahnhof und Frankfurt West einer von vier Fernbahnhöfen
+    in Frankfurt. Der Bahnhof ist ein Kopfbahnhof mit 25 Gleisen. An den Bahnsteigen verkehren Regional und Fernverkehrszüge
+    sowie die S-Bahn Linie 7 nach Riedstadt-Goddelau.
+  title: Frankfurt (Main) Hauptbahnhof
+  url: https://de.wikivoyage.org/wiki/Frankfurt_%28Main%29_Hauptbahnhof
+Galway:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1806461
+  source: wikivoyage
+  text: Galway ist eine Stadt an der irischen Westküste und gilt als eine Art inoffizielle Hauptstadt des Westens
+    von Irland, der die Countys Galway, Mayo und Roscommon umfasst. Stadt und County gehören zur Provinz Connacht.
+    Galway ist eine junge, fröhliche Stadt mit einem Studentenanteil von 20 % an der Bevölkerung. Für das Jahr 2020
+    wurde Galway der Titel Kulturhauptstadt Europas verliehen.
+  title: Galway
+  url: https://de.wikivoyage.org/wiki/Galway
+Gdansk:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1786397
+  source: wikivoyage
+  text: 'Danzig (polnisch: Gdańsk, IPA: [ɡdaɲsk]) ist Hauptstadt der Woiwodschaft Pommern in Polen. Sie liegt an
+    der Mündung der Weichsel in die Danziger Bucht (Ostsee). Danzig gilt als eine der schönsten Städte in Mitteleuropa.
+    Durchaus gerechtfertigt trägt Danzig den Beinamen Perle der Ostsee.'
+  title: Danzig
+  url: https://de.wikivoyage.org/wiki/Danzig
+Geneve:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807276
+  section: Hintergrund
+  source: wikivoyage
+  text: Der Kanton Genf liegt im äußersten Westen der Schweiz am unteren Teil des Westufers des Genfersees. Jeûne
+    genevois, der Buss- und Bettag, ist ein Feiertag im Kanton Genf am Donnerstag nach dem ersten Sonntag im September
+    stattfindet. Es ist ein arbeitsfreier Tag, Schulen und die meisten Geschäfte haben geschlossen.
+  title: Genf (Kanton)
+  url: https://de.wikivoyage.org/wiki/Genf_%28Kanton%29
+Genoa:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1787324
+  source: wikivoyage
+  text: Genua ist eine bedeutende Hafenstadt im nördlichen Italien und die Hauptstadt von Ligurien. Als wichtiger
+    Fährhafen am ligurischen Meer ist der Sitz der Seefahrernation der Genueser heute noch Ausgangspunkt für Fährverbindungen
+    ins tyrrhenische Meer, nach Sardinien, Sizilien, Korsika sowie Spanien und Tunesien.
+  title: Genua
+  url: https://de.wikivoyage.org/wiki/Genua
+Glasgow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1812069
+  section: Hintergrund
+  source: wikivoyage
+  text: Glasgow ist die größte Stadt in Schottland und wird oft als der Antipol zum östlich gelegenen Edinburgh
+    angesehen. Glasgow hat eine bewegte Geschichte hinter sich, die ihre Spuren hinterlassen hat. Durch seine Lage
+    am schiffbaren Teil des River Clyde wurde Glasgow, die Second City of the Empire, durch den Schiffbau und den
+    Handel mit der neuen Welt geprägt.
+  title: Glasgow
+  url: https://de.wikivoyage.org/wiki/Glasgow
+Granada:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1768521
+  section: Hintergrund
+  source: wikivoyage
+  text: Granada ist die Hauptstadt der gleichnamigen andalusischen Provinz Granada und liegt am westlichen Rand
+    der Sierra Nevada. Granada wird auf den ersten Blick verbunden mit dem UNESCO-Weltkulturerbe der Alhambra, einer
+    riesigen Burganlage maurischen Ursprungs oberhalb der Stadt. Tatsächlich geht auch für den Reisenden die Bedeutung
+    der Stadt weit darüber hinaus.
+  title: Granada (Andalusien)
+  url: https://de.wikivoyage.org/wiki/Granada_%28Andalusien%29
+Göteborg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1814477
+  source: wikivoyage
+  text: 'Göteborg (schwedische Aussprache: IPA: [ˌʝœtəˈbɔrj] ) liegt an der Westküste der schwedischen Region Götaland.
+    Mit etwas über einer halben Million Einwohner ist Göteborg die zweitgrößte Stadt Schwedens. Sie ist ein wichtiger
+    Verkehrsknoten, besonders auch für Schiffsreisende und Zugreisen von Stockholm nach Norwegen.'
+  title: Göteborg
+  url: https://de.wikivoyage.org/wiki/G%C3%B6teborg
+Hamburg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1813543
+  source: wikivoyage
+  text: Hamburg ist die Stadt mit dem größten Hafen Deutschlands. Nach Berlin ist sie mit knapp 1,9 Millionen Einwohnern
+    die zweitgrößte deutsche Stadt und liegt jeweils etwa 80 km entfernt von Ost- und Nordsee und an der Mündung
+    von Alster und Bille in die Elbe. Hamburg ist ein eigenständiges Bundesland zwischen Schleswig-Holstein und
+    Niedersachsen.
+  title: Hamburg
+  url: https://de.wikivoyage.org/wiki/Hamburg
+Hannover:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1747402
+  source: wikivoyage
+  text: Der Hauptbahnhof von Hannover ist der wichtigste Bahnhof der niedersächsischen Landeshauptstadt, und einer
+    der größten in Niedersachsen. Mit 250.000 Reisenden pro Tag liegt er in der Bahnhofskategorie 1, an seinen 12
+    Bahnsteiggleisen halten sowohl der Nah-, als auch der Fernverkehr verschiedener Eisenbahngesellschaften.
+  title: Hannover Hauptbahnhof
+  url: https://de.wikivoyage.org/wiki/Hannover_Hauptbahnhof
+Helsinki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 266515135
+  source: wikipedia
+  text: Der Bahnhof Helsinki (finnisch Helsinki asema), auch als Hauptbahnhof Helsinki (finnisch Helsingin päärautatieasema,
+    schwedisch Helsingfors centralstation) bezeichnet, ist der zentrale Knotenpunkt des Nah- und Fernverkehrs in
+    der Region Helsinki und ein bekanntes Wahrzeichen der Stadt. Er ist der Heimatbahnhof der finnischen Staatsbahn
+    VR und Endstation aller Linien des Schienennahverkehrs in der Region Helsinki.
+  title: Bahnhof Helsinki
+  url: https://de.wikipedia.org/wiki/Bahnhof_Helsinki
+Hendaye:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 269072210
+  source: wikipedia
+  text: Hendaye [ɑ̃daj] ist eine französische Stadt an der Atlantikküste und Grenzort zu Spanien. Hendaye hat 18.102
+    Einwohner und liegt im Département Pyrénées-Atlantiques in der Region Nouvelle-Aquitaine. Die Stadt ist Hauptort
+    des Kantons Hendaye-Côte Basque-Sud. Nachbarstadt jenseits der spanischen Grenze ist Irun.
+  title: Hendaye
+  url: https://de.wikipedia.org/wiki/Hendaye
+Holyhead:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 270990510
+  source: wikipedia
+  text: Holyhead [ˈhɒlihɛd] (walisisch Caergybi [kɑːɨrˈɡəbi], „die Feste von St. Cybi“) ist eine kleine Stadt und
+    Community in der britischen Grafschaft Anglesey vor der walisischen Küste.
+  title: Holyhead
+  url: https://de.wikipedia.org/wiki/Holyhead
+Iasi:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1728196
+  section: Hintergrund
+  source: wikivoyage
+  text: Iași ist die inoffizielle Hauptstadt der Region Moldau im Osten Rumäniens. Es ist die viertgrößte Stadt
+    des Landes. Iași ist eine Universitätsstadt im Nordosten Rumäniens in der Region Moldau und die Hauptstadt des
+    Kreis Iași. Von 1565 bis 1859 war es die Hauptstadt des osmanischen Satelittenstaats Fürstentums Moldau und
+    galt als kulturelle Hauptstadt Rumäniens.
+  title: Iași
+  url: https://de.wikivoyage.org/wiki/Ia%C8%99i
+Innsbruck:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1790297
+  section: Hintergrund
+  source: wikivoyage
+  text: Die Alpenmetropole Innsbruck liegt am Inn und ist die Landeshauptstadt des österreichischen Bundeslandes
+    Tirol. Mit etwa 130.000 Einwohnern ist sie die fünftgrößte Stadt in Österreich. Verwaltungstechnisch ist Innsbruck
+    in neun Katastralgemeinden geteilt. Das sind die Innenstadt, Wilten, Pradl, Hötting, Mühlau, Amras mit der Roßau,
+    Arzl, Vill und Igls.
+  title: Innsbruck
+  url: https://de.wikivoyage.org/wiki/Innsbruck
+Irun:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1796608
+  section: Hintergrund
+  source: wikivoyage
+  text: Irun ist eine Stadt im spanischen Baskenland an der Grenze zu Frankreich. Bahnreisende wechseln hier vom
+    TGV aus Paris auf den Zug zur Weiterfahrt im iberischen Breitspurnetz. Die Stadt liegt am Fluss Bidasoa, der
+    hier die Grenze zu Frankreich bildet.
+  title: Irun
+  url: https://de.wikivoyage.org/wiki/Irun
+Istanbul:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 269222026
+  source: wikipedia
+  text: Istanbul ist die bevölkerungsreichste türkische Provinz im Nordwesten des Landes, mit der Hauptstadt Istanbul.
+    Ihre Fläche beträgt 5.461 km². Die offizielle Bevölkerungszahl der Provinz Istanbul betrug laut Fortschreibung
+    Ende des Jahres 2020 15.462.452, wobei seit Umwandlung der Provinz in eine Büyükşehir belediyesi die Bevölkerung
+    der Kernstadt nicht mehr eindeutig definierbar ist.
+  title: Istanbul (Provinz)
+  url: https://de.wikipedia.org/wiki/Istanbul_%28Provinz%29
+Izmir:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1763405
+  section: Hintergrund
+  source: wikivoyage
+  text: Izmir war bis 1923 als Smyrna bekannt. Es ist eine Großstadt an der türkischen Ägäisküste in deren Hinterland
+    mehrere antike Ortschaften sind. Im osmanischen Reich hatte die damals Smyrna genannte Stadt einen hohen Anteil
+    griechischer Bevölkerung. Nach der Niederlage im ersten Weltkrieg versuchten griechische Politiker die Rest-Türkei
+    zu zerschlagen und im Krieg 1919–22 weite Teile der Küste zu annektieren.
+  title: Izmir
+  url: https://de.wikivoyage.org/wiki/Izmir
+Kaisiadorys:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 263132909
+  source: wikipedia
+  text: Kaišiadorys ist eine Stadt und Sitz der gleichnamigen Rajongemeinde im litauischen Bezirk Kaunas. In der
+    Gemeinde ist die Kernstadt ein städtischer Amtsbezirk und Sitz eines Nachbaramtes. Die Kernstadt hat knapp 10.000
+    Einwohner, die Gemeinde 36.285. In Kaišiadorys gibt es ein Kreisgericht, eine große Geflügelfarm, eine Leimfabrik
+    und mehrere kleinere Unternehmen.
+  title: Kaišiadorys
+  url: https://de.wikipedia.org/wiki/Kai%C5%A1iadorys
+Kaunas:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799025
+  section: Hintergrund
+  source: wikivoyage
+  text: Kaunas ist eine Stadt in Litauen und war während der Unabhängigkeit Litauens von 1919 bis 1940 Hauptstadt
+    des Landes. Für das Jahr 2022 wurde Kaunas der Titel Kulturhauptstadt Europas verliehen. Aus der Zeit, als die
+    deutschen Ordensritter das Land als letztes in Europa christianisierten, sind einige interessante bauliche Zeugnisse
+    erhalten.
+  title: Kaunas
+  url: https://de.wikivoyage.org/wiki/Kaunas
+Koblenz:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1794709
+  source: wikivoyage
+  text: Koblenz ist eine Stadt im Norden von Rheinland-Pfalz an der Mündung der Mosel in den Rhein. Sie liegt im
+    Mittelrheintal und am Ende des Moseltals. Koblenz ist die bedeutendste Stadt im Mittelrheintal. Der Name Koblenz
+    leitet sich von Confluentes ab, Latein für „Zusammenfluss“. Koblenz markiert die Grenze zwischen oberem und
+    unterem Mittelrhein. Nur wenige Kilometer südlich befindet sich außerdem die Mündung der Lahn.
+  title: Koblenz
+  url: https://de.wikivoyage.org/wiki/Koblenz
+Kolding:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1785189
+  section: Hintergrund
+  source: wikivoyage
+  text: Kolding ist eine dänische Stadt in Jütland. Nächstgelegene Städte sind das deutsche Flensburg, Esbjerg,
+    Odense, Fredericia, Vejle und Aarhus. Kolding entstand im 12. Jahrhundert als Handelsplatz mit einem geschützten
+    Zugang zum Meer. Erstmals wurde der Ort als Kaldyng 1231 erwähnt. Im dreißigjährigen Krieg war Kolding zweimal
+    das Opfer von Besatzern. 1866 wurde das Herzogtum Schleswig preußisch.
+  title: Kolding
+  url: https://de.wikivoyage.org/wiki/Kolding
+Krakow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240965589
+  source: wikipedia
+  text: Der Powiat Krakowski ist ein Powiat (Landkreis) in der polnischen Woiwodschaft Kleinpolen mit der Kreisstadt
+    Krakau. Er zählt auf einer Fläche von 1229,62 km² rund 250.000 Einwohner. Der Powiat wurde zum 1. Januar 1999
+    im Zuge der zweiten polnischen Kommunalreform errichtet.
+  title: Powiat Krakowski
+  url: https://de.wikipedia.org/wiki/Powiat_Krakowski
+Kuopio:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1809250
+  section: Hintergrund
+  source: wikivoyage
+  text: Kuopio ist eine Stadt in der Region Savo (Landschaft Nordsavo, Pohjois-Savo) in Finnland. Sie ist die neuntgrößte
+    Stadt des Landes. Kuopio ist die Hauptstadt von Nordsavo, Universitätsstadt, war bis 2018 Sitz des orthodoxen
+    Erzbischofs (Metropoliten, seither in Helsinki) und ist Sitz eines evangelisch-lutherischen Bischofs. Das Stadtzentrum
+    liegt auf einer Halbinsel am Kallavesi-See.
+  title: Kuopio
+  url: https://de.wikivoyage.org/wiki/Kuopio
+Kyiv:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1796568
+  source: wikivoyage
+  text: 'Kiew (ukrainisch: Київ, Kyjiw, russisch: Киев, Kijew) ist die Hauptstadt der Ukraine. Die aufgrund der
+    zahlreichen Kirchen und Klöster auch werbewirksam als Jerusalem des Nordens bezeichnete Stadt ist darüber hinaus
+    auch die größte Stadt des Landes. Sie liegt am Dnjepr, der ältere Teil ist am rechten Ufer. Im Stadtbereich
+    queren ihn neun Brücken.'
+  title: Kiew
+  url: https://de.wikivoyage.org/wiki/Kiew
+Köln:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1815220
+  source: wikivoyage
+  text: Köln ist eine am Rhein gelegene deutsche Millionenstadt in Nordrhein-Westfalen. 1​ Köln ​ ​50.9422222222226.9577777777778
+    ist eine der ältesten Städte Deutschlands, denn sie wurde im Jahre 38 vor Christus gegründet. Aus jener Zeit
+    stammt auch der Name der Stadt, die bei den Römern unter dem Feldherrn und Politiker Marcus Vipsanius Agrippa
+    den Namen Colonia Ara Agrippinensium erhielt.
+  title: Köln
+  url: https://de.wikivoyage.org/wiki/K%C3%B6ln
+L'Hospitalet:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 253237805
+  source: wikipedia
+  text: L’Hospitalet-près-l’Andorre ist eine französische Gemeinde mit 85 Einwohnern (1. Januar 2023) im Département
+    Ariège in der Region Okzitanien (bis 2015 Midi-Pyrénées). Sie gehört zum Arrondissement Foix und zum Gemeindeverband
+    Haute Ariège.
+  title: L’Hospitalet-près-l’Andorre
+  url: https://de.wikipedia.org/wiki/L%E2%80%99Hospitalet-pr%C3%A8s-l%E2%80%99Andorre
+Lecce:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1754775
+  section: Hintergrund
+  source: wikivoyage
+  text: Lecce ist eine Stadt in Apulien und die Hauptstadt der Provinz Lecce. Lecce liegt 49 m hoch und ist 12 km
+    vom Meer entfernt. Auf einer Fläche von 238 km² leben 92.195 Menschen. Die Stadt steht wahrscheinlich an der
+    Stelle des alten Lupia. Zur Normannenzeit hieß sie Lycia und war der Sitz einer Grafschaft, deren Titel unter
+    andern Tancred führte. Berühmt ist Lecce für seine Barockbauwerke.
+  title: Lecce
+  url: https://de.wikivoyage.org/wiki/Lecce
+Lille:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1777663
+  section: Hintergrund
+  source: wikivoyage
+  text: Lille ist die Hauptstadt der Region Hauts-de-France und das Herzstück der größten Metropolregion im Norden
+    Frankreichs. Historisch war Lille die Hauptstadt Flanderns. Bei vielen Menschen ist das Bild von Lille als graue
+    Industriestadt noch tief verankert. Auch der Film „Willkommen bei den Sch’tis“ aus dem Jahr 2008 hat das Bild
+    der Region nur bedingt verbessert.
+  title: Lille
+  url: https://de.wikivoyage.org/wiki/Lille
 Lisbon:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -11,3 +821,1043 @@ Lisbon:
     brachte afrikanische und südamerikanische Einflüsse.
   title: Lissabon
   url: https://de.wikivoyage.org/wiki/Lissabon
+Liège:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 271751033
+  source: wikipedia
+  text: Die Provinz Lüttich ist eine von fünf belgischen Provinzen der Region Wallonien. Im Westen grenzt sie an
+    die Provinz Wallonisch-Brabant, im Süden an die Provinzen Namur und Luxemburg, außerdem an das Großherzogtum
+    Luxemburg und an die deutschen Bundesländer Rheinland-Pfalz und Nordrhein-Westfalen im Osten, im Norden an die
+    niederländische Provinz Limburg und die flämischen Provinzen Limburg und Flämisch-Brabant.
+  title: Provinz Lüttich
+  url: https://de.wikipedia.org/wiki/Provinz_L%C3%BCttich
+Ljubljana:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1788183
+  section: Hintergrund
+  source: wikivoyage
+  text: Die slowenische Hauptstadt Ljubljana liegt etwa in der Mitte des Landes und wird häufig als eine Mischung
+    aus österreichischem und mediterranem Flair bezeichnet. Der Fluss Ljubljanica fließt - vorbei an barocken Bauten
+    - mitten durch die Stadt.
+  title: Ljubljana
+  url: https://de.wikivoyage.org/wiki/Ljubljana
+London:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1806347
+  source: wikivoyage
+  text: London ist die Hauptstadt des Vereinigten Königreichs und Englands. Majestätisch an den Ufern der Themse
+    gelegen, ist sie eine der bedeutendsten Städte der Welt und Zentrum von Kultur, Wissenschaft und Wirtschaft.
+    London bietet für jeden Reisenden etwas und garantiert einen unvergesslichen Besuch, vorausgesetzt man nimmt
+    sich genügend Zeit.
+  title: London
+  url: https://de.wikivoyage.org/wiki/London
+Lugano:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803384
+  section: Hintergrund
+  source: wikivoyage
+  text: Lugano ist eine Stadt im Kanton Tessin in der Schweiz am Luganersee, dem sie auch seinen Namen gab. Lugano
+    die neuntgrößte Stadt der Schweiz. Sie ist das wirtschaftliche Zentrum des Tessins und der drittgrößte Bankenplatz
+    des Landes. Insofern ist Lugano die heimliche Hauptstadt des Tessins, auch wenn die Kantonsregierung ihren Sitz
+    in Bellinzona hat.
+  title: Lugano
+  url: https://de.wikivoyage.org/wiki/Lugano
+Luxembourg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803082
+  source: wikivoyage
+  text: 'Luxemburg (französisch: Ville de Luxembourg, lux. Stad Lëtzebuerg) ist die Hauptstadt des Großherzogtums
+    Luxemburg und einer der drei Regierungssitze der Europäischen Union. Sie liegt in der touristischen Region Gutland.
+    Die Altstadt Luxemburgs gehört seit 1994 zum Weltkulturerbe der UNESCO.'
+  title: Luxemburg Stadt
+  url: https://de.wikivoyage.org/wiki/Luxemburg_Stadt
+Lyon:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1815201
+  source: wikivoyage
+  text: Lyon ist die drittgrößte Stadt Frankreichs, Hauptstadt der Region Auvergne-Rhône-Alpes, Präfektur des Départements
+    Rhône (69) und der Metropole Lyon. Der Ballungsraum Lyon ist mit 1,5 Millionen die zweitgrößte Agglomeration
+    Frankreichs nach Île-de-France.
+  title: Lyon
+  url: https://de.wikivoyage.org/wiki/Lyon
+Madrid:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1805725
+  section: Hintergrund
+  source: wikivoyage
+  text: Madrid ist die Hauptstadt von Spanien. Mit seinen knapp 3,3 Millionen Einwohnern ist Madrid die zweitgrößte
+    Metropole der Europäischen Union. Kontinental, trocken und bisweilen extrem. Im Sommer heiß und im Winter kalt.
+    Gemäßigte Temperaturperioden wie die deutschen Jahreszeiten Frühjahr und Herbst gibt es hier nicht, sondern
+    nur "sol o sombra". Gelegentlich regnet es, Schnee gibt es in der Stadt jedes Jahr.
+  title: Madrid
+  url: https://de.wikivoyage.org/wiki/Madrid
+Malaga:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803476
+  section: Hintergrund
+  source: wikivoyage
+  text: Málaga ist eine Provinz-Hauptstadt in der autonomen Region Andalusien. Málaga wurde im 8. Jahrhundert v.
+    Chr. von den Phöniziern als „Malaka“ gegründet. Sie errichteten eine Siedlung nahe dem Hügel auf dem sich heute
+    die Alcazaba befindet. Während des zweiten punischen Krieges fiel die Stadt oder der damalige Handelsplatz an
+    Rom.
+  title: Málaga
+  url: https://de.wikivoyage.org/wiki/M%C3%A1laga
+Malmö:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1814617
+  section: Hintergrund
+  source: wikivoyage
+  text: 'Malmö ist eine Stadt in Schweden und liegt in der Provinz Schonen. Malmö ist nach Stockholm und Göteborg
+    die drittgrößte schwedische Stadt. Durch die Öresundbrücke, die 2000 eingeweiht wurde, gelangt man innerhalb
+    20 Minuten von Malmö nach Kopenhagen, Dänemarks Hauptstadt. Malmö erstreckt sich auf einer Fläche von 69,3 km².
+    Es ist unterteilt in folgende zehn Stadtbezirke:'
+  title: Malmö
+  url: https://de.wikivoyage.org/wiki/Malm%C3%B6
+Manchester:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1774719
+  source: wikivoyage
+  text: Manchester ist die größte Stadt im Nordwesten Englands. Es ist das wirtschaftliche und kulturelle Zentrum
+    von Greater Manchester (auch „Manchester Metropolitan Area“ genannt), das mit 2,6 Mio. Einwohnern der zweitgrößte
+    Ballungs- und Wirtschaftsraum des Vereinigten Königreiches ist. Die Stadt ist vollkommen mit dem westlich liegenden
+    Salford zusammengewachsen.
+  title: Manchester
+  url: https://de.wikivoyage.org/wiki/Manchester
+Marrakech:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1752466
+  source: wikivoyage
+  text: 'Marrakesch (tamazight: ⵎⵕⵕⴰⴽⵛ, arabisch: ‏مرلكش‎, Marākuš) ist eine Stadt in Marokko. Die am Fuße des Hohen
+    Atlas gelegene Stadt trägt auch den Beinamen Perle des Südens und zählt mit Meknès, Fès und Rabat zu den Königsstädten
+    Marokkos. Die Altstadt sowie die Agdal- und Menaragärten gehören seit 1985 zum Weltkulturerbe der UNESCO.'
+  title: Marrakesch
+  url: https://de.wikivoyage.org/wiki/Marrakesch
+Marseille:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1790948
+  source: wikivoyage
+  text: Marseille ist die zweitgrößte Stadt Frankreichs und das wirtschaftliche Zentrum der Region Provence-Alpes-Côte
+    d'Azur. Die Stadt ist Verwaltungssitz des Departement Bouches-du-Rhône (13). Mit 2.600 Jahren ist Marseille
+    die älteste Stadt Frankreichs. Die Stadt der Kunst und der Kultur war 2013 Europäische Kulturhauptstadt.
+  title: Marseille
+  url: https://de.wikivoyage.org/wiki/Marseille
+Messina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1602481
+  section: Hintergrund
+  source: wikivoyage
+  text: Die Messina ist die nordöstlichste Provinz der dreieckförmigen Insel Sizilien. Die Provinz Messina erstreckt
+    sich auf einem Landstreifen um die nordöstliche Ecke der Insel Sizilien, die wichtigsten Städte liegen alle
+    in Meernähe, das bergige Hinterland ist dünn besiedelt und oftmals schlecht erschlossen.
+  title: Messina (Provinz)
+  url: https://de.wikivoyage.org/wiki/Messina_%28Provinz%29
+Milan:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1786672
+  source: wikivoyage
+  text: Mailand (italienisch Milano, lombardisch Milàn) ist die zweitgrößte Stadt (und größte Metropolenregion)
+    und das Finanz- und Wirtschaftszentrum Italiens sowie eine der Mode-Hauptstädte der Welt. Die moderne Geschäftstadt,
+    deren vergleichsweise kleine historische Altstadt vom Dom und dem Opernhaus Scala geprägt werden, lockt als
+    Ziel für Shopping, Fußball und Oper sowie ein reges Nachtleben.
+  title: Mailand
+  url: https://de.wikivoyage.org/wiki/Mailand
+Monaco:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1814672
+  section: Hintergrund
+  source: wikivoyage
+  text: Monaco liegt in Europa, an der französischen Mittelmeerküste zwischen Nizza und der italienischen Grenze.
+    Seit fast 800 Jahren wird das Fürstentum Monaco von der Dynastie der Grimaldis regiert, die die ehemalige genuesische
+    Festung an der Grenze zu Frankreich am 8. Januar 1297 erstmals eroberten und nach jahrhundertelangen Kämpfen
+    1419 endgültig sichern konnten.
+  title: Monaco
+  url: https://de.wikivoyage.org/wiki/Monaco
+Montpellier:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1788356
+  section: Hintergrund
+  source: wikivoyage
+  text: Montpellier liegt im Département Hérault und ist die Hauptstadt der Region Languedoc-Roussillon in Frankreich.
+    Montpellier ist eine der wenigen wichtigen Städte Frankreichs, die nicht auf eine römische Stadtgründung zurückgehen.
+    Die erste urkundliche Erwähnung ist 986 verzeichnet.
+  title: Montpellier
+  url: https://de.wikivoyage.org/wiki/Montpellier
+Munich:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1810884
+  source: wikivoyage
+  text: München ist die Hauptstadt des deutschen Bundeslandes Bayern und des Regierungsbezirks Oberbayern. Mit knapp
+    1,5 Mio. Einwohnern ist München die drittgrößte Stadt Deutschlands. Die Sehenswürdigkeiten der Stadt, die Nähe
+    zu den Bayerischen Alpen, den oberbayerischen Seen und den Königsschlössern machen München zu einem vielbesuchten
+    Reiseziel.
+  title: München
+  url: https://de.wikivoyage.org/wiki/M%C3%BCnchen
+Nantes:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1788098
+  source: wikivoyage
+  text: Nantes ist Präfektur (Verwaltungssitz) sowohl des Départements Loire-Atlantique (44) als auch der übergeordneten
+    Region Pays de la Loire. Mit etwas über 300.000 Einwohnern (Stand 2015) rangiert Nantes in der Reihe der größten
+    Städte Frankreichs auf Platz sechs. Die Einwohnerzahl der Agglomeration beträgt über 900.000.
+  title: Nantes
+  url: https://de.wikivoyage.org/wiki/Nantes
+Naples:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807281
+  source: wikivoyage
+  text: Neapel, die Hauptstadt der Region Kampanien und wichtiger Fährhafen und Zentrum für Tourismus und Wirtschaft,
+    ist mit ziemlich genau einer Million Einwohnern die drittgrößte Stadt Italiens. Neben der historischen Altstadt
+    machen insbesondere die nahe Umgebung mit dem aktiven Vulkan Vesuv, den Ruinen von Pompeii, der Amalfiküste
+    sowie den Inseln Capri und Ischia zu einem abwechslungsreichen und sehenswerten Erlebnis.
+  title: Neapel
+  url: https://de.wikivoyage.org/wiki/Neapel
+Narvik:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1757408
+  section: Hintergrund
+  source: wikivoyage
+  text: Narvik liegt im Norden Norwegens, nördlich des Polarkreises und nahe der Grenze zu Schweden. Narvik hat
+    einen bedeutenden Erzhafen. Hier wird Erz aus den nahen schwedischen Erzminen rund um Kiruna verschifft. Das
+    Besondere an diesem Hafen ist die durch den Golfstrom bedingte nahezu ganzjährige Eisfreiheit. Dem Golfstrom
+    verdankt die Stadt auch ihr relativ mildes Klima.
+  title: Narvik
+  url: https://de.wikivoyage.org/wiki/Narvik
+Newcastle:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1760017
+  section: Hintergrund
+  source: wikivoyage
+  text: Newcastle upon Tyne ist eine an der Tyne-Mündung gelegene Stadt in der Grafschaft Tyne and Wear, im Nordosten
+    Englands. Die Einwohner, welche den lokalen Dialekt sprechen, werden als "Gordies" bezeichnet. Newcastle befindet
+    sich am Fluss Tyne an der Stelle, an der zur Zeit der römischen Besatzung um 100 n.Chr. das Kastell Pons Aelius
+    stand.
+  title: Newcastle upon Tyne
+  url: https://de.wikivoyage.org/wiki/Newcastle_upon_Tyne
+Nice:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1784620
+  section: Hintergrund
+  source: wikivoyage
+  text: Nizza ist die größte Stadt der Côte d’Azur an der französischen Riviera in Frankreich. Sie liegt in der
+    Region Provence-Alpes-Côte d’Azur im Département Alpes-Maritimes und ist ein wichtiges Zentrum für Handel, Kultur
+    und Tourismus sowie Verkehrsdrehkreuz für die Region. Das Stadtbild ist geprägt von einer großen Zahl repräsentativer
+    Bauten der Belle Époque und Stadtresidenzen des alten Adels aus dem 17. Jahrhundert.
+  title: Nizza
+  url: https://de.wikivoyage.org/wiki/Nizza
+Offenburg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1804567
+  section: Hintergrund
+  source: wikivoyage
+  text: Offenburg ist das Oberzentrum der Ortenau in Baden und liegt am Westrand des mittleren Schwarzwalds, am
+    Ausgang von Kinzigtal und Renchtal. Die Stadt Offenburg zählt etwa 59.000 Einwohner und befindet sich 20 km
+    südöstlich von Straßburg. Die Gegend war seit römischer Zeit besiedelt.
+  title: Offenburg
+  url: https://de.wikivoyage.org/wiki/Offenburg
+Oslo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1774043
+  section: Hintergrund
+  source: wikivoyage
+  text: Oslo ist die Hauptstadt Norwegens. Oslo, die Hauptstadt Norwegens, liegt am Ende des Oslofjords und ist
+    die größte Stadt Norwegens. Im gesamten Ballungsraum leben gut ein Drittel aller Norweger. Oslo ist eines der
+    größten Handelszentren des Landes, zudem Sitz zahlreicher Universitäten und Hochschulen, was sie zu der bedeutendsten
+    Studentenstadt Norwegens macht.
+  title: Oslo
+  url: https://de.wikivoyage.org/wiki/Oslo
+Osnabrück:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1800809
+  section: Hintergrund
+  source: wikivoyage
+  text: Die Stadt Osnabrück liegt im südwestlichen Niedersachsen, ist Sitz des Landkreises Osnabrück und Mittelpunkt
+    des Osnabrücker Landes. Sie ist auch die größte westfälische Stadt auf niedersächsischem Boden. Osnabrück wurde
+    um 780 von Karl dem Großen als Sitz eines Missionsbistums für das damals noch heidnische Sachsenvolk gegründet.
+    1171 erhielt Osnabrück das Stadtrecht.
+  title: Osnabrück
+  url: https://de.wikivoyage.org/wiki/Osnabr%C3%BCck
+Oulu:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1792528
+  section: Hintergrund
+  source: wikivoyage
+  text: Oulu ist eine Hafenstadt in Mittelfinnland am bottnischen Meerbusen. Sie ist Verkehrsknoten nach Lappland.
+    Die Gegend ist eben, der höchste Punkt der Gemeinde auf 135 m. Eine erste Ansiedlung an der Mündung des Oulujoen
+    baute man 1605 im Auftrag des schwedischen Königs, die 1765 Stadtrechte erhielt. Die alte Stadt brannte 1822
+    ab – dies war das verheerendste der zehn Großfeuer der Geschichte. Im 19.
+  title: Oulu
+  url: https://de.wikivoyage.org/wiki/Oulu
+Palermo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807285
+  section: Hintergrund
+  source: wikivoyage
+  text: Palermo, die Hauptstadt Siziliens, befindet sich im Nordwesten der Insel. Die Inselhauptstadt Palermo lebt
+    von enormen Gegensätzen, zwischen der Weltoffenheit der Hafenstadt mit Verbindungen nach Tunesien und dem sizilianischen
+    Kleinstadtleben, zwischen Landwirtschaft und Fischerei als Broterwerb und der Funktion als Kultur- und Universitätsstadt.
+  title: Palermo
+  url: https://de.wikivoyage.org/wiki/Palermo
+Palma:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1789200
+  section: Hintergrund
+  source: wikivoyage
+  text: Palma de Mallorca ist die Hauptstadt der spanischen Insel Mallorca. Die Geschichte von Palma de Mallorca
+    ist von verschiedenen Kulturen und Zivilisationen geprägt. Die Phönizier gründeten einst eine Siedlung namens
+    "Palmaria" an der Stelle der heutigen Stadt. Später wurde die Insel von den Römern erobert und als "Palma" bekannt.
+  title: Palma de Mallorca
+  url: https://de.wikivoyage.org/wiki/Palma_de_Mallorca
+Paris:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1761694
+  source: wikivoyage
+  text: Paris ist die beiderseits der Seine gelegene Hauptstadt Frankreichs und hat ca. 2,2 Millionen Einwohner.
+    Mit der städtischen Siedlungszone hat die Metropolenregion 12,5 Millionen Einwohner und ist damit eine der größten
+    Stadtregionen Europas. Als Lutetia auf einer Seineinsel vor mehr als 2000 Jahren gegründet, ist die Stadt zu
+    einer der lebendigsten Metropolen Europas und der Welt geworden.
+  title: Paris
+  url: https://de.wikivoyage.org/wiki/Paris
+Patras:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1814758
+  section: Hintergrund
+  source: wikivoyage
+  text: Patras ist die drittgrößte Stadt in Griechenland. Patras ist neben Igoumenitsa der große Fährhafen für die
+    Linien nach Italien. Die meisten sehen die Stadt nur als Durchgangsort zu ihren Ferienorten. Patras hat aber
+    auf den zweiten Blick etwas zu bieten.
+  title: Patras
+  url: https://de.wikivoyage.org/wiki/Patras
+Penzance:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 270218545
+  source: wikipedia
+  text: Penzance [pɛnˈzæns] ist eine Stadt im ehemaligen District Penwith der Grafschaft Cornwall in England und
+    liegt an der Mounts Bay, einer Meeresbucht des Atlantiks am Eingang des Ärmelkanals, in der auch der St Michael’s
+    Mount zu finden ist. Die Stadt hat 20.732 Einwohner und war bis 2009 Verwaltungssitz des damaligen Districts
+    Penwith. Penzance und Umgebung sind stark durch den Tourismus geprägt.
+  title: Penzance
+  url: https://de.wikipedia.org/wiki/Penzance
+Porto:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1756998
+  section: Hintergrund
+  source: wikivoyage
+  text: Porto ist eine Stadt am Douro im Norden Portugals und die zweitgrößte Stadt des Landes. Nach Lissabon gilt
+    Porto als die zweitschönste Stadt Portugals. Sie ist bekannt für ihre historische Altstadt geprägt durch eine
+    Vielzahl beeindruckender Bauten, schmaler Gassen und blühender Parkanlagen sowie den von hier stammenden, weltbekannten
+    Portwein.
+  title: Porto
+  url: https://de.wikivoyage.org/wiki/Porto
+Porto Torres:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1757232
+  section: Hintergrund
+  source: wikivoyage
+  text: Porto Torres ist eine Hafenstadt und ein Fährhafen an der Nordküste Sardiniens in der Provinz Sassari. Die
+    Hafenstadt liegt am Golf von Asinara an der Mündung des Riu Mannu, etwas weiter westlich mündet der Fiume Santo.
+    Zum Gemeindegebiet gehört das Stadtgebiet und - in Form einer Exklave - die Insel Asinara.
+  title: Porto Torres
+  url: https://de.wikivoyage.org/wiki/Porto_Torres
+Pozzallo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 256377842
+  source: wikipedia
+  text: Pozzallo ist eine Stadt im Freien Gemeindekonsortium Ragusa in der Region Sizilien in Italien mit 18.958
+    Einwohnern (Stand 31. Dezember 2025).
+  title: Pozzallo
+  url: https://de.wikipedia.org/wiki/Pozzallo
+Prague:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807260
+  source: wikivoyage
+  text: 'Prag ist die Hauptstadt Tschechiens. Prag ist eine Stadt, in der sich viele Jahrhunderte verewigt haben:
+    die goldene Stadt. Die Bomben des Zweiten Weltkrieges verschonten ihre Türme und Mauern, doch die ältere Vergangenheit
+    hat ihre Narben hinterlassen: Glaubensstreit, Kriege und Plünderungen.'
+  title: Prag
+  url: https://de.wikivoyage.org/wiki/Prag
+Przemyśl:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1744450
+  source: wikivoyage
+  text: Przemyśl ist eine Stadt mit gut 67.000 Einwohnern im äußersten Südosten Polens. Sie liegt am Fluss San am
+    Fuße der Beskiden in der Woiwodschaft Karpatenvorland. Przemyśl ist 11 km von der polnisch-ukrainischen Grenze
+    entfernt und ein wichtiger Transitort auf der Eisenbahnroute Krakau–Lwiw. Es gibt eine sehenswerte Altstadt
+    mit barocken Gebäuden aus der polnischen Adelsrepublik und der Habsburger Monarchie.
+  title: Przemyśl
+  url: https://de.wikivoyage.org/wiki/Przemy%C5%9Bl
+Rabat:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1751467
+  source: wikivoyage
+  text: 'Rabat ist die Hauptstadt von Marokko und nach Casablanca die zweitgrößte Stadt des Landes. Sie liegt im
+    Nord-Westen Marokkos. Man nennt Rabat auch: "Die weiße Königstadt". Rabat ist außerdem die Hauptstadt der Region
+    Rabat-Salé-Zemmour-Zaer mit rd. 2,37 Mio. Einwohnern.'
+  title: Rabat
+  url: https://de.wikivoyage.org/wiki/Rabat
+Reggio di Calabria:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1780134
+  source: wikivoyage
+  text: Reggio Calabria, auch Reggio di Calabria, ist eine Stadt im Süden von Kalabrien an der „Stiefelspitze“ der
+    italienischen Apenninhalbinsel an der Straße von Messina, der Meerenge zwischen Kalabrien und Sizilien. Sie
+    ist mit rund 170.000 Einwohnern zugleich die größte Stadt Kalabriens und außerdem Universitätsstadt.
+  title: Reggio di Calabria
+  url: https://de.wikivoyage.org/wiki/Reggio_di_Calabria
+Riga:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1802889
+  section: Hintergrund
+  source: wikivoyage
+  text: Riga ist die Hauptstadt von Lettland. Die alte Hansestadt, eine mittelalterliche Gründung deutscher Kaufleute,
+    liegt im Süden des Rigaischer Meerbusens, am rechten Ufer des Flusses Düna. In seiner wechselvollen Geschichte
+    gehörte Riga, als Hauptstadt der Landschaft Livland, zeitweise zum polnisch-litauischen, dann schwedischen und
+    schließlich sowjetischen Herrschaftsbereich.
+  title: Riga
+  url: https://de.wikivoyage.org/wiki/Riga
+Rimini:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 271295617
+  source: wikipedia
+  text: 'Rimini ist eine Stadt an der italienischen Adriaküste in der Emilia-Romagna mit 150.774 Einwohnern (Stand:
+    31. Dezember 2025) und Hauptstadt der Provinz Rimini. Sie liegt in der historischen Region Romagna und ist ein
+    Zentrum des Badetourismus. Die ausgedehnte Altstadt Riminis liegt etwa zweieinhalb Kilometer von der Adriaküste
+    entfernt. Die meisten Viertel der Stadt, die direkt am Meer liegen, sind Neubaugebiete.'
+  title: Rimini
+  url: https://de.wikipedia.org/wiki/Rimini
+Rome:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1798342
+  source: wikivoyage
+  text: Man kann sich nur in Rom auf Rom vorbereiten Rom, die ewige Stadt am Tiber, erbaut auf sieben Hügeln ist
+    seit 1871 die Hauptstadt Italiens. Innerhalb der Stadt liegt der Vatikan als selbständiger Staat - der kleinste
+    Stadtstaat der Welt. Dessen Staatsoberhaupt ist der Papst, der außerdem Oberhaupt der katholischen Kirche und
+    zugleich Bischof Roms ist.
+  title: Rom
+  url: https://de.wikivoyage.org/wiki/Rom
+Rostock:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1775897
+  section: Hintergrund
+  source: wikivoyage
+  text: Die an der Ostsee gelegene Hansestadt Rostock ist mit etwa 210.000 Einwohnern die größte Stadt Mecklenburg-Vorpommerns.
+    Sie ist einer der wichtigsten deutschen Fährhäfen mit Linienverbindungen nach Skandinavien, Russland und in
+    das Baltikum. Viele Touristen werden vor allem wegen des wunderschönen, weißen Sandstrandes bei Warnemünde nach
+    Rostock kommen.
+  title: Rostock
+  url: https://de.wikivoyage.org/wiki/Rostock
+Rovaniemi:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1774178
+  source: wikivoyage
+  text: Rovaniemi das „Tor zum Norden,“ ist die wichtigste und größte Stadt im finnischen Teil Lapplands. Sie ist
+    der Ausgangspunkt für fast alle Erkundungen der nördlicheren Gebiete, zumal die Verkehrsanbindung sehr gut ist.
+    Rovaniemi liegt nur ungefähr acht Kilometer südlich des Polarkreises. In den Wintermonaten ist es deshalb fast
+    den ganzen Tag dunkel.
+  title: Rovaniemi
+  url: https://de.wikivoyage.org/wiki/Rovaniemi
+Ruse:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1797176
+  section: Hintergrund
+  source: wikivoyage
+  text: Russe ist eine Stadt in Bulgarien, sie liegt an der Donau, die hier die Grenze zu Rumänien bildet und hat
+    145.000 Einwohner. Russe ist die Hauptstadt des gleichnamigen Oblasts. Im fremden Sprachgebrauch wird der Ortsname
+    auch Ruse oder Rouse transliteriert. Zur Zeit der Türkenherrschaft sprach man von Rusçuk.
+  title: Russe
+  url: https://de.wikivoyage.org/wiki/Russe
+Salerno:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 266035820
+  source: wikipedia
+  text: Die Provinz Salerno (italienisch Provincia di Salerno) ist eine italienische Provinz der Region Kampanien.
+    Hauptstadt ist Salerno. Die Provinz hat 1.053.302 Einwohner (Stand 31. Dezember 2025) in 158 Gemeinden. Sie
+    ist der Fläche nach die größte Provinz in Kampanien.
+  title: Provinz Salerno
+  url: https://de.wikipedia.org/wiki/Provinz_Salerno
+San Marino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1814500
+  section: Hintergrund
+  source: wikivoyage
+  text: Der Kleinstaat San Marino liegt in Südeuropa und ist nach dem Vatikan und Monaco der drittkleinste Staat
+    Europas. Der große Nachbar ist Italien. San Marino besteht im wesentlichen aus einigen Siedlungen, die um die
+    Berge herum verteilt sind. Die gleichnamige Hauptstadt Città di San Marino liegt auf einem Berg.
+  title: San Marino
+  url: https://de.wikivoyage.org/wiki/San_Marino
+Santiago de Compostela:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1798596
+  section: Hintergrund
+  source: wikivoyage
+  text: Santiago de Compostela ist ein Wallfahrtsort im spanischen Galicien mit der zum Welterbe gehörenden Kathedrale.
+    Der Namensgeber der Stadt ist der Heilige Jakob, dessen Grab im 9. Jahrhundert ein Einsiedler auf einem Sternenfeld
+    gefunden haben will. Kurz darauf wurde eine Siedlung gegründet, die schnell zu einer Stadt wuchs.
+  title: Santiago de Compostela
+  url: https://de.wikivoyage.org/wiki/Santiago_de_Compostela
+Sarajevo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799497
+  section: Hintergrund
+  source: wikivoyage
+  text: Sarajevo ist die Hauptstadt und Regierungssitz Bosnien und Herzegowinas und der Föderation Bosnien und Herzegowina
+    und liegt am Balkan. Sarajevo ist trotz seiner bedeutenden Rolle in der europäischen Geschichte im Vergleich
+    zu anderen Großstädten des ehemaligen Jugoslawien wie Belgrad oder Zagreb eher unscheinbar und weit weniger
+    touristisch entwickelt.
+  title: Sarajevo
+  url: https://de.wikivoyage.org/wiki/Sarajevo
+Seinäjoki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1789437
+  section: Hintergrund
+  source: wikivoyage
+  text: Seinajöki ist eine Stadt in Westfinnland. Seinäjoki, erst 1960 zur Stadt erhoben, ist der Verwaltungssitz
+    der Landschaft Südösterbotten (Etelä-Pohjanmaa).
+  title: Seinäjoki
+  url: https://de.wikivoyage.org/wiki/Sein%C3%A4joki
+Sevilla:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1810137
+  section: Hintergrund
+  source: wikivoyage
+  text: 'Sevilla ist die am Fluss Guadalquivir gelegene Hauptstadt der gleichnamigen Provinz und der Region Andalusien
+    und die viertgrößte Stadt Spaniens. Die Stadt liegt an den Ufern des langsam dahinfließenden Guadalquivir, der
+    die Stadt in zwei Hälften teilt: östlich das Stadtzentrum von Sevilla und gegenüber der Stadtteil Triana. Die
+    Einwohner von Sevilla sind als „Sevillanos“ bekannt.'
+  title: Sevilla
+  url: https://de.wikivoyage.org/wiki/Sevilla
+Sofia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1794725
+  source: wikivoyage
+  text: 'Sofia (bulgarisch: София, IPA: [ˈsɔfijɐ]) ist die Hauptstadt Bulgariens und die größte Stadt des Landes.
+    Die Universitätsstadt ist das wichtigste Geschäfts- und Industriezentrum des Landes und bietet eine interessante
+    architektonische Mischung aus orthodoxen Kirchen und den Pracht- und Zweckbauten der Sowjetzeit.'
+  title: Sofia
+  url: https://de.wikivoyage.org/wiki/Sofia
+Split:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1805190
+  section: Hintergrund
+  source: wikivoyage
+  text: 'Split ist eine Stadt in Dalmatien in Kroatien. Sie bietet historische Sehenswürdigkeiten wie den Diokletianpalast,
+    schöne Strände und eine malerische Altstadt. Aufgrund seines idealen Klimas mit 2.800 Sonnenstunden pro Jahr
+    haben die Einheimischen einige Spitznamen für Split: „Die schönste Stadt der Welt“ und „Blume des Mittelmeers“.'
+  title: Split
+  url: https://de.wikivoyage.org/wiki/Split
+Stavanger:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799537
+  section: Hintergrund
+  source: wikivoyage
+  text: Stavanger ist eine Stadt in Rogaland, dem südwestlichen Fylke von Norwegen. Sie ist zusammengewachsen mit
+    dem südlichen Vorort Sandnes, der hier mit behandelt wird. 2008 war Stavanger Kulturhauptstadt Europas. Seit
+    den 1970er Jahren sprudelt vor der norwegischen Küste das Erdöl.
+  title: Stavanger
+  url: https://de.wikivoyage.org/wiki/Stavanger
+Stockholm:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1802387
+  source: wikivoyage
+  text: Stockholm ist die Hauptstadt von Schweden und hat rund eine Million Einwohner. Damit ist die geschichtsträchtige
+    Stadt die größte von Schweden vor Göteborg und Malmö. Sie liegt am Ausfluss des Sees Mälaren in die Ostsee,
+    die dort einen inselreichen Meerbusen, den Schärengarten, bildet.
+  title: Stockholm
+  url: https://de.wikivoyage.org/wiki/Stockholm
+Storlien:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 251116048
+  source: wikipedia
+  text: Storlien ist ein kleiner Ort in der schwedischen Provinz Jämtlands län und der historischen Provinz Jämtland.
+    Der Skiort in der Gemeinde Åre hat 97 Einwohner und liegt etwa zwei Kilometer von der norwegischen Grenze entfernt.
+    Seine Existenz gründet sich hauptsächlich auf den Wintertourismus, da er gute Voraussetzungen für Alpinski,
+    Schneemobiltouren und Skilanglauf bietet.
+  title: Storlien (Åre)
+  url: https://de.wikipedia.org/wiki/Storlien_%28%C3%85re%29
+Stranraer:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 270933115
+  source: wikipedia
+  text: Stranraer, schottisch-gälisch An t-Sròn Reamhar, ist eine Stadt im Westen der im Süden Schottlands gelegenen
+    Council Area Dumfries and Galloway. Vorher gehörte sie zur traditionellen Grafschaft Wigtownshire. Die Stadt
+    hatte 2011 10.593 Einwohner. Stranraer liegt am Ufer der Bucht Loch Ryan im Norden der Landenge, die die Halbinsel
+    Rhins of Galloway mit dem schottischen Festland verbindet.
+  title: Stranraer
+  url: https://de.wikipedia.org/wiki/Stranraer
+Strasbourg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799731
+  source: wikivoyage
+  text: 'Straßburg, französisch: Strasbourg, elsässisch: Strossburi, ist mehr als 2000 Jahre alt. Heute ist die
+    Stadt mit 274.000 Einwohnern die größte Stadt des Elsass und siebtgrößte Stadt Frankreichs, mit den Vororten
+    sind es sogar 430.000.'
+  title: Straßburg
+  url: https://de.wikivoyage.org/wiki/Stra%C3%9Fburg
+Stuttgart:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1800199
+  section: Hintergrund
+  source: wikivoyage
+  text: Stuttgart-Süd ist ein innerer Stadtbezirk von Stuttgart. Zum Stadtbezirk Stuttgart-Süd gehören die Stadtteile
+    Südheim, Heslach, Lehen, Weinsteige, Bopser und Kaltental. Häufig wird Stuttgart-Süd aber im Sprachgebrauch
+    der Stuttgarter mit Heslach gleichgesetzt und hat den Ruf einer Arbeitersiedlung. Entstanden ist der Stadtbezirk
+    in seiner heutigen Form im Jahr 1956.
+  title: Stuttgart/Süd
+  url: https://de.wikivoyage.org/wiki/Stuttgart/S%C3%BCd
+Subotica:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1796114
+  source: wikivoyage
+  text: 'Subotica (serbisch: Суботица, IPA: [ˈsûbɔtitsa]; ungarisch: Szabadka) ist das wirtschaftliche und kulturelle
+    Zentrum der nördlichen Vojvodina sowie ein wichtiger Verkehrsknoten. Subotica liegt in der Pannonischen Tiefebene.
+    Knapp 50 % der Bevölkerung sind Ungarn.'
+  title: Subotica
+  url: https://de.wikivoyage.org/wiki/Subotica
+Sundsvall:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 270859691
+  source: wikipedia
+  text: Sundsvall (deutsch veraltet Sundswald) ist eine Stadt in der schwedischen Provinz Västernorrlands län und
+    der historischen Provinz Medelpad. Sie ist Hauptort der gleichnamigen Gemeinde.
+  title: Sundsvall
+  url: https://de.wikipedia.org/wiki/Sundsvall
+Syracuse:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807286
+  section: Hintergrund
+  source: wikivoyage
+  text: Syrakus ist die Hauptstadt der gleichnamigen Provinz auf Sizilien. Die Altstadt liegt auf der Insel Ortygia.
+    Die Stadt Syrakus wurde im Bereich der Mündungen der beiden Flüsse Anapo und Ciane im südlichen Bereich der
+    sizilianischen Ostküste gegründet.
+  title: Syrakus
+  url: https://de.wikivoyage.org/wiki/Syrakus
+Szeged:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1786130
+  section: Hintergrund
+  source: wikivoyage
+  text: Szeged ist die Hauptstadt des Komitates Csongrád. Szeged befindet sich in dem gleichnamigen Kleingebiet
+    Szeged. Spaziergänge, Radfahren am Flusslauf der Theiß bieten sich an. Urkundlich wurde Szeged als Cigeddin
+    erstmals im Jahre 1183 erwähnt, jedoch blickt die Stadt und Umgebung auf eine viel frühere Geschichte zurück.
+    Die früheste Anzeichen auf die Gegenwart von Menschen lässt sich auf über 20.000 Jahre datieren.
+  title: Szeged
+  url: https://de.wikivoyage.org/wiki/Szeged
+Tallinn:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1804619
+  section: Hintergrund
+  source: wikivoyage
+  text: Tallinn ist die Hauptstadt von Estland und hat eine wechselvolle Geschichte hinter sich. Gelegen am Finnischen
+    Meerbusen, ist sie nur 80 Kilometer von Helsinki entfernt. Im Herzen der Stadt liegt der historische Stadtteil
+    Toompea, die so genannte Oberstadt, erbaut im frühen Mittelalter und heute noch weitgehend urtümlich erhalten.
+    In der Unterstadt sind heute noch die mächtigen Mauern der Wehranlagen zu sehen.
+  title: Tallinn
+  url: https://de.wikivoyage.org/wiki/Tallinn
+Tampere:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1774684
+  source: wikivoyage
+  text: Tampere ist eine Großstadt in Westfinnland im Gebiet der Seen. Durch ihre lange Geschichte als Industriestadt
+    ist sie auch als "Manchester des Nordens" bekannt geworden. Nach Helsinki und Espoo ist sie die drittgrößte
+    Stadt Finnlands und die größte Binnenstadt von ganz Skandinavien.
+  title: Tampere
+  url: https://de.wikivoyage.org/wiki/Tampere
+Tanger:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1812678
+  section: Hintergrund
+  source: wikivoyage
+  text: Die Stadt Tanger liegt im Norden von Marokko. Die im 5. Jahrhundert vor unserer Zeit von den Karthagern
+    gegründete Stadt diente im Laufe ihrer Geschichte unterschiedlichsten Herren. Alle hinterließen Spuren die der
+    Stadt ihre Faszination geben.
+  title: Tanger
+  url: https://de.wikivoyage.org/wiki/Tanger
+Tanger Med:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 253506530
+  source: wikipedia
+  text: Tanger Med (arabisch طنجة-المتوسط) ist ein marokkanischer Seehafen am westlichen Mittelmeer zwischen Tanger
+    und der spanischen Enklave Ceuta. Er wurde 2007 eröffnet. Als Freizone steht die Tanger Free Zone zur Verfügung.
+    Über 100 Unternehmen haben sich dort angesiedelt. Weitere Freihandelszonen sind in der Umgebung von Tétouan
+    und Fnideq nahe Ceuta geplant.
+  title: Tanger Med
+  url: https://de.wikipedia.org/wiki/Tanger_Med
+Taormina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1805683
+  section: Hintergrund
+  source: wikivoyage
+  text: Taormina ist eine Stadt in der Provinz Messina an der Ostküste von Sizilien. Das Städtchen Taormina, auf
+    einem Plateau oberhalb der sizilianischen Ostküste gelegen, entwickelte sich dank der malerischen Aussicht auf
+    den Ätna und die vorgelagerte Insel Isola bella, der zahlreichen Sehenswürdigkeiten und des auch im Winter milden
+    Klimas zu einem bevorzugten Reiseziel auf Sizilien.
+  title: Taormina
+  url: https://de.wikivoyage.org/wiki/Taormina
+Tarifa:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1747958
+  section: Hintergrund
+  source: wikivoyage
+  text: Tarifa ist eine Stadt in der andalusischen Provinz Cádiz. Sie liegt ganz im Süden von Europa an der Straße
+    von Gibraltar. Tarifa ist der südlichste Ort Europas an der engsten Stelle der Straße von Gibraltar. Die Punta
+    de Tarifa ist der südlichste Punkt des Festlandes von Europa. Die Straße von Gibraltar ist hier nur 14 km breit.
+  title: Tarifa
+  url: https://de.wikivoyage.org/wiki/Tarifa
+Thessaloniki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803622
+  source: wikivoyage
+  text: 'Thessaloniki griechisch: Θεσσαλονίκη, ist die zweitgrößte Stadt Griechenlands. Die Stadt ist kultureller
+    Mittelpunkt und Hauptstadt der Region Makedonien. Ihre Bauwerke aus frühchristlicher und byzantinischer Zeit
+    gehören seit 1988 zum Weltkulturerbe der UNESCO.'
+  title: Thessaloniki
+  url: https://de.wikivoyage.org/wiki/Thessaloniki
+Tirana:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1780170
+  source: wikivoyage
+  text: Tirana ist die am Fluss Tiranë gelegene und vom Flüsschen Lanë durchflossene Hauptstadt der Republik Albanien.
+    Sie ist das wirtschaftliche, kulturelle, akademische und politische Zentrum des Landes und auch die größte Stadt
+    Albaniens. Die Hauptstadt besitzt Universitäten, Museen, einen internationalen Flughafen und vielfältige kulturelle
+    Einrichtungen.
+  title: Tirana
+  url: https://de.wikivoyage.org/wiki/Tirana
+Torino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 263292505
+  source: wikipedia
+  text: Die Metropolitanstadt Turin (italienisch Città Metropolitana di Torino) ist eine Gebietskörperschaft in
+    der italienischen Region Piemont. Verwaltungssitz der Metropolitanstadt ist die Stadt Turin. Die Metropolitanstadt
+    Turin besteht seit dem 1. Januar 2015 als Rechtsnachfolgerin der Provinz Turin (italienisch Provincia di Torino),
+    auf deren ehemaligem Gebiet sie sich erstreckt.
+  title: Metropolitanstadt Turin
+  url: https://de.wikipedia.org/wiki/Metropolitanstadt_Turin
+Toulouse:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1777607
+  section: Hintergrund
+  source: wikivoyage
+  text: Toulouse ist eine Stadt im Südwesten Frankreichs im Département Haute-Garonne und Hauptstadt der Region
+    Okzitanien, in der 2016 die Region Midi-Pyrénées aufgegangen ist. Mit über 450.000 Einwohnern ist Toulouse die
+    viertgrößte Stadt Frankreichs. Wegen ihrer Häuser aus rotem Backstein, die das Zentrum dominieren, wird Toulouse
+    auch die Rote Stadt genannt.
+  title: Toulouse
+  url: https://de.wikivoyage.org/wiki/Toulouse
+Trieste:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1764891
+  source: wikivoyage
+  text: Triest ist eine Stadt in Italien. Sie ist die Hauptstadt der Region Friaul-Julisch Venetien und war bis
+    2017 Hauptstadt der aufgelösten Provinz Triest. Die florierende Hafenstadt gehörte jahrhundertelang zur österreichischen
+    Habsburgermonarchie.
+  title: Triest
+  url: https://de.wikivoyage.org/wiki/Triest
+Trondheim:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1749821
+  section: Hintergrund
+  source: wikivoyage
+  text: Trondheim ist eine Stadt in Norwegen. Die im Trondheimfjord an der Mündung des Flusses Nid gelegene Stadt
+    ist die drittgrößte Stadt Norwegens. Sie ist zugleich der Bezirkshauptort von Sør-Trøndelag. Trondheim ist geschichtlich
+    gesehen die wichtigste Stadt Norwegens, wurde doch die damals noch Nidaros genannte Stadt zur ersten Hauptstadt
+    des norwegischen Reiches und auch Sitz des Erzbischofs.
+  title: Trondheim
+  url: https://de.wikivoyage.org/wiki/Trondheim
+Tunis:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1800251
+  section: Hintergrund
+  source: wikivoyage
+  text: Tunis ist die Hauptstadt von Tunesien. Sie liegt im Norden des Landes unweit des Mittelmeers. Seit 1195,
+    unter den Almohaden, hat der Ort Hauptstadtfunkton, daran änderte sich auch zur osmanischen und französischen
+    Kolonialherrschaft nichts.
+  title: Tunis
+  url: https://de.wikivoyage.org/wiki/Tunis
+Turku:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1774704
+  source: wikivoyage
+  text: Turku ist eine Stadt in Westfinnland. Ihr schwedischer Name ist Åbo und sie ist offiziell zweisprachig (finnisch
+    und schwedisch). In Westfinnland leben die meisten schwedischsprachigen Finnen. In Turku befindet sich der Bischofssitz
+    des lutherischen Bischofs von Finnland, sowie neben der finnischsprachigen Universität Turku die schwedischsprachige
+    Åbo Akademi.
+  title: Turku
+  url: https://de.wikivoyage.org/wiki/Turku
+Umeå:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1806890
+  section: Hintergrund
+  source: wikivoyage
+  text: 'Umeå (IPA: [ˈʉːmeoː] ) ist eine Stadt in Schweden. Sie liegt in der Provinz Västerbottens län und ist mit
+    über 130.000 Einwohnern im Gemeindegebiet die größte Stadt Nordschwedens. Umeå liegt in Västerbottens län, der
+    zweitnördlichsten Provinz Schwedens. Während man im Juni in der Stadt weiße Nächte erleben kann, hat man in
+    der Weihnachtszeit nur wenig mehr als vier Stunden Tageslicht.'
+  title: Umeå
+  url: https://de.wikivoyage.org/wiki/Ume%C3%A5
+Vaasa:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 264521632
+  source: wikipedia
+  text: Vaasa (finnisch [ˈvɑːsɑ]) oder Vasa (schwedisch [ˈvɑːsɑ], von 1855 bis 1917 offiziell schwedisch Nikolaistad)
+    ist eine westfinnische Hafenstadt am Bottnischen Meerbusen. Es ist eine Universitätsstadt und eines der finnlandschwedischen
+    kulturellen Zentren Finnlands.
+  title: Vaasa
+  url: https://de.wikipedia.org/wiki/Vaasa
+Valencia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1800090
+  section: Hintergrund
+  source: wikivoyage
+  text: Valencia ist eine Großstadt an der ostspanischen Mittelmeerküste. Valencia ist mit ca. 825.000 Einwohnern
+    die drittgrößte Stadt Spaniens und nach Barcelona kulturelles Zentrum an der spanischen Mittelmeerküste. Zudem
+    ist die Stadt Valencia die Hauptstadt der autonomen Region Valencia. Gelegen an der Costa del Azahar grenzt
+    sie an die bedeutende Tourismusregion Costa Blanca im Süden.
+  title: Valencia
+  url: https://de.wikivoyage.org/wiki/Valencia
+Valga:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 262854201
+  source: wikipedia
+  text: Valga (deutsch Walk) ist eine Stadt im Süden Estlands, 245 Straßenkilometer südlich der Hauptstadt Tallinn
+    gelegen. Im Zuge der Gemeindereform 2017 wurde die Stadtgemeinde Valga aufgelöst und in den Kreis Valga eingegliedert.
+    Valga liegt direkt an der Grenze zu Lettland gegenüber der lettischen Schwesterstadt Valka. Beide Städte bildeten
+    bis 1920 eine einheitliche Gesamtstadt.
+  title: Valga
+  url: https://de.wikipedia.org/wiki/Valga
+Valletta:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1744669
+  source: wikivoyage
+  text: Valletta ist die Hauptstadt von Malta und liegt auf einer Halbinsel an der Nordostküste der Insel zwischen
+    den Hafenbecken des Grand Harbour im Osten und dem Marsamxett Harbour im Westen. Die Stadt mit ihrem umgebenden
+    Festungsring aus Festungen und Verbindungsmauern und dem weitestgehend geradlinigen und rechtwinkligem Straßennetz,
+    welches teils mit Treppenverbindungen angelegt wurde, steht vollständig unter Denkmalschutz.
+  title: Valletta
+  url: https://de.wikivoyage.org/wiki/Valletta
+Varna:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1789981
+  section: Hintergrund
+  source: wikivoyage
+  text: Varna ist die drittgrößte Stadt Bulgariens sowie Hauptstadt des gleichnamigen Verwaltungsbezirks und liegt
+    an der westlichen Schwarzmeerküste. Varna wurde im 585 v. Chr. unter dem Namen Odessos von griechischen Siedlern
+    gegründet. In der Römerzeit erlebte Varna eine große kulturelle und wirtschaftliche Blütezeit. 1391 von den
+    Türken erobert. 1878 wurde Varna von der osmanischen Herrschaft befreit.
+  title: Varna
+  url: https://de.wikivoyage.org/wiki/Varna
+Vatican:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1779712
+  source: wikivoyage
+  text: Der Vatikanstaat ist eine Enklave in der italienischen Hauptstadt Rom. Weniger als 1000 Menschen haben die
+    Staatsangehörigkeit dieses Landes. Das Staatsoberhaupt - der Papst - wird nach einem über 1000-jährigen Ritus
+    auf Lebenszeit gewählt, der Staat jedoch existiert erst seit 1929. Wegen seiner Besonderheiten ist der Vatikan
+    jährlich das Ziel von Abertausenden von Touristen.
+  title: Vatikan
+  url: https://de.wikivoyage.org/wiki/Vatikan
+Venice:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1806196
+  source: wikivoyage
+  text: 'Venedig (italienisch: Venezia, englisch: Venice) ist die Hauptstadt der Region Venetien. Dieser Reiseführer
+    befasst sich hauptsächlich mit dem Besuch der Insel Venedig, also der città antica mit dem centro storico (der
+    Altstadt), sowie den anderen Laguneninseln, und nicht mit den touristisch wenig interessanten Stadtteilen auf
+    dem Festland.'
+  title: Venedig
+  url: https://de.wikivoyage.org/wiki/Venedig
+Ventimiglia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1678262
+  source: wikivoyage
+  text: 'Ventimiglia ist eine Grenzstadt in der Provinz Imperia in der Region Ligurien, Norditalien, am Golf von
+    Genua. Die Stadt liegt sehr nah an der Grenze zu Frankreich an der Mündung des Flusses Roia. Der Name leitet
+    sich von der Entfernung zur damaligen Grenze zu Frankreich ab: 20 Meilen. Der Grenzverlauf änderte sich 1865
+    und dann wieder durch den Frieden von Paris 1947.'
+  title: Ventimiglia
+  url: https://de.wikivoyage.org/wiki/Ventimiglia
+Verona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1756329
+  source: wikivoyage
+  text: Die Provinz Verona liegt in der Region Venetien in Oberitalien. Die Provinz Verona grenzt im Norden an das
+    Trentino, im Westen an den Gardasee und die lombardischen Provinzen Brescia und Mantua, im Süden und Osten an
+    die zu Venetien gehörenden Provinzen Rovigo, Padua und Vicenza.
+  title: Verona (Provinz)
+  url: https://de.wikivoyage.org/wiki/Verona_%28Provinz%29
+Vienna:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1807865
+  source: wikivoyage
+  text: Wien ist die Hauptstadt Österreichs. Die Stadt liegt an der Donau und am Übergang von den östlichsten Ausläufern
+    der Alpen zur Pannonischen Tiefebene. Wien hat ca. 2,0 Mio. Einwohner, davon die Hälfte Österreicher und ist
+    zugleich ein Bundesland, das komplett von Niederösterreich umschlossen ist.
+  title: Wien
+  url: https://de.wikivoyage.org/wiki/Wien
+Villa San Giovanni:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 262286487
+  source: wikipedia
+  text: Villa San Giovanni ist eine Stadt in der Metropolitanstadt Reggio Calabria, Italien.
+  title: Villa San Giovanni
+  url: https://de.wikipedia.org/wiki/Villa_San_Giovanni
+Vilnius:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 263269442
+  source: wikipedia
+  text: Der Bezirk Vilnius war einer der zehn Verwaltungsbezirke Litauens. Der flächenmäßig größte und auch bevölkerungsreichste
+    Bezirk lag im Südosten des Landes und umfasste auch die Hauptstadt Vilnius. Am 1. Juli 2010 wurden die Bezirke
+    in Litauen als Verwaltungseinheiten ersatzlos gestrichen.
+  title: Bezirk Vilnius
+  url: https://de.wikipedia.org/wiki/Bezirk_Vilnius
+Vitoria-Gasteiz:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 271747972
+  source: wikipedia
+  text: 'Vitoria-Gasteiz [biˈtoɾja gasˈteis] (spanisch Vitoria [biˈtoɾja]; baskisch Gasteiz [ɡas̺teis̻]; der offizielle
+    Name der Stadt ist die zusammengesetzte Doppelform Vitoria-Gasteiz) ist die Hauptstadt der spanischen Autonomen
+    Region Baskenland und der Provinz Álava (baskisch Araba). Sie hat 260.699 Einwohner (Stand: 2025), die in der
+    Mehrzahl spanischsprachig sind.'
+  title: Vitoria-Gasteiz
+  url: https://de.wikipedia.org/wiki/Vitoria-Gasteiz
+Warsaw:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1799835
+  source: wikivoyage
+  text: Warschau ist seit 1596 die Hauptstadt Polens und hat über 1,75 Millionen Einwohner. Als eines der wichtigsten
+    Verkehrs-, Wirtschafts- und Handelszentren Mittel- und Osteuropas genießt Warschau große politische und kulturelle
+    Bedeutung. In der Stadt befinden sich zahlreiche Institutionen, Universitäten, Theater, Museen und Baudenkmäler.
+  title: Warschau
+  url: https://de.wikivoyage.org/wiki/Warschau
+Wroclaw:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1791585
+  source: wikivoyage
+  text: 'Breslau (polnisch: Wrocław, IPA: [ˈvrɔtswaf]) ist eine Stadt in Polen in der Woiwodschaft Niederschlesien.
+    Die ehemalige Hauptstadt Schlesiens gilt als eine der schönsten Städte Polens. Sie wurde nach der fast vollständigen
+    Zerstörung im Zweiten Weltkrieg mustergültig wieder aufgebaut.'
+  title: Breslau
+  url: https://de.wikivoyage.org/wiki/Breslau
+Zagreb:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1803779
+  source: wikivoyage
+  text: 'Zagreb (IPA: [ˈzaːgrɛb]; deutsch veraltet: Agram) ist die Hauptstadt Kroatiens. Die charmante, mittelalterlich
+    wirkende Stadt mit ihren gepflasterten Straßen erinnert an andere mitteleuropäische Hauptstädte wie Wien, Budapest
+    oder Prag. 2005 wurde Zagreb von über einer halben Million Touristen besucht, hauptsächlich aus Österreich,
+    Deutschland und Italien.'
+  title: Zagreb
+  url: https://de.wikivoyage.org/wiki/Zagreb
+Zürich:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1802133
+  source: wikivoyage
+  text: Zürich ist die Hauptstadt des gleichnamigen Kantons und mit rund 443.000 Einwohnern (Stand 2022) die grösste
+    Stadt der Schweiz, da viele Vororte eingemeindet sind. Die Einwohner werden als Zürcher bezeichnet (und keinesfalls
+    als Züricher). Im Jahr 2008 wurde Zürich zum siebten Mal in Folge zur Stadt mit der weltbesten Lebensqualität
+    gekürt.
+  title: Zürich
+  url: https://de.wikivoyage.org/wiki/Z%C3%BCrich
+Östersund:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 1809150
+  section: Hintergrund
+  source: wikivoyage
+  text: Östersund ist eine Stadt in Jämtland und die einzige Stadt Schwedens, die im 18. Jahrhundert gegründet wurde.
+    Östersund liegt am Ostufer eines ausgedehnten verwinkelten Sees, dem Storsjön. Als Planstadt auf dem Reissbrett
+    entworfen, hat Östersund einen rechtwinkligen Strassengrundriss mit einem zentralen Platz, dem Stortorget.
+  title: Östersund
+  url: https://de.wikivoyage.org/wiki/%C3%96stersund

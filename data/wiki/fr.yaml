@@ -1,5 +1,797 @@
 # City texts in 'fr' for the maps (IDEA-22), written by fetch_wiki.py - do not edit by hand,
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
+Aarhus:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 652257
+  section: Comprendre
+  source: wikivoyage
+  text: Aarhus est la plus grande ville de la péninsule du Jutland, au Danemark. Avec près de 300.000 habitants,
+    c'est aussi la seconde plus grande ville du pays. Aarhus offre un élégant mélange entre une ville cosmopolitaine
+    et un charmant centre de petite ville, avec ses pubs, restaurants et ses endroits romantiques. Ville universitaire,
+    elle a une des moyennes d'âge les plus basses d'Europe.
+  title: Aarhus
+  url: https://fr.wikivoyage.org/wiki/Aarhus
+Abrantes:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239728390
+  source: wikipedia
+  text: Abrantes (en français Abrantès) est une ville et une municipalité du Portugal située dans le district de
+    Santarém. Elle s'élève sur une colline à 800 m de la rive droite du Tage. Elle est le chef-lieu d'un canton
+    de 34 329 habitants.
+  title: Abrantes
+  url: https://fr.wikipedia.org/wiki/Abrantes
+Aix en Provence:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669606
+  section: Comprendre
+  source: wikivoyage
+  text: Aix-en-Provence est une ville française, située dans le département des Bouches-du-Rhône en région Provence-Alpes-Côte
+    d'Azur. Aix-en-Provence est une ville de Provence de taille moyenne, célèbre pour ses nombreuses fontaines,
+    et pour avoir autrefois hébergé Cézanne et Émile Zola. C'est un endroit très agréable, surtout en été lorsqu'on
+    peut prendre un verre dehors, sous son climat ensoleillé.
+  title: Aix-en-Provence
+  url: https://fr.wikivoyage.org/wiki/Aix-en-Provence
+Algeciras:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239699495
+  source: wikipedia
+  text: Algésiras est une ville du sud de l'Espagne, appartenant à la province de Cadix et à la communauté autonome
+    d'Andalousie. Algésiras est la 12e ville la plus peuplée d'Andalousie, et la 56e d'Espagne. Ville principalement
+    orientée vers l'industrie, elle est connue pour son port qui est, avec 94,93 millions de tonnes de marchandises,
+    le 1er du pays et le 4e d'Europe derrière Rotterdam, Hambourg et Anvers, mais devant Marseille.
+  title: Algésiras
+  url: https://fr.wikipedia.org/wiki/Alg%C3%A9siras
+Algiers:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669912
+  section: Comprendre
+  source: wikivoyage
+  text: 'Alger est la capitale de l''Algérie. Alger — en arabe الجزائر, al-Jazā''ir ou Al Djazāir; appelé plus communément:الدزاير,
+    Eddzayer; en berbère: ⵍⴻⴷⵣⴰⵢⴻⵔ, Ledzayer — surnommée el Bahdja, el mahroussa ou « la blanche », est la capitale
+    de l''Algérie et en est la ville la plus peuplée. Située au bord de la mer Méditerranée, la ville donne son
+    nom à la wilaya dont elle est le chef-lieu.'
+  title: Alger
+  url: https://fr.wikivoyage.org/wiki/Alger
+Amsterdam:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649671
+  section: Comprendre
+  source: wikivoyage
+  text: Amsterdam, ville d'art et d'histoire, est la capitale des Pays-Bas. Amsterdam, parfois écrit « A'dam » par
+    les Hollandais, est la capitale économique, culturelle et politique des Pays-Bas, bien que le siège du gouvernement
+    se trouve à La Haye. Elle est connue pour ses canaux qui entourent son centre-ville et forment comme une toile
+    d'araignée.
+  title: Amsterdam
+  url: https://fr.wikivoyage.org/wiki/Amsterdam
+Ancona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240855947
+  source: wikipedia
+  text: Ancône est une ville d'environ 98 972 habitants, capitale des Marches et chef-lieu de la province d'Ancône
+    en Italie. Ancienne ville fortifiée d'Italie centrale au riche passé gréco-romain et religieux médiéval, Ancône
+    est une ville d’art, une station balnéaire et possède un port très actif sur la mer Adriatique.
+  title: Ancône
+  url: https://fr.wikipedia.org/wiki/Anc%C3%B4ne
+Andorra la Vella:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240123827
+  source: wikipedia
+  text: Andorre-la-Vieille est le nom de l'une des sept paroisses et la capitale de la principauté d'Andorre. La
+    paroisse compte un peu plus de 24 000 habitants et 21 496 pour la ville elle-même. Elle se situe sur la rivière
+    Valira, peu après la confluence du Valira d'Orient et du Valira del Nord à 1 023 m d'altitude, ce qui en fait
+    la plus haute capitale nationale d'Europe.
+  title: Andorre-la-Vieille
+  url: https://fr.wikipedia.org/wiki/Andorre-la-Vieille
+Ankara:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240538342
+  source: wikipedia
+  text: Ankara — anciennement appelée Angora et Ancyre durant l'Antiquité — est la capitale de la Turquie depuis
+    le 13 octobre 1923 et, par sa population, la deuxième ville du pays, après Istanbul. Elle est située en Région
+    de l'Anatolie centrale. C’est également la préfecture de la province du même nom. Ses habitants sont les Ankariotes.
+    Peuplée de plus de cinq millions d'habitants, la ville est située à 938 m d'altitude.
+  title: Ankara
+  url: https://fr.wikipedia.org/wiki/Ankara
+Athens:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649713
+  source: wikivoyage
+  text: Athènes est la capitale de la Grèce. Elle est située plutôt au sud de la Grèce continentale, à l'est du
+    Péloponnèse. Son port, le Pirée, est le principal point de départ en bateau pour les îles grecques, et la Crète.
+    On peut aussi y embarquer pour l'Afrique.
+  title: Athènes
+  url: https://fr.wikivoyage.org/wiki/Ath%C3%A8nes
+Avignon:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 666531
+  source: wikivoyage
+  text: Avignon est une des villes majeures de la région Provence-Alpes-Côte d'Azur, au sud de la France. C’est
+    le chef-lieu du département de Vaucluse, qui se trouve sur les bords du Rhône. Ancienne cité hellénistique et
+    romaine, Avignon devint à partir de 1309 la cité des Papes. Véritable évènement dans l'histoire de la chrétienté
+    médiévale il sera le départ d'une métamorphose remarquable.
+  title: Avignon
+  url: https://fr.wikivoyage.org/wiki/Avignon
+Ayr:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 222922398
+  source: wikipedia
+  text: Ayr est une ville portuaire située sur le Firth of Clyde, dans le sud-ouest de l'Écosse. La ville eut le
+    statut de burgh royal de 1205 à 1975 et fut le chef-lieu de l'ancien comté d'Ayrshire. Ayr est la capitale administrative
+    du council area du South Ayrshire. Elle est située dans la région de lieutenance d'Ayrshire and Arran.
+  title: Ayr
+  url: https://fr.wikipedia.org/wiki/Ayr
+Badajoz:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240515760
+  source: wikipedia
+  text: Badajoz est une ville de la communauté autonome espagnole d'Estrémadure, capitale de la province de Badajoz.
+    Fondée en 875 par Ibn Marwan, la ville compte 150 209 habitants en 2025, ce qui en fait la ville la plus peuplée
+    d'Estrémadure.
+  title: Badajoz
+  url: https://fr.wikipedia.org/wiki/Badajoz
+Barcelona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 671101
+  section: Comprendre
+  source: wikivoyage
+  text: Barcelone est une ville d'Espagne et la capitale de la Catalogne. Les langues parlées sont l'espagnol, et
+    le catalan La Catalogne est une région espagnole qui a une forte identité régionale. À Barcelone, capitale de
+    la Catalogne, on parle le catalan et l'espagnol. Habituellement, même si la question est sensible, votre accent
+    français fera qu'on ne vous embêtera pas avec ça.
+  title: Barcelone
+  url: https://fr.wikivoyage.org/wiki/Barcelone
+Bari:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240974384
+  source: wikipedia
+  text: Bari est une ville italienne d'environ 315 000 habitants, chef-lieu de la ville métropolitaine de Bari et
+    de la région des Pouilles, sur la côte adriatique. Ville portuaire et universitaire, deuxième pôle économique
+    d'Italie du Sud continentale après Naples, elle est également reconnue pour être la cité où sont conservées
+    les reliques de Saint Nicolas, faisant de sa basilique l'un des hauts lieux de l'Église orthodoxe en Occident.
+  title: Bari
+  url: https://fr.wikipedia.org/wiki/Bari
+Basel:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 659209
+  section: Comprendre
+  source: wikivoyage
+  text: 'Bâle est une ville située en Suisse. Tourisme à Bâle, info@basel.com. 1 Tourisme à Bâle, Steinenberg 14,
+    4051 Basel - Basel Zentrum, ☎ +41 61 268 68 68, fax: +41 61 268 68 70, info@basel.com. 2 Tourisme à Bâle - Gare,
+    Centralbahnstrasse 10, 4051 Basel - Basel Hauptbahnhof, ☎ +41 61 268 68 68, fax: +41 61 268 68 70, info@basel.com.'
+  title: Bâle
+  url: https://fr.wikivoyage.org/wiki/B%C3%A2le
+Bastia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669859
+  section: Comprendre
+  source: wikivoyage
+  text: Bastia est une commune, une ville et la préfecture de la Haute-Corse. Bastia est considérée comme « la ville
+    d'art et d'histoire ». Si vous aimez voyager tout en apprenant l'histoire, de nombreux livres sont disponibles
+    sur l'histoire de la Corse, les musées… Mais il est beaucoup plus intéressant de parler avec les vieux des villages
+    qui sont de vraies bibliothèques à eux seuls.
+  title: Bastia
+  url: https://fr.wikivoyage.org/wiki/Bastia
+Belfast:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 652740
+  section: Comprendre
+  source: wikivoyage
+  text: Belfast est la capitale de l'Irlande du Nord et la seconde plus grande ville de l'île d'Irlande après Dublin.
+    Les deux groupes politiques d'Irlande du Nord ont une forte tradition de grandes peintures murales dans leurs
+    communautés, en particulier les plus pauvres. Si vous vous dirigez vers The Falls Road ou Shankill, vous aurez
+    un aperçu des meilleures peintures murales politiques de la taille d'une maison.
+  title: Belfast
+  url: https://fr.wikivoyage.org/wiki/Belfast
+Belgrade:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649788
+  section: Comprendre
+  source: wikivoyage
+  text: Belgrade est la capitale de la Serbie. Belgrade se trouve au cœur des balkans, héritière d'un riche et lourd
+    passé et a su conserver une part de son lustre. Le centre-ville présente encore quelques stigmates de la guerre.
+    Il se parcourt aisément à pied. Belgrade présente de nombreuses ressemblances avec ses cousines d'Europe de
+    l'Est et la misère n'y est pas aussi apparente qu'à Bucarest.
+  title: Belgrade
+  url: https://fr.wikivoyage.org/wiki/Belgrade
+Bergen:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 668095
+  source: wikivoyage
+  text: Bergen est une ville de Norvège, appartenant au comté du Hordaland. C'est la seconde ville la plus peuplée
+    de Norvège, après la capitale Oslo. Sa richesse historique, ses musées, ses festivals de musique et sa vie étudiante
+    en font la capitale culturelle officieuse de la Norvège.
+  title: Bergen
+  url: https://fr.wikivoyage.org/wiki/Bergen
+Berlin:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 665430
+  section: Comprendre
+  source: wikivoyage
+  text: Berlin est la capitale de l'Allemagne. Institutionnellement, c'est aussi une ville-État nommée Land de Berlin,
+    entièrement encerclée par le Brandebourg. Sa population dépasse les 3,6 millions d'habitants. Sous l'égide de
+    la Prusse, les États d'Allemagne du Nord se fédérèrent à l'issue de la guerre de 1870 selon la « solution petite-allemande
+    »; l'Empire allemand fut proclamé au traité préliminaire de paix du 26 février 1871, avec le roi Guillaume Ier
+    de Prusse comme souverain, Otto von Bismarck comme chancelier et Berlin comme capitale.
+  title: Berlin
+  url: https://fr.wikivoyage.org/wiki/Berlin
+Bern:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649797
+  source: wikivoyage
+  text: Bien que Berne soit le siège de la plupart des institutions de la confédération Swiss, en 2018, la ville
+    comptait environ 134 000 habitants et l'agglomération environ 420 000. La ville est située sur une péninsule
+    formée par les méandres de l'Aar. La remarquable cohérence de la conception de la vieille ville de Berne lui
+    a valu d'être inscrite sur la liste du patrimoine mondial de l'UNESCO.
+  title: Berne
+  url: https://fr.wikivoyage.org/wiki/Berne
+Boden:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 231584302
+  source: wikipedia
+  text: Boden est une ville de Suède, chef-lieu de la commune de Boden. La ville se trouve sur la Malmbanan, ligne
+    de chemin de fer qui rejoint Riksgränsen, à la frontière avec la Norvège via Kiruna. Au-delà, cette ligne rejoint
+    la ville norvégienne de Narvik en prenant le nom de ligne d'Ofot (ou Ofotbanen). La Stambanan genom övre Norrlandde
+    mène elle, jusqu'à Luleå.
+  title: Boden
+  url: https://fr.wikipedia.org/wiki/Boden
+Bologna:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 657603
+  section: Comprendre
+  source: wikivoyage
+  text: Bologne est une ville du nord de l'Italie en Émilie-Romagne. Bologne est situé dans la vallée du Pô, près
+    des collines des Apennins, entre la vallée du Reno et celle de Savena. La province s'étend de l'extrémité sud
+    de la vallée du Pô à la montagne bordant avec Ferrara, à 300 m d'altitude de la Guardia Sabbiuno et Colle à
+    1 945 m d'altitude du Corno alle Scale.
+  title: Bologne
+  url: https://fr.wikivoyage.org/wiki/Bologne
+Bonn:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240836311
+  source: wikipedia
+  text: Bonn est une ville fédérale allemande au bord du Rhin dans le sud du Land de Rhénanie-du-Nord-Westphalie.
+    Entre 1949 et 1990, la ville était la capitale de la République fédérale d'Allemagne. Depuis, elle a un statut
+    de ville fédérale, qui est unique au pays. Presque la moitié des ministères possèdent encore leurs sièges principaux
+    à Bonn, les autres ayant été transférés à Berlin.
+  title: Bonn
+  url: https://fr.wikipedia.org/wiki/Bonn
+Bordeaux:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 667129
+  section: Comprendre
+  source: wikivoyage
+  text: Bordeaux est une ville du Sud-Ouest de la France et la préfecture de la Gironde et de la région Nouvelle-Aquitaine.
+    1 Office de Tourisme de Bordeaux, 12 Cours du 30 Juillet, ☎ +33 5 56 006600. 2 Office de Tourisme de Bordeaux,
+    Rue Charles Domercq, ☎ +33 5 56 916470. 3 Bordeaux Patrimoine Mondial, 2-8 Place de la Bourse, ☎ +33 5 56 480424.
+  title: Bordeaux
+  url: https://fr.wikivoyage.org/wiki/Bordeaux
+Bratislava:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649853
+  section: Comprendre
+  source: wikivoyage
+  text: de Vienne) et avec la Hongrie, et à proximité de la frontière avec la République tchèque. Peuplée de 446
+    000 habitants, elle est la plus grande ville de Slovaquie. Bratislava, connue aussi historiquement sous le nom
+    de Presbourg ou de Pozsony est la capitale de la Slovaquie. Bratislava est traversée par le Danube et est le
+    siège de la présidence, du parlement et du gouvernement slovaques.
+  title: Bratislava
+  url: https://fr.wikivoyage.org/wiki/Bratislava
+Brest:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 668096
+  section: Comprendre
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Brest. Brest est une sous-préfecture du Finistère en Bretagne en
+    France. Avec un territoire fort de 215 647 habitants, Brest est la 22e ville de France, la 2e de Bretagne et
+    la 1re du Finistère. Sous-préfecture du Finistère, elle est également la préfecture maritime de l’Atlantique
+    du fait de la présence de la deuxième base navale de France.
+  title: Brest (France)
+  url: https://fr.wikivoyage.org/wiki/Brest_%28France%29
+Brussels:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669918
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Bruxelles. Bruxelles, en forme longue la Région de Bruxelles-Capitale,
+    en néerlandais Brussel et, en forme longue, Brussels Hoofdstedelijk Gewest, est une des trois régions fédérées
+    de Belgique dont la ville de Bruxelles, une des dix-neuf communes de cette région, fut confirmée comme capitale
+    de la Belgique en 1831.
+  title: Bruxelles
+  url: https://fr.wikivoyage.org/wiki/Bruxelles
+Bucharest:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649867
+  section: Comprendre
+  source: wikivoyage
+  text: Bucarest est la capitale de la Roumanie. Surnommé, "le petit Paris" ou "le Paris des Balkans", Bucureşti
+    est une ville à l'image de son passé tumultueux. Située au sud de la Roumanie, au cœur de la Grande plaine de
+    Muntenia, la ville est construite sur la rivière Dâmboviţa, sous-affluent du Danube. Avec plus de 2 millions
+    d'habitants, Bucarest est le centre de la vie administrative, économique et culturelle du pays.
+  title: Bucarest
+  url: https://fr.wikivoyage.org/wiki/Bucarest
+Budapest:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 656793
+  source: wikivoyage
+  text: Budapest est la capitale de la Hongrie. La ville attire de nombreux visiteurs pour son ambiance jeune, sa
+    scène musicale classique ainsi qu'une vie nocturne animée mais aussi et non le moindre son offre exceptionnelle
+    de thermes naturels. Elle est surnommée la « perle du Danube » ou en raison de son architecture « Paris de l'est
+    ».
+  title: Budapest
+  url: https://fr.wikivoyage.org/wiki/Budapest
+Cardiff:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649961
+  source: wikivoyage
+  text: Cardiff est la capitale du Pays de Galles et est située au sud de celui-ci. Cette ville a une réputation
+    de ville industrielle due à son histoire, mais ceci a enormément changé ces dernières années. C'est devenu une
+    capitale agréable à vivre attirant des touristes intéressés par son histoire et sa culture.
+  title: Cardiff
+  url: https://fr.wikivoyage.org/wiki/Cardiff
+Casablanca:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669940
+  section: Comprendre
+  source: wikivoyage
+  text: Casablanca est la capitale économique et la plus grande ville du Maroc. Première métropole et capitale économique
+    du Maroc, Casablanca est sans nul doute la cité la plus occidentale du pays. Son charme diffère radicalement
+    de celui des cités impériales comme Fès ou Marrakech.
+  title: Casablanca
+  url: https://fr.wikivoyage.org/wiki/Casablanca
+Chania:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239995978
+  source: wikipedia
+  text: 'La Canée (de l''italien: La Canea) ou Chaniá (en grec moderne: τα Χανιά [au pluriel]; parfois romanisé
+    en Hania) est une ville de Crète occidentale, dans le district régional du même nom, en Grèce. C''est la deuxième
+    ville de l''île, avec près de 55 000 habitants selon le recensement de 2021.'
+  title: La Canée
+  url: https://fr.wikipedia.org/wiki/La_Can%C3%A9e
+Chisinau:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 650024
+  source: wikivoyage
+  text: Chișinău (en russe Kišinyov, en ukrainien Kišiniv, prononcé "Kichinow") est la capitale de la Moldavie,
+    avec une population d'environ 567 000 habitants et 250 000 personnes s'y rendant quotidiennement pour travailler.
+    Le territoire de la ville avec les banlieues les plus proches couvre une superficie de 635 km2.
+  title: Chișinău
+  url: https://fr.wikivoyage.org/wiki/Chi%C8%99in%C4%83u
+Copenhagen:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240762521
+  source: wikipedia
+  text: Copenhague est la capitale et la plus grande ville du Danemark. La commune de Copenhague compte 653 648
+    habitants en 2023, et son agglomération, le Grand Copenhague, en compte 1 345 562. Le nom de Copenhague est
+    généralement donné à l'ensemble du comté de Copenhague, qui regroupe, quant à lui, 1 891 871 habitants.
+  title: Copenhague
+  url: https://fr.wikipedia.org/wiki/Copenhague
+Donostia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651173
+  source: wikivoyage
+  text: San Sebastián est une ville portuaire et une station balnéaire du nord de l'Espagne. Capitale du Guipuzcoa,
+    elle est une des principales villes du Pays basque, comptant 186 222 habitants au sein d'une agglomération de
+    436 500 habitants.
+  title: San Sebastián
+  url: https://fr.wikivoyage.org/wiki/San_Sebasti%C3%A1n
+Dublin:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239682140
+  source: wikipedia
+  text: Dublin est la plus grande ville de l'île d'Irlande et de l'Irlande, dont elle est la capitale. La ville
+    est située sur la côte orientale de l'île et au centre du comté de Dublin. Dublin est la plus grande ville d'Irlande
+    en importance politique et économique ainsi que par le nombre d’habitants depuis le haut Moyen Âge.
+  title: Dublin
+  url: https://fr.wikipedia.org/wiki/Dublin
+Durrës:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240152362
+  source: wikipedia
+  text: Durrës, aussi appelé Duraz est une municipalité, le chef-lieu de la préfecture de Durrës et la deuxième
+    plus grande ville d'Albanie après Tirana. Elle est le principal port du pays. Dans l'Antiquité, elle a été connue
+    sous les noms d'Epidamnos, puis Dyrrachium, et autrefois en français Duras. Elle était le point de départ de
+    la via Egnatia, qui traversait l'actuelle Albanie et la Grèce jusqu'à Byzance.
+  title: Durrës
+  url: https://fr.wikipedia.org/wiki/Durr%C3%ABs
+Edinburgh:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 649882
+  section: Comprendre
+  source: wikivoyage
+  text: Édimbourg est la capitale de l'Écosse. Édimbourg accueille beaucoup d'étudiants du monde entier et est du
+    coup une ville très cosmopolite. Il n'est pas rare d'y croiser Français, Espagnols, Allemands, Italiens, Chinois,
+    Polonais. En 2010, plus 1,3 million de touristes non britanniques et pas loin de 2 millions de britanniques
+    ont visité la ville.
+  title: Édimbourg
+  url: https://fr.wikivoyage.org/wiki/%C3%89dimbourg
+Entroncamento:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239022697
+  source: wikipedia
+  text: 'Entroncamento est une municipalité du Portugal, située dans le district de Santarém et la région Centre.
+    C''est la deuxième plus petite municipalité du pays en superficie, avec seulement 13,8 km2. Avec 20 206 habitants,
+    cela correspond à une densité de 1 464,2 hab./km2. Elle est divisée en deux paroisses. Entroncamento a trois
+    saints patrons: la Sainte Famille, saint Jean-Baptiste et Notre-Dame de Fátima.'
+  title: Entroncamento
+  url: https://fr.wikipedia.org/wiki/Entroncamento
+Faro:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241072916
+  source: wikipedia
+  text: Faro est une ville du Portugal et la capitale de l'Algarve, la région qui se trouve à l'extrême sud du Portugal.
+    Faro abrite un aéroport international qui accueille chaque année de plus en plus de touristes mais qui ne restent
+    pas à Faro, préférant Portimão, et les nombreuses stations balnéaires de la côte. Cependant, la vaste plage
+    de sable de Faro, aménagée sur une île, retient de nombreux touristes.
+  title: Faro
+  url: https://fr.wikipedia.org/wiki/Faro
+Florence:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 664149
+  section: Comprendre
+  source: wikivoyage
+  text: Florence est la capitale de la Toscane, une des régions les plus riches et les plus touristiques d'Italie.
+    La ville de Florence, berceau de la Renaissance artistique italienne qui a rayonné dans le monde entier, regroupe
+    dans son centre de nombreux musées, des palais, des églises, des places historiques et a gardé une architecture
+    médiévale importante grâce aux Médicis qui ont dirigé la Toscane et qui se sont avérés des mécènes accomplis.
+  title: Florence
+  url: https://fr.wikivoyage.org/wiki/Florence
+Foggia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239433826
+  source: wikipedia
+  text: Foggia est une ville italienne de la province du même nom dans les Pouilles en Italie.
+  title: Foggia
+  url: https://fr.wikipedia.org/wiki/Foggia
+Frankfurt:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240324920
+  source: wikipedia
+  text: La gare centrale de Francfort-sur-le-Main est une gare ferroviaire allemande. Située au centre-ville, c'est
+    la plus importante de la ville de Francfort-sur-le-Main, dans le land de Hesse. Avec 164 millions de voyageurs
+    par an, c'est la deuxième gare ayant le trafic voyageurs le plus élevé en Allemagne; elle est également la quatrième
+    gare la plus fréquentée d'Europe.
+  title: Gare centrale de Francfort-sur-le-Main
+  url: https://fr.wikipedia.org/wiki/Gare_centrale_de_Francfort-sur-le-Main
+Galway:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 238743811
+  source: wikipedia
+  text: Galway est une ville de la province de Connacht, dans le comté de Galway, sur la côte ouest de l’Irlande.
+    La population de la ville s'élève à 79 934 habitants en 2016. L'agglomération de Galway est la quatrième du
+    pays par le nombre d'habitants, après Dublin, Cork et Limerick. C'est une ville étudiante, très touristique
+    en été, célèbre pour ses festivals.
+  title: Galway
+  url: https://fr.wikipedia.org/wiki/Galway
+Gdansk:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 650235
+  section: Comprendre
+  source: wikivoyage
+  text: Gdańsk est une ville de la Pologne. Gdańsk (également connue sous son nom allemand Danzig) est une ville
+    de Pologne sur la mer Baltique. Gdańsk est considérée comme l'une des plus belles villes de la mer Baltique
+    et possède une architecture magnifique. Gdansk aussi est le lieu de naissance du philosophe allemand Arthur
+    Schopenhauer.
+  title: Gdańsk
+  url: https://fr.wikivoyage.org/wiki/Gda%C5%84sk
+Geneve:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 653147
+  section: Comprendre
+  source: wikivoyage
+  text: 'Le canton de Genève, officiellement la République et canton de Genève, est le canton le plus occidental
+    de la Suisse. 1 Genève Tourisme & Congrès, quai du Mont-Blanc 2, 1201 Genève, ☎ +41 22 9097000, info@geneve.com.
+    lun.–sam.: 9 h 15 – 17 h 45 (le jeu. à partir de 10 h), dim.: 10 h – 16 h. (5 marches pour accéder à l''esplanade).
+    (dernière mise à jour: fév. 2020)'
+  title: Canton de Genève
+  url: https://fr.wikivoyage.org/wiki/Canton_de_Gen%C3%A8ve
+Genoa:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 664532
+  source: wikivoyage
+  text: Gênes est une ville italienne, capitale de la Ligurie, second port de la mer Méditerranée après Marseille.
+    Elle compte environs 600 000 habitants. Gênes est une des principales villes sur la côte méditerranéenne de
+    la mer Ligure, un grand port situé au creux du golfe de Gênes, une ancienne république et la patrie de Christophe
+    Colomb. Son centre historique, médiéval et Renaissance, est un des plus étendus d'Europe.
+  title: Gênes
+  url: https://fr.wikivoyage.org/wiki/G%C3%AAnes
+Glasgow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 664540
+  section: Comprendre
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Glasgow. Glasgow est une ville située au centre-ouest de l'Écosse
+    Glasgow est la plus grande ville d'Écosse avec une population d'environ 600 000 habitants, et presque 2 millions
+    en comptant l'agglomération. Située à l'extrémité Est de la ceinture centrale de l'Écosse, c'est une ville au
+    passé industriel très riche et important pour son pays.
+  title: Glasgow
+  url: https://fr.wikivoyage.org/wiki/Glasgow
+Granada:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241243275
+  source: wikipedia
+  text: 'Grenade est une ville espagnole, capitale de la province de Grenade dans le Sud-Est de l''Andalousie. Elle
+    s''étend sur plusieurs collines au pied de la Sierra Nevada, au confluent de quatre rivières: le Beiro, le Darro,
+    le Genil et le Monachil. La ville de Grenade est façonnée par de multiples cultures et joue un rôle important
+    à plusieurs époques de l''Histoire.'
+  title: Grenade (Espagne)
+  url: https://fr.wikipedia.org/wiki/Grenade_%28Espagne%29
+Göteborg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240419605
+  source: wikipedia
+  text: Göteborg, ou Gothembourg, est la deuxième ville de Suède par l'importance de son poids démographique ainsi
+    que par son industrie et ses activités économiques. C'est aussi la cinquième ville des pays nordiques et la
+    plus grande qui ne soit pas une capitale.
+  title: Göteborg
+  url: https://fr.wikipedia.org/wiki/G%C3%B6teborg
+Hamburg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 664605
+  source: wikivoyage
+  text: Hambourg (Hamburg) est une ville portuaire d'Allemagne du nord, située sur l'Elbe, à environ 50 km de son
+    embouchure, et de la Mer du Nord. C'est une ville-état (à la fois une ville et un Land). Avec 1 869 000 habitants,
+    c'est la deuxième ville d'Allemagne après Berlin.
+  title: Hambourg
+  url: https://fr.wikivoyage.org/wiki/Hambourg
+Hannover:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 237977919
+  source: wikipedia
+  text: La gare centrale de Hanovre est la principale gare ferroviaire de Hanovre en Allemagne. Avec environ 250
+    000 voyageurs par jour, elle est la sixième gare longue distance la plus fréquentée de la Deutsche Bahn après
+    Hambourg, Munich, Francfort-sur-le-Main, Berlin et Cologne, ainsi que Düsseldorf. Il s'agit par conséquent d'un
+    nœud important des transports publics et du S-Bahn de Hanovre.
+  title: Gare centrale de Hanovre
+  url: https://fr.wikipedia.org/wiki/Gare_centrale_de_Hanovre
+Helsinki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 236783227
+  source: wikipedia
+  text: 'La gare centrale d''Helsinki (en finnois: Helsingin päärautatieasema, en suédois: Helsingfors centralstation)
+    est une gare ferroviaire, située sur la place Rautatientori (place de la gare centrale) dans le centre d''Helsinki
+    en Finlande. Principale gare d''Helsinki, c''est également la gare la plus fréquentée de Finlande.'
+  title: Gare centrale d'Helsinki
+  url: https://fr.wikipedia.org/wiki/Gare_centrale_d%27Helsinki
+Hendaye:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 657674
+  source: wikivoyage
+  text: Avec une population permanente de 18 000 habitants, Hendaye offre un site privilégié pour passer des vacances
+    au Pays basque. Aux portes de l’Espagne, la station propose 3 kilomètres de plage de sable fin pour le plus
+    grand bonheur des enfants et deux plans d’eau pour les amateurs de sports nautiques.
+  title: Hendaye
+  url: https://fr.wikivoyage.org/wiki/Hendaye
+Holyhead:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240411350
+  source: wikipedia
+  text: 'Holyhead (en gallois: Caergybi) est une communauté et un port britannique, situé sur Holy Island, au nord
+    du pays de Galles et à l''ouest de l''île d''Anglesey.'
+  title: Holyhead
+  url: https://fr.wikipedia.org/wiki/Holyhead
+Iasi:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 236707897
+  source: wikipedia
+  text: Iași est une ville en Moldavie roumaine, chef-lieu du județ de Iași et troisième ville du pays après la
+    capitale Bucarest. Iași fut la capitale de la Moldavie entre 1564 et 1859, puis une des deux capitales des Principautés
+    unies de Moldavie et de Valachie entre 1859 et 1862, et enfin capitale de la Roumanie en 1916-1918. En 2021,
+    la ville compte 271 692 habitants, soit la troisième ville de Roumanie.
+  title: Iași
+  url: https://fr.wikipedia.org/wiki/Ia%C8%99i
+Innsbruck:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239131714
+  source: wikipedia
+  text: Innsbruck est une ville autrichienne située dans l'Ouest du pays, dans une vallée au cœur des Alpes; elle
+    est la deuxième plus grande ville alpine après Grenoble. Elle est la capitale du Land du Tyrol, et est traversée
+    par la rivière l'Inn. Son nom vient du nom de la rivière l'Inn et du mot Brücke et signifie « pont de l'Inn
+    ».
+  title: Innsbruck
+  url: https://fr.wikipedia.org/wiki/Innsbruck
+Irun:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241215090
+  source: wikipedia
+  text: 'Irun (en espagnol: Irún [i.ˈɾun]) est une commune du Guipuscoa dans la communauté autonome du Pays basque,
+    située dans le Nord de l''Espagne. Faisant face à la ville française d''Hendaye dont elle est séparée par la
+    Bidassoa, elle occupe une position stratégique à la frontière entre l''Espagne et la France, et commande le
+    passage principal des Pyrénées occidentales.'
+  title: Irun
+  url: https://fr.wikipedia.org/wiki/Irun
+Istanbul:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239436077
+  source: wikipedia
+  text: 'La province d''Istanbul est une des 81 provinces (en turc: il, au singulier, et iller au pluriel) de la
+    Turquie. Sa préfecture (en turc: valiliği) se trouve dans la ville éponyme d''Istanbul.'
+  title: Istanbul (province)
+  url: https://fr.wikipedia.org/wiki/Istanbul_%28province%29
+Izmir:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240166472
+  source: wikipedia
+  text: 'Izmir, traditionnellement appelée Smyrne (en turc İzmir; en grec moderne: Σμύρνη, Smýrni), est une ville
+    de Turquie, située sur la mer Égée près du golfe d''Izmir. C''est le deuxième port du pays (après Istanbul)
+    et la troisième agglomération turque par le nombre d’habitants (4 425 789 habitants en 2021). Ses habitants
+    sont les Smyrniotes (İzmirli en turc).'
+  title: Izmir
+  url: https://fr.wikipedia.org/wiki/Izmir
+Kaisiadorys:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240827265
+  source: wikipedia
+  text: Kaišiadorys est une ville de l'apskritis de Kaunas, chef-lieu de la municipalité du district de Kaišiadorys,
+    en Lituanie.
+  title: Kaišiadorys
+  url: https://fr.wikipedia.org/wiki/Kai%C5%A1iadorys
+Kaunas:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240826473
+  source: wikipedia
+  text: Kaunas est la deuxième ville de Lituanie et le plus important port fluvial des pays baltes, sur le Niémen.
+    Elle est aussi la capitale administrative de l'apskritis de Kaunas et a été la capitale de Lituanie de 1920
+    à 1940. Sa population s'élevait à 298 753 habitants en 2021.
+  title: Kaunas
+  url: https://fr.wikipedia.org/wiki/Kaunas
+Koblenz:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 654578
+  section: Comprendre
+  source: wikivoyage
+  text: 'Coblence est une ville de Rhénanie-Palatinat à la confluence de la Moselle et du Rhin en Allemagne. 1 Tourist-Information
+    im Forum Confluentes, Zentralplatz 1, ☎ +49 261 19433, Touristinformation@koblenz-touristik.de. lun.–dim.: 10
+    h – 18 h. (dernière mise à jour: fév. 2018)'
+  title: Coblence
+  url: https://fr.wikivoyage.org/wiki/Coblence
+Kolding:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 236491737
+  source: wikipedia
+  text: Kolding (Coldingue en français) ([ˈkʰʌleŋ]) est une ville portuaire du Danemark dans la région du Danemark
+    du Sud. La ville compte 62 444 habitants au 1er janvier 2024.
+  title: Kolding
+  url: https://fr.wikipedia.org/wiki/Kolding
+Krakow:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 224949330
+  source: wikipedia
+  text: 'Le powiat de Cracovie est un powiat de la voïvodie de Petite-Pologne, dans le sud de la Pologne. Il a été
+    créé le 1er janvier 1999. Son siège est la ville de Cracovie, bien qu''elle ne soit pas sur son territoire.
+    Il comprend cinq villes: Skawina, à 12 km au sud-ouest de Cracovie, Krzeszowice, à 24 km à l''ouest de Cracovie,
+    Słomniki, à 24 km au nord-est de Cracovie, Skała, à 20 km au nord de Cracovie, et Świątniki Górne, à 15 km au
+    sud de Cracovie.'
+  title: Powiat de Cracovie
+  url: https://fr.wikipedia.org/wiki/Powiat_de_Cracovie
+Kuopio:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672559
+  section: Comprendre
+  source: wikivoyage
+  text: Kuopio est une ville de Finlande. Kuopio est la capitale et la plus grande ville de la Savonie du Nord.
+    Entourée de lacs sur trois côtés, elle offre de nombreuses plages et donne partout le sentiment que l’eau est
+    toujours à proximité.
+  title: Kuopio
+  url: https://fr.wikivoyage.org/wiki/Kuopio
+Kyiv:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240890099
+  source: wikipedia
+  text: Kiev ou Kyïv est la capitale et la ville la plus peuplée d'Ukraine. Elle est située au centre-nord du pays
+    sur les rives du fleuve Dniepr. Kiev est un important centre industriel, scientifique, universitaire et culturel
+    de l'Europe de l'Est. Elle est le siège de nombreuses entreprises, d'établissements d'enseignement supérieur
+    et de centres de recherche.
+  title: Kiev
+  url: https://fr.wikipedia.org/wiki/Kiev
+Köln:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 671329
+  source: wikivoyage
+  text: Cologne est une ville situé sur le Rhin en Rhénanie-du-Nord-Westphalie. c'est la quatrième plus grande ville
+    d'Allemagne avec environ un million d'habitants. Il est l'un des centre des médias, du tourisme et des affaires
+    du pays et souvent est considéré comme l'une des villes les plus libérales d'Allemagne.
+  title: Cologne
+  url: https://fr.wikivoyage.org/wiki/Cologne
+L'Hospitalet:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 237651388
+  source: wikipedia
+  text: L'Hospitalet-près-l'Andorre est une commune française située dans le sud-est du département de l'Ariège,
+    dans la région Occitanie. Sur le plan historique et culturel, la commune fait partie du pays du Sabarthès, structuré
+    par la haute vallée de l'Ariège en amont du pays de Foix avec Tarascon-sur-Ariège comme ville principale.
+  title: L'Hospitalet-près-l'Andorre
+  url: https://fr.wikipedia.org/wiki/L%27Hospitalet-pr%C3%A8s-l%27Andorre
+Lecce:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239606183
+  source: wikipedia
+  text: Lecce est une ville italienne d'environ 94 970 habitants, capitale de la province du même nom dans les Pouilles,
+    dans le sud de l'Italie. Ville importante du sud-est des Pouilles, située au centre du Salento, Lecce a été,
+    pendant des siècles, un centre culturel, religieux et commercial prospère et l'une des villes les plus peuplées
+    du royaume de Naples.
+  title: Lecce
+  url: https://fr.wikipedia.org/wiki/Lecce
+Lille:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669470
+  source: wikivoyage
+  text: Lille, chef-lieu du département du Nord et de la région des Hauts-de-France, est une commune qui fait partie
+    de la Métropole européenne de Lille (MEL). Cœur historique de l'agglomération, c'est la plus peuplée et la plus
+    étendue des communes de la MEL.
+  title: Lille
+  url: https://fr.wikivoyage.org/wiki/Lille
 Lisbon:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -12,3 +804,1024 @@ Lisbon:
     La ville compte trois funiculaires et un ascenseur, inauguré en 1902.
   title: Lisbonne
   url: https://fr.wikivoyage.org/wiki/Lisbonne
+Liège:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669467
+  section: Comprendre
+  source: wikivoyage
+  text: 'Pour les autres lieux du même nom, voir Liège. La province de Liège est une des dix provinces de la Belgique.
+    Elle est située en Wallonie et son chef-lieu, Liège, est aussi la capitale économique officielle de la Région
+    wallonne. La province est divisée en quatre arrondissements administratifs: Liège, Huy, Verviers et Waremme
+    et en deux arrondissements judiciaires: Liège et Eupen.'
+  title: Province de Liège
+  url: https://fr.wikivoyage.org/wiki/Province_de_Li%C3%A8ge
+Ljubljana:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240767386
+  source: wikipedia
+  text: Ljubljana ou Lioubliane en français, est la capitale de la Slovénie. Plus grande ville du pays avec environ
+    280 000 habitants, elle est influencée tout au long de son histoire par différentes cultures du fait de sa position
+    géographique charnière entre les cultures germanique, latine et slave. Depuis 1991, la ville est le centre économique
+    et culturel principal de la Slovénie devenue indépendante de la Yougoslavie.
+  title: Ljubljana
+  url: https://fr.wikipedia.org/wiki/Ljubljana
+London:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669518
+  source: wikivoyage
+  text: Londres est la capitale du Royaume-Uni. Les habitants de Londres sont appelés londoniens. La ville est l'un
+    des centres économiques et financiers les plus importants du monde. Capitale de l'ancien Empire britannique,
+    Londres conserve une place éminente en matière de culture, de communications, de finance, de spectacles et en
+    matière d’art, domaines dans lesquels elle exerce une influence au plan mondial.
+  title: Londres
+  url: https://fr.wikivoyage.org/wiki/Londres
+Lugano:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 650587
+  section: Comprendre
+  source: wikivoyage
+  text: Lugano, troisième place financière de Suisse, est une ville de renommée internationale. Elle est située
+    dans le canton du Tessin, une région italophone qui confine avec l’Italie. Lugano est une ville universitaire
+    caractérisée par un climat doux et ensoleillé. La région luganaise attire de nombreux visiteurs venus d’Europe
+    et d’autres continents.
+  title: Lugano
+  url: https://fr.wikivoyage.org/wiki/Lugano
+Luxembourg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651555
+  section: Comprendre
+  source: wikivoyage
+  text: Luxembourg, communément appelée d’Stad, est la capitale du Grand-duché de Luxembourg. Avant d'être la capitale
+    du Grand-Duché, Luxembourg fut le siège du comté puis duché de Luxembourg depuis le Xe siècle lorsque le comte
+    Sigefroy de Luxembourg y fit construire un château sur les vestiges d'un castellum romain situé sur le rocher
+    du Bock. La ville occupe un site exceptionnel classé au patrimoine mondial de l'UNESCO.
+  title: Luxembourg (ville)
+  url: https://fr.wikivoyage.org/wiki/Luxembourg_%28ville%29
+Lyon:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669602
+  section: Comprendre
+  source: wikivoyage
+  text: Lyon est une ville située dans le département du Rhône en région Auvergne-Rhône-Alpes, au centre-est de
+    la France. Lyon est la deuxième ville administrative française, troisième plus grande ville de France. C'est
+    le centre économique de la région Auvergne-Rhône-Alpes, et le chef-lieu du département du Rhône.
+  title: Lyon
+  url: https://fr.wikivoyage.org/wiki/Lyon
+Madrid:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669683
+  section: Comprendre
+  source: wikivoyage
+  text: Madrid est la capitale de l'Espagne et de la Communauté autonome de Madrid. Madrid est la plus grande ville
+    d'Espagne. À l'origine petit bourg de Castille, la région centrale de l'Espagne, elle s'est progressivement
+    imposée comme capitale du royaume espagnol. Madrid est une ville animée par excellence, la grande université
+    draine un très grand nombre d'étudiants qui animent la ville tout au long de l'année.
+  title: Madrid
+  url: https://fr.wikivoyage.org/wiki/Madrid
+Malaga:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 650661
+  section: Comprendre
+  source: wikivoyage
+  text: Málaga est la capitale de la province éponyme située dans le Sud de l'Espagne et à un « jet de pierre »
+    du Maroc. C'est cette position de carrefour entre plusieurs civilisations qui lui confère un charme unique.
+    Bordée par la mer Méditerranée et protégée des vents intérieurs par les monts au nord de la ville, Málaga bénéficie
+    d'un des taux d'exposition au soleil les plus élevés du monde.
+  title: Málaga
+  url: https://fr.wikivoyage.org/wiki/M%C3%A1laga
+Malmö:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241007723
+  source: wikipedia
+  text: Malmö est une ville à l'extrême sud de la Suède. La commune de Malmö regroupe 318 107 habitants en 2014,
+    ce qui en fait la plus grande de la région de Scanie et la 3e ville de Suède, après Stockholm et Göteborg. La
+    métropole de Malmö compte plus de 560 000 habitants et jouxte celle de Copenhague et ses 1 650 000 habitants;
+    cet ensemble, appelé région de l'Öresund, constitue un pôle majeur en Scandinavie.
+  title: Malmö
+  url: https://fr.wikipedia.org/wiki/Malm%C3%B6
+Manchester:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 650618
+  section: Comprendre
+  source: wikivoyage
+  text: 'Pour les autres endroits portant le même nom, consultez Manchester. Manchester, considérée comme la capitale
+    du nord de l''Angleterre, offre de nombreuses attractions touristiques et culturelles. 1 Centre d''information
+    touristique de Manchester, Sint Peters Square, fax: +44 161 236-9900, visitorinformation@manchester.gov.uk..
+    lun.–sam.: 9 h – 17 h. À des listes à jour des endroits où manger et dormir.'
+  title: Manchester
+  url: https://fr.wikivoyage.org/wiki/Manchester
+Marrakech:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 670784
+  section: Comprendre
+  source: wikivoyage
+  text: Marrakech est une ville du Maroc. Marrakech est parmi les plus belles villes du Maroc, connue entre autres
+    par sa célèbre place Jemaâ el-Fna. Vous y apprécierez sûrement les Gnaouas, les Åissawas, etc. Site officiel
+    de Marrakech réalisé par l’Office National Marocain du Tourisme. amarrakech – Annuaire Professionnel de Marrakech
+    En été à Marrakech, les gens se lèvent soit plus tôt soit se couchent plus tard comme les matinées sont extrêmement
+    agréables et les soirées magnifiques pour aller se promener et boire un verre dans un des multiples endroits
+    faits pour les « couche-tard »!
+  title: Marrakech
+  url: https://fr.wikivoyage.org/wiki/Marrakech
+Marseille:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669766
+  section: Comprendre
+  source: wikivoyage
+  text: Marseille est la deuxième ville de France et le centre économique de la région Provence-Alpes-Côte d'Azur.
+    Marseille est la plus vieille ville de France, fondée il y a environ 2600 ans par des Grecs venant de Phocée.
+    Port majeur et carrefour de la Méditerranée depuis ce temps, la ville est cosmopolite et mouvante.
+  title: Marseille
+  url: https://fr.wikivoyage.org/wiki/Marseille
+Messina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 655719
+  source: wikivoyage
+  text: 'La province de Messine, ou officiellement Ville métropolitaine de Messine (en italien: Città metropolitana
+    di Messina) depuis 2015, est une région de l''est de la Sicile en Italie.'
+  title: Messine (province)
+  url: https://fr.wikivoyage.org/wiki/Messine_%28province%29
+Milan:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 664391
+  source: wikivoyage
+  text: Milan est financièrement la ville la plus importante d'Italie, et accueille la bourse Borsa Italiana. C'est
+    la deuxième ville la plus peuplée du pays, mais elle se trouve au centre de la plus grande zone urbaine et métropolitaine
+    d'Italie.
+  title: Milan
+  url: https://fr.wikivoyage.org/wiki/Milan
+Monaco:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669798
+  source: wikivoyage
+  text: Monaco, en forme longue la Principauté de Monaco, est une cité-État située le long de la Côte d'Azur à une
+    vingtaine de kilomètres à l'est de Nice en France. C'est le deuxième plus petit État indépendant du monde après
+    le Vatican et le plus densément peuplé. Cette ville est surtout connue pour son climat, son casino et son circuit
+    automobile de Formule 1.
+  title: Monaco
+  url: https://fr.wikivoyage.org/wiki/Monaco
+Montpellier:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672139
+  section: Comprendre
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Montpellier. Montpellier est une ville du Sud-Ouest de la France
+    et la préfecture de l'Hérault. Principale ville du Bas-Languedoc, préfecture de l'Hérault, et co-capitale, avec
+    Toulouse, de la région Occitanie, Montpellier, avec ses 299 000 habitants est le cœur économique, culturel,
+    médical et universitaire du Bas-Languedoc. Elle est la huitième ville française.
+  title: Montpellier
+  url: https://fr.wikivoyage.org/wiki/Montpellier
+Munich:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 669821
+  section: Comprendre
+  source: wikivoyage
+  text: Munich est une ville située en Allemagne, capitale de la Bavière. La ville est mondialement connue pour
+    l'Oktoberfest, la fête de la bière, qui commence tous les ans l'avant dernier samedi de septembre. Munich est,
+    avec 1 443 122 habitants, la troisième ville d'Allemagne par sa population après Berlin et Hambourg. Elle est
+    la capitale du Land de Bavière et du district de Haute-Bavière.
+  title: Munich
+  url: https://fr.wikivoyage.org/wiki/Munich
+Nantes:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 671349
+  source: wikivoyage
+  text: Nantes est la ville la plus importante du Nord-Ouest de la France ainsi que la sixième commune la plus peuplée
+    du pays. C'est aussi la préfecture du département de Loire-Atlantique et la préfecture de la région des Pays
+    de la Loire. Aujourd'hui Nantes compte plus de 300 000 habitants et sa métropole plus de 630 000.
+  title: Nantes
+  url: https://fr.wikivoyage.org/wiki/Nantes
+Naples:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 671350
+  source: wikivoyage
+  text: Naples capitale de la Campanie, est la troisième plus grande ville d'Italie. Elle se situe dans le Sud du
+    pays, en bordure de la mer Méditerranée. Sa région métropolitaine est la deuxième plus peuplée d'Italie après
+    Milan. Fondée il y a plus de 2800 ans, c'est l'une des villes les plus anciennes du monde et un site classé
+    au patrimoine mondial de l'UNESCO.
+  title: Naples
+  url: https://fr.wikivoyage.org/wiki/Naples
+Narvik:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240538661
+  source: wikipedia
+  text: Narvik (en same du nord Áhkanjárga) est une ville du comté de Nordland en Norvège, chef-lieu de la commune
+    du même nom. Parmi les villes norvégiennes au nord du cercle polaire arctique, elle est la troisième en importance.
+    Elle compte environ 18 500 habitants.
+  title: Narvik
+  url: https://fr.wikipedia.org/wiki/Narvik
+Newcastle:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651633
+  section: Comprendre
+  source: wikivoyage
+  text: Newcastle upon tyne est une ville d'Angleterre. Le centre de la ville est de style néoclassique, construit
+    dans les années 1830 et récemment entièrement rénové. La rue Grey peut prétendre à être une des plus belles
+    rues de l'Angleterre. Le centre-ville est dominé par la silhouette de St James' Park, le stade du Newcastle
+    United Football Club.
+  title: Newcastle upon Tyne
+  url: https://fr.wikivoyage.org/wiki/Newcastle_upon_Tyne
+Nice:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672619
+  source: wikivoyage
+  text: Nice est une ville de France, située sur la Côte d'Azur, dont on dit fréquemment qu'elle est la capitale.
+    La ville est connue pour son intérêt touristique depuis fort longtemps, puisque dès le XIXème siècle, elle servait
+    de villégiature hivernale à de riches Britanniques attirés par la douceur de son climat.
+  title: Nice
+  url: https://fr.wikivoyage.org/wiki/Nice
+Offenburg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 238163647
+  source: wikipedia
+  text: Offenbourg, ville allemande de près de 60 000 habitants, est le chef-lieu de l'arrondissement de l'Ortenau
+    dans le pays de Bade, dans le land de Bade-Wurtemberg. Elle est située sur la Kinzig, un affluent de rive droite
+    du Rhin venant de la Forêt-Noire, et à une vingtaine de kilomètres au sud-est de la ville française de Strasbourg.
+    Elle fait partie de la limite sud-est de la grande couronne de Strasbourg.
+  title: Offenbourg
+  url: https://fr.wikipedia.org/wiki/Offenbourg
+Oslo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 671458
+  section: Comprendre
+  source: wikivoyage
+  text: Oslo est la capitale et la plus grande ville de la Norvège. Oslo est le centre démographique, économique
+    et politique de la Norvège. En tant que capitale de la Norvège, Oslo héberge plusieurs institutions nationales.
+    La ville a plusieurs institutions culturelles, de nombreux restaurants, certains de classe mondiale ainsi que
+    la vie nocturne en général.
+  title: Oslo
+  url: https://fr.wikivoyage.org/wiki/Oslo
+Osnabrück:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239363683
+  source: wikipedia
+  text: Osnabrück est une ville-arrondissement de Basse-Saxe, en Allemagne. Elle se trouve entre Münster et Brême,
+    non loin de la frontière avec la Rhénanie-du-Nord-Westphalie. Après Hanovre et Brunswick, elle est la troisième
+    plus grande ville de Basse-Saxe. Elle est au centre d'une agglomération d'environ 275 000 habitants, et sa zone
+    d'influence est estimée entre 800 000 et un million de personnes.
+  title: Osnabrück
+  url: https://fr.wikipedia.org/wiki/Osnabr%C3%BCck
+Oulu:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240865699
+  source: wikipedia
+  text: 'Oulu (/ˈou̯lu/, en suédois: Uleåborg /ˈʉːlɛoːˌbɔrj/ ) est une ville de Finlande située sur la côte nord-est
+    du golfe de Botnie, en Ostrobotnie du Nord, dont elle est la capitale. Avec une population de 216 152 habitants
+    en 2024, Oulu est au cœur de la quatrième agglomération de Finlande. C''est le centre administratif, culturel
+    et commercial de la Finlande du nord et du centre.'
+  title: Oulu
+  url: https://fr.wikipedia.org/wiki/Oulu
+Palermo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 661392
+  section: Comprendre
+  source: wikivoyage
+  text: Palerme est le chef-lieu de la province de Palerme ainsi que la capitale régionale et la plus grande ville
+    de la Sicile. Palerme est une ville de 700 000 habitants; pourtant le voyageur pourrait se croire au cœur d'une
+    métropole de plusieurs millions d'habitants tant le bruit omniprésent, la circulation infernale et la chaleur
+    moite renforcent la sensation de chaos urbain.
+  title: Palerme
+  url: https://fr.wikivoyage.org/wiki/Palerme
+Palma:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 652342
+  section: Comprendre
+  source: wikivoyage
+  text: Palma de Majorque ou, officiellement depuis 2016, Palma est une ville de Majorque dans les Baléares. Palma
+    de Majorque, la capitale des îles Baléares, est la plus grande ville de Majorque; la population de la commune
+    de Palma est d'environ 400 000 habitants. La moitié de la population de l'île vit dans la ville de Palma. La
+    ville occupe l'extrémité nord-ouest de la baie du sud-ouest de l'île de Majorque.
+  title: Palma de Majorque
+  url: https://fr.wikivoyage.org/wiki/Palma_de_Majorque
+Paris:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 670013
+  source: wikivoyage
+  text: Paris est la capitale de la France. Ville très cosmopolite, sa population avoisine les 2 200 000 habitants
+    pour la commune de Paris intra-muros, 7 millions pour la métropole du Grand Paris et, près de 12 millions d'habitants
+    pour son aire urbaine, c’est donc l’une des villes les plus peuplées d’Europe.
+  title: Paris
+  url: https://fr.wikivoyage.org/wiki/Paris
+Patras:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240724242
+  source: wikipedia
+  text: 'Patras (en grec: Πάτρα / Pátra; katharévousa; en grec illyrien Πάτραι / Pátrai; en latin: Patrae) est une
+    ville de Grèce, située en Achaïe, dans le nord de la péninsule du Péloponnèse, sur le golfe homonyme ouvrant
+    sur la mer Ionienne.'
+  title: Patras
+  url: https://fr.wikipedia.org/wiki/Patras
+Penzance:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 235644709
+  source: wikipedia
+  text: 'Penzance (en cornique: Pennsans) est une ville, une civil parish, une station balnéaire et un port situé
+    dans le district de Penwith dans le sud-ouest de l''Angleterre, en Cornouailles.'
+  title: Penzance
+  url: https://fr.wikipedia.org/wiki/Penzance
+Porto:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651021
+  section: Comprendre
+  source: wikivoyage
+  text: Porto est la capitale de la région du Portugal septentrional. Avec, environ, 240 000 habitants, elle est
+    la seconde plus grande ville du pays, après Lisbonne. Très belle ville avec ses quartiers modernes et la vieille
+    ville, son mélange modernisme/tradition ainsi que par sa fameuse hospitalité et son charme, elle vous séduira.
+  title: Porto
+  url: https://fr.wikivoyage.org/wiki/Porto
+Porto Torres:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 232402221
+  source: wikipedia
+  text: Porto Torres est une commune italienne de la province de Sassari en Sardaigne. Elle est située dans le golfe
+    d'Asinara, en face de l'île homonyme, aujourd'hui devenue parc national. Cette ville est aussi un port parmi
+    les plus importants en Italie pour le trafic passagers. La commune a été fondée en 1842, détachée de la commune
+    de Sassari qui l'entoure encore complètement.
+  title: Porto Torres
+  url: https://fr.wikipedia.org/wiki/Porto_Torres
+Pozzallo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 234444099
+  source: wikipedia
+  text: Pozzallo est une commune italienne de la province de Raguse, dans la région Sicile.
+  title: Pozzallo
+  url: https://fr.wikipedia.org/wiki/Pozzallo
+Prague:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651030
+  source: wikivoyage
+  text: Prague est la capitale de la République tchèque. C'est une ville très touristique en particulier grâce à
+    son histoire et son architecture. Elle est surnommée la ville aux cent clochers car il existe une multitude
+    de bâtiments religieux (églises, temples, synagogues, etc).
+  title: Prague
+  url: https://fr.wikivoyage.org/wiki/Prague
+Przemyśl:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241069394
+  source: wikipedia
+  text: Przemyśl est une ville de la voïvodie des Basses-Carpates, dans le Sud-Est de la Pologne, à la frontière
+    de l'Ukraine. Elle est le chef-lieu du powiat de Przemyśl, sans en faire partie, et constitue un powiat-ville.
+    Avec sa population de 60 999 habitants en 2019, elle était la deuxième ville la plus peuplée de la voïvodie
+    des Basses-Carpates.
+  title: Przemyśl
+  url: https://fr.wikipedia.org/wiki/Przemy%C5%9Bl
+Rabat:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 658697
+  source: wikivoyage
+  text: 'Rabat (en arabe: الرباط (ar-Ribat) et en berbère: ⴻⵔⵔⴱⴰⵟ (Errbaṭ)) est la capitale du Maroc et la deuxième
+    plus grande agglomération du pays après Casablanca. Elle est située sur le littoral atlantique, sur la rive
+    gauche de l''embouchure du Bouregreg, en face de la ville de Salé.'
+  title: Rabat
+  url: https://fr.wikivoyage.org/wiki/Rabat
+Reggio di Calabria:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241192692
+  source: wikipedia
+  text: Reggio de Calabre, couramment appelée simplement Reggio par ses habitants, est la plus grande ville de la
+    région de Calabre et le siège de son conseil régional. Sa population de 168 293 habitants en fait la 21e ville
+    la plus peuplée d'Italie et la 100e plus peuplée d'Europe. C'est également le troisième pôle économique du Mezzogiorno
+    continental.
+  title: Reggio de Calabre
+  url: https://fr.wikipedia.org/wiki/Reggio_de_Calabre
+Riga:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 665285
+  section: Comprendre
+  source: wikivoyage
+  text: 'Riga est la capitale de la Lettonie. Riga est à l''embouchure de la Daugava. Fondée en 1200, Riga fait
+    partie de la ligue hanséatique, ce qui a considérablement développé son architecture et son économie. La ville
+    s''est développée à l''est du fleuve dans un premier temps. On peut encore voir un centre médiéval intéressant:
+    églises, remparts, rues piétonnes pittoresques.'
+  title: Riga
+  url: https://fr.wikivoyage.org/wiki/Riga
+Rimini:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651082
+  section: Comprendre
+  source: wikivoyage
+  text: Rimini est une ville d'Italie sur la côte adriatique. Rimini est une station balnéaire, dans laquelle au
+    cours des années 1980 des trains de suisses d'allemands aménagés en boite de nuit débarqués à Rimini pour faire
+    la fête durant 3 jours. Rimini est également la patrie de Fellini, son film Amarcord y retrace son enfance à
+    Rimini.
+  title: Rimini
+  url: https://fr.wikivoyage.org/wiki/Rimini
+Rome:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 666987
+  section: Comprendre
+  source: wikivoyage
+  text: Rome est la capitale de l’Italie et de la région du Latium. Elle est située sur le Tibre, à 30 km de la
+    mer Méditerranée, près de la mer Tyrrhénienne. Sa superficie totale est d’environ 1 285 km2, et la ville compte
+    environ 3 000 000 d'habitants. Rome, la Ville Éternelle, est extrêmement riche et vivante. Née au VIIIe siècle
+    av.
+  title: Rome
+  url: https://fr.wikivoyage.org/wiki/Rome
+Rostock:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 671107
+  section: Comprendre
+  source: wikivoyage
+  text: Rostock est une ville de Mecklembourg-Poméranie occidentale. Rostock est une ville portuaire sur le fleuve
+    Warnow qui se jette dans la mer Baltique une dizaine de km après avoir traversé le centre-ville. Forte de sa
+    situation géographique favorable au commerce maritime, Rostock était un membre important de la Ligue hanséatique
+    et une ville remarquablement riche.
+  title: Rostock
+  url: https://fr.wikivoyage.org/wiki/Rostock
+Rovaniemi:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 652499
+  section: Comprendre
+  source: wikivoyage
+  text: Rovaniemi est la principale ville de Laponie finlandaise. Elle est située au cœur de cette région dans un
+    paysage de forêt boréale et de lacs. C'est le principal centre touristique du nord du pays, avec notamment le
+    village du Père Noël. La commune est très étendue et occupe une position centrale en Laponie.
+  title: Rovaniemi
+  url: https://fr.wikivoyage.org/wiki/Rovaniemi
+Ruse:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241186097
+  source: wikipedia
+  text: Roussé (Русе, en bulgare) est avec une population de 166 056 habitants la cinquième ville de Bulgarie.
+  title: Roussé
+  url: https://fr.wikipedia.org/wiki/Rouss%C3%A9
+Salerno:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239481431
+  source: wikipedia
+  text: 'La province de Salerne (en italien: Provincia di Salerno) est une province italienne, située dans la région
+    de Campanie. Sa capitale provinciale est Salerne.'
+  title: Province de Salerne
+  url: https://fr.wikipedia.org/wiki/Province_de_Salerne
+San Marino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 662033
+  source: wikivoyage
+  text: La République la plus sereine de Saint-Marin est la plus ancienne république du monde et le troisième plus
+    petit État d’Europe. C'est le seul survivant de la mosaïque d’États indépendants qui constituaient la péninsule
+    italienne, avant l’unification de l'Italie dans lequel il est désormais enclavé.
+  title: Saint-Marin
+  url: https://fr.wikivoyage.org/wiki/Saint-Marin
+Santiago de Compostela:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 661635
+  section: Comprendre
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Saint-Jacques. Saint-Jacques-de-Compostelle est la capitale de la
+    communauté autonome de Galice en Espagne et un des plus grands centres de pèlerinage du monde chrétien. Cette
+    ville est un haut lieu de pèlerinage Chrétien depuis le Moyen Âge. C'est aujourd'hui l'une de ces principales
+    activités que d'accueillir et de permettre aux pèlerins de se loger dans ses murs.
+  title: Saint-Jacques-de-Compostelle
+  url: https://fr.wikivoyage.org/wiki/Saint-Jacques-de-Compostelle
+Sarajevo:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241255848
+  source: wikipedia
+  text: Sarajevo est la capitale et la plus grande ville de Bosnie-Herzégovine. Traversée par la rivière Miljacka,
+    la ville fait partie du canton de Sarajevo, l'un des dix de Bosnie-Herzégovine. Sarajevo est le centre politique,
+    financier, social et culturel de la Bosnie-Herzégovine avec une influence régionale dans le divertissement,
+    les médias, la mode et les arts.
+  title: Sarajevo
+  url: https://fr.wikipedia.org/wiki/Sarajevo
+Seinäjoki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240964414
+  source: wikipedia
+  text: Seinäjoki, ville de l'Ouest de la Finlande, est la capitale de la région d'Ostrobotnie du Sud. C'est la
+    6e ville de la province de Finlande occidentale. Elle est bordée par la rivière Seinäjoki, la rivière du mur.
+    Située en bordure est des grandes plaines d'Ostrobotnie, elle a connu un développement récent en tant que centre
+    administratif.
+  title: Seinäjoki
+  url: https://fr.wikipedia.org/wiki/Sein%C3%A4joki
+Sevilla:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241171939
+  source: wikipedia
+  text: Séville est une ville du Sud de l'Espagne, capitale de la province de Séville et de la communauté autonome
+    d'Andalousie. Quatrième ville du pays, elle accueille une population de 684 164 habitants en 2023, sur un total
+    de 1 535 379 habitants dans son aire urbaine.
+  title: Séville
+  url: https://fr.wikipedia.org/wiki/S%C3%A9ville
+Sofia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240646112
+  source: wikipedia
+  text: Sofia est la capitale et la plus grande ville de la Bulgarie, à 590 m d'altitude au pied du mont Vitocha,
+    non loin de l'Iskar. Ses habitants, les Sofiotes, représentent 17 % de la population du pays, plaçant Sofia
+    au quatorzième rang des villes les plus peuplées de l'Union européenne[pas clair]. Sofia est également par sa
+    population la troisième ville des Balkans, après Istanbul et Belgrade.
+  title: Sofia
+  url: https://fr.wikipedia.org/wiki/Sofia
+Split:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241235976
+  source: wikipedia
+  text: 'Split, (grec ancien: Ασπάλαθος, Aspálathos, latin: Spalatum, italien: Spalato) est une ville et une municipalité
+    croate. Elle se place au deuxième rang des villes les plus peuplées de Croatie. C''est le siège du comitat de
+    Split-Dalmatie. Au recensement de 2011, le comitat comptait 454 798 habitants, la municipalité 178 102 habitants,
+    dont 96,23 % de Croates et la ville seule comptait 167 121 habitants.'
+  title: Split
+  url: https://fr.wikipedia.org/wiki/Split
+Stavanger:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651301
+  section: Comprendre
+  source: wikivoyage
+  text: Stavanger est une ville de Norvège Le climat à Stavanger est relativement froid et humide. En été, la ville
+    jouit d'environ 20 h de jour, et le temps est souvent nuageux et pluvieux, surtout en hiver, même si cela reste
+    moins pluvieux qu'à Bergen. Les températures quant à elles avoisinent les 18 °C en journée. En hiver, la ville
+    en elle-même n'est pas spécialement sujette à la neige contrairement aux alentours.
+  title: Stavanger
+  url: https://fr.wikivoyage.org/wiki/Stavanger
+Stockholm:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651305
+  section: Comprendre
+  source: wikivoyage
+  text: Stockholm est la capitale de la Suède. La première mention de la ville de Stockholm date de 1252. La ville
+    se réduit alors à la petite île de Gamla Stan. Elle aurait été fondée par Birger Jarl, afin de protéger la Suède
+    d'invasions par des flottes étrangères. Il s'agit aussi de mettre fin aux pillages dont étaient victimes des
+    villes comme Sigtuna située sur le lac Mälaren.
+  title: Stockholm
+  url: https://fr.wikivoyage.org/wiki/Stockholm
+Storlien:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 223957197
+  source: wikipedia
+  text: Storlien est une localité suédoise située sur la commune d'Åre dans le Jämtland, à quelques kilomètres de
+    la frontière norvégienne. Le village est également une station de ski qui accueille de nombreux touristes norvégiens.
+    La gare de Storlien est à la jonction des chemins de fer suédois et norvégien. C'est également Storlien qui
+    est la localité frontalière de la Route européenne 14 (reliant Trondheim à Sundsvall).
+  title: Storlien
+  url: https://fr.wikipedia.org/wiki/Storlien
+Stranraer:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 223923600
+  source: wikipedia
+  text: Stranraer,, est une ville située dans le council area de Dumfries and Galloway, dans la région de lieutenance
+    de Wigtown et dans l'ancien comté de Wigtownshire. De 1975 à 1996, elle fut la capitale administrative du district
+    de Wigtown, au sein de la région du Dumfries and Galloway. Le club de football Stranraer Football Club et son
+    stade de Stair Park sont basés dans la ville.
+  title: Stranraer
+  url: https://fr.wikipedia.org/wiki/Stranraer
+Strasbourg:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 668135
+  section: Comprendre
+  source: wikivoyage
+  text: Strasbourg est une ville située dans le département du Bas-Rhin en région Alsace, dans l'est de la France.
+    Capitale de l'Alsace, Strasbourg ( Strossburi, Straßburg) est principalement connue pour être la capitale de
+    l'Europe, la ville héberge de multiples institutions européennes.
+  title: Strasbourg
+  url: https://fr.wikivoyage.org/wiki/Strasbourg
+Subotica:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241240659
+  source: wikipedia
+  text: 'Subotica (en serbe en écriture cyrillique: Суботица, /sǔbotitsa/; en hongrois: Szabadka) est une ville
+    de Serbie située dans la province autonome de Voïvodine, district de Bačka septentrionale. Au recensement de
+    2011, la ville intra muros comptait 96 483 habitants et son territoire métropolitain, appelé ville de Subotica
+    (Град Суботица et Grad Subotica), 141 554.'
+  title: Subotica
+  url: https://fr.wikipedia.org/wiki/Subotica
+Sundsvall:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239626409
+  source: wikipedia
+  text: Sundsvall (prononciation sɵnd'sval) est une ville située dans le centre de la Suède, sur la côte de la mer
+    Baltique, dans la province de Medelpad et le comté de Västernorrland. 49 339 personnes y vivent. Elle est le
+    chef-lieu de la commune de Sundsvall.
+  title: Sundsvall
+  url: https://fr.wikipedia.org/wiki/Sundsvall
+Syracuse:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 658731
+  section: Comprendre
+  source: wikivoyage
+  text: 'Syracuse est une ville au sud-est de la Sicile et le chef-lieu de la province éponyme, en Italie. 1 Servizio
+    Turistico Regionale Siracusa, via della Maestranza 38, ☎ +39 0931 464255, +39 0931 1756232. lun.–ven.: 8 h 30
+    – 13 h 30. (dernière mise à jour: oct. 2022)'
+  title: Syracuse
+  url: https://fr.wikivoyage.org/wiki/Syracuse
+Szeged:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651321
+  source: wikivoyage
+  text: Szeged est la troisième plus grande ville de de la région de l'Alföld au sud-est de la Hongrie, réputée
+    comme "la ville de soleil" pour être la plus ensoleillée du pays et pour son climat rayonnant, ainsi que pour
+    l'imposante cathédrale, une richesse de l'Art Nouveau et bâtiments historicistes, et pour le Halászlé (soupe
+    de poisson).
+  title: Szeged
+  url: https://fr.wikivoyage.org/wiki/Szeged
+Tallinn:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651333
+  section: Comprendre
+  source: wikivoyage
+  text: Tallinn est la ville la plus développée des Pays baltes et la capitale de l'Estonie. Tallinn est une ville
+    magnifique où se mêlent les maisons en bois et en pierres, les assortiments de couleurs sur les murs extérieurs
+    sont savamment choisis, on se repère dans la vieille ville grâce aux différents clochers des églises luthériennes
+    et orthodoxes. Hormis la ville en elle-même, il n'y a encore trop rien à visiter.
+  title: Tallinn
+  url: https://fr.wikivoyage.org/wiki/Tallinn
+Tampere:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240515347
+  source: wikipedia
+  text: Tampere est une ville de Pirkanmaa, dans le Sud-Ouest de la Finlande. Avec 260 000 habitants intra-muros,
+    et plus de 360 000 en comptant les municipalités attenantes, elle est la seconde agglomération de Finlande après
+    celle d'Helsinki. Elle est également la plus grande ville non-littorale des pays nordiques.
+  title: Tampere
+  url: https://fr.wikipedia.org/wiki/Tampere
+Tanger:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 664439
+  source: wikivoyage
+  text: Tanger est le chef-lieu de la province de Tanger-Tetouan au nord du Maroc. Héritière du mythe d'hercule
+    et ville africaine la plus proche du continent européen elle fait l'objet d'un nouvel intérêt. Après l'avoir
+    méprisée en signe de représailles à la révolte du Rif, les autorités marocaines veulent lui rendre ses lettres
+    de noblesse.
+  title: Tanger
+  url: https://fr.wikivoyage.org/wiki/Tanger
+Tanger Med:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239608619
+  source: wikipedia
+  text: Le Groupe Tanger Med gère le complexe portuaire Tanger Med, doté d’un emplacement stratégique, 1er port
+    en Méditerranée et en Afrique. Il dispose aussi d’une présence nationale grâce au réseau de Marsa Maroc, doté
+    de 24 terminaux à conteneurs et vracs répartis dans 10 ports à travers le Maroc. En 2023, 162 millions de tonnes
+    de marchandises et 9,6 millions de conteneurs EVP ont été traités.
+  title: Tanger Med
+  url: https://fr.wikipedia.org/wiki/Tanger_Med
+Taormina:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241007473
+  source: wikipedia
+  text: 'Taormine (italien: Taormina, sicilien: Taurmina, du grec ancien: Ταυρομένιον / Tauroménion via le latin:
+    Tauromenium) est une commune de la ville métropolitaine de Messine, dans la région Sicile, en Italie.'
+  title: Taormine
+  url: https://fr.wikipedia.org/wiki/Taormine
+Tarifa:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 610363
+  source: wikivoyage
+  text: Tarifa se situe à l’extrême sud de l'Espagne, dans la province de Cadiz à l'entrée du détroit de Gibraltar.
+    La côte africaine à 14 km offre une vue mythique sur les montagnes du Rif marocain. Avec plus de 3000 h de soleil
+    dans l'année, c'est l'un des endroits le plus ensoleillé de la région.
+  title: Tarifa
+  url: https://fr.wikivoyage.org/wiki/Tarifa
+Thessaloniki:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241192833
+  source: wikipedia
+  text: Thessalonique ou Salonique est une ville de Grèce, chef-lieu du district régional du même nom, située au
+    fond du golfe Thermaïque. Elle est l'actuelle capitale de la périphérie de Macédoine-Centrale en Macédoine grecque
+    et celle du diocèse décentralisé de Macédoine-Thrace.
+  title: Thessalonique
+  url: https://fr.wikipedia.org/wiki/Thessalonique
+Tirana:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239799677
+  source: wikipedia
+  text: Tirana est la capitale et la ville la plus peuplée d'Albanie. Elle est le centre de la préfecture de Tirana,
+    une des 12 préfectures albanaises. Sa population est de 389 323 habitants d'après le dernier recensement. Tirana
+    fut fondée en 1614 et est devenue capitale en 1920. C'est le principal centre économique, industriel et culturel
+    du pays.
+  title: Tirana
+  url: https://fr.wikipedia.org/wiki/Tirana
+Torino:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 235692878
+  source: wikipedia
+  text: La province de Turin (provincia di Torino en italien) est une ancienne province italienne, dans la région
+    du Piémont, dont le chef-lieu était Turin. Elle est remplacée par la ville métropolitaine de Turin depuis le
+    1er janvier 2015.
+  title: Province de Turin
+  url: https://fr.wikipedia.org/wiki/Province_de_Turin
+Toulouse:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 666315
+  source: wikivoyage
+  text: Toulouse (en occitan Tolosa) est une ville du Sud-Ouest de la France, chef-lieu de la Haute-Garonne et de
+    la région Occitanie depuis la réforme territoriale de 2014, regroupant les anciennes régions Languedoc-Roussillon
+    et Midi-Pyrénées. Elle est également réputée pour être une des capitales françaises du rugby et de la violette,
+    dont on tire bonbons et liqueurs.
+  title: Toulouse
+  url: https://fr.wikivoyage.org/wiki/Toulouse
+Trieste:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672082
+  source: wikivoyage
+  text: Trieste (Triest en frioulan et en allemand, Trst en slovène et en croate) est une ville du Frioul-Vénétie-Julienne.
+    Cette ville d'environ 205 000 habitants est la capitale de cette région autonome du nord-est et le chef-lieu
+    de la province de Trieste. Elle est située dans un petit panhandle d'Italie cernée par la Slovénie, à l'est
+    et au sud, et par la mer Adriatique à l'ouest. Elle est jumelée avec Le Havre.
+  title: Trieste
+  url: https://fr.wikivoyage.org/wiki/Trieste
+Trondheim:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 661370
+  source: wikivoyage
+  text: Trondheim (anciennement Trondhjem ou Nidaros) est une ville située en Norvège. Troisième plus importante
+    localité norvégienne (après Oslo et Bergen), mais première ville estudiantine, elle constitue un point de liaison
+    entre le sud et le nord de la Norvège.
+  title: Trondheim
+  url: https://fr.wikivoyage.org/wiki/Trondheim
+Tunis:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651415
+  source: wikivoyage
+  text: Tunis est une ville du Nord tunisien et la capitale de la Tunisie. C'est la ville la plus peuplée du pays.
+    Elle est située à environ 10 km du golfe de Tunis, sur la mer Méditerranée, sur la rive ouest du lac de Tunis.
+    Malgré sa situation, sur la côte méditerranéenne, Tunis possède peu de plages, ce qui l'a sauvée du flot de
+    touristes qui a envahi les villes du nord et du sud.
+  title: Tunis
+  url: https://fr.wikivoyage.org/wiki/Tunis
+Turku:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651420
+  section: Comprendre
+  source: wikivoyage
+  text: 'Turku est une ville de Finlande. 1 Visit Turku, Aurakatu 4, ☎ +358 2-2627444, fax: +358 2-2627679, tourist.info@turku.fi.
+    septemtre-mars lun.–dim.: 10 h – 15 h; avril–septembre lun.–ven.: 10 h – 18 h, sam.–dim.: 10 h – 15 h. L''office
+    de tourisme de Turku propose aux touristes et aux visiteurs, des conseils, des souvenirs, des location de vélos,
+    des visites touristique, des sorties en groupe...'
+  title: Turku
+  url: https://fr.wikivoyage.org/wiki/Turku
+Umeå:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 238229640
+  source: wikipedia
+  text: Umeå est une ville située dans le Nord de la Suède, sur la côte du golfe de Botnie dans la province historique
+    de Västerbotten, à 600 kilomètres au nord de Stockholm. Avec 91 916 habitants en 2020, c'est la 12e plus grande
+    ville de Suède, et la plus grande ville de toute la moitié nord de la Suède ce qui lui vaut parfois le surnom
+    de capitale du Norrland, titre disputé par Sundsvall.
+  title: Umeå
+  url: https://fr.wikipedia.org/wiki/Ume%C3%A5
+Vaasa:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240515559
+  source: wikipedia
+  text: Vaasa est une ville de l'ouest de la Finlande, située à 420 km de la capitale Helsinki, sur la côte du golfe
+    de Botnie, dans la province de Finlande occidentale. C'est la capitale de la région d'Ostrobotnie. Vaasa compte
+    près de 67 000 habitants. La ville est officiellement bilingue et compte la plus forte proportion de suédophones
+    parmi les quinze villes finlandaises de plus de 50 000 habitants.
+  title: Vaasa
+  url: https://fr.wikipedia.org/wiki/Vaasa
+Valencia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651441
+  section: Comprendre
+  source: wikivoyage
+  text: Valence (Valencia en espagnol, València en Valencien) est la capitale de la communauté Valencienne et de
+    la province de Valence. Comptant plus de 800 000 habitants et plus d' 1 800 000 habitants dans l'agglomération,
+    c'est la troisième ville d'Espagne.
+  title: Valence (Espagne)
+  url: https://fr.wikivoyage.org/wiki/Valence_%28Espagne%29
+Valga:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 652397
+  section: Comprendre
+  source: wikivoyage
+  text: 'Valga, appelée Valka en Lettonie est une ville frontalière entre le Sud de l''Estonie et la région de Vidzeme
+    en Lettonie. Office du tourisme, Kesk 11, ☎ +372 766 16 99, valga@visitestonia.com. (dernière mise à jour: fév.
+    2018)'
+  title: Valga
+  url: https://fr.wikivoyage.org/wiki/Valga
+Valletta:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 239599749
+  source: wikipedia
+  text: La Valette est la capitale de la république de Malte. Elle est située sur la côte nord-est de l'île de Malte,
+    dans le quart sud-est de l'île, et est le siège d'un Kunsill Lokali de la région Sud-Est. La ville était en
+    2019 peuplée de 5 827 habitants, appelés en français les Valettins.
+  title: La Valette
+  url: https://fr.wikipedia.org/wiki/La_Valette
+Varna:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240146738
+  source: wikipedia
+  text: Varna est une ville du nord-est de la Bulgarie, au bord de la mer Noire. Elle est la troisième ville du
+    pays par sa population. C'est l'un des ports les plus importants de la mer Noire, prospère et industriel. Chaque
+    année, de nombreuses manifestations culturelles y ont lieu, notamment le festival « Été de Varna » et le Concours
+    international de ballet de Varna.
+  title: Varna (Bulgarie)
+  url: https://fr.wikipedia.org/wiki/Varna_%28Bulgarie%29
+Vatican:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 651465
+  section: Comprendre
+  source: wikivoyage
+  text: Le Vatican est le plus petit pays du monde enclavé par la ville de Rome en Italie. Il est le centre mondial
+    du catholicisme et héberge plus d'histoire et d'œuvres d'art que les plus grandes villes du monde. Le Vatican
+    qui est traité ici est en fait un district de Rome qui comprend, en plus de l’État de la Cité du Vatican stricto
+    sensu qui est le siège temporel du pape, l'évêque de Rome et le chef de l'Église catholique mondiale, les quartiers
+    voisins de Borgo et de Prati, tous deux situés à l'est du Saint-Siège.
+  title: Vatican
+  url: https://fr.wikivoyage.org/wiki/Vatican
+Venice:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 663708
+  source: wikivoyage
+  text: Venise, en Italie, capitale de la Vénétie, est une ville magique faite de ponts et canaux, originellement
+    bâtie au milieu d'une lagune pour se protéger des invasions. C'est aujourd'hui une ville d'art et d'architecture
+    presque parfaitement préservée. Ce sanctuaire sur le lagon reste virtuellement inaltéré depuis cinq cents ans,
+    ce qui augmente le caractère fascinant de la ville.
+  title: Venise
+  url: https://fr.wikivoyage.org/wiki/Venise
+Ventimiglia:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240000176
+  source: wikipedia
+  text: 'Vintimille (en italien: Ventimiglia, /ventiˈmiʎʎa/) est une commune italienne de la province d''Imperia
+    en Ligurie, située à la frontière franco-italienne. Son agglomération regroupe 55 000 habitants.'
+  title: Vintimille
+  url: https://fr.wikipedia.org/wiki/Vintimille
+Verona:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240554887
+  source: wikipedia
+  text: La province de Vérone est une province italienne située dans la région de Vénétie. Son chef-lieu est Vérone.
+    Elle confine au nord avec le Trentin-Haut-Adige, à l'est avec la province de Vicence et la province de Padoue,
+    au sud avec la province de Rovigo, au sud et à l'ouest avec la Lombardie. La superficie de la province est de
+    3 109 km2.
+  title: Province de Vérone
+  url: https://fr.wikipedia.org/wiki/Province_de_V%C3%A9rone
+Vienna:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 672817
+  source: wikivoyage
+  text: 'Pour les autres lieux du même nom, voir Vienne. Vienne est la capitale de l''Autriche, mais aussi un Land,
+    enclavé dans celui de Basse-Autriche. Située à l''est du pays, la ville ne se trouve qu''à quelques kilomètres
+    de la Slovaquie. La ville abrite deux sites classés au patrimoine mondial de l''humanité: son centre-ville,
+    considéré comme en péril depuis 2017, et le château de Schönbrunn.'
+  title: Vienne (Autriche)
+  url: https://fr.wikivoyage.org/wiki/Vienne_%28Autriche%29
+Villa San Giovanni:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 233354208
+  source: wikipedia
+  text: Villa San Giovanni est une commune de la province de Reggio de Calabre, dans la région Calabre, en Italie.
+  title: Villa San Giovanni
+  url: https://fr.wikipedia.org/wiki/Villa_San_Giovanni
+Vilnius:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 208600639
+  source: wikipedia
+  text: 'L''apskritis de Vilnius (en lituanien: Vilniaus apskritis) est le plus grand des dix apskritys de Lituanie.
+    Il est situé dans l''Est du pays, autour de la capitale Vilnius. Cet apskritis compte 850 324 habitants et couvre
+    une superficie de 9 731 kilomètres carrés.'
+  title: Apskritis de Vilnius
+  url: https://fr.wikipedia.org/wiki/Apskritis_de_Vilnius
+Vitoria-Gasteiz:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241288392
+  source: wikipedia
+  text: Vitoria-Gasteiz est une commune et la capitale de la province d'Alava et de la communauté autonome du Pays
+    Basque, en Espagne. Située à un carrefour, la ville est à travers l'histoire un point stratégique important,
+    aussi bien sur le plan militaire que commercial ou culturel.
+  title: Vitoria-Gasteiz
+  url: https://fr.wikipedia.org/wiki/Vitoria-Gasteiz
+Warsaw:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240146849
+  source: wikipedia
+  text: Varsovie est depuis 1596 la capitale de la Pologne et depuis 1999 le chef-lieu de la voïvodie de Mazovie.
+    Elle est située sur la Vistule, à environ 320 km de la mer Baltique et des Carpates. Peuplée par plus d'1,8
+    million d'habitants, la capitale polonaise est la plus grande ville du pays et dispute à Budapest la huitième
+    place parmi les plus grandes villes de l'Union européenne.
+  title: Varsovie
+  url: https://fr.wikipedia.org/wiki/Varsovie
+Wroclaw:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240693923
+  source: wikipedia
+  text: Wrocław, parfois francisé Vratislavie, est la troisième plus grande ville de Pologne après Varsovie et Cracovie
+    par sa population, la cinquième par sa superficie, et l'une des plus anciennement fondées. Aujourd’hui chef-lieu
+    de la voïvodie de Basse-Silésie, elle est desservie par l’aéroport de Wrocław-Nicolas-Copernic, le cinquième
+    du pays en nombre de passagers.
+  title: Wrocław
+  url: https://fr.wikipedia.org/wiki/Wroc%C5%82aw
+Zagreb:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240401190
+  source: wikipedia
+  text: Zagreb est la capitale de la Croatie. Au recensement de 2011, la ville compte 688 163 habitants, tandis
+    que le comitat compte 790 017 habitants, dont 93,14 % de Croates. La région de Zagreb — le comitat de la ville
+    de Zagreb et le comitat de Zagreb — compte 1 107 623 habitants. Zagreb est située au nord du pays sur les flancs
+    de la Medvednica à côté de la Save à une altitude d'environ 122 m.
+  title: Zagreb
+  url: https://fr.wikipedia.org/wiki/Zagreb
+Zürich:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 241136552
+  source: wikipedia
+  text: Zurich est une ville de Suisse, capitale du canton de Zurich. Même si l'allemand y est la langue officielle
+    et le zurichois le dialecte le plus parlé, leur usage à la maison est en constante diminution de 2010 à 2024,
+    alors que le français, l'espagnol et surtout l'anglais ont connu une tendance inverse.
+  title: Zurich
+  url: https://fr.wikipedia.org/wiki/Zurich
+Östersund:
+  checked: '2026-11-13'
+  fetched: '2026-11-13'
+  revid: 240055645
+  source: wikipedia
+  text: Östersund (en suédois /œstɛˈʂɵnːd/ ) est une ville de Suède, chef-lieu de la commune d'Östersund dans le
+    comté de Jämtland (une petite partie de la ville est située sur le territoire de la commune de Krokom). Elle
+    est peuplée de 59 485 habitants (31 décembre 2012) ce qui en fait, de loin, la localité la plus peuplée de tout
+    le centre-ouest suédois.
+  title: Östersund
+  url: https://fr.wikipedia.org/wiki/%C3%96stersund
