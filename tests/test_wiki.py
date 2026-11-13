@@ -17,6 +17,12 @@ class CleanText(unittest.TestCase):
         self.assertLessEqual(len(out), fw.MAX_CHARS)
         self.assertTrue(out.endswith("."))
 
+    def test_short_start_takes_one_long_sentence_more(self):
+        long = "This sentence about the old town is long " + "and winding " * 22 + "up the hill."
+        out = fw.clean("Lisbon is the capital of Portugal. " + long + " Another one.")
+        self.assertTrue(out.startswith("Lisbon is the capital of Portugal. This sentence"))
+        self.assertLessEqual(len(out), fw.HARD_MAX)
+
     def test_control_characters_and_markup_spacing_removed(self):
         self.assertEqual(fw.clean("A\x07 city\n\n  by\tthe sea."), "A city by the sea.")
 

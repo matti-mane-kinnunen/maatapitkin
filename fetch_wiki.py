@@ -32,6 +32,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent
 UA = "maatapitkin/0.3 (https://github.com/matti-mane-kinnunen/maatapitkin; city texts, a few requests a week)"
 MAX_CHARS = 420            # about two or three sentences
+MIN_CHARS = 220            # a long next sentence may take it past MAX_CHARS (up to HARD_MAX) while shorter
 HARD_MAX = 600
 
 
@@ -62,7 +63,8 @@ def clean(text: str) -> str:
         return t
     parts, out = re.split(r"(?<=[.!?])\s+(?=[A-ZÄÖÅÜÉÈÀÂÎÔÇØÆ0-9«\"„“])", t), ""
     for p in parts:
-        if out and len(out) + 1 + len(p) > MAX_CHARS:
+        n = len(out) + 1 + len(p)
+        if out and n > MAX_CHARS and (len(out) >= MIN_CHARS or n > HARD_MAX):
             break
         out = f"{out} {p}".strip()
     return out if len(out) <= HARD_MAX else out[:HARD_MAX].rsplit(" ", 1)[0] + " …"
@@ -181,6 +183,10 @@ def main() -> int:
                     continue
                 e = from_page(page_text(lang, site, title), site, lang, today)
                 time.sleep(args.pause)
+                if e and entry and len(e["text"]) > len(entry["text"]):
+                    print(f"  {lang} {name}: {entry['source']} gave only {len(entry['text'])} chars"
+                          + (f" (with section {entry['section']!r})" if entry.get("section") else "")
+                          + f" - {e['source']} is longer and is used")
                 if e and (not entry or len(e["text"]) > len(entry["text"])):
                     entry = e
                 if entry and len(entry["text"]) >= TOO_SHORT:
