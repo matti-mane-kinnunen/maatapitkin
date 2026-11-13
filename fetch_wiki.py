@@ -59,6 +59,8 @@ def clean(text: str) -> str:
     t = re.sub(r"[\x00-\x08\x0b-\x1f\x7f]", "", str(text or ""))
     t = re.sub(r"\s+", " ", t).strip()
     t = re.sub(r"\s*\([^()]*\)", "", t) if len(t) > MAX_CHARS else t     # drop pronunciations etc. when long
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)                 # space before punctuation (removed brackets, footnotes)
+    t = re.sub(r"[,;:]+([.!?])", r"\1", t)                  # "Riviera,." -> "Riviera." (da Lisbon, 13.11.2026)
     if len(t) <= MAX_CHARS:
         return t
     parts, out = re.split(r"(?<=[.!?])\s+(?=[A-ZÄÖÅÜÉÈÀÂÎÔÇØÆ0-9«\"„“])", t), ""

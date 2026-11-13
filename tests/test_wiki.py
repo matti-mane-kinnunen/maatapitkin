@@ -23,6 +23,9 @@ class CleanText(unittest.TestCase):
         self.assertTrue(out.startswith("Lisbon is the capital of Portugal. This sentence"))
         self.assertLessEqual(len(out), fw.HARD_MAX)
 
+    def test_leftover_punctuation_tidied(self):
+        self.assertEqual(fw.clean("Inklusive den Portugisiske Riviera,. Byen er gammel ."), "Inklusive den Portugisiske Riviera. Byen er gammel.")
+
     def test_control_characters_and_markup_spacing_removed(self):
         self.assertEqual(fw.clean("A\x07 city\n\n  by\tthe sea."), "A city by the sea.")
 
