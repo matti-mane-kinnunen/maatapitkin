@@ -2,12 +2,9 @@
 # use overrides.yaml. Texts: Wikivoyage / Wikipedia contributors, CC BY-SA 4.0 (see each url).
 Lisbon:
   fetched: '2026-11-13'
-  revid: 53149
-  section: Ymmärrä
-  source: wikivoyage
-  text: Lissabon on Portugalin pääkaupunki, jossa myös järjestettiin maailmannäyttely 1998. Lissabonin lentoasema
-    Aeroporto da Portela on Portugalin suurin ja samalla lentoyhtiö TAP:n [2] kotikenttä. Finnair lentää kentälle
-    Helsingistä muutaman kerran viikossa, muuten vaihtoehtoina on mennä esimerkiksi Frankfurtin, Brysselin tai Lontoon
-    kautta. Kentältä pääsee keskustaan parhaiten metrolla.
+  revid: 24364925
+  source: wikipedia
+  text: Lissabon (port. Lisboa) on Portugalin pääkaupunki ja suurin kaupunki. Lissabonin väkiluku on 545 245 (2011).
+    Metropolialueella asuu 2,8 miljoonaa ihmistä (2012), mikä on noin neljännes koko Portugalin asukasmäärästä.
   title: Lissabon
-  url: https://fi.wikivoyage.org/wiki/Lissabon
+  url: https://fi.wikipedia.org/wiki/Lissabon
