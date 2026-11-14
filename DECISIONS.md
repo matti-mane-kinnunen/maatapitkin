@@ -69,6 +69,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-59 | Hamburg as the eighth map, in German | 12.11.2026 | Accepted |
 | D-60 | Four small usability features: hours slider, calendar file, continue link, problem report | 12.11.2026 | Accepted |
 | D-61 | City texts from Wikivoyage / Wikipedia, fetched on GitHub, stored in the repo | 13.11.2026 | Accepted |
+| D-62 | The router in the browser for own settings, checked against the build | 14.11.2026 | Accepted |
 
 ---
 
@@ -1252,6 +1253,45 @@ requests for a first full run, ~500 a week after. A workflow_dispatch workflow m
 branch to be listed in Actions (the cause of a mistaken *Update map* run on the branch, 13.11.). Texts are
 third-party data: never HTML, never into a shell (D-47). Finnish and Danish fall back to Wikipedia more
 often (thin fi.wikivoyage, no Danish Wikivoyage).
+
+---
+
+## D-62 The router in the browser for own settings, checked against the build
+**Date:** 14.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-21: the map shows journeys the build worked out for four travel days and two start
+times. Visitors ask for other dates, times and comfort settings, but D-37 says the map is not a planner.
+
+**Decision.**
+- *Other date or time …* under the settings: any date until the timetable change, any start time, the
+  change time (10–60 min; stations with their own keep it, as `build.py transfer=N`), no ferries, no
+  buses, then *Show journeys*. The whole map follows – list, colours, hours slider, timetables, links –
+  with a note "Your own settings, worked out in your browser" and *Back to the map's journeys*.
+- Not offered: other origins, "arrive by", several stopovers, other hotel-night rules (stopovers are
+  IDEA-21 step 3, left for later).
+- `src/router.js` is a port of journeys.py's Router and build.py's Journeys (fastest, alternatives,
+  latest departure for an earlier start, CO₂, time zones), not a new design. Python stays the
+  reference and the only thing that builds the published journeys.
+- The page loads the whole network only when asked: `router-data.js` (~250 KB, ~55 KB gzipped), one file
+  for all maps, written by build.py from what load() expanded – the browser never reads legs.yaml. A
+  script, not JSON, so it loads from a local file too. Work runs in a background worker made from the
+  router's source in the page; where a browser refuses the worker, on the page.
+- Drift is caught twice: shared cases (tests/router_cases.yaml) through both routers, and a weekly
+  parity check (tests/check_router.mjs) of every map's journeys; a difference holds the update back.
+- A link keeps the settings: `#rome/2026-12-03/1430/t30/noferry`. A full date that is not one of the
+  map's days is now worked out, no longer mapped to its weekday (D-30).
+
+**Why.** The JS port over Pyodide (Matti): Pyodide would run journeys.py itself but costs a 6–10 MB
+download; the port is ~20 KB in the page. The parity check makes the second router safe: on 14.11.2026
+Helsinki and Rome, 2 days × 2 start times, 2,800 journeys and unreached places were identical, including
+CO₂ and door-to-door times. Whole-map recompute (Matti) because one search from the origin gives every
+destination at once.
+
+**Consequences.** Every change to a routing rule must be made in both journeys.py and router.js (the
+tests say where). Speed: an evening start ~0.5 s, an earlier-than-usual start ~2 s (the latest-departure
+sweep), measured with Node on the Mac; slower on phones. Page +20 KB; router-data.js only on demand.
+Found while porting: Python's tie-breaking (heap order on equal keys) decides between identical
+departures in different legs.yaml entries, so the port copies it exactly.
 
 ---
 

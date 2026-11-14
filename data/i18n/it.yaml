@@ -198,3 +198,4 @@ own_after_valid: "È dopo il cambio d'orario – verifica i treni con le compagn
 own_working: "Calcolo dei viaggi …"
 own_failed: "Non è stato possibile calcolare i viaggi qui – riprova, o usa i giorni della mappa."
 own_missing: "Scegli data e ora."
+own_none: "Con queste impostazioni non si raggiunge nessuna capitale."

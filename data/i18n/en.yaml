@@ -201,3 +201,4 @@ own_after_valid: "That is after the timetable change – check the trains with t
 own_working: "Working out the journeys …"
 own_failed: "Could not work out the journeys here – try again, or use the map's own days."
 own_missing: "Choose a date and a time."
+own_none: "No capital can be reached with these settings."
