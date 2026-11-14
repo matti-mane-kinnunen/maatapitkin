@@ -2280,3 +2280,11 @@ legs:
   - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "sat", times: ["10:17-14:00"], query: "*", checked: 2026-11-12, source: transitous}
   - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "sat,sun", times: ["06:27-10:28"], query: "*", checked: 2026-11-12, source: transitous}
   - {from: Brussels, to: Lyon, service: "TGV INOUI", mode: train, runs: "sun", times: ["18:00-21:59"], query: "*", checked: 2026-11-12, source: transitous}
+  - {from: Belgrade, to: Podgorica, dep: "19:54", arr: "05:44", service: "Lovćen 433", mode: train, night: true, checked: 2026-11-14, source: manual}
+  - {from: Podgorica, to: Bar, dep: "05:44", arr: "06:54", service: "Lovćen 433", mode: train, checked: 2026-11-14, source: manual}
+  - {from: Belgrade, to: Bar, dep: "19:54", arr: "06:54", service: "Lovćen 433", mode: train, night: true, checked: 2026-11-14, source: manual}
+  - {from: Bar, to: Podgorica, dep: "20:10", arr: "21:20", service: "Lovćen 432", mode: train, checked: 2026-11-14, source: manual}
+  - {from: Podgorica, to: Belgrade, dep: "21:20", arr: "07:08", service: "Lovćen 432", mode: train, night: true, checked: 2026-11-14, source: manual}
+  - {from: Bar, to: Belgrade, dep: "20:10", arr: "07:08", service: "Lovćen 432", mode: train, night: true, checked: 2026-11-14, source: manual}
+  - {from: Belgrade, to: Pristina, dep: "12:00", arr: "17:30", service: "Adio 12:00", mode: bus, checked: 2026-11-14, source: manual}
+  - {from: Belgrade, to: Pristina, dep: "21:30", arr: "04:00", service: "Adio 21:30", mode: bus, night: true, checked: 2026-11-14, source: manual}

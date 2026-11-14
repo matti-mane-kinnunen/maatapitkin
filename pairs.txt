@@ -591,3 +591,15 @@ Madrid -> Badajoz : A 192 16:17-21:15           # Alvia, from Chamartín (Matti,
 Madrid -> Badajoz : A 194 18:20-23:12           # Alvia, from Chamartín (Matti, bahn.de); daily (Matti, bahn.de)
 Badajoz -> Entroncamento : R 482 14:09-15:55    # via Elvas and Abrantes; run days not checked, entered as daily
 Entroncamento -> Lisbon : IC 512 15:59-17:00    # run days not checked, entered as daily
+
+# -- Montenegro: Lovćen night train Belgrade - Podgorica - Bar, daily all year (timetable 2026 from Matti, Nov 2026; seasonal day train 1130/1131 left out)
+Belgrade -> Podgorica : Lovćen 433 night 19:54-05:44
+Podgorica -> Bar : Lovćen 433 05:44-06:54
+Belgrade -> Bar : Lovćen 433 night 19:54-06:54
+Bar -> Podgorica : Lovćen 432 20:10-21:20
+Podgorica -> Belgrade : Lovćen 432 night 21:20-07:08
+Bar -> Belgrade : Lovćen 432 night 20:10-07:08
+
+# -- Kosovo: Adio buses Belgrade (Novi Beograd bus station) - Pristina (Matti, booking site, Nov 2026; EUR 22; run days not checked, entered as daily)
+Belgrade -> Pristina : Adio 12:00 bus 12:00-17:30
+Belgrade -> Pristina : Adio 21:30 bus night 21:30-04:00
