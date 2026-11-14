@@ -1,0 +1,234 @@
+# Routing cases run through BOTH routers - src/journeys.py and src/router.js (IDEA-21).
+# tests/test_router_cases.py loads each case with the real load(), runs the Python router,
+# exports the network as the browser gets it (src/router_data.py) and runs src/router.js on it
+# with Node; both must give `expect`. Change a rule in one router -> change it in the other,
+# and add a case here.
+#
+# A case: legs (legs.yaml format), places (A, B, C in Germany unless given), settings (overrides
+# of the defaults below), start (default 06:00), date (default Tue 17.11.2026), to (default C),
+# objective (fastest / fewest_changes / fewest_hotels), night_trains (default true),
+# min_transfer (the visitor's own change time), avoid (modes left out, e.g. [ferry]).
+# expect: [arrival, changes, hotel nights] with the arrival as "day N HH:MM", or null if
+# unreachable; departures: the departure of every leg of the journey.
+
+- name: direct
+  legs: [{from: A, to: C, dep: "08:00", arr: "10:00", service: T}]
+  expect: ["day 1 10:00", 0, 0]
+
+- name: min_transfer - arrive 10:00, 10:15 too soon with 20 min, 10:30 works
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "10:15", arr: "11:00", service: T2}
+    - {from: B, to: C, dep: "10:30", arr: "11:15", service: T3}
+  expect: ["day 1 11:15", 1, 0]
+
+- name: a station's own change time wins (Valga, Mockava)
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "10:15", arr: "11:00", service: T2}
+    - {from: B, to: C, dep: "10:30", arr: "11:15", service: T3}
+  places: {B: {min_transfer: 10}}
+  expect: ["day 1 11:00", 1, 0]
+
+- name: stay on the same train - no change time, no change counted
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: IC 1}
+    - {from: B, to: C, dep: "10:00", arr: "11:00", service: IC 1}
+  expect: ["day 1 11:00", 0, 0]
+
+- name: ferry check-in 45 min - the 10:30 ferry is missed, the 11:00 is not
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T}
+    - {from: B, to: C, dep: "10:30", arr: "12:00", service: F1, mode: ferry}
+    - {from: B, to: C, dep: "11:00", arr: "12:30", service: F2, mode: ferry}
+  expect: ["day 1 12:30", 1, 0]
+
+- name: a port's own check-in (Villa San Giovanni 30)
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T}
+    - {from: B, to: C, dep: "10:30", arr: "12:00", service: F1, mode: ferry}
+    - {from: B, to: C, dep: "11:00", arr: "12:30", service: F2, mode: ferry}
+  places: {B: {ferry_checkin: 30}}
+  expect: ["day 1 12:00", 1, 0]
+
+- name: Eurostar check-in 60 min
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T}
+    - {from: B, to: C, dep: "10:45", arr: "13:00", service: EST 9010}
+    - {from: B, to: C, dep: "11:01", arr: "13:20", service: EST 9012}
+  expect: ["day 1 13:20", 1, 0]
+
+- name: an overnight wait is a hotel night
+  legs:
+    - {from: A, to: B, dep: "18:00", arr: "21:00", service: T}
+    - {from: B, to: C, dep: "07:00", arr: "09:00", service: T2}
+  expect: ["day 2 09:00", 1, 1]
+  stays: [[B, 1]]
+
+- name: no departure before 06:00 after a hotel night
+  legs:
+    - {from: A, to: B, dep: "18:00", arr: "20:00", service: T}
+    - {from: B, to: C, dep: "05:30", arr: "07:00", service: T2}
+    - {from: B, to: C, dep: "06:30", arr: "08:00", service: T3}
+  departures: ["day 1 18:00", "day 2 06:30"]
+
+- name: a place's own morning departure (Budapest 05:00)
+  legs:
+    - {from: A, to: B, dep: "18:00", arr: "20:00", service: T}
+    - {from: B, to: C, dep: "05:30", arr: "07:00", service: T2}
+    - {from: B, to: C, dep: "06:30", arr: "08:00", service: T3}
+  places: {B: {morning_departure: "05:00"}}
+  departures: ["day 1 18:00", "day 2 05:30"]
+
+- name: at least 8 h in the hotel - arrive 01:30, not 06:30 but 10:00
+  legs:
+    - {from: A, to: B, dep: "22:00", arr: "01:30", service: N1, night: true}
+    - {from: B, to: C, dep: "06:30", arr: "08:00", service: T2}
+    - {from: B, to: C, dep: "10:00", arr: "11:30", service: T3}
+  start: "20:00"
+  departures: ["day 1 22:00", "day 2 10:00"]
+
+- name: quiet hours - the 02:00 local train is never boarded, and the wait is a hotel night
+  legs:
+    - {from: A, to: B, dep: "20:00", arr: "21:30", service: T}
+    - {from: B, to: C, dep: "02:00", arr: "02:40", service: T2}
+    - {from: B, to: C, dep: "06:10", arr: "06:50", service: T3}
+  start: "19:00"
+  departures: ["day 1 20:00", "day 2 06:10"]
+  expect: ["day 2 06:50", 1, 1]
+
+- name: quiet hours at the start
+  legs:
+    - {from: A, to: C, dep: "02:00", arr: "02:40", service: T1}
+    - {from: A, to: C, dep: "06:10", arr: "06:50", service: T2}
+  start: "00:00"
+  expect: ["day 1 06:50", 0, 0]
+
+- name: arrive 23:00 - 06:10 is under 8 h in the hotel, so the train a day later
+  legs:
+    - {from: A, to: B, dep: "21:00", arr: "23:00", service: T}
+    - {from: B, to: C, dep: "06:10", arr: "06:50", service: T3}
+  start: "20:00"
+  departures: ["day 1 21:00", "day 3 06:10"]
+
+- name: max_stay_nights 6 - a Saturday train is 4 nights away
+  legs: &saturday
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T}
+    - {from: B, to: C, dep: "09:00", arr: "11:00", service: SAT, runs: sat}
+  expect: ["day 5 11:00", 1, 4]
+
+- name: max_stay_nights 3 - too long a wait
+  legs: *saturday
+  settings: {max_stay_nights: 3}
+  expect: null
+
+- name: a night train the same evening is no hotel night
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "18:00", service: T}
+    - {from: B, to: C, dep: "22:00", arr: "07:00", service: NJ, night: true}
+  expect: ["day 2 07:00", 1, 0]
+
+- name: a night ferry after midnight (Palermo -> Tunis) - the night is on board
+  legs:
+    - {from: A, to: B, dep: "18:00", arr: "22:00", service: T}
+    - {from: B, to: C, dep: "02:30", arr: "14:00", service: F, mode: ferry, night: true}
+  expect: ["day 2 14:00", 1, 0]
+
+- name: without night trains - no night train
+  legs: &nightmix
+    - {from: A, to: C, dep: "22:00", arr: "07:00", service: NJ, night: true}
+    - {from: A, to: B, dep: "22:00", arr: "07:00", service: F, mode: ferry, night: true}
+  start: "20:00"
+  night_trains: false
+  expect: null
+
+- name: without night trains - night ferries stay
+  legs: *nightmix
+  start: "20:00"
+  night_trains: false
+  to: B
+  expect: ["day 2 07:00", 0, 0]
+
+- name: a night train hidden in a list of day trains
+  legs: [{from: A, to: C, service: IC, times: ["08:00-12:00", "22:11-08:21"]}]
+  start: "13:00"
+  night_trains: false
+  expect: ["day 2 12:00", 0, 0]
+
+- name: every 60 min - from 07:10 the next is 08:00
+  legs: [{from: A, to: C, service: Bus, mode: bus, every: 60, first: "06:00", last: "09:00", duration: "0:45"}]
+  start: "07:10"
+  expect: ["day 1 08:45", 0, 0]
+
+- name: runs mon-fri, Tuesday
+  legs: &weekdays [{from: A, to: C, dep: "08:00", arr: "10:00", service: T, runs: mon-fri}]
+  expect: ["day 1 10:00", 0, 0]
+
+- name: runs mon-fri, from Saturday leave on Monday
+  legs: *weekdays
+  date: 2026-11-21
+  expect: ["day 3 10:00", 0, 0]
+
+- name: valid_to - the last day it runs
+  legs: [{from: A, to: C, dep: "08:00", arr: "10:00", service: T, valid_to: 2026-11-18}]
+  date: 2026-11-19
+  expect: null
+
+- name: objectives - fastest
+  legs: &objectives
+    - {from: A, to: C, dep: "08:00", arr: "20:00", service: SLOW}
+    - {from: A, to: B, dep: "08:00", arr: "09:00", service: T1}
+    - {from: B, to: C, dep: "09:30", arr: "12:00", service: T2}
+  expect: ["day 1 12:00", 1, 0]
+
+- name: objectives - fewest changes
+  legs: *objectives
+  objective: fewest_changes
+  expect: ["day 1 20:00", 0, 0]
+
+- name: objectives - pareto keeps both trade-offs
+  legs: *objectives
+  pareto: [["day 1 12:00", 1, 0], ["day 1 20:00", 0, 0]]
+
+- name: objectives - fewest hotel nights
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "21:00", service: T1}
+    - {from: B, to: C, dep: "07:00", arr: "08:00", service: T2}
+    - {from: A, to: C, dep: "10:00", arr: "23:30", service: SLOW}
+  start: "07:00"
+  objective: fewest_hotels
+  expect: ["day 1 23:30", 0, 0]
+
+# --- the visitor's own settings on the map (IDEA-21) ---
+
+- name: own change time 30 min - 10:25 now too soon
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "10:25", arr: "11:10", service: T3}
+    - {from: B, to: C, dep: "10:45", arr: "11:30", service: T4}
+  min_transfer: 30
+  expect: ["day 1 11:30", 1, 0]
+
+- name: own change time does not override a station's own
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "10:15", arr: "11:00", service: T2}
+    - {from: B, to: C, dep: "10:45", arr: "11:30", service: T4}
+  places: {B: {min_transfer: 10}}
+  min_transfer: 30
+  expect: ["day 1 11:00", 1, 0]
+
+- name: avoid ferries - the train round is taken
+  legs:
+    - {from: A, to: C, dep: "08:00", arr: "10:00", service: F, mode: ferry}
+    - {from: A, to: B, dep: "08:00", arr: "11:00", service: T1}
+    - {from: B, to: C, dep: "11:30", arr: "13:00", service: T2}
+  avoid: [ferry]
+  expect: ["day 1 13:00", 1, 0]
+
+- name: avoid buses
+  legs:
+    - {from: A, to: C, dep: "08:00", arr: "10:00", service: Bus, mode: bus}
+    - {from: A, to: C, dep: "09:00", arr: "12:00", service: T}
+  avoid: [bus]
+  expect: ["day 1 12:00", 0, 0]

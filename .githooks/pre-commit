@@ -36,9 +36,9 @@ for f in files:
             if line and not LINE.match(line):
                 problems.append(f"pairs.txt line {n}: '{raw.strip()}' is not  A -> B : train")
 
-# the routing tests (FIX-15), when the router or its tests change; they take well under a second
+# the routing tests (FIX-15; both routers, IDEA-21), when a router or its tests change; they take well under a second
 # (they test the working copy, which is normally what is being committed)
-if any(f in ("src/journeys.py",) or f.startswith("tests/") for f in files):
+if any(f in ("src/journeys.py", "src/router.js", "src/router_data.py") or f.startswith("tests/") for f in files):
     t = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-q"],
                        capture_output=True, text=True)
     if t.returncode:
