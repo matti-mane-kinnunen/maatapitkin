@@ -204,3 +204,4 @@ own_after_valid: "Päivä on aikataulumuutoksen jälkeen – tarkista junat liik
 own_working: "Lasketaan matkoja …"
 own_failed: "Matkoja ei saatu laskettua – yritä uudelleen tai käytä kartan omia päiviä."
 own_missing: "Valitse päivä ja kellonaika."
+own_none: "Näillä asetuksilla ei pääse yhteenkään pääkaupunkiin."

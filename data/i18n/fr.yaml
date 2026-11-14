@@ -198,3 +198,4 @@ own_after_valid: "C'est après le changement de service – vérifie les trains 
 own_working: "Calcul des voyages …"
 own_failed: "Impossible de calculer les voyages ici – réessaie, ou utilise les jours de la carte."
 own_missing: "Choisis une date et une heure."
+own_none: "Aucune capitale n'est accessible avec ces réglages."

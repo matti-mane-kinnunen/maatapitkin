@@ -880,7 +880,11 @@ function updateNodeDays() {
   }
 }
 // switch between journeys with and without night trains
-function setNightTrains(allowed) { if (OWN_Q) { F.nightTrains = allowed; showVariant(allowed); } else setVariant(curDate, allowed); }
+function setNightTrains(allowed) {
+  if (!OWN_Q) return setVariant(curDate, allowed);
+  if (!(allowed || !V.no ? V.yes : V.no).routes.length) { ownStatus(T("own_none")); return; }   // own settings leave nothing
+  ownStatus(""); F.nightTrains = allowed; showVariant(allowed);
+}
 function setVariant(date, allowed, start = curStart) {
   F.nightTrains = allowed;
   if (OWN_Q) { leaveOwn(); if (VARS && !VARS[date]) date = curDate; }
@@ -1385,6 +1389,8 @@ function leaveOwn() {
   if (curStart && curStart !== DEF_START && !STARTS.includes(curStart)) curStart = DEF_START;
   if (VARS && !VARS[curDate]) curDate = NET.dates[0];
 }
+// a link with own settings that cannot be shown: open the map's usual journey instead of nothing
+function showSomething() { if (!curRoute) { if (F.nightTrains === false && V.no) showVariant(false); select(routeOf("Paris") ? "Paris" : NET.routes[0].capital); } }
 function ownStatus(txt) { ownEl("own-status").textContent = txt; }
 // work out and show the journeys for q = {date, start "HH:MM", transfer, avoid: ["ferry", "bus"]};
 // then open `place` (a link's place) or keep the journey on screen
@@ -1393,6 +1399,7 @@ function runOwn(q, place = null, optWanted = null) {
   go.disabled = true; ownStatus(T("own_working"));
   const keep = place || (curRoute && slug(curRoute.capital));
   return computeOwn(q).then(v => {
+    if (!(F.nightTrains === false ? v.no : v.yes).routes.length) { ownStatus(T("own_none")); showSomething(); return; }   // e.g. no ferries from Helsinki
     applyOwn(q, v);
     ownStatus("");
     const r = ALL_ROUTES.find(x => slug(x.capital) === keep);
@@ -1401,7 +1408,7 @@ function runOwn(q, place = null, optWanted = null) {
       if (optWanted) { const i = (r.alternatives || []).findIndex(a => slug(a.label) === optWanted); if (i >= 0) opt = i + 1; }
       select(r.capital, opt);
     }
-  }).catch(e => { ownStatus(T("own_failed")); console.warn("own settings:", e); })
+  }).catch(e => { ownStatus(T("own_failed")); console.warn("own settings:", e); showSomething(); })
     .finally(() => { go.disabled = false; });
 }
 (function ownForm() {

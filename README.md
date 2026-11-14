@@ -44,7 +44,10 @@ routes_to_pairs.py    route lists ('Madrid – Zaragoza – Barcelona') -> pairs
 check_timetables.py   re-checks the legs against Transitous and writes a report
 coverage_check.py     which European countries, links and ferries Transitous has timetables for
 src/journeys.py       loading, validation and the journey router
-tests/                routing tests (python3 -m unittest discover -s tests) and the browser check of the built pages (check_pages.py)
+src/router.js         the same router in JavaScript, for the map's own settings (IDEA-21, D-62)
+src/router_data.py    the network as the browser reads it (out/site/router-data.js)
+tests/                routing tests (python3 -m unittest discover -s tests; router_cases.yaml runs through both routers),
+                      the browser check of the built pages (check_pages.py) and the router parity check (check_router.mjs)
 src/make_map.py       the map pages (out/site/) from src/map_template.html (the page: HTML, CSS and JavaScript)
 src/i18n.py           page texts in the map's language (data/i18n/), with English as the fallback
 src/co2.py            rough CO2 per journey vs flying
@@ -145,11 +148,14 @@ been shared; to refresh it, paste the link into the
 Links to a journey: `…/maatapitkin/#lisbon/sat/no-night/fewestchanges` – place, then
 optionally the day (`tue`, `fri`, `sat`, `sun`), `no-night`, `morning`, and the journey option. The
 map's *Copy link* button gives the link for whatever is on screen.
+With own settings (*Other date or time …*, D-62) the link carries them instead of the weekday:
+`#rome/2026-12-03/1430/t30/noferry/nobus` – date, start time, change time, no ferries, no buses;
+the browser works the journey out when the link is opened.
 
 ## Safety net before each commit
 
 `.githooks/pre-commit` refuses a commit when a YAML file doesn't read, a pairs.txt line isn't
-`A -> B : train`, or – when `src/journeys.py` or `tests/` change – the routing tests fail. Turn it on
+`A -> B : train`, or – when `src/journeys.py`, `src/router.js` or `tests/` change – the routing tests fail. Turn it on
 once per clone:
 
 ```
@@ -169,6 +175,19 @@ python3 -m unittest discover -s tests -v
 
 The weekly workflow runs them first and stops if one fails. When you change a rule on purpose, change
 its test too.
+
+**Two routers** (IDEA-21, D-62): the map can also work journeys out in the visitor's browser
+(*Other date or time …*), with `src/router.js`, a JavaScript port of `src/journeys.py` and of the
+`Journeys` class in build.py. Python stays the reference; two checks keep them together:
+
+- `tests/router_cases.yaml` – small cases run through **both** routers by `tests/test_router_cases.py`
+  (the JavaScript half needs Node; without it only Python is checked). Change a rule → change it in
+  both files and add a case here.
+- `tests/check_router.mjs` – after a build, works out every map's journeys again with router.js (every
+  date, start time, with and without night trains, alternatives, CO₂) and compares them with
+  `out/network*.json`. The weekly workflow runs it next to the page check; a difference holds the
+  update back. Locally: `python3 build.py …` then `node tests/check_router.mjs out` (only maps built
+  in the same run can be compared – an older network*.json has other leg numbers).
 
 ## How journeys are built
 

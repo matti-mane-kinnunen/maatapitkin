@@ -100,6 +100,40 @@ CONTROLS = [   # (what, selector) - clicked one after another; a JavaScript erro
 ]
 
 
+def check_own(page) -> list[str]:
+    """Own settings (IDEA-21): the day after the first travel date at 09:15, changes 30 min. The
+    journeys are worked out in the browser (router-data.js, a background worker); the note must
+    appear, a journey must show without undefined/NaN, and "back" must return to the map's view."""
+    if page.query_selector("#own") is None:
+        return []
+    out = []
+    date = page.evaluate("""() => { const d = new Date(NET.dates[0] + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + 1);
+                                     return d.toISOString().slice(0, 10); }""")
+    page.evaluate("() => { const o = document.getElementById('own'); o.open = true; }")
+    page.fill("#own-date", date)
+    page.fill("#own-time", "09:15")
+    page.select_option("#own-transfer", "30")
+    page.click("#own-go")
+    try:
+        page.wait_for_selector("#own-note:not([hidden])", timeout=60000)
+    except Exception:  # noqa: BLE001
+        return [f"own settings ({date} 09:15): no journeys after 60 s - {page.inner_text('#own-status')!r}"]
+    text = page.inner_text(".itin")
+    if not page.query_selector_all("#steps li"):
+        out.append(f"own settings ({date} 09:15): no timetable shown")
+    for bad in ("undefined", "NaN", "[object"):
+        if bad in text:
+            out.append(f"own settings ({date} 09:15): the timetable shows '{bad}'")
+    link = page.evaluate("() => hashFor(curRoute.capital, 0)")
+    if f"/{date}/0915/t30" not in link:
+        out.append(f"own settings: link {link!r} does not keep them")
+    page.click("#own-reset")
+    page.wait_for_timeout(200)
+    if page.is_visible("#own-note"):
+        out.append("own settings: 'back to the map's journeys' left the note on screen")
+    return out
+
+
 def check_page(browser, path: Path) -> tuple[list[str], str]:
     problems: list[str] = []
     ctx = browser.new_context(viewport={"width": 1440, "height": 1000}, locale="en-GB")
@@ -137,6 +171,7 @@ def check_page(browser, path: Path) -> tuple[list[str], str]:
             problems.append(f"control '{what}': {str(e).splitlines()[0]}")
     page.fill("#q", "zzzz")
     page.fill("#q", "")
+    problems += check_own(page)
     problems += [f"JavaScript error: {e}" for e in dict.fromkeys(errors)]
     ctx.close()
     summary = f"{j['journeys']} journeys, {j['links']} bahn.de links ({secs:.0f} s)"

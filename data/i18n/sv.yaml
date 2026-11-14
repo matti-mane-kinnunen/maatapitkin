@@ -202,3 +202,4 @@ own_after_valid: "Det är efter tidtabellsskiftet – kontrollera tågen hos bol
 own_working: "Räknar ut resorna …"
 own_failed: "Resorna kunde inte räknas ut här – försök igen, eller använd kartans egna dagar."
 own_missing: "Välj datum och tid."
+own_none: "Ingen huvudstad nås med de här inställningarna."

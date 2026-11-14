@@ -202,3 +202,4 @@ own_after_valid: "Das ist nach dem Fahrplanwechsel – prüfe die Züge bei den 
 own_working: "Reisen werden berechnet …"
 own_failed: "Die Reisen konnten hier nicht berechnet werden – versuche es noch einmal oder nimm die Tage der Karte."
 own_missing: "Wähle Datum und Uhrzeit."
+own_none: "Mit diesen Einstellungen ist keine Hauptstadt erreichbar."

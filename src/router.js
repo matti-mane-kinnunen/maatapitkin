@@ -14,7 +14,7 @@
 "use strict";
 const DAY = 1440;
 const fdiv = (a, b) => Math.floor(a / b);
-const mod = (a, b) => ((a % b) + b) % b;
+const mod = (a, b) => { const r = a % b; return r < 0 ? r + b : r; };
 const hm = s => { const [h, m] = String(s).trim().split(":"); return parseInt(h, 10) * 60 + parseInt(m, 10); };
 const clock = t => { t = mod(t, DAY); return String(fdiv(t, 60)).padStart(2, "0") + ":" + String(t % 60).padStart(2, "0"); };
 const normService = s => String(s || "").replace(/\s+/g, "").toUpperCase();
@@ -141,7 +141,7 @@ class Router {
     const here = this.net.places[place] || {};
     return "morning_departure" in here ? hm(here.morning_departure) : this.morning;
   }
-  inQuiet(t) { return this.quiet[0] <= mod(t, DAY) && mod(t, DAY) < this.quiet[1]; }
+  inQuiet(t) { const m = mod(t, DAY); return this.quiet[0] <= m && m < this.quiet[1]; }
   overlapsQuiet(a, b) {
     for (let d = fdiv(a, DAY) - 1; d < fdiv(b, DAY) + 1; d++)
       if (Math.max(a, d * DAY + this.quiet[0]) < Math.min(b, d * DAY + this.quiet[1])) return true;

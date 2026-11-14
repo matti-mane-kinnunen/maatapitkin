@@ -202,3 +202,4 @@ own_after_valid: "Det er efter køreplansskiftet – tjek togene hos selskaberne
 own_working: "Regner rejserne ud …"
 own_failed: "Rejserne kunne ikke regnes ud her – prøv igen, eller brug kortets egne dage."
 own_missing: "Vælg dato og tid."
+own_none: "Ingen hovedstad kan nås med disse indstillinger."
