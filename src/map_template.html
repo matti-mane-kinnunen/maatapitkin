@@ -242,6 +242,19 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 .guide a { color: var(--accent); text-underline-offset: 2px }
 .guide kbd { font: 12px var(--mono); border: 1px solid var(--rule); border-radius: 3px; padding: 0 4px }
 @media (prefers-reduced-motion: no-preference) { #route .leg { transition: opacity .2s } }
+/* own settings, worked out in the browser (IDEA-21) */
+.own { flex-basis: 100%; font-size: 12px; color: var(--fg) }
+.own summary { cursor: pointer; color: var(--accent); width: max-content }
+.own .row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 6px }
+.own label { display: inline-flex; align-items: center; gap: 5px }
+.own input, .own select { font: inherit; color: var(--fg); background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 2px 4px }
+.own input[type=checkbox] { accent-color: var(--accent); margin: 0; padding: 0 }
+.own button { all: unset; cursor: pointer; padding: 3px 12px; border-radius: 999px; background: var(--fg); color: var(--panel) }
+.own button:focus-visible, .own-note button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.own button[disabled] { opacity: .5; cursor: progress }
+.own .hint { margin: 6px 0 0; color: var(--muted) }
+.own-note { flex-basis: 100%; margin: 0; font-size: 12px; padding: 6px 10px; border-left: 3px solid var(--accent); background: var(--panel) }
+.own-note button { all: unset; cursor: pointer; color: var(--accent); text-decoration: underline; margin-left: 6px }
 </style>
 
 <div class="wrap">
@@ -264,6 +277,20 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         </div>
     <a class="tolist" href="#arrivals" id="arrivals-link">{{to_list}}</a>
     <p class="valid" id="valid" hidden></p>
+    <details class="own" id="own">
+      <summary>{{own_summary}}</summary>
+      <div class="row">
+        <label>{{own_date}} <input type="date" id="own-date" required></label>
+        <label>{{own_time}} <input type="time" id="own-time" step="300" required></label>
+        <label>{{own_transfer}} <select id="own-transfer"></select></label>
+        <label><input type="checkbox" id="own-noferry"> {{own_noferry}}</label>
+        <label><input type="checkbox" id="own-nobus"> {{own_nobus}}</label>
+        <button type="button" id="own-go">{{own_apply}}</button>
+        <span id="own-status" role="status" aria-live="polite"></span>
+      </div>
+      <p class="hint">{{own_hint}}</p>
+    </details>
+    <p class="own-note" id="own-note" hidden><span></span><button type="button" id="own-reset">{{own_reset}}</button></p>
   </div>
   <div class="grid">
     <div class="mapcol">
@@ -321,6 +348,7 @@ __GUIDE__
   </section>
 </div>
 
+<script id="router-src">/*__ROUTER__*/</script>
 <script>
 const NET = /*__DATA__*/null;
 // page texts in this map's language (data/i18n/<lang>.yaml, IDEA-13); {name} filled in, {one, other} by n
@@ -338,6 +366,7 @@ let curDate = NET.dates ? NET.dates[0] : null;
 // departure times: the default (evening) journeys, and e.g. "from 06:00" in variants[date].starts
 const DEF_START = NET.default_start || null, STARTS = NET.starts || [];
 let curStart = DEF_START;
+let OWN_Q = null;            // own settings worked out in the browser (IDEA-21): {date, start, transfer, avoid}
 const varOf = (date, t) => { const b = VARS[date]; return (t && t !== DEF_START && b.starts && b.starts[t]) || b; };
 const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";   // link word
 const partLabel = t => T("part_" + partOfDay(t));                                        // shown word
@@ -434,7 +463,7 @@ const legHitsG = document.getElementById("leghits");
 for (const [a, b, mode, night] of NET.other_pairs || [])
   if (P[a] && P[b] && !pairs.has(a + ">" + b))
     el("path", { d: curve(P[a], P[b]), class: `leg unused ${cls({ mode, night })}` }, base);
-for (const pr of pairs.values()) {
+function drawPair(pr) {
   const d = curve(P[pr.from], P[pr.to]);
   pr.line = el("path", { d, class: `leg ${cls(pr.legs[0])}` }, base);
   pr.hit = el("path", { d, class: "leghit" }, legHitsG);
@@ -444,6 +473,7 @@ for (const pr of pairs.values()) {
   pr.hit.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") unhover(); });
   pr.hit.addEventListener("click", e => { showPair(pr, e); e.stopPropagation(); });   // tap on a phone
 }
+for (const pr of pairs.values()) drawPair(pr);
 
 const nodesG = document.getElementById("nodes"), labelsG = document.getElementById("labels");
 const nodeEls = {}, labelEls = {};
@@ -850,9 +880,10 @@ function updateNodeDays() {
   }
 }
 // switch between journeys with and without night trains
-function setNightTrains(allowed) { setVariant(curDate, allowed); }
+function setNightTrains(allowed) { if (OWN_Q) { F.nightTrains = allowed; showVariant(allowed); } else setVariant(curDate, allowed); }
 function setVariant(date, allowed, start = curStart) {
   F.nightTrains = allowed;
+  if (OWN_Q) { leaveOwn(); if (VARS && !VARS[date]) date = curDate; }
   if (VARS && VARS[date]) {
     curDate = date; F.date = date;
     curStart = start && (start === DEF_START || STARTS.includes(start)) ? start : DEF_START; F.start = curStart;
@@ -860,9 +891,12 @@ function setVariant(date, allowed, start = curStart) {
     V = { yes: sv.yes, no: sv.no };
     NET.start_date = date; NET.version = sv.version;
   }
-  for (const bt of document.querySelectorAll("#f-start button")) bt.setAttribute("aria-pressed", String(bt.dataset.t === curStart));
+  showVariant(allowed);
+}
+function showVariant(allowed) {
+  for (const bt of document.querySelectorAll("#f-start button")) bt.setAttribute("aria-pressed", String(!OWN_Q && bt.dataset.t === curStart));
   updateFoot();
-  for (const bt of document.querySelectorAll("#f-date button")) bt.setAttribute("aria-pressed", String(bt.dataset.date === curDate));
+  for (const bt of document.querySelectorAll("#f-date button")) bt.setAttribute("aria-pressed", String(!OWN_Q && bt.dataset.date === curDate));
   const v = allowed || !V.no ? V.yes : V.no;
   NET.routes = v.routes; NET.city_routes = v.city_routes || []; NET.unreached = v.unreached || [];
   ALL_ROUTES = [...NET.routes, ...NET.city_routes];
@@ -1093,6 +1127,15 @@ const WD = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 const weekdayOf = d => WD[new Date(d + "T12:00:00Z").getUTCDay()];
 function hashFor(cap, opt) {
   const parts = [slug(cap)];
+  if (OWN_Q) {                         // own settings: the date and time themselves (IDEA-21)
+    parts.push(OWN_Q.date, OWN_Q.start.replace(":", ""));
+    if (OWN_Q.transfer !== S.min_transfer) parts.push("t" + OWN_Q.transfer);
+    for (const m of OWN_Q.avoid) parts.push("no" + m);
+    if (F.nightTrains === false && V.no) parts.push("no-night");
+    const r1 = routeOf(cap), o1 = opt > 0 && r1 && r1.alternatives && r1.alternatives[opt - 1];
+    if (o1) parts.push(slug(o1.label));
+    return "#" + parts.join("/");
+  }
   if (VARS && NET.dates.length > 1) parts.push(weekdayOf(curDate));
   if (F.nightTrains === false && V.no) parts.push("no-night");
   if (curStart && curStart !== DEF_START) parts.push(partOfDay(curStart));
@@ -1108,8 +1151,14 @@ function parseHash() {
     else if (x === "night") want.night = true;
     else if (STARTS.some(t => partOfDay(t) === x)) want.start = STARTS.find(t => partOfDay(t) === x);
     else if (/^\d{4}$/.test(x) && STARTS.includes(x.slice(0, 2) + ":" + x.slice(2))) want.start = x.slice(0, 2) + ":" + x.slice(2);
+    else if (/^([01]\d|2[0-3])[0-5]\d$/.test(x)) want.ownStart = x.slice(0, 2) + ":" + x.slice(2);   // any time: own settings
     else if (WD.includes(x)) want.date = (NET.dates || []).find(d => weekdayOf(d) === x);
-    else if (/^\d{4}-\d\d-\d\d$/.test(x)) want.date = (NET.dates || []).find(d => d === x) || (NET.dates || []).find(d => weekdayOf(d) === weekdayOf(x));
+    else if (/^\d{4}-\d\d-\d\d$/.test(x)) {            // a date on the map, or any other: own settings (IDEA-21)
+      want.date = (NET.dates || []).find(d => d === x);
+      if (!want.date) want.ownDate = x;
+    }
+    else if (/^t\d{1,3}$/.test(x)) want.transfer = Math.min(180, +x.slice(1));
+    else if (x === "noferry" || x === "nobus") (want.avoid = want.avoid || []).push(x.slice(2));
     else want.opt = x;
   }
   return want;
@@ -1117,10 +1166,18 @@ function parseHash() {
 function fromHash(first = false) {
   const want = parseHash();
   const night = want.night ?? (want.place ? true : F.nightTrains !== false);   // a link describes the whole view
+  if (want.ownDate || want.ownStart || want.transfer != null || want.avoid) {   // own settings: worked out here
+    F.nightTrains = night;
+    runOwn({ date: want.ownDate || want.date || curDate, start: want.ownStart || want.start || DEF_START || "00:00",
+             transfer: want.transfer ?? S.min_transfer, avoid: want.avoid || [] }, want.place, want.opt);
+    return;
+  }
+  const wasOwn = !!OWN_Q;                // a link without own settings leaves them
+  if (wasOwn) leaveOwn();
   const date = want.date || (first && VARS && F.date && VARS[F.date] ? F.date : curDate);
   // a link without a time means the default (evening); on first load without a link, the remembered choice
   const start = want.start || (!want.place && F.start && STARTS.includes(F.start) ? F.start : DEF_START);
-  if ((VARS && (date !== curDate || start !== curStart)) || (night === false) !== (F.nightTrains === false)) setVariant(date, night, start);
+  if (wasOwn || (VARS && (date !== curDate || start !== curStart)) || (night === false) !== (F.nightTrains === false)) setVariant(date, night, start);
   const r = ALL_ROUTES.find(x => slug(x.capital) === want.place);
   const cap = r ? r.capital : (curRoute && routeOf(curRoute.capital) ? curRoute.capital : routeOf("Paris") ? "Paris" : NET.routes[0].capital);
   let opt = 0;
@@ -1225,6 +1282,158 @@ function reportUrl(s, cap) {
   return `${NET.repo_url.replace(/\/$/, "")}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 }
 
+// --- Own settings, worked out in the browser (IDEA-21) -------------------------------------------
+// The journeys above were worked out by the weekly build for a few days and start times. For any
+// other date, start time, change time, or without ferries or buses, the page loads the whole
+// network (router-data.js, once) and works the journeys out with the same rules (src/router.js,
+// checked against the build every week). It runs in a background worker so the page stays usable.
+const OWN = { dataP: null, net: null, worker: null, noWorker: false, seq: 0 };
+const ownEl = id => document.getElementById(id);
+function loadRouterData() {
+  if (OWN.dataP) return OWN.dataP;
+  return OWN.dataP = new Promise((res, rej) => {
+    if (self.MP_ROUTER_DATA) return res(self.MP_ROUTER_DATA);
+    const sc = document.createElement("script");
+    sc.src = "router-data.js";                     // next to the page; a script, so it loads from a file too
+    sc.onload = () => self.MP_ROUTER_DATA ? res(self.MP_ROUTER_DATA) : rej(new Error("router-data.js"));
+    sc.onerror = () => { OWN.dataP = null; rej(new Error("router-data.js")); };
+    document.head.appendChild(sc);
+  });
+}
+function ownHere(job) {                            // without a worker: on the page itself
+  return new Promise((res, rej) => setTimeout(() => {
+    try { res(new MPRouter.Journeys(OWN.net, NET.origin, job.opt).variant(job.date, job.start, job.def)); }
+    catch (e) { rej(e); }
+  }, 30));
+}
+function ownWorker(data) {
+  if (OWN.worker || OWN.noWorker) return OWN.worker;
+  try {
+    const src = ownEl("router-src").textContent +
+      "\nlet NETW = null;\nonmessage = e => { const m = e.data; if (m.data) { NETW = MPRouter.loadNetwork(m.data); return; }\n" +
+      "  try { postMessage({ id: m.id, v: new MPRouter.Journeys(NETW, m.origin, m.opt).variant(m.date, m.start, m.def) }); }\n" +
+      "  catch (err) { postMessage({ id: m.id, error: String(err && err.message || err) }); } };\n";
+    OWN.worker = new Worker(URL.createObjectURL(new Blob([src], { type: "text/javascript" })));
+    OWN.worker.postMessage({ data });
+  } catch (e) { OWN.noWorker = true; OWN.worker = null; }
+  return OWN.worker;
+}
+function computeOwn(q) {
+  return loadRouterData().then(data => {
+    if (!OWN.net) OWN.net = MPRouter.loadNetwork(data);
+    const job = { date: q.date, start: MPRouter.hm(q.start), def: MPRouter.hm(DEF_START || "00:00"), origin: NET.origin,
+                  opt: { minTransfer: q.transfer, avoid: q.avoid } };
+    const w = ownWorker(data);
+    if (!w) return ownHere(job);
+    return new Promise((res, rej) => {
+      const id = ++OWN.seq;
+      const done = () => { w.removeEventListener("message", onMsg); w.removeEventListener("error", onErr); };
+      const onMsg = e => { if (e.data.id !== id) return; done(); e.data.error ? rej(new Error(e.data.error)) : res(e.data.v); };
+      const onErr = e => {                          // the browser refused the worker: work it out here
+        e.preventDefault(); done(); w.terminate(); OWN.worker = null; OWN.noWorker = true;
+        ownHere(job).then(res, rej);
+      };
+      w.addEventListener("message", onMsg); w.addEventListener("error", onErr);
+      w.postMessage({ id, ...job });
+    });
+  });
+}
+// a journey worked out here may use connections this map does not draw: add them (all their departures)
+function addOwnLegs(idxs, date) {
+  const rn = OWN.net, dn = MPRouter.dayNum(date), D = MPRouter.DAY, newPairs = new Set();
+  for (const i of idxs) {
+    if (LEG_BY_I[i]) continue;
+    const l0 = rn.legs[i];
+    for (const l of rn.legs) {
+      if (l.frm !== l0.frm || l.to !== l0.to || LEG_BY_I[l.idx]) continue;
+      const dep = l.dep || 0;
+      const j = { i: l.idx, from: l.frm, to: l.to, service: l.service, mode: l.mode, night: l.night, highlight: l.highlight,
+                  issue: l.issue, note: l.note, dep: l.timed ? MPRouter.clock(l.dep) : null, arr: l.timed ? MPRouter.clock(l.arr) : null,
+                  duration: l.duration, checked: l.checked,
+                  duration_true: l.duration - (MPRouter.utcOffset(rn, l.to, dn, (dep + l.duration) % D) - MPRouter.utcOffset(rn, l.frm, dn, dep % D)) };
+      NET.legs.push(j); LEG_BY_I[l.idx] = j;
+      const key = l.frm + ">" + l.to;
+      if (!pairs.has(key)) { pairs.set(key, { from: l.frm, to: l.to, legs: [] }); newPairs.add(key); }
+      pairs.get(key).legs.push(j);
+    }
+  }
+  for (const k of newPairs) if (P[pairs.get(k).from] && P[pairs.get(k).to]) drawPair(pairs.get(k));
+}
+function ownText(q) {
+  const parts = [`${dayDate(1)} ${T("own_from", { t: q.start })}`];
+  if (q.transfer !== S.min_transfer) parts.push(T("own_note_transfer", { n: q.transfer }));
+  if (q.avoid.includes("ferry")) parts.push(T("own_note_noferry"));
+  if (q.avoid.includes("bus")) parts.push(T("own_note_nobus"));
+  return T("own_note", { what: parts.join(", ") }) + (NET.valid_until && q.date > NET.valid_until ? " " + T("own_after_valid") : "");
+}
+function applyOwn(q, v) {
+  const used = new Set(), walk = r => { if (!r) return; r.steps.forEach(x => { if (x[0] === "l") used.add(x[1]); }); (r.alternatives || []).forEach(walk); };
+  for (const k of ["yes", "no"]) for (const r of [...v[k].routes, ...v[k].city_routes]) walk(r);
+  addOwnLegs(used, q.date);
+  const expand = r => { const same = r.same_as_default; delete r.same_as_default; expandRoute(r, q.date); if (same) r.same_as_default = true; };
+  for (const k of ["yes", "no"]) for (const r of [...v[k].routes, ...v[k].city_routes]) expand(r);
+  OWN_Q = q; curDate = q.date; curStart = q.start;
+  NET.start_date = q.date;
+  NET.version = ownText(q);
+  V = { yes: v.yes, no: v.no };
+  const note = ownEl("own-note");
+  note.firstChild.textContent = NET.version; note.hidden = false;
+  showVariant(F.nightTrains !== false);
+}
+function leaveOwn() {
+  OWN_Q = null; ownEl("own-note").hidden = true;
+  if (curStart && curStart !== DEF_START && !STARTS.includes(curStart)) curStart = DEF_START;
+  if (VARS && !VARS[curDate]) curDate = NET.dates[0];
+}
+function ownStatus(txt) { ownEl("own-status").textContent = txt; }
+// work out and show the journeys for q = {date, start "HH:MM", transfer, avoid: ["ferry", "bus"]};
+// then open `place` (a link's place) or keep the journey on screen
+function runOwn(q, place = null, optWanted = null) {
+  const go = ownEl("own-go");
+  go.disabled = true; ownStatus(T("own_working"));
+  const keep = place || (curRoute && slug(curRoute.capital));
+  return computeOwn(q).then(v => {
+    applyOwn(q, v);
+    ownStatus("");
+    const r = ALL_ROUTES.find(x => slug(x.capital) === keep);
+    if (r) {
+      let opt = pickOption(r);
+      if (optWanted) { const i = (r.alternatives || []).findIndex(a => slug(a.label) === optWanted); if (i >= 0) opt = i + 1; }
+      select(r.capital, opt);
+    }
+  }).catch(e => { ownStatus(T("own_failed")); console.warn("own settings:", e); })
+    .finally(() => { go.disabled = false; });
+}
+(function ownForm() {
+  const dEl = ownEl("own-date"), tEl = ownEl("own-time"), xEl = ownEl("own-transfer");
+  const today = new Date(), iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  dEl.min = iso(today) < (NET.dates || [iso(today)])[0] ? iso(today) : NET.dates[0];
+  if (NET.valid_until) dEl.max = NET.valid_until;
+  for (const n of [...new Set([10, 15, 20, 25, 30, 45, 60, S.min_transfer])].sort((a, b) => a - b)) {
+    const o = document.createElement("option"); o.value = n; o.textContent = T("own_minutes", { n }); xEl.appendChild(o);
+  }
+  const fill = () => {                             // the form shows what is on screen
+    dEl.value = curDate || iso(today); tEl.value = curStart || DEF_START || "17:00";
+    xEl.value = String(OWN_Q ? OWN_Q.transfer : S.min_transfer);
+    ownEl("own-noferry").checked = !!OWN_Q && OWN_Q.avoid.includes("ferry");
+    ownEl("own-nobus").checked = !!OWN_Q && OWN_Q.avoid.includes("bus");
+  };
+  ownEl("own").addEventListener("toggle", () => { if (ownEl("own").open) { fill(); loadRouterData().catch(() => {}); } });
+  ownEl("own-go").addEventListener("click", () => {
+    if (!dEl.value || !/^\d\d:\d\d$/.test(tEl.value)) { ownStatus(T("own_missing")); return; }
+    const avoid = [...(ownEl("own-noferry").checked ? ["ferry"] : []), ...(ownEl("own-nobus").checked ? ["bus"] : [])];
+    const q = { date: dEl.value, start: tEl.value, transfer: +xEl.value, avoid };
+    // the build's own variant: show it as it is, no need to work it out
+    if (VARS && VARS[q.date] && (q.start === DEF_START || STARTS.includes(q.start)) && q.transfer === S.min_transfer && !avoid.length) {
+      setVariant(q.date, F.nightTrains !== false, q.start); ownStatus(""); return;
+    }
+    runOwn(q);
+  });
+  ownEl("own-reset").addEventListener("click", () => {
+    leaveOwn(); setVariant(curDate, F.nightTrains !== false, curStart);
+    if (ownEl("own").open) fill();
+  });
+})();
 fromHash(true);
 // copy a link to the journey on screen (works inside the blog's iframe too: it copies the map's own address)
 const shareBt = document.getElementById("share"), shareMsg = document.getElementById("share-msg");

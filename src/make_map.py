@@ -83,7 +83,10 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
     tpl = tpl.replace("__GUIDE__", i18n.guide(lang))
     # {{key}} markers: texts may contain simple HTML; {origin} becomes __ORIGIN__, filled in below
     tpl = re.sub(r"\{\{(\w+)\}\}", lambda m: i18n.t(tx, m.group(1), origin="__ORIGIN__", origin_from="__ORIGIN_FROM__"), tpl)
-    page = (tpl.replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
+    # the in-browser router (IDEA-21): its source in the page, for the page and its background worker
+    router_js = (root / "src" / "router.js").read_text()
+    page = (tpl.replace("/*__ROUTER__*/", router_js)
+               .replace("/*__DATA__*/null", json.dumps(net, ensure_ascii=False, separators=(",", ":")))
                .replace("__BASEMAP__", basemap_paths(base))
                .replace("__W__", str(w)).replace("__H__", str(h))
                .replace("__ORIGIN_FROM__", html.escape(net.get("origin_from") or (net.get("display") or {}).get(net["origin"], net["origin"])))
