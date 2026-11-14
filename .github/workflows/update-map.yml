@@ -101,6 +101,8 @@ jobs:
           ok=true
           python3 check_build.py > check.md || ok=false
           { echo; python3 tests/check_pages.py out/site; } >> check.md || ok=false
+          # the in-browser router must find the same journeys as the build (IDEA-21); Node is on the runner
+          { echo; echo '```'; node tests/check_router.mjs out; echo '```'; } >> check.md || ok=false
           if [ "$ok" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"
           elif [ "${{ inputs.force }}" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
           else echo "ok=false" >> "$GITHUB_OUTPUT"; fi

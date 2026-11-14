@@ -21,9 +21,14 @@ const normService = s => String(s || "").replace(/\s+/g, "").toUpperCase();
 const dayNum = iso => { const [y, m, d] = String(iso).split("-").map(Number); return Date.UTC(y, m - 1, d) / 864e5; };
 const isoOf = dn => new Date(dn * 864e5).toISOString().slice(0, 10);
 const weekday = dn => mod(dn + 3, 7);                     // Monday 0, as Python's date.weekday()
-const cmp = (a, b) => {                                   // Python tuple comparison
-  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] < b[i] ? -1 : 1;
-  return 0;
+const cmp = (a, b) => {                                   // Python tuple comparison (nested too)
+  const n = Math.min(a.length, b.length);
+  for (let i = 0; i < n; i++) {
+    const x = a[i], y = b[i];
+    if (Array.isArray(x)) { const c = cmp(x, y); if (c) return c; }
+    else if (x !== y) return x < y ? -1 : 1;
+  }
+  return a.length - b.length;
 };
 
 /* A binary heap ordered like Python's heapq on tuples. */
@@ -80,6 +85,10 @@ function loadNetwork(data) {
                 night: !!night, timed: dep != null, weekdays: g.w ? new Set(g.w) : null,
                 vf: g.vf ? dayNum(g.vf) : null, vt: g.vt ? dayNum(g.vt) : null,
                 highlight: g.h || null, note: g.n || null, issue: g.is || null, checked: g.c || "" });
+  for (const l of legs) {                        // worked out once: the router asks for these all the time
+    l.ns = normService(l.service);
+    l.eurostar = l.ns.startsWith("EST") || l.ns.startsWith("ES");
+  }
   return { places: data.places, settings: data.settings || {}, tz: data.tz || {}, legs };
 }
 const runsOn = (leg, dn) => !(leg.vf != null && dn < leg.vf) && !(leg.vt != null && dn > leg.vt)
@@ -122,12 +131,10 @@ class Router {
 
   changeTime(place, incoming, nxt) {
     if (!incoming) return 0;
-    if (incoming.timed && nxt.timed && normService(incoming.service) === normService(nxt.service)
-        && incoming.arr === nxt.dep) return 0;                         // stay on the same train
+    if (incoming.timed && nxt.timed && incoming.ns === nxt.ns && incoming.arr === nxt.dep) return 0;   // same train
     const here = this.net.places[place] || {};
     if (nxt.mode === "ferry") return parseInt(here.ferry_checkin ?? this.ferryCheckin, 10);
-    const ns = normService(nxt.service);
-    if (ns.startsWith("EST") || ns.startsWith("ES")) return this.eurostarCheckin;
+    if (nxt.eurostar) return this.eurostarCheckin;
     return "min_transfer" in here ? parseInt(here.min_transfer, 10) : this.minTransfer;
   }
   morningAt(place) {
@@ -179,28 +186,29 @@ class Router {
 
   /* Dijkstra over states (place, incoming leg), as Router.search. */
   search(origin, start = 0, objective = "fastest") {
+    // a state (place, incoming leg) is known by the leg alone (the place is where it arrives); -1: home
     const key = OBJECTIVES[objective], legs = this.net.legs;
-    const sk = (n, i) => n + "\u0000" + i;
-    const lab = new Map([[sk(origin, -1), { node: origin, inc: -1, l: [0, 0, start] }]]);
-    const parent = new Map([[sk(origin, -1), null]]);
+    const lab = new Map([[-1, { node: origin, inc: -1, l: [0, 0, start] }]]);
+    const parent = new Map([[-1, null]]);
     const pq = new Heap();
     pq.push([key(0, 0, start), origin, -1]);
     while (pq.size) {
       const [k, node, inc] = pq.pop();
-      const [c, h, t] = lab.get(sk(node, inc)).l;
+      const [c, h, t] = lab.get(inc).l;
       if (cmp(key(c, h, t), k) < 0) continue;
       const incLeg = inc >= 0 ? legs[inc] : null;
       for (const leg of this.out.get(node) || []) {
-        const dep = this.board(t, t + this.changeTime(node, incLeg, leg), leg, incLeg === null);
+        const ct = this.changeTime(node, incLeg, leg);
+        const dep = this.board(t, t + ct, leg, incLeg === null);
         if (dep === null) continue;
-        const same = incLeg !== null && this.changeTime(node, incLeg, leg) === 0 && dep === t;
+        const same = incLeg !== null && ct === 0 && dep === t;
         const nc = c + (incLeg === null || same ? 0 : 1);
         const nh = h + (incLeg !== null ? this.stayNights(t, dep, leg) : 0);
         const nt = dep + leg.duration;
-        const st = sk(leg.to, leg.idx), old = lab.get(st);
+        const st = leg.idx, old = lab.get(st);
         if (!old || cmp(key(nc, nh, nt), key(...old.l)) < 0) {
           if (old) old.l = [nc, nh, nt]; else lab.set(st, { node: leg.to, inc: leg.idx, l: [nc, nh, nt] });
-          parent.set(st, [sk(node, inc), dep]);
+          parent.set(st, [inc, dep]);
           pq.push([key(nc, nh, nt), leg.to, leg.idx]);
         }
       }
@@ -244,16 +252,16 @@ class Router {
   /* Every journey not beaten on all of arrival, changes and hotel nights (Router.pareto).
      Returns Map place -> [[c, h, t, label id], ...]. */
   pareto(origin, start = 0, horizonDays = 10) {
-    const legs = this.net.legs, sk = (n, i) => n + "\u0000" + i;
+    const legs = this.net.legs;
     const labels = [[0, 0, start, origin, -1, null, null]];        // c, h, t, node, inc, parent, dep
-    const atState = new Map([[sk(origin, -1), [0]]]);
+    const atState = new Map([[-1, [0]]]);                          // state = incoming leg, as in search()
     const pq = new Heap();
     pq.push([start, 0]);
     const limit = start + horizonDays * DAY;
     while (pq.size) {
       const [t, lid] = pq.pop();
       const [c, h, , node, inc] = labels[lid];
-      if (!(atState.get(sk(node, inc)) || []).includes(lid)) continue;
+      if (!(atState.get(inc) || []).includes(lid)) continue;
       const incLeg = inc >= 0 ? legs[inc] : null;
       for (const leg of this.out.get(node) || []) {
         const ct = this.changeTime(node, incLeg, leg);
@@ -264,7 +272,7 @@ class Router {
         const nh = h + (incLeg !== null ? this.stayNights(t, dep, leg) : 0);
         const nt = dep + leg.duration;
         if (nt > limit) continue;
-        const st = sk(leg.to, leg.idx);
+        const st = leg.idx;
         if (!atState.has(st)) atState.set(st, []);
         let cur = atState.get(st);
         if (cur.some(o => labels[o][0] <= nc && labels[o][1] <= nh && labels[o][2] <= nt)) continue;
