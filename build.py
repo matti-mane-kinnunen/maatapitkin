@@ -92,6 +92,9 @@ def main():
         if args.only and origin != args.only:
             continue
         jobs_list.append((k, origin, dict(cfg or {}, page=pages[k]["page"])))
+    # the whole network for the in-browser router (IDEA-21), shared by every map; a page loads it
+    # only when a visitor asks for their own settings (date, time, change time, no ferries/buses)
+    write_router_data(net)
     # the maps are independent: build them side by side on the machine's cores (GitHub: 4)
     n_jobs = max(1, min(args.jobs or os.cpu_count() or 1, len(jobs_list)))
     global _JOB
@@ -110,6 +113,18 @@ def main():
     first, *others = summaries
     summary = dict(summaries[first], origins={o: summaries[o] for o in others})
     (ROOT / "out" / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
+
+
+def write_router_data(net) -> Path:
+    """out/site/router-data.js: the network as src/router.js reads it (src/router_data.py). A script
+    file, not JSON, so the page can load it with a <script> tag - also from a local file, where
+    fetch() is not allowed. tests/check_router.mjs reads the same file."""
+    from router_data import export
+    site = ROOT / "out" / "site"
+    site.mkdir(parents=True, exist_ok=True)
+    path = site / "router-data.js"
+    path.write_text("self.MP_ROUTER_DATA=" + json.dumps(export(net), ensure_ascii=False, separators=(",", ":")) + ";\n")
+    return path
 
 
 def used_legs(variants: dict) -> set:
