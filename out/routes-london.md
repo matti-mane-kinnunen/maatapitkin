@@ -1,6 +1,6 @@
 # Journeys from London
 
-_leave London Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave London Tue 17.11.2026 from 06:00 · generated 14.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -34,6 +34,8 @@ _leave London Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (
 | Belgrade | Tue 17.11. 06:01 | Wed 18.11. 18:35 | 35 h 34 min | 6 | 1 | 0 |  |
 | Rabat | Tue 17.11. 06:01 | Wed 18.11. 20:22 | 38 h 21 min | 7 | 0 | 1 (Madrid) |  |
 | Valletta | Tue 17.11. 06:01 | Wed 18.11. 23:15 | 40 h 14 min | 6 | 1 | 0 |  |
+| Pristina | Tue 17.11. 06:01 | Thu 19.11. 04:00 | 44 h 59 min | 7 | 2 | 0 |  |
+| Podgorica | Tue 17.11. 06:01 | Thu 19.11. 05:44 | 46 h 43 min | 7 | 2 | 0 |  |
 | Bucharest | Tue 17.11. 06:01 | Thu 19.11. 08:23 | 48 h 22 min | 4 | 2 | 0 |  |
 | Kyiv | Tue 17.11. 06:16 | Thu 19.11. 09:49 | 49 h 33 min | 4 | 2 | 0 |  |
 | Helsinki | Tue 17.11. 06:16 | Thu 19.11. 10:10 | 49 h 54 min | 5 | 2 | 0 |  |
@@ -42,6 +44,7 @@ _leave London Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (
 | Athens | Tue 17.11. 06:01 | Thu 19.11. 17:30 | 57 h 29 min | 4 | 2 | 0 |  |
 | Sofia | Tue 17.11. 06:01 | Thu 19.11. 20:41 | 60 h 40 min | 6 | 2 | 0 |  |
 | Sarajevo | Tue 17.11. 06:01 | Thu 19.11. 20:55 | 61 h 54 min | 4 | 1 | 1 (Zagreb) |  |
+| Skopje | Tue 17.11. 06:01 | Thu 19.11. 21:45 | 62 h 44 min | 7 | 1 | 1 (Belgrade) |  |
 | Chisinau | Tue 17.11. 06:01 | Thu 19.11. 23:00 | 62 h 59 min | 6 | 2 | 0 | fewest changes: 72 h 09 min, 5 ch., 0 hotel |
 | Tallinn | Tue 17.11. 06:16 | Fri 20.11. 09:30 | 73 h 14 min | 6 | 2 | 1 (Helsinki) |  |
 | Riga | Tue 17.11. 06:01 | Fri 20.11. 11:34 | 75 h 33 min | 6 | 2 | 1 (Vilnius) |  |
@@ -88,8 +91,10 @@ _Night trains and night buses left out; night ferries still used._
 | Vilnius | Thu 19.11. 11:35 | 51 h 19 min | 5 | 2 (Berlin, Mockava) | same |
 | Tirana | Thu 19.11. 12:40 | 53 h 39 min | 4 | 1 (Milan) | same |
 | Athens | Thu 19.11. 17:30 | 57 h 29 min | 4 | 1 (Milan) | same |
+| Pristina | Thu 19.11. 17:30 | 58 h 29 min | 7 | 2 (Munich, Subotica) | +13 h 30 min |
 | Sarajevo | Thu 19.11. 20:55 | 61 h 54 min | 4 | 2 (Munich, Zagreb) | same |
 | Bucharest | Thu 19.11. 22:37 | 62 h 36 min | 4 | 2 (Munich, Budapest) | +14 h 14 min |
+| Skopje | Thu 19.11. 21:45 | 62 h 44 min | 7 | 2 (Munich, Subotica) | same |
 | Tallinn | Fri 20.11. 09:30 | 73 h 14 min | 7 | 2 (Copenhagen, Helsinki) | same |
 | Riga | Fri 20.11. 11:34 | 75 h 18 min | 6 | 3 (Berlin, Mockava, Vilnius) | – |
 | Chisinau | Fri 20.11. 17:00 | 80 h 59 min | 6 | 3 (Munich, Budapest, Bucharest) | +18 h 00 min |
@@ -98,7 +103,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tunis | Sat 21.11. 22:30 | 111 h 29 min | 4 | 4 (Rome, Palermo) | same |
 | Ankara | Sun 22.11. 13:16 | 124 h 15 min | 8 | 5 (Munich, Budapest, Bucharest, Sofia, Istanbul) | +24 h 00 min |
 
-Not reachable without night trains: Valletta, Kyiv
+Not reachable without night trains: Valletta, Kyiv, Podgorica
 
 ## Leaving from 17:00 instead of 06:00
 
@@ -134,6 +139,8 @@ Not reachable without night trains: Valletta, Kyiv
 | Belgrade | Tue 17.11. 17:04 | Thu 19.11. 09:15 | 39 h 11 min | arrives 14 h 40 min later |
 | Rabat | Tue 17.11. 17:31 | Thu 19.11. 20:22 | 50 h 51 min | arrives 24 h 00 min later |
 | Valletta | Tue 17.11. 17:31 | Thu 19.11. 23:15 | 52 h 44 min | arrives 24 h 00 min later |
+| Pristina | Tue 17.11. 17:04 | Thu 19.11. 17:30 | 47 h 26 min | arrives 13 h 30 min later |
+| Podgorica | Wed 18.11. 06:01 | Fri 20.11. 05:44 | 46 h 43 min | arrives 24 h 00 min later |
 | Bucharest | Tue 17.11. 17:04 | Thu 19.11. 10:37 | 39 h 33 min | arrives 2 h 14 min later |
 | Kyiv | Tue 17.11. 17:04 | Thu 19.11. 09:49 | 38 h 45 min | same arrival |
 | Helsinki | Tue 17.11. 17:04 | Thu 19.11. 20:39 | 49 h 35 min | arrives 10 h 29 min later |
@@ -142,6 +149,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Athens | Wed 18.11. 06:01 | Fri 20.11. 17:30 | 57 h 29 min | arrives 24 h 00 min later |
 | Sofia | Wed 18.11. 06:01 | Fri 20.11. 20:41 | 60 h 40 min | arrives 24 h 00 min later |
 | Sarajevo | Tue 17.11. 17:04 | Thu 19.11. 20:55 | 50 h 51 min | same arrival |
+| Skopje | Tue 17.11. 17:04 | Thu 19.11. 21:45 | 51 h 41 min | same arrival |
 | Chisinau | Tue 17.11. 17:04 | Thu 19.11. 23:00 | 51 h 56 min | same arrival |
 | Tallinn | Tue 17.11. 17:04 | Fri 20.11. 09:30 | 62 h 26 min | same arrival |
 | Riga | Tue 17.11. 17:04 | Fri 20.11. 11:34 | 64 h 30 min | same arrival |
@@ -254,6 +262,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Bergen | Thu 19.11. 06:23 | 47 h 07 min | 6 | 0 |
 | Przemyśl | Thu 19.11. 06:25 | 47 h 09 min | 4 | 0 |
 | Turku | Thu 19.11. 07:35 | 47 h 19 min | 5 | 0 |
+| Bar | Thu 19.11. 06:54 | 47 h 53 min | 7 | 0 |
 | Durrës | Thu 19.11. 07:00 | 47 h 59 min | 3 | 0 |
 | Stavanger | Thu 19.11. 07:21 | 48 h 05 min | 6 | 0 |
 | Porto Torres | Thu 19.11. 07:30 | 48 h 29 min | 3 | 1 |
@@ -662,6 +671,33 @@ _Fastest: 40 h 14 min, arrive Wed 18.11. 23:15, 6 changes, 0 hotel nights_
 - Wait 5 h 32 min in Pozzallo
 - Wed 18.11. 21:30 → Wed 18.11. 23:15  **Pozzallo → Valletta**  VirtuFerries
 
+### Pristina
+_Fastest: 44 h 59 min, arrive Thu 19.11. 04:00, 7 changes, 0 hotel nights_
+
+- Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
+- Tue 17.11. 10:22 → Tue 17.11. 14:26  **Paris → Zürich**  TGV Lyria
+- Wait 6 h 41 min in Zürich
+- Tue 17.11. 21:07 → Wed 18.11. 06:32  **Zürich → Vienna**  EN 40467  (night)
+- Wed 18.11. 07:40 → Wed 18.11. 10:35  **Vienna → Budapest**  xpress
+- Wed 18.11. 11:48 → Wed 18.11. 14:16  **Budapest → Szeged**  InterCity
+- Wed 18.11. 15:04 → Wed 18.11. 16:24  **Szeged → Subotica**  SZ
+- Wed 18.11. 17:00 → Wed 18.11. 18:35  **Subotica → Belgrade**  IC
+- Wait 2 h 55 min in Belgrade
+- Wed 18.11. 21:30 → Thu 19.11. 04:00  **Belgrade → Pristina**  Adio 21:30  (night)
+
+### Podgorica
+_Fastest: 46 h 43 min, arrive Thu 19.11. 05:44, 7 changes, 0 hotel nights_
+
+- Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
+- Tue 17.11. 10:22 → Tue 17.11. 14:26  **Paris → Zürich**  TGV Lyria
+- Wait 6 h 41 min in Zürich
+- Tue 17.11. 21:07 → Wed 18.11. 06:32  **Zürich → Vienna**  EN 40467  (night)
+- Wed 18.11. 07:40 → Wed 18.11. 10:35  **Vienna → Budapest**  xpress
+- Wed 18.11. 11:48 → Wed 18.11. 14:16  **Budapest → Szeged**  InterCity
+- Wed 18.11. 15:04 → Wed 18.11. 16:24  **Szeged → Subotica**  SZ
+- Wed 18.11. 17:00 → Wed 18.11. 18:35  **Subotica → Belgrade**  IC
+- Wed 18.11. 19:54 → Thu 19.11. 05:44  **Belgrade → Podgorica**  Lovćen 433  (night)
+
 ### Bucharest
 _Fastest: 48 h 22 min, arrive Thu 19.11. 08:23, 4 changes, 0 hotel nights_
 
@@ -776,6 +812,20 @@ _Fastest: 61 h 54 min, arrive Thu 19.11. 20:55, 4 changes, 1 hotel nights_
 - 🛏 Overnight in Zagreb (Wed 18.11. 22:20 → Thu 19.11. 12:30)
 - Thu 19.11. 12:30 → Thu 19.11. 20:55  **Zagreb → Sarajevo**  Coach 12:30
 
+### Skopje
+_Fastest: 62 h 44 min, arrive Thu 19.11. 21:45, 7 changes, 1 hotel nights_
+
+- Tue 17.11. 06:01 → Tue 17.11. 09:22  **London → Paris**  EST GBSPX
+- Tue 17.11. 10:22 → Tue 17.11. 14:26  **Paris → Zürich**  TGV Lyria
+- Wait 6 h 41 min in Zürich
+- Tue 17.11. 21:07 → Wed 18.11. 06:32  **Zürich → Vienna**  EN 40467  (night)
+- Wed 18.11. 07:40 → Wed 18.11. 10:35  **Vienna → Budapest**  xpress
+- Wed 18.11. 11:48 → Wed 18.11. 14:16  **Budapest → Szeged**  InterCity
+- Wed 18.11. 15:04 → Wed 18.11. 16:24  **Szeged → Subotica**  SZ
+- Wed 18.11. 17:00 → Wed 18.11. 18:35  **Subotica → Belgrade**  IC
+- 🛏 Overnight in Belgrade (Wed 18.11. 18:35 → Thu 19.11. 15:30)
+- Thu 19.11. 15:30 → Thu 19.11. 21:45  **Belgrade → Skopje**  Coach 15:30
+
 ### Chisinau
 _Fastest: 62 h 59 min, arrive Thu 19.11. 23:00, 6 changes, 0 hotel nights_
 
@@ -888,9 +938,6 @@ _Fewest hotel nights: 111 h 29 min, arrive Sat 21.11. 22:30, 5 changes, 2 hotel 
 ## Capitals not reachable with the current legs
 
 - Reykjavik
-- Podgorica
-- Skopje
-- Pristina
 - Vaduz
 - Nicosia
 

@@ -141,6 +141,17 @@ Badajoz:
     Madrid and Lisbon.
   title: Badajoz
   url: https://en.wikivoyage.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 5393241
+  section: Understand
+  source: wikivoyage
+  text: Bar is a major port for Montenegro. The Old Town of Bar, 4 km far from the coast, is the most significant
+    among the numerous cultural-historical monuments of this town, a witness to its turbulent history. These old
+    bricks are deaf witnesses of numerous conquerors and different cultures. Bar is the main port city of Montenegro.
+  title: Bar
+  url: https://en.wikivoyage.org/wiki/Bar
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1146,6 +1157,17 @@ Penzance:
     long association with the arts.
   title: Penzance
   url: https://en.wikivoyage.org/wiki/Penzance
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 5414561
+  source: wikivoyage
+  text: Podgorica, during SFR Yugoslavia named Titograd in honor of Josip Broz Tito, the long-lasting leader of
+    Yugoslavia, is the capital of Montenegro. While not a typical European eye candy, the city is definitely worth
+    visiting, owing to its interesting mix of old and new, its café culture and nightlife, and its laid back Mediterranean
+    atmosphere.
+  title: Podgorica
+  url: https://en.wikivoyage.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1188,6 +1210,16 @@ Prague:
     castle that dominates the skyline.
   title: Prague
   url: https://en.wikivoyage.org/wiki/Prague
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 5415047
+  source: wikivoyage
+  text: 'Pristina, the capital and largest city of Kosovo: it is messy, with centuries-old Ottoman heritage competing
+    with communist designs and post-communist architectural buildings. However, there is a powerful draw to this
+    city of 227,000 people (2024), offering much to passing visitors.'
+  title: Pristina
+  url: https://en.wikivoyage.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1347,6 +1379,16 @@ Sevilla:
     festivals, color and a thriving nightlife scene.
   title: Seville
   url: https://en.wikivoyage.org/wiki/Seville
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 1384998865
+  source: wikipedia
+  text: Skopje is the capital and largest city of North Macedonia. It lies in the northern part of the country,
+    in the Skopje Valley along the Vardar River, and is the political, economic, and cultural centre of the country.
+    As of the 2021 census, the city had a population of 526,502.
+  title: Skopje
+  url: https://en.wikipedia.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'

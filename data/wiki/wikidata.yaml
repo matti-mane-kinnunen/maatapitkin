@@ -78,6 +78,12 @@ Badajoz:
   km: 1.1
   label: Badajoz
   wd: Q15679
+Bar:
+  checked: '2026-11-14'
+  description: coastal town in Montenegro
+  km: 0.7
+  label: Bar
+  wd: Q115276
 Barcelona:
   checked: '2026-11-13'
   description: city in Catalonia, Spain
@@ -642,6 +648,12 @@ Penzance:
   km: 0.4
   label: Penzance
   wd: Q208209
+Podgorica:
+  checked: '2026-11-14'
+  description: capital city of Montenegro
+  km: 1.3
+  label: Podgorica
+  wd: Q23564
 Porto:
   checked: '2026-11-13'
   description: municipality in Portugal
@@ -666,6 +678,12 @@ Prague:
   km: 1.1
   label: Prague
   wd: Q1085
+Pristina:
+  checked: '2026-11-14'
+  description: capital and the largest city of Kosovo
+  km: 0.5
+  label: Pristina
+  wd: Q25270
 Przemyśl:
   checked: '2026-11-13'
   description: city in southeastern Poland
@@ -756,6 +774,12 @@ Sevilla:
   km: 1.8
   label: Seville
   wd: Q8717
+Skopje:
+  checked: '2026-11-14'
+  description: capital city of North Macedonia
+  km: 0.1
+  label: Skopje
+  wd: Q384
 Sofia:
   checked: '2026-11-13'
   description: capital city of Bulgaria

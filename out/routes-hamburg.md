@@ -1,6 +1,6 @@
 # Journeys from Hamburg
 
-_leave Hamburg Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Hamburg Tue 17.11.2026 from 06:00 · generated 14.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -35,7 +35,10 @@ _leave Hamburg Tue 17.11.2026 from 06:00 · generated 13.11.2026. Change 20 min 
 | Belfast | Tue 17.11. 07:45 | Wed 18.11. 15:58 | 33 h 13 min | 4 | 0 | 1 (Holyhead) | fewest hotel nights: 39 h 22 min, 6 ch., 0 hotel |
 | Zagreb | Tue 17.11. 13:32 | Wed 18.11. 17:23 | 27 h 51 min | 2 | 0 | 1 (Vienna) | fewest changes: 26 h 10 min, 1 ch., 0 hotel; fewest hotel nights: 34 h 49 min, 3 ch., 0 hotel |
 | Kyiv | Tue 17.11. 09:34 | Wed 18.11. 20:10 | 33 h 36 min | 2 | 1 | 0 |  |
+| Skopje | Tue 17.11. 06:01 | Wed 18.11. 21:45 | 39 h 44 min | 6 | 0 | 1 (Szeged) |  |
 | Valletta | Tue 17.11. 06:29 | Wed 18.11. 23:15 | 40 h 46 min | 6 | 1 | 0 |  |
+| Pristina | Tue 17.11. 09:34 | Thu 19.11. 04:00 | 42 h 26 min | 5 | 2 | 0 |  |
+| Podgorica | Tue 17.11. 09:34 | Thu 19.11. 05:44 | 44 h 10 min | 5 | 2 | 0 |  |
 | Chisinau | Tue 17.11. 06:01 | Thu 19.11. 08:10 | 49 h 09 min | 4 | 2 | 0 |  |
 | Helsinki | Tue 17.11. 09:51 | Thu 19.11. 08:35 | 45 h 44 min | 3 | 3 | 0 | fewest changes: 47 h 19 min, 1 ch., 1 hotel |
 | Riga | Tue 17.11. 06:34 | Thu 19.11. 11:34 | 52 h 00 min | 4 | 0 | 2 (Warsaw, Vilnius) | fewest hotel nights: 52 h 33 min, 5 ch., 1 hotel |
@@ -85,11 +88,13 @@ _Night trains and night buses left out; night ferries still used._
 | Madrid | Wed 18.11. 16:29 | 34 h 00 min | 4 | 1 (Montpellier) | same |
 | Belfast | Wed 18.11. 15:58 | 33 h 13 min | 4 | 1 (Holyhead) | same |
 | Zagreb | Wed 18.11. 17:23 | 27 h 51 min | 2 | 1 (Vienna) | same |
+| Skopje | Wed 18.11. 21:45 | 39 h 44 min | 6 | 1 (Szeged) | same |
 | Helsinki | Thu 19.11. 10:10 | 47 h 19 min | 1 | 1 (Stockholm) | +1 h 35 min |
 | Riga | Thu 19.11. 11:34 | 52 h 00 min | 4 | 2 (Warsaw, Vilnius) | same |
 | Tirana | Thu 19.11. 12:40 | 54 h 39 min | 4 | 1 (Bologna) | same |
 | Athens | Thu 19.11. 17:30 | 58 h 29 min | 4 | 1 (Bologna) | same |
 | Tallinn | Thu 19.11. 18:15 | 58 h 41 min | 6 | 2 (Warsaw, Vilnius) | same |
+| Pristina | Thu 19.11. 17:30 | 51 h 58 min | 5 | 2 (Vienna, Belgrade) | +9 h 32 min |
 | Lisbon | Thu 19.11. 17:00 | 59 h 31 min | 6 | 2 (Paris, Madrid) | same |
 | Sarajevo | Thu 19.11. 20:55 | 55 h 23 min | 2 | 2 (Vienna, Zagreb) | +6 h 38 min |
 | Rabat | Thu 19.11. 20:22 | 62 h 53 min | 7 | 2 (Paris, Madrid) | same |
@@ -100,7 +105,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tunis | Sat 21.11. 22:30 | 112 h 29 min | 4 | 4 (Rome, Palermo) | same |
 | Ankara | Sun 22.11. 13:16 | 117 h 44 min | 6 | 5 (Vienna, Budapest, Bucharest, Sofia, Istanbul) | +20 h 02 min |
 
-Not reachable without night trains: Valletta, Kyiv
+Not reachable without night trains: Valletta, Kyiv, Podgorica
 
 ## Leaving from 17:00 instead of 06:00
 
@@ -137,7 +142,10 @@ Not reachable without night trains: Valletta, Kyiv
 | Belfast | Wed 18.11. 05:45 | Thu 19.11. 15:58 | 35 h 13 min | arrives 24 h 00 min later |
 | Zagreb | Tue 17.11. 17:33 | Wed 18.11. 17:23 | 23 h 50 min | same arrival |
 | Kyiv | Wed 18.11. 05:34 | Thu 19.11. 09:49 | 27 h 15 min | arrives 13 h 39 min later |
+| Skopje | Tue 17.11. 17:33 | Thu 19.11. 21:45 | 52 h 12 min | arrives 24 h 00 min later |
 | Valletta | Tue 17.11. 20:10 | Thu 19.11. 23:15 | 51 h 05 min | arrives 24 h 00 min later |
+| Pristina | Tue 17.11. 17:33 | Thu 19.11. 04:00 | 34 h 27 min | same arrival |
+| Podgorica | Tue 17.11. 17:33 | Thu 19.11. 05:44 | 36 h 11 min | same arrival |
 | Chisinau | Tue 17.11. 17:33 | Thu 19.11. 23:00 | 52 h 27 min | arrives 14 h 50 min later |
 | Helsinki | Tue 17.11. 18:53 | Thu 19.11. 10:10 | 38 h 17 min | arrives 1 h 35 min later |
 | Riga | Tue 17.11. 20:10 | Fri 20.11. 11:34 | 62 h 24 min | arrives 24 h 00 min later |
@@ -252,6 +260,7 @@ Not reachable without night trains: Valletta, Kyiv
 | Badajoz | Wed 18.11. 23:12 | 40 h 43 min | 5 | 0 |
 | Palma | Thu 19.11. 05:30 | 31 h 39 min | 3 | 0 |
 | Turku | Thu 19.11. 07:35 | 44 h 44 min | 1 | 1 |
+| Bar | Thu 19.11. 06:54 | 45 h 20 min | 5 | 0 |
 | Durrës | Thu 19.11. 07:00 | 48 h 59 min | 3 | 0 |
 | Porto Torres | Thu 19.11. 07:30 | 33 h 19 min | 4 | 0 |
 | Seinäjoki | Thu 19.11. 09:15 | 46 h 24 min | 3 | 1 |
@@ -668,6 +677,21 @@ _Fastest: 33 h 36 min, arrive Wed 18.11. 20:10, 2 changes, 0 hotel nights_
 - Wait 3 h 24 min in Przemyśl
 - Wed 18.11. 09:49 → Wed 18.11. 20:10  **Przemyśl → Kyiv**  UZ Intercity
 
+### Skopje
+_Fastest: 39 h 44 min, arrive Wed 18.11. 21:45, 6 changes, 1 hotel nights_
+
+- Tue 17.11. 06:01 → Tue 17.11. 12:05  **Hamburg → Munich**  ICE
+- Tue 17.11. 13:13 → Tue 17.11. 17:32  **Munich → Vienna**  IC
+- Wait 1 h 36 min in Vienna
+- Tue 17.11. 19:08 → Tue 17.11. 21:33  **Vienna → Budapest**  xpress
+- Tue 17.11. 22:03 → Wed 18.11. 00:52  **Budapest → Szeged**  InterCity
+- 🛏 Overnight in Szeged (Wed 18.11. 00:52 → Wed 18.11. 09:04)
+- Wed 18.11. 09:04 → Wed 18.11. 10:24  **Szeged → Subotica**  SZ
+- Wait 1 h 36 min in Subotica
+- Wed 18.11. 12:00 → Wed 18.11. 13:15  **Subotica → Belgrade**  IC
+- Wait 2 h 15 min in Belgrade
+- Wed 18.11. 15:30 → Wed 18.11. 21:45  **Belgrade → Skopje**  Coach 15:30
+
 ### Valletta
 _Fastest: 40 h 46 min, arrive Wed 18.11. 23:15, 6 changes, 0 hotel nights_
 
@@ -680,6 +704,31 @@ _Fastest: 40 h 46 min, arrive Wed 18.11. 23:15, 6 changes, 0 hotel nights_
 - Wed 18.11. 14:45 → Wed 18.11. 15:58  **Syracuse → Pozzallo**  R 12936
 - Wait 5 h 32 min in Pozzallo
 - Wed 18.11. 21:30 → Wed 18.11. 23:15  **Pozzallo → Valletta**  VirtuFerries
+
+### Pristina
+_Fastest: 42 h 26 min, arrive Thu 19.11. 04:00, 5 changes, 0 hotel nights_
+
+- Tue 17.11. 09:34 → Tue 17.11. 15:15  **Hamburg → Prague**  ICE
+- Wait 9 h 21 min in Prague
+- Wed 18.11. 00:36 → Wed 18.11. 08:29  **Prague → Budapest**  rj  (night)
+- Wed 18.11. 09:48 → Wed 18.11. 12:16  **Budapest → Szeged**  InterCity
+- Wait 2 h 48 min in Szeged
+- Wed 18.11. 15:04 → Wed 18.11. 16:24  **Szeged → Subotica**  SZ
+- Wed 18.11. 17:00 → Wed 18.11. 18:35  **Subotica → Belgrade**  IC
+- Wait 2 h 55 min in Belgrade
+- Wed 18.11. 21:30 → Thu 19.11. 04:00  **Belgrade → Pristina**  Adio 21:30  (night)
+
+### Podgorica
+_Fastest: 44 h 10 min, arrive Thu 19.11. 05:44, 5 changes, 0 hotel nights_
+
+- Tue 17.11. 09:34 → Tue 17.11. 15:15  **Hamburg → Prague**  ICE
+- Wait 9 h 21 min in Prague
+- Wed 18.11. 00:36 → Wed 18.11. 08:29  **Prague → Budapest**  rj  (night)
+- Wed 18.11. 09:48 → Wed 18.11. 12:16  **Budapest → Szeged**  InterCity
+- Wait 2 h 48 min in Szeged
+- Wed 18.11. 15:04 → Wed 18.11. 16:24  **Szeged → Subotica**  SZ
+- Wed 18.11. 17:00 → Wed 18.11. 18:35  **Subotica → Belgrade**  IC
+- Wed 18.11. 19:54 → Thu 19.11. 05:44  **Belgrade → Podgorica**  Lovćen 433  (night)
 
 ### Chisinau
 _Fastest: 49 h 09 min, arrive Thu 19.11. 08:10, 4 changes, 0 hotel nights_
@@ -905,9 +954,6 @@ _Fastest: 112 h 29 min, arrive Sat 21.11. 22:30, 4 changes, 2 hotel nights_
 ## Capitals not reachable with the current legs
 
 - Reykjavik
-- Podgorica
-- Skopje
-- Pristina
 - Vaduz
 - Nicosia
 

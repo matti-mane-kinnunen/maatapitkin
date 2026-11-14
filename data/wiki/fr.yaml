@@ -142,6 +142,17 @@ Badajoz:
     d'Estrémadure.
   title: Badajoz
   url: https://fr.wikipedia.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 234441706
+  source: wikipedia
+  text: Bar est une ville portuaire du Monténégro. En 2011, la ville comptait 13 503 habitants et la municipalité
+    42 068. Bar est située au bord de l'Adriatique. Elle constitue le principal port du pays et également un pôle
+    touristique. À l'époque de la colonisation grecque elle apparaît sous le nom d’Antivarion (signifiant en grec
+    antique « en face de Varion » sur la cote opposée de l'Adriatique).
+  title: Bar (Monténégro)
+  url: https://fr.wikipedia.org/wiki/Bar_%28Mont%C3%A9n%C3%A9gro%29
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1153,6 +1164,16 @@ Penzance:
     dans le sud-ouest de l'Angleterre, en Cornouailles.
   title: Penzance
   url: https://fr.wikipedia.org/wiki/Penzance
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 241223605
+  source: wikipedia
+  text: Podgorica, anciennement Titograd de 1946 à 1992, est la capitale et la plus grande ville du Monténégro.
+    La ville est située à la confluence des rivières Morača et Ribnica. Le croisement des plaines fertiles de la
+    Zeta et de Bjelopavlići y a encouragé l'implantation de l'homme.
+  title: Podgorica
+  url: https://fr.wikipedia.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1193,6 +1214,15 @@ Prague:
     de bâtiments religieux (églises, temples, synagogues, etc).
   title: Prague
   url: https://fr.wikivoyage.org/wiki/Prague
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 240155746
+  source: wikipedia
+  text: Pristina est la capitale et la plus grande ville du Kosovo, État au statut contesté. Selon le recensement
+    kosovar de 2011, la ville intra muros compte 145 149 habitants et sa zone métropolitaine en compte 505 857.
+  title: Pristina
+  url: https://fr.wikipedia.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1356,6 +1386,16 @@ Sevilla:
     de 1 535 379 habitants dans son aire urbaine.
   title: Séville
   url: https://fr.wikipedia.org/wiki/S%C3%A9ville
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 651281
+  source: wikivoyage
+  text: Skopje est la capitale de la Macédoine du Nord. Skopje, Скопје en macédonien, Shkup en albanais et Üsküb
+    en turc est la capitale et la plus grande ville de la République de Macédoine du Nord. Skopje est une ville
+    plusieurs fois centenaire au croisement de nombreuses cultures.
+  title: Skopje
+  url: https://fr.wikivoyage.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'

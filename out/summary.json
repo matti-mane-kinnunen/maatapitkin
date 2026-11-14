@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13",
+ "generated": "2026-11-14",
  "dates": [
   "2026-11-17",
   "2026-11-20",
@@ -7,31 +7,31 @@
   "2026-11-22"
  ],
  "draft": false,
- "departures": 6733,
+ "departures": 6742,
  "warnings": 0,
  "capitals": {
   "2026-11-17": {
-   "with_night_trains": 44,
-   "without": 42
+   "with_night_trains": 47,
+   "without": 44
   },
   "2026-11-20": {
-   "with_night_trains": 44,
-   "without": 42
+   "with_night_trains": 47,
+   "without": 44
   },
   "2026-11-21": {
-   "with_night_trains": 44,
-   "without": 42
+   "with_night_trains": 47,
+   "without": 44
   },
   "2026-11-22": {
-   "with_night_trains": 44,
-   "without": 42
+   "with_night_trains": 47,
+   "without": 44
   }
  },
  "places_reached": {
-  "2026-11-17": 168,
-  "2026-11-20": 168,
-  "2026-11-21": 168,
-  "2026-11-22": 168
+  "2026-11-17": 172,
+  "2026-11-20": 172,
+  "2026-11-21": 172,
+  "2026-11-22": 172
  },
  "reached": {
   "capitals": [
@@ -62,12 +62,15 @@
    "Monaco",
    "Oslo",
    "Paris",
+   "Podgorica",
    "Prague",
+   "Pristina",
    "Rabat",
    "Riga",
    "Rome",
    "San Marino",
    "Sarajevo",
+   "Skopje",
    "Sofia",
    "Stockholm",
    "Tallinn",
@@ -108,11 +111,13 @@
    "Oslo",
    "Paris",
    "Prague",
+   "Pristina",
    "Rabat",
    "Riga",
    "Rome",
    "San Marino",
    "Sarajevo",
+   "Skopje",
    "Sofia",
    "Stockholm",
    "Tallinn",
@@ -138,6 +143,7 @@
    "Avignon",
    "Ayr",
    "Badajoz",
+   "Bar",
    "Barcelona",
    "Bari",
    "Basel",
@@ -230,10 +236,12 @@
    "Paris",
    "Patras",
    "Penzance",
+   "Podgorica",
    "Porto",
    "Porto Torres",
    "Pozzallo",
    "Prague",
+   "Pristina",
    "Przemy\u015bl",
    "Rabat",
    "Riga",
@@ -248,6 +256,7 @@
    "Sarajevo",
    "Sein\u00e4joki",
    "Sevilla",
+   "Skopje",
    "Sofia",
    "Split",
    "Stavanger",
@@ -297,7 +306,7 @@
  },
  "origins": {
   "Stockholm": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -305,31 +314,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-20": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-21": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-22": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -361,12 +370,15 @@
      "Monaco",
      "Oslo",
      "Paris",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Tallinn",
      "Tirana",
@@ -407,11 +419,13 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Tallinn",
      "Tirana",
@@ -436,6 +450,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -529,10 +544,12 @@
      "Paris",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -547,6 +564,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",
@@ -595,7 +613,7 @@
    }
   },
   "Copenhagen": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -603,31 +621,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-20": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-21": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-22": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -658,12 +676,15 @@
      "Monaco",
      "Oslo",
      "Paris",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -704,11 +725,13 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -734,6 +757,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -826,10 +850,12 @@
      "Paris",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -844,6 +870,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",
@@ -893,7 +920,7 @@
    }
   },
   "London": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -901,31 +928,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-20": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-21": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-22": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -956,12 +983,15 @@
      "Monaco",
      "Oslo",
      "Paris",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1002,11 +1032,13 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1032,6 +1064,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -1124,10 +1157,12 @@
      "Paris",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -1142,6 +1177,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",
@@ -1191,7 +1227,7 @@
    }
   },
   "Berlin": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -1199,31 +1235,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-20": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-21": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-22": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -1254,12 +1290,15 @@
      "Monaco",
      "Oslo",
      "Paris",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1300,11 +1339,13 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1330,6 +1371,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -1422,10 +1464,12 @@
      "Paris",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -1440,6 +1484,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",
@@ -1489,7 +1534,7 @@
    }
   },
   "Paris": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -1497,31 +1542,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-20": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-21": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-22": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -1552,12 +1597,15 @@
      "Madrid",
      "Monaco",
      "Oslo",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1598,11 +1646,13 @@
      "Monaco",
      "Oslo",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1628,6 +1678,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -1720,10 +1771,12 @@
      "Palma",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -1738,6 +1791,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",
@@ -1787,7 +1841,7 @@
    }
   },
   "Rome": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -1795,31 +1849,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-20": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-21": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     },
     "2026-11-22": {
-     "with_night_trains": 44,
-     "without": 42
+     "with_night_trains": 47,
+     "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -1851,11 +1905,14 @@
      "Monaco",
      "Oslo",
      "Paris",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1897,10 +1954,12 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -1926,6 +1985,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -2019,10 +2079,12 @@
      "Paris",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -2036,6 +2098,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",
@@ -2085,7 +2148,7 @@
    }
   },
   "Hamburg": {
-   "generated": "2026-11-13",
+   "generated": "2026-11-14",
    "dates": [
     "2026-11-17",
     "2026-11-20",
@@ -2093,31 +2156,31 @@
     "2026-11-22"
    ],
    "draft": false,
-   "departures": 6733,
+   "departures": 6742,
    "warnings": 0,
    "capitals": {
     "2026-11-17": {
-     "with_night_trains": 45,
-     "without": 43
+     "with_night_trains": 48,
+     "without": 45
     },
     "2026-11-20": {
-     "with_night_trains": 45,
-     "without": 43
+     "with_night_trains": 48,
+     "without": 45
     },
     "2026-11-21": {
-     "with_night_trains": 45,
-     "without": 43
+     "with_night_trains": 48,
+     "without": 45
     },
     "2026-11-22": {
-     "with_night_trains": 45,
-     "without": 43
+     "with_night_trains": 48,
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-17": 168,
-    "2026-11-20": 168,
-    "2026-11-21": 168,
-    "2026-11-22": 168
+    "2026-11-17": 172,
+    "2026-11-20": 172,
+    "2026-11-21": 172,
+    "2026-11-22": 172
    },
    "reached": {
     "capitals": [
@@ -2149,12 +2212,15 @@
      "Monaco",
      "Oslo",
      "Paris",
+     "Podgorica",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -2196,11 +2262,13 @@
      "Oslo",
      "Paris",
      "Prague",
+     "Pristina",
      "Rabat",
      "Riga",
      "Rome",
      "San Marino",
      "Sarajevo",
+     "Skopje",
      "Sofia",
      "Stockholm",
      "Tallinn",
@@ -2226,6 +2294,7 @@
      "Avignon",
      "Ayr",
      "Badajoz",
+     "Bar",
      "Barcelona",
      "Bari",
      "Basel",
@@ -2318,10 +2387,12 @@
      "Paris",
      "Patras",
      "Penzance",
+     "Podgorica",
      "Porto",
      "Porto Torres",
      "Pozzallo",
      "Prague",
+     "Pristina",
      "Przemy\u015bl",
      "Rabat",
      "Riga",
@@ -2336,6 +2407,7 @@
      "Sarajevo",
      "Sein\u00e4joki",
      "Sevilla",
+     "Skopje",
      "Sofia",
      "Split",
      "Stavanger",

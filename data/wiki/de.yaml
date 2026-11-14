@@ -135,6 +135,18 @@ Badajoz:
     der Provinz Badajoz. Badajoz liegt am Guadiana in der Nähe der Grenze zu Portugal und ist Bischofssitz und Universitätsstadt.
   title: Badajoz
   url: https://de.wikivoyage.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 1631860
+  section: Hintergrund
+  source: wikivoyage
+  text: Bar ist eine Stadt in Montenegro. Bar ist touristisch interessant wegen seiner Mischung aus historischem
+    Erbe, wie der antiken Stadt Stari Bar, und der malerischen Adriaküste mit schönen Stränden und mediterranem
+    Klima. Bar ist eine Hafenstadt an der Adria. Wirtschaftlich bedeutend ist die moderne Neustadt mit dem seit
+    1952 ausgebauten Hafen und dem Bahnhof.
+  title: Bar (Montenegro)
+  url: https://de.wikivoyage.org/wiki/Bar_%28Montenegro%29
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1168,6 +1180,18 @@ Penzance:
     Districts Penwith. Penzance und Umgebung sind stark durch den Tourismus geprägt.
   title: Penzance
   url: https://de.wikipedia.org/wiki/Penzance
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 1743936
+  section: Hintergrund
+  source: wikivoyage
+  text: Podgorica ist die Hauptstadt von Montenegro. Die in einer weiten Ebene an der Mündung der Zeta in die Morača
+    gelegene Stadt wurde 1326 erstmals erwähnt. 1466 kam sie an das Osmanische Reich. Die Osmanen errichteten zum
+    Schutz gegen Montenegro eine große Festung. Auf dem Berliner Kongress wurde die Stadt 1878 Montenegro zugesprochen,
+    dessen Hauptstadt aber Cetinje blieb.
+  title: Podgorica
+  url: https://de.wikivoyage.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1210,6 +1234,17 @@ Prague:
     hat ihre Narben hinterlassen: Glaubensstreit, Kriege und Plünderungen.'
   title: Prag
   url: https://de.wikivoyage.org/wiki/Prag
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 270701031
+  source: wikipedia
+  text: Pristina ist die Hauptstadt der Republik Kosovo und mit fast 150.000 Einwohnern zugleich die größte Stadt
+    und Gemeinde des Staates. Pristina ist Regierungssitz und somit das politische Landeszentrum. In der Stadt befinden
+    sich der Sitz der Regierung, der Parlamentssitz und der Amtssitz der Präsidentin. Des Weiteren sind hier die
+    Hauptquartiere der UNMIK- und OSZE-Missionen im Staat ansässig.
+  title: Pristina
+  url: https://de.wikipedia.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1376,6 +1411,17 @@ Sevilla:
     Einwohner von Sevilla sind als „Sevillanos“ bekannt.'
   title: Sevilla
   url: https://de.wikivoyage.org/wiki/Sevilla
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 271596607
+  source: wikipedia
+  text: Skopje ist die Hauptstadt Nordmazedoniens und mit über 520.000 Einwohnern zugleich die größte Stadt des
+    Landes. Über 28 % der Landesbevölkerung lebt in dieser Großstadt. Bereits in der antiken Vorgängerstadt Scupi
+    siedelten Menschen in dieser fruchtbaren Ebene am Vardar. Mit seiner zwei Jahrtausende zurückreichenden Besiedlungsgeschichte
+    ist Skopje somit eine der ältesten noch bewohnten Städte Südosteuropas.
+  title: Skopje
+  url: https://de.wikipedia.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'

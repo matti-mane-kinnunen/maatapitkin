@@ -147,6 +147,15 @@ Badajoz:
     875 da Ibn Marwan, un ribelle mulatí (cristiano convertito all'Islam) in lotta contro l'Emirato di Cordova.
   title: Badajoz
   url: https://it.wikivoyage.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 152703946
+  source: wikipedia
+  text: Antìvari, Antibari o Bar è un comune del Montenegro, situato nella Dalmazia meridionale sulla costa adriatica.
+    Il capoluogo omonimo conta 17727 abitanti ed è il principale porto del Montenegro.
+  title: Antivari
+  url: https://it.wikipedia.org/wiki/Antivari
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1197,6 +1206,16 @@ Penzance:
     l'ispirazione per l'operetta The Pirates of Penzance di Gilbert e Sullivan.
   title: Penzance
   url: https://it.wikipedia.org/wiki/Penzance
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 941611
+  source: wikivoyage
+  text: Podgorica è la capitale del Montenegro. Pur non essendo un tipico piacere dal punto di vista europeo, la
+    città merita sicuramente una visita, grazie al suo interessante mix di vecchio e nuovo, la sua cultura dei caffè
+    e la vita notturna e la sua rilassata atmosfera mediterranea.
+  title: Podgorica
+  url: https://it.wikivoyage.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1242,6 +1261,16 @@ Prague:
     medievali che perforano l'orizzonte.
   title: Praga
   url: https://it.wikivoyage.org/wiki/Praga
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 924025
+  source: wikivoyage
+  text: 'Pristina è la capitale del Kosovo. Non è convenzionalmente bella a vista: è disordinata, con un''eredità
+    ottomana secolare che compete con i progetti comunisti e le mostruosità architettoniche post-comuniste. Tuttavia,
+    esercita una forte attrazione, offrendo molto ai visitatori di passaggio.'
+  title: Pristina
+  url: https://it.wikivoyage.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1417,6 +1446,18 @@ Sevilla:
     nella classifica delle città più visitate di Spagna, dopo Barcellona, Madrid e Benidorm.
   title: Siviglia
   url: https://it.wikivoyage.org/wiki/Siviglia
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 923000
+  section: Da sapere
+  source: wikivoyage
+  text: Skopje (in italiano Scopia, Scupi) è la capitale della Macedonia del Nord. Skopje è la capitale e la città
+    più popolosa della Macedonia del Nord. Qui si concentra più di un quarto della popolazione ed è per questo il
+    centro economico, politico e culturale della nazione. Come tutta la Macedonia del Nord, Skopje è un crocevia
+    di culture e religioni.
+  title: Skopje
+  url: https://it.wikivoyage.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'

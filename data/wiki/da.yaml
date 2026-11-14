@@ -130,6 +130,17 @@ Badajoz:
     Badajoz blev grundlagt i år 875.
   title: Badajoz
   url: https://da.wikipedia.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 9703265
+  source: wikipedia
+  text: Bar er en by, som ligger ved Montenegros kyst. Byen Bar har 25.000 indbyggere og kommunen Bar har 45.000
+    indbyggere. Havnen i Bar er den største i Montenegro. Den gamle bydel, Stari Bar (Gamle Bar), nævnes i dokumenter
+    fra det 9. århundrede. Ved indfaldsvejen til byen findes et oliventræ, som er mellem 2000 og 2500 år gammelt.
+    Dette er det ældste oliventræ i verden, og det bærer stadigvæk frugt.
+  title: Bar (Montenegro)
+  url: https://da.wikipedia.org/wiki/Bar_%28Montenegro%29
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1052,6 +1063,16 @@ Penzance:
     færgerute fra byens havn til Scillyøerne.
   title: Penzance
   url: https://da.wikipedia.org/wiki/Penzance
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 12348321
+  source: wikipedia
+  text: Podgorica er Montenegros de facto hovedstad med 156.169(2011) indbyggere. Podgorica ligger ved floden Morača,
+    i det tidligere Jugoslavien var byens navn Titograd. Ifølge Montenegros forfatning fra 1993 er landets "hovedstad"
+    Cetinje, mens Podgorica er "regeringsby".
+  title: Podgorica
+  url: https://da.wikipedia.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1090,6 +1111,16 @@ Prague:
     og omkring denne opstod der et samfund, der hurtigt udviklede sig til byen Prag.
   title: Prag
   url: https://da.wikipedia.org/wiki/Prag
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 12018368
+  source: wikipedia
+  text: Prishtina eller Pristina er hovedstad og største by i Kosovo. Pristina har 211.129(2012-13) indbyggere.
+    Byens gamle navn var Ulpiana. Prishtinas storbyområde har anslået godt 500.000 indbyggere, hovedsageligt albanere.
+    Der er også grupperinger af serbere, bosniakker og romaer i byen.
+  title: Pristina
+  url: https://da.wikipedia.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1244,6 +1275,17 @@ Sevilla:
     i regionen, hvori den ligger.
   title: Sevilla
   url: https://da.wikipedia.org/wiki/Sevilla
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 10936849
+  source: wikipedia
+  text: Skopje er hovedstaden i Republikken Nordmakedonien. Byen ligger på bredden af Vardar-floden og mellem bjergene
+    Vodno og Skopska Crna Gora. Byen er 8 km bred og 32 km lang og har ca. 500.000 indbyggere (2002). Skopje hørte
+    til Jugoslaviens smukkeste byer indtil den 26. juli 1963, da byen blev ramt af en stor katastrofe kl.05:17 om
+    morgenen – et jordskælv som efterlod byen i ruiner med 80% af bygningerne ødelagt.
+  title: Skopje
+  url: https://da.wikipedia.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'

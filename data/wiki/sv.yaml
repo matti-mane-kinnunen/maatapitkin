@@ -136,6 +136,17 @@ Badajoz:
     1 440,66 km². Badajoz grundades på 800-talet, då morerna dominerade den Iberiska halvön.
   title: Badajoz
   url: https://sv.wikipedia.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 59796323
+  source: wikipedia
+  text: Bar är en betydande hamnstad, belägen i kommunen Bar i södra Montenegro. Folkmängden i centralorten uppgick
+    till 13 586 invånare vid folkräkningen 2011. Hela kommunen Bar hade 42 368 invånare år 2011, på en yta av 598
+    kvadratkilometer. Norr om centrala Bar ligger den äldre orten Stari Bar ("Gamla Bar") och från Bar går reguljär
+    färjetrafik till Italien.
+  title: Bar, Montenegro
+  url: https://sv.wikipedia.org/wiki/Bar%2C_Montenegro
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1103,6 +1114,17 @@ Penzance:
     och grönsaker. Staden är en turist- och badort.
   title: Penzance
   url: https://sv.wikipedia.org/wiki/Penzance
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 59197834
+  source: wikipedia
+  text: Podgorica är Montenegros huvudstad sedan mellankrigstiden. Staden är belägen i den sydöstra delen av landet,
+    cirka 40 kilometer från Adriatiska havet. Tidigare var Cetinje Montenegros huvudstad. Vid folkräkningen 2011
+    hade Podgorica cirka 150 000 invånare, med nästan 190 000 invånare i hela kommunen. 2023 uppskattas befolkningen
+    i kommunen vara 209 968 invånare.
+  title: Podgorica
+  url: https://sv.wikipedia.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1142,6 +1164,17 @@ Prague:
     gator, kringmurade gårdsplaner, katedraler och otaliga takspiror.'
   title: Prag
   url: https://sv.wikivoyage.org/wiki/Prag
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 59860766
+  source: wikipedia
+  text: Pristina är huvudstad och största stad i Kosovo. Folkmängden i centralorten är cirka 150 000 invånare, med
+    strax över 200 000 invånare i hela kommunen. Staden har en stor majoritet albaner, vid sidan om mindre grupper
+    såsom turkar, serber, bosniaker, romer med flera. Territoriets interim-regering och UNMIK har sina högkvarter
+    i staden.
+  title: Pristina
+  url: https://sv.wikipedia.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1301,6 +1334,17 @@ Sevilla:
     bäst bevarade gamla städerna i Europa som har ett stort historiskt och konstnärligt värde.
   title: Sevilla
   url: https://sv.wikivoyage.org/wiki/Sevilla
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 57805711
+  source: wikipedia
+  text: Skopje är Nordmakedoniens huvudstad. 2012 hade staden 486 600 invånare, vilket är cirka en tredjedel av
+    Republiken Nordmakedoniens befolkning. Staden är politiskt, kulturellt, ekonomiskt och akademiskt centrum i
+    landet. Skopjeområdet har varit bebott sedan åtminstone 4000 år före Kristus. Lämningar efter neolitiska byggnader
+    har hittats nära den gamla fästningen Kale som höjer sig över det moderna citycentret.
+  title: Skopje
+  url: https://sv.wikipedia.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'

@@ -134,6 +134,16 @@ Badajoz:
     Kaupungin ympäristössä on maurilinnoituksen raunioita.
   title: Badajoz
   url: https://fi.wikipedia.org/wiki/Badajoz
+Bar:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 24122065
+  source: wikipedia
+  text: Bar on kaupunki ja kunta Montenegron eteläosassa Adrianmeren rannalla. Koillisessa alue rajoittuu Skadarjärveen.
+    Barin kaupungissa oli 13 503 asukasta vuoden 2011 väestönlaskennassa ja kunnassa noin 44 000 asukasta vuoden
+    2019 arvioissa. Bar on tärkeä satamakaupunki.
+  title: Bar (Montenegro)
+  url: https://fi.wikipedia.org/wiki/Bar_%28Montenegro%29
 Barcelona:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1098,6 +1108,17 @@ Patras:
     suurin kaupunki ja läntisen Kreikan merkittävin satamakaupunki.
   title: Patras
   url: https://fi.wikipedia.org/wiki/Patras
+Podgorica:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 54158
+  section: Ymmärrä
+  source: wikivoyage
+  text: Podgorica on Montenegron pääkaupunki. Podgoricassa on 139 100 asukasta. Yhä useammat ihmiset puhuvat englantia.
+    Kaikki katukyltit ovat latinalaisilla aakkosilla eikä tien löytäminen ole vaikeaa. Matkaoppaissa ei juuri kehuta
+    Podgoricaa, mutta kaupunki on viihtyisä, siisti ja elävä.
+  title: Podgorica
+  url: https://fi.wikivoyage.org/wiki/Podgorica
 Porto:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1131,6 +1152,17 @@ Prague:
     hyvin säilyneitä nähtävyyksiä ja vanha keskusta on UNESCOn maailmanperintölistalla.
   title: Praha
   url: https://fi.wikivoyage.org/wiki/Praha
+Pristina:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 23174668
+  source: wikipedia
+  text: Pristina on Kosovon pääkaupunki. Vuoden 2011 väestönlaskennassa sen asukasluku oli 198 897. Suurin osa kaupungin
+    asukkaista on albaaneja. Pristina oli yksi keskiaikaisen Serbian pääkaupungeista ja myöhemmin autonomisen Kosovon
+    pääkaupunki. Siitä tuli itsenäisen Kosovon pääkaupunki Kosovon annettua itsenäisyysjulistuksen vuonna 2008.
+    Serbia ei ole tunnustanut maan itsenäisyyttä ja pitää Kosovoa edelleen osana Serbiaa.
+  title: Pristina
+  url: https://fi.wikipedia.org/wiki/Pristina
 Przemyśl:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1290,6 +1322,15 @@ Sevilla:
     Metropolialueen väkiluku on 1,5 miljoonaa (2014).
   title: Sevilla
   url: https://fi.wikipedia.org/wiki/Sevilla
+Skopje:
+  checked: '2026-11-14'
+  fetched: '2026-11-14'
+  revid: 24209951
+  source: wikipedia
+  text: Skopje on Pohjois-Makedonian pääkaupunki. Skopjen asukasluku vuonna 2021 oli 526 502 ja se sijaitsee Vardar-joen
+    yläjuoksulla. Se on Pohjois-Makedonian poliittinen ja taloudellinen keskus, jossa asuu yli neljännes maan väestöstä.
+  title: Skopje
+  url: https://fi.wikipedia.org/wiki/Skopje
 Sofia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
