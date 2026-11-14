@@ -217,10 +217,10 @@ places:
   Podgorica: {lat: 42.430, lon: 19.259, capital: true, country: ME}  # from not_yet_covered; Lovćen night train from Belgrade
   Bar: {lat: 42.094, lon: 19.100, country: ME}  # Montenegro; station by the port, set by hand (namesake Bar in Ukraine)
   Pristina: {lat: 42.663, lon: 21.164, capital: true, country: XK, aliases: [Prishtina, Priština, Prishtinë]}  # from not_yet_covered; buses from Belgrade
+  Skopje: {lat: 41.996, lon: 21.431, capital: true, country: MK, aliases: [Skopie, Skopia]}  # from not_yet_covered; bus from Belgrade to Transporten Centar
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:
   Reykjavik: {lat: 64.146, lon: -21.942, country: IS}
-  Skopje:  {lat: 41.996, lon: 21.431, country: MK}
   Vaduz:   {lat: 47.141, lon: 9.521, country: LI}
   Nicosia: {lat: 35.173, lon: 33.364, country: CY}

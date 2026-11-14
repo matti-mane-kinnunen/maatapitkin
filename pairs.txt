@@ -603,3 +603,6 @@ Bar -> Belgrade : Lovćen 432 night 20:10-07:08
 # -- Kosovo: Adio buses Belgrade (Novi Beograd bus station) - Pristina (Matti, booking site, Nov 2026; EUR 22; run days not checked, entered as daily)
 Belgrade -> Pristina : Adio 12:00 bus 12:00-17:30
 Belgrade -> Pristina : Adio 21:30 bus night 21:30-04:00
+
+# -- North Macedonia: daily bus Belgrade (Novi Beograd bus station) - Skopje (Transporten Centar) (Matti, booking site, Nov 2026; EUR 36)
+Belgrade -> Skopje : Coach 15:30 bus 15:30-21:45

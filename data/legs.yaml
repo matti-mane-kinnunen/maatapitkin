@@ -2288,3 +2288,4 @@ legs:
   - {from: Bar, to: Belgrade, dep: "20:10", arr: "07:08", service: "Lovćen 432", mode: train, night: true, checked: 2026-11-14, source: manual}
   - {from: Belgrade, to: Pristina, dep: "12:00", arr: "17:30", service: "Adio 12:00", mode: bus, checked: 2026-11-14, source: manual}
   - {from: Belgrade, to: Pristina, dep: "21:30", arr: "04:00", service: "Adio 21:30", mode: bus, night: true, checked: 2026-11-14, source: manual}
+  - {from: Belgrade, to: Skopje, dep: "15:30", arr: "21:45", service: "Coach 15:30", mode: bus, checked: 2026-11-14, source: manual}
