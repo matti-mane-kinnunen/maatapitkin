@@ -1,37 +1,37 @@
 {
- "generated": "2026-11-14",
+ "generated": "2026-11-16",
  "dates": [
-  "2026-11-17",
-  "2026-11-20",
-  "2026-11-21",
-  "2026-11-22"
+  "2026-11-24",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29"
  ],
  "draft": false,
- "departures": 6742,
+ "departures": 6755,
  "warnings": 0,
  "capitals": {
-  "2026-11-17": {
+  "2026-11-24": {
    "with_night_trains": 47,
    "without": 44
   },
-  "2026-11-20": {
+  "2026-11-27": {
    "with_night_trains": 47,
    "without": 44
   },
-  "2026-11-21": {
+  "2026-11-28": {
    "with_night_trains": 47,
    "without": 44
   },
-  "2026-11-22": {
+  "2026-11-29": {
    "with_night_trains": 47,
    "without": 44
   }
  },
  "places_reached": {
-  "2026-11-17": 172,
-  "2026-11-20": 172,
-  "2026-11-21": 172,
-  "2026-11-22": 172
+  "2026-11-24": 175,
+  "2026-11-27": 175,
+  "2026-11-28": 175,
+  "2026-11-29": 175
  },
  "reached": {
   "capitals": [
@@ -193,6 +193,7 @@
    "Innsbruck",
    "Irun",
    "Istanbul",
+   "Ivalo",
    "Kaisiadorys",
    "Kaunas",
    "Kolding",
@@ -209,6 +210,7 @@
    "London",
    "Lugano",
    "Luxembourg",
+   "Lviv",
    "Lyon",
    "Madrid",
    "Malaga",
@@ -227,6 +229,7 @@
    "Narvik",
    "Newcastle",
    "Nice",
+   "Odesa",
    "Offenburg",
    "Oslo",
    "Osnabr\u00fcck",
@@ -306,39 +309,39 @@
  },
  "origins": {
   "Stockholm": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 47,
      "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -501,6 +504,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -517,6 +521,7 @@
      "London",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -535,6 +540,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",
@@ -613,39 +619,39 @@
    }
   },
   "Copenhagen": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 47,
      "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -807,6 +813,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -823,6 +830,7 @@
      "London",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -841,6 +849,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",
@@ -920,39 +929,39 @@
    }
   },
   "London": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 47,
      "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -1115,6 +1124,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -1130,6 +1140,7 @@
      "Ljubljana",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -1148,6 +1159,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",
@@ -1227,39 +1239,39 @@
    }
   },
   "Berlin": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 47,
      "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -1421,6 +1433,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -1437,6 +1450,7 @@
      "London",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -1455,6 +1469,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",
@@ -1534,39 +1549,39 @@
    }
   },
   "Paris": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 47,
      "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -1729,6 +1744,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -1745,6 +1761,7 @@
      "London",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -1763,6 +1780,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",
@@ -1841,39 +1859,39 @@
    }
   },
   "Rome": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 47,
      "without": 44
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 47,
      "without": 44
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -2036,6 +2054,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -2052,6 +2071,7 @@
      "London",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -2070,6 +2090,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",
@@ -2148,39 +2169,39 @@
    }
   },
   "Hamburg": {
-   "generated": "2026-11-14",
+   "generated": "2026-11-16",
    "dates": [
-    "2026-11-17",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-24",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
    ],
    "draft": false,
-   "departures": 6742,
+   "departures": 6755,
    "warnings": 0,
    "capitals": {
-    "2026-11-17": {
+    "2026-11-24": {
      "with_night_trains": 48,
      "without": 45
     },
-    "2026-11-20": {
+    "2026-11-27": {
      "with_night_trains": 48,
      "without": 45
     },
-    "2026-11-21": {
+    "2026-11-28": {
      "with_night_trains": 48,
      "without": 45
     },
-    "2026-11-22": {
+    "2026-11-29": {
      "with_night_trains": 48,
      "without": 45
     }
    },
    "places_reached": {
-    "2026-11-17": 172,
-    "2026-11-20": 172,
-    "2026-11-21": 172,
-    "2026-11-22": 172
+    "2026-11-24": 175,
+    "2026-11-27": 175,
+    "2026-11-28": 175,
+    "2026-11-29": 175
    },
    "reached": {
     "capitals": [
@@ -2344,6 +2365,7 @@
      "Innsbruck",
      "Irun",
      "Istanbul",
+     "Ivalo",
      "Kaisiadorys",
      "Kaunas",
      "Kolding",
@@ -2360,6 +2382,7 @@
      "London",
      "Lugano",
      "Luxembourg",
+     "Lviv",
      "Lyon",
      "Madrid",
      "Malaga",
@@ -2378,6 +2401,7 @@
      "Narvik",
      "Newcastle",
      "Nice",
+     "Odesa",
      "Offenburg",
      "Oslo",
      "Osnabr\u00fcck",

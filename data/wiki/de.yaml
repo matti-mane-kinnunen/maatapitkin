@@ -681,6 +681,17 @@ Istanbul:
     (2014) über 14.000.000 Einwohner.
   title: Istanbul
   url: https://de.wikivoyage.org/wiki/Istanbul
+Ivalo:
+  checked: '2026-11-16'
+  fetched: '2026-11-16'
+  revid: 241043672
+  source: wikipedia
+  text: Ivalo ist ein Ort im finnischen Teil Lapplands. Er liegt am Fluss Ivalojoki rund 12 km südlich von dessen
+    Mündung in den See Inarijärvi. Ivalo ist die größte Siedlung und das Verwaltungszentrum der Gemeinde Inari.
+    Rund 3400 der 7000 Einwohner Inaris leben in Ivalo. Damit ist Ivalo der größte Ort Nordlapplands. 11 km südwestlich
+    des Ortes befindet sich der Flughafen Ivalo, der nördlichste Flughafen Finnlands.
+  title: Ivalo
+  url: https://de.wikipedia.org/wiki/Ivalo
 Izmir:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -881,6 +892,16 @@ Luxembourg:
     der UNESCO.
   title: Luxemburg Stadt
   url: https://de.wikivoyage.org/wiki/Luxemburg_Stadt
+Lviv:
+  checked: '2026-11-16'
+  fetched: '2026-11-16'
+  revid: 1792383
+  source: wikivoyage
+  text: Lwiw ist mit etwa 750.000 Einwohnern die größte Stadt in der Westukraine. Die Stadt liegt rund achtzig Kilometer
+    östlich der polnischen Grenze an der Poltwa. Die Altstadt gehört seit 1998 zum Welterbe der UNESCO. Sie liegt
+    in der historischen Region Rote Rus.
+  title: Lwiw
+  url: https://de.wikivoyage.org/wiki/Lwiw
 Lyon:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1043,6 +1064,18 @@ Naples:
     sowie den Inseln Capri und Ischia zu einem abwechslungsreichen und sehenswerten Erlebnis.
   title: Neapel
   url: https://de.wikivoyage.org/wiki/Neapel
+Narva:
+  checked: '2026-11-16'
+  fetched: '2026-11-16'
+  revid: 1774166
+  section: Hintergrund
+  source: wikivoyage
+  text: Narva ist eine Stadt in Estland, heute Grenzstadt zu Russland. Der umliegende Landkreis heißt Ida-Viru.
+    In der ganzen Region stand im Herbst 1944 kaum noch ein Stein auf dem anderen. Die alte Stadt wurde wieder neu
+    gebaut. Es zogen viele Menschen aus anderen Sowjetrepubliken zu. Das Stadtbild wird durch die vom Fluss aus
+    sichtbaren Festungen auf bedien Ufern dominiert.
+  title: Narva
+  url: https://de.wikivoyage.org/wiki/Narva
 Narvik:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1078,6 +1111,16 @@ Nice:
     für Handel, Kultur und Tourismus sowie Verkehrsdrehkreuz für die Region.
   title: Nizza
   url: https://de.wikivoyage.org/wiki/Nizza
+Odesa:
+  checked: '2026-11-16'
+  fetched: '2026-11-16'
+  revid: 270488414
+  source: wikipedia
+  text: Odessa ist eine Millionenstadt am Schwarzen Meer und das administrative Zentrum der Oblast Odessa in der
+    Ukraine. Die Stadt mit knapp über einer Million Einwohnern (Stand 2022) ist die bedeutendste Hafenstadt des
+    Landes. Das historische Zentrum von Odessa wurde 2023 in die Welterbe-Liste der UNESCO aufgenommen.
+  title: Odessa
+  url: https://de.wikipedia.org/wiki/Odessa
 Offenburg:
   checked: '2026-11-13'
   fetched: '2026-11-13'

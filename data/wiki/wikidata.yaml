@@ -384,6 +384,12 @@ Istanbul:
   km: 1.5
   label: Istanbul
   wd: Q406
+Ivalo:
+  checked: '2026-11-16'
+  description: village in Inari, Finland
+  km: 0.2
+  label: Ivalo
+  wd: Q539767
 Izmir:
   checked: '2026-11-13'
   description: city in İzmir Province, Turkey
@@ -486,6 +492,12 @@ Luxembourg:
   km: 1.3
   label: Luxembourg
   wd: Q1842
+Lviv:
+  checked: '2026-11-16'
+  description: capital city of Lviv Oblast in western Ukraine
+  km: 2.7
+  label: Lviv
+  wd: Q36036
 Lyon:
   checked: '2026-11-13'
   description: city of France
@@ -576,6 +588,12 @@ Naples:
   km: 2.7
   label: Naples
   wd: Q2634
+Narva:
+  checked: '2026-11-16'
+  description: city in Estonia
+  km: 1.1
+  label: Narva
+  wd: Q102158
 Narvik:
   checked: '2026-11-13'
   description: settlement in Narvik Municipality, Norway
@@ -594,6 +612,12 @@ Nice:
   km: 0.6
   label: Nice
   wd: Q33959
+Odesa:
+  checked: '2026-11-16'
+  description: city in southwestern Ukraine, administrative center of Odesa Oblast and Odesa Raion
+  km: 0.4
+  label: Odesa
+  wd: Q1874
 Offenburg:
   checked: '2026-11-13'
   description: city in Baden-Württemberg, Germany
