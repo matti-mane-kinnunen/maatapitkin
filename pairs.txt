@@ -609,7 +609,11 @@ Belgrade -> Skopje : Coach 15:30 bus 15:30-21:45
 
 # -- Missing pairs (Matti, 16.11.2026); new places set by hand in places.yaml
 Przemyśl -> Lviv : *          # if nothing is found: UZ Intercity 09:49-12:26 (Seat61, Nov 2026, the Kyiv train above)
-Tallinn -> Narva : *          # Elron
+Tallinn -> Narva : Elron 220 06:25-09:02     # Elron.ee, Nov 2026, daily; not in Transitous or bahn.de
+Tallinn -> Narva : Elron 20 10:08-12:21      # express
+Tallinn -> Narva : Elron 222 12:46-15:25
+Tallinn -> Narva : Elron 22 16:31-18:44      # express
+Tallinn -> Narva : Elron 224 19:22-22:01
 
 # -- Lapland: daily buses Rovaniemi bus station - Ivalo bus station (Matti, Matkahuolto, Nov 2026)
 Rovaniemi -> Ivalo : Jbus 08:00 bus 08:00-12:00
