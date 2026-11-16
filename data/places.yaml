@@ -174,7 +174,8 @@ places:
   Storlien: {lat: 63.316, lon: 12.099, country: "SE", db: 7400093}  # added by add_leg.py
   Narvik: {lat: 68.441, lon: 17.441, country: "NO", db: 7600092}  # added by add_leg.py
   Boden: {lat: 65.829, lon: 21.708, country: "SE", aliases: [Boden Centralstation, Boden C], db: 7400043}  # corrected by hand 31.10.2026
-  Oulu: {lat: 65.012, lon: 25.486, country: "FI", db: 1000069}  # added by add_leg.py
+  Oulu: {lat: 65.012, lon: 25.486, country: "FI", morning_departure: "05:00", db: 1000069}  # IC 401 to Haparanda leaves 05:08, the only morning train to Sweden
+  Haparanda: {lat: 65.834, lon: 24.130, country: SE, aliases: [Haaparanta]}  # station, set by hand; Finnish IC trains from Oulu via Tornio end here
   Rovaniemi: {lat: 66.498, lon: 25.705, country: "FI", db: 1000086}  # added by add_leg.py
   Rostock: {lat: 54.078, lon: 12.132, country: "DE", db: 8010304}  # added by add_leg.py
   Wroclaw: {lat: 51.098, lon: 17.037, country: "PL", db: 5100069}  # added by add_leg.py

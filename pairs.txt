@@ -628,3 +628,12 @@ Kyiv -> Odesa : Ecolines 12:20 bus 12:20-18:00
 Kyiv -> Odesa : Ecolines 14:30 bus 14:30-20:40
 Kyiv -> Odesa : Ecolines 16:25 bus 16:25-22:05
 Kyiv -> Odesa : Ecolines 23:00 bus night 23:00-05:15
+
+# -- Sweden - Finland by land via Haparanda (Matti, bahn.de, 16.11.2026): R 7108 Umeå 13:30 -> Boden 16:57, R 7188 Boden 17:31 -> Haparanda 20:10,
+#    IC 408 Haparanda 20:45 -> Oulu 23:20 (Finnish time); back IC 401 Oulu 05:08 -> Haparanda 05:45, R 7183 07:11 -> Boden 08:38, R 7103 09:11 -> Umeå 12:28
+Boden -> Haparanda : *
+Haparanda -> Oulu : *
+Oulu -> Haparanda : *
+Haparanda -> Boden : *
+Boden -> Umeå : *
+Oulu -> Helsinki : *          # so maps from Sweden can reach Helsinki without a ferry
