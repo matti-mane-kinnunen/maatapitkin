@@ -218,6 +218,10 @@ places:
   Bar: {lat: 42.094, lon: 19.100, country: ME}  # Montenegro; station by the port, set by hand (namesake Bar in Ukraine)
   Pristina: {lat: 42.663, lon: 21.164, capital: true, country: XK, aliases: [Prishtina, Priština, Prishtinë]}  # from not_yet_covered; buses from Belgrade
   Skopje: {lat: 41.996, lon: 21.431, capital: true, country: MK, aliases: [Skopie, Skopia]}  # from not_yet_covered; bus from Belgrade to Transporten Centar
+  Lviv: {lat: 49.840, lon: 23.994, country: UA, aliases: [Lvov, Lwów, Lwow, Lviv-Pas]}  # Lviv main station (Holovnyi), set by hand
+  Narva: {lat: 59.369, lon: 28.197, country: EE}  # station, set by hand
+  Ivalo: {lat: 68.658, lon: 27.540, country: FI}  # Lapland; bus station (Petsamontie 7), set by hand
+  Odesa: {lat: 46.487, lon: 30.729, country: UA, aliases: [Odessa, Одеса, Одесса], no_flights: true}  # Starosinna bus station, set by hand; no_flights: Ukrainian airspace closed (as Kyiv)
 
 # European capitals with no legs yet — reported by the build as coverage gaps.
 not_yet_covered:

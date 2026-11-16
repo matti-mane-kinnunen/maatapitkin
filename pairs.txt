@@ -606,3 +606,21 @@ Belgrade -> Pristina : Adio 21:30 bus night 21:30-04:00
 
 # -- North Macedonia: daily bus Belgrade (Novi Beograd bus station) - Skopje (Transporten Centar) (Matti, booking site, Nov 2026; EUR 36)
 Belgrade -> Skopje : Coach 15:30 bus 15:30-21:45
+
+# -- Missing pairs (Matti, 16.11.2026); new places set by hand in places.yaml
+Przemyśl -> Lviv : *          # if nothing is found: UZ Intercity 09:49-12:26 (Seat61, Nov 2026, the Kyiv train above)
+Tallinn -> Narva : *          # Elron
+
+# -- Lapland: daily buses Rovaniemi bus station - Ivalo bus station (Matti, Matkahuolto, Nov 2026)
+Rovaniemi -> Ivalo : Jbus 08:00 bus 08:00-12:00
+Rovaniemi -> Ivalo : OnniBus OB42 bus 11:20-15:15
+Rovaniemi -> Ivalo : Eskelisen 11:45 bus 11:45-16:00
+Rovaniemi -> Ivalo : Eskelisen 17:15 bus 17:15-21:05
+
+# -- Ukraine: daily Ecolines buses Kyiv (Teremky metro station, ~8 km south-west of the main station) - Odesa (Starosinna bus station) (Matti, Ecolines, Nov 2026; EUR 21-23)
+Kyiv -> Odesa : Ecolines 07:50 bus 07:50-13:45
+Kyiv -> Odesa : Ecolines 09:05 bus 09:05-14:50
+Kyiv -> Odesa : Ecolines 12:20 bus 12:20-18:00
+Kyiv -> Odesa : Ecolines 14:30 bus 14:30-20:40
+Kyiv -> Odesa : Ecolines 16:25 bus 16:25-22:05
+Kyiv -> Odesa : Ecolines 23:00 bus night 23:00-05:15
