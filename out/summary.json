@@ -7,31 +7,31 @@
   "2026-11-29"
  ],
  "draft": false,
- "departures": 6755,
+ "departures": 6797,
  "warnings": 0,
  "capitals": {
   "2026-11-24": {
    "with_night_trains": 47,
-   "without": 44
+   "without": 45
   },
   "2026-11-27": {
    "with_night_trains": 47,
-   "without": 44
+   "without": 45
   },
   "2026-11-28": {
    "with_night_trains": 47,
-   "without": 44
+   "without": 45
   },
   "2026-11-29": {
    "with_night_trains": 47,
-   "without": 44
+   "without": 45
   }
  },
  "places_reached": {
-  "2026-11-24": 175,
-  "2026-11-27": 175,
-  "2026-11-28": 175,
-  "2026-11-29": 175
+  "2026-11-24": 177,
+  "2026-11-27": 177,
+  "2026-11-28": 177,
+  "2026-11-29": 177
  },
  "reached": {
   "capitals": [
@@ -102,6 +102,7 @@
    "Copenhagen",
    "Dublin",
    "Edinburgh",
+   "Kyiv",
    "Lisbon",
    "Ljubljana",
    "London",
@@ -187,6 +188,7 @@
    "G\u00f6teborg",
    "Hamburg",
    "Hannover",
+   "Haparanda",
    "Hendaye",
    "Holyhead",
    "Iasi",
@@ -226,6 +228,7 @@
    "Munich",
    "Nantes",
    "Naples",
+   "Narva",
    "Narvik",
    "Newcastle",
    "Nice",
@@ -317,31 +320,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-27": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-28": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-29": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -413,6 +416,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -497,6 +501,7 @@
      "G\u00f6teborg",
      "Hamburg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -537,6 +542,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",
@@ -627,31 +633,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-27": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-28": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-29": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -722,6 +728,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -806,6 +813,7 @@
      "G\u00f6teborg",
      "Hamburg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -846,6 +854,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",
@@ -937,31 +946,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-27": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-28": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-29": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -1033,6 +1042,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "Luxembourg",
@@ -1117,6 +1127,7 @@
      "G\u00f6teborg",
      "Hamburg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -1156,6 +1167,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",
@@ -1247,31 +1259,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-27": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-28": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-29": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -1342,6 +1354,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -1426,6 +1439,7 @@
      "G\u00f6teborg",
      "Hamburg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -1466,6 +1480,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",
@@ -1557,31 +1572,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-27": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-28": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-29": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -1653,6 +1668,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -1737,6 +1753,7 @@
      "G\u00f6teborg",
      "Hamburg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -1777,6 +1794,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",
@@ -1867,31 +1885,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-27": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-28": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     },
     "2026-11-29": {
      "with_night_trains": 47,
-     "without": 44
+     "without": 45
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -1963,6 +1981,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -2047,6 +2066,7 @@
      "G\u00f6teborg",
      "Hamburg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -2087,6 +2107,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",
@@ -2177,31 +2198,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 6755,
+   "departures": 6797,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 48,
-     "without": 45
+     "without": 46
     },
     "2026-11-27": {
      "with_night_trains": 48,
-     "without": 45
+     "without": 46
     },
     "2026-11-28": {
      "with_night_trains": 48,
-     "without": 45
+     "without": 46
     },
     "2026-11-29": {
      "with_night_trains": 48,
-     "without": 45
+     "without": 46
     }
    },
    "places_reached": {
-    "2026-11-24": 175,
-    "2026-11-27": 175,
-    "2026-11-28": 175,
-    "2026-11-29": 175
+    "2026-11-24": 177,
+    "2026-11-27": 177,
+    "2026-11-28": 177,
+    "2026-11-29": 177
    },
    "reached": {
     "capitals": [
@@ -2274,6 +2295,7 @@
      "Dublin",
      "Edinburgh",
      "Helsinki",
+     "Kyiv",
      "Lisbon",
      "Ljubljana",
      "London",
@@ -2358,6 +2380,7 @@
      "Granada",
      "G\u00f6teborg",
      "Hannover",
+     "Haparanda",
      "Helsinki",
      "Hendaye",
      "Holyhead",
@@ -2398,6 +2421,7 @@
      "Munich",
      "Nantes",
      "Naples",
+     "Narva",
      "Narvik",
      "Newcastle",
      "Nice",

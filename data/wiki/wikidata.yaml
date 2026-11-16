@@ -342,6 +342,12 @@ Hannover:
   km: 2.1
   label: Hanover
   wd: Q1715
+Haparanda:
+  checked: '2026-11-16'
+  description: urban area in Haparanda Municipality, Sweden
+  km: 0.6
+  label: Haparanda
+  wd: Q588976
 Helsinki:
   checked: '2026-11-13'
   description: capital and most populous city of Finland

@@ -93,6 +93,7 @@ _Night trains and night buses left out; night ferries still used._
 | Athens | Thu 26.11. 17:30 | 58 h 08 min | 6 | 1 (Lugano) | same |
 | Pristina | Thu 26.11. 17:30 | 59 h 08 min | 6 | 2 (Vienna, Belgrade) | +13 h 30 min |
 | Lisbon | Thu 26.11. 17:00 | 59 h 38 min | 7 | 2 (Paris, Madrid) | same |
+| Kyiv | Thu 26.11. 20:10 | 60 h 48 min | 3 | 2 (Berlin, Przemyśl) | +24 h 00 min |
 | Sarajevo | Thu 26.11. 20:55 | 62 h 33 min | 3 | 2 (Vienna, Zagreb) | same |
 | Rabat | Thu 26.11. 20:22 | 63 h 00 min | 8 | 2 (Paris, Madrid) | same |
 | Bucharest | Thu 26.11. 22:37 | 63 h 15 min | 3 | 2 (Vienna, Budapest) | +14 h 14 min |
@@ -103,7 +104,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tunis | Sat 28.11. 22:30 | 112 h 08 min | 5 | 4 (Munich, Rome, Palermo) | same |
 | Ankara | Sun 29.11. 13:16 | 124 h 54 min | 7 | 5 (Vienna, Budapest, Bucharest, Sofia, Istanbul) | +24 h 00 min |
 
-Not reachable without night trains: Valletta, Kyiv, Podgorica
+Not reachable without night trains: Valletta, Podgorica
 
 ## Leaving from 16:00 instead of 06:00
 
@@ -228,6 +229,7 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Holyhead | Wed 25.11. 11:52 | 30 h 30 min | 3 | 1 |
 | Seinäjoki | Wed 25.11. 14:12 | 30 h 58 min | 3 | 0 |
 | Donostia | Wed 25.11. 13:22 | 31 h 00 min | 5 | 1 |
+| Haparanda | Wed 25.11. 13:30 | 31 h 16 min | 3 | 0 |
 | Ancona | Wed 25.11. 13:34 | 31 h 12 min | 4 | 1 |
 | Mockava | Wed 25.11. 14:43 | 31 h 21 min | 3 | 1 |
 | Stranraer | Wed 25.11. 12:57 | 31 h 35 min | 5 | 0 |
@@ -265,6 +267,7 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Granada | Thu 26.11. 10:25 | 52 h 03 min | 6 | 2 |
 | Vitoria-Gasteiz | Thu 26.11. 10:38 | 52 h 16 min | 5 | 2 |
 | Ivalo | Thu 26.11. 12:00 | 52 h 46 min | 4 | 0 |
+| Narva | Thu 26.11. 12:21 | 53 h 07 min | 4 | 1 |
 | Syracuse | Thu 26.11. 11:29 | 53 h 07 min | 4 | 0 |
 | Patras | Thu 26.11. 13:00 | 53 h 38 min | 5 | 1 |
 | Ruse | Thu 26.11. 13:40 | 54 h 18 min | 4 | 0 |

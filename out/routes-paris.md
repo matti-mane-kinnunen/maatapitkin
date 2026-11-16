@@ -93,6 +93,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tirana | Thu 26.11. 12:40 | 54 h 10 min | 3 | 1 (Bari) | same |
 | Athens | Thu 26.11. 17:30 | 58 h 00 min | 3 | 1 (Bari) | same |
 | Pristina | Thu 26.11. 17:30 | 49 h 35 min | 6 | 2 (Munich, Subotica) | +4 h 57 min |
+| Kyiv | Thu 26.11. 20:10 | 59 h 54 min | 3 | 2 (Berlin, Przemyśl) | +24 h 00 min |
 | Bucharest | Thu 26.11. 22:37 | 53 h 42 min | 3 | 2 (Munich, Budapest) | +5 h 41 min |
 | Skopje | Thu 26.11. 21:45 | 53 h 50 min | 6 | 2 (Munich, Subotica) | – |
 | Tallinn | Fri 27.11. 09:30 | 73 h 14 min | 6 | 2 (Malmö, Helsinki) | +15 h 50 min |
@@ -103,7 +104,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tunis | Sat 28.11. 22:30 | 112 h 00 min | 3 | 4 (Rome, Palermo) | same |
 | Ankara | Sun 29.11. 13:16 | 115 h 21 min | 7 | 5 (Munich, Budapest, Bucharest, Sofia, Istanbul) | +15 h 27 min |
 
-Not reachable without night trains: Valletta, Kyiv, Podgorica
+Not reachable without night trains: Valletta, Podgorica
 
 ## Leaving from 17:00 instead of 06:00
 
@@ -263,7 +264,7 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Trondheim | Wed 25.11. 20:47 | 37 h 31 min | 7 | 0 |
 | Faro | Wed 25.11. 20:23 | 37 h 41 min | 5 | 1 |
 | Porto | Wed 25.11. 20:43 | 38 h 01 min | 5 | 1 |
-| Lviv | Wed 25.11. 22:56 | 38 h 40 min | 4 | 0 |
+| Lviv | Wed 25.11. 22:56 | 38 h 05 min | 3 | 0 |
 | Boden | Wed 25.11. 22:09 | 38 h 53 min | 7 | 0 |
 | Casablanca | Wed 25.11. 21:17 | 38 h 35 min | 5 | 1 |
 | Vaasa | Thu 26.11. 00:00 | 39 h 44 min | 7 | 0 |
@@ -280,10 +281,12 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Ruse | Thu 26.11. 13:40 | 53 h 18 min | 4 | 0 |
 | Valga | Thu 26.11. 14:13 | 53 h 22 min | 7 | 1 |
 | Oulu | Thu 26.11. 14:22 | 54 h 06 min | 9 | 1 |
+| Haparanda | Thu 26.11. 13:30 | 54 h 14 min | 5 | 0 |
 | Marrakech | Thu 26.11. 12:37 | 53 h 55 min | 6 | 2 |
 | Kuopio | Thu 26.11. 15:35 | 55 h 19 min | 5 | 0 |
 | Rovaniemi | Thu 26.11. 16:46 | 56 h 30 min | 9 | 1 |
 | Iasi | Thu 26.11. 18:08 | 57 h 46 min | 4 | 0 |
+| Narva | Thu 26.11. 22:01 | 61 h 10 min | 9 | 1 |
 | Thessaloniki | Thu 26.11. 23:10 | 63 h 40 min | 4 | 0 |
 | Varna | Fri 27.11. 06:50 | 70 h 28 min | 6 | 0 |
 | Istanbul | Fri 27.11. 08:00 | 70 h 38 min | 6 | 0 |

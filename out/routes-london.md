@@ -92,6 +92,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tirana | Thu 26.11. 12:40 | 53 h 39 min | 4 | 1 (Milan) | same |
 | Athens | Thu 26.11. 17:30 | 57 h 29 min | 4 | 1 (Milan) | same |
 | Pristina | Thu 26.11. 17:30 | 58 h 29 min | 7 | 2 (Munich, Subotica) | +13 h 30 min |
+| Kyiv | Thu 26.11. 20:10 | 59 h 54 min | 4 | 2 (Berlin, Przemyśl) | +10 h 21 min |
 | Sarajevo | Thu 26.11. 20:55 | 61 h 54 min | 4 | 2 (Munich, Zagreb) | same |
 | Bucharest | Thu 26.11. 22:37 | 62 h 36 min | 4 | 2 (Munich, Budapest) | +14 h 14 min |
 | Skopje | Thu 26.11. 21:45 | 62 h 44 min | 7 | 2 (Munich, Subotica) | same |
@@ -103,7 +104,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tunis | Sat 28.11. 22:30 | 111 h 29 min | 4 | 4 (Rome, Palermo) | same |
 | Ankara | Sun 29.11. 13:16 | 124 h 15 min | 8 | 5 (Munich, Budapest, Bucharest, Sofia, Istanbul) | +24 h 00 min |
 
-Not reachable without night trains: Valletta, Kyiv, Podgorica
+Not reachable without night trains: Valletta, Podgorica
 
 ## Leaving from 17:00 instead of 06:00
 
@@ -252,15 +253,16 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Tanger Med | Wed 25.11. 16:30 | 34 h 29 min | 5 | 1 |
 | Östersund | Wed 25.11. 18:18 | 35 h 02 min | 5 | 0 |
 | Umeå | Wed 25.11. 18:24 | 35 h 08 min | 6 | 0 |
+| Przemyśl | Wed 25.11. 18:48 | 35 h 32 min | 3 | 0 |
 | Tanger | Wed 25.11. 18:00 | 35 h 59 min | 6 | 1 |
 | Mockava | Wed 25.11. 20:55 | 36 h 39 min | 4 | 0 |
 | Faro | Wed 25.11. 20:23 | 38 h 22 min | 7 | 1 |
 | Porto | Wed 25.11. 20:43 | 38 h 42 min | 7 | 1 |
+| Lviv | Wed 25.11. 22:56 | 38 h 40 min | 4 | 0 |
 | Casablanca | Wed 25.11. 21:17 | 39 h 16 min | 7 | 1 |
 | Trondheim | Thu 26.11. 00:40 | 41 h 24 min | 6 | 0 |
 | Boden | Thu 26.11. 05:42 | 46 h 26 min | 5 | 0 |
 | Bergen | Thu 26.11. 06:23 | 47 h 07 min | 6 | 0 |
-| Przemyśl | Thu 26.11. 06:25 | 47 h 09 min | 4 | 0 |
 | Turku | Thu 26.11. 07:35 | 47 h 19 min | 5 | 0 |
 | Bar | Thu 26.11. 06:54 | 47 h 53 min | 7 | 0 |
 | Durrës | Thu 26.11. 07:00 | 47 h 59 min | 3 | 0 |
@@ -274,6 +276,7 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Narvik | Thu 26.11. 12:37 | 53 h 21 min | 6 | 0 |
 | Ruse | Thu 26.11. 13:40 | 53 h 39 min | 5 | 0 |
 | Seinäjoki | Thu 26.11. 14:12 | 53 h 56 min | 6 | 0 |
+| Haparanda | Thu 26.11. 13:30 | 54 h 14 min | 6 | 0 |
 | Marrakech | Thu 26.11. 12:37 | 54 h 36 min | 8 | 2 |
 | Vaasa | Thu 26.11. 15:17 | 55 h 01 min | 6 | 0 |
 | Kuopio | Thu 26.11. 15:35 | 55 h 19 min | 6 | 0 |
@@ -281,12 +284,12 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Odesa | Thu 26.11. 18:00 | 57 h 44 min | 5 | 0 |
 | Iasi | Thu 26.11. 18:08 | 58 h 07 min | 5 | 0 |
 | Rovaniemi | Thu 26.11. 20:23 | 60 h 07 min | 6 | 0 |
-| Lviv | Thu 26.11. 22:56 | 62 h 40 min | 5 | 0 |
 | Thessaloniki | Thu 26.11. 23:10 | 63 h 09 min | 5 | 0 |
 | Varna | Fri 27.11. 06:50 | 70 h 49 min | 7 | 0 |
 | Istanbul | Fri 27.11. 08:00 | 70 h 59 min | 7 | 0 |
 | Chania | Fri 27.11. 07:00 | 70 h 59 min | 5 | 0 |
 | Ivalo | Fri 27.11. 12:00 | 75 h 44 min | 7 | 0 |
+| Narva | Fri 27.11. 12:21 | 76 h 05 min | 7 | 1 |
 | Valga | Fri 27.11. 14:13 | 78 h 12 min | 7 | 1 |
 | Split | Sat 28.11. 07:00 | 95 h 59 min | 2 | 3 |
 

@@ -93,6 +93,7 @@ _Night trains and night buses left out; night ferries still used._
 | Athens | Fri 27.11. 17:30 | 72 h 11 min | 8 | 2 (Copenhagen, Lugano) | +1 h 10 min |
 | Pristina | Fri 27.11. 17:30 | 60 h 08 min | 8 | 2 (Prague, Belgrade) | +1 h 37 min |
 | Lisbon | Fri 27.11. 17:00 | 73 h 41 min | 9 | 3 (Copenhagen, Paris, Madrid) | +1 h 10 min |
+| Kyiv | Fri 27.11. 20:10 | 61 h 48 min | 5 | 2 (Berlin, Przemyśl) | +12 h 07 min |
 | Sarajevo | Fri 27.11. 20:55 | 76 h 36 min | 5 | 3 (Copenhagen, Vienna, Zagreb) | +1 h 10 min |
 | Rabat | Fri 27.11. 20:22 | 77 h 03 min | 10 | 3 (Copenhagen, Paris, Madrid) | +1 h 10 min |
 | Skopje | Fri 27.11. 21:45 | 64 h 23 min | 8 | 2 (Prague, Belgrade) | – |
@@ -103,7 +104,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tunis | Sat 28.11. 22:30 | 89 h 08 min | 7 | 3 (Munich, Rome, Palermo) | – |
 | Ankara | Mon 30.11. 13:16 | 125 h 54 min | 9 | 5 (Prague, Budapest, Bucharest, Sofia, Istanbul) | +12 h 07 min |
 
-Not reachable without night trains: Valletta, Kyiv, Podgorica
+Not reachable without night trains: Valletta, Podgorica
 
 ## Leaving from 06:00 instead of 16:00
 
@@ -185,6 +186,7 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Kolding | Wed 25.11. 12:59 | 19 h 30 min | 1 | 0 |
 | Seinäjoki | Wed 25.11. 14:12 | 21 h 12 min | 1 | 0 |
 | Basel | Wed 25.11. 13:21 | 19 h 52 min | 1 | 0 |
+| Haparanda | Wed 25.11. 13:30 | 19 h 18 min | 1 | 0 |
 | Munich | Wed 25.11. 14:05 | 20 h 36 min | 1 | 0 |
 | Kuopio | Wed 25.11. 15:35 | 22 h 35 min | 1 | 0 |
 | Trondheim | Wed 25.11. 14:40 | 20 h 21 min | 1 | 1 |
@@ -246,6 +248,7 @@ Not reachable without night trains: Valletta, Kyiv, Podgorica
 | Szeged | Thu 26.11. 10:16 | 40 h 47 min | 4 | 1 |
 | Cairnryan | Thu 26.11. 09:50 | 41 h 21 min | 6 | 1 |
 | Ivalo | Thu 26.11. 12:00 | 43 h 00 min | 2 | 0 |
+| Narva | Thu 26.11. 12:21 | 43 h 21 min | 2 | 1 |
 | Syracuse | Thu 26.11. 11:29 | 42 h 00 min | 5 | 0 |
 | Palermo | Thu 26.11. 11:55 | 42 h 26 min | 5 | 0 |
 | Barcelona | Thu 26.11. 12:36 | 43 h 07 min | 4 | 0 |
