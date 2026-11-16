@@ -153,9 +153,9 @@ Messina -> Palermo : *
 Messina -> Taormina : *
 
 # -- IDEA-03: day connections for the no-night-train mode (4.11.2026) --
-Messina -> Syracuse : *          # regional trains; with Rome -> Villa San Giovanni / Palermo by day: Syracuse, Pozzallo, Valletta
-Rome -> Syracuse : *             # day Intercity via the train ferry (splits at Messina); the night ICN line below stays
-Istanbul -> Ankara : *           # high-speed YHT; so far only one 2023 train in our data
+#Messina -> Syracuse : *          # regional trains; with Rome -> Villa San Giovanni / Palermo by day: Syracuse, Pozzallo, Valletta
+#Rome -> Syracuse : *             # day Intercity via the train ferry (splits at Messina); the night ICN line below stays
+#Istanbul -> Ankara : *           # high-speed YHT; so far only one 2023 train in our data
 Bucharest -> Iasi : *            # towards Chisinau by day
 Iasi -> Chisinau : Coach 20:30 bus 20:30-23:50   # Matti, Nov 2026 (Busbud): from the stop 'Iași' (not Autogara Codreanu or the airport) to Chișinău, Maraton shopping centre; same time zone
 Iasi -> Chisinau : SVS 11:10 bus 11:10-14:50   # Matti, Nov 2026: SVS.MD from the stop 'Iași' to Chișinău Gara Nord
@@ -429,7 +429,7 @@ Mockava -> Vilnius : *
 Prague -> Przemyśl : RegioJet night 21:48-06:25      # Seat61, Nov 2026: daily; Transitous finds no trains
 Przemyśl -> Kyiv : UZ Intercity 09:49-20:10         # Seat61, Nov 2026: via Lviv (12:26)
 Warsaw -> Kyiv : Kyiv Express night 18:50-09:49     # Seat61, Nov 2026: from Warszawa Wschodnia
-Berlin -> Przemyśl : *                               # EC 59 runs through from Berlin-Lichtenberg (bahn.de, Nov 2026)
+Berlin -> Przemyśl : EC 59 08:31-18:48                # Matti, bahn.de, Nov 2026: S5 Berlin Hbf 08:31 -> Lichtenberg 08:50, EC 59 08:57 -> Przemyśl Główny 18:48; reservation required. Transitous misses it because of the S-Bahn start; Hbf time used so the change in Berlin is realistic
 
 # -- Andorra --
 Paris -> L'Hospitalet : *                                        # Intercités de Nuit 22:14-09:43 (Seat61, Nov 2026): fri,sat; daily Jun-Sep
@@ -458,7 +458,8 @@ Kolding -> Aarhus : *
 Wroclaw -> Praha : IC 261 09:13-13:14     # bahn.de, Nov 2026; Transitous finds no direct trains
 Wroclaw -> Praha : IC 263 13:13-17:14     # bahn.de, Nov 2026
 Wroclaw -> Praha : IC 265 17:13-21:14     # bahn.de, Nov 2026
-Berlin -> Wroclaw : *                                # EC 59 leaves from Berlin-Lichtenberg, not Hbf; the S-Bahn there is trimmed off
+Berlin -> Wroclaw : *                                # finds only the night IC (Mon-Thu); EC 59 below by hand
+Berlin -> Wroclaw : EC 59 08:31-12:54                 # Matti, bahn.de, Nov 2026: S5 Berlin Hbf 08:31 -> Lichtenberg 08:50, EC 59 08:57 -> Wrocław Główny 12:54; reservation required; Transitous misses it
 Oslo -> Stavanger : * 
 
 # -- Tunisia --
