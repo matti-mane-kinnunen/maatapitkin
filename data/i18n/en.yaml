@@ -202,3 +202,13 @@ own_working: "Working out the journeys …"
 own_failed: "Could not work out the journeys here – try again, or use the map's own days."
 own_missing: "Choose a date and a time."
 own_none: "No capital can be reached with these settings."
+# nearby places (IDEA-24)
+nearby_head: "Nearby:"
+nearby_item: "{place} {dur} {by}"
+by_train: "by train"
+by_bus: "by bus"
+by_ferry: "by ferry"
+nearby_every: ", every {n} min"
+nearby_every_h: {one: ", hourly", other: ", every {n} hours"}
+nearby_daily: {one: ", once a day", other: ", {n} a day"}
+search_nearby: "{hub} → {dur} {by}"

@@ -203,3 +203,13 @@ own_working: "Räknar ut resorna …"
 own_failed: "Resorna kunde inte räknas ut här – försök igen, eller använd kartans egna dagar."
 own_missing: "Välj datum och tid."
 own_none: "Ingen huvudstad nås med de här inställningarna."
+# nearby places (IDEA-24)
+nearby_head: "I närheten:"
+nearby_item: "{place} {dur} {by}"
+by_train: "med tåg"
+by_bus: "med buss"
+by_ferry: "med båt"
+nearby_every: ", var {n}:e minut"
+nearby_every_h: {one: ", varje timme", other: ", var {n}:e timme"}
+nearby_daily: {one: ", en gång om dagen", other: ", {n} gånger om dagen"}
+search_nearby: "{hub} → {dur} {by}"

@@ -180,6 +180,11 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .wiki { margin: 6px 14px 2px; padding: 6px 10px; border-left: 2px solid var(--accent); font-size: 13px; line-height: 1.45 }
 .wiki .src, .stay .src { display: block; margin-top: 2px; font-size: 11px; color: var(--muted) }
 .wiki a, .stay .src a { color: inherit }
+.nearby { margin: 6px 14px 2px; font-size: 13px; line-height: 1.45; color: var(--muted) }
+.nearby b { color: var(--fg); font-weight: 600 }
+.board li.nearhit button { display: block; width: 100%; text-align: left; padding: 8px 14px; border: 0; border-bottom: 1px solid var(--rule); background: none; color: var(--muted); font: inherit; font-size: 12px; cursor: pointer }
+.board li.nearhit b { font: 600 1.05rem/1.2 var(--display); color: var(--fg); letter-spacing: 0.02em; display: block }
+.board li.nearhit button:disabled { cursor: default }
 .stay details { margin-top: 4px; font-size: 13px; line-height: 1.45 }
 .stay summary { cursor: pointer; color: var(--muted); font-size: 12px }
 /* how far in N hours (IDEA-17) */
@@ -328,6 +333,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
           {{co2_how_2}} <a id="co2-src" href="#" target="_blank" rel="noopener">{{co2_source}}</a></p>
         </div>
         <div class="wiki" id="wiki" hidden></div>
+        <p class="nearby" id="nearby" hidden></p>
         <div class="share"><button type="button" id="share">{{copy_link}}</button><button type="button" id="ics" title="{{calendar_title}}">{{add_calendar}}</button><span id="share-msg" role="status"></span></div>
         <ol class="steps" id="steps"></ol>
       </section>
@@ -638,6 +644,7 @@ function hover(name) {
     ? `<b>${LN(name)}${r.has_issue ? " ⚠" : ""}</b><span class="t">${dur(r.door_to_door_min)}</span>${T("tip_arrive", { d: dayOf(r), when: r.arrive_txt })}<br>` +
       `${T("n_changes", { n: r.changes })} · ${T("n_hotel_nights", { n: r.hotel_nights })}` +
       `${r.alternatives?.length ? T("n_alternatives", { n: r.alternatives.length }) : ""}` +
+      `${(NET.nearby || {})[name] ? "<br>" + T("nearby_head") + " " + NET.nearby[name].map(e => LN(e.name)).join(", ") : ""}` +
       `<br><span class="hint">${T("tip_click")}</span>`
     : name === NET.origin ? `<b>${LN(name)}</b><span class="hint">${T("tip_origin")}</span>`
     : P[name].missing ? `<b>${LN(name)}</b><span class="hint">${T("tip_missing")}</span>`
@@ -823,7 +830,18 @@ function applyFilters() {
       : T("search_no_journey", { origin: LN(NET.origin), origin_from: ORIGIN_FROM }) + (NET.legs.some(l => l.from === n) ? T("search_departs_only") : ""));
     list.appendChild(li);
   }
-  if (!shown.length && !noRoute.length) {
+  // a nearby town (IDEA-24) leads to the place on the map it is reached from
+  const nearHits = q ? Object.entries(NET.nearby || {}).flatMap(([hub, items]) => items
+    .filter(e => [e.name, LN(e.name), ...(e.aliases || [])].map(fold).some(x => x.includes(q))).map(e => [hub, e])) : [];
+  for (const [hub, e] of nearHits) {
+    const li = document.createElement("li"), b = document.createElement("button"), r = routeOf(hub);
+    li.className = "nearhit"; b.type = "button";
+    const nm = document.createElement("b"); nm.textContent = LN(e.name);
+    b.append(nm, T("search_nearby", { hub: LN(hub), dur: durTxt(e.min), by: T("by_" + e.by) }) + nearbyOften(e));
+    if (r) b.addEventListener("click", () => select(hub, pickOption(r), false, true)); else b.disabled = true;
+    li.appendChild(b); list.appendChild(li);
+  }
+  if (!shown.length && !noRoute.length && !nearHits.length) {
     const li = document.createElement("li"); li.className = "empty";
     li.innerHTML = `${T("no_match")}<button type="button">${T("clear_filters")}</button>`;
     li.querySelector("button").addEventListener("click", () => { qEl.value = ""; Object.assign(F, { day: 0, noHotel: false }); applyFilters(); qEl.focus(); });
@@ -1014,7 +1032,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
   document.getElementById("itin-sum").textContent = T("sum_arrive", { dur: dur(r.door_to_door_min), when: r.arrive_txt }) +
     (typeof F !== "undefined" && F.nightTrains === false ? T("sum_no_night") : "") +
     (curStart !== DEF_START ? (r0.same_as_default ? T("sum_same", { part: partLabel(DEF_START) }) : T("sum_from", { t: curStart })) : "");
-  showCO2(r); showWiki(cap);
+  showCO2(r); showWiki(cap); showNearby(cap);
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   const stretches = railStretches(r.steps);
@@ -1090,6 +1108,17 @@ function wikiBox(place, folded) {
   sm.textContent = T("wiki_about", { place: LN(place) });
   d.append(sm, p, wikiCredit(e));
   return d;
+}
+// Nearby places (IDEA-24, D-64): towns a short hop from a place on the map (data/nearby.yaml).
+// Not routed and not drawn, so dense areas stay readable; shown here, in the tooltip and the search.
+const nearbyOften = e => e.every ? (e.every % 60 === 0 ? T("nearby_every_h", { n: e.every / 60 }) : T("nearby_every", { n: e.every }))
+  : e.daily ? T("nearby_daily", { n: e.daily }) : "";
+const nearbyTxt = e => T("nearby_item", { place: LN(e.name), dur: durTxt(e.min), by: T("by_" + e.by) }) + nearbyOften(e);
+function showNearby(cap) {
+  const box = document.getElementById("nearby"), items = (NET.nearby || {})[cap] || [];
+  box.hidden = !items.length;
+  const b = document.createElement("b"); b.textContent = T("nearby_head");
+  box.replaceChildren(...(items.length ? [b, " " + items.map(nearbyTxt).join(" · ")] : []));
 }
 function showWiki(cap) {
   const box = document.getElementById("wiki"), parts = wikiBox(cap, false);

@@ -112,3 +112,15 @@ Split:       {it: Spalato}
 Stuttgart:   {it: Stoccarda}
 Toulouse:    {it: Tolosa}
 Avignon:     {it: Avignone}
+# nearby places (IDEA-24)
+Bruges:      {fi: Brugge, sv: Brygge, da: Brugge, de: Brügge}
+Ghent:       {fi: Gent, sv: Gent, da: Gent, de: Gent, fr: Gand, it: Gand}
+Pompeii:     {fi: Pompeji, sv: Pompeji, da: Pompeji, de: Pompeji, fr: Pompéi, it: Pompei}
+Padua:       {fi: Padova, da: Padova, fr: Padoue, it: Padova}
+Helsingør:   {sv: Helsingör}
+Porvoo:      {sv: Borgå}
+Aegina:      {fi: Aigina, sv: Egina, de: Ägina, fr: Égine, it: Egina}
+Córdoba:     {fr: Cordoue, it: Cordova}
+Segovia:     {fr: Ségovie}
+Toledo:      {fr: Tolède}
+Plitvice:    {fi: Plitvicen järvet, de: Plitvicer Seen, it: Laghi di Plitvice}

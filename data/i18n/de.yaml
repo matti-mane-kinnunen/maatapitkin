@@ -203,3 +203,13 @@ own_working: "Reisen werden berechnet …"
 own_failed: "Die Reisen konnten hier nicht berechnet werden – versuche es noch einmal oder nimm die Tage der Karte."
 own_missing: "Wähle Datum und Uhrzeit."
 own_none: "Mit diesen Einstellungen ist keine Hauptstadt erreichbar."
+# nearby places (IDEA-24)
+nearby_head: "In der Nähe:"
+nearby_item: "{place} {dur} {by}"
+by_train: "mit dem Zug"
+by_bus: "mit dem Bus"
+by_ferry: "mit der Fähre"
+nearby_every: ", alle {n} Min."
+nearby_every_h: {one: ", stündlich", other: ", alle {n} Stunden"}
+nearby_daily: {one: ", einmal täglich", other: ", {n}-mal täglich"}
+search_nearby: "{hub} → {dur} {by}"

@@ -205,6 +205,33 @@ def local_names(lang: str, places: dict) -> dict:
     return out
 
 
+def nearby_places(places: dict) -> dict:
+    """{hub: [{name, by, time, every?|daily?, aliases?}, ...]} from data/nearby.yaml (IDEA-24, D-64):
+    towns a short hop from a place on the map, shown in its itinerary, tooltip and search but not
+    routed. Entries with an unknown hub or a malformed time are left out (with a message)."""
+    f = ROOT / "data" / "nearby.yaml"
+    data = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
+    out = {}
+    for hub, items in data.items():
+        if hub not in places:
+            print(f"nearby.yaml: {hub} is not a place in places.yaml - left out")
+            continue
+        for e in items or []:
+            if not (isinstance(e, dict) and e.get("name") and e.get("by") in ("train", "bus", "ferry")
+                    and re.fullmatch(r"\d{1,2}:\d{2}", str(e.get("time", "")))):
+                print(f"nearby.yaml: {hub}: {e} needs name, by (train/bus/ferry) and time H:MM - left out")
+                continue
+            h, m = map(int, str(e["time"]).split(":"))
+            x = {"name": str(e["name"]), "by": e["by"], "min": h * 60 + m}
+            for k in ("every", "daily"):
+                if isinstance(e.get(k), int):
+                    x[k] = e[k]
+            if e.get("aliases"):
+                x["aliases"] = [str(a) for a in e["aliases"]]
+            out.setdefault(hub, []).append(x)
+    return out
+
+
 def wiki_texts(lang: str, places: dict) -> dict:
     """{key: {text, source, url}} for one map's language (IDEA-22): data/wiki/<lang>.yaml, written
     by fetch_wiki.py, with data/wiki/overrides.yaml (<lang>: {place: {...}}) on top. Read only -
@@ -589,7 +616,9 @@ def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: di
         "repo_url": s.get("repo_url"), "tz": TZ,   # issue links (IDEA-20); calendar times (IDEA-18)
         "wiki": wiki_texts(cfg.get("lang", "en"), net.places),   # city texts (IDEA-22)
         "lang": cfg.get("lang", "en"), "origin_from": origin_from,
-        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered}), "start_date": start_date.isoformat(),
+        "nearby": (nb := nearby_places(net.places)),   # IDEA-24
+        "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered,
+                                                       **{e["name"]: {} for v in nb.values() for e in v}}), "start_date": start_date.isoformat(),
         "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version,
         "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),

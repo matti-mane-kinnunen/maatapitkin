@@ -71,6 +71,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-61 | City texts from Wikivoyage / Wikipedia, fetched on GitHub, stored in the repo | 13.11.2026 | Accepted |
 | D-62 | The router in the browser for own settings, checked against the build | 14.11.2026 | Accepted |
 | D-63 | Sailings longer than a day, and a time zone per place | 17.11.2026 | Accepted |
+| D-64 | Nearby towns as a list, not as places on the map | 17.11.2026 | Accepted |
 
 ---
 
@@ -1318,6 +1319,32 @@ Checked: the two sailings come out at 35 h 30 and 33 h real time; router tests p
 **Consequences.** Madeira and the Azores, if ever added, need `tz:` too. Arrecife (Lanzarote) and the
 Tuesday sailing's arrival in Tenerife are left out until their times are clear (the operator's two pages
 differ by an hour).
+
+---
+
+## D-64 Nearby towns as a list, not as places on the map
+**Date:** 17.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-24 (Matti, 17.11.2026): the Benelux, northern Italy and the Balkans are getting crowded, yet many
+of the most visited places are small towns a short hop from a hub (Pisa and Siena from Florence, Cinque
+Terre from Genoa, Bruges from Brussels, Kotor from Podgorica).
+
+**Decision.**
+- `data/nearby.yaml` lists, per place on the map, towns one short trip away: name, `by` (train, bus,
+  ferry), typical `time`, `every` N minutes or `daily: N`, and `aliases` for the search. First list:
+  50 towns from 35 places.
+- They are not routed, drawn or looked up. The page shows them under the itinerary ("Nearby: Pisa
+  1 h 00 by train, every 30 min · …"), in the place's tooltip, and in the search: "Bruges" (or Brugge)
+  lists Brussels → 1 h 00 by train, and Enter opens the Brussels journey.
+- Names in other languages come from names.yaml as for places; nine new texts per language; one
+  bullet in each user guide.
+
+**Why.** Answers "can I get to Pisa?" without a dot, a line and a weekly lookup for every town, so the
+map stays readable and the lookup budget (D-37) goes to the backbone.
+
+**Consequences.** The times are approximate (written by Claude from general knowledge, Nov 2026) and
+need the yearly check of own times (DATA-12). A crowded routed place (Bochum, Duisburg…) could later be
+turned into a nearby entry instead.
 
 ---
 

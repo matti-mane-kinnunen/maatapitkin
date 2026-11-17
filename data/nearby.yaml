@@ -1,0 +1,99 @@
+# Nearby places (IDEA-24): towns a short hop from a place on the map, shown in its itinerary, its
+# tooltip and the search - but not routed and not drawn, so the map stays readable (D-64).
+#
+#   Hub:                          a key in places.yaml
+#     - {name: Pisa, by: train, time: "1:00", every: 30}
+#
+#   by      train | bus | ferry
+#   time    typical journey, H:MM
+#   every   minutes between departures (about), or  daily: N  for N a day
+#   aliases other names for the search (local spellings)
+#
+# Times are approximate (Claude, Nov 2026, from general knowledge) - check them with the
+# operator once a year (DATA-12), like the other own times. Names in other languages: names.yaml.
+
+Florence:
+  - {name: Pisa, by: train, time: "1:00", every: 30}
+  - {name: Siena, by: bus, time: "1:15", every: 30}
+  - {name: Lucca, by: train, time: "1:20", every: 30}
+Genoa:
+  - {name: Cinque Terre, by: train, time: "1:30", every: 60, aliases: [Monterosso, Vernazza, Riomaggiore]}
+Venice:
+  - {name: Padua, by: train, time: "0:30", every: 15, aliases: [Padova]}
+Naples:
+  - {name: Pompeii, by: train, time: "0:40", every: 30, aliases: [Pompei]}
+  - {name: Sorrento, by: train, time: "1:10", every: 30}
+  - {name: Capri, by: ferry, time: "0:50", every: 60}
+Milan:
+  - {name: Como, by: train, time: "0:40", every: 30, aliases: [Lake Como, Lago di Como]}
+  - {name: Bergamo, by: train, time: "0:50", every: 30}
+Brussels:
+  - {name: Bruges, by: train, time: "1:00", every: 30, aliases: [Brugge]}
+  - {name: Ghent, by: train, time: "0:35", every: 30, aliases: [Gent, Gand]}
+Amsterdam:
+  - {name: Haarlem, by: train, time: "0:15", every: 15}
+Paris:
+  - {name: Versailles, by: train, time: "0:40", every: 15}
+London:
+  - {name: Oxford, by: train, time: "1:00", every: 30}
+  - {name: Cambridge, by: train, time: "0:50", every: 30}
+Bristol:
+  - {name: Bath, by: train, time: "0:15", every: 15}
+Leeds:
+  - {name: York, by: train, time: "0:25", every: 30}
+Munich:
+  - {name: Salzburg, by: train, time: "1:30", every: 60}
+  - {name: Füssen, by: train, time: "2:00", every: 120, aliases: [Neuschwanstein, Fuessen]}
+Frankfurt:
+  - {name: Heidelberg, by: train, time: "0:55", every: 60}
+Berlin:
+  - {name: Potsdam, by: train, time: "0:25", every: 10}
+Hamburg:
+  - {name: Lübeck, by: train, time: "0:45", every: 30, aliases: [Luebeck]}
+Dresden:
+  - {name: Bad Schandau, by: train, time: "0:30", every: 30, aliases: [Saxon Switzerland, Sächsische Schweiz]}
+Prague:
+  - {name: Kutná Hora, by: train, time: "1:00", every: 60}
+  - {name: Český Krumlov, by: bus, time: "3:00", every: 120, aliases: [Cesky Krumlov, Krumau]}
+Krakow:
+  - {name: Wieliczka, by: train, time: "0:25", every: 30}
+  - {name: Zakopane, by: bus, time: "2:00", every: 30}
+  - {name: Oświęcim, by: bus, time: "1:30", every: 60, aliases: [Auschwitz, Auschwitz-Birkenau, Oswiecim]}
+Budapest:
+  - {name: Szentendre, by: train, time: "0:40", every: 20}
+Ljubljana:
+  - {name: Bled, by: bus, time: "1:15", every: 60, aliases: [Lake Bled]}
+Zagreb:
+  - {name: Plitvice, by: bus, time: "2:15", every: 120, aliases: [Plitvice Lakes, Plitvička jezera]}
+Split:
+  - {name: Trogir, by: bus, time: "0:30", every: 30}
+  - {name: Hvar, by: ferry, time: "1:00", daily: 6}
+  - {name: Dubrovnik, by: bus, time: "4:30", every: 120}
+Podgorica:
+  - {name: Kotor, by: bus, time: "2:00", every: 60}
+Sarajevo:
+  - {name: Mostar, by: train, time: "1:50", daily: 2}
+Madrid:
+  - {name: Toledo, by: train, time: "0:35", every: 60}
+  - {name: Segovia, by: train, time: "0:30", every: 60}
+Sevilla:
+  - {name: Córdoba, by: train, time: "0:45", every: 60, aliases: [Cordoba]}
+Barcelona:
+  - {name: Montserrat, by: train, time: "1:30", every: 60}
+  - {name: Girona, by: train, time: "0:40", every: 60}
+Lisbon:
+  - {name: Sintra, by: train, time: "0:40", every: 20}
+Athens:
+  - {name: Aegina, by: ferry, time: "0:45", every: 60, aliases: [Egina]}
+Copenhagen:
+  - {name: Helsingør, by: train, time: "0:45", every: 20, aliases: [Helsingor, Elsinore, Kronborg]}
+Stockholm:
+  - {name: Uppsala, by: train, time: "0:40", every: 15}
+Helsinki:
+  - {name: Porvoo, by: bus, time: "1:00", every: 30, aliases: [Borgå]}
+Riga:
+  - {name: Jūrmala, by: train, time: "0:30", every: 30, aliases: [Jurmala]}
+Nice:
+  - {name: Cannes, by: train, time: "0:30", every: 30}
+Marseille:
+  - {name: Cassis, by: train, time: "0:25", every: 60}
