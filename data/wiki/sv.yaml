@@ -52,6 +52,16 @@ Algiers:
     och ekonomiska centrum.
   title: Alger, Algeriet
   url: https://sv.wikipedia.org/wiki/Alger%2C_Algeriet
+Alicante:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59591132
+  source: wikipedia
+  text: Alicante är en ort och kommun i regionen Valencia i Spanien. Centrala Alicante har cirka 330 000 invånare.
+    Alicante bildar tillsammans med Elche och fyra andra kommuner ett storstadsområde med cirka 700 000 invånare.
+    Området har snabbt vuxit och är ett populärt turistmål och ett område med många hotell, restauranger och turistanläggningar.
+  title: Alicante
+  url: https://sv.wikipedia.org/wiki/Alicante
 Amsterdam:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -94,6 +104,17 @@ Ankara:
     (2022) vilket gör den till landets näst största stad, efter Istanbul.
   title: Ankara
   url: https://sv.wikipedia.org/wiki/Ankara
+Antwerp:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59536904
+  source: wikipedia
+  text: Antwerpen är en hamn- och industristad i norra Belgien. Staden är huvudort i provinsen med samma namn. Kommunen
+    har cirka 529 247 invånare (2020). Antwerpen grundades runt år 800. Genom staden flyter floden Schelde. Staden
+    är centrum för diamanthandel och diamantförädling. Antwerpen har också sedan 1990-talet ett visst rykte som
+    modestad.
+  title: Antwerpen
+  url: https://sv.wikipedia.org/wiki/Antwerpen
 Athens:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -244,6 +265,27 @@ Bern:
     Bärndütsch, den lokala varianten av schweizertyska, är det egentliga lokalspråket.
   title: Bern
   url: https://sv.wikipedia.org/wiki/Bern
+Birmingham:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 92166
+  source: wikivoyage
+  text: För fler orter med namnet Birmingham, se Birmingham (Olika betydelser). Birmingham är centralort i regionen
+    West Midlands i Storbritannien. Den tidigare nedslitna industristaden är idag en livfull universitets-, tjänste-,
+    service- och kulturstad med mycket att se och göra för alla. Staden är idag Storbritanniens näst största stad,
+    räknat efter folkmängd.
+  title: Birmingham (Storbritannien)
+  url: https://sv.wikivoyage.org/wiki/Birmingham_%28Storbritannien%29
+Bochum:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 55769551
+  source: wikipedia
+  text: Bochum är en kretsfri stad i Ruhrområdet i det tyska förbundslandet Nordrhein-Westfalen. Staden har cirka
+    360 000 invånare. I staden finns bland annat två av biltillverkaren Opels fabriker. En stor del av företagssektorn
+    är inriktad mot elektronik-, kemi- och textiltillverkning.
+  title: Bochum
+  url: https://sv.wikipedia.org/wiki/Bochum
 Boden:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -285,6 +327,17 @@ Bordeaux:
     i regionen Nouvelle-Aquitaine men också prefektur i departementet Gironde. Dess invånare kallas för ”Bordelais”.
   title: Bordeaux
   url: https://sv.wikipedia.org/wiki/Bordeaux
+Bradford:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59481291
+  source: wikipedia
+  text: Bradford är en stad i distriktet City of Bradford, i grevskapet West Yorkshire i England i Storbritannien,
+    med drygt 470 000 invånare. Staden är mer eller mindre en tvillingstad till Leeds då de vuxit samman. Staden
+    fick stadsrättigheter 1897. Staden är känd för sin etniska mångfald, tjugotvå procent av befolkningen har icke-brittiskt
+    ursprung. Sedan 1300-talet har staden haft ett vildsvin som symbol.
+  title: Bradford
+  url: https://sv.wikipedia.org/wiki/Bradford
 Bratislava:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -295,6 +348,16 @@ Bratislava:
     sträckan mellan två europeiska huvudstäder. Bratislava är Slovakiens politiska, kulturella och ekonomiska centrum.
   title: Bratislava
   url: https://sv.wikipedia.org/wiki/Bratislava
+Bremen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 56066204
+  source: wikipedia
+  text: Bremen är en stad i norra Tyskland belägen i förbundslandet Bremen. Staden är mer än 1 200 år gammal, och
+    en av de främsta hansestäderna i historien. Den är belägen nära floden Wesers utlopp, cirka 12 mil sydväst om
+    Hamburg och hade cirka 544 000 invånare 2011.
+  title: Bremen
+  url: https://sv.wikipedia.org/wiki/Bremen
 Brescia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -314,6 +377,27 @@ Brest:
     finns här en viktig flottbas, numera använd av Nato.
   title: Brest, Finistère
   url: https://sv.wikipedia.org/wiki/Brest%2C_Finist%C3%A8re
+Bristol:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59445163
+  source: wikipedia
+  text: Bristol är en stad i sydvästra England, nära gränsen till Wales. Floden Avon rinner genom staden, som har
+    gett namn åt Bristolkanalen. Bristol är den folkrikaste staden i sydvästra England och ett av de större storstadsområdena
+    i landet. Motorvägen M4 går förbi Bristol.
+  title: Bristol
+  url: https://sv.wikipedia.org/wiki/Bristol
+Brno:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59838394
+  source: wikipedia
+  text: Brno är en stad i Mähren i sydöstra Tjeckien. Brno är med cirka 380 000 invånare den näst största staden
+    i landet och den största staden i Mähren. Brno är ett centrum för textil-, maskin- och kemisk industri, företaget
+    Zetor som tillverkar traktorer har sitt säte här. Här finns också, som i så många andra städer i landet, många
+    bryggerier, däribland Pivovar Starobrno.
+  title: Brno
+  url: https://sv.wikipedia.org/wiki/Brno
 Brussels:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -400,6 +484,17 @@ Copenhagen:
     för regeringen samt för Danmarks kung.
   title: Köpenhamn
   url: https://sv.wikipedia.org/wiki/K%C3%B6penhamn
+Cádiz:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 57870648
+  source: wikipedia
+  text: Cádiz är en hamnstad i regionen Andalusien i södra Spanien. Staden är en av världens äldsta sjöstäder, anlagd
+    omkring år 1100 f.Kr. av fenicierna. Cádiz är huvudstad i provinsen Cádiz och har cirka 120 000 invånare, med
+    förorter cirka 650 000 invånare (inklusive Jerez de la Frontera). Staden är den äldsta i Europa som har varit
+    bebodd oavbrutet.
+  title: Cádiz
+  url: https://sv.wikipedia.org/wiki/C%C3%A1diz
 Donostia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -412,6 +507,27 @@ Donostia:
     europeisk kulturhuvudstad 2016.
   title: San Sebastián
   url: https://sv.wikivoyage.org/wiki/San_Sebasti%C3%A1n
+Dortmund:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 58505961
+  source: wikipedia
+  text: Dortmund är en kretsfri stad i östra Ruhrområdet i Tyskland. Med cirka 601 000 invånare är det den tredje
+    största staden i förbundslandet Nordrhein-Westfalen och Tysklands åttonde största stad. Dortmund ligger vid
+    Dortmund-Ems-kanalen och är ett viktigt transport- och industricenter med Europas största kanalhamn.
+  title: Dortmund
+  url: https://sv.wikipedia.org/wiki/Dortmund
+Dresden:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 58653233
+  source: wikipedia
+  text: Dresden är en storstad i sydöstra delen av Tyskland och förbundslandet Sachsens huvudstad. Staden är med
+    sina 563 311 invånare (31 december 2022) näst största stad i Sachsen och den tolfte största i Tyskland. Dresden
+    är Sachsens politiska centrum med förbundslandsregering och förbundslandsparlament. I staden återfinns också
+    flera statliga institutioner.
+  title: Dresden
+  url: https://sv.wikipedia.org/wiki/Dresden
 Dublin:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -423,6 +539,16 @@ Dublin:
     administrativa och kulturella huvudstad, och är en av Europas snabbast växande huvudstäder.
   title: Dublin
   url: https://sv.wikipedia.org/wiki/Dublin
+Duisburg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59133953
+  source: wikipedia
+  text: Duisburg är en kretsfri stad och den femte största staden i förbundslandet Nordrhein-Westfalen i Tyskland,
+    med ungefär en halv miljon invånare. Staden ligger i den nordligaste delen av storstadsområdet Rheinschiene,
+    men brukar även anses vara en del av industriregionen Ruhrområdet som breder ut sig öster om staden.
+  title: Duisburg
+  url: https://sv.wikipedia.org/wiki/Duisburg
 Durrës:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -434,6 +560,17 @@ Durrës:
     och semesterort.'
   title: Durrës
   url: https://sv.wikipedia.org/wiki/Durr%C3%ABs
+Düsseldorf:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 90819
+  section: Fakta om Düsseldorf
+  source: wikivoyage
+  text: Düsseldorf är en stad i västra Tyskland vid floden Rhen. Den är huvudstad i delstaten Nordrhein-Westfalen.
+    Düsseldorf är ett av västra Tysklands ekonomiska centrum och ligger i den tätbefolkade delen Rhen-Ruhrområdet,
+    med mer än 10 miljoner invånare.
+  title: Düsseldorf
+  url: https://sv.wikivoyage.org/wiki/D%C3%BCsseldorf
 Edinburgh:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -444,6 +581,16 @@ Edinburgh:
     under en halv miljon invånare.
   title: Edinburgh
   url: https://sv.wikipedia.org/wiki/Edinburgh
+Essen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 55769555
+  source: wikipedia
+  text: Essen är en kreisfri stad i Tyskland, belägen vid floden Ruhr, omkring 10 kilometer öster om floden Rhen.
+    Den är med cirka 570 000 invånare den näst största staden i Ruhrområdet och den fjärde största i Nordrhein-Westfalen.
+    Staden var Europeisk kulturhuvudstad 2010 tillsammans med städerna Pécs och Istanbul.
+  title: Essen
+  url: https://sv.wikipedia.org/wiki/Essen
 Faro:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -781,6 +928,17 @@ L'Hospitalet:
     85 invånare.
   title: L'Hospitalet-près-l'Andorre
   url: https://sv.wikipedia.org/wiki/L%27Hospitalet-pr%C3%A8s-l%27Andorre
+Las Palmas:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 58708315
+  source: wikipedia
+  text: Las Palmas de Gran Canaria är en stad och kommun på Gran Canaria i den autonoma regionen Kanarieöarna i
+    Spanien. Staden är huvudort i provinsen Las Palmas och tillsammans med Santa Cruz de Tenerife, den delade huvudstaden
+    på Kanarieöarna. Kommunen har 381 868 invånare (2025), på en yta av 103,32 km². Invånarantalet gör Las Palmas
+    till den största staden på Gran Canaria och Kanarieöarna.
+  title: Las Palmas de Gran Canaria
+  url: https://sv.wikipedia.org/wiki/Las_Palmas_de_Gran_Canaria
 Lecce:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -789,6 +947,38 @@ Lecce:
   text: Lecce är en stad i Italien, i regionen Apulien. Lecce är huvudort i provinsen Lecce.
   title: Lecce
   url: https://sv.wikipedia.org/wiki/Lecce
+Leeds:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59209343
+  source: wikipedia
+  text: Leeds är en stad i storstadslänet och ceremoniella grevskapet West Yorkshire som ligger i norra England
+    i Storbritannien. Staden har omkring 535 000 invånare (2021) medan storstadsdistriktet (City of Leeds) har omkring
+    822 000 invånare (2022). Genom staden rinner floden Aire.
+  title: Leeds
+  url: https://sv.wikipedia.org/wiki/Leeds
+Leicester:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 55058303
+  source: wikipedia
+  text: Leicester är en stad i Leicestershire i mellersta England i Storbritannien. Den utgör en egen kommun, City
+    of Leicester, med 388 348 invånare (2024). Vid folkräkningen 2011 hade Leicester tätort (built-up area), som
+    omfattar ett större område än kommunen, 508 916 invånare. Staden ligger vid floden Soar. Motorvägen M1 går förbi
+    Leicester.
+  title: Leicester
+  url: https://sv.wikipedia.org/wiki/Leicester
+Leipzig:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 58007321
+  source: wikipedia
+  text: Leipzig är en kretsfri stad och den största staden i det tyska förbundslandet Sachsen 190 kilometer söder
+    om Berlin med 628,718 invånare (2023) och 1,001,220 (2020) i storstadsområdet (tillsammans med Landkreis Leipzig
+    samt Landkreis Nordsachsen) samt 2,411,051 (2021) i Metropolregion Mitteldeutschland. Leipzig är ett av Sachsens
+    sex Oberzentren.
+  title: Leipzig
+  url: https://sv.wikipedia.org/wiki/Leipzig
 Lille:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -812,6 +1002,16 @@ Lisbon:
     Atlantkustens stränder.
   title: Lissabon
   url: https://sv.wikivoyage.org/wiki/Lissabon
+Liverpool:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 92572
+  source: wikivoyage
+  text: Liverpool är en stad i Merseyside i Storbritannien. Tidigare var Liverpool en tung industristad och en av
+    landets viktigaste hamnstäder. Industridelen har minskat, men fortfarande är Liverpool ett mycket viktigt marint
+    centrum. Liverpool upptogs 2004 på Unescos världsarvslista.
+  title: Liverpool
+  url: https://sv.wikivoyage.org/wiki/Liverpool
 Liège:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1000,6 +1200,16 @@ Munich:
     till Tysklands tredje största stad. I hela metropolregionen bor omkring 6,2 miljoner människor.
   title: München
   url: https://sv.wikipedia.org/wiki/M%C3%BCnchen
+Murcia:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59230082
+  source: wikipedia
+  text: Murcia är en stad och kommun i den autonoma regionen Murcia i sydöstra Spanien. Staden ligger vid floden
+    Segura, cirka 349 kilometer sydost om Madrid. Murcia är centralort i regionen Murcia. Kommunen har 479 405 invånare
+    (2025), på en yta av 885,11 km².
+  title: Murcia
+  url: https://sv.wikipedia.org/wiki/Murcia
 Nantes:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1061,6 +1271,27 @@ Nice:
     Själva staden har cirka 340 000 invånare (2019), men i hela storstadsområdet bor ungefär 610 000 personer.
   title: Nice
   url: https://sv.wikivoyage.org/wiki/Nice
+Novi Sad:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59554001
+  source: wikipedia
+  text: Novi Sad är en stad belägen i den centrala delen av provinsen Vojvodina i norra Serbien, som är provinsens
+    huvudstad och största stad. Staden är ett administrativt, ekonomiskt, kulturellt och turistiskt centrum. Folkmängden
+    i kommunen uppgick till cirka 341 625 invånare vid folkräkningen 2011, varav centralorten hade 231 798 invånare.
+    Majoriteten av invånarna är serber (75,5%).
+  title: Novi Sad
+  url: https://sv.wikipedia.org/wiki/Novi_Sad
+Nuremberg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59019433
+  source: wikipedia
+  text: Nürnberg är en kretsfri stad och den näst största staden i förbundslandet Bayern (efter München) och den
+    största i regeringsområdet Mittelfranken, såväl som hela Franken, i Tyskland, med cirka 500 000 invånare i själva
+    staden och cirka 1,3 miljoner i storstadsområdet.
+  title: Nürnberg
+  url: https://sv.wikipedia.org/wiki/N%C3%BCrnberg
 Odesa:
   checked: '2026-11-16'
   fetched: '2026-11-16'
@@ -1197,6 +1428,16 @@ Porto Torres:
     Porto Torres gränsar till kommunen Sassari. Ön Asinara ligger i kommunen.
   title: Porto Torres
   url: https://sv.wikipedia.org/wiki/Porto_Torres
+Poznań:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 91810
+  source: wikivoyage
+  text: Poznań är en av de äldsta och största städerna i Polen. Den ligger i västra delen av landet vid floden Warta.
+    Det är huvudstad i regionen Storpolens vojvodskap, men det tillhör inte Poznańs distrikt. Det är den femte största
+    staden i Polen när det gäller invånarantal.
+  title: Poznan
+  url: https://sv.wikivoyage.org/wiki/Poznan
 Pozzallo:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1302,6 +1543,16 @@ Rostock:
     Lübeck och Schwerin.
   title: Rostock
   url: https://sv.wikipedia.org/wiki/Rostock
+Rotterdam:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59098657
+  source: wikipedia
+  text: Rotterdam är den näst största staden i Nederländerna och en av världens största hamnar. Den ligger i provinsen
+    Zuid-Holland i den västra delen av landet och söder om regionen Randstad. Rotterdam var från början en dammbyggnad
+    byggd 1270 på floden Rotte, och har sedan dess växt till att bli ett stort internationellt handelscentrum.
+  title: Rotterdam
+  url: https://sv.wikipedia.org/wiki/Rotterdam
 Rovaniemi:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1346,6 +1597,16 @@ San Marino:
     regnigt på vintern.
   title: San Marino
   url: https://sv.wikivoyage.org/wiki/San_Marino
+Santa Cruz de Tenerife:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 57715381
+  source: wikipedia
+  text: Santa Cruz de Tenerife är en kommun i Spanien. Den ligger i provinsen Santa Cruz de Tenerife i den autonoma
+    regionen Kanarieöarna i sydvästra delen av landet, 1 700 km sydväst om huvudstaden Madrid. Antalet invånare
+    är 211 957 (2025). Santa Cruz de Tenerife ligger på ön Teneriffa.
+  title: Santa Cruz de Tenerife (kommun)
+  url: https://sv.wikipedia.org/wiki/Santa_Cruz_de_Tenerife_%28kommun%29
 Santiago de Compostela:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1387,6 +1648,17 @@ Sevilla:
     bäst bevarade gamla städerna i Europa som har ett stort historiskt och konstnärligt värde.
   title: Sevilla
   url: https://sv.wikivoyage.org/wiki/Sevilla
+Sheffield:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59397882
+  source: wikipedia
+  text: Sheffield är en storstad i distriktet City of Sheffield i South Yorkshire, England. Den har fått sitt namn
+    efter floden Sheaf som flyter genom staden. Orten har 518 090 invånare (2011, stad), 552 698 (2011, distrikt).
+    Från att huvudsakligen ha varit en industristad har staden utvecklat en bredare ekonomisk bas och är en av de
+    åtta största engelska städerna utanför London.
+  title: Sheffield
+  url: https://sv.wikipedia.org/wiki/Sheffield
 Skopje:
   checked: '2026-11-14'
   fetched: '2026-11-14'
@@ -1518,6 +1790,18 @@ Syracuse:
     2005 tillsammans med Pantalicas klipplatåer.
   title: Syrakusa
   url: https://sv.wikipedia.org/wiki/Syrakusa
+Szczecin:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 96474
+  section: Fakta om Szczecin
+  source: wikivoyage
+  text: Szczecin eller Stettin som staden heter på svenska är en hamnstad i nordvästra Polen. Szczecin har 391 566
+    invånare (2023, i storstadsregionen 777 000 invånare). Stettin är huvudstad i provinsen Västpommerns vojvodskap.
+    Den plats som idag heter Szczecin omnämndes första gången under det första århundradet e.Kr., då den västromerske
+    historikern Tacitus skrev om den östgermanska, rugiska folkstammen, som då bodde i området.
+  title: Szczecin
+  url: https://sv.wikivoyage.org/wiki/Szczecin
 Szeged:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1596,6 +1880,15 @@ Tarifa:
     säte för olika former av surfing för såväl professionella som för amatörer.
   title: Tarifa
   url: https://sv.wikipedia.org/wiki/Tarifa
+The Hague:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 90878
+  source: wikivoyage
+  text: Haag (officiellt namn ’s-Gravenhage) är den tredje största staden i Nederländerna, efter Amsterdam och Rotterdam.
+    Trots att regeringen har sitt säte här är Haag inte landets huvudstad (vilket är Amsterdam).
+  title: Haag
+  url: https://sv.wikivoyage.org/wiki/Haag
 Thessaloniki:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1697,6 +1990,16 @@ Umeå:
     Miljöhögskolan, Restauranghögskolan och Tekniska högskolan.
   title: Umeå
   url: https://sv.wikivoyage.org/wiki/Ume%C3%A5
+Utrecht:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 57645014
+  source: wikipedia
+  text: Utrecht är huvudstad och den största staden i provinsen Utrecht i Nederländerna. Staden ligger i nordöstra
+    delen av Randstad och är med 377 083 invånare (2025) den fjärde största staden i landet. Staden är tack vare
+    sitt geografiska läge mitt i landet en viktig knutpunkt för såväl väg- som järnvägstrafik.
+  title: Utrecht
+  url: https://sv.wikipedia.org/wiki/Utrecht
 Vaasa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1865,6 +2168,17 @@ Zagreb:
     2005 besöktes Zagreb av över en halv miljon turister, de flesta från Italien, Tyskland och Österrike.
   title: Zagreb
   url: https://sv.wikivoyage.org/wiki/Zagreb
+Zaragoza:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 59600039
+  source: wikipedia
+  text: Zaragoza är en stad och kommun i den autonoma regionen Aragonien i nordöstra Spanien. Staden ligger cirka
+    274 kilometer nordost om Madrid, cirka 256 kilometer väster om Barcelona och cirka 246 kilometer norr om Valencia.
+    Zaragoza är huvudort i både provinsen med samma namn och Aragonien. Kommunen har 693 091 invånare (2025), på
+    en yta av 974,00 km². Zaragoza är Spaniens femte folkrikaste stad.
+  title: Zaragoza
+  url: https://sv.wikipedia.org/wiki/Zaragoza
 Zürich:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1887,3 +2201,12 @@ Zürich:
     efter Umeå, Gävle och Sundsvall) med 52 797 invånare 2020.
   title: Östersund
   url: https://sv.wikipedia.org/wiki/%C3%96stersund
+Łódź:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 58859762
+  source: wikipedia
+  text: 'Łódź, ryska, Лодзь, hebreiska: ''לודז, uttalas ) är en stad i mellersta Polen, belägen 120 km sydväst om
+    Warszawa.'
+  title: Łódź
+  url: https://sv.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA

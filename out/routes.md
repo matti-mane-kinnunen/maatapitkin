@@ -1,6 +1,6 @@
 # Journeys from Helsinki
 
-_leave Helsinki Tue 24.11.2026 from 17:00 · generated 16.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Helsinki Tue 24.11.2026 from 17:00 · generated 17.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -183,6 +183,7 @@ Not reachable without night trains: Valletta, Podgorica
 | Storlien | Wed 25.11. 18:27 | 26 h 07 min | 3 | 0 |
 | Hamburg | Wed 25.11. 19:01 | 26 h 26 min | 4 | 0 |
 | Kaisiadorys | Wed 25.11. 20:45 | 13 h 15 min | 3 | 0 |
+| Bremen | Wed 25.11. 20:41 | 28 h 06 min | 5 | 0 |
 | Trondheim | Wed 25.11. 20:47 | 28 h 12 min | 4 | 0 |
 | Kaunas | Wed 25.11. 21:55 | 14 h 25 min | 4 | 0 |
 | Osnabrück | Wed 25.11. 21:34 | 28 h 59 min | 5 | 0 |
@@ -190,6 +191,7 @@ Not reachable without night trains: Valletta, Podgorica
 | Frankfurt | Wed 25.11. 23:14 | 30 h 39 min | 5 | 0 |
 | Stavanger | Wed 25.11. 23:14 | 30 h 39 min | 3 | 0 |
 | Bergen | Wed 25.11. 23:18 | 30 h 43 min | 3 | 0 |
+| Leipzig | Wed 25.11. 23:47 | 31 h 12 min | 6 | 0 |
 | Köln | Wed 25.11. 23:49 | 31 h 14 min | 5 | 0 |
 | Hannover | Thu 26.11. 02:42 | 34 h 07 min | 5 | 0 |
 | Wroclaw | Thu 26.11. 03:00 | 34 h 25 min | 6 | 0 |
@@ -198,21 +200,35 @@ Not reachable without night trains: Valletta, Podgorica
 | Basel | Thu 26.11. 06:21 | 37 h 46 min | 6 | 0 |
 | Krakow | Thu 26.11. 06:35 | 38 h 00 min | 6 | 0 |
 | Offenburg | Thu 26.11. 06:39 | 38 h 04 min | 5 | 0 |
+| Nuremberg | Thu 26.11. 07:24 | 38 h 49 min | 6 | 0 |
+| Düsseldorf | Thu 26.11. 07:32 | 38 h 57 min | 6 | 0 |
 | Strasbourg | Thu 26.11. 07:34 | 38 h 59 min | 6 | 0 |
+| Duisburg | Thu 26.11. 07:45 | 39 h 10 min | 6 | 0 |
 | Mockava | Thu 26.11. 08:52 | 25 h 22 min | 4 | 1 |
 | Zürich | Thu 26.11. 07:52 | 39 h 17 min | 7 | 0 |
+| Essen | Thu 26.11. 07:58 | 39 h 23 min | 6 | 0 |
+| Dresden | Thu 26.11. 08:07 | 39 h 32 min | 6 | 1 |
+| Bochum | Thu 26.11. 08:09 | 39 h 34 min | 6 | 0 |
+| Utrecht | Thu 26.11. 08:11 | 39 h 36 min | 7 | 0 |
+| Dortmund | Thu 26.11. 08:21 | 39 h 46 min | 6 | 0 |
+| Rotterdam | Thu 26.11. 08:39 | 40 h 04 min | 7 | 0 |
+| The Hague | Thu 26.11. 08:39 | 40 h 04 min | 7 | 0 |
 | Liège | Thu 26.11. 08:43 | 40 h 08 min | 6 | 0 |
 | Innsbruck | Thu 26.11. 09:18 | 40 h 43 min | 6 | 0 |
 | Lugano | Thu 26.11. 09:58 | 41 h 23 min | 7 | 0 |
 | Stuttgart | Thu 26.11. 10:14 | 41 h 39 min | 7 | 0 |
+| Antwerp | Thu 26.11. 10:16 | 41 h 41 min | 8 | 0 |
 | Lille | Thu 26.11. 10:44 | 42 h 09 min | 7 | 0 |
 | Milan | Thu 26.11. 11:50 | 43 h 15 min | 8 | 0 |
+| Łódź | Thu 26.11. 12:26 | 43 h 51 min | 8 | 0 |
 | Narvik | Thu 26.11. 12:37 | 44 h 02 min | 3 | 0 |
+| Brno | Thu 26.11. 12:41 | 44 h 06 min | 6 | 0 |
 | Lyon | Thu 26.11. 12:59 | 44 h 24 min | 7 | 0 |
 | Kolding | Thu 26.11. 12:59 | 44 h 24 min | 3 | 0 |
 | Bordeaux | Thu 26.11. 13:14 | 44 h 39 min | 8 | 0 |
 | Brescia | Thu 26.11. 13:21 | 44 h 46 min | 9 | 0 |
 | Bologna | Thu 26.11. 13:24 | 44 h 49 min | 9 | 0 |
+| Poznań | Thu 26.11. 13:24 | 44 h 49 min | 8 | 0 |
 | Genoa | Thu 26.11. 13:44 | 45 h 09 min | 9 | 0 |
 | Torino | Thu 26.11. 13:54 | 45 h 19 min | 9 | 0 |
 | Florence | Thu 26.11. 14:04 | 45 h 29 min | 9 | 0 |
@@ -223,14 +239,21 @@ Not reachable without night trains: Valletta, Podgorica
 | Marseille | Thu 26.11. 14:48 | 46 h 13 min | 8 | 0 |
 | Avignon | Thu 26.11. 14:57 | 46 h 22 min | 8 | 0 |
 | Montpellier | Thu 26.11. 15:00 | 46 h 25 min | 8 | 0 |
+| Leicester | Thu 26.11. 14:06 | 46 h 31 min | 8 | 0 |
 | Venice | Thu 26.11. 15:14 | 46 h 39 min | 9 | 0 |
 | Aix en Provence | Thu 26.11. 15:23 | 46 h 48 min | 9 | 0 |
+| Birmingham | Thu 26.11. 14:27 | 46 h 52 min | 8 | 0 |
 | Ancona | Thu 26.11. 15:31 | 46 h 56 min | 9 | 0 |
+| Bristol | Thu 26.11. 14:34 | 46 h 59 min | 8 | 0 |
 | Geneve | Thu 26.11. 15:36 | 47 h 01 min | 8 | 0 |
 | Toulouse | Thu 26.11. 15:48 | 47 h 13 min | 8 | 0 |
+| Sheffield | Thu 26.11. 15:04 | 47 h 29 min | 8 | 0 |
 | Szeged | Thu 26.11. 16:16 | 47 h 41 min | 7 | 0 |
 | Manchester | Thu 26.11. 15:19 | 47 h 44 min | 8 | 0 |
+| Leeds | Thu 26.11. 15:21 | 47 h 46 min | 8 | 0 |
+| Liverpool | Thu 26.11. 15:23 | 47 h 48 min | 8 | 0 |
 | Brest | Thu 26.11. 16:29 | 47 h 54 min | 8 | 0 |
+| Bradford | Thu 26.11. 16:01 | 48 h 26 min | 9 | 0 |
 | Hendaye | Thu 26.11. 17:04 | 48 h 29 min | 8 | 0 |
 | Naples | Thu 26.11. 17:33 | 48 h 58 min | 10 | 0 |
 | Irun | Thu 26.11. 17:37 | 49 h 02 min | 9 | 0 |
@@ -247,7 +270,9 @@ Not reachable without night trains: Valletta, Podgorica
 | Holyhead | Thu 26.11. 18:54 | 51 h 19 min | 8 | 0 |
 | Ayr | Thu 26.11. 19:23 | 51 h 48 min | 9 | 0 |
 | Penzance | Thu 26.11. 19:25 | 51 h 50 min | 8 | 0 |
+| Novi Sad | Thu 26.11. 20:45 | 52 h 10 min | 9 | 0 |
 | L'Hospitalet | Thu 26.11. 21:10 | 52 h 35 min | 9 | 0 |
+| Zaragoza | Thu 26.11. 21:46 | 53 h 11 min | 9 | 0 |
 | Villa San Giovanni | Thu 26.11. 21:46 | 53 h 11 min | 10 | 0 |
 | Lviv | Thu 26.11. 22:56 | 53 h 21 min | 7 | 1 |
 | Messina | Thu 26.11. 23:00 | 54 h 25 min | 11 | 0 |
@@ -266,12 +291,15 @@ Not reachable without night trains: Valletta, Podgorica
 | Vitoria-Gasteiz | Fri 27.11. 10:38 | 66 h 03 min | 10 | 1 |
 | Syracuse | Fri 27.11. 11:29 | 66 h 54 min | 7 | 0 |
 | Santiago de Compostela | Fri 27.11. 11:32 | 66 h 57 min | 10 | 1 |
+| Cádiz | Fri 27.11. 11:45 | 67 h 10 min | 11 | 1 |
 | Granada | Fri 27.11. 12:35 | 68 h 00 min | 11 | 1 |
 | Ruse | Fri 27.11. 13:40 | 68 h 05 min | 8 | 0 |
+| Alicante | Fri 27.11. 13:31 | 68 h 56 min | 8 | 1 |
 | Badajoz | Fri 27.11. 13:38 | 69 h 03 min | 10 | 1 |
 | Algeciras | Fri 27.11. 13:59 | 69 h 24 min | 10 | 1 |
 | Bastia | Fri 27.11. 14:15 | 69 h 40 min | 7 | 1 |
 | Salerno | Fri 27.11. 14:30 | 69 h 55 min | 8 | 1 |
+| Murcia | Fri 27.11. 14:39 | 70 h 04 min | 8 | 1 |
 | Galway | Fri 27.11. 13:51 | 70 h 16 min | 7 | 1 |
 | Pozzallo | Fri 27.11. 15:58 | 71 h 23 min | 8 | 0 |
 | Abrantes | Fri 27.11. 15:22 | 71 h 47 min | 11 | 1 |

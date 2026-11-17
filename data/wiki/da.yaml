@@ -47,6 +47,17 @@ Algiers:
     i Algeriet efter landets uafhængighed i 1962.
   title: Algier
   url: https://da.wikipedia.org/wiki/Algier
+Alicante:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11970596
+  source: wikipedia
+  text: Ikke at forveksle med Alicante (provins). Alicante er en by i Spanien. Den er hovedstad i provinsen Alicante
+    i Valenciaregionen ved Middelhavet. Alicante er en vigtig havneby. Befolkningen i Alicante by var 337.482 i
+    2020. Med omkringliggende kommuner, anslås Stor-Alicante til at have omkring 757.000 indbyggere, som gør Alicante
+    til det ottende største byområde i Spanien.
+  title: Alicante
+  url: https://da.wikipedia.org/wiki/Alicante
 Amsterdam:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -89,6 +100,15 @@ Ankara:
     og landsfader, Mustafa Kemal Atatürk. Ankara ligger i den Centralanatoliske region.
   title: Ankara
   url: https://da.wikipedia.org/wiki/Ankara
+Antwerp:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12054572
+  source: wikipedia
+  text: Antwerpen er en by i Flandern i det nordlige Belgien. Byen ligger i provinsen Antwerpen, tæt ved grænsen
+    til nabolandet Holland. Byen har 529.247(2020) indbyggere og et areal på 204,51 km².
+  title: Antwerpen
+  url: https://da.wikipedia.org/wiki/Antwerpen
 Athens:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -232,6 +252,28 @@ Bern:
     Kanton Bern, der er den næstmest befolkede af Schweiz' 26 kantoner. Den gamle bydel i Bern er på UNESCOs Verdensarvsliste.
   title: Bern
   url: https://da.wikipedia.org/wiki/Bern
+Birmingham:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12408777
+  source: wikipedia
+  text: Birmingham er en by og storbyområde i West Midlands, England, med 1.137.100(2017) indbyggere, hvilket gør
+    det til den næststørste by i Storbritannien. Den er centrum for West Midlands konurbation, som er det tredjemest
+    befolkede område i Storbritannien, med en estimeret befolkning på 2.440.986 i 2011. Det større Birmingham metropolitan
+    area er det andetstørste i Storbritannien, hvor befolkningen er på 3,7 millioner.
+  title: Birmingham
+  url: https://da.wikipedia.org/wiki/Birmingham
+Bochum:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12172365
+  source: wikipedia
+  text: Bochum er en by i Ruhrområdet i den tyske delstat Nordrhein-Westfalen. Byen har pr. 2009 376.319 indbyggere
+    og huser bl.a. to af bilproducenten Opels fabrikker, seks højskoler, et rumforskningsinstitut, et stort antal
+    teatre og et antal museer, mest koncentreret indenfor det tekniske område. I byen findes også en række elektronik-,
+    kemi- og tekstilvirksomheder.
+  title: Bochum
+  url: https://da.wikipedia.org/wiki/Bochum
 Boden:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -273,6 +315,16 @@ Bordeaux:
     en total befolkning i det bymæssige område omkring 754.000.
   title: Bordeaux
   url: https://da.wikipedia.org/wiki/Bordeaux
+Bradford:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11461041
+  source: wikipedia
+  text: Bradford er en by med omkring 400.000 indbyggere i West Yorkshire i England. Byen er især kendt for sine
+    turistattraktioner som historiske bygninger og for sin etniske mangfoldighed (22 procent af indbyggerne er af
+    ikke-britisk herkomst). Med tiden er byen nærmest vokset sammen med Leeds.
+  title: Bradford (West Yorkshire)
+  url: https://da.wikipedia.org/wiki/Bradford_%28West_Yorkshire%29
 Bratislava:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -284,6 +336,16 @@ Bratislava:
     til to andre lande. Bratislava er det politiske, kulturelle og økonomiske centrum i Slovakiet.
   title: Bratislava
   url: https://da.wikipedia.org/wiki/Bratislava
+Bremen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12209409
+  source: wikipedia
+  text: Bremen er en by i det nordvestlige Tyskland med 588.413(2025) indbyggere. Byen er hovedbyen i delstaten
+    Bremen. Bremen er over 1200 år gammel og var gennem historien en af de mest fremtrædende af Hansestaderne. Den
+    ligger ved Wesers udløb i Nordsøen ca. 125 km fra Hamburg og 70 km fra Bremerhaven.
+  title: Bremen
+  url: https://da.wikipedia.org/wiki/Bremen
 Brescia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -304,6 +366,28 @@ Brest:
     (Nr. 29).
   title: Brest
   url: https://da.wikipedia.org/wiki/Brest
+Bristol:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11942233
+  source: wikipedia
+  text: Bristol er en by i det sydvestlige England, tæt på grænsen til Wales. I 2017 havde byen 456.000 indbyggere,
+    hvilket gjorde den til landets tiendestørste. Floden Avon løber gennem Bristol, som ligger ud til den tragtformede
+    fjord Bristol Channel, der er et af de steder på jorden, hvor tidevandsforskellen mellem flod og ebbe er størst
+    (op til 15 meter).
+  title: Bristol
+  url: https://da.wikipedia.org/wiki/Bristol
+Brno:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11773544
+  source: wikipedia
+  text: Brno er en by i det sydøstlige Tjekkiet, der med omkring 402.739(2025) indbyggere er den næststørste by
+    i Tjekkiet og den største by i Mähren. Den ligger, hvor floderne Svitava og Svratka løber sammen, og er hovedby
+    i regionen Sydmæhren. Byen blev grundlagt i 1243 og er i dag universitetsby. Den tjekkiske traktorfabrik Zetor
+    har hovedkvarter i byen.
+  title: Brno
+  url: https://da.wikipedia.org/wiki/Brno
 Brussels:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -385,6 +469,15 @@ Copenhagen:
     dog også store områder der ligger på øen Amager, samt på opfyldte arealer mellem de to øer.
   title: København
   url: https://da.wikipedia.org/wiki/K%C3%B8benhavn
+Cádiz:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11907484
+  source: wikipedia
+  text: Ikke at forveksle med Cádiz (provins). Cádiz er en havneby i Andalusien i kongeriget Spanien og hovedstad
+    i provinsen af samme navn. Den har et indbyggertal på 109.950 (2025) indbyggere.
+  title: Cádiz
+  url: https://da.wikipedia.org/wiki/C%C3%A1diz
 Donostia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -394,6 +487,27 @@ Donostia:
     cirka 188.000. Byen ligger ved kysten til Biscayabugten. San Sebastián blev grundlagt i år 1180.
   title: San Sebastián
   url: https://da.wikipedia.org/wiki/San_Sebasti%C3%A1n
+Dortmund:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12317549
+  source: wikipedia
+  text: Dortmund er en by i Tyskland med 586.600 indbyggere (2017) i delstaten Nordrhein-Westfalen. Byen er såkaldt
+    kreisfrei, dvs. den tilhører ikke et kreis (en slags amt) eller region. Målt på indbyggertal er Dortmund den
+    7. største by i Tyskland. Dortmund er en del af det store byområde Ruhr-distriktet.
+  title: Dortmund
+  url: https://da.wikipedia.org/wiki/Dortmund
+Dresden:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12405744
+  source: wikipedia
+  text: Dresden er en tysk storby og hovedstad i delstaten Sachsen. Den ligger i Elbens floddal mellem Berlin (160
+    km) og Prag (120 km) Byen har en mangeårig historie som residens for Sachsens kurfyrster og konger. Den mest
+    markante er "August den stærke", i hvis regeringstid (1694-1733) hovedstaden Dresden udviklede sig til en vigtig
+    kulturby.
+  title: Dresden
+  url: https://da.wikipedia.org/wiki/Dresden
 Dublin:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -405,6 +519,16 @@ Dublin:
     og kulturelle centrum med 592.713(2022) indbyggere inden for bygrænsen.
   title: Dublin
   url: https://da.wikipedia.org/wiki/Dublin
+Duisburg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12054625
+  source: wikipedia
+  text: Duisburg er en storby vest for Ruhrområdet i Tyskland, beliggende i delstaten Nordrhein-Westfalen, nord
+    for Düsseldorf. Pr. 2018-12-31 bor der 498590 indbyggere i byen. Duisburg ligger ved floden Rhinen. Navnet udtales.
+    Duisburgs havn er den største indlandshavn i Europa.
+  title: Duisburg
+  url: https://da.wikipedia.org/wiki/Duisburg
 Durrës:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -415,6 +539,15 @@ Durrës:
     på den albanske kyst, omkring 33 km vest for Albaniens hovedstad Tirana og er landets vigtigste havneby.
   title: Durrës
   url: https://da.wikipedia.org/wiki/Durr%C3%ABs
+Düsseldorf:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11792231
+  source: wikipedia
+  text: Düsseldorf er hovedstaden i den tyske delstat Nordrhein-Westfalen og har 631.217 indbyggere (31. december
+    2023). Den ligger hovedsageligt på Rhinens østbred, hvor floden Düssel udmunder.
+  title: Düsseldorf
+  url: https://da.wikipedia.org/wiki/D%C3%BCsseldorf
 Edinburgh:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -426,6 +559,16 @@ Edinburgh:
     ca.
   title: Edinburgh
   url: https://da.wikipedia.org/wiki/Edinburgh
+Essen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12054680
+  source: wikipedia
+  text: Essen er en by i Nordrhein-Westfalen i Tyskland. Den ligger ved bredden af Ruhr-floden og har 583.084 indbyggere.
+    Byen blev grundlagt allerede i 845, men blev ingen betydningsfuld by før 1800-tallet, da kul- og stålindustrien
+    slog sig ned i området. Det første stålværk i byen blev etableret i 1811.
+  title: Essen
+  url: https://da.wikipedia.org/wiki/Essen
 Faro:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -728,6 +871,17 @@ Köln:
     indbyggere. Byen ligger på begge sider af Rhinen i delstaten Nordrhein-Westfalen.'
   title: Köln
   url: https://da.wikipedia.org/wiki/K%C3%B6ln
+Las Palmas:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11969038
+  source: wikipedia
+  text: Las Palmas de Gran Canaria er en by og kommune i det sydvestlige Spanien på øen Gran Canaria i provinsen
+    Las Palmas, De Kanariske Øer. Den har et indbyggertal på 381.868 (2025) indbyggere hvilket gør den til den største
+    by i regionen og den tiende største by i Spanien. Las Palmas de Gran Canaria er hovedstad på den kanariske ø
+    Gran Canaria i Atlanterhavet.
+  title: Las Palmas de Gran Canaria
+  url: https://da.wikipedia.org/wiki/Las_Palmas_de_Gran_Canaria
 Lecce:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -739,6 +893,36 @@ Lecce:
     olivenolie, vin (Salento Salieri) og keramik.'
   title: Lecce
   url: https://da.wikipedia.org/wiki/Lecce
+Leeds:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12275172
+  source: wikipedia
+  text: Leeds er en britisk by med 757,700 (2011) indbyggere. Den ligger ved floden Aire. I byen ligger Royal Armouries
+    Museum og University of Leeds.
+  title: Leeds
+  url: https://da.wikipedia.org/wiki/Leeds
+Leicester:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11951133
+  source: wikipedia
+  text: Leicester er en by i Leicestershire i Midt-England med 368.600(2021) indbyggere. Byen blev grundlagt af
+    romerne i år 50 under navnet Ratæ Coritanorum. Byen er kendt for University of Leicester, fodboldholdet Leicester
+    City og rugbyklubben Leicester Tigers. Leicester Castle går tilbage til middelalderen.
+  title: Leicester
+  url: https://da.wikipedia.org/wiki/Leicester
+Leipzig:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12409272
+  source: wikipedia
+  text: Leipzig er den folkerigeste by i den tyske delstat Sachsen. Byen havde 633.592 indbyggere pr. 31. december
+    2025. Den er Tysklands ottendestørste by og indgår i storbyregionen Midttyskland. Leipzig ligger omkring 150
+    km sydvest for Berlin i den sydligste del af den nordeuropæiske slette, i Leipzigbugten, hvor floden Weiße Elster
+    løber sammen med sine bifloder Pleiße og Parthe.
+  title: Leipzig
+  url: https://da.wikipedia.org/wiki/Leipzig
 Lille:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -760,6 +944,17 @@ Lisbon:
     på omkring 2,71 mio. personer (2021), hvilket gør det til det 11.-største byområde i EU.
   title: Lissabon
   url: https://da.wikipedia.org/wiki/Lissabon
+Liverpool:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12206074
+  source: wikipedia
+  text: Liverpool er en by i England med 513.441(2016)indbyggere. Liverpool indgår som en del af storbyområdet Merseyside,
+    som har 1,36 mio. indbyggere og er den næstvigtigste havneby i landet efter London. Havnen var i imperietiden
+    byens livsnerve, men med afviklingen af imperiet mistede havnen og byen sin strategiske betydning, og befolkningstallet
+    er næsten halveret siden toppen i 1931 (846.101).
+  title: Liverpool
+  url: https://da.wikipedia.org/wiki/Liverpool
 Liège:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -948,6 +1143,17 @@ Munich:
     alper. München er Tysklands tredjestørste by efter Berlin og Hamborg med et indbyggertal på 1.505.036 (2025).
   title: München
   url: https://da.wikipedia.org/wiki/M%C3%BCnchen
+Murcia:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11916993
+  source: wikipedia
+  text: Murcia er en by og kommune i det sydøstlige Spanien i Murcia-regionen. Den har et indbyggertal på 479.405
+    (2025) indbyggere, hvilket gør den til landets syvendestørste by. Byen ligger ved bredden af floden Segura,
+    tæt ved kysten til Middelhavet. Murcia blev grundlagt af maurerne i år 825. Blandt byens seværdigheder kan nævnes
+    katedralen, der blev bygget i årene mellem 1394 og 1465.
+  title: Murcia
+  url: https://da.wikipedia.org/wiki/Murcia
 Nantes:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1013,6 +1219,25 @@ Nice:
     i området omkring Nice i omkring 400.000 år.
   title: Nice
   url: https://da.wikipedia.org/wiki/Nice
+Novi Sad:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11974629
+  source: wikipedia
+  text: Novi Sad er en by i Serbien og er hovedstad i det autonome område Vojvodina. Byen ligger næsten i midten
+    af Vojvodina på bredden af Donaufloden. Byen er den næststørste by i Serbien.
+  title: Novi Sad
+  url: https://da.wikipedia.org/wiki/Novi_Sad
+Nuremberg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12384035
+  source: wikipedia
+  text: Nürnberg er den næststørste by i den tyske delstat Bayern efter hovedstaden München. Byen har 518.365 indbyggere,
+    hvilket gør den til Tysklands 14. største by. Byen ligger ved Pegnitz og Main-Donau-Kanalen i Regierungsbezirk
+    Mittelfranken, og det er den største by og den uofficielle hovedstad i Franken.
+  title: Nürnberg
+  url: https://da.wikipedia.org/wiki/N%C3%BCrnberg
 Odesa:
   checked: '2026-11-16'
   fetched: '2026-11-16'
@@ -1145,6 +1370,16 @@ Porto Torres:
     Sassari.
   title: Porto Torres
   url: https://da.wikipedia.org/wiki/Porto_Torres
+Poznań:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11839133
+  source: wikipedia
+  text: Poznań er Polens femte folkerigeste by med 546.859(2021) indbyggere samt et areal på 262 km². Poznań er
+    den største by og hovedstad i voivodskabet wielkopolski. Et vigtigt polsk kulturelt, videnskabeligt, industrielt
+    og akademisk center. En by med en rig, over tusind års historie, kultur og arkitektur.
+  title: Poznań
+  url: https://da.wikipedia.org/wiki/Pozna%C5%84
 Pozzallo:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1244,6 +1479,17 @@ Rostock:
     allerede i 1218, men blev oprindelig grundlagt af de slaviske vendere.
   title: Rostock
   url: https://da.wikipedia.org/wiki/Rostock
+Rotterdam:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11299405
+  source: wikipedia
+  text: 'Rotterdam er Hollands næststørste by efter Amsterdam beliggende i provinsen Syd-Holland. Byen ligger ved
+    bredderne af floden Nieuwe Maas, en af kanalerne i deltaet for Rhinen/Meuse floden. Navnet Rotterdam stammer
+    fra en dæmning i floden Rotte. Byen har 664.311(2023)indbyggere, med forstæder: 1.200.000. Rotterdams havn er
+    den største havn i Europa og var tidligere verdens travleste havn fra 1962 til 2004.'
+  title: Rotterdam
+  url: https://da.wikipedia.org/wiki/Rotterdam
 Rovaniemi:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1285,6 +1531,17 @@ San Marino:
     La Guaita. San Marino er en af de ældste republikker i verden. Den første forfatning er fra 1263.
   title: San Marino
   url: https://da.wikipedia.org/wiki/San_Marino
+Santa Cruz de Tenerife:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11916307
+  source: wikipedia
+  text: Santa Cruz de Tenerife er en by og kommune i det sydvestlige Spanien på øen Tenerife i provinsen Santa Cruz
+    de Tenerife, De Kanariske Øer. Den har et indbyggertal på 211.957 (2025) indbyggere. Det er hovedstaden i provinsen
+    Santa Cruz de Tenerife og hovedstad i den autonome region, som øgruppen udgør. Fra havnen eksporteres der landbrugsprodukter
+    fra øerne, for eksempel grøntsager, tobak og bananer.
+  title: Santa Cruz de Tenerife
+  url: https://da.wikipedia.org/wiki/Santa_Cruz_de_Tenerife
 Santiago de Compostela:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1327,6 +1584,17 @@ Sevilla:
     i regionen, hvori den ligger.
   title: Sevilla
   url: https://da.wikipedia.org/wiki/Sevilla
+Sheffield:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12102073
+  source: wikipedia
+  text: Sheffield er Englands fjerdestørste by med 518.090(2011) indbyggere. Den er beliggende i det engelske county
+    Yorkshire. Bystyret er organiseret som metropolitan borough ("storbykommune"). Byen er den største i området
+    South Yorkshire, der i alt har ca. 1,2 millioner indbyggere, og gennemløbes af floden Don. Af dansk interesse
+    er det, at byen er vokset ud af bl.a. danske vikingebopladser i området.
+  title: Sheffield
+  url: https://da.wikipedia.org/wiki/Sheffield
 Skopje:
   checked: '2026-11-14'
   fetched: '2026-11-14'
@@ -1443,6 +1711,16 @@ Syracuse:
     byer i datidens verden på højde med Athen og Sparta.
   title: Siracusa
   url: https://da.wikipedia.org/wiki/Siracusa
+Szczecin:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12172080
+  source: wikipedia
+  text: Stettin er en havneby i den nordvestlige del af Polen med 387.700(2024) indbyggere, hovedstad i voivodskabet
+    zachodniopomorskie. Stettin ligger omtrent midt i Pommern (Stettin Byområdet) ved Oders udmunding ved Østersøens
+    sydkyst på Warszewo-bakkerne, Bukowe-bakkerne og Goleniów-sletten. Stettin har et areal på 301 km2.
+  title: Stettin
+  url: https://da.wikipedia.org/wiki/Stettin
 Szeged:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1505,6 +1783,17 @@ Tarifa:
     Gibraltar, ud til Gibraltarstrædet med ca. 15 km til den afrikanske kyst.
   title: Tarifa
   url: https://da.wikipedia.org/wiki/Tarifa
+The Hague:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 11412779
+  source: wikipedia
+  text: 'Haag er residens- og regeringsby i Nederlandene, hvor Amsterdam er hovedstad. Haag, der ligger i provinsen
+    Zuid-Holland, har 510.000 indbyggere, med forstæderne 705.000, og er dermed landets tredjestørste by. Byen er
+    et administrativt og kulturelt centrum og huser det nederlandske parlamentets to kamre: Eerste Kamer ("første
+    kammer"), eller Senat, og Tweede Kamer ("andet kammer").'
+  title: Haag
+  url: https://da.wikipedia.org/wiki/Haag
 Thessaloniki:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1600,6 +1889,15 @@ Umeå:
     Universitet har 37.000 studerende og 4.200 ansatte.
   title: Umeå
   url: https://da.wikipedia.org/wiki/Ume%C3%A5
+Utrecht:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12195833
+  source: wikipedia
+  text: Utrecht er en kommune og en by, beliggende i provinsen Utrecht i Nederlandene. Byen er den fjerdestørste
+    i Nederlandene. Kommunens areal er på 99,21 km², og byen har 359.370(2021) indbyggere fordelt på 10 distrikter.
+  title: Utrecht
+  url: https://da.wikipedia.org/wiki/Utrecht
 Vaasa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1752,6 +2050,17 @@ Zagreb:
     (2021), 1.161.259 (2022), 1.218.792 (2021) indbyggere med forstæder.
   title: Zagreb
   url: https://da.wikipedia.org/wiki/Zagreb
+Zaragoza:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12102150
+  source: wikipedia
+  text: Zaragoza er hovedstad i den autonome spanske region og det tidligere kongerige Aragón og provinsen Zaragoza.
+    Byen har 693.091(2025) indbyggere. Zaragoza er vokset op hvor floden Ebro samler de to bifloder Huerva og Gállego.
+    Den er et trafikknudepunkt omkring 300 km. fra de fire storbyer Madrid, Barcelona, Valencia og Bilbao. AVE-hurtigtoget
+    fra Barcelona til Madrid går gennem byen.
+  title: Zaragoza
+  url: https://da.wikipedia.org/wiki/Zaragoza
 Zürich:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1773,3 +2082,14 @@ Zürich:
     grundlagt i 1700-tallet i det nuværende Sverige.
   title: Östersund
   url: https://da.wikipedia.org/wiki/%C3%96stersund
+Łódź:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 12237395
+  source: wikipedia
+  text: Łódź er med 648.711(2024) indbyggere befolkningsmæssigt Polens tredjestørste by og hovedstaden i Województwo
+    łódzkie midt i landet. Byen er hovedcentret for tekstil- og filmindustrien samt elektronik- og underholdningsbranchen
+    i Polen. Med sine universiteter, teatre, museer og den verdensberømte filmhøjskole er Łódź også et vigtigt akademisk
+    og kulturelt center.
+  title: Łódź
+  url: https://da.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA

@@ -50,6 +50,18 @@ Algiers:
     In den um Algier herum gebildeten Agglomerationen wohnen ca.
   title: Algier
   url: https://de.wikivoyage.org/wiki/Algier
+Alicante:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1768154
+  section: Hintergrund
+  source: wikivoyage
+  text: Alicante ist eine Stadt an der Costa Blanca in Spanien. Alicante ist Hauptstadt der Provinz Alicante und
+    gehört zum Land Valencia. Es ist Hafenstadt und wurde wahrscheinlich vor etwa 2900 Jahren von den Phöniziern
+    gegründet. In der valencianischen Sprache heißt die Stadt Alacant. Während der Diktatur von General Franco waren
+    die katalanischen Sprachen und somit auch das Valencianische verboten.
+  title: Alicante
+  url: https://de.wikivoyage.org/wiki/Alicante
 Amsterdam:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -93,6 +105,16 @@ Ankara:
     der Türkei und der gleichnamigen Provinz Ankara.
   title: Ankara
   url: https://de.wikivoyage.org/wiki/Ankara
+Antwerp:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1780111
+  source: wikivoyage
+  text: Antwerpen liegt im Norden Belgiens an der niederländischen Grenze und gehört zu Flandern. Antwerpen beeindruckt
+    mit seinem historischen Stadtzentrum, dem majestätischen Bahnhof, der Liebfrauenkathedrale, dem Diamantenviertel,
+    dem MAS-Museum und der lebendigen Kunst- und Modeszene.
+  title: Antwerpen
+  url: https://de.wikivoyage.org/wiki/Antwerpen
 Athens:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -244,6 +266,29 @@ Bern:
     vorwiegend aus alten Häusern und ist bekannt für die Lauben, beispielsweise entlang der Spitalgasse.
   title: Bern
   url: https://de.wikivoyage.org/wiki/Bern
+Birmingham:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1799166
+  source: wikivoyage
+  text: Birmingham, das in den West Midlands liegt, ist die zweitgrößte Stadt Großbritanniens. Einst galt die Stadt
+    als hässlicher Stopp auf dem Weg nach Wales, doch dies hat sich in den letzten Jahren stark geändert. Sehr viel
+    Geld wurde in die Sanierung brachliegender Industriegebiete und Erneuerung der Nachkriegsbebauung gesteckt.
+    Es entstand eine lebendige Stadt mit einem großen Kulturangebot und Einkaufsmöglichkeiten.
+  title: Birmingham
+  url: https://de.wikivoyage.org/wiki/Birmingham
+Bochum:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1813654
+  section: Hintergrund
+  source: wikivoyage
+  text: Die ehemalige Bergbau- und Stahlstadt Bochum liegt im Ruhrgebiet und ist auch bekannt für ihre Universität,
+    die zu den größten Deutschlands gehört. Tief im Westen......, wo die Sonne verstaubt, ist es besser, viel besser,
+    als man glaubt, sang schon Herbert Grönemeyer über seine Heimatstadt. Und es stimmt, Bochum hat mehr zu bieten
+    als nur Staub und Kohlehalden.
+  title: Bochum
+  url: https://de.wikivoyage.org/wiki/Bochum
 Boden:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -288,6 +333,17 @@ Bordeaux:
     Atlantik.
   title: Bordeaux
   url: https://de.wikivoyage.org/wiki/Bordeaux
+Bradford:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1747125
+  section: Hintergrund
+  source: wikivoyage
+  text: Bradford ist eine Großstadt im nordenglischen County West Yorkshire. Die kleine mittelalterliche Stadt entwickelte
+    sich mit Aufkommen der Dampfkraft ab Ende des 18. Jahrhunderts zu einem Zentrum der nun mechanisiserten Weberei,
+    wobei die örtliche Verfügbarkeit von Kohle, Sandstein und reichlich Wasser hier ausschlaggebend waren.
+  title: Bradford
+  url: https://de.wikivoyage.org/wiki/Bradford
 Bratislava:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -300,6 +356,16 @@ Bratislava:
     der ungarischen Könige.
   title: Bratislava
   url: https://de.wikivoyage.org/wiki/Bratislava
+Bremen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1813542
+  source: wikivoyage
+  text: Die Stadt Bremen liegt im Norden Deutschlands am Übergang der Großregionen Küstenniederung der Nordsee zum
+    Norddeutschen Tiefland und ist komplett vom Bundesland Niedersachsen umgeben. Die Stadt Bremen bildet zusammen
+    mit der Stadt Bremerhaven, die etwa 60 Kilometer nördlich liegt, das Bundesland Freie Hansestadt Bremen.
+  title: Bremen
+  url: https://de.wikivoyage.org/wiki/Bremen
 Brescia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -321,6 +387,28 @@ Brest:
     die am weitesten westlich gelegene Großstadt Frankreichs und hat eine lange Tradition als Hafenstadt und Marinebasis.
   title: Brest (Frankreich)
   url: https://de.wikivoyage.org/wiki/Brest_%28Frankreich%29
+Bristol:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1755693
+  section: Hintergrund
+  source: wikivoyage
+  text: Die Stadt Bristol liegt im Südwesten von England. Heute mit 463.000 Einwohnern achtgrößte Stadt Englands,
+    war Bristol seit dem Mittelalter eine der bedeutendsten Städte des Landes. Der Flußhafen wurde für die aufkommende
+    Dampfschiffahrt zu klein, so dass der Hafen seine Bedeutung verlor. Im 20. Jahrhundert wurde Bristol ein Zentrum
+    der Luftfahrtindustrie, wo heute noch Rolls-Royce Triebwerke produziert.
+  title: Bristol
+  url: https://de.wikivoyage.org/wiki/Bristol
+Brno:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1775915
+  source: wikivoyage
+  text: Brünn, die Hauptstadt des Bezirks Jihomoravský kraj, ist mit etwa 400.000 Einwohnern die zweitgrößte Stadt
+    von Tschechien, ist Sitz des Obersten Gerichtshofes der Tschechischen Republik und vieler weiterer wichtiger
+    Institutionen. Brünn ist nicht nur das administrative, sondern auch das kulturelle Zentrum der Region Mähren.
+  title: Brünn
+  url: https://de.wikivoyage.org/wiki/Br%C3%BCnn
 Brussels:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -408,6 +496,18 @@ Copenhagen:
     extremer Kontrast zum kleinräumigen und sehr ruhigen ländlichen Dänemark.
   title: Kopenhagen
   url: https://de.wikivoyage.org/wiki/Kopenhagen
+Cádiz:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1807488
+  section: Hintergrund
+  source: wikivoyage
+  text: Cádiz ist eine Stadt in Andalusien, Spanien an der Costa de la Luz. Sie ist Hauptstadt der Provinz und nach
+    Jerez de la Frontera deren zweitgrößte Stadt. Cádiz gilt als eine der ältesten Städte Westeuropas. Es waren
+    wahrscheinlich phönizische Händler aus Tyros, die die Stadt als Warenumschlagsplatz und Militärposten gründeten.
+    Archäologisch bewiesen ist eine Siedlung ab dem 8. Jahrhundert vor Christus.
+  title: Cádiz
+  url: https://de.wikivoyage.org/wiki/C%C3%A1diz
 Donostia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -419,6 +519,28 @@ Donostia:
     Namen des Heiligen Sebastian entstanden. Die Stadt wurde zur Kulturhauptstadt Europas des Jahres 2016 gewählt.
   title: Donostia-San Sebastián
   url: https://de.wikivoyage.org/wiki/Donostia-San_Sebasti%C3%A1n
+Dortmund:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1799788
+  source: wikivoyage
+  text: Dortmund ist eine Großstadt in Deutschland innerhalb der Metropolregion Rhein-Ruhr in Nordrhein-Westfalen.
+    Sie ist eines der Wirtschafts- und Handelszentren des Ruhrgebiets und mit rund 600.000 Einwohnern die bevölkerungsreichste
+    Stadt des Ruhrgebiets sowie die drittgrößte Stadt Nordrhein-Westfalens. Außerdem ist sie die achtgrößte Stadt
+    Deutschlands.
+  title: Dortmund
+  url: https://de.wikivoyage.org/wiki/Dortmund
+Dresden:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1799789
+  source: wikivoyage
+  text: Dresden ist die Landeshauptstadt Sachsens. Die viel besuchte Stadt liegt an der Elbe, die sich zuvor durch
+    die Sächsische Schweiz ihren Weg gebahnt hat. Weltbekannt ist die Stadt für ihre wunderschöne Barockarchitektur
+    mit der 2005 wiedererrichteten Frauenkirche, dem Zwinger, der Semperoper und der Brühlschen Terrasse, aber auch
+    für das Elbtal.
+  title: Dresden
+  url: https://de.wikivoyage.org/wiki/Dresden
 Dublin:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -430,6 +552,16 @@ Dublin:
     zu Fuß erkundet werden.
   title: Dublin
   url: https://de.wikivoyage.org/wiki/Dublin
+Duisburg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1805484
+  section: Hintergrund
+  source: wikivoyage
+  text: Duisburg ist eine Großstadt in Nordrhein-Westfalen am westlichen Rand des Ruhrgebiets. Duisburg hat knapp
+    500.000 Einwohner und liegt an der Mündung der Ruhr in den Rhein, im Westen des Ruhrgebiets am Niederrhein.
+  title: Duisburg
+  url: https://de.wikivoyage.org/wiki/Duisburg
 Durrës:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -441,6 +573,16 @@ Durrës:
     zweitgrößte Stadt des Landes und Amtssitz des gleichnamigen Qarks.
   title: Durrës
   url: https://de.wikipedia.org/wiki/Durr%C3%ABs
+Düsseldorf:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 272160924
+  source: wikipedia
+  text: Düsseldorf ist die Landeshauptstadt Nordrhein-Westfalens und der Behördensitz des Regierungsbezirks Düsseldorf.
+    Die kreisfreie Großstadt am Rhein ist mit 619.444 Einwohnern am 31. Dezember 2025 die zweitgrößte Stadt des
+    Bundeslandes und die sechstgrößte Stadt in Deutschland.
+  title: Düsseldorf
+  url: https://de.wikipedia.org/wiki/D%C3%BCsseldorf
 Edinburgh:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -462,6 +604,17 @@ Entroncamento:
     Santarém und hat 20.065 Einwohner (2004).
   title: Entroncamento
   url: https://de.wikipedia.org/wiki/Entroncamento
+Essen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1803299
+  source: wikivoyage
+  text: Essen ist eine Stadt in Nordrhein-Westfalen. Sie ist 2017 grüne Hauptstadt Europas und war unter dem Namen
+    Ruhr.2010 stellvertretend für das gesamte Ruhrgebiet die Kulturhauptstadt Europas 2010. Essen ist die neuntgrößte
+    Stadt Deutschlands, die drittgrößte Stadt des Rheinlands und nach Dortmund die zweitgrößte Stadt des Ruhrgebiets
+    (Stand 2012).
+  title: Essen
+  url: https://de.wikivoyage.org/wiki/Essen
 Faro:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -814,6 +967,17 @@ L'Hospitalet:
     Haute Ariège.
   title: L’Hospitalet-près-l’Andorre
   url: https://de.wikipedia.org/wiki/L%E2%80%99Hospitalet-pr%C3%A8s-l%E2%80%99Andorre
+Las Palmas:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1741770
+  source: wikivoyage
+  text: Die Stadt Las Palmas de Gran Canaria auf Gran Canaria ist mit etwa 380.000 Einwohnern die größte Stadt der
+    Kanarischen Inseln und liegt im Nordosten der Insel. Sie ist die Hauptstadt der spanischen Provinz Las Palmas
+    und der Autonomen Region der Kanarischen Inseln (Comunidad Autónoma de Canarias). Ein eigentliches Stadtzentrum
+    gibt es nicht. Keimzelle ist die malerische Altstadt "Vegueta".
+  title: Las Palmas
+  url: https://de.wikivoyage.org/wiki/Las_Palmas
 Lecce:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -826,6 +990,39 @@ Lecce:
     andern Tancred (gest. 1194) führte. Berühmt ist Lecce für seine Barockbauwerke.
   title: Lecce
   url: https://de.wikivoyage.org/wiki/Lecce
+Leeds:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1799271
+  section: Hintergrund
+  source: wikivoyage
+  text: Leeds ist eine industriell geprägte Stadt in West Yorkshire. Sie liegt am River Aire, der teilweise kanalisiert
+    ist. Die kleine mittelalterliche Stadt entwickelte sich mit Aufkommen der Dampfkraft ab Ende des 18. Jahrhunderts
+    zu einem Zentrum der nun mechanisierten Weberei. Die Arbeits- und Lebensbedingungen der Werktätigen blieben
+    wie im gesamten frühkapitalistischen England bis nach 1920 miserabel.
+  title: Leeds
+  url: https://de.wikivoyage.org/wiki/Leeds
+Leicester:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 270401941
+  source: wikipedia
+  text: Leicester ist eine Stadt in den englischen East Midlands am Soar. Sie ist traditionell Verwaltungssitz der
+    Grafschaft Leicestershire im Vereinigten Königreich Großbritannien und Nordirland und liegt am Rand des English
+    National Forest.
+  title: Leicester
+  url: https://de.wikipedia.org/wiki/Leicester
+Leipzig:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1792670
+  source: wikivoyage
+  text: Leipzig ist mit rund 600.000 Einwohnern die größte Stadt in Sachsen. Sie besitzt eine für deutsche Großstädte
+    ungewöhnlich gut erhaltene historische Innenstadt und elegante Stadtviertel aus der Gründerzeit. Außerdem war
+    sie ein industrielles Zentrum und Messestadt mit vielen Passagen in der Innenstadt, die heute zum Bummeln einladen.
+    Im Bereich der Musik und Bildenden Kunst genießt die Stadt Weltruf.
+  title: Leipzig
+  url: https://de.wikivoyage.org/wiki/Leipzig
 Lille:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -849,6 +1046,18 @@ Lisbon:
     brachte afrikanische und südamerikanische Einflüsse.
   title: Lissabon
   url: https://de.wikivoyage.org/wiki/Lissabon
+Liverpool:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1745772
+  section: Hintergrund
+  source: wikivoyage
+  text: Liverpool ist eine Stadt in der Grafschaft Merseyside, England, die für Musik, Sport und ihr Nachtleben
+    bekannt ist. Seit 2004 gehörte das Hafenviertel zum UNESCO-Weltkulturerbe. Im Juli 2021 wurde der Stadt der
+    Welterbe-Titel entzogen. Liverpool ist eine Stadt mit einem großen Kulturerbe und wurde mit dem Titel "Europäische
+    Kulturhauptstadt 2008" ausgezeichnet.
+  title: Liverpool
+  url: https://de.wikivoyage.org/wiki/Liverpool
 Liège:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1054,6 +1263,15 @@ Munich:
     zu einem vielbesuchten Reiseziel.
   title: München
   url: https://de.wikivoyage.org/wiki/M%C3%BCnchen
+Murcia:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1771998
+  source: wikivoyage
+  text: Murcia ist eine Stadt im Südosten Spaniens. Sie ist Hauptstadt der autonomen Region Murcia. Sie ist eine
+    der größten Universitätsstädte Spaniens und mit rund 440.000 Einwohnern, die siebtgrößte Stadt in Spanien.
+  title: Murcia (Stadt)
+  url: https://de.wikivoyage.org/wiki/Murcia_%28Stadt%29
 Nantes:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1122,6 +1340,29 @@ Nice:
     für Handel, Kultur und Tourismus sowie Verkehrsdrehkreuz für die Region.
   title: Nizza
   url: https://de.wikivoyage.org/wiki/Nizza
+Novi Sad:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1774401
+  section: Hintergrund
+  source: wikivoyage
+  text: Novi Sad ist eine Stadt im Norden Serbiens. Sie ist die Hauptstadt der Provinz Vojvodina. Für das Jahr 2021
+    wurde Novi Sad der Titel Kulturhauptstadt Europas verliehen. Novi Sad ist die größte Stadt im Norden von Serbien.
+    Sie liegt am Nordufer der Donau.
+  title: Novi Sad
+  url: https://de.wikivoyage.org/wiki/Novi_Sad
+Nuremberg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1790683
+  section: Hintergrund
+  source: wikivoyage
+  text: Nürnberg ist die größte Stadt in Franken und mit mehr als 520.000 Einwohnern die zweitgrößte im Freistaat
+    Bayern. Um Nürnberg herum spricht man vom Großraum Nürnberg. Im Zweiten Weltkrieg war Nürnberg eines der bevorzugten
+    Ziele alliierter Luftangriffe, die am 2. Januar 1945 die Nürnberger Altstadt zerstörten und die Stadt als Ganzes
+    schwer beschädigten.
+  title: Nürnberg
+  url: https://de.wikivoyage.org/wiki/N%C3%BCrnberg
 Odesa:
   checked: '2026-11-16'
   fetched: '2026-11-16'
@@ -1269,6 +1510,17 @@ Porto Torres:
     mündet der Fiume Santo. Zum Gemeindegebiet gehört das Stadtgebiet und - in Form einer Exklave - die Insel Asinara.
   title: Porto Torres
   url: https://de.wikivoyage.org/wiki/Porto_Torres
+Poznań:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1796975
+  source: wikivoyage
+  text: Posen ist eine Stadt in der polnischen Woiwodschaft Großpolen zwischen der Posener und der Gnesener Seenplatte.
+    Die Hauptstadt Großpolens gilt als eine der schönsten Städte des Landes mit mediterranem Flair aufgrund ihrer
+    Renaissance- und Barockarchitektur. Insbesondere die Altstadt und die Dominsel in der Warthe sind sehr sehenswert.
+    Die Cybina mündet hier in die Warthe.
+  title: Posen
+  url: https://de.wikivoyage.org/wiki/Posen
 Pozzallo:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1375,6 +1627,18 @@ Rostock:
     Rostock kommen.
   title: Rostock
   url: https://de.wikivoyage.org/wiki/Rostock
+Rotterdam:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1807259
+  section: Hintergrund
+  source: wikivoyage
+  text: Rotterdam ist eine Hafenstadt in Zuid-Holland. Dort gibt es sowohl alte als auch neue Stadtviertel und überhaupt
+    eine große Anzahl architektonischer Sehenswürdigkeiten. Die Stadt ist die zweitgrößte des Landes und stark multikulturell
+    geprägt. Rotterdam wurde 1230 gegründet. In den folgenden Jahrhunderten war die Stadt eine reiche Handelsstadt.
+    Im 15.
+  title: Rotterdam
+  url: https://de.wikivoyage.org/wiki/Rotterdam
 Rovaniemi:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1419,6 +1683,17 @@ San Marino:
     Berge herum verteilt sind. Die gleichnamige Hauptstadt Città di San Marino liegt auf einem Berg.
   title: San Marino
   url: https://de.wikivoyage.org/wiki/San_Marino
+Santa Cruz de Tenerife:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1769325
+  section: Hintergrund
+  source: wikivoyage
+  text: Santa Cruz de Tenerife ist die Hauptstadt der Insel Teneriffa. Santa Cruz de Tenerife, oder nur kurz Santa
+    Cruz, wie auf den meisten Wegweisern angeschrieben steht, liegt im Nordosten der Insel Teneriffa. Das Zentrum
+    der Stadt liegt südlich des Anaga-Gebirges an der Meeresküste.
+  title: Santa Cruz de Tenerife
+  url: https://de.wikivoyage.org/wiki/Santa_Cruz_de_Tenerife
 Santiago de Compostela:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1465,6 +1740,17 @@ Sevilla:
     Einwohner von Sevilla sind als „Sevillanos“ bekannt.'
   title: Sevilla
   url: https://de.wikivoyage.org/wiki/Sevilla
+Sheffield:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1800173
+  section: Hintergrund
+  source: wikivoyage
+  text: Sheffield ist eine Stadt in South Yorkshire. Sheffield ist seit Jahrhunderten ein Zentrum der Stahlindustrie.
+    Viele technische Verbesserungen an der Stahlproduktion wurden in Sheffield entwickelt. Zum Beispiel wurde hier
+    1912 rostfreier Stahl entwickelt. Daneben ist Sheffield bekannt für die Herstellung von Besteck.
+  title: Sheffield
+  url: https://de.wikivoyage.org/wiki/Sheffield
 Skopje:
   checked: '2026-11-14'
   fetched: '2026-11-14'
@@ -1591,6 +1877,18 @@ Syracuse:
     südlichen Bereich der sizilianischen Ostküste gegründet.
   title: Syrakus
   url: https://de.wikivoyage.org/wiki/Syrakus
+Szczecin:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1796205
+  section: Hintergrund
+  source: wikivoyage
+  text: Stettin ist eine Großstadt in Polen an der unteren Oder und dem Dammschen See sowie Hauptstadt der Woiwodschaft
+    Westpommern. Stettin ist seit der Bronzezeit (Lausitzer Kultur) besiedelt. Die heutige Stadt geht auf eine westslawische
+    Siedlung auf dem Schlossberg aus dem Frühmittelalter zurück. Der Aufstieg Stettins im Hochmittelalter ging mit
+    dem Niedergang Wollins und Lubins einher. Als Boleslaus III.
+  title: Stettin
+  url: https://de.wikivoyage.org/wiki/Stettin
 Szeged:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1670,6 +1968,17 @@ Tarifa:
     ist hier nur 14 km breit.
   title: Tarifa
   url: https://de.wikivoyage.org/wiki/Tarifa
+The Hague:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1746360
+  source: wikivoyage
+  text: Den Haag, amtlich auch ’s-Gravenhage ist die Hauptstadt der niederländischen Provinz Zuid-Holland und zugleich
+    auch Regierungssitz der Niederlande. Der früher im Deutschen auch (der) Haag genannte Ort liegt mit seinem Ortsteil
+    Scheveningen direkt an der Nordseeküste. Durch seine zentrale Lage zwischen Amsterdam und Rotterdam ist Den
+    Haag sehr gut zu erreichen.
+  title: Den Haag
+  url: https://de.wikivoyage.org/wiki/Den_Haag
 Thessaloniki:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1770,6 +2079,18 @@ Umeå:
     mehr als vier Stunden Tageslicht.
   title: Umeå
   url: https://de.wikivoyage.org/wiki/Ume%C3%A5
+Utrecht:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1806059
+  section: Hintergrund
+  source: wikivoyage
+  text: Utrecht ist die Hauptstadt der niederländischen Provinz Utrecht und mit etwa 360.000 Einwohnern die viertgrößte
+    Stadt des Landes. Utrecht wurde vor fast 2000 Jahren von den Römern gegründet. Im Jahre 1122 erhielt sie die
+    Stadtrechte. Utrecht war bedeutender Bischofssitz. Die Universitätsgründung datiert auf das Jahr 1636 zurück.
+    1674 traf ein Tornado den Dom, dem bis heute das Mittelschiff fehlt.
+  title: Utrecht
+  url: https://de.wikivoyage.org/wiki/Utrecht
 Vaasa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1937,6 +2258,16 @@ Zagreb:
     über einer halben Million Touristen besucht, hauptsächlich aus Österreich, Deutschland und Italien.
   title: Zagreb
   url: https://de.wikivoyage.org/wiki/Zagreb
+Zaragoza:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1799498
+  source: wikivoyage
+  text: Saragossa (spanisch Zaragoza) ist die Hauptstadt der spanischen Provinz Saragossa und bedeutendste Stadt
+    in der Region Aragonien, deren Verwaltungssitz sie ist. Die Weltausstellung EXPO fand 2008 unter dem Motto Wasser
+    und nachhaltige Entwicklung in Saragossa statt.
+  title: Saragossa
+  url: https://de.wikivoyage.org/wiki/Saragossa
 Zürich:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1959,3 +2290,14 @@ Zürich:
     entworfen, hat Östersund einen rechtwinkligen Strassengrundriss mit einem zentralen Platz, dem Stortorget.
   title: Östersund
   url: https://de.wikivoyage.org/wiki/%C3%96stersund
+Łódź:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 1728613
+  source: wikivoyage
+  text: Łódź ist eine Stadt in Polen in der gleichnamigen Woiwodschaft an den Quellen der Ner und Bzura und damit
+    an der Wasserscheide zwischen Warthe/Oder und Weichsel. Łódź entwickelte sich im 19. Jahrhundert von einer Kleinstadt
+    mit unter 1000 Einwohnern zu einer Millionenstadt, die vom Industriezeitalter, Historismus und Jugendstil (Secession)
+    geprägt ist. Łódź ist außerdem das Zentrum des polnischen Films, daher der Spitzname HollyŁódź.
+  title: Łódź
+  url: https://de.wikivoyage.org/wiki/%C5%81%C3%B3d%C5%BA

@@ -55,6 +55,16 @@ Algiers:
     ») ou « la blanche », est la capitale de l''Algérie et en est la ville la plus peuplée.'
   title: Alger
   url: https://fr.wikivoyage.org/wiki/Alger
+Alicante:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 649659
+  source: wikivoyage
+  text: Alicante est une ville du sud-est de l'Espagne dans la province d'Alicante. Située sur la côte Blanche (Costa
+    Blanca), elle fait aussi partie de la Communauté valencienne dont elle est, avec plus de 330 000 habitants,
+    la deuxième plus importante localité.
+  title: Alicante
+  url: https://fr.wikivoyage.org/wiki/Alicante
 Amsterdam:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -100,6 +110,16 @@ Ankara:
     Peuplée de plus de cinq millions d'habitants, la ville est située à 938 m d'altitude.
   title: Ankara
   url: https://fr.wikipedia.org/wiki/Ankara
+Antwerp:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 649691
+  source: wikivoyage
+  text: Anvers (Antwerpen en néerlandais) est la seconde plus grande ville de Belgique. Chef-lieu de la Province
+    d'Anvers, en Flandre, elle est un port très actif sur l'Escaut. Elle est surnommée « la capitale du diamant
+    » car 70% des diamants bruts passent par ici.
+  title: Anvers
+  url: https://fr.wikivoyage.org/wiki/Anvers
 Athens:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -257,6 +277,27 @@ Bern:
     ville de Berne lui a valu d'être inscrite sur la liste du patrimoine mondial de l'UNESCO.
   title: Berne
   url: https://fr.wikivoyage.org/wiki/Berne
+Birmingham:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 649810
+  source: wikivoyage
+  text: Dans ce article il s'agit de Birmingham, Angleterre. Il y a quelques homonymes, par exemple Birmingham,
+    Alabama aux États-Unis. Birmingham, dans la région anglaise des Midlands de l'Ouest, est la deuxième plus grande
+    ville d'Angleterre après Londres.
+  title: Birmingham
+  url: https://fr.wikivoyage.org/wiki/Birmingham
+Bochum:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241312200
+  source: wikipedia
+  text: Bochum (Baukem en bas-allemand) est une ville d'Allemagne dans le Land de Rhénanie-du-Nord-Westphalie dans
+    la région de la Ruhr. Sixième plus grande ville du Land, deuxième plus grande ville de Westphalie et l'une des
+    vingt plus grandes villes d’Allemagne, Bochum fait partie du district administratif d'Arnsberg comme Dortmund,
+    Hagen, Hamm et Herne.
+  title: Bochum
+  url: https://fr.wikipedia.org/wiki/Bochum
 Boden:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -301,6 +342,16 @@ Bordeaux:
     991 habitants. Son unité urbaine, qui rassemble 1 034 027 habitants, est la sixième du pays.
   title: Bordeaux
   url: https://fr.wikipedia.org/wiki/Bordeaux
+Bradford:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 240123764
+  source: wikipedia
+  text: Bradford est une ville située dans le Yorkshire de l'Ouest en Angleterre, au pied des Pennines, à 14 km
+    à l'ouest de Leeds et à 26 km au nord-ouest de Wakefield. Faisant historiquement partie du West Riding of Yorkshire,
+    la ville est devenue un arrondissement municipal en 1847 puis obtient sa charte de ville en 1897.
+  title: Bradford
+  url: https://fr.wikipedia.org/wiki/Bradford
 Bratislava:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -313,6 +364,17 @@ Bratislava:
     par le Danube et est le siège de la présidence, du parlement et du gouvernement slovaques.
   title: Bratislava
   url: https://fr.wikivoyage.org/wiki/Bratislava
+Bremen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241113026
+  source: wikipedia
+  text: Brême – ou en forme longue Municipalité de Brême (Stadtgemeinde Bremen) – est une ville hanséatique de 563
+    000 habitants, située au nord-ouest de l'Allemagne, autrefois membre de la Ligue hanséatique. Brême constitue
+    l'une des deux villes enclavées dans le Land de Basse-Saxe, avec celle de Bremerhaven. Elle est la capitale
+    du Land de Brême (Freie Hansestadt Bremen) ou « cité hanséatique libre de Brême ».
+  title: Brême
+  url: https://fr.wikipedia.org/wiki/Br%C3%AAme
 Brescia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -336,6 +398,29 @@ Brest:
     du fait de la présence de la deuxième base navale de France.
   title: Brest (France)
   url: https://fr.wikivoyage.org/wiki/Brest_%28France%29
+Bristol:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 240021358
+  source: wikipedia
+  text: Bristol est une ville britannique située dans le sud-ouest de l'Angleterre (Royaume-Uni), sur la rivière
+    Avon qui marque traditionnellement la frontière entre les comtés de Gloucestershire et le Somerset. Avec une
+    population estimée à 472 500 habitants en 2021, Bristol est la sixième ville d'Angleterre et la huitième du
+    Royaume-Uni.
+  title: Bristol (Royaume-Uni)
+  url: https://fr.wikipedia.org/wiki/Bristol_%28Royaume-Uni%29
+Brno:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 652409
+  section: Comprendre
+  source: wikivoyage
+  text: Brno est la deuxième plus grande ville de République tchèque avec une population d'environ 380 000 habitants.
+    Elle est située dans le sud de la Moravie. Brno est fondée en 1243 et reste une ville fortifiée jusqu'au XIXe
+    siècle. Elle devient la capitale du margraviat de Moravie à partir de 1641. Elle est le centre administratif
+    et culturel de la région de la Moravie méridionale.
+  title: Brno
+  url: https://fr.wikivoyage.org/wiki/Brno
 Brussels:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -421,6 +506,18 @@ Copenhagen:
     1 891 871 habitants.
   title: Copenhague
   url: https://fr.wikipedia.org/wiki/Copenhague
+Cádiz:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 651551
+  section: Comprendre
+  source: wikivoyage
+  text: Pour les autres lieux du même nom, voir Cadix. Cadix est une ville d'Andalousie en Espagne. Cadix est bâtie
+    sur un rocher relié au continent par une chaussée étroite et au bord d'une baie ouvrant sur l'océan Atlantique
+    à environ 30 kilomètres au sud de l'embouchure du Guadalquivir. Cadix est l'une des plus anciennes villes d'Europe,
+    fondée sous le nom de Gadès en 1104 av.
+  title: Cadix
+  url: https://fr.wikivoyage.org/wiki/Cadix
 Donostia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -431,6 +528,27 @@ Donostia:
     436 500 habitants (2011).
   title: San Sebastián
   url: https://fr.wikivoyage.org/wiki/San_Sebasti%C3%A1n
+Dortmund:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 650129
+  section: Comprendre
+  source: wikivoyage
+  text: Dortmund est une ville en Rhénanie-du-Nord-Westphalie, en Allemagne. Après son déclin pendant la guerre
+    de Trente Ans, l'ancienne ville libre d'Empire et de commerce s'est développée au cours de l'industrialisation
+    pour devenir l'un des plus grands centres de l'industrie du charbon et de l'acier en Europe.
+  title: Dortmund
+  url: https://fr.wikivoyage.org/wiki/Dortmund
+Dresden:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241192697
+  source: wikipedia
+  text: Dresde est une ville-arrondissement d’Allemagne, capitale politique et deuxième ville la plus peuplée de
+    la Saxe derrière Leipzig. Elle se situe dans le bassin de Dresde, entre les parties supérieure et médiane de
+    l’Elbe et la plaine d’Allemagne du Nord. En 2021, elle comptait plus de 560 000 habitants.
+  title: Dresde
+  url: https://fr.wikipedia.org/wiki/Dresde
 Dublin:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -442,6 +560,17 @@ Dublin:
     nombre d’habitants depuis le haut Moyen Âge.
   title: Dublin
   url: https://fr.wikipedia.org/wiki/Dublin
+Duisburg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 237152601
+  source: wikipedia
+  text: Duisbourg est une ville indépendante (Kreisfreie Stadt) d'Allemagne, située dans le Land de Rhénanie-du-Nord-Westphalie
+    et dans le district de Düsseldorf (Regierungsbezirk Düsseldorf). La ville est membre de la « communauté de communes
+    du secteur de la Ruhr » (Regionalverband Ruhr), structure intercommunale regroupant environ 5,5 millions d'habitants
+    ainsi que de l'Euro-région germano-néerlandaise Rhein-Waal.
+  title: Duisbourg
+  url: https://fr.wikipedia.org/wiki/Duisbourg
 Durrës:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -453,6 +582,17 @@ Durrës:
     la via Egnatia, qui traversait l'actuelle Albanie et la Grèce jusqu'à Byzance.
   title: Durrës
   url: https://fr.wikipedia.org/wiki/Durr%C3%ABs
+Düsseldorf:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 664095
+  section: Comprendre
+  source: wikivoyage
+  text: Düsseldorf est la capitale du Land de Rhénanie-du-Nord-Westphalie. Düsseldorf est la capitale de la mode
+    de l'Allemagne. Cependant, si Paris est la capitale de la haute couture, Düsseldorf est celle du prêt-à-porter.
+    C'est aussi une ville où des salons se tiennent régulièrement.
+  title: Düsseldorf
+  url: https://fr.wikivoyage.org/wiki/D%C3%BCsseldorf
 Edinburgh:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -476,6 +616,16 @@ Entroncamento:
     a trois saints patrons: la Sainte Famille, saint Jean-Baptiste et Notre-Dame de Fátima.'
   title: Entroncamento
   url: https://fr.wikipedia.org/wiki/Entroncamento
+Essen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 239934749
+  source: wikipedia
+  text: Essen est une ville située dans la partie centrale du bassin de la Ruhr dans le Land de Rhénanie-du-Nord-Westphalie
+    en Allemagne. Elle est la neuvième plus grande ville d'Allemagne. Essen fut la capitale européenne de la culture
+    en 2010, avec toute la région de la Ruhr, dans le cadre du projet RUHR.2010 - Capitale européenne de la culture.
+  title: Essen
+  url: https://fr.wikipedia.org/wiki/Essen
 Faro:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -811,6 +961,17 @@ L'Hospitalet:
     par la haute vallée de l'Ariège en amont du pays de Foix avec Tarascon-sur-Ariège comme ville principale.
   title: L'Hospitalet-près-l'Andorre
   url: https://fr.wikipedia.org/wiki/L%27Hospitalet-pr%C3%A8s-l%27Andorre
+Las Palmas:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241425814
+  source: wikipedia
+  text: Las Palmas de Grande Canarie, ou plus couramment Las Palmas, est une commune de la communauté autonome des
+    Îles Canaries, située dans le nord-est de l'île de Grande Canarie dans la province de Las Palmas, en Espagne.
+    Las Palmas est la capitale de l'île et est la co-capitale de la communauté autonome des îles Canaries avec Santa
+    Cruz de Tenerife, le transfert des pouvoirs s'opérant tous les quatre ans.
+  title: Las Palmas de Grande Canarie
+  url: https://fr.wikipedia.org/wiki/Las_Palmas_de_Grande_Canarie
 Lecce:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -823,6 +984,39 @@ Lecce:
     de Naples.
   title: Lecce
   url: https://fr.wikipedia.org/wiki/Lecce
+Leeds:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 667595
+  section: Comprendre
+  source: wikivoyage
+  text: Leeds est la troisième ville du Royaume Uni et la capitale commerciale du Yorkshire, au nord de l'Angleterre.
+    Élue il y a peu la ville favorite du Royaume Uni, Leeds possède un riche patrimoine architectural du dix-neuvième
+    siècle. Leeds est aussi la ville provinciale la plus importante à l'échelle de la finance et de la justice,
+    et un des plus importants centres de commerce d'Europe de l'Ouest.
+  title: Leeds
+  url: https://fr.wikivoyage.org/wiki/Leeds
+Leicester:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241234132
+  source: wikipedia
+  text: Leicester est une ville d'Angleterre située dans la région des Midlands de l'Est au Royaume-Uni. Administrativement,
+    elle relève d’une autorité locale unique, dite « autorité unitaire », depuis 1997, mais elle reste partie intégrante
+    du comté cérémoniel de Leicestershire, auquel elle a donné son nom.
+  title: Leicester
+  url: https://fr.wikipedia.org/wiki/Leicester
+Leipzig:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241136571
+  source: wikipedia
+  text: Leipzig est une ville-arrondissement d'Allemagne centrale, au nord-ouest du land de Saxe. Avec plus de 615
+    000 habitants (les Lipsiens) en 2022, elle est la ville la plus peuplée d'Allemagne de l'Est après Berlin, et
+    la huitième ville du pays. Leipzig est mentionnée pour la première fois en 1015 et sa fondation officielle remonte
+    à 1165.
+  title: Leipzig
+  url: https://fr.wikipedia.org/wiki/Leipzig
 Lille:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -845,6 +1039,17 @@ Lisbon:
     permettre la circulation automobile.
   title: Lisbonne
   url: https://fr.wikivoyage.org/wiki/Lisbonne
+Liverpool:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241198869
+  source: wikipedia
+  text: Liverpool est une cité et un district métropolitain du Merseyside dans la région de l'Angleterre du Nord-Ouest
+    sur la rive est et nord de l'estuaire du fleuve Mersey. La ville faisait partie du comté du Lancashire jusqu'en
+    1974 avant la formation du comté de Merseyside. La ville est fondée en 1207 et obtient le statut de cité en
+    1880.
+  title: Liverpool
+  url: https://fr.wikipedia.org/wiki/Liverpool
 Liège:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1047,6 +1252,17 @@ Munich:
     la capitale du Land de Bavière et du district de Haute-Bavière.
   title: Munich
   url: https://fr.wikivoyage.org/wiki/Munich
+Murcia:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 240946409
+  source: wikipedia
+  text: Murcie est une commune et la capitale de la région homonyme, dans le sud de l'Espagne. Avec une population
+    de 459 403 habitants en 2020, c'est la septième ville d'Espagne. Son agglomération compte 664 058 habitants.
+    La ville, en tant que capitale de la comarque Huerta de Murcie, est appelée « le verger d'Europe » en raison
+    de sa longue tradition agricole et de sa production de fruits, de légumes et de fleurs et ses exportations.
+  title: Murcie
+  url: https://fr.wikipedia.org/wiki/Murcie
 Nantes:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1111,6 +1327,30 @@ Nice:
     de villégiature hivernale à de riches Britanniques attirés par la douceur de son climat.
   title: Nice
   url: https://fr.wikivoyage.org/wiki/Nice
+Novi Sad:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 652255
+  section: Comprendre
+  source: wikivoyage
+  text: Novi Sad est une ville de Serbie. Par sa population, Novi Sad est la deuxième plus grande ville de Serbie
+    après Belgrade. La ville est située aux confins des régions de la Bačka et de la Syrmie. Depuis sa fondation
+    en 1694, elle est devenue l'un des centres les plus importants de la culture serbe, ce qui lui a valu le surnom
+    d'« Athènes serbe ».
+  title: Novi Sad
+  url: https://fr.wikivoyage.org/wiki/Novi_Sad
+Nuremberg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 671444
+  section: Comprendre
+  source: wikivoyage
+  text: Nuremberg, Nürnberg en allemand est une ville située dans le land de la Bavière en Allemagne. Elle est la
+    capitale de la Franconie. La ville est connue pour le Christkindelsmarkt, son marché de Noël, ainsi que pour
+    son patrimoine médiéval préservé. Nuremberg est une ville très touristique, mais elle attire avant tout des
+    touristes allemand, autrichiens et suisses, donc uniquement germanophones.
+  title: Nuremberg
+  url: https://fr.wikivoyage.org/wiki/Nuremberg
 Odesa:
   checked: '2026-11-16'
   fetched: '2026-11-16'
@@ -1249,6 +1489,18 @@ Porto Torres:
     a été fondée en 1842, détachée de la commune de Sassari qui l'entoure encore complètement.
   title: Porto Torres
   url: https://fr.wikipedia.org/wiki/Porto_Torres
+Poznań:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 240772894
+  source: wikipedia
+  text: Poznań, est l'une des plus anciennes et grandes villes polonaises, située dans l'Ouest de la Pologne, sur
+    la Warta. Avec Cracovie, c’est l’un des berceaux de l’État polonais moderne, métropole de la région historique
+    de Grande Pologne (elle aussi appelée également « Posnanie ») et chef-lieu de la voïvodie de Grande-Pologne
+    et du powiat de Poznań (même si elle ne fait pas partie de son territoire, car la municipalité de Poznań constitue
+    le powiat-ville de Poznań).
+  title: Poznań
+  url: https://fr.wikipedia.org/wiki/Pozna%C5%84
 Pozzallo:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1355,6 +1607,18 @@ Rostock:
     et une ville remarquablement riche.
   title: Rostock
   url: https://fr.wikivoyage.org/wiki/Rostock
+Rotterdam:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 651101
+  section: Comprendre
+  source: wikivoyage
+  text: Rotterdam est une ville industrielle, commerciale et culturelle des Pays-Bas, avec une population d'environ
+    600.000 personnes. Rotterdam contient le troisième plus grand port du monde (la ville perd son titre au profit
+    de Shanghai en 2004). C'est également la deuxième plus grande ville des Pays-Bas après Amsterdam, qui est à
+    environ 80 kilomètres au nord. Rotterdam est une ville portuaire.
+  title: Rotterdam
+  url: https://fr.wikivoyage.org/wiki/Rotterdam
 Rovaniemi:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1395,6 +1659,17 @@ San Marino:
     italienne, avant l’unification de l'Italie dans lequel il est désormais enclavé.
   title: Saint-Marin
   url: https://fr.wikivoyage.org/wiki/Saint-Marin
+Santa Cruz de Tenerife:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241049831
+  source: wikipedia
+  text: Santa Cruz de Tenerife (litt. « Sainte-Croix de Tenerife ») est une commune de la province de Santa Cruz
+    de Tenerife, dont elle est la capitale, dans la communauté autonome des îles Canaries, en Espagne. Elle est
+    située dans le nord-est de l'île de Tenerife. Santa Cruz est la deuxième ville la plus peuplée des îles Canaries.
+    Elle est également l'une de ses deux capitales, avec Las Palmas de Grande Canarie.
+  title: Santa Cruz de Tenerife
+  url: https://fr.wikipedia.org/wiki/Santa_Cruz_de_Tenerife
 Santiago de Compostela:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1439,6 +1714,16 @@ Sevilla:
     de 1 535 379 habitants dans son aire urbaine.
   title: Séville
   url: https://fr.wikipedia.org/wiki/S%C3%A9ville
+Sheffield:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241314076
+  source: wikipedia
+  text: Sheffield est une ville du Nord de l'Angleterre, située au confluent du Don et de la Sheaf, d'où elle tire
+    son nom (field signifie champ en anglais). Sheffield se trouve dans le comté du Yorkshire du Sud et possède
+    le statut de cité. Sa prospérité est due à son passé industriel, et plus particulièrement à la sidérurgie.
+  title: Sheffield
+  url: https://fr.wikipedia.org/wiki/Sheffield
 Skopje:
   checked: '2026-11-14'
   fetched: '2026-11-14'
@@ -1571,6 +1856,16 @@ Syracuse:
     Archimède qui y vécut jusqu'à sa mort en protégeant la ville d'un siège.
   title: Syracuse
   url: https://fr.wikipedia.org/wiki/Syracuse
+Szczecin:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 240642905
+  source: wikipedia
+  text: Szczecin est par le nombre d'habitants la septième ville de Pologne, le chef-lieu de la voïvodie de Poméranie-Occidentale,
+    ainsi que la troisième ville portuaire de ce pays. La ville se situe dans l'extrême nord-ouest de la Pologne
+    sur les deux rives de l'Oder, tout près de son entrée dans la lagune de Szczecin à Trzebież près de Police.
+  title: Szczecin
+  url: https://fr.wikipedia.org/wiki/Szczecin
 Szeged:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1644,6 +1939,18 @@ Tarifa:
     dans l'année, c'est l'un des endroits le plus ensoleillé de la région.
   title: Tarifa
   url: https://fr.wikivoyage.org/wiki/Tarifa
+The Hague:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 660464
+  section: Comprendre
+  source: wikivoyage
+  text: La Haye (en néerlandais Den Haag ou le nom officiel 's-Gravenhage) est une ville des Pays-Bas. La Haye est
+    la capitale de la province Hollande méridionale (Zuid-Holland). Cette ville vous offre culture et stations balnéaires
+    à la fois. C'est le siège du gouvernement néerlandais (mais pas la capitale des Pays-Bas), mais aussi la capitale
+    mondiale de la paix et de la justice!
+  title: La Haye
+  url: https://fr.wikivoyage.org/wiki/La_Haye
 Thessaloniki:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1741,6 +2048,16 @@ Umeå:
     de capitale du Norrland, titre disputé par Sundsvall.
   title: Umeå
   url: https://fr.wikipedia.org/wiki/Ume%C3%A5
+Utrecht:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 241281426
+  source: wikipedia
+  text: Utrecht est une commune et ville néerlandaise, chef-lieu de la province d'Utrecht au centre des Pays-Bas.
+    Avec 376 757 habitants en décembre 2024, elle est la quatrième ville des Pays-Bas par la population. Son agglomération
+    fait partie de la conurbation de la Randstad (environ 7 100 000 habitants entre Amsterdam, La Haye et Rotterdam).
+  title: Utrecht
+  url: https://fr.wikipedia.org/wiki/Utrecht
 Vaasa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1908,6 +2225,16 @@ Zagreb:
     de la Medvednica à côté de la Save à une altitude d'environ 122 m.
   title: Zagreb
   url: https://fr.wikipedia.org/wiki/Zagreb
+Zaragoza:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 600546
+  source: wikivoyage
+  text: Saragosse est une ville capitale de la région Aragon dans le nord de l'Espagne, à mi-chemin entre l'océan
+    Atlantique et la mer Méditerranée. Saragosse est également le nom de la province (département) située autour
+    de la ville.
+  title: Saragosse
+  url: https://fr.wikivoyage.org/wiki/Saragosse
 Zürich:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1930,3 +2257,14 @@ Zürich:
     suédois.
   title: Östersund
   url: https://fr.wikipedia.org/wiki/%C3%96stersund
+Łódź:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 240820360
+  source: wikipedia
+  text: Łódź, souvent orthographiée sans signes diacritiques Lodz en français, est par sa population la quatrième
+    ville de Pologne et le chef-lieu du powiat de Łódź-est et de la voïvodie de Łódź. Son histoire est celle d'un
+    petit village à l'écart des voies de communication devenu en moins d'un siècle un grand centre industriel et
+    la deuxième ville de Pologne.
+  title: Łódź
+  url: https://fr.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA

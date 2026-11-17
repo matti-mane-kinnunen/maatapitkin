@@ -52,6 +52,17 @@ Algiers:
     sijaitsevat linnoituksen, vanhan moskeijan ja osmanityylisten palatsien jäänteet.
   title: Alger
   url: https://fi.wikipedia.org/wiki/Alger
+Alicante:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24279933
+  source: wikipedia
+  text: Alicante (kat. Alacant) on Espanjan samannimisen maakunnan pääkaupunki Valencian itsehallintoalueella. Se
+    sijaitsee Välimeren rannalla ja on tärkeä satamakaupunki. Alicantesta kulkee laivayhteys Baleaareille sekä Oraniin
+    Algeriaan ja sitä palvelee kansainvälinen Alicante-Elchen lentoasema. Vuonna 2025 kaupungin asukasluku oli 366
+    221. Alicante muodostaa metropolialueen Elchen ja muiden lähialueen kuntien kanssa.
+  title: Alicante
+  url: https://fi.wikipedia.org/wiki/Alicante
 Amsterdam:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -94,6 +105,17 @@ Ankara:
     kasvojaan" nopeaan tahtiin viime vuosien aikana.
   title: Ankara
   url: https://fi.wikipedia.org/wiki/Ankara
+Antwerp:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23969057
+  source: wikipedia
+  text: Antwerpen (ransk. Anvers) on kaupunki Pohjois-Belgiassa Flanderissa. Se on Belgian toiseksi suurin kaupunki
+    ja myös samannimisen provinssin pääkaupunki. Väkiluku vuonna 2019 oli 525 935. Kaupungin pinta-ala on 204,51
+    neliökilometriä ja asukastiheys 2 572 as./km². Enemmistö asukkaista puhuu äidinkielenään hollantia. Antwerpen
+    sijaitsee Scheldejoen rannalla, ja sen kautta kaupunki on yhteydessä Pohjanmereen.
+  title: Antwerpen
+  url: https://fi.wikipedia.org/wiki/Antwerpen
 Athens:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -236,6 +258,28 @@ Bern:
     Bern toimii ns.
   title: Bern
   url: https://fi.wikipedia.org/wiki/Bern
+Birmingham:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24253566
+  source: wikipedia
+  text: Birmingham on kaupunki Englannissa ja Britanniassa. Se on Länsi-Midlandsin metropolikreivikunnan keskus
+    Englannin keskiosassa. Kaupungissa on yli 1,1 miljoonaa asukasta, mikä tekee siitä Britannian suurimman paikallishallintoalueen,
+    ja se on maan toiseksi suurimman kaupunkialueen keskus. Birmingham sijaitsee ylängöllä, jonka halki virtaa vain
+    pieniä jokia.
+  title: Birmingham
+  url: https://fi.wikipedia.org/wiki/Birmingham
+Bochum:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23705517
+  source: wikipedia
+  text: Bochum on kaupunki Saksassa Nordrhein-Westfalenin osavaltiossa Dortmundin ja Essenin välissä Ruhrin alueella.
+    Vuoden 2022 lopussa siellä oli 365 742 asukasta. Bochum muodostaa oman kaupunkipiirinsä (kreisfreie Stadt),
+    eli se ei kuulu mihinkään Saksan piirikunnista. Bochum perustettiin 1300-luvulla, mutta se pysyi pienenä maalaiskaupunkina
+    1800-luvulle, jolloin Saksan teollistuminen alkoi.
+  title: Bochum
+  url: https://fi.wikipedia.org/wiki/Bochum
 Boden:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -277,6 +321,16 @@ Bordeaux:
     viiniensä ansiosta. Bourdeaux on elegantti kaupunki, jossa on nähtävää useammaksikin päiväksi.
   title: Bordeaux
   url: https://fi.wikivoyage.org/wiki/Bordeaux
+Bradford:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24254267
+  source: wikipedia
+  text: Bradford on 535 000 asukkaan kaupunki (city) ja metropolihallintopiiri (metropolitan borough) West Yorkshiren
+    metropolikreivikunnassa Pohjois-Englannissa. Sen nimi tulee muinaisenglannin sanoista brād (’leveä’) ja ford
+    (’kahlaamo’) ja tarkoittaa siis ’leveää kahlaamoa’.
+  title: Bradford
+  url: https://fi.wikipedia.org/wiki/Bradford
 Bratislava:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -287,6 +341,18 @@ Bratislava:
     Tonavan varrella. Sillä on yhteinen raja kahden naapurivaltion, Itävallan ja Unkarin, kanssa.
   title: Bratislava
   url: https://fi.wikipedia.org/wiki/Bratislava
+Bremen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 52141
+  section: Ymmärrä
+  source: wikivoyage
+  text: Bremen on kaupunki ja osavaltio Saksassa. Bremen on satamakaupunki. Kaupungissa asuu noin 548 000 asukasta,
+    ja se on pinta-alaltaan 362,72 neliökilometrin suuruinen. Bremen jakautuu 23 kaupunginosaan. Metropolialueella
+    asuu yli 2,37 miljoonaa ihmistä eli noin kolme prosenttia Saksan väestöstä. Bremenin kaupunki on kasvanut Weser-joen
+    molemmin puolin.
+  title: Bremen
+  url: https://fi.wikivoyage.org/wiki/Bremen
 Brescia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -307,6 +373,29 @@ Brest:
     Brest on taiteen ja historian kaupunki.
   title: Brest (Ranska)
   url: https://fi.wikipedia.org/wiki/Brest_%28Ranska%29
+Bristol:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23230660
+  source: wikipedia
+  text: Bristol (kymriksi Bryste) on Lounais-Englannissa sijaitseva vanha satamakaupunki, yhtenäishallintopiiri
+    ja kreivikunta, joka sijaitsee 169 kilometriä Lontoosta länteen ja Cardiffistä 39 kilometriä itään. Vuoden 2014
+    arvion mukaan kaupungin asukasluku on 437 500, ja sen arvioidaan saavuttavan puoli miljoonaa vuonna 2039. Bristol
+    on Englannin kuudenneksi ja Yhdistyneen kuningaskunnan kahdeksanneksi suurin kaupunki.
+  title: Bristol
+  url: https://fi.wikipedia.org/wiki/Bristol
+Brno:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 52588
+  section: Ymmärrä
+  source: wikivoyage
+  text: Brno on Tšekin toiseksi suurin kaupunki. Kaupungissa asuu opiskelijat mukaanlukien yli 400 000 ihmistä.
+    Vierailla kielillä ei pärjää yhtä hyvin kuin Suomessa, etenkään vanhemman väen kanssa. Monet nuoret puhuvat
+    kuitenkin ainakin englantia, vanhempien kanssa kannattaa puolestaan kokeilla saksaa. Kaupungissa asuu saksankielinen
+    vähemmistö.
+  title: Brno
+  url: https://fi.wikivoyage.org/wiki/Brno
 Brussels:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -394,6 +483,17 @@ Copenhagen:
     pärjää hyvin jalan.
   title: Kööpenhamina
   url: https://fi.wikivoyage.org/wiki/K%C3%B6%C3%B6penhamina
+Cádiz:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24282829
+  source: wikipedia
+  text: Cádiz on kaupunki Lounais-Espanjassa Andalusian itsehallintoalueella. Cádiz on Cádizin maakunnan pääkaupunki.
+    Kaupungissa on noin 113 066 asukasta (2022). Metropolialueen (Cádiz–Jerez) asukasluku on noin 600 000 (2013).
+    Alueen muut tärkeät kaupungit ovat San Fernando, El Puerto de Santa María, Chiclana de la Frontera ja Puerto
+    Real.
+  title: Cádiz
+  url: https://fi.wikipedia.org/wiki/C%C3%A1diz
 Donostia:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -404,6 +504,27 @@ Donostia:
     Ranskan rajaa. Donostiasta on kotoisin jalkapallojoukkue Real Sociedad, joka pelaa Espanjan Primera Divisiónissa.
   title: San Sebastián
   url: https://fi.wikipedia.org/wiki/San_Sebasti%C3%A1n
+Dortmund:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24095159
+  source: wikipedia
+  text: Dortmund on kaupunki Nordrhein-Westfalenin osavaltiossa, Ruhrin alueella, Saksassa. Ruhrjoki virtaa kaupungin
+    eteläpuolelta ja Datteln–Hammin kanava kaupungin pohjoispuolelta. Dortmund–Emsin kanava päättyy Dortmundin satamaan
+    lähes kaupungin keskustassa. Vuonna 2023 kaupungissa oli 612 065 asukasta, joten se oli osavaltionsa kolmanneksi
+    suurin kaupunki. Dortmund tunnetaan Westfalenin vihreänä kaupunkina.
+  title: Dortmund
+  url: https://fi.wikipedia.org/wiki/Dortmund
+Dresden:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 55449
+  section: Ymmärrä
+  source: wikivoyage
+  text: Dresden on puolen miljoonan asukkaan kaupunki Saksassa. Se on myös Saksin osavaltion pääkaupunki. Dresden
+    oli toisessa maailmansodassa liittoutuneiden pahimpia pommitusten kohteita. Kaupunki tuhoutui lähes täysin.
+  title: Dresden
+  url: https://fi.wikivoyage.org/wiki/Dresden
 Dublin:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -414,6 +535,17 @@ Dublin:
     mm. Pariisin ja Prahan kaupunginosat. Tässä artikkelissa esim. Dublin 4 tarkoittaa neljättä kaupunginosaa.
   title: Dublin
   url: https://fi.wikivoyage.org/wiki/Dublin
+Duisburg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23230681
+  source: wikipedia
+  text: Duisburg on Saksassa Nordrhein-Westfalenin osavaltiossa Ruhrin alueen länsilaidalla sijaitseva kaupunki.
+    Kaupungissa oli 502 211 asukasta vuoden 2022 lopussa. Vuonna 2023 se oli Saksan 15. suurin kaupunki, vaikka
+    sen väkiluku on 2000-luvulla pienentynyt. Duisburg on tärkeä kauppa-, kulttuuri- ja teollisuuskaupunki. Erityisesti
+    terästeollisuus on huomattavaa.
+  title: Duisburg
+  url: https://fi.wikipedia.org/wiki/Duisburg
 Durrës:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -425,6 +557,18 @@ Durrës:
     väestönlaskennan mukaan 113 249.
   title: Durrës
   url: https://fi.wikipedia.org/wiki/Durr%C3%ABs
+Düsseldorf:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 54063
+  section: Ymmärrä
+  source: wikivoyage
+  text: Düsseldorf on kaupunki Saksassa. Düsseldorf sijaitsee keskellä Rein-Ruhr-metropolialuetta, Reinin varrella.
+    Kaupunki poikkeaa arkkitehtuuriltaan muista saksalaisista kaupungeista ja kaupunkia ympäröivät tehtaat ja ydinvoimalaitokset,
+    modernistinen Rheinturm-näköalatorni, savusumu ja melkein ydinkeskustassa sijaitseva lentokenttä saavat helposti
+    Düsseldorfiin lentäen saapuvan matkailijan luulemaan olevansa tietokonepelissä.
+  title: Düsseldorf
+  url: https://fi.wikivoyage.org/wiki/D%C3%BCsseldorf
 Edinburgh:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -437,6 +581,17 @@ Edinburgh:
     ja uudempi osa kaupunkia.
   title: Edinburgh
   url: https://fi.wikivoyage.org/wiki/Edinburgh
+Essen:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23194251
+  source: wikipedia
+  text: Essen on kaupunki Nordrhein-Westfalenissa Saksassa, Ruhrjoen varrella. Se on Ruhrin alueen toiseksi suurin
+    ja Saksan kahdeksanneksi suurin kaupunki. Vuoden 2011 väestönlaskennassa siellä oli 566 201 asukasta. Sen suomalainen
+    ystävyyskaupunki on Tampere. Essenissä on merkittävää rautateollisuutta, mm. Kruppin tehtaat ja kivihiilen louhintaa,
+    mutta nykyisin niiden merkitys työllistäjänä on vähentynyt voimakkaasti.
+  title: Essen
+  url: https://fi.wikipedia.org/wiki/Essen
 Faro:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -773,6 +928,17 @@ L'Hospitalet:
     ja väestötiheys oli 3,8 as./km². L’Hospitalet-près-l’Andorren pinta-ala on 26,12 neliökilometriä.
   title: L’Hospitalet-près-l’Andorre
   url: https://fi.wikipedia.org/wiki/L%E2%80%99Hospitalet-pr%C3%A8s-l%E2%80%99Andorre
+Las Palmas:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24375700
+  source: wikipedia
+  text: Las Palmas de Gran Canaria (usein lyhyesti Las Palmas) on Espanjalle kuuluvien Kanariansaarten suurin kaupunki,
+    joka sijaitsee Gran Canarian saaren koillisosassa. Las Palmasissa asuu vuoden 2025 perusteella 381 670 asukasta.
+    Se on Las Palmasin maakunnan pääkaupunki ja Kanariansaarten itsehallintoalueen toinen pääkaupunki yhdessä Teneriffalla
+    sijaitsevan Santa Cruzin kanssa.
+  title: Las Palmas de Gran Canaria
+  url: https://fi.wikipedia.org/wiki/Las_Palmas_de_Gran_Canaria
 Lecce:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -782,6 +948,38 @@ Lecce:
     Leccen pinta-ala on 238 km² ja asukasluku noin 95 000.
   title: Lecce
   url: https://fi.wikipedia.org/wiki/Lecce
+Leeds:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24329298
+  source: wikipedia
+  text: Leeds on noin 812 000 asukkaan kaupunki (city) ja metropolihallintopiiri (metropolitan borough) West Yorkshiren
+    metropolikreivikunnassa Pohjois-Englannissa. Se sijaitsee Airejoen varrella, noin 48 kilometriä Manchesterista
+    koilliseen. Leeds muodostaa viereisen Bradfordin kaupungin kanssa metropolialueen, jonka alueella asuu yli 2,1
+    miljoonaa ihmistä.
+  title: Leeds
+  url: https://fi.wikipedia.org/wiki/Leeds
+Leicester:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24161239
+  source: wikipedia
+  text: Leicester on noin 355 000 asukkaan katedraalikaupunki (city) ja yhtenäishallintopiiri Leicestershiren kreivikunnassa
+    Itä-Midlandsissa. Se sijaitsee Soarjoen ja Grand Union Canalin varrella, ja muodostaa Loughboroughin, Systonin
+    ja Mountsorrelin kanssa yhtenäisen kaupunkialueen, jossa elää noin 705 000 ihmistä.
+  title: Leicester
+  url: https://fi.wikipedia.org/wiki/Leicester
+Leipzig:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24214207
+  source: wikipedia
+  text: Leipzig ( (ohje)) on kaupunki Saksassa. Se on Saksin osavaltion suurin kaupunki. Vuoden 2011 väestönlaskennassa
+    siellä oli 502 979 asukasta. Joulukuun 2018 lopussa nopeasti kasvavassa kaupungissa oli jo 587 857 asukasta.
+    Leipzig sijaitsee Pleiße-, Weiße Elster- ja Parthe-jokien yhtymäkohdassa. Ei ole varmaa tietoa, milloin Leipzig
+    perustettiin, mutta varhaisin maininta siitä on eräässä asiakirjassa vuodelta 1015.
+  title: Leipzig
+  url: https://fi.wikipedia.org/wiki/Leipzig
 Lille:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -802,6 +1000,18 @@ Lisbon:
     Metropolialueella asuu 2,8 miljoonaa ihmistä (2012), mikä on noin neljännes koko Portugalin asukasmäärästä.
   title: Lissabon
   url: https://fi.wikipedia.org/wiki/Lissabon
+Liverpool:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 57316
+  section: Ymmärrä
+  source: wikivoyage
+  text: Liverpool on kaupunki Luoteis-Englannissa Isossa-Britanniassa, Merseysiden alueella. Liverpool perustettiin
+    vuonna 1207, mutta sen satamaan perustuva vauraus alkoi 1700-luvulla. Liverpooliin rakennettiin vuonna 1715
+    Britannian ensimmäinen syvävesisatama. Liverpool kasvoi Amerikoista tulleen tavaraliikenteen ja etenkin orjakaupan
+    ansiosta. 1700-luvun lopussa Liverpoolin kautta kulki yli 40% Euroopan orjakaupasta.
+  title: Liverpool
+  url: https://fi.wikivoyage.org/wiki/Liverpool
 Liège:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1004,6 +1214,17 @@ Munich:
     kauniista arkkitehtuurista, kulttuurista, ja vuosittaisesta Oktoberfest olutjuhlastaan.
   title: München
   url: https://fi.wikivoyage.org/wiki/M%C3%BCnchen
+Murcia:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 21798022
+  source: wikipedia
+  text: Murcia on kaupunki Kaakkois-Espanjassa ja Murcian itsehallintoalueen pääkaupunki. Kaupungin väkiluku on
+    noin 441 000 (2016). Metropolialueen (Murcia–Cartagena) väkiluku on noin 730 000. Murcia sijaitsee Segurajoen
+    varrella. Kaupunki on noin tunnin ajomatkan päässä Alicanten ja Mar Menorin kaltaisista lomakohteista ja sopii
+    hyvin päiväkohteeksi lähialueiden turisteille.
+  title: Murcia
+  url: https://fi.wikipedia.org/wiki/Murcia
 Nantes:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1066,6 +1287,26 @@ Nice:
     Välimeren rannikolla. Siellä on kesäisin todella lämmintä.
   title: Nizza
   url: https://fi.wikivoyage.org/wiki/Nizza
+Novi Sad:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24123797
+  source: wikipedia
+  text: Novi Sad on Serbiassa Vojvodinan autonomisen alueen pääkaupunki, joka sijaitsee Tonavan rannalla. Kaupungissa
+    oli vuoden 2011 väestönlaskennassa noin 231 800 asukasta. Kaupungin teollisuus tuottaa esimerkiksi elintarvikkeita,
+    tekstiilejä ja öljyjä. Novi Sadissa sijaitsee vuonna 1960 perustettu yliopisto, taideakademia ja kansallisteatteri.
+  title: Novi Sad
+  url: https://fi.wikipedia.org/wiki/Novi_Sad
+Nuremberg:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 22647371
+  source: wikipedia
+  text: Nürnberg on kaupunki Saksan Baijerissa. Se kuuluu Mittelfrankenin hallintopiiriin. Nürnberg on piiritön
+    kaupunki, eli se ei kuulu mihinkään Saksan piirikunnista. Vuoden 2015 väestönlaskennassa siellä oli 526 920
+    asukasta. Nürnberg on Münchenin jälkeen Baijerin toiseksi suurin kaupunki.
+  title: Nürnberg
+  url: https://fi.wikipedia.org/wiki/N%C3%BCrnberg
 Odesa:
   checked: '2026-11-16'
   fetched: '2026-11-16'
@@ -1194,6 +1435,17 @@ Porto Torres:
     ja sen pinta-ala on 104,41 neliökilometriä. Se sijaitsee 5 metrin korkeudella merenpinnan yläpuolella.
   title: Porto Torres
   url: https://fi.wikipedia.org/wiki/Porto_Torres
+Poznań:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24064047
+  source: wikipedia
+  text: Poznań (saks. Posen) on kaupunki Wartajoen varrella Länsi-Puolassa. Se on Ison-Puolan voivodikunnan pääkaupunki
+    ja yksi Puolan vanhimmista kaupungeista. Kaupungissa asui vuoden 2019 arvion mukaan 534 813 asukasta. Kaupungin
+    katedraaliin on haudattu useita Puolan varhaisimpia johtajia. Nykyään Poznań on tärkeä kaupan, teollisuuden
+    ja sivistyksen keskus.
+  title: Poznań
+  url: https://fi.wikipedia.org/wiki/Pozna%C5%84
 Prague:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1291,6 +1543,17 @@ Rostock:
     kaupunki (saks. kreisfreie Stadt) eli se ei kuulu mihinkään Saksan piirikunnista (saks.
   title: Rostock
   url: https://fi.wikipedia.org/wiki/Rostock
+Rotterdam:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 54269
+  section: Ymmärrä
+  source: wikivoyage
+  text: Rotterdam on kaupunki Alankomaissa Etelä-Hollannin provinssissa. Siellä sijaitsee Euroopan vilkkain sekä
+    maailman kolmanneksi suurin satama. Rotterdam on rakennettu patojen taakse, ja 90 prosenttia alueesta on merenpinnan
+    alapuolella.
+  title: Rotterdam
+  url: https://fi.wikivoyage.org/wiki/Rotterdam
 Rovaniemi:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1334,6 +1597,17 @@ San Marino:
     jonka nimi on myös San Marino. Maa on myös maailman vanhin tasavalta, se on perustettu vuonna 301.
   title: San Marino
   url: https://fi.wikivoyage.org/wiki/San_Marino
+Santa Cruz de Tenerife:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 22729609
+  source: wikipedia
+  text: Santa Cruz de Tenerife on kaupunki Teneriffalla, Espanjalle kuuluvilla Kanariansaarilla. Se on samannimisen
+    maakunnan pääkaupunki sekä Kanariansaarten itsehallintoalueen pääkaupunki yhdessä Gran Canarialla sijaitsevan
+    Las Palmasin kanssa. Ennen vuotta 1723 saaren pääkaupunkina toimi lähellä sijaitseva San Cristóbal de La Laguna.
+    Kaupungin asukasluku oli 204 856 vuonna 2018.
+  title: Santa Cruz de Tenerife
+  url: https://fi.wikipedia.org/wiki/Santa_Cruz_de_Tenerife
 Santiago de Compostela:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1376,6 +1650,17 @@ Sevilla:
     Metropolialueen väkiluku on 1,5 miljoonaa (2014).
   title: Sevilla
   url: https://fi.wikipedia.org/wiki/Sevilla
+Sheffield:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23544146
+  source: wikipedia
+  text: Sheffield on noin 578 000 asukkaan kaupunki (city) ja metropolihallintopiiri (engl. metropolitan borough)
+    Etelä-Yorkshiren kreivikunnassa Pohjois-Englannissa, noin 260 kilometriä Lontoosta luoteeseen. Sheffield sijaitsee
+    Penniinien juurella, ja sen alueella yhtyy neljä jokea – Porter Brook, Sheaf, Rivelin ja Loxley – ja muodostaa
+    Donjoen.
+  title: Sheffield
+  url: https://fi.wikipedia.org/wiki/Sheffield
 Skopje:
   checked: '2026-11-14'
   fetched: '2026-11-14'
@@ -1491,6 +1776,17 @@ Syracuse:
     jälkeen se toimi Sisilian roomalaisen provinssin pääkaupunkina.
   title: Syrakusa
   url: https://fi.wikipedia.org/wiki/Syrakusa
+Szczecin:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 50949
+  section: Ymmärrä
+  source: wikivoyage
+  text: Szczecin on kaupunki Puolassa. Szczecin tunnetaan myös saksalaisella nimellään Stettin, koska kaupunki kuului
+    Saksaan aina toisen maailmansodan loppuun asti. Nykyäänkin Szczecinistä on vain reilut kymmenen kilometriä Saksan
+    rajalle.
+  title: Szczecin
+  url: https://fi.wikivoyage.org/wiki/Szczecin
 Szeged:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1565,6 +1861,17 @@ Tarifa:
     de Tarifa.
   title: Tarifa
   url: https://fi.wikipedia.org/wiki/Tarifa
+The Hague:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24378892
+  source: wikipedia
+  text: Haag (holl. Den Haag (ohje), virallisesti ’s-Gravenhage (ohje)) on Alankomaiden hallintokaupunki maan länsiosassa
+    Pohjanmeren rannalla. Maan virallinen pääkaupunki on Amsterdam. Haagissa asuu 519 988 ihmistä (1.1.2016), koko
+    suurkaupunkialueella noin 700 000. Se on maan kolmanneksi suurin kaupunki Amsterdamin ja Rotterdamin jälkeen.
+    Haagin pinta-ala on sata neliökilometriä.
+  title: Haag
+  url: https://fi.wikipedia.org/wiki/Haag
 Thessaloniki:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1659,6 +1966,17 @@ Umeå:
     missä sanotaan olevan n. 3000 istutettua koivua. Uuumaja oli myös vuoden 2014 Euroopan kulttuuripääkaupunki.
   title: Uumaja
   url: https://fi.wikivoyage.org/wiki/Uumaja
+Utrecht:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23230570
+  source: wikipedia
+  text: Utrecht (holl. (ohje)) on samannimisen provinssin pääkaupunki ja neljänneksi suurin kaupunki Alankomaissa.
+    Utrecht sijaitsee keskeisellä paikalla maa-, rautatie- ja vesiväylien solmukohdassa, Reinin ja Amsterdamin välisen
+    kanavan varrella, ja on siksi hyvin tärkeä talous- ja kokouskaupunki. Utrechtin kaupungissa on 338 500 asukasta
+    (1.1.2015) ja kaupunkiseudulla (stadsgewest) 640 000.
+  title: Utrecht
+  url: https://fi.wikipedia.org/wiki/Utrecht
 Vaasa:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1815,6 +2133,16 @@ Zagreb:
     kaupungissa asui noin 767 000 ihmistä.
   title: Zagreb
   url: https://fi.wikipedia.org/wiki/Zagreb
+Zaragoza:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 23230635
+  source: wikipedia
+  text: Zaragoza on kaupunki Espanjassa, Zaragozan maakunnan ja Aragonian itsehallintoalueen pääkaupunki. Väkiluvultaan
+    se on Espanjan viidenneksi suurin kaupunki, vuonna 2016 kaupungissa oli 661 108 asukasta. Kaupungissa asuu puolet
+    Espanjan aragoniaa puhuvasta väestöstä. Metropolialueen väkiluku on noin 850 000 (2012).
+  title: Zaragoza
+  url: https://fi.wikipedia.org/wiki/Zaragoza
 Zürich:
   checked: '2026-11-13'
   fetched: '2026-11-13'
@@ -1838,3 +2166,13 @@ Zürich:
     mutta varuskuntaa on lakkautettu 2005–2006.
   title: Östersund
   url: https://fi.wikipedia.org/wiki/%C3%96stersund
+Łódź:
+  checked: '2026-11-17'
+  fetched: '2026-11-17'
+  revid: 24366188
+  source: wikipedia
+  text: Łódź on Łódźin voivodikunnan pääkaupunki sekä Puolan kolmanneksi suurin kaupunki Varsovan ja Krakovan jälkeen.
+    Vuoden 2019 arvion mukaan siellä asui 679 941 asukasta. Kaupunki sijaitsee lähellä Puolan maantieteellistä keskipistettä.
+    Kaupungin puolankielinen nimi tarkoittaa venettä.
+  title: Łódź
+  url: https://fi.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA
