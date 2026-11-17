@@ -72,6 +72,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-62 | The router in the browser for own settings, checked against the build | 14.11.2026 | Accepted |
 | D-63 | Sailings longer than a day, and a time zone per place | 17.11.2026 | Accepted |
 | D-64 | Nearby towns as a list, not as places on the map | 17.11.2026 | Accepted |
+| D-65 | Build and check each map in a job of its own | 17.11.2026 | Accepted |
 
 ---
 
@@ -1345,6 +1346,34 @@ map stays readable and the lookup budget (D-37) goes to the backbone.
 **Consequences.** The times are approximate (written by Claude from general knowledge, Nov 2026) and
 need the yearly check of own times (DATA-12). A crowded routed place (Bochum, Duisburg…) could later be
 turned into a nearby entry instead.
+
+---
+
+## D-65 Build and check each map in a job of its own
+**Date:** 17.11.2026 · **Status:** Accepted (FIX-17; supersedes the single job of D-29 and the per-map parallel build of D-40)
+
+**Context.** The weekly run took 1 h 34 min to build and 52 min to check the pages (17.11.2026), with eight
+maps and 11,700 legs. Helsinki and Stockholm took 93 min each; the other six together just as long on the
+remaining cores. One job per map alone would still wait 93 min for Helsinki.
+
+**Decision.**
+- build.py works in two rounds on the machine's cores: every map × travel day (the slow, independent part),
+  then each map's page, route table and summary. One map (`only=`) uses every core for its days. Each map's
+  summary is written to out/parts/; `build.py --merge` joins them into out/summary.json.
+- The workflow has four jobs: **lookup** (tests, lookup, tidy, city texts; hands data/ on as an artifact),
+  **map** (a matrix, one job per origin in places.yaml: build, page check, router check; results as files),
+  **publish** (joins the summaries, check_build.py, commits, prepares the site, issues) and **deploy**.
+- Write rights only where needed: lookup and map jobs read; publish may write contents and issues; deploy
+  may write pages. Nothing is committed until every map has been built and checked.
+
+**Why.** Public repositories get the runners free and up to 20 at a time; splitting by day as well as by
+map removes the long tail. Least privilege: the jobs that run the most code (build, browser) cannot change
+the repository or the site.
+
+**Consequences.** Build and checks ~30–35 min instead of ~2.5 h (estimate; Helsinki's job is the longest).
+A new origin needs no workflow change. A failed map job holds the update back like a failed check; the
+report says which map. Outputs checked identical to the old build (8 maps). If Helsinki's job gets slow
+again, FIX-18 (a faster morning sweep) is next.
 
 ---
 

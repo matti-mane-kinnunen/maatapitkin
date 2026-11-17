@@ -18,6 +18,7 @@ import os
 import sys
 import time
 from pathlib import Path
+from types import SimpleNamespace
 
 import yaml
 
@@ -55,7 +56,10 @@ def main():
                     help="departure times to switch between on the map, e.g. 06:00,17:00 (default: "
                          "settings.start_times, or 06:00 and the start time)")
     ap.add_argument("--jobs", type=int, metavar="N",
-                    help="build this many maps at the same time (default: number of CPU cores)")
+                    help="work on this many maps and travel days at the same time (default: number of CPU cores)")
+    ap.add_argument("--merge", action="store_true",
+                    help="only join the summaries of maps built one by one (out/parts/summary-*.json, from only=) "
+                         "into out/summary.json - the weekly workflow builds each map in a job of its own")
     ap.add_argument("--only", metavar="ORIGIN",
                     help="build only the map from this origin (quicker for testing; summary.json is not written)")
     ap.add_argument("--night", metavar="T",
@@ -64,6 +68,9 @@ def main():
     argv = [f"--{a}" if re.fullmatch(r"[a-z][a-z-]*=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
 
+    if args.merge:
+        merge_summaries()
+        return
     net, warnings = load(ROOT / "data")
     if args.transfer is not None:
         if args.transfer < 0:
@@ -95,24 +102,54 @@ def main():
     # the whole network for the in-browser router (IDEA-21), shared by every map; a page loads it
     # only when a visitor asks for their own settings (date, time, change time, no ferries/buses)
     write_router_data(net)
-    # the maps are independent: build them side by side on the machine's cores (GitHub: 4)
-    n_jobs = max(1, min(args.jobs or os.cpu_count() or 1, len(jobs_list)))
+    # Two rounds on the machine's cores (FIX-17): first the journeys of every map and travel day -
+    # the slow part, and independent of each other - then each map's page from its days. Splitting
+    # by day as well as by map keeps all cores busy even when one map is much slower than the others
+    # (Helsinki and Stockholm with the morning sweep), and lets a single map (only=) use every core.
     global _JOB
     _JOB = (net, warnings, args, ap, pages, jobs_list)
+    day_tasks = [(i, d) for i, (k, origin, cfg) in enumerate(jobs_list)
+                 for d in origin_context(net, args, ap, origin, cfg).dates]
+    n_jobs = max(1, min(args.jobs or os.cpu_count() or 1, len(day_tasks)))
+    parts: dict[int, list] = {i: [] for i in range(len(jobs_list))}
     if n_jobs > 1 and hasattr(os, "fork"):
         with multiprocessing.get_context("fork").Pool(n_jobs) as pool:
-            results = pool.map(_build_job, range(len(jobs_list)))
+            for i, part in pool.imap_unordered(_day_job, day_tasks, chunksize=1):
+                parts[i].append(part)
+            results = pool.map(_build_job, [(i, parts[i]) for i in range(len(jobs_list))], chunksize=1)
     else:
-        results = [_build_job(i) for i in range(len(jobs_list))]
-    summaries = {origin: summ for origin, summ in results}
+        for task in day_tasks:
+            i, part = _day_job(task)
+            parts[i].append(part)
+        results = [_build_job((i, parts[i])) for i in range(len(jobs_list))]
+    # each map's summary as a part (out/parts/), joined into out/summary.json - the same file whether
+    # every map was built here or each in a job of its own (the weekly workflow, FIX-17)
+    parts_dir = ROOT / "out" / "parts"
+    parts_dir.mkdir(parents=True, exist_ok=True)
+    for origin, summ in results:
+        (parts_dir / f"summary-{slugify(origin)}.json").write_text(json.dumps(summ, indent=1) + "\n")
     if args.only:
-        print("Built one map only - out/summary.json not written.")
+        print(f"Built one map only - its summary is in out/parts/; out/summary.json not written "
+              f"(build.py --merge joins the parts once every map is built).")
         return
-    # a small summary, committed every week, so the next run can tell if something broke;
-    # the first origin at the top level (as before), the others under "origins"
+    merge_summaries()
+
+
+def merge_summaries() -> None:
+    """out/summary.json from the maps built one by one (FIX-17): the first origin in places.yaml at
+    the top level, the others under "origins" - the same as a build of every map at once."""
+    origins = list((yaml.safe_load((ROOT / "data" / "places.yaml").read_text())["settings"].get("origins") or {}))
+    parts = ROOT / "out" / "parts"
+    summaries = {}
+    for o in origins:
+        f = parts / f"summary-{slugify(o)}.json"
+        if not f.exists():
+            sys.exit(f"merge: {f.relative_to(ROOT)} is missing - was the map from {o} built?")
+        summaries[o] = json.loads(f.read_text())
     first, *others = summaries
     summary = dict(summaries[first], origins={o: summaries[o] for o in others})
     (ROOT / "out" / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
+    print(f"out/summary.json from {len(summaries)} maps")
 
 
 def write_router_data(net) -> Path:
@@ -175,10 +212,25 @@ def compact_variants(variants: dict) -> dict:
 _JOB = None          # set by main() before the worker processes are forked
 
 
-def _build_job(i: int):
+def _day_job(task):
+    """Round 1: one map's journeys for one travel day (in a worker process)."""
+    i, d = task
     net, warnings, args, ap, pages, jobs_list = _JOB
     k, origin, cfg = jobs_list[i]
-    return origin, build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0))
+    c = origin_context(net, args, ap, origin, cfg)
+    journeys = Journeys(net, origin, c.s, c.start)
+    v, t_main, t_other = journeys.date_variant(d, c.starts, c.start_time, c.tx, c.version_line)
+    return i, (d.isoformat(), v, t_main, t_other, journeys.stats)
+
+
+def _build_job(task):
+    """Round 2: one map's page, route table and summary from its travel days."""
+    i, parts = task
+    net, warnings, args, ap, pages, jobs_list = _JOB
+    k, origin, cfg = jobs_list[i]
+    summary = build_origin(net, warnings, args, ap, origin, cfg, pages, main_origin=(k == 0), parts=parts)
+    sys.stdout.flush()      # a worker's prints are lost if the pool ends it before its buffer is written
+    return origin, summary
 
 
 def next_timetable_change(day: dt.date) -> dt.date:
@@ -488,16 +540,27 @@ class Journeys:
         variants = {}
         t_main = t_other = 0.0
         for d in dates:
-            t0 = time.monotonic()
-            v = {"label": f"{i18n.weekday(tx, d)} {d.day}.{d.month}.", "version": version_line(d, start_time),
-                 **self.variant(d, start_time)}
-            t1 = time.monotonic(); t_main += t1 - t0
-            v["starts"] = {t: {"version": version_line(d, t),
-                               **(self.earlier_start(d, t, v) if t < start_time else self.variant(d, t))}
-                           for t in starts if t != start_time}
-            t_other += time.monotonic() - t1
+            v, tm, to = self.date_variant(d, starts, start_time, tx, version_line)
             variants[d.isoformat()] = v
+            t_main += tm; t_other += to
         return variants, t_main, t_other
+
+    def date_variant(self, d: dt.date, starts: list, start_time: str, tx: dict, version_line):
+        """One travel day: {label, version, yes, no, starts}, and the seconds for the default start and
+        for the other start times. Travel days are independent, so they can be worked out side by side."""
+        t0 = time.monotonic()
+        v = {"label": f"{i18n.weekday(tx, d)} {d.day}.{d.month}.", "version": version_line(d, start_time),
+             **self.variant(d, start_time)}
+        t1 = time.monotonic()
+        v["starts"] = {t: {"version": version_line(d, t),
+                           **(self.earlier_start(d, t, v) if t < start_time else self.variant(d, t))}
+                       for t in starts if t != start_time}
+        return v, t1 - t0, time.monotonic() - t1
+
+    def add_stats(self, other: dict) -> None:
+        """Counts and times from a travel day worked out in another process."""
+        for k, x in other.items():
+            self.stats[k] = self.stats[k] | x if isinstance(x, set) else self.stats[k] + x
 
 
 # --- route table (out/routes*.md) ---------------------------------------------------
@@ -647,8 +710,8 @@ def summary_of(net, warnings: list, cfg: dict, today: dt.date, dates: list, vari
     }
 
 
-def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, main_origin: bool) -> dict:
-    """Journeys, route table and map page for one origin (IDEA-04). Returns its summary."""
+def origin_context(net, args, ap, origin: str, cfg: dict) -> SimpleNamespace:
+    """What every part of one origin's build needs: settings, travel dates, start times, texts."""
     s = origin_settings(net, args, cfg)
     today = dt.date.today()
     start_date = first_travel_date(args, s, today)
@@ -656,7 +719,6 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
                f" · generated {today:%-d.%-m.%Y}")
     outdir = ROOT / "out"
     outdir.mkdir(exist_ok=True)
-    suffix = "" if main_origin else "-" + slugify(origin)    # routes-stockholm.md, network-stockholm.json
 
     start = hm(s.get("start_time", "00:00"))
     start_time = fmt_clock(start)
@@ -672,8 +734,31 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
         return i18n.t(tx, "version", origin=origin_shown, origin_from=origin_from, date=f"{i18n.weekday(tx, d)} {d.day}.{d.month}.{d.year}",
                       time=t, today=f"{today.day}.{today.month}.{today.year}")
 
-    journeys = Journeys(net, origin, s, start)
-    variants, t_main, t_other = journeys.all_variants(dates, starts, start_time, tx, version_line)
+    return SimpleNamespace(s=s, today=today, start_date=start_date, version=version, outdir=outdir,
+                           start=start, start_time=start_time, dates=dates, starts=starts, tx=tx,
+                           origin_shown=origin_shown, origin_from=origin_from, version_line=version_line)
+
+
+def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, main_origin: bool,
+                 parts: list | None = None) -> dict:
+    """Journeys, route table and map page for one origin (IDEA-04). Returns its summary.
+    `parts`: the travel days already worked out (FIX-17), as (date, variant, seconds main,
+    seconds other starts, stats); without them every day is worked out here."""
+    c = origin_context(net, args, ap, origin, cfg)
+    s, today, start_date, version, outdir = c.s, c.today, c.start_date, c.version, c.outdir
+    suffix = "" if main_origin else "-" + slugify(origin)    # routes-stockholm.md, network-stockholm.json
+    start_time, dates, starts, origin_from = c.start_time, c.dates, c.starts, c.origin_from
+
+    journeys = Journeys(net, origin, s, c.start)
+    if parts is None:
+        variants, t_main, t_other = journeys.all_variants(dates, starts, start_time, c.tx, c.version_line)
+    else:
+        by_day = {p[0]: p for p in parts}
+        variants = {d.isoformat(): by_day[d.isoformat()][1] for d in dates}      # in the order of the dates
+        t_main = sum(p[2] for p in parts)
+        t_other = sum(p[3] for p in parts)
+        for p in parts:
+            journeys.add_stats(p[4])
     router, routes, city_routes, unreached, _ = journeys.compute(True, start_date)
 
     (outdir / f"routes{suffix}.md").write_text(

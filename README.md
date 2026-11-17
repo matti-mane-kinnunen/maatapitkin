@@ -103,6 +103,11 @@ rebuilds the map for Tue, Fri, Sat and Sun, checks it and publishes it at
 https://matti-mane-kinnunen.github.io/maatapitkin/ (Helsinki), with `stockholm.html`,
 `copenhagen.html`, `london.html`, `berlin.html`, `paris.html`, `rome.html` and `hamburg.html` next to it.
 
+The run has four jobs (D-65): *lookup* (routing tests, Transitous lookup, tidy, city texts), one *map*
+job per origin side by side (build, page check, router check), *publish* (joins the summaries with
+`build.py --merge`, compares with last week, commits the data, files issues) and *deploy*. Only
+*publish* and *deploy* can write; nothing is committed until every map has passed its checks.
+
 **In a blog post** (Blogger: *HTML view*), a link that opens the map full screen works best – a blog
 column is too narrow for the map and the list side by side:
 

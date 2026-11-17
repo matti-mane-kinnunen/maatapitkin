@@ -20,22 +20,24 @@ on:
         type: boolean
         default: false
 
+# Four jobs (FIX-17): look up -> build and check each map in a job of its own, side by side ->
+# join, commit and report -> deploy. Only the last two may write; the lookup and the map jobs
+# can only read the repository, so a build or a check can never change it or the site.
 permissions:
-  contents: write
-  pages: write
-  id-token: write
-  issues: write
+  contents: read
 
 concurrency:
   group: update-map
   cancel-in-progress: false
 
 jobs:
-  update:
+  lookup:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 300
     outputs:
-      ok: ${{ steps.check.outputs.ok }}
+      tue: ${{ steps.dates.outputs.tue }}
+      dates: ${{ steps.dates.outputs.dates }}
+      origins: ${{ steps.origins.outputs.origins }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -51,13 +53,22 @@ jobs:
       - name: Next week's travel dates (Tue, Fri, Sat, Sun)
         id: dates
         run: |
-          python3 - >> "$GITHUB_OUTPUT" <<'EOF'
+          python3 - >> "$GITHUB_OUTPUT" <<'PY'
           import datetime as d
           t = d.date.today()
           tue = t + d.timedelta(days=7 - t.weekday() + 1)        # Tuesday of next week
           print(f"tue={tue}")
           print("dates=" + ",".join(str(tue + d.timedelta(days=k)) for k in (0, 3, 4, 5)))
-          EOF
+          PY
+
+      # one map job per origin in places.yaml, so a new map needs no change here
+      - name: The maps to build
+        id: origins
+        run: |
+          python3 - >> "$GITHUB_OUTPUT" <<'PY'
+          import json, yaml
+          print("origins=" + json.dumps(list(yaml.safe_load(open("data/places.yaml"))["settings"]["origins"])))
+          PY
 
       # Full runs go oldest first and stop starting new lines after 240 minutes, so the job always
       # ends well inside GitHub's 6-hour limit. Lines not reached keep last week's data and come
@@ -80,13 +91,55 @@ jobs:
         timeout-minutes: 40
         run: python3 fetch_wiki.py --max-age 28 --pause 0.3 | tee wiki.log
 
-      - name: Build the map
-        run: python3 build.py "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee build.log
+      # the looked-up data goes to the map jobs and to the commit at the end - nothing is committed
+      # until every map has been built and checked
+      - name: Hand the data to the next jobs
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: data
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            data/
+            lookup.log
+            tidy.log
+            wiki.log
 
-      # a real browser opens every journey on every map (FIX-14); pinned like the actions
+  map:
+    needs: lookup
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    name: map (${{ matrix.origin }})
+    strategy:
+      fail-fast: false              # one broken map must not stop the others; the publish job decides
+      matrix:
+        origin: ${{ fromJSON(needs.lookup.outputs.origins) }}
+    env:
+      ORIGIN: ${{ matrix.origin }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: data
+          path: .
+
+      - run: pip install pyyaml playwright==1.63.0
+
+      # one map; its four travel days are worked out side by side on the runner's 4 cores
+      - name: Build the map
+        run: |
+          mkdir -p out/parts
+          slug=$(echo "$ORIGIN" | tr 'A-Z' 'a-z')
+          python3 build.py "only=$ORIGIN" "date=${{ needs.lookup.outputs.tue }}" "dates=${{ needs.lookup.outputs.dates }}" | tee "out/parts/build-$slug.log"
+
+      # a real browser opens every journey on this map (FIX-14); pinned like the actions
       - name: Install a browser for the page check
         run: |
-          pip install playwright==1.63.0
           # --with-deps also apt-installs extra fonts; if the Ubuntu mirrors can't be reached (DNS
           # failure on the runner, 11.11.2026) fall back to the browser alone - the runner image
           # already has every library Chromium needs, only optional fonts are missing then
@@ -95,18 +148,84 @@ jobs:
             python3 -m playwright install chromium
           }
 
+      # The result goes into files for the publish job (a matrix job has no outputs of its own).
+      # The job itself succeeds, so every map's result reaches the report.
+      - name: Check this map
+        run: |
+          slug=$(echo "$ORIGIN" | tr 'A-Z' 'a-z')
+          ok=true
+          python3 tests/check_pages.py out/site > "out/parts/check-$slug.md" || ok=false
+          # the in-browser router must find the same journeys as the build (IDEA-21); Node is on the runner
+          { echo; echo '```'; node tests/check_router.mjs out; echo '```'; } >> "out/parts/check-$slug.md" || ok=false
+          if [ "$ok" = "true" ]; then touch "out/parts/ok-$slug"; fi
+          cat "out/parts/check-$slug.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Hand the map to the publish job
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: map-${{ strategy.job-index }}
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            out/site/
+            out/parts/
+            out/map.html
+            out/routes*.md
+
+  publish:
+    needs: [lookup, map]
+    # also when a map job failed: the update is then held back and the issue says why
+    if: always() && needs.lookup.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write               # commit the timetable data
+      issues: write                 # the weekly issues (D-38, D-49)
+    outputs:
+      ok: ${{ steps.check.outputs.ok }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: data
+          path: .
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: map-*
+          merge-multiple: true
+          path: out
+
       - name: Check before publishing
         id: check
+        env:
+          ORIGINS: ${{ needs.lookup.outputs.origins }}
         run: |
           ok=true
-          python3 check_build.py > check.md || ok=false
-          { echo; python3 tests/check_pages.py out/site; } >> check.md || ok=false
-          # the in-browser router must find the same journeys as the build (IDEA-21); Node is on the runner
-          { echo; echo '```'; node tests/check_router.mjs out; echo '```'; } >> check.md || ok=false
+          python3 build.py --merge || ok=false
+          if [ -f out/summary.json ]; then python3 check_build.py > check.md || ok=false
+          else echo "## Map update check" > check.md; fi
+          { echo; echo "## Page check"; } >> check.md
+          for slug in $(python3 -c 'import json, os; print(" ".join(o.lower() for o in json.loads(os.environ["ORIGINS"])))'); do
+            if [ -f "out/parts/check-$slug.md" ]; then
+              { echo; grep -v '^## Page check' "out/parts/check-$slug.md"; } >> check.md
+            else
+              { echo; echo "- **$slug**: the map job failed – see the run log."; } >> check.md
+            fi
+            [ -f "out/parts/ok-$slug" ] || ok=false
+          done
           if [ "$ok" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"
-          elif [ "${{ inputs.force }}" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
+          elif [ "${{ inputs.force }}" = "true" ] && [ -f out/summary.json ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
           else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
           cat check.md >> "$GITHUB_STEP_SUMMARY"
+          { echo; echo "## Build"; echo '```'; cat out/parts/build-*.log 2>/dev/null | grep -E "^From .*(main journeys|WARNING)"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           { echo; echo "## Lookup"; echo '```'; sed -n '/^=====/,$p' lookup.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           if [ -f wiki.log ]; then { echo; echo "## City texts"; echo '```'; grep -E "^wikidata|failed|no article|^  " wiki.log | head -60; echo '```'; } >> "$GITHUB_STEP_SUMMARY"; fi
 
@@ -116,7 +235,7 @@ jobs:
           git config user.name "maatapitkin-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/ out/summary.json out/routes*.md
-          git commit -m "Weekly update: trains for the week of ${{ steps.dates.outputs.tue }}" || echo "nothing to commit"
+          git commit -m "Weekly update: trains for the week of ${{ needs.lookup.outputs.tue }}" || echo "nothing to commit"
           git pull --rebase
           git push
 
@@ -138,14 +257,14 @@ jobs:
           python3 lookup_report.py lookup.log tidy.log > attention.md
           if [ -s attention.md ]; then
             {
-              echo "Timetable lookup for the week of ${{ steps.dates.outputs.tue }}. Map published: ${{ steps.check.outputs.ok == 'true' && 'yes' || 'no (see the held-back issue)' }}."
+              echo "Timetable lookup for the week of ${{ needs.lookup.outputs.tue }}. Map published: ${{ steps.check.outputs.ok == 'true' && 'yes' || 'no (see the held-back issue)' }}."
               echo
               cat attention.md
               echo
               echo "Full log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             } > issue.md
             { echo "## Needs attention"; echo; cat attention.md; } >> "$GITHUB_STEP_SUMMARY"
-            python3 .github/weekly_issue.py report "Check the timetable lookup" "${{ steps.dates.outputs.tue }}" issue.md
+            python3 .github/weekly_issue.py report "Check the timetable lookup" "${{ needs.lookup.outputs.tue }}" issue.md
           else
             echo "Nothing needs attention." >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -155,7 +274,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 .github/weekly_issue.py report "Map update held back" "${{ steps.dates.outputs.tue }}" check.md
+          python3 .github/weekly_issue.py report "Map update held back" "${{ needs.lookup.outputs.tue }}" check.md
 
       - name: Close held-back issues once a map is published
         if: steps.check.outputs.ok == 'true'
@@ -165,10 +284,13 @@ jobs:
         run: |
           python3 .github/weekly_issue.py close "Map update held back" "A later run published the map: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
-  publish:
-    needs: update
-    if: needs.update.outputs.ok == 'true'
+  deploy:
+    needs: publish
+    if: always() && needs.publish.outputs.ok == 'true'
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
