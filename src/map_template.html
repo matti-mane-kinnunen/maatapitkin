@@ -670,7 +670,7 @@ function pairHtml(pr) {
     const note = kind ? ` <span class="chipnote">${kind}</span>` : "";
     if (!timed.length) return { first: 1e9, html: `<div class="svc-row"><b>${svc}</b>${note}${T("svc_untimed", { dur: durTxt(ls[0].duration_true ?? ls[0].duration) })}</div>` };
     const typical = durTxt(median(timed.map(l => l.duration_true ?? l.duration)));
-    const nextDay = l => hm(l.arr) < hm(l.dep) ? "+1" : "";
+    const nextDay = l => { const n = Math.floor((hm(l.dep) + l.duration) / 1440); return n > 0 ? "+" + n : ""; };   // +2 for a 35 h ferry
     if (timed.length === 1) {
       const l = timed[0];
       return { first: hm(l.dep), html: `<div class="svc-row"><b>${svc}</b>${note} · <span class="t">${l.dep}–${l.arr}${nextDay(l)}</span> · ${typical}</div>` };
@@ -1221,7 +1221,7 @@ updateReach();
 // --- Add to calendar (IDEA-18): the selected journey as an .ics file, made here in the browser ------
 // Times in the data are local clock times (minutes from the travel date's midnight) at each place;
 // the file carries them in UTC, worked out with the place's time zone (journeys.py TZ).
-const tzOf = n => (NET.tz || {})[String((P[n] || {}).country || "").toUpperCase()] || "Europe/Berlin";
+const tzOf = n => (P[n] || {}).tz || (NET.tz || {})[String((P[n] || {}).country || "").toUpperCase()] || "Europe/Berlin";
 function tzOffsetMin(tz, ms) {
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit",
     day: "2-digit", hour: "2-digit", minute: "2-digit" }).formatToParts(new Date(ms)).map(x => [x.type, x.value]));

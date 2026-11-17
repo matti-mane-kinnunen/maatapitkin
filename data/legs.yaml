@@ -2331,3 +2331,5 @@ legs:
   - {from: Oulu, to: Helsinki, service: "IC", mode: train, runs: "mon-fri,sat", times: ["04:32-10:05", "05:21-11:39"], query: "*", checked: 2026-11-16, source: transitous}
   - {from: Oulu, to: Helsinki, service: "IC", mode: train, runs: "mon-fri,sun", times: ["06:27-12:39"], query: "*", checked: 2026-11-16, source: transitous}
   - {from: Oulu, to: Helsinki, service: "IC", mode: train, runs: "sun", times: ["00:57-10:34", "18:17-00:39"], query: "*", checked: 2026-11-16, source: transitous}
+  - {from: Cádiz, to: Las Palmas, dep: "16:00", arr: "02:30", days: 1, service: "Baleària Tue", mode: ferry, night: true, runs: "tue", checked: 2026-11-17, source: manual}
+  - {from: Cádiz, to: Santa Cruz de Tenerife, dep: "12:00", arr: "20:00", days: 1, service: "Baleària Sat", mode: ferry, night: true, runs: "sat", checked: 2026-11-17, source: manual}

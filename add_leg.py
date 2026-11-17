@@ -11,6 +11,7 @@ Write a leg as   A -> B : train
     python3 add_leg.py "A -> B : name every 60 07:00-21:00 2:17"   # a departure every 60 min 07:00-21:00,
                                                             # 2 h 17 each (your own times, not looked up)
     python3 add_leg.py "A -> B : name every 30 06:00-22:30 0:45 mon-fri"  # only on weekdays
+    python3 add_leg.py "A -> B : name ferry night 16:00-02:30+1 tue"     # arrives a day later than the next morning (35 h ferry)
                                                             # your own times, not looked up
     python3 add_leg.py                                      # type legs one per line, empty line to stop
     python3 add_leg.py --file pairs.txt                     # a whole list, no questions, summary at the end
@@ -56,10 +57,10 @@ _T = r"\d{1,2}:\d{2}"
 _D = r"(?:mon|tue|wed|thu|fri|sat|sun)"
 # The end of a service: flag words, your own times, 'every ...', run days, '@08:30'. Only flag
 # words in this tail are flags, so a name may contain them ("Bus 20:30 bus 20:30-23:50", FIX-13).
-TAIL_RE = re.compile(rf"(?i)(?:^|\s+)(?:(?:{'|'.join(sorted(FLAGS))})\b|@\s*{_T}|{_T}\s*[-–]\s*{_T}"
+TAIL_RE = re.compile(rf"(?i)(?:^|\s+)(?:(?:{'|'.join(sorted(FLAGS))})\b|@\s*{_T}|{_T}\s*[-–]\s*{_T}(?:\+\d)?"
                      rf"|every\s+\d+\s+{_T}\s*[-–]\s*{_T}\s+{_T}"
                      rf"|(?:daily|{_D}(?:-{_D})?(?:,{_D}(?:-{_D})?)*)\b)"
-                     rf"(?:\s+(?:(?:{'|'.join(sorted(FLAGS))})\b|@\s*{_T}|{_T}\s*[-–]\s*{_T}"
+                     rf"(?:\s+(?:(?:{'|'.join(sorted(FLAGS))})\b|@\s*{_T}|{_T}\s*[-–]\s*{_T}(?:\+\d)?"
                      rf"|every\s+\d+\s+{_T}\s*[-–]\s*{_T}\s+{_T}"
                      rf"|(?:daily|{_D}(?:-{_D})?(?:,{_D}(?:-{_D})?)*)\b))*\s*$")
 EVERY_RE = re.compile(r"(?i)\bevery\s+(\d+)\s+(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s+(\d{1,2}:\d{2})\s*$")   # 'bus' also lets '*' include buses
@@ -330,7 +331,8 @@ def entry_text(e: dict) -> str:
         rows = [", ".join(times[i:i + 6]) for i in range(0, len(times), 6)]
         parts.append("times: [" + (",\n      ".join(rows)) + "]")
     else:
-        parts += [f'dep: "{e["dep"]}"', f'arr: "{e["arr"]}"', f"service: {q(e['service'])}", f"mode: {e['mode']}"]
+        parts += [f'dep: "{e["dep"]}"', f'arr: "{e["arr"]}"'] + ([f"days: {e['days']}"] if e.get("days") else []) \
+            + [f"service: {q(e['service'])}", f"mode: {e['mode']}"]
         if e.get("night"):
             parts.append("night: true")
         if e.get("runs"):
@@ -515,14 +517,14 @@ def handle(line: str, args) -> bool:
     words = svc.split()
     runs = None
     if words and RUNS_WORD.match(words[-1]) and (EVERY_RE.search(" ".join(words[:-1])) or
-                                                  re.search(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}$", " ".join(words[:-1]))):
+                                                  re.search(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}(?:\+\d)?$", " ".join(words[:-1]))):
         runs = words[-1].lower()                            # e.g. "mon-fri" after your own times
         runs = None if runs == "daily" else runs
         svc = " ".join(words[:-1])
     every = EVERY_RE.search(svc)
     if every:
         svc = svc[:every.start()].strip()
-    manual = None if every else re.search(r"(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s*$", svc)
+    manual = None if every else re.search(r"(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})(?:\+(\d))?\s*$", svc)
     if manual:
         svc = svc[:manual.start()].strip()
 
@@ -557,11 +559,14 @@ def handle(line: str, args) -> bool:
         return save_entries([e], args)
 
     if manual:                                             # the user's own times
-        d, a = (f"{int(x.split(':')[0]):02d}:{x.split(':')[1]}" for x in manual.groups())
+        d, a = (f"{int(x.split(':')[0]):02d}:{x.split(':')[1]}" for x in manual.groups()[:2])
+        extra = int(manual.group(3) or 0)                  # '16:00-02:30+1': one more day than the next morning
         dur = (int(a[:2]) * 60 + int(a[3:]) - int(d[:2]) * 60 - int(d[3:])) % 1440
         e = {"from": frm, "to": to, "dep": d, "arr": a, "service": svc or "?",
              "mode": next((f for f in ("ferry", "bus") if f in flags), "train"),
-             "night": "night" in flags or (dur >= 300 and a < d), "runs": runs, "checked": today, "source": "manual"}
+             "night": "night" in flags or (dur >= 300 and a < d) or extra > 0, "runs": runs, "checked": today, "source": "manual"}
+        if extra:
+            e["days"] = extra
         print(f"  {frm} -> {to}  {d}-{a}  {e['service']}  ({e['mode']}{', night' if e['night'] else ''}) - not looked up")
         return save_entries([e], args)
 
@@ -663,7 +668,7 @@ def too_fast(e: dict) -> str | None:
             day = dt.date.today()
             t0 = dt.datetime.combine(day, dt.time(*map(int, d.split(":"))), T.tz_of(pa))
             t1 = dt.datetime.combine(day, dt.time(*map(int, a.split(":"))), T.tz_of(pb))
-            mins.append(((t1 - t0).total_seconds() / 60) % 1440)
+            mins.append(((t1 - t0).total_seconds() / 60) % 1440 + 1440 * int(e.get("days") or 0))
     km = T.km_between(pa["lat"], pa["lon"], pb["lat"], pb["lon"])
     for m in mins:
         if km > 20 and km / max(m, 1) * 60 > 300:

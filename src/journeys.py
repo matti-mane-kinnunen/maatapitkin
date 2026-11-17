@@ -32,7 +32,7 @@ TZ = {"FI": "Europe/Helsinki", "EE": "Europe/Tallinn", "LV": "Europe/Riga", "LT"
 
 def utc_offset(place: dict, date: dt.date, clock: int) -> int:
     """Minutes ahead of UTC at a place, on a date at a local clock time (handles summer time)."""
-    z = ZoneInfo(TZ.get(str(place.get("country", "")).upper(), "Europe/Berlin"))
+    z = ZoneInfo(place.get("tz") or TZ.get(str(place.get("country", "")).upper(), "Europe/Berlin"))   # a place's own tz: wins (Canaries)
     t = dt.datetime.combine(date, dt.time((clock // 60) % 24, clock % 60), z)
     return int(t.utcoffset().total_seconds() // 60)
 

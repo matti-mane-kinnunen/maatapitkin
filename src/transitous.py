@@ -29,7 +29,7 @@ NO_GO = {"AIRPLANE", "AIR", "FLIGHT"}
 
 
 def tz_of(place: dict) -> ZoneInfo:
-    return ZoneInfo(TZ.get(place.get("country"), "Europe/Berlin"))
+    return ZoneInfo(place.get("tz") or TZ.get(place.get("country"), "Europe/Berlin"))
 
 
 def get(path: str, params: dict) -> dict:

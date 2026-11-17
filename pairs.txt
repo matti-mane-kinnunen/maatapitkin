@@ -65,7 +65,7 @@ Madrid -> Algeciras : Alvia 08:30-13:59   # daily direct Alvia (Rome2Rio); Trans
 Vilnius -> Mockava : *
 Mockava -> Warsaw : *
 
-RIga -> Kaisiadorys: * 
+Riga -> Kaisiadorys: * 
 Kaisiadorys -> Kaunas : *
 Kaunas -> Kaisiadorys : *
 Kaisiadorys -> Riga: *
@@ -638,3 +638,91 @@ Oulu -> Haparanda : *
 Haparanda -> Boden : *
 Boden -> Umeå : *
 Oulu -> Helsinki : *          # so maps from Sweden can reach Helsinki without a ferry
+
+# -- 100 largest cities (17.11.2026): cities on existing lines --
+Amsterdam -> Rotterdam : *
+Rotterdam -> Amsterdam : *
+Rotterdam -> Brussels : *
+Brussels -> Rotterdam : *
+Amsterdam -> The Hague : *
+The Hague -> Amsterdam : *
+Amsterdam -> Utrecht : *
+Utrecht -> Amsterdam : *
+Utrecht -> Köln : *
+Köln -> Utrecht : *
+Brussels -> Antwerp : *
+Antwerp -> Brussels : *
+Antwerp -> Rotterdam : *
+Rotterdam -> Antwerp : *
+Köln -> Düsseldorf : *
+Düsseldorf -> Köln : *
+Köln -> Duisburg : *
+Duisburg -> Köln : *
+Köln -> Essen : *
+Essen -> Köln : *
+Köln -> Bochum : *
+Bochum -> Köln : *
+Köln -> Dortmund : *
+Dortmund -> Köln : *
+Hamburg -> Bremen : *
+Bremen -> Hamburg : *
+Bremen -> Köln : *
+Köln -> Bremen : *
+Berlin -> Leipzig : *
+Leipzig -> Berlin : *
+Leipzig -> Munich : *
+Munich -> Leipzig : *
+Berlin -> Dresden : *
+Dresden -> Berlin : *
+Dresden -> Prague : *
+Prague -> Dresden : *
+Munich -> Nuremberg : *
+Nuremberg -> Munich : *
+Nuremberg -> Frankfurt : *
+Frankfurt -> Nuremberg : *
+Berlin -> Poznań : *
+Poznań -> Berlin : *
+Poznań -> Warsaw : *
+Warsaw -> Poznań : *
+Prague -> Brno : *
+Brno -> Prague : *
+Brno -> Vienna : *
+Vienna -> Brno : *
+Madrid -> Zaragoza : *
+Zaragoza -> Madrid : *
+Zaragoza -> Barcelona : *
+Barcelona -> Zaragoza : *
+# -- short branches --
+Warsaw -> Łódź : *
+Łódź -> Warsaw : *
+Berlin -> Szczecin : *
+Szczecin -> Berlin : *
+Madrid -> Murcia : *
+Murcia -> Madrid : *
+Madrid -> Alicante : *
+Alicante -> Madrid : *
+Belgrade -> Novi Sad : *
+Novi Sad -> Belgrade : *
+Novi Sad -> Subotica : *
+Subotica -> Novi Sad : *
+London -> Birmingham : *
+Birmingham -> London : *
+London -> Leeds : *
+Leeds -> London : *
+Leeds -> Bradford : *
+Bradford -> Leeds : *
+London -> Sheffield : *
+Sheffield -> London : *
+London -> Leicester : *
+Leicester -> London : *
+London -> Liverpool : *
+Liverpool -> London : *
+London -> Bristol : *
+Bristol -> London : *
+
+# -- Canary Islands: Baleària from Cádiz (baleariacanarias.com, Nov 2026). Times local: Canary time is an hour behind Cádiz.
+#    '+1' = arrives one day later than the next morning. The Tuesday sailing calls at Arrecife (Lanzarote) on the way and goes on to Tenerife (times not entered).
+Madrid -> Cádiz : *
+Sevilla -> Cádiz : *
+Cádiz -> Las Palmas : Baleària Tue ferry night 16:00-02:30+1 tue        # Marie Curie; Tue 16:00 -> Thu 02:30, 35 h 30
+Cádiz -> Santa Cruz de Tenerife : Baleària Sat ferry night 12:00-20:00+1 sat   # Sat 12:00 -> Sun 20:00, about 33 h (Matti)

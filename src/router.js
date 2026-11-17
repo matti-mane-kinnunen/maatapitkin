@@ -69,7 +69,8 @@ function offsetAt(tz, ms) {                              // minutes ahead of UTC
    an ambiguous time (autumn) takes the earlier, summer offset; a time in the spring gap the
    offset before the change. */
 function utcOffset(net, place, dn, clk) {
-  const tz = net.tz[String((net.places[place] || {}).country || "").toUpperCase()] || "Europe/Berlin";
+  const p = net.places[place] || {};
+  const tz = p.tz || net.tz[String(p.country || "").toUpperCase()] || "Europe/Berlin";   // a place's own tz wins (Canaries)
   const local = (dn * DAY + clk) * 60000;
   const before = offsetAt(tz, local - 12 * 3600e3), after = offsetAt(tz, local + 12 * 3600e3);
   if (before === after) return before;

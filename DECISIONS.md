@@ -70,6 +70,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-60 | Four small usability features: hours slider, calendar file, continue link, problem report | 12.11.2026 | Accepted |
 | D-61 | City texts from Wikivoyage / Wikipedia, fetched on GitHub, stored in the repo | 13.11.2026 | Accepted |
 | D-62 | The router in the browser for own settings, checked against the build | 14.11.2026 | Accepted |
+| D-63 | Sailings longer than a day, and a time zone per place | 17.11.2026 | Accepted |
 
 ---
 
@@ -1292,6 +1293,31 @@ tests say where). Speed: an evening start ~0.5 s, an earlier-than-usual start ~2
 sweep), measured with Node on the Mac; slower on phones. Page +20 KB; router-data.js only on demand.
 Found while porting: Python's tie-breaking (heap order on equal keys) decides between identical
 departures in different legs.yaml entries, so the port copies it exactly.
+
+---
+
+## D-63 Sailings longer than a day, and a time zone per place
+**Date:** 17.11.2026 · **Status:** Accepted
+
+**Context.** Matti found Baleària's ferries from Cádiz to the Canaries: Tue 16:00 → Las Palmas Thu 02:30
+(35 h 30) and Sat 12:00 → Santa Cruz de Tenerife Sun 20:00 (about 33 h). Own times in pairs.txt could
+only arrive the same day or the next one, and time zones came from the country alone – Spain's, while the
+Canaries are an hour behind (Atlantic/Canary).
+
+**Decision.**
+- Own times take `+N` on the arrival: `16:00-02:30+1` arrives one day later than the next morning.
+  add_leg.py writes `days: N` in legs.yaml (the routers already added `days` to the duration) and marks
+  such a leg `night`. The map's departures box shows `+2`, worked out from the duration.
+- A place may have its own `tz:` (an IANA zone) in places.yaml; it wins over the country's. Used by
+  journeys.py, transitous.py, router.js (passed in router_data.PLACE_KEYS) and the page's calendar times.
+  Las Palmas and Santa Cruz de Tenerife have `tz: Atlantic/Canary`.
+
+**Why.** Small changes in the places that already handled days and zones; no change to the routing.
+Checked: the two sailings come out at 35 h 30 and 33 h real time; router tests pass.
+
+**Consequences.** Madeira and the Azores, if ever added, need `tz:` too. Arrecife (Lanzarote) and the
+Tuesday sailing's arrival in Tenerife are left out until their times are clear (the operator's two pages
+differ by an hour).
 
 ---
 

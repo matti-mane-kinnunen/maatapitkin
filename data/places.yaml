@@ -176,6 +176,37 @@ places:
   Boden: {lat: 65.829, lon: 21.708, country: "SE", aliases: [Boden Centralstation, Boden C], db: 7400043}  # corrected by hand 31.10.2026
   Oulu: {lat: 65.012, lon: 25.486, country: "FI", morning_departure: "05:00", db: 1000069}  # IC 401 to Haparanda leaves 05:08, the only morning train to Sweden
   Haparanda: {lat: 65.834, lon: 24.130, country: SE, aliases: [Haaparanta]}  # station, set by hand; Finnish IC trains from Oulu via Tornio end here
+  Rotterdam: {lat: 51.925, lon: 4.469, country: NL, db: 8400530}  # main station, set by hand 17.11.2026 (100 largest cities)
+  "The Hague": {lat: 52.081, lon: 4.324, country: NL, aliases: ["Den Haag", "'s-Gravenhage", "Den Haag Centraal"], db: 8496001}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Utrecht: {lat: 52.089, lon: 5.110, country: NL, aliases: ["Utrecht Centraal"], db: 8400621}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Antwerp: {lat: 51.217, lon: 4.421, country: BE, aliases: [Antwerpen, Anvers, "Antwerpen-Centraal"], db: 8800007}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Düsseldorf: {lat: 51.220, lon: 6.794, country: DE, aliases: [Dusseldorf, Duesseldorf], db: 8000085}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Essen: {lat: 51.451, lon: 7.014, country: DE, db: 8000098}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Dortmund: {lat: 51.518, lon: 7.459, country: DE, db: 8000080}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Duisburg: {lat: 51.430, lon: 6.776, country: DE, db: 8000086}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Bochum: {lat: 51.479, lon: 7.223, country: DE, db: 8000041}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Bremen: {lat: 53.083, lon: 8.813, country: DE, db: 8000050}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Leipzig: {lat: 51.345, lon: 12.382, country: DE, db: 8010205}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Dresden: {lat: 51.040, lon: 13.732, country: DE, db: 8010085}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Nuremberg: {lat: 49.446, lon: 11.082, country: DE, aliases: ["Nürnberg", Nuernberg, Nurnberg], db: 8096025}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Poznań: {lat: 52.402, lon: 16.911, country: PL, aliases: [Poznan, Posen], db: 5196002}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Brno: {lat: 49.191, lon: 16.613, country: CZ, aliases: ["Brünn"], db: 5400001}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Zaragoza: {lat: 41.658, lon: -0.911, country: ES, aliases: ["Zaragoza-Delicias", Saragossa], db: 7175506}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Łódź: {lat: 51.770, lon: 19.469, country: PL, aliases: [Lodz, "Łódź Fabryczna"], db: 5100317}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Szczecin: {lat: 53.418, lon: 14.551, country: PL, aliases: [Stettin], db: 5100057}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Murcia: {lat: 37.975, lon: -1.130, country: ES, db: 7100052}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Alicante: {lat: 38.344, lon: -0.495, country: ES, aliases: [Alacant], db: 7100051}  # main station, set by hand 17.11.2026 (100 largest cities)
+  "Novi Sad": {lat: 45.265, lon: 19.830, country: RS, aliases: ["Нови Сад"], db: 7200008}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Birmingham: {lat: 52.478, lon: -1.899, country: GB, aliases: ["Birmingham New Street"], db: 7000222}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Leeds: {lat: 53.795, lon: -1.548, country: GB, db: 7001318}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Sheffield: {lat: 53.378, lon: -1.462, country: GB, db: 7002002}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Bradford: {lat: 53.791, lon: -1.750, country: GB, aliases: ["Bradford Interchange"], db: 7000203}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Liverpool: {lat: 53.408, lon: -2.977, country: GB, aliases: ["Liverpool Lime Street"], db: 7001372}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Bristol: {lat: 51.449, lon: -2.581, country: GB, aliases: ["Bristol Temple Meads"], db: 7000367}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Leicester: {lat: 52.631, lon: -1.125, country: GB, db: 7001297}  # main station, set by hand 17.11.2026 (100 largest cities)
+  Cádiz: {lat: 36.529, lon: -6.289, country: ES, aliases: [Cadiz]}  # station; the ferry port is next to it, set by hand
+  Las Palmas: {lat: 28.140, lon: -15.420, country: ES, tz: Atlantic/Canary, aliases: [Las Palmas de Gran Canaria, Gran Canaria]}  # Gran Canaria, ferry port; Canary time (an hour behind Madrid), set by hand
+  Santa Cruz de Tenerife: {lat: 28.468, lon: -16.248, country: ES, tz: Atlantic/Canary, aliases: [Tenerife]}  # ferry port; Canary time, set by hand
   Rovaniemi: {lat: 66.498, lon: 25.705, country: "FI", db: 1000086}  # added by add_leg.py
   Rostock: {lat: 54.078, lon: 12.132, country: "DE", db: 8010304}  # added by add_leg.py
   Wroclaw: {lat: 51.098, lon: 17.037, country: "PL", db: 5100069}  # added by add_leg.py
@@ -215,11 +246,11 @@ places:
   Izmir: {lat: 38.431, lon: 27.214, country: "TR", aliases: ["İzmir bus station"], db: 7521920}  # added by add_leg.py
   Thessaloniki: {lat: 40.635, lon: 22.933, country: "GR", db: 7300415}  # added by add_leg.py
   Seinäjoki: {lat: 62.792, lon: 22.844, country: "FI", db: 1000089}  # added by add_leg.py
-  Podgorica: {lat: 42.430, lon: 19.259, capital: true, country: ME}  # from not_yet_covered; Lovćen night train from Belgrade
-  Bar: {lat: 42.094, lon: 19.100, country: ME}  # Montenegro; station by the port, set by hand (namesake Bar in Ukraine)
+  Podgorica: {lat: 42.430, lon: 19.259, capital: true, country: ME, db: 6231001}  # from not_yet_covered; Lovćen night train from Belgrade
+  Bar: {lat: 42.094, lon: 19.100, country: ME, db: 6231080}  # Montenegro; station by the port, set by hand (namesake Bar in Ukraine)
   Pristina: {lat: 42.663, lon: 21.164, capital: true, country: XK, aliases: [Prishtina, Priština, Prishtinë]}  # from not_yet_covered; buses from Belgrade
-  Skopje: {lat: 41.996, lon: 21.431, capital: true, country: MK, aliases: [Skopie, Skopia]}  # from not_yet_covered; bus from Belgrade to Transporten Centar
-  Lviv: {lat: 49.840, lon: 23.994, country: UA, aliases: [Lvov, Lwów, Lwow, Lviv-Pas]}  # Lviv main station (Holovnyi), set by hand
+  Skopje: {lat: 41.996, lon: 21.431, capital: true, country: MK, aliases: [Skopie, Skopia], db: 6500001}  # from not_yet_covered; bus from Belgrade to Transporten Centar
+  Lviv: {lat: 49.840, lon: 23.994, country: UA, aliases: [Lvov, Lwów, Lwow, Lviv-Pas], db: 2200025}  # Lviv main station (Holovnyi), set by hand
   Narva: {lat: 59.369, lon: 28.197, country: EE}  # station, set by hand
   Ivalo: {lat: 68.658, lon: 27.540, country: FI}  # Lapland; bus station (Petsamontie 7), set by hand
   Odesa: {lat: 46.487, lon: 30.729, country: UA, aliases: [Odessa, Одеса, Одесса], no_flights: true}  # Starosinna bus station, set by hand; no_flights: Ukrainian airspace closed (as Kyiv)
