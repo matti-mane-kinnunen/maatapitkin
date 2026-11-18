@@ -3410,3 +3410,5 @@ legs:
   - {from: Sevilla, to: Cádiz, service: "Regional", mode: train, runs: "fri,sun", times: ["13:12-14:50"], query: "*", checked: 2026-11-17, source: transitous}
   - {from: Sevilla, to: Cádiz, service: "Regional", mode: train, runs: "mon-fri", times: ["06:37-08:30", "12:39-14:28", "15:49-17:30"], query: "*", checked: 2026-11-17, source: transitous}
   - {from: Sevilla, to: Cádiz, service: "Regional", mode: train, runs: "mon-fri,sat", times: ["07:45-09:23"], query: "*", checked: 2026-11-17, source: transitous}
+  - {from: Cádiz, to: Las Palmas, dep: "16:00", arr: "02:30", days: 1, service: "Baleària Tue", mode: ferry, night: true, runs: "tue", checked: 2026-11-18, source: manual}
+  - {from: Cádiz, to: Santa Cruz de Tenerife, dep: "12:00", arr: "20:00", days: 1, service: "Baleària Sat", mode: ferry, night: true, runs: "sat", checked: 2026-11-18, source: manual}

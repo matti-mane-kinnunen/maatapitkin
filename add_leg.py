@@ -816,7 +816,7 @@ def line_entries(line: str, places: dict | None = None) -> list:
     if svc.split() and RUNS_WORD.match(svc.split()[-1]):
         svc = " ".join(svc.split()[:-1])
     svc = EVERY_RE.sub("", svc).strip()
-    svc = re.sub(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}\s*$", "", svc).strip()
+    svc = re.sub(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}(?:\+\d)?\s*$", "", svc).strip()
     return existing_all(frm, to, svc, svc if "*" in svc else None)
 
 
@@ -829,7 +829,7 @@ def own_times(line: str) -> bool:
     if words and RUNS_WORD.match(words[-1]):
         words = words[:-1]
     svc = " ".join(words)
-    return bool(EVERY_RE.search(svc) or re.search(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}\s*$", svc))
+    return bool(EVERY_RE.search(svc) or re.search(r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}(?:\+\d)?\s*$", svc))
 
 
 def already_there(line: str) -> bool:
