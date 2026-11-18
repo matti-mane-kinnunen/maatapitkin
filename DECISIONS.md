@@ -73,6 +73,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-63 | Sailings longer than a day, and a time zone per place | 17.11.2026 | Accepted |
 | D-64 | Nearby towns as a list, not as places on the map | 17.11.2026 | Accepted |
 | D-65 | Build and check each map in a job of its own | 17.11.2026 | Accepted |
+| D-66 | Keep the network about its present size | 18.11.2026 | Accepted |
 
 ---
 
@@ -1374,6 +1375,33 @@ the repository or the site.
 A new origin needs no workflow change. A failed map job holds the update back like a failed check; the
 report says which map. Outputs checked identical to the old build (8 maps). If Helsinki's job gets slow
 again, FIX-18 (a faster morning sweep) is next.
+
+---
+
+## D-66 Keep the network about its present size
+**Date:** 18.11.2026 · **Status:** Accepted (Matti)
+
+**Context.** The network grew from 127 places (1.11.) to 212 places and ~615 pairs.txt lines (18.11.).
+On an iPhone 16 Pro Max the map works, but zooming is visibly slow; the first load is fine (a page is
+2–5 MB, about 0.3–0.6 MB compressed). Measured 18.11.2026 in Chromium with iPhone emulation (Helsinki
+map: 1,408 SVG elements, 217 labels): one zoom step takes ~150 ms (about 6 frames a second) – ~80 ms
+laying out the labels and click areas again (layoutCities ~45, layoutMain ~20, placeHits ~15), the rest
+drawing the SVG at the new viewBox. More places and lines make both parts grow.
+
+**Decision.**
+- Keep the network at roughly its present size: about 200–220 places and 600 pairs.txt lines.
+- A new routed place only when it opens a capital or makes one clearly faster.
+- Towns people ask about become *nearby* entries (D-64): itinerary, tooltip and search, but no dot, line,
+  routing or lookup.
+- Anything else new replaces something: a place or line no journey uses ("connections unused" in the
+  build log, D-44) is the first candidate to go.
+
+**Why.** The purpose is an encouraging map (D-37), not complete coverage; each extra place costs every
+visitor zooming smoothness, and every weekly run lookup time, for little benefit.
+
+**Consequences.** Zooming itself is fixed separately (FIX-20: move the drawing with a CSS transform during
+a pinch or wheel and lay the labels out once at the end – 16 ms a frame instead of ~150 ms in the same
+test). The limits are a guide, not a hard check; revisit them if FIX-20 leaves a lot of room.
 
 ---
 
