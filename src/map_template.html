@@ -100,6 +100,7 @@ button[aria-pressed="true"] .bar i { background: var(--accent) }
 .mapcol { display: grid; gap: 14px; min-width: 0 }
 .mapbox { background: var(--sea); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; position: relative }
 svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none }
+#map { transform-origin: 0 0 }
 #map.zoomed { cursor: grab } #map.panning, #map.panning .hit.go { cursor: grabbing }
 /* lines and outlines keep their width on screen when zoomed */
 #land path, .leg, .halo, .node, .hit, .leghit { vector-effect: non-scaling-stroke }
@@ -651,7 +652,7 @@ function hover(name) {
     : reachableWithNight(name) ? `<b>${LN(name)}</b><span class="hint">${T("tip_night_only")}</span>`
     : `<b>${LN(name)}</b><span class="hint">${T("tip_no_journey", { origin: LN(NET.origin), origin_from: ORIGIN_FROM })}</span>`;
   if (!isMain(name)) layoutCities(name);
-  const box = svgEl.getBoundingClientRect(), k = box.width / VB.width;
+  const box = svgBox(), k = box.width / VB.width;
   const x = (p.x - VB.x) * k, y = (p.y - VB.y) * k;
   tip.hidden = false;
   const w = tip.offsetWidth, h = tip.offsetHeight;
@@ -659,7 +660,7 @@ function hover(name) {
   tip.style.top = `${Math.max(4, Math.min(box.height - h - 4, y - h / 2))}px`;
 }
 function placeTip(clientX, clientY) {
-  const box = svgEl.getBoundingClientRect(), x = clientX - box.left, y = clientY - box.top;
+  const box = svgBox(), x = clientX - box.left, y = clientY - box.top;
   const w = tip.offsetWidth, h = tip.offsetHeight;
   tip.style.left = `${Math.max(4, Math.min(box.width - w - 4, x > box.width / 2 ? x - w - 16 : x + 16))}px`;
   tip.style.top = `${Math.max(4, Math.min(box.height - h - 4, y - h / 2))}px`;
@@ -1497,30 +1498,63 @@ function sizeNodes() {
     } else e.setAttribute("r", (p.missing ? 4 : 2.6) / Z);
   }
 }
-let relayoutQueued = false;
-function applyView(relayout) {
+// FIX-20: while a pinch, wheel or drag is going on, the drawing is only moved and scaled as a picture
+// (a CSS transform, done by the graphics chip: ~16 ms a frame instead of ~150 ms). When the gesture
+// stops, the new view is set for real and the labels are laid out once.
+let relayoutQueued = false, needLayout = false, settleTimer = 0;
+let cZ = 1, cX = 0, cY = 0;                   // the view the drawing shows now (its viewBox)
+// unhover() lays the city labels out again (~45 ms on a phone): during a gesture only when something is shown
+const unhoverIfShown = () => { if (!tip.hidden || hotPairs.length || previewG.firstChild) unhover(); };
+function svgBox() {                           // the map's place on screen, without a gesture's transform
+  const box = svgEl.parentElement, r = box.getBoundingClientRect(), w = box.clientWidth;
+  return { left: r.left + box.clientLeft, top: r.top + box.clientTop, width: w, height: w * H0 / W0 };
+}
+function clampView() {
   const w = W0 / Z, h = H0 / Z;
   viewX = Math.min(Math.max(0, viewX), W0 - w); viewY = Math.min(Math.max(0, viewY), H0 - h);
-  svgEl.setAttribute("viewBox", `${viewX} ${viewY} ${w} ${h}`);
+  zoomOut.disabled = zoomFit.disabled = Z <= 1.001; zoomIn.disabled = Z >= ZMAX - 0.001;
+}
+function commitView(relayout) {
+  clearTimeout(settleTimer);
+  if (Z !== cZ) needLayout = true;
+  cZ = Z; cX = viewX; cY = viewY;
+  svgEl.style.transform = ""; svgEl.style.willChange = "";
+  svgEl.setAttribute("viewBox", `${viewX} ${viewY} ${W0 / Z} ${H0 / Z}`);
   svgEl.style.setProperty("--z", Z);
   svgEl.style.touchAction = Z > 1.001 ? "none" : "pan-y";     // at full view, one finger scrolls the page
   svgEl.classList.toggle("zoomed", Z > 1.001);
-  zoomOut.disabled = zoomFit.disabled = Z <= 1.001; zoomIn.disabled = Z >= ZMAX - 0.001;
-  if (relayout && !relayoutQueued) {
-    relayoutQueued = true;
+  if (relayout && needLayout && !relayoutQueued) {
+    relayoutQueued = true; needLayout = false;
     requestAnimationFrame(() => { relayoutQueued = false; sizeNodes(); drawMarks(); layoutMain(); layoutCities(); placeHits(); });
   }
 }
-function zoomAt(factor, cx, cy) {
+function applyView(relayout) { clampView(); if (relayout) needLayout = true; commitView(relayout); }
+// during a gesture: show the new view by moving the drawing; the labels are laid out when it settles
+function previewView(settleMs) {
+  clampView();
+  const b = svgBox(), s = Z / cZ, k = b.width / W0;
+  const tx = (cX - viewX) * Z * k, ty = (cY - viewY) * Z * k;
+  // the picture only has what the last real view drew: when a blank edge of more than 8 % would show
+  // (panning, zooming out), or labels and lines would grow past twice their size (a long pinch), draw
+  // the view for real - one slower frame, without laying out the labels yet
+  const gap = Math.max(Math.max(0, tx, b.width - tx - s * b.width) / b.width,
+                       Math.max(0, ty, b.height - ty - s * b.height) / b.height);
+  if (gap > 0.08 || s > 2) commitView(false);
+  else { svgEl.style.willChange = "transform"; svgEl.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`; }
+  clearTimeout(settleTimer);
+  if (settleMs) settleTimer = setTimeout(() => commitView(true), settleMs);
+}
+function zoomAt(factor, cx, cy, live) {
   const nz = Math.min(ZMAX, Math.max(1, Z * factor));
   if (Math.abs(nz - Z) < 1e-4) return;
-  const r = svgEl.getBoundingClientRect();
+  const r = svgBox();
   if (cx == null) { cx = r.left + r.width / 2; cy = r.top + r.height / 2; }
   const fx = (cx - r.left) / r.width, fy = (cy - r.top) / r.height;
   const mx = viewX + fx * W0 / Z, my = viewY + fy * H0 / Z;      // the map point under the pointer stays put
   Z = nz;
   viewX = mx - fx * W0 / Z; viewY = my - fy * H0 / Z;
-  unhover(); applyView(true);
+  unhoverIfShown();
+  if (live) previewView(live === "wheel" ? 150 : 0); else applyView(true);
 }
 zoomIn.addEventListener("click", () => zoomAt(2));
 zoomOut.addEventListener("click", () => zoomAt(0.5));
@@ -1528,11 +1562,11 @@ zoomFit.addEventListener("click", () => { Z = 1; viewX = viewY = 0; unhover(); a
 svgEl.addEventListener("wheel", e => {
   if (!e.ctrlKey && e.deltaY > 0 && Z <= 1.001) return;          // nothing to zoom out: let the page scroll
   e.preventDefault();
-  zoomAt(Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0015)), e.clientX, e.clientY);
+  zoomAt(Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0015)), e.clientX, e.clientY, "wheel");
 }, { passive: false });
 svgEl.addEventListener("dblclick", e => { e.preventDefault(); zoomAt(2, e.clientX, e.clientY); });
 const pointers = new Map();
-let drag = null, pinch = null, moved = false;
+let drag = null, pinch = null, moved = false, gesture = false;
 svgEl.addEventListener("pointerdown", e => {
   if (e.pointerType === "mouse" && e.button !== 0) return;
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
@@ -1548,21 +1582,29 @@ window.addEventListener("pointermove", e => {
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   if (pinch && pointers.size >= 2) {
     const [a, b] = [...pointers.values()];
-    zoomAt(pinch.z * Math.hypot(a.x - b.x, a.y - b.y) / pinch.d / Z, (a.x + b.x) / 2, (a.y + b.y) / 2);
-    moved = true; return;
+    zoomAt(pinch.z * Math.hypot(a.x - b.x, a.y - b.y) / pinch.d / Z, (a.x + b.x) / 2, (a.y + b.y) / 2, "pinch");
+    moved = gesture = true; return;
   }
   if (!drag || Z <= 1.001) return;
   const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
   if (!moved && Math.hypot(dx, dy) < 4) return;                 // a click, not a drag (yet)
-  moved = true;
-  const r = svgEl.getBoundingClientRect();
+  moved = gesture = true;
+  const r = svgBox();
   viewX = drag.vx - dx / r.width * W0 / Z; viewY = drag.vy - dy / r.height * H0 / Z;
-  svgEl.classList.add("panning"); unhover(); applyView(false);
+  svgEl.classList.add("panning"); unhoverIfShown(); previewView(0);
 });
 const endPointer = e => {
   pointers.delete(e.pointerId);
   if (pointers.size < 2) pinch = null;
-  if (!pointers.size) { drag = null; svgEl.classList.remove("panning"); }
+  if (pointers.size === 1) {                                     // pinch -> one finger: go on panning from here
+    const [a] = [...pointers.values()];
+    drag = { x: a.x, y: a.y, vx: viewX, vy: viewY };
+  }
+  if (!pointers.size) {
+    drag = null; svgEl.classList.remove("panning");
+    // the gesture is over: set the view and lay the labels out once for what is now visible
+    if (gesture) { gesture = false; needLayout = true; commitView(true); }
+  }
 };
 window.addEventListener("pointerup", endPointer);
 window.addEventListener("pointercancel", endPointer);
