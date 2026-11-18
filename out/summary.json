@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17",
+ "generated": "2026-11-18",
  "dates": [
   "2026-11-24",
   "2026-11-27",
@@ -7,7 +7,7 @@
   "2026-11-29"
  ],
  "draft": false,
- "departures": 11700,
+ "departures": 11702,
  "warnings": 0,
  "capitals": {
   "2026-11-24": {
@@ -28,10 +28,10 @@
   }
  },
  "places_reached": {
-  "2026-11-24": 205,
-  "2026-11-27": 205,
-  "2026-11-28": 205,
-  "2026-11-29": 205
+  "2026-11-24": 207,
+  "2026-11-27": 207,
+  "2026-11-28": 207,
+  "2026-11-29": 207
  },
  "reached": {
   "capitals": [
@@ -218,6 +218,7 @@
    "Kyiv",
    "K\u00f6ln",
    "L'Hospitalet",
+   "Las Palmas",
    "Lecce",
    "Leeds",
    "Leicester",
@@ -281,6 +282,7 @@
    "Ruse",
    "Salerno",
    "San Marino",
+   "Santa Cruz de Tenerife",
    "Santiago de Compostela",
    "Sarajevo",
    "Sein\u00e4joki",
@@ -340,7 +342,7 @@
  },
  "origins": {
   "Stockholm": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -348,7 +350,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -369,10 +371,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -560,6 +562,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -623,6 +626,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",
@@ -681,7 +685,7 @@
    }
   },
   "Copenhagen": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -689,7 +693,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -710,10 +714,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -900,6 +904,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -963,6 +968,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",
@@ -1022,7 +1028,7 @@
    }
   },
   "London": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -1030,7 +1036,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -1051,10 +1057,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -1242,6 +1248,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -1304,6 +1311,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",
@@ -1363,7 +1371,7 @@
    }
   },
   "Berlin": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -1371,7 +1379,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -1392,10 +1400,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -1582,6 +1590,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -1645,6 +1654,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",
@@ -1704,7 +1714,7 @@
    }
   },
   "Paris": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -1712,7 +1722,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -1733,10 +1743,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -1924,6 +1934,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -1986,6 +1997,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",
@@ -2045,7 +2057,7 @@
    }
   },
   "Rome": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -2053,7 +2065,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -2074,10 +2086,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -2265,6 +2277,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -2327,6 +2340,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",
@@ -2386,7 +2400,7 @@
    }
   },
   "Hamburg": {
-   "generated": "2026-11-17",
+   "generated": "2026-11-18",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -2394,7 +2408,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 11700,
+   "departures": 11702,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -2415,10 +2429,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 205,
-    "2026-11-27": 205,
-    "2026-11-28": 205,
-    "2026-11-29": 205
+    "2026-11-24": 207,
+    "2026-11-27": 207,
+    "2026-11-28": 207,
+    "2026-11-29": 207
    },
    "reached": {
     "capitals": [
@@ -2607,6 +2621,7 @@
      "Kyiv",
      "K\u00f6ln",
      "L'Hospitalet",
+     "Las Palmas",
      "Lecce",
      "Leeds",
      "Leicester",
@@ -2670,6 +2685,7 @@
      "Ruse",
      "Salerno",
      "San Marino",
+     "Santa Cruz de Tenerife",
      "Santiago de Compostela",
      "Sarajevo",
      "Sein\u00e4joki",

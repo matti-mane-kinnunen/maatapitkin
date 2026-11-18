@@ -1,6 +1,6 @@
 # Journeys from Helsinki
 
-_leave Helsinki Tue 24.11.2026 from 17:00 · generated 17.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Helsinki Tue 24.11.2026 from 17:00 · generated 18.11.2026. Change 20 min (more at some stations), ferry check-in 45 min, Eurostar 60 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and ferries run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -320,6 +320,8 @@ Not reachable without night trains: Valletta, Podgorica
 | Marrakech | Sat 28.11. 12:37 | 93 h 02 min | 14 | 2 |
 | Thessaloniki | Sat 28.11. 23:10 | 101 h 35 min | 9 | 0 |
 | Chania | Sun 29.11. 07:00 | 109 h 25 min | 9 | 0 |
+| Santa Cruz de Tenerife | Sun 29.11. 20:00 | 124 h 25 min | 9 | 2 |
+| Las Palmas | Thu 3.12. 02:30 | 202 h 55 min | 9 | 5 |
 
 ## Itineraries
 
