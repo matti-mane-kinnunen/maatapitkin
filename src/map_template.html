@@ -599,7 +599,14 @@ function layoutMain() {
   placeLabel(NET.origin, mainTaken, true);
   for (const n of caps) placeLabel(n, mainTaken, true);
   for (const n of Object.keys(P).filter(n => P[n].missing)) placeLabel(n, mainTaken, false);
-  stnLabels.forEach(([t, p], k) => { if (k < STN_LABELS * Z * Z) placeLabel(null, mainTaken, false, t, p); else t.style.display = "none"; });
+  // only stations in view, and at most STN_LABELS x zoom of them tried (busiest first): with every station
+  // tried, a zoom step on a phone took ~0.8 s of layout at 4x zoom (measured 19.11.2026, D-66)
+  const m = 20 / Z, inView = p => p.x > VBOX.x - m && p.x < VBOX.x + VBOX.width + m && p.y > VBOX.y - m && p.y < VBOX.y + VBOX.height + m;
+  let tries = 0;
+  for (const [t, p] of stnLabels) {
+    if (tries < STN_LABELS * Z && inView(p)) { tries++; placeLabel(null, mainTaken, false, t, p); }
+    else t.style.display = "none";
+  }
 }
 let cityStops = new Set();
 function layoutCities(extra = null) {
@@ -1047,6 +1054,13 @@ function showCO2(r) {
     (f.rail_diesel ? T("co2_diesel", { diesel: g(f.rail_diesel) }) : "") +
     T("co2_factors_end", { bus: g(f.coach), ferry: g(f.ferry), flight: g(f.flight) });
   if (c.source_url) document.getElementById("co2-src").href = c.source_url;
+  // a second source for the train figures (US: the EPA's, D-67), linked next to the first
+  const src2 = document.getElementById("co2-src2");
+  if (c.train_source_url && !src2) {
+    const a = document.createElement("a"); a.id = "co2-src2"; a.href = c.train_source_url; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = c.train_source || c.train_source_url;
+    document.getElementById("co2-src").after(" · ", a);
+  }
   el.hidden = false;
   document.getElementById("co2-btn").addEventListener("click", e => {
     box.hidden = !box.hidden; e.currentTarget.setAttribute("aria-expanded", String(!box.hidden));

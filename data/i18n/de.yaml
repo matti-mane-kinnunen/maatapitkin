@@ -105,6 +105,8 @@ est: "ca."
 copy_link: "Link kopieren"
 bahn_check: "{from} → {to} auf bahn.de prüfen"
 bahn_title: "Öffnet die Reiseauskunft der Deutschen Bahn ab dieser Abfahrt. Sie kann andere Züge vorschlagen; Nachtzüge und Eurostar erscheinen evtl. ohne Preis."
+booking_check: "{from} → {to} auf {site} buchen (Bahnhöfe {a} → {b}, {when})"
+booking_title: "Öffnet {site}; Bahnhofscodes {a} und {b} und das Datum eingeben. Es kann andere Züge vorschlagen."
 link_copied: "Link kopiert"
 link_aria: "Link zu dieser Reise"
 # IDEA-17…20 (12.11.2026)
@@ -140,6 +142,7 @@ co2_source: "Quelle"
 co2_the_source: "die Quelle"
 co2_factors: "{src} {yr} (Elektrozug {rail}"
 co2_nordic: ", in Skandinavien {nordic}"
+co2_diesel: ", Dieselzug {diesel}"
 co2_factors_end: ", Bus {bus}, Fähre {ferry}, Flug {flight} CO₂e pro Personenkilometer)"
 
 # --- Reiseziele ---

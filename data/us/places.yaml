@@ -45,6 +45,8 @@ settings:
   co2:                       # D-67: diesel trains outside the electrified NEC / Keystone
     source: "Klimatsmart semester (Chalmers), Jörgen Larsson, method report v5.1, factors for 2026"
     source_url: "https://klimatsmartsemester.se/sa-har-vi-raknat"
+    train_source: "US EPA, GHG Emission Factors Hub"      # linked next to the source on the page
+    train_source_url: "https://www.epa.gov/climateleadership/ghg-emission-factors-hub"
     factors:                 # kg CO2e per person-km
       # trains: US EPA GHG Emission Factors Hub 2025, "Intercity Rail" (Amtrak data), per passenger-mile / 1.609344
       # (Matti 19.11.2026: carbonrecycling.co.uk/emission-factors/us/travel/intercity-rail; the 2026 Cornerstone

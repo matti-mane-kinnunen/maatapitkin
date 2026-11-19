@@ -107,6 +107,8 @@ est: "arvio"
 copy_link: "Kopioi linkki"
 bahn_check: "Tarkista {from} → {to} bahn.de:stä"
 bahn_title: "Avaa Deutsche Bahnin reittihaun tästä lähdöstä. Se voi ehdottaa muita junia; yöjunille ja Eurostarille ei aina näy hintaa."
+booking_check: "Varaa {from} → {to} sivulla {site} (asemat {a} → {b}, {when})"
+booking_title: "Avaa sivun {site}; kirjoita asemakoodit {a} ja {b} ja päivä. Se voi ehdottaa muita junia."
 link_copied: "Linkki kopioitu"
 link_aria: "Linkki tähän matkaan"
 # IDEA-17…20 (12.11.2026)
@@ -142,6 +144,7 @@ co2_source: "Lähde"
 co2_the_source: "lähde"
 co2_factors: "{src} {yr} (sähköjuna {rail}"
 co2_nordic: ", Pohjoismaissa {nordic}"
+co2_diesel: ", dieseljuna {diesel}"
 co2_factors_end: ", bussi {bus}, laiva {ferry}, lento {flight} CO₂e henkilökilometriä kohden)"
 
 # --- kohteet ---

@@ -125,6 +125,15 @@ class TestTrips(unittest.TestCase):
             self.assertEqual((k[0], k[1], times), ("Chicago", "Boston", [("09:00", "20:00")]))
 
 
+class TestStations(unittest.TestCase):
+    def test_state_from_the_basemap(self):
+        find = G.state_finder(ROOT / "data" / "us" / "basemap.geojson")
+        self.assertEqual(find(-89.364, 40.149), "IL")      # Lincoln, Illinois (Amtrak LCN)
+        self.assertEqual(find(-96.713, 40.816), "NE")      # Lincoln, Nebraska
+        self.assertEqual(find(-123.098, 49.274), "BC")     # Vancouver, BC
+        self.assertIsNone(find(-140.0, 30.0))              # the Pacific
+
+
 class TestDates(unittest.TestCase):
     def test_fmt_runs(self):
         self.assertIsNone(G.fmt_runs(set(range(7))))

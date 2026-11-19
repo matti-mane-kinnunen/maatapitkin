@@ -74,7 +74,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-64 | Nearby towns as a list, not as places on the map | 17.11.2026 | Accepted |
 | D-65 | Build and check each map in a job of its own | 17.11.2026 | Accepted |
 | D-66 | Keep the network about its present size | 18.11.2026 | Accepted |
-| D-67 | A USA map from Amtrak's and Greyhound's GTFS, as a network of its own | 19.11.2026 | Open (plan agreed, being built) |
+| D-67 | A USA map from Amtrak's and Greyhound's GTFS, as a network of its own | 19.11.2026 | Accepted (live 19.11.2026) |
 
 ---
 
@@ -1407,7 +1407,7 @@ test). The limits are a guide, not a hard check; revisit them if FIX-20 leaves a
 ---
 
 ## D-67 A USA map from Amtrak's and Greyhound's GTFS, as a network of its own
-**Date:** 19.11.2026 · **Status:** Open (plan agreed with Matti 19.11.2026; settle when the first map is built)
+**Date:** 19.11.2026 · **Status:** Accepted – the US map went live 19.11.2026 (weekly workflow ran fine on GitHub)
 
 **Context.** IDEA-25 (Matti): the same kind of map for the United States. His experiment (18.11.2026) ran
 timetable_kit (github.com/neroden/timetable_kit, AGPL) on Amtrak's GTFS feed (valid 19.11.2026–15.11.2027):
@@ -1490,7 +1490,19 @@ addresses (Flix: https, else http), unzip into amtrak_source_data_for_git_to_ign
 (check_pages.py out/site/us – booking links checked too; check_router.mjs out/us out/site/us; check_build.py
 --summary out/us/summary.json). The publish job takes its artifact and holds the update back if the US map failed
 – publishing without it would drop us/ from the site. It commits data/us/legs.yaml, map_layers.json and out/us/.
-Not run on GitHub yet: whether the runners can reach content.amtrak.com and gtfs.gis.flix.tech is unchecked.
+Ran fine on GitHub 19.11.2026 (Matti): the runners reach both feeds.
+
+**Polish (19.11.2026).**
+- Flix times are UTC: checked – FlixBus Chicago 09:00 → Madison 12:45 and 12:30 → 15:35/15:50 local, as listed by
+  Omio, CheckMyBus and Busbud for the same buses; the import gives 09:00 and 12:30.
+- Station names that clash with a place or another station get their state from the basemap outlines
+  ("Lincoln, IL" next to Lincoln, Nebraska); Vancouver WA set by hand (on the state line).
+- Phone zoom (D-66): iPhone emulation, CPU 4× slower, a zoom step's long tasks: Europe (Helsinki) 540–690 ms, US
+  before 550–1,400 ms – every station label was tried, ~800 ms at 4× zoom. Now only stations in view and at most
+  25 × zoom are tried: US 210–370 ms.
+- legs.yaml has `window: {from, to}`; the page's "valid until" is its last day. US preview picture
+  data/us/static/preview-chicago.png. The EPA is linked next to Chalmers in the CO₂ box. booking_* and co2_diesel
+  translated.
 
 ---
 

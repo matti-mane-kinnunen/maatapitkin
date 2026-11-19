@@ -105,6 +105,8 @@ est: "anslået"
 copy_link: "Kopiér link"
 bahn_check: "Tjek {from} → {to} på bahn.de"
 bahn_title: "Åbner Deutsche Bahns rejseplanlægger ved denne afgang. Den kan foreslå andre tog; nattog og Eurostar vises måske uden pris."
+booking_check: "Book {from} → {to} på {site} (stationer {a} → {b}, {when})"
+booking_title: "Åbner {site}; skriv stationskoderne {a} og {b} og datoen. Den kan foreslå andre tog."
 link_copied: "Linket er kopieret"
 link_aria: "Link til denne rejse"
 # IDEA-17…20 (12.11.2026)
@@ -140,6 +142,7 @@ co2_source: "Kilde"
 co2_the_source: "kilden"
 co2_factors: "{src} {yr} (eltog {rail}"
 co2_nordic: ", i Norden {nordic}"
+co2_diesel: ", dieseltog {diesel}"
 co2_factors_end: ", bus {bus}, færge {ferry}, fly {flight} CO₂e pr. personkilometer)"
 
 # --- rejsemål ---

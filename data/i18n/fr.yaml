@@ -105,6 +105,8 @@ est: "env."
 copy_link: "Copier le lien"
 bahn_check: "Vérifier {from} → {to} sur bahn.de"
 bahn_title: "Ouvre la recherche d’itinéraires de la Deutsche Bahn à partir de ce départ. Elle peut proposer d’autres trains ; les trains de nuit et l’Eurostar peuvent s’afficher sans prix."
+booking_check: "Réserver {from} → {to} sur {site} (gares {a} → {b}, {when})"
+booking_title: "Ouvre {site} ; saisissez les codes de gare {a} et {b} et la date. Il peut proposer d’autres trains."
 link_copied: "Lien copié"
 link_aria: "Lien vers ce voyage"
 # IDEA-17…20 (12.11.2026)
@@ -136,6 +138,7 @@ co2_source: "Source"
 co2_the_source: "la source"
 co2_factors: "{src} {yr} (train électrique {rail}"
 co2_nordic: ", dans les pays nordiques {nordic}"
+co2_diesel: ", train diesel {diesel}"
 co2_factors_end: ", bus {bus}, ferry {ferry}, avion {flight} CO₂e par passager-km)"
 
 # --- destinations list ---

@@ -720,6 +720,8 @@ def valid_until(net, s: dict, start_date: dt.date) -> dt.date:
     """The last day the timetables hold: the day before the next European timetable change (D-52), or
     with `timetable_change: legs` (US, imported from GTFS for a window of days) the last day any leg runs."""
     if s.get("timetable_change") == "legs":
+        if net.window and net.window.get("to"):           # the last imported day (gtfs_import.py)
+            return dt.date.fromisoformat(str(net.window["to"]))
         ends = [l.valid_to for l in net.legs if l.valid_to]
         if ends:
             return max(ends)

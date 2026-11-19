@@ -120,6 +120,7 @@ class Network:
     legs: list[Leg]
     settings: dict
     not_covered: dict = field(default_factory=dict)
+    window: dict | None = None      # legs.yaml `window: {from, to}`: the days a GTFS import covers (US, D-67)
 
     @property
     def capitals(self) -> list[str]:
@@ -182,7 +183,7 @@ def load(data_dir: Path) -> tuple[Network, list[str]]:
             legs.append(leg)
         if r.get("issue"):
             warnings.append(f"{r['from']} -> {r['to']} ({r.get('service', '')}): {r['issue']}")
-    return Network(places, legs, pl.get("settings", {}), pl.get("not_yet_covered", {})), warnings
+    return Network(places, legs, pl.get("settings", {}), pl.get("not_yet_covered", {}), lg.get("window")), warnings
 
 
 class Router:
