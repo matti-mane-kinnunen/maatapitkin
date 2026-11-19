@@ -1,19 +1,37 @@
 {
  "generated": "2026-11-19",
  "dates": [
-  "2026-12-08"
+  "2026-11-24",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29"
  ],
  "draft": false,
- "departures": 12175,
+ "departures": 12459,
  "warnings": 0,
  "capitals": {
-  "2026-12-08": {
+  "2026-11-24": {
+   "with_night_trains": 44,
+   "without": 14
+  },
+  "2026-11-27": {
+   "with_night_trains": 44,
+   "without": 14
+  },
+  "2026-11-28": {
+   "with_night_trains": 44,
+   "without": 14
+  },
+  "2026-11-29": {
    "with_night_trains": 44,
    "without": 14
   }
  },
  "places_reached": {
-  "2026-12-08": 58
+  "2026-11-24": 58,
+  "2026-11-27": 58,
+  "2026-11-28": 58,
+  "2026-11-29": 58
  },
  "reached": {
   "capitals": [
