@@ -702,7 +702,21 @@ def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: di
                      "quiet": f"{fmt_clock(router.quiet[0])}–{fmt_clock(router.quiet[1])}",
                      "start": s.get("start_time", "00:00"),
                      "morning": fmt_clock(router.morning)}, "warnings": warnings,
+        "layers": map_layers(legs_json),
     }
+
+
+def map_layers(legs_json: list) -> dict | None:
+    """The rail-map layers of a network that has them (data/<network>/map_layers.json, written by
+    gtfs_import.py, IDEA-25): the track of each connection the map draws, every rail line, the
+    stations. make_map.py projects them."""
+    f = DATA / "map_layers.json"
+    if not f.exists():
+        return None
+    lay = json.loads(f.read_text())
+    drawn = {f"{l['from']}>{l['to']}" for l in legs_json} | {f"{l['to']}>{l['from']}" for l in legs_json}
+    lay["geom"] = {k: v for k, v in lay.get("geom", {}).items() if k in drawn}   # the page reverses a track if needed
+    return lay
 
 
 def summary_of(net, warnings: list, cfg: dict, today: dt.date, dates: list, variants: dict) -> dict:

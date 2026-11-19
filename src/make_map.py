@@ -78,6 +78,11 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
         p["x"], p["y"] = project(p["lon"], p["lat"])
     for p in net["not_covered"].values():
         p["missing"] = True
+    lay = net.pop("layers", None)                            # rail-map layers (IDEA-25), in map units
+    if lay:
+        net["geom"] = {k: [c for lon, lat in pts for c in project(lon, lat)] for k, pts in lay.get("geom", {}).items()}
+        net["rail"] = "".join("M" + "L".join("%s,%s" % project(lon, lat) for lon, lat in line) for line in lay.get("rail", []))
+        net["stations"] = [[n, *project(lon, lat), r] for n, lon, lat, r in lay.get("stations", [])]
     w, h = size()
     lang = net.get("lang") or "en"
     tx = i18n.texts(lang)                                     # page texts in the map's language (IDEA-13)

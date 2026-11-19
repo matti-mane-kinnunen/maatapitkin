@@ -272,7 +272,12 @@ def import_feed(cfg: dict, places: dict, first: dt.date, last: dt.date, report: 
                 cand = (arr_s - dep_s, arr_s, a["stop_id"], b["stop_id"], dep_s)
                 if (pa, pb) not in best or cand < best[(pa, pb)]:
                     best[(pa, pb)] = cand
+        geom = report.setdefault("geom", {})
         for (pa, pb), (_, arr_s, sa, sb, dep_s) in best.items():
+            if trip.get("shape_id"):                     # candidate tracks; trains first (see map_layers)
+                cand = geom.setdefault((pa, pb), [])
+                if len(cand) < 6 and all(c[1] != trip["shape_id"] for c in cand):
+                    cand.append((cfg["name"], trip["shape_id"], sa, sb, mode))
             for day in dates:
                 dep = moment(day, dep_s, atz).astimezone(stop_tz[sa])
                 arr = moment(day, arr_s, atz).astimezone(stop_tz[sb])
@@ -364,6 +369,138 @@ def to_yaml(entries: dict, origin: str, header: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+# --- the map's rail-map layers (IDEA-25 prototype): track shapes, the network, the stations ----
+def simplify(pts: list, tol: float) -> list:
+    """Douglas-Peucker on [lon, lat] points (tolerance in degrees), iterative."""
+    if len(pts) < 3:
+        return pts
+    keep = [False] * len(pts)
+    keep[0] = keep[-1] = True
+    stack = [(0, len(pts) - 1)]
+    while stack:
+        i, j = stack.pop()
+        (x1, y1), (x2, y2) = pts[i], pts[j]
+        dx, dy = x2 - x1, y2 - y1
+        n2 = dx * dx + dy * dy
+        best, bk = -1.0, -1
+        for k in range(i + 1, j):
+            x, y = pts[k]
+            if n2 == 0:
+                d = (x - x1) ** 2 + (y - y1) ** 2
+            else:
+                t = max(0.0, min(1.0, ((x - x1) * dx + (y - y1) * dy) / n2))
+                d = (x - x1 - t * dx) ** 2 + (y - y1 - t * dy) ** 2
+            if d > best:
+                best, bk = d, k
+        if bk > 0 and best > tol * tol:
+            keep[bk] = True
+            stack += [(i, bk), (bk, j)]
+    return [p for p, k in zip(pts, keep) if k]
+
+
+def read_shapes(feed: Feed, wanted: set | None = None) -> dict[str, list]:
+    pts: dict[str, list] = defaultdict(list)
+    for r in feed.rows("shapes.txt"):
+        if wanted is None or r["shape_id"] in wanted:
+            pts[r["shape_id"]].append((int(r["shape_pt_sequence"]), float(r["shape_pt_lon"]), float(r["shape_pt_lat"])))
+    return {k: [[x, y] for _, x, y in sorted(v)] for k, v in pts.items()}
+
+
+def cut(shape: list, a: tuple, b: tuple, max_off: float = 0.15) -> list:
+    """The part of a shape between the points nearest to stop a and (after it) stop b; nothing if
+    the shape does not pass within max_off degrees (~15 km) of both - some Flix shapes cover only
+    part of the trip, and a straight jump to them looks worse than the plain arc."""
+    if not shape:
+        return []
+    d2 = lambda i, p: (shape[i][0] - p[0]) ** 2 + (shape[i][1] - p[1]) ** 2
+    i = min(range(len(shape)), key=lambda k: d2(k, a))
+    j = min(range(i, len(shape)), key=lambda k: d2(k, b))
+    if j <= i or d2(i, a) > max_off ** 2 or d2(j, b) > max_off ** 2:
+        return []
+    return shape[i:j + 1]
+
+
+def r3(pts: list) -> list:
+    return [[round(x, 3), round(y, 3)] for x, y in pts]
+
+
+def map_layers(places: dict, report: dict, feeds=FEEDS, tol: float = 0.01) -> dict:
+    """{geom: {"A>B": [[lon, lat], ...]}, rail: [polyline, ...], stations: [[name, lon, lat, rank], ...]}
+    - geom: the track (or road) of each connection, cut from the shape of a trip that makes it
+    - rail: every Amtrak train route, once - shapes snapped to a 0.01 degree grid so shared track
+      is drawn one time, then joined back into lines
+    - stations: Amtrak train stations that are not places, with the number of trips calling (labels
+      go to the busiest first)"""
+    by_feed = {c["name"]: c for c in feeds}
+    out: dict = {"geom": {}, "rail": [], "stations": []}
+    stops_xy = {}
+    for name, c in by_feed.items():
+        f = Feed(c["path"])
+        for s in f.rows("stops.txt"):
+            stops_xy[(name, s["stop_id"])] = (float(s["stop_lon"]), float(s["stop_lat"]))
+    want = defaultdict(set)
+    for cands in report.get("geom", {}).values():
+        for fname, sid, *_ in cands:
+            want[fname].add(sid)
+    shapes = {fname: read_shapes(Feed(by_feed[fname]["path"]), ids) for fname, ids in want.items()}
+    for (pa, pb), cands in report.get("geom", {}).items():
+        for fname, sid, sa, sb, mode in sorted(cands, key=lambda c: c[4] != "train"):   # a train's track first
+            part = cut(shapes[fname].get(sid, []), stops_xy[(fname, sa)], stops_xy[(fname, sb)])
+            if len(part) >= 2:
+                out["geom"][f"{pa}>{pb}"] = r3(simplify(part, tol))
+                break
+    # the whole Amtrak train network
+    am = Feed(by_feed["amtrak"]["path"])
+    routes = {r["route_id"]: r for r in am.rows("routes.txt")
+              if r["route_type"] == "2" and r.get("agency_id") not in by_feed["amtrak"]["skip_agencies"]}
+    trips = {t["trip_id"]: t for t in am.rows("trips.txt") if t["route_id"] in routes}
+    sids = {t["shape_id"] for t in trips.values() if t.get("shape_id")}
+    grid = lambda p: (round(p[0] * 100), round(p[1] * 100))
+    edges: set = set()
+    for pts in read_shapes(am, sids).values():
+        g = [grid(p) for p in pts]
+        g = [q for k, q in enumerate(g) if k == 0 or q != g[k - 1]]
+        for u, v in zip(g, g[1:]):
+            edges.add((u, v) if u < v else (v, u))
+    adj = defaultdict(set)
+    for u, v in edges:
+        adj[u].add(v)
+        adj[v].add(u)
+    used = set()
+    def walk(u, v):
+        line = [u, v]
+        used.add((u, v) if u < v else (v, u))
+        while len(adj[v]) == 2:
+            w = next(x for x in adj[v] if x != line[-2])
+            e = (v, w) if v < w else (w, v)
+            if e in used:
+                break
+            used.add(e)
+            line.append(w)
+            v = w
+        return line
+    for u in sorted(adj, key=lambda n: len(adj[n]) == 2):         # start at ends and junctions
+        for v in sorted(adj[u]):
+            if ((u, v) if u < v else (v, u)) not in used:
+                line = walk(u, v)
+                out["rail"].append(r3(simplify([[x / 100, y / 100] for x, y in line], tol)))
+    # stations: Amtrak stops that trains call at, not already a place
+    taken = {str(c) for v in places.values() for c in v.get("amtrak") or []}
+    calls = defaultdict(int)
+    for st in am.rows("stop_times.txt"):
+        if st["trip_id"] in trips:
+            calls[st["stop_id"]] += 1
+    for s in am.rows("stops.txt"):
+        if s["stop_id"] in calls and s["stop_id"] not in taken and "Border" not in s["stop_name"]:
+            name = s["stop_name"]
+            for suffix in (" Amtrak Station", " Amtrak Bus Stop", " Amtrak", " Union Station", " Station"):
+                if name.endswith(suffix):
+                    name = name[: -len(suffix)]
+            out["stations"].append([name.strip(), round(float(s["stop_lon"]), 3), round(float(s["stop_lat"]), 3), calls[s["stop_id"]]])
+    out["stations"].sort(key=lambda x: -x[3])
+    return out
+
+
 def feed_version(path: Path) -> str:
     f = Feed(path)
     for r in f.rows("feed_info.txt"):
@@ -412,7 +549,11 @@ def main(argv=None):
     reached = {k[1] for k in entries} | {k[0] for k in entries}
     missing = [p for p, v in places.items() if v.get("capital") and p not in reached]
     print(f"  capitals with no leg: {', '.join(missing) or 'none'}")
+    layers = map_layers(places, report)
+    print(f"  map layers: {len(layers['geom'])} connections with a track, {len(layers['rail'])} rail lines "
+          f"({sum(len(l) for l in layers['rail'])} points), {len(layers['stations'])} other stations")
     if not args.dry_run:
+        (data / "map_layers.json").write_text(json.dumps(layers, separators=(",", ":")) + "\n")
         (data / "legs.yaml").write_text(text)
         print(f"wrote {data / 'legs.yaml'} ({len(text.splitlines())} lines)")
 
