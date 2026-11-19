@@ -31,11 +31,11 @@ _leave Chicago Tue 24.11.2026 from 06:00 · generated 19.11.2026. Change 60 min 
 | Baton Rouge | Tue 24.11. 20:05 | Wed 25.11. 18:05 | 22 h 00 min | 1 | 1 | 0 |  |
 | Raleigh | Tue 24.11. 18:40 | Wed 25.11. 19:41 | 24 h 01 min | 0 | 1 | 0 |  |
 | Austin | Tue 24.11. 14:10 | Wed 25.11. 19:07 | 28 h 57 min | 0 | 1 | 0 |  |
+| Hartford | Tue 24.11. 21:30 | Wed 25.11. 20:11 | 21 h 41 min | 1 | 1 | 0 |  |
 | Tallahassee | Tue 24.11. 06:10 | Wed 25.11. 20:15 | 37 h 05 min | 1 | 0 | 1 (Nashville) | fewest hotel nights: 36 h 00 min, 2 ch., 0 hotel |
 | Dover | Tue 24.11. 18:40 | Wed 25.11. 20:20 | 24 h 40 min | 2 | 1 | 0 | fewest changes: 28 h 00 min, 1 ch., 0 hotel |
 | Boston | Tue 24.11. 21:30 | Wed 25.11. 20:24 | 21 h 54 min | 0 | 1 | 0 |  |
 | Providence | Tue 24.11. 18:40 | Wed 25.11. 21:10 | 25 h 30 min | 1 | 1 | 0 |  |
-| Hartford | Tue 24.11. 18:40 | Wed 25.11. 21:48 | 26 h 08 min | 1 | 1 | 0 |  |
 | Oklahoma City | Tue 24.11. 14:10 | Wed 25.11. 21:27 | 31 h 17 min | 1 | 1 | 0 |  |
 | Columbia | Tue 24.11. 18:40 | Thu 26.11. 00:25 | 28 h 45 min | 0 | 1 | 0 |  |
 | Salt Lake City | Tue 24.11. 14:00 | Wed 25.11. 23:15 | 34 h 15 min | 0 | 1 | 0 |  |
@@ -103,11 +103,11 @@ Not reachable without night trains: Washington, Little Rock, Phoenix, Sacramento
 | Baton Rouge | Tue 24.11. 20:05 | Wed 25.11. 18:05 | 22 h 00 min | same arrival |
 | Raleigh | Tue 24.11. 18:40 | Wed 25.11. 19:41 | 24 h 01 min | same arrival |
 | Austin | Tue 24.11. 14:10 | Wed 25.11. 19:07 | 28 h 57 min | same arrival |
+| Hartford | Tue 24.11. 21:30 | Wed 25.11. 20:11 | 21 h 41 min | same arrival |
 | Tallahassee | Tue 24.11. 13:00 | Wed 25.11. 20:15 | 30 h 15 min | same arrival |
 | Dover | Tue 24.11. 18:40 | Wed 25.11. 20:20 | 24 h 40 min | same arrival |
 | Boston | Tue 24.11. 21:30 | Wed 25.11. 20:24 | 21 h 54 min | same arrival |
 | Providence | Tue 24.11. 18:40 | Wed 25.11. 21:10 | 25 h 30 min | same arrival |
-| Hartford | Tue 24.11. 18:40 | Wed 25.11. 21:48 | 26 h 08 min | same arrival |
 | Oklahoma City | Tue 24.11. 14:10 | Wed 25.11. 21:27 | 31 h 17 min | same arrival |
 | Columbia | Tue 24.11. 18:40 | Thu 26.11. 00:25 | 28 h 45 min | same arrival |
 | Salt Lake City | Tue 24.11. 14:00 | Wed 25.11. 23:15 | 34 h 15 min | same arrival |
@@ -125,20 +125,45 @@ Not reachable without night trains: Washington, Little Rock, Phoenix, Sacramento
 
 | City | Arrive | Door to door | Changes | Hotel nights |
 |---|---|---|---|---|
+| Milwaukee | Tue 24.11. 07:39 | 1 h 29 min | 0 | 0 |
 | St. Louis | Tue 24.11. 12:01 | 4 h 46 min | 0 | 0 |
+| Quincy | Tue 24.11. 12:02 | 4 h 22 min | 0 | 0 |
+| Pontiac | Tue 24.11. 14:21 | 6 h 36 min | 0 | 0 |
+| Carbondale | Tue 24.11. 13:45 | 5 h 30 min | 0 | 0 |
 | Kansas City | Tue 24.11. 20:51 | 11 h 01 min | 0 | 0 |
+| Port Huron | Tue 24.11. 23:31 | 6 h 31 min | 0 | 0 |
+| Grand Rapids | Tue 24.11. 23:34 | 4 h 04 min | 0 | 0 |
 | Pittsburgh | Wed 25.11. 05:05 | 9 h 25 min | 0 | 0 |
 | Philadelphia | Wed 25.11. 14:37 | 18 h 57 min | 1 | 0 |
 | Fort Worth | Wed 25.11. 13:45 | 23 h 35 min | 0 | 0 |
 | Lamy | Wed 25.11. 12:49 | 24 h 19 min | 0 | 0 |
 | New York | Wed 25.11. 16:43 | 21 h 03 min | 1 | 0 |
 | New Orleans | Wed 25.11. 15:47 | 19 h 42 min | 0 | 0 |
+| Springfield, MA | Wed 25.11. 17:49 | 19 h 19 min | 0 | 0 |
+| Norfolk | Wed 25.11. 19:09 | 23 h 29 min | 1 | 0 |
 | New Haven | Wed 25.11. 19:25 | 23 h 45 min | 2 | 0 |
+| Newport News | Wed 25.11. 20:09 | 24 h 29 min | 1 | 0 |
+| Burlington | Wed 25.11. 21:26 | 22 h 56 min | 1 | 0 |
+| Roanoke | Wed 25.11. 22:13 | 26 h 33 min | 1 | 0 |
+| Mobile | Wed 25.11. 21:14 | 25 h 09 min | 1 | 0 |
+| Niagara Falls | Wed 25.11. 22:28 | 23 h 58 min | 1 | 0 |
+| San Antonio | Wed 25.11. 22:46 | 32 h 36 min | 0 | 0 |
+| Brunswick | Thu 26.11. 01:45 | 27 h 15 min | 1 | 0 |
+| Charlotte | Thu 26.11. 02:30 | 30 h 50 min | 1 | 0 |
+| Savannah | Thu 26.11. 03:18 | 31 h 38 min | 0 | 0 |
 | Los Angeles | Thu 26.11. 07:27 | 43 h 57 min | 0 | 0 |
 | Portland | Thu 26.11. 11:17 | 46 h 12 min | 0 | 0 |
 | Seattle | Thu 26.11. 11:29 | 46 h 24 min | 0 | 0 |
+| San Diego | Thu 26.11. 13:07 | 49 h 37 min | 1 | 0 |
+| San Luis Obispo | Thu 26.11. 14:37 | 51 h 07 min | 1 | 0 |
+| Miami | Thu 26.11. 18:09 | 46 h 29 min | 0 | 0 |
 | Emeryville | Thu 26.11. 16:57 | 52 h 57 min | 0 | 0 |
+| Eugene | Thu 26.11. 17:08 | 52 h 03 min | 1 | 0 |
+| Montreal | Thu 26.11. 20:16 | 45 h 46 min | 1 | 1 |
+| St. Albans | Thu 26.11. 20:50 | 49 h 10 min | 1 | 1 |
+| San Jose | Thu 26.11. 19:46 | 56 h 16 min | 1 | 0 |
 | Maricopa | Thu 26.11. 22:30 | 64 h 15 min | 2 | 0 |
+| Vancouver | Thu 26.11. 23:00 | 56 h 55 min | 1 | 0 |
 
 ## Itineraries
 
@@ -294,6 +319,13 @@ _Fastest: 28 h 57 min, arrive Wed 25.11. 19:07, 0 changes, 0 hotel nights_
 
 - Tue 24.11. 14:10 → Wed 25.11. 19:07  **Chicago → Austin**  Texas Eagle 21  (night)
 
+### Hartford
+_Fastest: 21 h 41 min, arrive Wed 25.11. 20:11, 1 changes, 0 hotel nights_
+
+- Tue 24.11. 21:30 → Wed 25.11. 17:49  **Chicago → Springfield, MA**  Lake Shore Limited 448  (night)
+- Wait 1 h 51 min in Springfield, MA
+- Wed 25.11. 19:40 → Wed 25.11. 20:11  **Springfield, MA → Hartford**  Valley Flyer 479
+
 ### Tallahassee
 _Fastest: 37 h 05 min, arrive Wed 25.11. 20:15, 1 changes, 1 hotel nights_
 
@@ -337,13 +369,6 @@ _Fastest: 25 h 30 min, arrive Wed 25.11. 21:10, 1 changes, 0 hotel nights_
 - Tue 24.11. 18:40 → Wed 25.11. 13:10  **Chicago → Washington**  Floridian 41  (night)
 - Wait 1 h 40 min in Washington
 - Wed 25.11. 14:50 → Wed 25.11. 21:10  **Washington → Providence**  Acela 2160
-
-### Hartford
-_Fastest: 26 h 08 min, arrive Wed 25.11. 21:48, 1 changes, 0 hotel nights_
-
-- Tue 24.11. 18:40 → Wed 25.11. 13:10  **Chicago → Washington**  Floridian 41  (night)
-- Wait 1 h 45 min in Washington
-- Wed 25.11. 14:55 → Wed 25.11. 21:48  **Washington → Hartford**  Northeast Regional 148
 
 ### Oklahoma City
 _Fastest: 31 h 17 min, arrive Wed 25.11. 21:27, 1 changes, 0 hotel nights_
