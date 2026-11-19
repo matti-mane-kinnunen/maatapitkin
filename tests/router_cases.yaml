@@ -51,6 +51,25 @@
   places: {B: {ferry_checkin: 30}}
   expect: ["day 1 12:00", 1, 0]
 
+- name: bus_transfer - a change to a bus takes 45 min where the train change takes 60 (US, D-67)
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "10:40", arr: "10:55", service: G1, mode: bus}
+    - {from: B, to: C, dep: "10:50", arr: "11:10", service: G2, mode: bus}
+    - {from: B, to: C, dep: "10:55", arr: "11:05", service: T2}
+  settings: {min_transfer: 60, bus_transfer: 45}
+  expect: ["day 1 11:10", 1, 0]
+  departures: ["day 1 08:00", "day 1 10:50"]
+
+- name: bus_transfer - a place's own (Lamy - Amtrak's bus waits for the train)
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "10:10", arr: "10:40", service: G1, mode: bus}
+    - {from: B, to: C, dep: "11:00", arr: "11:20", service: G2, mode: bus}
+  settings: {min_transfer: 60, bus_transfer: 45}
+  places: {B: {bus_transfer: 10}}
+  expect: ["day 1 10:40", 1, 0]
+
 - name: Eurostar check-in 60 min
   legs:
     - {from: A, to: B, dep: "08:00", arr: "10:00", service: T}

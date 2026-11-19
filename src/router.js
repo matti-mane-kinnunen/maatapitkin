@@ -113,6 +113,7 @@ class Router {
     this.minTransfer = parseInt(opt.minTransfer ?? s.min_transfer ?? 10, 10);
     this.ferryCheckin = parseInt(s.ferry_checkin ?? 30, 10);
     this.eurostarCheckin = parseInt(s.eurostar_checkin ?? 45, 10);
+    this.busTransfer = s.bus_transfer != null ? parseInt(s.bus_transfer, 10) : null;   // D-67; unset = min_transfer
     this.nightPoint = hm(s.night_point ?? "03:00");
     this.morning = hm(s.morning_departure ?? "07:00");
     this.minStay = hm(s.min_hotel_stay ?? "0:00");
@@ -136,6 +137,8 @@ class Router {
     const here = this.net.places[place] || {};
     if (nxt.mode === "ferry") return parseInt(here.ferry_checkin ?? this.ferryCheckin, 10);
     if (nxt.eurostar) return this.eurostarCheckin;
+    if ((incoming.mode === "bus" || nxt.mode === "bus") && ("bus_transfer" in here || this.busTransfer !== null))
+      return parseInt(here.bus_transfer ?? this.busTransfer, 10);
     return "min_transfer" in here ? parseInt(here.min_transfer, 10) : this.minTransfer;
   }
   morningAt(place) {

@@ -23,6 +23,9 @@ from types import SimpleNamespace
 import yaml
 
 ROOT = Path(__file__).parent
+# the network's folders: data/ and out/ (Europe), or data/<network>/ and out/<network>/ with network=us (D-67)
+DATA = ROOT / "data"
+OUT = ROOT / "out"
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, TZ, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
 from co2 import CO2  # noqa: E402
@@ -62,16 +65,24 @@ def main():
                          "into out/summary.json - the weekly workflow builds each map in a job of its own")
     ap.add_argument("--only", metavar="ORIGIN",
                     help="build only the map from this origin (quicker for testing; summary.json is not written)")
+    ap.add_argument("--network", metavar="NAME",
+                    help="build another network: data/NAME/ -> out/NAME/ (e.g. network=us, D-67; default: data/ -> out/)")
     ap.add_argument("--night", metavar="T",
                     help="time the night begins, 24 h: 01, 1, 0100 or 01:00 (default: settings.night_point)")
     # accept key=value as well as --key value
     argv = [f"--{a}" if re.fullmatch(r"[a-z][a-z-]*=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
 
+    global DATA, OUT
+    if args.network:
+        DATA, OUT = ROOT / "data" / args.network, ROOT / "out" / args.network
+        if not (DATA / "places.yaml").exists():
+            ap.error(f"network: no {DATA / 'places.yaml'}")
+        OUT.mkdir(parents=True, exist_ok=True)
     if args.merge:
         merge_summaries()
         return
-    net, warnings = load(ROOT / "data")
+    net, warnings = load(DATA)
     if args.transfer is not None:
         if args.transfer < 0:
             ap.error("transfer must be 0 or more minutes")
@@ -124,7 +135,7 @@ def main():
         results = [_build_job((i, parts[i])) for i in range(len(jobs_list))]
     # each map's summary as a part (out/parts/), joined into out/summary.json - the same file whether
     # every map was built here or each in a job of its own (the weekly workflow, FIX-17)
-    parts_dir = ROOT / "out" / "parts"
+    parts_dir = OUT / "parts"
     parts_dir.mkdir(parents=True, exist_ok=True)
     for origin, summ in results:
         (parts_dir / f"summary-{slugify(origin)}.json").write_text(json.dumps(summ, indent=1) + "\n")
@@ -138,8 +149,8 @@ def main():
 def merge_summaries() -> None:
     """out/summary.json from the maps built one by one (FIX-17): the first origin in places.yaml at
     the top level, the others under "origins" - the same as a build of every map at once."""
-    origins = list((yaml.safe_load((ROOT / "data" / "places.yaml").read_text())["settings"].get("origins") or {}))
-    parts = ROOT / "out" / "parts"
+    origins = list((yaml.safe_load((DATA / "places.yaml").read_text())["settings"].get("origins") or {}))
+    parts = OUT / "parts"
     summaries = {}
     for o in origins:
         f = parts / f"summary-{slugify(o)}.json"
@@ -148,7 +159,7 @@ def merge_summaries() -> None:
         summaries[o] = json.loads(f.read_text())
     first, *others = summaries
     summary = dict(summaries[first], origins={o: summaries[o] for o in others})
-    (ROOT / "out" / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
+    (OUT / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
     print(f"out/summary.json from {len(summaries)} maps")
 
 
@@ -157,7 +168,7 @@ def write_router_data(net) -> Path:
     file, not JSON, so the page can load it with a <script> tag - also from a local file, where
     fetch() is not allowed. tests/check_router.mjs reads the same file."""
     from router_data import export
-    site = ROOT / "out" / "site"
+    site = OUT / "site"
     site.mkdir(parents=True, exist_ok=True)
     path = site / "router-data.js"
     path.write_text("self.MP_ROUTER_DATA=" + json.dumps(export(net), ensure_ascii=False, separators=(",", ":")) + ";\n")
@@ -246,7 +257,7 @@ def next_timetable_change(day: dt.date) -> dt.date:
 def local_names(lang: str, places: dict) -> dict:
     """{key: name to show} for one map's language (data/names.yaml, D-50): the language's own
     name, else `all`, else the key itself (left out). Routing, links and data keep the keys."""
-    f = ROOT / "data" / "names.yaml"
+    f = DATA / "names.yaml"
     names = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
     out = {}
     for key, v in names.items():
@@ -261,7 +272,7 @@ def nearby_places(places: dict) -> dict:
     """{hub: [{name, by, time, every?|daily?, aliases?}, ...]} from data/nearby.yaml (IDEA-24, D-64):
     towns a short hop from a place on the map, shown in its itinerary, tooltip and search but not
     routed. Entries with an unknown hub or a malformed time are left out (with a message)."""
-    f = ROOT / "data" / "nearby.yaml"
+    f = DATA / "nearby.yaml"
     data = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
     out = {}
     for hub, items in data.items():
@@ -288,7 +299,7 @@ def wiki_texts(lang: str, places: dict) -> dict:
     """{key: {text, source, url}} for one map's language (IDEA-22): data/wiki/<lang>.yaml, written
     by fetch_wiki.py, with data/wiki/overrides.yaml (<lang>: {place: {...}}) on top. Read only -
     the build never fetches. Only plain fields are passed; the page shows the text as text."""
-    d = ROOT / "data" / "wiki"
+    d = DATA / "wiki"
     f, o = d / f"{lang}.yaml", d / "overrides.yaml"
     texts = (yaml.safe_load(f.read_text()) or {}) if f.exists() else {}
     over = ((yaml.safe_load(o.read_text()) or {}).get(lang) or {}) if o.exists() else {}
@@ -717,7 +728,7 @@ def origin_context(net, args, ap, origin: str, cfg: dict) -> SimpleNamespace:
     start_date = first_travel_date(args, s, today)
     version = (f"leave {origin} {start_date:%a %-d.%-m.%Y} from {s.get('start_time', '00:00')}"
                f" · generated {today:%-d.%-m.%Y}")
-    outdir = ROOT / "out"
+    outdir = OUT
     outdir.mkdir(exist_ok=True)
 
     start = hm(s.get("start_time", "00:00"))
@@ -772,7 +783,7 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
         ensure_ascii=False, indent=1))
 
     import make_map
-    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin)
+    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin, data=DATA, out=OUT)
 
     stats = journeys.stats
     print(f"From {origin}: main journeys {t_main:.0f} s; other start times {t_other:.0f} s "

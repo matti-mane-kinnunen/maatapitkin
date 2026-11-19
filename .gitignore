@@ -18,3 +18,8 @@ out/parts/
 
 # GTFS feeds downloaded by hand (Amtrak, Flix/Greyhound US) - IDEA-25
 /amtrak_source_data_for_git_to_ignore/
+# other networks (build.py network=us, D-67): same as out/ above
+out/*/site/
+out/*/map.html
+out/*/network*.json
+out/*/parts/

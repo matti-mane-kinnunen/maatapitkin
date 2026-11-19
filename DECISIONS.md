@@ -1467,6 +1467,14 @@ tests/test_gtfs_import.py. Found on the way:
   2 MB, mostly because a train whose times change on some dates becomes one-day entries. A `dates:` field in
   legs.yaml would shrink it.
 
+**Settled with Matti 19.11.2026.** data/us/legs.yaml is committed (as data/legs.yaml, D-02). Change time 60 min
+(`min_transfer`); 45 min to or from a bus (`bus_transfer`, new in both routers; a place may set its own – Lamy and
+Maricopa 10, where Amtrak's own bus waits for the train). Frankfort, Carson City, Helena, Bismarck and Pierre go to
+not_yet_covered with Juneau and Honolulu. `build.py network=us` builds data/us/ into out/us/ (DATA/OUT in build.py,
+data/out in make_map.build); the map's extent comes from data/us/basemap.geojson (Natural Earth 1:50m states and
+provinces, Mexico, simplified). First build (8.12.2026 from 06:00 only): 44 capitals reached, the two routers agree
+(check_router.mjs); one travel day and one start time take 2.5 min.
+
 ---
 
 ## Template for a new decision

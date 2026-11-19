@@ -193,6 +193,7 @@ class Router:
         a cross-city transfer between stations)
       * staying on the same train (same service number, dep == arr): no change time
       * ferry: `ferry_checkin` before departure; Eurostar: `eurostar_checkin`
+      * to or from a bus: `bus_transfer` if set (place may override; US network, D-67)
       * if the wait at a place spans the night (contains `night_point`, 03:00), it is a
         hotel stay: the next departure must be at or after `morning_departure` (07:00;
         a place may set its own, e.g. Budapest 05:00 for the only day train to Bucharest)
@@ -212,6 +213,8 @@ class Router:
         self.min_transfer = int(s.get("min_transfer", 10))
         self.ferry_checkin = int(s.get("ferry_checkin", 30))
         self.eurostar_checkin = int(s.get("eurostar_checkin", 45))
+        # a change to or from a bus (US: Greyhound stops up to 6 km from the station, D-67); unset = min_transfer
+        self.bus_transfer = int(s["bus_transfer"]) if s.get("bus_transfer") is not None else None
         self.night_point = hm(s.get("night_point", "03:00"))
         self.morning = hm(s.get("morning_departure", "07:00"))
         self.min_stay = hm(s.get("min_hotel_stay", "0:00"))    # FIX-07: at least this long in the hotel
@@ -239,6 +242,8 @@ class Router:
             return int(here.get("ferry_checkin", self.ferry_checkin))
         if norm_service(nxt.service).startswith(("EST", "ES")):
             return self.eurostar_checkin
+        if (incoming.mode == "bus" or nxt.mode == "bus") and ("bus_transfer" in here or self.bus_transfer is not None):
+            return int(here.get("bus_transfer", self.bus_transfer))   # Lamy, Maricopa: Amtrak's own bus waits for the train
         # a station's own change time wins: longer where you change station (Paris), shorter at
         # small border stations with planned same-platform connections (Valga, Mockava) (D-36)
         return int(here["min_transfer"]) if "min_transfer" in here else self.min_transfer

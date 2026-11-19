@@ -66,10 +66,13 @@ def basemap_paths(geojson: dict) -> str:
     return "".join(out)
 
 
-def build(root: Path, net_file: str = "network.json", page_name: str = "index.html", fragment: bool = True):
-    """Write the map page for one origin: out/site/<page_name> (and out/map.html for the first origin)."""
-    net = json.loads((root / "out" / net_file).read_text())
-    base = json.loads((root / "data" / "basemap.geojson").read_text())
+def build(root: Path, net_file: str = "network.json", page_name: str = "index.html", fragment: bool = True,
+          data: Path | None = None, out: Path | None = None):
+    """Write the map page for one origin: out/site/<page_name> (and out/map.html for the first origin).
+    data/out: the network's folders (build.py network=us: data/us, out/us); default data/, out/."""
+    data, out = data or root / "data", out or root / "out"
+    net = json.loads((out / net_file).read_text())
+    base = json.loads((data / "basemap.geojson").read_text())
     net["off_map"] = fit(net["places"], net["not_covered"], tuple(base.get("extent", (-32, 25, 50, 72))))
     for name, p in {**net["places"], **net["not_covered"]}.items():
         p["x"], p["y"] = project(p["lon"], p["lat"])
@@ -94,8 +97,8 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
                .replace("__TITLE__", html.escape(net.get("title") or "Maata pitkin"))
                .replace("__DRAFT__", i18n.t(tx, "draft_note") if net.get("draft") else ""))
     if fragment:
-        (root / "out" / "map.html").write_text(page)      # fragment: paste into a page or publish as is
-    site = root / "out" / "site"                             # a complete page for GitHub Pages
+        (out / "map.html").write_text(page)      # fragment: paste into a page or publish as is
+    site = out / "site"                                      # a complete page for GitHub Pages
     site.mkdir(exist_ok=True)
     static = root / "static"                                 # preview pictures etc., copied as they are
     if static.is_dir():
