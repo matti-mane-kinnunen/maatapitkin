@@ -15,3 +15,6 @@ out/parts/
 
 # Local experiments (timetable_kit run, venv, downloads) - not part of the project
 /Amtrak/
+
+# GTFS feeds downloaded by hand (Amtrak, Flix/Greyhound US) - IDEA-25
+/amtrak_source_data_for_git_to_ignore/
