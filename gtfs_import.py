@@ -1,0 +1,421 @@
+#!/usr/bin/env python3
+"""Turn Amtrak's and Flix/Greyhound's GTFS feeds into data/us/legs.yaml (IDEA-25, D-67).
+
+    python3 gtfs_import.py                       # both feeds -> data/us/legs.yaml, print a report
+    python3 gtfs_import.py --dry-run             # report only, write nothing
+    python3 gtfs_import.py --start 2026-12-01 --days 120
+    python3 gtfs_import.py --all-bus-legs        # every Flix/Greyhound leg between two places
+
+Which stops belong to which place is set in data/us/places.yaml: `amtrak: [codes]` (Amtrak
+stop_id = station code) and `flix: [stop ids]`. Every trip gives a leg between every pair of
+places it calls at, in order - so a through train stays one train (as routes_to_pairs.py --all).
+A stop where the trip only sets down (pickup_type 1) is not a departure, one where it only picks
+up (drop_off_type 1) is not an arrival.
+
+Times. GTFS clock times count from the service day in the *agency's* time zone: Amtrak gives
+every agency America/New_York (so its Chicago times are an hour ahead of the timetable), Flix
+gives UTC. Each time is turned into a moment and then into the clock time at the stop, as
+legs.yaml wants: dep local at `from`, arr local at `to`, `days: N` when the arrival is more
+than a day later by the clock (D-63). Which zone gives the clock time is set per feed:
+- Amtrak: the feed's own stop_timezone. Amtrak gives Arizona stops America/Denver and builds its
+  Eastern times from the Arizona clock times as if Arizona kept summer time, so reading them back
+  through America/Denver gives the Arizona clock (Sunset Limited at Maricopa: 07:35 in winter,
+  06:35 from 14.3.2027, an hour earlier as its Los Angeles time stays the same).
+- Flix: the place's `tz:` (Flix's stop_timezone has mistakes, e.g. Vancouver BC = America/Phoenix).
+
+Days. calendar.txt and calendar_dates.txt are read for the window --start .. --start+--days
+(default: today, 120 days). The dates a leg leaves on (local) become `runs` + `valid_from` /
+`valid_to`; a missing date (a holiday) splits the period, a date on an odd weekday becomes an
+entry of its own. Entries that differ only in their times are merged into `times: [...]`.
+
+Buses. Amtrak Thruway buses are always kept. Flix/Greyhound legs are kept only if they go *to*
+a place no Amtrak train serves (the bus-only capitals, D-67), unless --all-bus-legs: otherwise a
+bus-only capital becomes a bus hub and Chicago -> Washington goes by Greyhound via Columbus.
+Commuter rail in Amtrak's feed (MARC, Shore Line East) is left out.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import datetime as dt
+import io
+import json
+import sys
+import zipfile
+from collections import defaultdict
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import yaml
+
+ROOT = Path(__file__).parent
+FEEDS_DIR = ROOT / "amtrak_source_data_for_git_to_ignore"
+WEEKDAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+DAY = dt.timedelta(days=1)
+
+FEEDS = [
+    {"name": "amtrak", "path": FEEDS_DIR / "GTFS", "key": "amtrak", "clock_tz": "stop",
+     "skip_agencies": {"1230", "1238"},          # Shore Line East, MARC (commuter rail)
+     "skip_routes": set()},
+    {"name": "flix", "path": FEEDS_DIR / "gtfs_generic_us", "key": "flix", "clock_tz": "place",
+     "skip_agencies": set(), "skip_routes": set()},
+]
+
+
+# --- reading a feed --------------------------------------------------------
+class Feed:
+    """A GTFS feed in a folder or a .zip; rows as dicts."""
+
+    def __init__(self, path: Path):
+        self.path = Path(path)
+        self.zip = zipfile.ZipFile(self.path) if self.path.suffix == ".zip" else None
+
+    def has(self, name: str) -> bool:
+        if self.zip:
+            return name in self.zip.namelist()
+        return (self.path / name).exists()
+
+    def rows(self, name: str):
+        if not self.has(name):
+            return []
+        if self.zip:
+            f = io.TextIOWrapper(self.zip.open(name), encoding="utf-8-sig")
+        else:
+            f = open(self.path / name, encoding="utf-8-sig", newline="")
+        with f:
+            yield from csv.DictReader(f)
+
+
+def gtfs_date(s: str) -> dt.date:
+    return dt.date(int(s[:4]), int(s[4:6]), int(s[6:8]))
+
+
+def service_dates(feed: Feed, first: dt.date, last: dt.date) -> dict[str, set[dt.date]]:
+    """service_id -> the dates (in the window) it runs, from calendar.txt and calendar_dates.txt."""
+    out: dict[str, set[dt.date]] = defaultdict(set)
+    for r in feed.rows("calendar.txt"):
+        a, b = max(gtfs_date(r["start_date"]), first), min(gtfs_date(r["end_date"]), last)
+        days = {i for i, w in enumerate(["monday", "tuesday", "wednesday", "thursday", "friday",
+                                         "saturday", "sunday"]) if r[w] == "1"}
+        d = a
+        while d <= b:
+            if d.weekday() in days:
+                out[r["service_id"]].add(d)
+            d += DAY
+    for r in feed.rows("calendar_dates.txt"):
+        d = gtfs_date(r["date"])
+        if not first <= d <= last:
+            continue
+        if r["exception_type"] == "1":
+            out[r["service_id"]].add(d)
+        elif r["exception_type"] == "2":
+            out[r["service_id"]].discard(d)
+    return out
+
+
+def gtfs_secs(t: str) -> int:
+    h, m, s = (int(x) for x in t.strip().split(":"))
+    return h * 3600 + m * 60 + s
+
+
+def moment(day: dt.date, secs: int, agency_tz: ZoneInfo) -> dt.datetime:
+    """A GTFS time on a service day: counted from 'noon minus 12 h' in the agency's zone (so
+    a DST change day comes out right), returned as an aware datetime."""
+    noon = dt.datetime.combine(day, dt.time(12), agency_tz)
+    return (noon - dt.timedelta(hours=12) + dt.timedelta(seconds=secs)).astimezone(dt.timezone.utc)
+
+
+# --- dates -> runs / valid_from / valid_to ------------------------------------
+def fmt_runs(days: set[int]) -> str | None:
+    """{0..4} -> 'mon-fri', {5, 6} -> 'sat,sun', all -> None (daily)."""
+    if len(days) == 7:
+        return None
+    parts, run = [], []
+    for d in range(7):
+        if d in days:
+            run.append(d)
+        if run and (d not in days or d == 6):
+            parts.append(WEEKDAYS[run[0]] if len(run) == 1 else
+                         f"{WEEKDAYS[run[0]]},{WEEKDAYS[run[1]]}" if len(run) == 2 else
+                         f"{WEEKDAYS[run[0]]}-{WEEKDAYS[run[-1]]}")
+            run = []
+    return ",".join(parts)
+
+
+def compress(dates: set[dt.date]) -> list[tuple[str | None, dt.date, dt.date]]:
+    """Dates a leg runs on -> [(runs, valid_from, valid_to)]. The weekdays are those the leg
+    runs on at least half the time in its period; a missing date of such a weekday splits the
+    period; a date on another weekday becomes a one-day entry."""
+    if not dates:
+        return []
+    ds = sorted(dates)
+    lo, hi = ds[0], ds[-1]
+    possible, seen = [0] * 7, [0] * 7
+    d = lo
+    while d <= hi:
+        possible[d.weekday()] += 1
+        d += DAY
+    for d in ds:
+        seen[d.weekday()] += 1
+    wd = {i for i in range(7) if seen[i] and seen[i] * 2 >= possible[i]}
+    out, start, prev = [], None, None
+    d = lo
+    while d <= hi:
+        if d.weekday() in wd:
+            if d in dates:
+                start = start or d
+                prev = d
+            elif start:
+                out.append((fmt_runs(wd), start, prev))
+                start = None
+        d += DAY
+    if start:
+        out.append((fmt_runs(wd), start, prev))
+    for d in ds:
+        if d.weekday() not in wd:
+            out.append((WEEKDAYS[d.weekday()], d, d))
+    # a period shorter than a week only runs on the weekdays it actually has; and where the
+    # period runs on every day it covers, `runs` says nothing more (one Saturday: no `runs`)
+    fixed = []
+    for runs, a, b in out:
+        days = {(a + dt.timedelta(days=i)).weekday() for i in range((b - a).days + 1)}
+        if (b - a).days < 6:
+            runs = fmt_runs({x.weekday() for x in ds if a <= x <= b})
+        rule = set(range(7)) if runs is None else {WEEKDAYS.index(w) for w in _expand(runs)}
+        fixed.append((None if days <= rule else runs, a, b))
+    return fixed
+
+
+def _expand(runs: str) -> list[str]:
+    out = []
+    for part in runs.split(","):
+        if "-" in part:
+            i, j = (WEEKDAYS.index(x) for x in part.split("-"))
+            out += WEEKDAYS[i:j + 1]
+        else:
+            out.append(part)
+    return out
+
+
+# --- the import ----------------------------------------------------------------
+def stop_map(places: dict, key: str) -> dict[str, str]:
+    out = {}
+    for name, v in places.items():
+        for sid in v.get(key) or []:
+            if str(sid) in out:
+                raise SystemExit(f"{key} stop {sid} is in both {out[str(sid)]} and {name}")
+            out[str(sid)] = name
+    return out
+
+
+def service_name(feed: str, route: dict, trip: dict) -> str:
+    if feed == "amtrak":
+        name = route.get("route_long_name") or route.get("route_short_name") or "Amtrak"
+        if name == "Amtrak Thruway Connecting Service":
+            name = "Amtrak Thruway"
+        num = (trip.get("trip_short_name") or "").strip()
+        return f"{name} {num}".strip()
+    return route.get("route_short_name") or route.get("route_long_name") or feed
+
+
+def import_feed(cfg: dict, places: dict, first: dt.date, last: dt.date, report: dict):
+    """Yield (from, to, service, mode, feed, dep_local, arr_local) for every leg departure."""
+    feed = Feed(cfg["path"])
+    stops = stop_map(places, cfg["key"])
+    tz_place = {p: ZoneInfo(v["tz"]) for p, v in places.items()}
+    stop_tz = {}                       # stop_id -> zone that gives the clock time there
+    for s in feed.rows("stops.txt"):
+        if s["stop_id"] in stops:
+            own = s.get("stop_timezone") if cfg.get("clock_tz") == "stop" else None
+            stop_tz[s["stop_id"]] = ZoneInfo(own) if own else tz_place[stops[s["stop_id"]]]
+    agencies = {a.get("agency_id", ""): ZoneInfo(a["agency_timezone"]) for a in feed.rows("agency.txt")}
+    default_tz = next(iter(agencies.values()))
+    routes = {r["route_id"]: r for r in feed.rows("routes.txt")
+              if r.get("agency_id", "") not in cfg["skip_agencies"] and r["route_id"] not in cfg["skip_routes"]}
+    trips = {t["trip_id"]: t for t in feed.rows("trips.txt") if t["route_id"] in routes}
+    sdates = service_dates(feed, first, last)
+    calls: dict[str, list] = defaultdict(list)
+    seen_stops = set()
+    for st in feed.rows("stop_times.txt"):
+        if st["trip_id"] in trips and st["stop_id"] in stops:
+            seen_stops.add(st["stop_id"])
+            calls[st["trip_id"]].append(st)
+    report[cfg["name"]] = r = {"trips": len(trips), "trips_with_2_places": 0, "no_dates": 0,
+                               "unused_stops": sorted(f"{stops[s]} {s}" for s in set(stops) - seen_stops),
+                               "clock_backwards": []}
+    for tid, sts in calls.items():
+        sts.sort(key=lambda s: int(s["stop_sequence"]))
+        if len({stops[s["stop_id"]] for s in sts}) < 2:
+            continue
+        r["trips_with_2_places"] += 1
+        trip = trips[tid]
+        route = routes[trip["route_id"]]
+        dates = sdates.get(trip["service_id"])
+        if not dates:
+            r["no_dates"] += 1
+            continue
+        atz = agencies.get(route.get("agency_id", ""), default_tz)
+        mode = "train" if route["route_type"] == "2" else "bus"
+        service = service_name(cfg["name"], route, trip)
+        # one leg per pair of places; where a place has two stops on the trip (Boston Back Bay
+        # and South Station, Santa Fe's two bus stops) take the shortest ride between them
+        best: dict[tuple[str, str], tuple] = {}
+        for i, a in enumerate(sts):
+            if a.get("pickup_type") == "1":
+                continue
+            pa = stops[a["stop_id"]]
+            for b in sts[i + 1:]:
+                pb = stops[b["stop_id"]]
+                if pb == pa or b.get("drop_off_type") == "1":
+                    continue
+                dep_s, arr_s = gtfs_secs(a["departure_time"]), gtfs_secs(b["arrival_time"])
+                cand = (arr_s - dep_s, arr_s, a["stop_id"], b["stop_id"], dep_s)
+                if (pa, pb) not in best or cand < best[(pa, pb)]:
+                    best[(pa, pb)] = cand
+        for (pa, pb), (_, arr_s, sa, sb, dep_s) in best.items():
+            for day in dates:
+                dep = moment(day, dep_s, atz).astimezone(stop_tz[sa])
+                arr = moment(day, arr_s, atz).astimezone(stop_tz[sb])
+                yield pa, pb, service, mode, cfg["name"], dep, arr
+
+
+def build_legs(places: dict, first: dt.date, last: dt.date, all_bus: bool, feeds=FEEDS):
+    report: dict = {}
+    # (from, to, service, mode, feed, dep "HH:MM", arr "HH:MM", days) -> local departure dates
+    groups: dict[tuple, set[dt.date]] = defaultdict(set)
+    backwards = defaultdict(int)
+    for cfg in feeds:
+        if not Feed(cfg["path"]).has("stop_times.txt"):
+            report[cfg["name"]] = {"missing": str(cfg["path"])}
+            continue
+        for pa, pb, service, mode, name, dep, arr in import_feed(cfg, places, first, last, report):
+            # by the local clock: how many minutes from departure to arrival
+            clock = (arr.replace(tzinfo=None) - dep.replace(tzinfo=None)).total_seconds() // 60
+            if clock < 0:            # a short hop westwards across a zone: legs.yaml cannot say it
+                backwards[(pa, pb, service)] += 1
+                continue
+            key = (pa, pb, service, mode, name, dep.strftime("%H:%M"), arr.strftime("%H:%M"), int(clock // 1440))
+            groups[key].add(dep.date())
+    # the same departure under two names (Sunset Limited 2 carries the Texas Eagle 422 through
+    # cars): one leg, both names
+    same: dict[tuple, list[tuple]] = defaultdict(list)
+    for k, dates in groups.items():
+        same[(k[0], k[1], k[3], k[4], k[5], k[6], k[7], frozenset(dates))].append(k)
+    for ks in same.values():
+        if len(ks) > 1:
+            ks.sort(key=lambda k: k[2])
+            dates = groups.pop(ks[0])
+            for k in ks[1:]:
+                groups.pop(k)
+            k0 = ks[0]
+            groups[(k0[0], k0[1], " / ".join(k[2] for k in ks), *k0[3:])] = dates
+    for k, n in backwards.items():
+        report.setdefault("clock_backwards", []).append(f"{k[0]} -> {k[1]} ({k[2]}): {n} departures")
+    train_places = {k[0] for k in groups if k[3] == "train"} | {k[1] for k in groups if k[3] == "train"}
+    entries: dict[tuple, list[tuple[str, str]]] = defaultdict(list)
+    dropped_bus = 0
+    for (pa, pb, service, mode, name, dep, arr, days), dates in groups.items():
+        if name == "flix" and not all_bus and pb in train_places:
+            dropped_bus += 1
+            continue
+        for runs, a, b in compress(dates):
+            entries[(pa, pb, service, mode, days, runs, a, b)].append((dep, arr))
+    report["bus_legs_left_out"] = dropped_bus
+    report["train_places"] = sorted(train_places)
+    return entries, report
+
+
+# --- writing legs.yaml ------------------------------------------------------------
+def q(v) -> str:
+    if isinstance(v, (int, bool)) and not isinstance(v, bool):
+        return str(v)
+    if isinstance(v, bool):
+        return "true" if v else "false"
+    if isinstance(v, dt.date):
+        return v.isoformat()
+    s = str(v)
+    plain = s.replace(" ", "").replace(".", "").replace("-", "").isalnum() and not s[:1].isdigit()
+    return s if plain and s.lower() not in ("yes", "no", "on", "off", "true", "false", "null") else json.dumps(s, ensure_ascii=False)
+
+
+def to_yaml(entries: dict, origin: str, header: str) -> str:
+    def order(k):
+        return (k[0] != origin, k[0], k[1], k[3], min(t[0] for t in entries[k]), k[2], k[6])
+    lines = [header, "legs:"]
+    last_from = None
+    for k in sorted(entries, key=order):
+        pa, pb, service, mode, days, runs, a, b = k
+        if pa != last_from:
+            lines.append(f"\n  # --- from {pa} ---")
+            last_from = pa
+        times = sorted(set(entries[k]))
+        f = [f"from: {q(pa)}", f"to: {q(pb)}"]
+        if len(times) == 1:
+            f += [f'dep: "{times[0][0]}"', f'arr: "{times[0][1]}"']
+        else:
+            f.append("times: [" + ", ".join(f'"{d}-{a_}"' for d, a_ in times) + "]")
+        if days:
+            f.append(f"days: {days}")
+        f += [f"service: {q(service)}", f"mode: {mode}"]
+        if runs:
+            f.append(f"runs: {q(runs)}")
+        f += [f"valid_from: {a.isoformat()}", f"valid_to: {b.isoformat()}"]
+        lines.append("  - {" + ", ".join(f) + "}")
+    return "\n".join(lines) + "\n"
+
+
+def feed_version(path: Path) -> str:
+    f = Feed(path)
+    for r in f.rows("feed_info.txt"):
+        return r.get("feed_version") or f"{r.get('feed_start_date', '')}-{r.get('feed_end_date', '')}"
+    return "?"
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--data", default=str(ROOT / "data" / "us"), help="network folder (places.yaml; legs.yaml is written here)")
+    ap.add_argument("--start", default=dt.date.today().isoformat(), help="first travel date (default today)")
+    ap.add_argument("--days", type=int, default=120, help="how many days of timetable to import (default 120)")
+    ap.add_argument("--all-bus-legs", action="store_true", help="keep Flix/Greyhound legs to places that have trains too")
+    ap.add_argument("--dry-run", action="store_true", help="print the report, write nothing")
+    args = ap.parse_args(argv)
+
+    data = Path(args.data)
+    pl = yaml.safe_load((data / "places.yaml").read_text())
+    places = pl["places"]
+    first = dt.date.fromisoformat(args.start)
+    last = first + dt.timedelta(days=args.days - 1)
+    entries, report = build_legs(places, first, last, args.all_bus_legs)
+
+    origin = (pl.get("settings") or {}).get("origin", "")
+    versions = ", ".join(f"{c['name']} {feed_version(c['path'])}" for c in FEEDS if Feed(c["path"]).has("feed_info.txt"))
+    header = (f"# GENERATED by gtfs_import.py on {dt.date.today().isoformat()} - do not edit by hand, run it again.\n"
+              f"# Feeds: {versions}. Timetable window {first} .. {last}.\n"
+              f"# Format as data/legs.yaml; times are local at each end (tz: in places.yaml).\n"
+              f"defaults:\n  checked: {dt.date.today().isoformat()}\n  source: gtfs\n")
+    text = to_yaml(entries, origin, header)
+
+    n_dep = sum(len(set(v)) for v in entries.values())
+    print(f"window {first} .. {last}: {len(entries)} legs.yaml entries, {n_dep} departures")
+    for name in ("amtrak", "flix"):
+        r = report.get(name, {})
+        if "missing" in r:
+            print(f"  {name}: feed not found at {r['missing']}")
+            continue
+        print(f"  {name}: {r.get('trips', 0)} trips, {r.get('trips_with_2_places', 0)} call at 2+ places, "
+              f"{r.get('no_dates', 0)} of them do not run in the window")
+        if r.get("unused_stops"):
+            print(f"    stops in places.yaml no trip calls at: {', '.join(r['unused_stops'])}")
+    print(f"  Flix/Greyhound legs to places with trains left out: {report['bus_legs_left_out']}")
+    for line in report.get("clock_backwards", []):
+        print(f"  left out (arrives earlier by the clock than it leaves): {line}")
+    reached = {k[1] for k in entries} | {k[0] for k in entries}
+    missing = [p for p, v in places.items() if v.get("capital") and p not in reached]
+    print(f"  capitals with no leg: {', '.join(missing) or 'none'}")
+    if not args.dry_run:
+        (data / "legs.yaml").write_text(text)
+        print(f"wrote {data / 'legs.yaml'} ({len(text.splitlines())} lines)")
+
+
+if __name__ == "__main__":
+    main()

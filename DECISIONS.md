@@ -1449,6 +1449,24 @@ distance trains (once a day, often late) need longer change times than 20 min �
 are 60–90 min; the Thruway buses missing from Amtrak's GTFS (Nashville, Des Moines, Madison, Augusta) – Greyhound
 may cover them.
 
+**Built 19.11.2026 (importer).** `gtfs_import.py` reads both feeds from `amtrak_source_data_for_git_to_ignore/`
+(downloaded by hand: the session's network allowlist blocks both hosts) and writes data/us/legs.yaml; tests in
+tests/test_gtfs_import.py. Found on the way:
+- Amtrak's stop_times are in Eastern time for every agency (Zephyr: 15:00 in the feed = 14:00 CST, as timetable_kit
+  prints). Arizona stops carry stop_timezone America/Denver and their Eastern times are made from the Arizona clock as
+  if Arizona kept summer time; read back through America/Denver they give the Arizona clock (Sunset Limited at Maricopa
+  07:35 in winter, 06:35 from 14.3.2027, as its Los Angeles time stays). So Amtrak clock times are read through the
+  feed's stop_timezone, Flix's through the place's `tz:`.
+- Flix gives agency_timezone UTC; read as UTC the departures come out in daytime (Chicago -> Madison 09:00, 12:30,
+  15:00), read as local they would be at night – so UTC (inferred, not checked against a published timetable).
+- Flix/Greyhound legs only *to* places no Amtrak train serves; otherwise a bus capital (Columbus) becomes a bus hub and
+  Chicago -> Washington goes by Greyhound. Amtrak Thruway buses are kept.
+- Greyhound/Flix reach 13 of the 20 capitals without Amtrak trains. No service: Frankfort, Carson City, Helena,
+  Bismarck, Pierre (plus Juneau, Honolulu).
+- Size: 120 days of timetable = ~12,000 departures over ~480 place pairs (Europe: ~11,700); legs.yaml ~12,000 lines,
+  2 MB, mostly because a train whose times change on some dates becomes one-day entries. A `dates:` field in
+  legs.yaml would shrink it.
+
 ---
 
 ## Template for a new decision
