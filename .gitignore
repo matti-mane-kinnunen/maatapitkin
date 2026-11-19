@@ -12,3 +12,6 @@ check.md
 out/network-*.json
 .cache/
 out/parts/
+
+# Local experiments (timetable_kit run, venv, downloads) - not part of the project
+/Amtrak/
