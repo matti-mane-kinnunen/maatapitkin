@@ -1484,6 +1484,14 @@ Emission Factors Hub 2025, Northeast Corridor 0.02305 and other routes 0.1504 kg
 (`rail`, `rail_diesel`; a train between two `electric_places` counts as electric); bus and flight stay Chalmers. The
 legend and the "No ferries" option are hidden where a network has no ferries; the route table says only what applies.
 
+**Weekly workflow (19.11.2026).** update-map.yml has a job `us` beside the lookup: download both feeds from their own
+addresses (Flix: https, else http), unzip into amtrak_source_data_for_git_to_ignore/, `gtfs_import.py --start today
+--days 120`, `build.py network=us` for next week's Tue/Fri/Sat/Sun, then the same checks as the other maps
+(check_pages.py out/site/us – booking links checked too; check_router.mjs out/us out/site/us; check_build.py
+--summary out/us/summary.json). The publish job takes its artifact and holds the update back if the US map failed
+– publishing without it would drop us/ from the site. It commits data/us/legs.yaml, map_layers.json and out/us/.
+Not run on GitHub yet: whether the runners can reach content.amtrak.com and gtfs.gis.flix.tech is unchecked.
+
 ---
 
 ## Template for a new decision

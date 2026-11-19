@@ -7,6 +7,7 @@ or a timetable is missing, so far fewer trains were found).
 
     python3 check_build.py              # compare with the last commit
     python3 check_build.py --max-drop 20
+    python3 check_build.py --summary out/us/summary.json   # another network (build.py network=us, D-67)
 """
 from __future__ import annotations
 
@@ -26,11 +27,12 @@ def first(d: dict):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--max-drop", type=float, default=15, help="largest allowed drop in departures, %% (default 15)")
+    ap.add_argument("--summary", default="out/summary.json", help="the summary to check (default out/summary.json)")
     args = ap.parse_args()
 
-    new = json.loads((ROOT / "out" / "summary.json").read_text())
+    new = json.loads((ROOT / args.summary).read_text())
     try:
-        old = json.loads(subprocess.run(["git", "show", "HEAD:out/summary.json"], cwd=ROOT,
+        old = json.loads(subprocess.run(["git", "show", f"HEAD:{args.summary}"], cwd=ROOT,
                                         capture_output=True, text=True, check=True).stdout)
     except (subprocess.CalledProcessError, json.JSONDecodeError):
         old = None

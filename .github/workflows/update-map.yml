@@ -21,7 +21,8 @@ on:
         default: false
 
 # Four jobs (FIX-17): look up -> build and check each map in a job of its own, side by side ->
-# join, commit and report -> deploy. Only the last two may write; the lookup and the map jobs
+# join, commit and report -> deploy. The US map (D-67) has a job of its own next to the lookup:
+# it needs no Transitous lookup, only Amtrak's and Flix's own GTFS feeds. Only the last two may write; the lookup and the map jobs
 # can only read the repository, so a build or a check can never change it or the site.
 permissions:
   contents: read
@@ -172,8 +173,92 @@ jobs:
             out/map.html
             out/routes*.md
 
+  # The USA map (IDEA-25, D-67): download both operators' GTFS feeds, import them into data/us/,
+  # build data/us -> out/site/us/, check it like the other maps. Runs beside the lookup.
+  us:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    name: map (USA)
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml playwright==1.63.0
+
+      - name: Next week's travel dates (Tue, Fri, Sat, Sun - as the lookup job)
+        id: dates
+        run: |
+          python3 - >> "$GITHUB_OUTPUT" <<'PY'
+          import datetime as d
+          t = d.date.today()
+          tue = t + d.timedelta(days=7 - t.weekday() + 1)
+          print(f"tue={tue}")
+          print("dates=" + ",".join(str(tue + d.timedelta(days=k)) for k in (0, 3, 4, 5)))
+          PY
+
+      # the feeds' own addresses (D-67); unzipped where gtfs_import.py looks (git-ignored)
+      - name: Download the GTFS feeds
+        run: |
+          set -euo pipefail
+          d=amtrak_source_data_for_git_to_ignore
+          get() { curl -fsSL --retry 3 --retry-delay 20 --max-time 300 -o "$2" "$1"; }
+          get https://content.amtrak.com/content/gtfs/GTFS.zip amtrak.zip
+          get https://gtfs.gis.flix.tech/gtfs_generic_us.zip flix.zip || get http://gtfs.gis.flix.tech/gtfs_generic_us.zip flix.zip
+          for pair in "amtrak.zip GTFS" "flix.zip gtfs_generic_us"; do
+            set -- $pair
+            mkdir -p "$d/$2"
+            unzip -oq "$1" -d "$d/$2"
+            f=$(find "$d/$2" -name stop_times.txt | head -1)          # files at the top, or in a folder of their own
+            if [ -z "$f" ]; then echo "::error::no stop_times.txt in $1"; exit 1; fi
+            if [ "$(dirname "$f")" != "$d/$2" ]; then mv "$(dirname "$f")"/* "$d/$2/"; fi
+          done
+          ls -la "$d"/*/feed_info.txt
+
+      - name: Import the timetables into data/us/
+        run: python3 gtfs_import.py --start "$(date +%F)" --days 120 | tee us-import.log
+
+      - name: Build the map
+        run: |
+          mkdir -p out/us/parts
+          python3 build.py network=us "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee out/us/parts/build-usa.log
+
+      - name: Install a browser for the page check
+        run: |
+          python3 -m playwright install --with-deps chromium || {
+            echo "::warning::apt failed - installing Chromium without the extra system packages"
+            python3 -m playwright install chromium
+          }
+
+      # as the other maps: every journey in a real browser, both routers, and no big drop since last week
+      - name: Check this map
+        run: |
+          ok=true
+          c=out/us/parts/check-usa.md
+          python3 tests/check_pages.py out/site/us > "$c" || ok=false
+          { echo; echo '```'; node tests/check_router.mjs out/us out/site/us; echo '```'; } >> "$c" || ok=false
+          { echo; python3 check_build.py --summary out/us/summary.json | sed 's/^## Map update check/### USA: compared with last week/'; } >> "$c" || ok=false
+          if [ "$ok" = "true" ]; then touch out/us/parts/ok-usa; fi
+          cat "$c" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Hand the map to the publish job
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: us
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            out/site/us/
+            out/us/
+            data/us/legs.yaml
+            data/us/map_layers.json
+            us-import.log
+
   publish:
-    needs: [lookup, map]
+    needs: [lookup, map, us]
     # also when a map job failed: the update is then held back and the issue says why
     if: always() && needs.lookup.result == 'success'
     runs-on: ubuntu-latest
@@ -203,6 +288,14 @@ jobs:
           merge-multiple: true
           path: out
 
+      # the US map: out/site/us/, out/us/ and data/us/ (after the lookup's data/, so its data/us wins);
+      # missing if that job failed - the check below then holds the update back
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        continue-on-error: true
+        with:
+          name: us
+          path: .
+
       - name: Check before publishing
         id: check
         env:
@@ -221,11 +314,19 @@ jobs:
             fi
             [ -f "out/parts/ok-$slug" ] || ok=false
           done
+          # the US map (D-67); without it the site would lose its us/ pages, so it holds the update back too
+          if [ -f out/us/parts/check-usa.md ]; then
+            { echo; echo "### USA"; grep -v '^## Page check' out/us/parts/check-usa.md; } >> check.md
+          else
+            { echo; echo "- **USA**: the map job failed – see the run log."; } >> check.md
+          fi
+          [ -f out/us/parts/ok-usa ] || ok=false
           if [ "$ok" = "true" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"
           elif [ "${{ inputs.force }}" = "true" ] && [ -f out/summary.json ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
           else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
           cat check.md >> "$GITHUB_STEP_SUMMARY"
-          { echo; echo "## Build"; echo '```'; cat out/parts/build-*.log 2>/dev/null | grep -E "^From .*(main journeys|WARNING)"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          { echo; echo "## Build"; echo '```'; cat out/parts/build-*.log out/us/parts/build-usa.log 2>/dev/null | grep -E "^From .*(main journeys|WARNING)"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          if [ -f us-import.log ]; then { echo; echo "## USA timetables"; echo '```'; cat us-import.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"; fi
           { echo; echo "## Lookup"; echo '```'; sed -n '/^=====/,$p' lookup.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           if [ -f wiki.log ]; then { echo; echo "## City texts"; echo '```'; grep -E "^wikidata|failed|no article|^  " wiki.log | head -60; echo '```'; } >> "$GITHUB_STEP_SUMMARY"; fi
 
@@ -234,7 +335,7 @@ jobs:
         run: |
           git config user.name "maatapitkin-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ out/summary.json out/routes*.md
+          git add data/ out/summary.json out/routes*.md out/us/summary.json out/us/routes.md
           git commit -m "Weekly update: trains for the week of ${{ needs.lookup.outputs.tue }}" || echo "nothing to commit"
           git pull --rebase
           git push

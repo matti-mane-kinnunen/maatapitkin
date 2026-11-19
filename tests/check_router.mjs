@@ -7,6 +7,7 @@
 // drifted apart; the weekly workflow then holds the update back, like a lost capital.
 //
 //   node tests/check_router.mjs [out]        (after python3 build.py)
+//   node tests/check_router.mjs out/us out/site/us   (another network: its router-data.js is in its site folder, D-67)
 import { createRequire } from "node:module";
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
@@ -14,7 +15,7 @@ const require = createRequire(import.meta.url);
 const R = require("../src/router.js");
 
 const out = process.argv[2] || "out";
-const src = readFileSync(join(out, "site", "router-data.js"), "utf8");
+const src = readFileSync(join(process.argv[3] || join(out, "site"), "router-data.js"), "utf8");
 const net = R.loadNetwork(JSON.parse(src.slice(src.indexOf("=") + 1, src.lastIndexOf(";"))));
 
 const FIELDS = ["capital", "label", "is_capital", "depart", "arrive", "door_to_door_min", "arrive_abs", "tz_shift",

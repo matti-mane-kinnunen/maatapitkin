@@ -57,7 +57,14 @@ CHECK_JOURNEYS = r"""
             const text = document.querySelector(".itin").innerText;
             for (const bad of ["undefined", "NaN", "{{", "__ORIGIN", "null"])
               if (text.includes(bad)) P(`${where}: shows "${bad}"`);
-            for (const a of document.querySelectorAll("#steps li.bahn a")) {
+            // a booking link where bahn.de has no station numbers (US, D-67): the operator's site, and
+            // the departure it names must be one of this journey's
+            for (const a of document.querySelectorAll("#steps li.booking a")) {
+              links++;
+              if (!NET.booking || a.href !== new URL(NET.booking.url).href) { P(`${where}: booking link goes to ${a.href}`); continue; }
+              if (!legs.some(s => a.textContent.includes(s.dep_txt))) P(`${where}: booking link names no departure of the journey: ${a.textContent}`);
+            }
+            for (const a of document.querySelectorAll("#steps li.bahn:not(.booking) a")) {
               links++;
               const u = decodeURIComponent(a.href.split("#")[1] || "");
               const m = u.match(/so=([^&]*)&zo=([^&]*)&soid=A=1@L=(\d+)@&zoid=A=1@L=(\d+)@&hd=(\d{4}-\d\d-\d\d)T(\d\d:\d\d):00&hza=D$/);
@@ -174,7 +181,7 @@ def check_page(browser, path: Path) -> tuple[list[str], str]:
     problems += check_own(page)
     problems += [f"JavaScript error: {e}" for e in dict.fromkeys(errors)]
     ctx.close()
-    summary = f"{j['journeys']} journeys, {j['links']} bahn.de links ({secs:.0f} s)"
+    summary = f"{j['journeys']} journeys, {j['links']} bahn.de / booking links ({secs:.0f} s)"
     return problems, summary
 
 

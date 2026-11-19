@@ -1127,7 +1127,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
     const st = stretches.get(idx), url = st && bahnUrl(st.from, st.to, st.dep), bk = st && !url && bookingLink(st);
     if (url || bk) {
       const b = document.createElement("li");
-      b.className = "bahn";
+      b.className = url ? "bahn" : "bahn booking";
       b.innerHTML = url
         ? `<div class="t"></div><div class="what"><a href="${url}" target="_blank" rel="noopener" title="${T("bahn_title")}">${T("bahn_check", { from: LN(st.from), to: LN(st.to) })} ↗</a></div>`
         : `<div class="t"></div><div class="what"><a href="${bk.url}" target="_blank" rel="noopener" title="${T("booking_title", bk)}">${T("booking_check", bk)} ↗</a></div>`;
