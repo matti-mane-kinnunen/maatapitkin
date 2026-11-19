@@ -130,6 +130,8 @@ svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-selec
 .leg.train { stroke: var(--train) } .leg.night { stroke: var(--night) } .leg.ferry, .leg.local { stroke: var(--ferry); stroke-dasharray: 4 4 }
 #base .leg { stroke-width: 1.3; opacity: 0.45 }
 #route .leg { stroke-width: 4.2; opacity: 1 }
+#base .leg.busarc { opacity: 0.25; stroke-dasharray: 3 4 }
+#route .leg.busarc { stroke-dasharray: 7 6 }
 #base .leg.unused { display: none }                  /* IDEA-12: connections no journey uses */
 .all-legs #base .leg.unused { display: inline; opacity: 0.35; stroke-dasharray: 1.5 3.5 }
 #route .leg.ferry, #route .leg.local { stroke-dasharray: 7 6 }
@@ -508,9 +510,12 @@ const legHitsG = document.getElementById("leghits");
 for (const [a, b, mode, night] of NET.other_pairs || [])
   if (P[a] && P[b] && !pairs.has(a + ">" + b))
     el("path", { d: curve(P[a], P[b]), class: `leg unused ${cls({ mode, night })}` }, base);
+// a bus with no track of its own is drawn as an arc, fainter and dashed, so it does not catch the
+// eye like a railway (IDEA-25)
+const arcCls = (l, a, b) => l.mode === "bus" && !geomPts(a, b) ? " busarc" : "";
 function drawPair(pr) {
   const d = linkPath(pr.from, pr.to);
-  pr.line = el("path", { d, class: `leg ${cls(pr.legs[0])}` }, base);
+  pr.line = el("path", { d, class: `leg ${cls(pr.legs[0])}${arcCls(pr.legs[0], pr.from, pr.to)}` }, base);
   pr.hit = el("path", { d, class: "leghit" }, legHitsG);
   pr.hit.pair = pr;
   pr.hit.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") showPair(pr, e); });
@@ -1061,7 +1066,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
   for (const s of legs) {
     const d = linkPath(s.from, s.to);
     el("path", { d, class: "halo" }, routeG);
-    const p = el("path", { d, class: `leg ${cls(s)}` }, routeG);
+    const p = el("path", { d, class: `leg ${cls(s)}${arcCls(s, s.from, s.to)}` }, routeG);
     p.style.stroke = s.mode === "train" && !s.night ? "var(--accent)" : "";
   }
   for (const [name, n] of Object.entries(nodeEls)) {
