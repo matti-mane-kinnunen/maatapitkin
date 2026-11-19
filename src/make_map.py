@@ -89,7 +89,8 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
     tx = {**i18n.texts(lang), **(net.get("texts") or {})}    # page texts in the map's language (IDEA-13), the network's own on top
     net["i18n"] = tx
     tpl = (root / "src" / "map_template.html").read_text()
-    tpl = tpl.replace("__GUIDE__", i18n.guide(lang))
+    own = data / "guide" / f"{lang}.html"                    # a network's own user guide (data/us/guide/en.html, D-67)
+    tpl = tpl.replace("__GUIDE__", own.read_text(encoding="utf-8") if own.exists() else i18n.guide(lang))
     # {{key}} markers: texts may contain simple HTML; {origin} becomes __ORIGIN__, filled in below
     tpl = re.sub(r"\{\{(\w+)\}\}", lambda m: i18n.t(tx, m.group(1), origin="__ORIGIN__", origin_from="__ORIGIN_FROM__"), tpl)
     # the in-browser router (IDEA-21): its source in the page, for the page and its background worker

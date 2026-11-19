@@ -1504,6 +1504,19 @@ Ran fine on GitHub 19.11.2026 (Matti): the runners reach both feeds.
   data/us/static/preview-chicago.png. The EPA is linked next to Chalmers in the CO₂ box. booking_* and co2_diesel
   translated.
 
+**More origins and the ends of the lines (Matti 19.11.2026).** Compared on the network of 19.11. (best of 06:00 /
+13:00 on Tue 8.12., median door-to-door time to a capital; within 24 h / 48 h): Chicago 25.9 h (19 / 38), Washington
+30.7 h (15 / 33), New York 32.0 h (17 / 34), Boston 37.7 h, New Orleans 39.5 h (6 / 27), Denver 53.3 h, Atlanta 54.6 h,
+Miami 58.5 h, Austin 60.7 h, Los Angeles 67.0 h, Seattle 71.9 h, Emeryville 75.8 h. Matti chose New York, Seattle, New
+Orleans and Miami besides Chicago (pages new-york, seattle, new-orleans, miami.html; start times after each city's
+long-distance departures). 26 places added where Amtrak trains start or end (Miami, San Antonio, Savannah, Charlotte,
+Norfolk, Newport News, Roanoke, Springfield MA, St. Albans, Burlington VT, Brunswick ME, Niagara Falls, Montreal,
+Toronto, Pontiac, Port Huron, Grand Rapids, Milwaukee, Quincy, Carbondale, Mobile, San Diego, San Luis Obispo,
+San Jose, Eugene, Vancouver), so every line is used; left out: short runs, the Auto Train, the Winter Park ski train.
+Network 59 → 85 places, 428 → 689 place pairs, departures +17 %. Mobile is Central time though Amtrak's stop_timezone
+says New_York; its clock comes out right (Mardi Gras Service 07:35 → 11:18, as Amtrak's timetable). A network may have
+its own user guide (data/us/guide/en.html). The US job builds five maps: timeout 240 min.
+
 ---
 
 ## Template for a new decision

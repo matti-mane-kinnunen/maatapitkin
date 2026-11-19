@@ -177,7 +177,7 @@ jobs:
   # build data/us -> out/site/us/, check it like the other maps. Runs beside the lookup.
   us:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 240           # five maps (Chicago, New York, Seattle, New Orleans, Miami) in one job
     name: map (USA)
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -335,7 +335,7 @@ jobs:
         run: |
           git config user.name "maatapitkin-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ out/summary.json out/routes*.md out/us/summary.json out/us/routes.md
+          git add data/ out/summary.json out/routes*.md out/us/summary.json out/us/routes*.md
           git commit -m "Weekly update: trains for the week of ${{ needs.lookup.outputs.tue }}" || echo "nothing to commit"
           git pull --rebase
           git push

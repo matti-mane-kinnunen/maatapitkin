@@ -5,7 +5,11 @@
 settings:
   origin: Chicago
   origins:                   # one map page per origin
-    Chicago: {page: index.html, lang: en, title: Train trip, start_time: "06:00", start_times: ["06:00", "13:00"]}  # TO DECIDE: the western long-distance trains leave Chicago in the afternoon
+    Chicago: {page: index.html, lang: en, title: Train trip, start_time: "06:00", start_times: ["06:00", "13:00"]}  # the western long-distance trains leave 13:30-15:05, the eastern ones 17:55-21:30
+    New York: {page: new-york.html, lang: en, title: Train trip, start_time: "06:00", start_times: ["06:00", "13:00"]}  # Crescent 14:00, Silver Meteor 14:30, Lake Shore 15:40 (Matti 19.11.2026)
+    Seattle: {page: seattle.html, lang: en, title: Train trip, start_time: "06:00", start_times: ["06:00", "15:00"]}  # Coast Starlight 09:55, Empire Builder 16:55
+    New Orleans: {page: new-orleans.html, lang: en, title: Train trip, start_time: "06:00", start_times: ["06:00", "12:00"]}  # Sunset 09:00, Crescent 09:10, City of New Orleans 13:45
+    Miami: {page: miami.html, lang: en, title: Train trip, start_time: "06:00", start_times: ["06:00", "10:00"]}  # Silver Meteor 07:05, Floridian 11:05
   start_time: "06:00"
   start_times: ["06:00", "13:00"]
   min_transfer: 60           # minutes, train -> train (Matti 19.11.2026; Amtrak's own connections are 60-90 min)
@@ -78,6 +82,35 @@ places:
   Seattle:        {lat: 47.598, lon: -122.330, country: US, tz: America/Los_Angeles, amtrak: [SEA], flix: [ae4be8dd-9195-4a49-9060-2d55cd04e6e4]}  # Seattle, WA - King Street Station (SEA); Empire Builder -> Cascades / Coast Starlight (Olympia); Flix/Greyhound: Seattle Bus Station (SEA6)
   Lamy:           {lat: 35.481, lon: -105.880, country: US, tz: America/Denver, bus_transfer: 10, amtrak: [LMY]}  # Lamy, NM (LMY); Southwest Chief -> Thruway bus to Santa Fe; bus_transfer 10: Amtrak's bus waits for the train
   Maricopa:       {lat: 33.056, lon: -112.047, country: US, tz: America/Phoenix, bus_transfer: 10, amtrak: [MRC]}  # Maricopa, AZ (MRC); tz set by hand (Amtrak GTFS says America/Denver; Arizona has no DST); Sunset Limited / Texas Eagle -> Phoenix; bus_transfer 10: Amtrak's bus waits for the train
+  # --- Ends of Amtrak lines (Matti 19.11.2026): the trains' first and last stops, so every line is used ---
+  # (left out: short runs - Wells, Saco, Goleta, Auburn, Greenfield, Oakland -, the Auto Train, the Winter Park ski train)
+  Miami:            {lat: 25.850, lon: -80.258, country: US, tz: America/New_York, amtrak: [MIA]}  # end of line: Silver Meteor, Floridian
+  San Antonio:      {lat: 29.419, lon: -98.478, country: US, tz: America/Chicago, amtrak: [SAS]}  # end of line: Texas Eagle / Sunset Limited
+  Savannah:         {lat: 32.083, lon: -81.148, country: US, tz: America/New_York, amtrak: [SAV]}  # end of line: Palmetto
+  Charlotte:        {lat: 35.241, lon: -80.823, country: US, tz: America/New_York, amtrak: [CLT]}  # end of line: Piedmont, Carolinian
+  Norfolk:          {lat: 36.844, lon: -76.276, country: US, tz: America/New_York, amtrak: [NFK]}  # end of line: Northeast Regional
+  Newport News:     {lat: 37.122, lon: -76.517, country: US, tz: America/New_York, amtrak: [NPN]}  # end of line: Northeast Regional
+  Roanoke:          {lat: 37.273, lon: -79.942, country: US, tz: America/New_York, amtrak: [RNK]}  # end of line: Northeast Regional
+  "Springfield, MA": {lat: 42.106, lon: -72.593, country: US, tz: America/New_York, amtrak: [SPG]}  # end of line: Hartford Line, Valley Flyer, Northeast Regional
+  St. Albans:       {lat: 44.812, lon: -73.086, country: US, tz: America/New_York, amtrak: [SAB]}  # end of line: Vermonter
+  Burlington:       {lat: 44.476, lon: -73.219, country: US, tz: America/New_York, amtrak: [BTN]}  # end of line: Ethan Allen Express
+  Brunswick:        {lat: 43.911, lon: -69.966, country: US, tz: America/New_York, amtrak: [BRK]}  # end of line: Downeaster
+  Niagara Falls:    {lat: 43.110, lon: -79.055, country: US, tz: America/New_York, amtrak: [NFL]}  # end of line: Empire Service
+  Montreal:         {lat: 45.500, lon: -73.566, country: CA, tz: America/Toronto, amtrak: [MTR]}  # end of line: Adirondack
+  Toronto:          {lat: 43.645, lon: -79.381, country: CA, tz: America/Toronto, amtrak: [TWO]}  # end of line: Maple Leaf
+  Pontiac:          {lat: 42.633, lon: -83.292, country: US, tz: America/New_York, amtrak: [PNT]}  # end of line: Wolverine
+  Port Huron:       {lat: 42.960, lon: -82.444, country: US, tz: America/New_York, amtrak: [PTH]}  # end of line: Blue Water
+  Grand Rapids:     {lat: 42.956, lon: -85.672, country: US, tz: America/New_York, amtrak: [GRR]}  # end of line: Pere Marquette
+  Milwaukee:        {lat: 43.035, lon: -87.917, country: US, tz: America/Chicago, amtrak: [MKE]}  # end of line: Hiawatha
+  Quincy:           {lat: 39.957, lon: -91.369, country: US, tz: America/Chicago, amtrak: [QCY]}  # end of line: Illinois Zephyr, Carl Sandburg
+  Carbondale:       {lat: 37.724, lon: -89.217, country: US, tz: America/Chicago, amtrak: [CDL]}  # end of line: Illini, Saluki
+  Mobile:           {lat: 30.691, lon: -88.038, country: US, tz: America/Chicago, amtrak: [MOE]}  # end of line: Mardi Gras Service; Central time (Amtrak's stop_timezone says New_York, as for Arizona the clock is read through it)
+  San Diego:        {lat: 32.716, lon: -117.170, country: US, tz: America/Los_Angeles, amtrak: [SAN]}  # end of line: Pacific Surfliner
+  San Luis Obispo:  {lat: 35.276, lon: -120.655, country: US, tz: America/Los_Angeles, amtrak: [SLO]}  # end of line: Pacific Surfliner
+  San Jose:         {lat: 37.330, lon: -121.902, country: US, tz: America/Los_Angeles, amtrak: [SJC]}  # end of line: Capitol Corridor
+  Eugene:           {lat: 44.055, lon: -123.092, country: US, tz: America/Los_Angeles, amtrak: [EUG]}  # end of line: Cascades
+  Vancouver:        {lat: 49.274, lon: -123.098, country: CA, tz: America/Vancouver, amtrak: [VAC]}  # end of line: Cascades
+
   # --- State capitals (43; the other 7 are in not_yet_covered) ---
   Montgomery:     {lat: 32.380, lon: -86.315, country: US, tz: America/Chicago, capital: true, note: capital of Alabama, flix: [573a36c2-824b-48be-a7ad-7c6fda585712]}  # Flix/Greyhound: Montgomery Intermodal Center (MRY6)
   Little Rock:    {lat: 34.750, lon: -92.287, country: US, tz: America/Chicago, capital: true, note: capital of Arkansas, amtrak: [LRK]}  # Little Rock, AR - Union Station (LRK)
