@@ -74,6 +74,7 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-64 | Nearby towns as a list, not as places on the map | 17.11.2026 | Accepted |
 | D-65 | Build and check each map in a job of its own | 17.11.2026 | Accepted |
 | D-66 | Keep the network about its present size | 18.11.2026 | Accepted |
+| D-67 | A USA map from Amtrak's and Greyhound's GTFS, as a network of its own | 19.11.2026 | Open (plan agreed, being built) |
 
 ---
 
@@ -1402,6 +1403,51 @@ visitor zooming smoothness, and every weekly run lookup time, for little benefit
 **Consequences.** Zooming itself is fixed separately (FIX-20: move the drawing with a CSS transform during
 a pinch or wheel and lay the labels out once at the end – 16 ms a frame instead of ~150 ms in the same
 test). The limits are a guide, not a hard check; revisit them if FIX-20 leaves a lot of room.
+
+---
+
+## D-67 A USA map from Amtrak's and Greyhound's GTFS, as a network of its own
+**Date:** 19.11.2026 · **Status:** Open (plan agreed with Matti 19.11.2026; settle when the first map is built)
+
+**Context.** IDEA-25 (Matti): the same kind of map for the United States. His experiment (18.11.2026) ran
+timetable_kit (github.com/neroden/timetable_kit, AGPL) on Amtrak's GTFS feed (valid 19.11.2026–15.11.2027):
+1,031 stations, 599 legs between the 82 "major" stations (bold in Amtrak's printed timetables), and a check of
+the state capitals – 30 have an Amtrak train, Phoenix and Santa Fe only an Amtrak Thruway bus, 18 nothing in the
+feed. Two gaps: 36 of 69 timetable specs failed (stale train numbers – among them the Northeast Corridor,
+Keystone, Pennsylvanian, Silver Service, Capitol Corridor, San Joaquins), and only ~11 of the 30 rail capitals
+are major stations (Topeka, Jefferson City, Lincoln, Harrisburg, Trenton, Providence, Hartford, Austin, Montpelier
+are not).
+
+**Decision (plan).**
+- **Origin and destinations** (Matti): first map from Chicago, Amtrak's hub; destinations the 50 state capitals
+  and Washington DC (`capital: true`, `note: capital of <state>`). Big cities (New York, New Orleans, Los Angeles,
+  Seattle …) are ordinary places, shown with *Include other cities*. Honolulu is `not_yet_covered` (as Reykjavik);
+  Juneau by the Alaska Marine Highway ferry from Bellingham if the times can be found.
+- **Data straight from GTFS, with an importer of our own** (`gtfs_import.py`): reads Amtrak's feed and Greyhound's
+  (FlixBus US, gtfs.gis.flix.tech/gtfs_generic_us.zip), and for each trip writes legs between the places in
+  data/us/places.yaml that it stops at – every pair along the trip, so a through train stays one train (as
+  routes_to_pairs.py does). Run days and validity from calendar.txt/calendar_dates.txt; times local, `+N` days
+  for long-distance trains (D-63). Not Transitous: the feeds are the operators' own, complete, and read in seconds
+  instead of ~47 s per line; not timetable_kit: specs go stale and its code is AGPL. Its output stays a cross-check.
+- **A network of its own, same code**: data/us/ holds places.yaml (with `settings.origins`), legs.yaml, names.yaml
+  if needed, basemap.geojson (Natural Earth, lower 48 + southern Alaska); `load()` already takes a data folder.
+  Europe keeps D-66's size limit and its pages do not grow. One router, one page template, the same checks.
+- **What differs in the US**: English only; an Amtrak link instead of bahn.de per rail stretch (if a stable search
+  URL exists, else the route page); time zones per place (`tz:`, D-63); CO₂ – Amtrak long distance runs on
+  diesel, so a diesel train factor (Chalmers 96 g) except on the electrified Northeast Corridor and Keystone; the
+  "in Europe" coordinate check in add_leg.py (D-11) per network; Greyhound stops become places only where a
+  capital needs them.
+- **Weekly update**: the importer downloads both feeds in the lookup job (no Transitous calls); the US map is one
+  more origin in the map matrix (D-65).
+
+**Why.** The European network was hand-picked because no single feed covers Europe; in the US two operators carry
+nearly all intercity trains and buses and publish full GTFS, so the backbone can come from the feeds themselves.
+A separate network keeps both maps light and their weekly checks independent.
+
+**To settle when built.** How many through-train pairs the importer writes (page weight, D-48); whether long-
+distance trains (once a day, often late) need longer change times than 20 min – Amtrak's own guaranteed connections
+are 60–90 min; the Thruway buses missing from Amtrak's GTFS (Nashville, Des Moines, Madison, Augusta) – Greyhound
+may cover them.
 
 ---
 
