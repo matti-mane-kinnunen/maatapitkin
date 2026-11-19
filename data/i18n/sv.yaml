@@ -7,6 +7,7 @@ subtitle: "Från {origin} till huvudstäder i Europa och runt Medelhavet med tå
 draft_note: " · <b>utkast</b>: vissa förbindelser kan fortfarande saknas"
 maps_from_aria: "Kartor från andra städer"
 maps_from: "Kartor från: "
+other_maps: "Andra kartor: "
 draft_suffix: " (utkast)"
 credit: 'Se <a href="#user-guide" id="guide-link">användarguiden</a>. Utvecklad med Claude av <a href="mailto:mane@iki.fi">mane@iki.fi</a> – se <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">bloggen</a>'
 meta_reached: "{n} huvudstäder nås"

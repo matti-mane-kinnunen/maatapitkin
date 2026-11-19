@@ -9,6 +9,7 @@ subtitle: "{origin_from} pääkaupunkeihin Euroopassa ja Välimeren ympärillä 
 draft_note: " · <b>luonnos</b>: osa yhteyksistä voi vielä puuttua"
 maps_from_aria: "Kartat muista lähtökaupungeista"
 maps_from: "Kartat: "
+other_maps: "Muut kartat: "
 draft_suffix: " (luonnos)"
 credit: 'Lue <a href="#user-guide" id="guide-link">käyttöohje</a>. Tehty Clauden kanssa, <a href="mailto:mane@iki.fi">mane@iki.fi</a> – <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">blogi</a>'
 meta_reached: "Saavutettavissa {n} pääkaupunkia"

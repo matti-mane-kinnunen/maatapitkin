@@ -17,16 +17,44 @@ settings:
   max_stay_nights: 6         # a week covers the less-than-daily trains (Cardinal, Sunset Limited)
   alternative_max_extra_hours: 12
   start_date: 2026-12-08     # travel date; default is next Monday (or use --date)
+  timetable_change: legs     # timetables hold until the last day gtfs_import.py imported (not the European change)
+  site_url: "https://matti-mane-kinnunen.github.io/maatapitkin/us/"   # build.py network=us writes out/site/us/
+  goatcounter: "https://maatapitkin.goatcounter.com/count"
   repo_url: "https://github.com/matti-mane-kinnunen/maatapitkin"
-  co2:                       # D-67: diesel trains outside the electrified NEC / Keystone (not wired into co2.py yet)
+  other_maps:                # links to the other networks' maps (D-67)
+    - {name: "Europe (from Helsinki and 7 other cities)", url: "../index.html"}
+  booking: {site: amtrak.com, url: "https://www.amtrak.com/", key: amtrak}   # no documented deep link: station codes to type in
+  texts:                     # English page texts for this network, over data/i18n/en.yaml
+    subtitle: "{origin} to the US state capitals by train and bus — fastest connection from Amtrak's and Greyhound's timetables"
+    valid_until: "Timetables imported until {date}. For later dates, check with Amtrak and Greyhound."
+    map_aria: "Map of rail and bus legs across the United States"
+    legend_arrives: "State capital, arrives on"
+    calendar_title: "Download this journey as a calendar file (.ics): every train, bus and hotel night, in local times"
+    co2_how_2: "Trains: the US EPA's figures for Amtrak – the electrified Northeast Corridor, and all other routes, which run on diesel and emit about six times as much per kilometre. Bus and flight: the same Swedish figures as on the Europe maps (the flight figure includes the effect of flying high up)."
+    co2_factors: "US EPA 2025 for trains, {src} {yr} for bus and flight (Northeast Corridor train {rail}"
+    co2_diesel: ", other Amtrak trains {diesel}"
+    co2_factors_end: ", bus {bus}, flight {flight} CO₂e per person-km)"
+    co2_how_1: "A rough estimate, rounded on purpose. Each train or bus leg: distance between the two places\n          (+20&nbsp;% for the real route) \xD7 the average emissions per person-km for that kind of transport.\n          The flight: a direct flight between the same two cities, including the extra warming effect of\n          emissions at high altitude."
+    search_missing: "Capital with no Amtrak train or Greyhound / FlixBus bus in the timetable data"
+    foot_sources: "Timetables from Amtrak's and FlixBus / Greyhound's own GTFS feeds, imported weekly, applied to the travel date above. "
+    foot_changes: "Changes take at least {min} min between trains and {bus} min to or from a bus (Greyhound stops can be a few km from the station). "
+    foot_quiet: "between {quiet} only night trains and night buses run. "
+    og_title: "{title} – {origin} to {n} US state capitals by train"
+    og_desc: "{origin} to {n} US state capitals by train and bus: door to door, how long it really takes, day by day, with every change and hotel night."
+    og_alt: "Map of train journeys from {origin} to US state capitals"
+  co2:                       # D-67: diesel trains outside the electrified NEC / Keystone
     source: "Klimatsmart semester (Chalmers), Jörgen Larsson, method report v5.1, factors for 2026"
     source_url: "https://klimatsmartsemester.se/sa-har-vi-raknat"
     factors:                 # kg CO2e per person-km
-      rail: 0.019            # electric train (Northeast Corridor, Keystone)
-      rail_diesel: 0.096     # diesel train (D-67)
+      # trains: US EPA GHG Emission Factors Hub 2025, "Intercity Rail" (Amtrak data), per passenger-mile / 1.609344
+      # (Matti 19.11.2026: carbonrecycling.co.uk/emission-factors/us/travel/intercity-rail; the 2026 Cornerstone
+      # edition's national average is within 0.01 % of 2025's). Bus and flight stay Chalmers, as on the Europe maps.
+      rail: 0.0143           # Northeast Corridor 0.02305 kg/passenger-mile (mostly electric)
+      rail_diesel: 0.0935    # other routes 0.1504 kg/passenger-mile (diesel; figure via climatiq.io)
       coach: 0.030
       ferry: 0.186
       flight: 0.117
+    electric_places: [Washington, Philadelphia, Trenton, New York, New Haven, Providence, Boston, Harrisburg]   # a train between two of these is electric
     route_factor: 1.2
     flight_uplift: 1.0
 

@@ -1475,6 +1475,15 @@ data/out in make_map.build); the map's extent comes from data/us/basemap.geojson
 provinces, Mexico, simplified). First build (8.12.2026 from 06:00 only): 44 capitals reached, the two routers agree
 (check_router.mjs); one travel day and one start time take 2.5 min.
 
+**US texts, links and site (19.11.2026).** A network may set `texts:` (page texts over its language's), `other_maps:`
+(links between the Europe and US maps), `booking:` (a link per rail stretch where bahn.de has no station numbers:
+amtrak.com with the station codes to type in – Amtrak has no documented deep link) and `timetable_change: legs`
+(timetables hold until the last imported day, not the European change). `build.py network=us` writes its pages to
+out/site/us/, so one Pages site holds both (…/maatapitkin/us/). CO₂ for US trains (Matti's source): US EPA GHG
+Emission Factors Hub 2025, Northeast Corridor 0.02305 and other routes 0.1504 kg/passenger-mile = 14 and 94 g/pkm
+(`rail`, `rail_diesel`; a train between two `electric_places` counts as electric); bus and flight stay Chalmers. The
+legend and the "No ferries" option are hidden where a network has no ferries; the route table says only what applies.
+
 ---
 
 ## Template for a new decision

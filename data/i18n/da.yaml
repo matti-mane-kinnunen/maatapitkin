@@ -7,6 +7,7 @@ subtitle: "Fra {origin} til hovedstæder i Europa og omkring Middelhavet med tog
 draft_note: " · <b>udkast</b>: nogle forbindelser kan stadig mangle"
 maps_from_aria: "Kort fra andre byer"
 maps_from: "Kort fra: "
+other_maps: "Andre kort: "
 draft_suffix: " (udkast)"
 credit: 'Se <a href="#user-guide" id="guide-link">brugervejledningen</a>. Udviklet med Claude af <a href="mailto:mane@iki.fi">mane@iki.fi</a> – se <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">bloggen</a>'
 meta_reached: "{n} hovedstæder nås"

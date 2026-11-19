@@ -7,6 +7,7 @@ subtitle: "Ab {origin} in die Hauptstädte Europas und rund ums Mittelmeer mit Z
 draft_note: " · <b>Entwurf</b>: einige Verbindungen können noch fehlen"
 maps_from_aria: "Karten ab anderen Städten"
 maps_from: "Karten ab: "
+other_maps: "Weitere Karten: "
 draft_suffix: " (Entwurf)"
 credit: 'Siehe <a href="#user-guide" id="guide-link">Anleitung</a>. Mit Claude entwickelt von <a href="mailto:mane@iki.fi">mane@iki.fi</a> – siehe <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">Blog</a>'
 meta_reached: "{n} Hauptstädte erreichbar"

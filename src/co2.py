@@ -40,6 +40,10 @@ class CO2:
         svc = str(leg.service or "").upper().replace(" ", "")
         if svc.startswith(("EST", "EUROSTAR")) and "international_rail" in f:
             return f["international_rail"]         # Eurostar, when the source has its own figure
+        if "rail_diesel" in f:                     # US: diesel, except between two places on electrified lines (D-67)
+            el = set(self.cfg.get("electric_places") or [])
+            if not (leg.frm in el and leg.to in el):
+                return f["rail_diesel"]
         return f["rail"]
 
     def leg_kg(self, leg) -> float:

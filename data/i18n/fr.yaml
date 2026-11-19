@@ -7,6 +7,7 @@ subtitle: "De {origin} aux capitales d’Europe et du pourtour méditerranéen e
 draft_note: " · <b>brouillon</b> : certaines liaisons peuvent encore manquer"
 maps_from_aria: "Cartes au départ d’autres villes"
 maps_from: "Cartes au départ de : "
+other_maps: "Autres cartes : "
 draft_suffix: " (brouillon)"
 credit: 'Voir le <a href="#user-guide" id="guide-link">guide d’utilisation</a>. Développé avec Claude par <a href="mailto:mane@iki.fi">mane@iki.fi</a> – voir le <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">blog</a>'
 meta_reached: "{n} capitales accessibles"

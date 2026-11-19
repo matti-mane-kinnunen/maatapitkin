@@ -67,10 +67,11 @@ def basemap_paths(geojson: dict) -> str:
 
 
 def build(root: Path, net_file: str = "network.json", page_name: str = "index.html", fragment: bool = True,
-          data: Path | None = None, out: Path | None = None):
+          data: Path | None = None, out: Path | None = None, site: Path | None = None):
     """Write the map page for one origin: out/site/<page_name> (and out/map.html for the first origin).
     data/out: the network's folders (build.py network=us: data/us, out/us); default data/, out/."""
     data, out = data or root / "data", out or root / "out"
+    site = site or out / "site"
     net = json.loads((out / net_file).read_text())
     base = json.loads((data / "basemap.geojson").read_text())
     net["off_map"] = fit(net["places"], net["not_covered"], tuple(base.get("extent", (-32, 25, 50, 72))))
@@ -85,7 +86,7 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
         net["stations"] = [[n, *project(lon, lat), r] for n, lon, lat, r in lay.get("stations", [])]
     w, h = size()
     lang = net.get("lang") or "en"
-    tx = i18n.texts(lang)                                     # page texts in the map's language (IDEA-13)
+    tx = {**i18n.texts(lang), **(net.get("texts") or {})}    # page texts in the map's language (IDEA-13), the network's own on top
     net["i18n"] = tx
     tpl = (root / "src" / "map_template.html").read_text()
     tpl = tpl.replace("__GUIDE__", i18n.guide(lang))
@@ -103,10 +104,10 @@ def build(root: Path, net_file: str = "network.json", page_name: str = "index.ht
                .replace("__DRAFT__", i18n.t(tx, "draft_note") if net.get("draft") else ""))
     if fragment:
         (out / "map.html").write_text(page)      # fragment: paste into a page or publish as is
-    site = out / "site"                                      # a complete page for GitHub Pages
-    site.mkdir(exist_ok=True)
-    static = root / "static"                                 # preview pictures etc., copied as they are
-    if static.is_dir():
+    site.mkdir(parents=True, exist_ok=True)                  # a complete page for GitHub Pages
+    # preview pictures etc., copied as they are: the network's own (data/us/static), Europe's for Europe
+    static = data / "static" if (data / "static").is_dir() else root / "static" if data == root / "data" else None
+    if static and static.is_dir():
         for f in static.iterdir():
             if f.is_file():
                 (site / f.name).write_bytes(f.read_bytes())

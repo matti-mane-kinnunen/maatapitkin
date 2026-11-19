@@ -295,7 +295,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <label>{{own_date}} <input type="date" id="own-date" required></label>
         <label>{{own_time}} <input type="time" id="own-time" step="300" required></label>
         <label>{{own_transfer}} <select id="own-transfer"></select></label>
-        <label><input type="checkbox" id="own-noferry"> {{own_noferry}}</label>
+        <label id="own-noferry-l"><input type="checkbox" id="own-noferry"> {{own_noferry}}</label>
         <label><input type="checkbox" id="own-nobus"> {{own_nobus}}</label>
         <button type="button" id="own-go">{{own_apply}}</button>
         <span id="own-status" role="status" aria-live="polite"></span>
@@ -309,7 +309,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="legend">
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--train)" stroke-width="3"/></svg>{{leg_day_train}}</span>
         <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--night)" stroke-width="3"/></svg>{{leg_night_train}}</span>
-        <span><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>{{leg_ferry}}</span>
+        <span id="lg-ferry"><svg viewBox="0 0 28 10"><line x1="2" y1="5" x2="26" y2="5" stroke="var(--ferry)" stroke-width="3" stroke-dasharray="4 4"/></svg>{{leg_ferry}}</span>
         <span class="daylegend" id="daylegend"></span>
         <span><svg viewBox="0 0 28 10"><circle cx="14" cy="5" r="4" fill="none" stroke="var(--missing)" stroke-dasharray="2 2"/></svg>{{leg_no_legs}}</span>
         <span><svg viewBox="-14 -8 28 16" style="height:14px"><g class="mark day d3"><rect x="-9" y="-7" width="18" height="14" rx="4"/><text>3</text></g></svg>{{leg_day_begins}}</span>
@@ -432,14 +432,22 @@ const LN = n => (NET.display && NET.display[n]) || n;
 const ORIGIN_FROM = NET.origin_from || LN(NET.origin);   // "from Helsinki" in the map's language (fi: Helsingistä)
 // links to the maps from other origins (IDEA-04): "Also from: Stockholm · London"
 (function () {
-  const nav = document.getElementById("origins"), pages = NET.pages || [];
-  if (pages.length < 2) { nav.hidden = true; return; }
-  nav.append(T("maps_from"));
-  pages.forEach((p, i) => {
-    if (i) nav.append(" · ");
-    if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = LN(p.name) + (p.draft ? T("draft_suffix") : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
-    else { const a = document.createElement("a"); a.href = p.page; a.textContent = LN(p.name) + (p.draft ? T("draft_suffix") : ""); nav.append(a); }
-  });
+  const nav = document.getElementById("origins"), pages = NET.pages || [], others = NET.other_maps || [];
+  if (pages.length < 2 && !others.length) { nav.hidden = true; return; }
+  if (pages.length >= 2) {
+    nav.append(T("maps_from"));
+    pages.forEach((p, i) => {
+      if (i) nav.append(" · ");
+      if (p.name === NET.origin) { const b = document.createElement("b"); b.textContent = LN(p.name) + (p.draft ? T("draft_suffix") : ""); b.setAttribute("aria-current", "page"); nav.append(b); }
+      else { const a = document.createElement("a"); a.href = p.page; a.textContent = LN(p.name) + (p.draft ? T("draft_suffix") : ""); nav.append(a); }
+    });
+  }
+  // the maps of other networks (D-67): Europe <-> USA
+  if (others.length) {
+    if (pages.length >= 2) nav.append(" · ");
+    nav.append(T("other_maps"));
+    others.forEach((m, i) => { if (i) nav.append(" · "); const a = document.createElement("a"); a.href = m.url; a.textContent = m.name; nav.append(a); });
+  }
 })();
 const SVGNS = "http://www.w3.org/2000/svg";
 const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(SVGNS, tag);
@@ -495,6 +503,9 @@ function linkPoint(a, b, t) {      // the point a share t of the way along the l
   return { x: g[0], y: g[1] };
 }
 if (NET.rail) el("path", { d: NET.rail }, document.getElementById("rail"));
+// a network without ferries or local legs (US): no ferry line in the legend, no "No ferries" option
+if (!(NET.legs || []).some(l => l.mode === "ferry" || l.mode === "local") && !(NET.other_pairs || []).some(p => p[2] === "ferry" || p[2] === "local"))
+  for (const id of ["lg-ferry", "own-noferry-l"]) document.getElementById(id).style.display = "none";   // (the legend's CSS overrides `hidden`)
 const stationsG = document.getElementById("stations"), stnDots = [];
 for (const [n, x, y] of NET.stations || []) stnDots.push(el("circle", { cx: x, cy: y, r: 1.6 }, stationsG));
 const base = document.getElementById("base"), routeG = document.getElementById("route");
@@ -1010,7 +1021,7 @@ updateSummary();
 const S = NET.settings || {min_transfer: 10, ferry_checkin: 30, eurostar_checkin: 45, night_point: "03:00", morning: "06:00"};
 function updateFoot() { document.getElementById("foot").textContent =
   T("foot_sources") +
-  T("foot_changes", { min: S.min_transfer, ferry: S.ferry_checkin, eurostar: S.eurostar_checkin }) +
+  T("foot_changes", { min: S.min_transfer, ferry: S.ferry_checkin, eurostar: S.eurostar_checkin, bus: S.bus_transfer }) +
   T("foot_clock", { origin: LN(NET.origin), origin_from: ORIGIN_FROM, start: curStart || S.start || "00:00" }) +
   (curStart && curStart !== DEF_START ? T("foot_latest", { def: DEF_START }) : "") +
   T("foot_night", { night: S.night_point, morning: S.morning }) +
@@ -1033,6 +1044,7 @@ function showCO2(r) {
   const src = String(c.source || "").split(",")[0] || T("co2_the_source");
   document.getElementById("co2-factors").innerHTML = T("co2_factors", { src, yr, rail: g(f.rail) }) +
     (f.rail_nordic ? T("co2_nordic", { nordic: g(f.rail_nordic) }) : "") +
+    (f.rail_diesel ? T("co2_diesel", { diesel: g(f.rail_diesel) }) : "") +
     T("co2_factors_end", { bus: g(f.coach), ferry: g(f.ferry), flight: g(f.flight) });
   if (c.source_url) document.getElementById("co2-src").href = c.source_url;
   el.hidden = false;
@@ -1112,11 +1124,13 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       <div class="what"><b>${LN(s.from)} → ${LN(s.to)}</b>${chip}<div class="svc">${s.service}${s.note ? " · " + s.note : ""}${NET.repo_url ? ` · <a class="report" href="${reportUrl(s, cap)}" target="_blank" rel="noopener" title="${T("report_title")}">${T("report_problem")}</a>` : ""}</div>
       ${s.issue ? `<div class="issue">⚠ ${s.issue}</div>` : ""}</div>`;
     ol.appendChild(li);
-    const st = stretches.get(idx), url = st && bahnUrl(st.from, st.to, st.dep);
-    if (url) {
+    const st = stretches.get(idx), url = st && bahnUrl(st.from, st.to, st.dep), bk = st && !url && bookingLink(st);
+    if (url || bk) {
       const b = document.createElement("li");
       b.className = "bahn";
-      b.innerHTML = `<div class="t"></div><div class="what"><a href="${url}" target="_blank" rel="noopener" title="${T("bahn_title")}">${T("bahn_check", { from: LN(st.from), to: LN(st.to) })} ↗</a></div>`;
+      b.innerHTML = url
+        ? `<div class="t"></div><div class="what"><a href="${url}" target="_blank" rel="noopener" title="${T("bahn_title")}">${T("bahn_check", { from: LN(st.from), to: LN(st.to) })} ↗</a></div>`
+        : `<div class="t"></div><div class="what"><a href="${bk.url}" target="_blank" rel="noopener" title="${T("booking_title", bk)}">${T("booking_check", bk)} ↗</a></div>`;
       ol.appendChild(b);
     }
   });
@@ -1185,6 +1199,15 @@ function bahnUrl(from, to, t) {
   const id = n => encodeURIComponent(`A=1@L=${n}@`);
   return `https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=${encodeURIComponent(from)}&zo=${encodeURIComponent(to)}` +
     `&soid=${id(a)}&zoid=${id(b)}&hd=${hd}&hza=D`;
+}
+// Where bahn.de has no station numbers (US, D-67): a link to the operator's own site with the
+// station codes to type in (settings.booking: {site, url, key}; amtrak.com has no documented deep link)
+function bookingLink(st) {
+  const bk = NET.booking; if (!bk) return null;
+  const code = n => ((NET.places[n] || {})[bk.key || "amtrak"] || [])[0];
+  const a = code(st.from), b = code(st.to);
+  if (!a || !b || a === b) return null;
+  return { url: bk.url, site: bk.site, from: LN(st.from), to: LN(st.to), a, b, when: whenTxt(curDate, st.dep) };
 }
 function railStretches(steps) {          // index of each stretch's last leg -> {from, to, dep}
   const out = new Map(); let cur = null;

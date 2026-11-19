@@ -7,6 +7,7 @@ subtitle: "Da {origin} alle capitali d’Europa e del Mediterraneo in treno, tra
 draft_note: " · <b>bozza</b>: alcuni collegamenti potrebbero ancora mancare"
 maps_from_aria: "Mappe da altre città"
 maps_from: "Mappe da: "
+other_maps: "Altre mappe: "
 draft_suffix: " (bozza)"
 credit: 'Leggi la <a href="#user-guide" id="guide-link">guida</a>. Realizzata con Claude da <a href="mailto:mane@iki.fi">mane@iki.fi</a> – vedi il <a href="https://mattikinnunen.blogspot.com/" target="_blank" rel="noopener">blog</a>'
 meta_reached: "{n} capitali raggiungibili"

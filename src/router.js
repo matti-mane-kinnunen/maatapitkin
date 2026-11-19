@@ -329,6 +329,10 @@ function co2(net, legs, origin, dest) {
     }
     const svc = String(l.service || "").toUpperCase().replace(/ /g, "");
     if ((svc.startsWith("EST") || svc.startsWith("EUROSTAR")) && "international_rail" in f) return f.international_rail;
+    if ("rail_diesel" in f) {        // US: diesel, except between two places on electrified lines (D-67)
+      const el = new Set(cfg.electric_places || []);
+      if (!(el.has(l.frm) && el.has(l.to))) return f.rail_diesel;
+    }
     return f.rail;
   };
   const rf = parseFloat(cfg.route_factor ?? 1.2);

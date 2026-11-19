@@ -23,9 +23,11 @@ from types import SimpleNamespace
 import yaml
 
 ROOT = Path(__file__).parent
-# the network's folders: data/ and out/ (Europe), or data/<network>/ and out/<network>/ with network=us (D-67)
+# the network's folders: data/ and out/ (Europe), or data/<network>/ and out/<network>/ with network=us (D-67);
+# the pages of another network go to out/site/<network>/, so one site holds every map (us/index.html)
 DATA = ROOT / "data"
 OUT = ROOT / "out"
+SITE = OUT / "site"
 sys.path.insert(0, str(ROOT / "src"))
 from journeys import DAY, TZ, Router, fmt_clock, fmt_dur, hm, load, utc_offset  # noqa: E402
 from co2 import CO2  # noqa: E402
@@ -73,9 +75,10 @@ def main():
     argv = [f"--{a}" if re.fullmatch(r"[a-z][a-z-]*=.*", a) else a for a in sys.argv[1:]]
     args = ap.parse_args(argv)
 
-    global DATA, OUT
+    global DATA, OUT, SITE
     if args.network:
         DATA, OUT = ROOT / "data" / args.network, ROOT / "out" / args.network
+        SITE = ROOT / "out" / "site" / args.network
         if not (DATA / "places.yaml").exists():
             ap.error(f"network: no {DATA / 'places.yaml'}")
         OUT.mkdir(parents=True, exist_ok=True)
@@ -160,7 +163,7 @@ def merge_summaries() -> None:
     first, *others = summaries
     summary = dict(summaries[first], origins={o: summaries[o] for o in others})
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1) + "\n")
-    print(f"out/summary.json from {len(summaries)} maps")
+    print(f"{(OUT / 'summary.json').relative_to(ROOT)} from {len(summaries)} maps")
 
 
 def write_router_data(net) -> Path:
@@ -168,7 +171,7 @@ def write_router_data(net) -> Path:
     file, not JSON, so the page can load it with a <script> tag - also from a local file, where
     fetch() is not allowed. tests/check_router.mjs reads the same file."""
     from router_data import export
-    site = OUT / "site"
+    site = SITE
     site.mkdir(parents=True, exist_ok=True)
     path = site / "router-data.js"
     path.write_text("self.MP_ROUTER_DATA=" + json.dumps(export(net), ensure_ascii=False, separators=(",", ":")) + ";\n")
@@ -580,10 +583,13 @@ def routes_markdown(origin: str, version: str, router, routes: list, city_routes
     day_routes, day_city_routes, day_unreached = (variants[start_date.isoformat()]["no"][k]
                                                   for k in ("routes", "city_routes", "unreached"))
     md = [f"# Journeys from {origin}", "",
-          f"_{version}. Change {router.min_transfer} min (more at some stations), ferry check-in "
-          f"{router.ferry_checkin} min, Eurostar {router.eurostar_checkin} min. A wait "
-          f"past {fmt_clock(router.night_point)} is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night. "
-          f"Between {fmt_clock(router.quiet[0])} and {fmt_clock(router.quiet[1])} only night trains and ferries run. "
+          f"_{version}. Change {router.min_transfer} min (more at some stations)"
+          + (f", to or from a bus {router.bus_transfer} min" if router.bus_transfer is not None else "")
+          + (f", ferry check-in {router.ferry_checkin} min" if any(l.mode == "ferry" for l in net.legs) else "")
+          + (f", Eurostar {router.eurostar_checkin} min" if any(l.service.upper().startswith(("EST", "ES ")) for l in net.legs) else "")
+          + f". A wait past {fmt_clock(router.night_point)} is a hotel stay; no departures before {fmt_clock(router.morning)} after a hotel night. "
+          f"Between {fmt_clock(router.quiet[0])} and {fmt_clock(router.quiet[1])} only night trains"
+          + (" and ferries" if any(l.mode == "ferry" for l in net.legs) else " and night buses") + " run. "
           f"Clock times are local; door-to-door times are corrected for time zones._", "",
           "| Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |",
           "|---|---|---|---|---|---|---|---|"]
@@ -687,23 +693,49 @@ def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: di
     return {
         "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages,
         "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"),
+        # a network's own texts over the language's (US: Amtrak and Greyhound instead of Transitous and ferries),
+        # links to the maps of other networks, and a booking link where bahn.de has no station numbers (D-67)
+        "texts": s.get("texts") or {}, "other_maps": other_maps(s, cfg.get("lang", "en")), "booking": s.get("booking"),
         "repo_url": s.get("repo_url"), "tz": TZ,   # issue links (IDEA-20); calendar times (IDEA-18)
         "wiki": wiki_texts(cfg.get("lang", "en"), net.places),   # city texts (IDEA-22)
         "lang": cfg.get("lang", "en"), "origin_from": origin_from,
         "nearby": (nb := nearby_places(net.places)),   # IDEA-24
         "display": local_names(cfg.get("lang", "en"), {**net.places, **net.not_covered,
                                                        **{e["name"]: {} for v in nb.values() for e in v}}), "start_date": start_date.isoformat(),
-        "valid_until": (next_timetable_change(start_date) - dt.timedelta(days=1)).isoformat(), "version": version,
+        "valid_until": valid_until(net, s, start_date).isoformat(), "version": version,
         "places": net.places, "not_covered": net.not_covered,
         "legs": legs_json, "dates": [d.isoformat() for d in dates], "variants": compact_variants(variants),
         "starts": starts, "default_start": start_time,
         "settings": {"min_transfer": router.min_transfer, "ferry_checkin": router.ferry_checkin,
-                     "eurostar_checkin": router.eurostar_checkin, "night_point": fmt_clock(router.night_point),
+                     "eurostar_checkin": router.eurostar_checkin, "bus_transfer": router.bus_transfer,
+                     "night_point": fmt_clock(router.night_point),
                      "quiet": f"{fmt_clock(router.quiet[0])}–{fmt_clock(router.quiet[1])}",
                      "start": s.get("start_time", "00:00"),
                      "morning": fmt_clock(router.morning)}, "warnings": warnings,
         "layers": map_layers(legs_json),
     }
+
+
+def valid_until(net, s: dict, start_date: dt.date) -> dt.date:
+    """The last day the timetables hold: the day before the next European timetable change (D-52), or
+    with `timetable_change: legs` (US, imported from GTFS for a window of days) the last day any leg runs."""
+    if s.get("timetable_change") == "legs":
+        ends = [l.valid_to for l in net.legs if l.valid_to]
+        if ends:
+            return max(ends)
+    return next_timetable_change(start_date) - dt.timedelta(days=1)
+
+
+def other_maps(s: dict, lang: str) -> list:
+    """[{name, url}] for the links to other networks' maps (settings.other_maps; a name may be given
+    per language: {en: USA, fi: Yhdysvallat})."""
+    out = []
+    for m in s.get("other_maps") or []:
+        name = m.get("name")
+        if isinstance(name, dict):
+            name = name.get(lang) or name.get("en") or next(iter(name.values()))
+        out.append({"name": name, "url": m["url"]})
+    return out
 
 
 def map_layers(legs_json: list) -> dict | None:
@@ -750,7 +782,7 @@ def origin_context(net, args, ap, origin: str, cfg: dict) -> SimpleNamespace:
     dates = travel_dates(args, s, start_date)
     starts = start_times(args, s, start_time, ap)
 
-    tx = i18n.texts(cfg.get("lang", "en"))                 # the map's language (IDEA-13)
+    tx = {**i18n.texts(cfg.get("lang", "en")), **(s.get("texts") or {})}   # the map's language (IDEA-13), the network's own texts on top
     # "from Helsinki" where the language inflects the name (fi: Helsingistä); else the shown name
     origin_shown = local_names(cfg.get("lang", "en"), net.places).get(origin, origin)   # Roma, København
     origin_from = cfg.get("from") or origin_shown
@@ -797,7 +829,8 @@ def build_origin(net, warnings, args, ap, origin: str, cfg: dict, pages: list, m
         ensure_ascii=False, indent=1))
 
     import make_map
-    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin, data=DATA, out=OUT)
+    make_map.build(ROOT, f"network{suffix}.json", cfg.get("page", "index.html"), fragment=main_origin, data=DATA, out=OUT,
+                   site=SITE)
 
     stats = journeys.stats
     print(f"From {origin}: main journeys {t_main:.0f} s; other start times {t_other:.0f} s "
