@@ -81,9 +81,13 @@ _Night trains and night buses left out; night ferries still used._
 | Columbia | Wed 25.11. 00:25 | 18 h 15 min | 1 | 0 | same |
 | Ottawa | Wed 25.11. 08:05 | 23 h 50 min | 1 | 1 (Montreal) | same |
 | Québec City | Wed 25.11. 09:25 | 25 h 10 min | 1 | 1 (Montreal) | same |
+| Nashville | Wed 25.11. 19:55 | 32 h 15 min | 1 | 1 (Roanoke) | +7 h 10 min |
 | Charleston | Wed 25.11. 21:09 | 14 h 29 min | 0 | 0 | same |
+| Montgomery | Thu 26.11. 15:10 | 51 h 30 min | 2 | 2 (Roanoke, Nashville) | +22 h 10 min |
+| Tallahassee | Thu 26.11. 20:15 | 55 h 35 min | 2 | 2 (Roanoke, Nashville) | +29 h 15 min |
+| Baton Rouge | Fri 27.11. 19:40 | 80 h 00 min | 3 | 3 (Roanoke, Nashville, Montgomery) | +43 h 15 min |
 
-Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Montgomery, Little Rock, Phoenix, Sacramento, Denver, Tallahassee, Atlanta, Des Moines, Boise, Springfield, Indianapolis, Topeka, Baton Rouge, Lansing, Saint Paul, Jefferson City, Jackson, Lincoln, Santa Fe, Oklahoma City, Salem, Nashville, Austin, Salt Lake City, Olympia, Madison, Cheyenne
+Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Little Rock, Phoenix, Sacramento, Denver, Atlanta, Des Moines, Boise, Springfield, Indianapolis, Topeka, Lansing, Saint Paul, Jefferson City, Jackson, Lincoln, Santa Fe, Oklahoma City, Salem, Austin, Salt Lake City, Olympia, Madison, Cheyenne
 
 ## Leaving from 13:00 instead of 06:00
 
@@ -148,6 +152,7 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Montgom
 | Philadelphia | Tue 24.11. 07:19 | 1 h 09 min | 0 | 0 |
 | New Haven | Tue 24.11. 09:32 | 1 h 51 min | 0 | 0 |
 | Springfield, MA | Tue 24.11. 12:22 | 4 h 41 min | 1 | 0 |
+| Buffalo | Tue 24.11. 15:19 | 8 h 04 min | 0 | 0 |
 | Niagara Falls | Tue 24.11. 16:42 | 9 h 27 min | 0 | 0 |
 | Norfolk | Tue 24.11. 19:09 | 8 h 34 min | 0 | 0 |
 | Brunswick | Tue 24.11. 19:30 | 11 h 33 min | 1 | 0 |
@@ -168,6 +173,7 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Montgom
 | Sudbury | Wed 25.11. 16:57 | 33 h 41 min | 1 | 1 |
 | Miami | Wed 25.11. 18:09 | 35 h 59 min | 1 | 0 |
 | Jonquière | Wed 25.11. 18:37 | 34 h 22 min | 1 | 1 |
+| Detroit | Wed 25.11. 20:45 | 29 h 05 min | 1 | 0 |
 | Senneterre | Wed 25.11. 20:47 | 36 h 32 min | 1 | 1 |
 | Pontiac | Wed 25.11. 21:39 | 29 h 59 min | 1 | 0 |
 | Kansas City | Wed 25.11. 20:51 | 33 h 26 min | 2 | 0 |

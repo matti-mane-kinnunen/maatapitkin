@@ -7,7 +7,7 @@
   "2026-11-29"
  ],
  "draft": false,
- "departures": 17785,
+ "departures": 26311,
  "warnings": 0,
  "capitals": {
   "2026-11-24": {
@@ -28,10 +28,10 @@
   }
  },
  "places_reached": {
-  "2026-11-24": 103,
-  "2026-11-27": 103,
-  "2026-11-28": 103,
-  "2026-11-29": 103
+  "2026-11-24": 105,
+  "2026-11-27": 105,
+  "2026-11-28": 105,
+  "2026-11-29": 105
  },
  "reached": {
   "capitals": [
@@ -113,6 +113,7 @@
    "Boise",
    "Boston",
    "Brunswick",
+   "Buffalo",
    "Burlington",
    "Carbondale",
    "Charleston",
@@ -124,6 +125,7 @@
    "Concord",
    "Denver",
    "Des Moines",
+   "Detroit",
    "Dover",
    "Edmonton",
    "Emeryville",
@@ -219,31 +221,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 17785,
+   "departures": 26311,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     },
     "2026-11-27": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     },
     "2026-11-28": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     },
     "2026-11-29": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     }
    },
    "places_reached": {
-    "2026-11-24": 103,
-    "2026-11-27": 103,
-    "2026-11-28": 103,
-    "2026-11-29": 103
+    "2026-11-24": 105,
+    "2026-11-27": 105,
+    "2026-11-28": 105,
+    "2026-11-29": 105
    },
    "reached": {
     "capitals": [
@@ -303,6 +305,7 @@
      "Albany",
      "Annapolis",
      "Augusta",
+     "Baton Rouge",
      "Boston",
      "Charleston",
      "Columbia",
@@ -311,12 +314,15 @@
      "Dover",
      "Harrisburg",
      "Hartford",
+     "Montgomery",
      "Montpelier",
+     "Nashville",
      "Ottawa",
      "Providence",
      "Qu\u00e9bec City",
      "Raleigh",
      "Richmond",
+     "Tallahassee",
      "Toronto",
      "Trenton",
      "Washington"
@@ -331,6 +337,7 @@
      "Boise",
      "Boston",
      "Brunswick",
+     "Buffalo",
      "Burlington",
      "Carbondale",
      "Charleston",
@@ -343,6 +350,7 @@
      "Concord",
      "Denver",
      "Des Moines",
+     "Detroit",
      "Dover",
      "Edmonton",
      "Emeryville",
@@ -437,7 +445,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 17785,
+   "departures": 26311,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -458,10 +466,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 103,
-    "2026-11-27": 103,
-    "2026-11-28": 103,
-    "2026-11-29": 103
+    "2026-11-24": 105,
+    "2026-11-27": 105,
+    "2026-11-28": 105,
+    "2026-11-29": 105
    },
    "reached": {
     "capitals": [
@@ -531,6 +539,7 @@
      "Boise",
      "Boston",
      "Brunswick",
+     "Buffalo",
      "Burlington",
      "Carbondale",
      "Charleston",
@@ -543,6 +552,7 @@
      "Concord",
      "Denver",
      "Des Moines",
+     "Detroit",
      "Dover",
      "Edmonton",
      "Emeryville",
@@ -637,7 +647,7 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 17785,
+   "departures": 26311,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
@@ -658,10 +668,10 @@
     }
    },
    "places_reached": {
-    "2026-11-24": 103,
-    "2026-11-27": 103,
-    "2026-11-28": 103,
-    "2026-11-29": 103
+    "2026-11-24": 105,
+    "2026-11-27": 105,
+    "2026-11-28": 105,
+    "2026-11-29": 105
    },
    "reached": {
     "capitals": [
@@ -738,6 +748,7 @@
      "Boise",
      "Boston",
      "Brunswick",
+     "Buffalo",
      "Burlington",
      "Carbondale",
      "Charleston",
@@ -750,6 +761,7 @@
      "Concord",
      "Denver",
      "Des Moines",
+     "Detroit",
      "Dover",
      "Edmonton",
      "Emeryville",
@@ -844,31 +856,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 17785,
+   "departures": 26311,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     },
     "2026-11-27": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     },
     "2026-11-28": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     },
     "2026-11-29": {
      "with_night_trains": 51,
-     "without": 20
+     "without": 24
     }
    },
    "places_reached": {
-    "2026-11-24": 103,
-    "2026-11-27": 103,
-    "2026-11-28": 103,
-    "2026-11-29": 103
+    "2026-11-24": 105,
+    "2026-11-27": 105,
+    "2026-11-28": 105,
+    "2026-11-29": 105
    },
    "reached": {
     "capitals": [
@@ -928,6 +940,7 @@
      "Albany",
      "Annapolis",
      "Augusta",
+     "Baton Rouge",
      "Boston",
      "Charleston",
      "Columbia",
@@ -936,12 +949,15 @@
      "Dover",
      "Harrisburg",
      "Hartford",
+     "Montgomery",
      "Montpelier",
+     "Nashville",
      "Ottawa",
      "Providence",
      "Qu\u00e9bec City",
      "Raleigh",
      "Richmond",
+     "Tallahassee",
      "Toronto",
      "Trenton",
      "Washington"
@@ -956,6 +972,7 @@
      "Boise",
      "Boston",
      "Brunswick",
+     "Buffalo",
      "Burlington",
      "Carbondale",
      "Charleston",
@@ -968,6 +985,7 @@
      "Concord",
      "Denver",
      "Des Moines",
+     "Detroit",
      "Dover",
      "Edmonton",
      "Emeryville",

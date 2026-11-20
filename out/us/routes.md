@@ -142,15 +142,18 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Milwaukee | Tue 24.11. 07:39 | 1 h 29 min | 0 | 0 |
 | St. Louis | Tue 24.11. 12:01 | 4 h 46 min | 0 | 0 |
 | Quincy | Tue 24.11. 12:02 | 4 h 22 min | 0 | 0 |
+| Detroit | Tue 24.11. 13:30 | 5 h 45 min | 0 | 0 |
 | Pontiac | Tue 24.11. 14:21 | 6 h 36 min | 0 | 0 |
 | Carbondale | Tue 24.11. 13:45 | 5 h 30 min | 0 | 0 |
 | Kansas City | Tue 24.11. 20:51 | 11 h 01 min | 0 | 0 |
 | Port Huron | Tue 24.11. 23:31 | 6 h 31 min | 0 | 0 |
 | Grand Rapids | Tue 24.11. 23:34 | 4 h 04 min | 0 | 0 |
 | Pittsburgh | Wed 25.11. 05:05 | 9 h 25 min | 0 | 0 |
+| Buffalo | Wed 25.11. 08:53 | 10 h 23 min | 0 | 0 |
 | Philadelphia | Wed 25.11. 14:37 | 18 h 57 min | 1 | 0 |
 | Fort Worth | Wed 25.11. 13:45 | 23 h 35 min | 0 | 0 |
 | Lamy | Wed 25.11. 12:49 | 24 h 19 min | 0 | 0 |
+| Niagara Falls | Wed 25.11. 16:42 | 18 h 12 min | 1 | 0 |
 | New York | Wed 25.11. 16:43 | 21 h 03 min | 1 | 0 |
 | New Orleans | Wed 25.11. 15:47 | 19 h 42 min | 0 | 0 |
 | Springfield, MA | Wed 25.11. 17:49 | 19 h 19 min | 0 | 0 |
@@ -160,7 +163,6 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Burlington | Wed 25.11. 21:26 | 22 h 56 min | 1 | 0 |
 | Roanoke | Wed 25.11. 22:13 | 26 h 33 min | 1 | 0 |
 | Mobile | Wed 25.11. 21:14 | 25 h 09 min | 1 | 0 |
-| Niagara Falls | Wed 25.11. 22:28 | 23 h 58 min | 1 | 0 |
 | San Antonio | Wed 25.11. 22:46 | 32 h 36 min | 0 | 0 |
 | Brunswick | Thu 26.11. 01:45 | 27 h 15 min | 1 | 0 |
 | Charlotte | Thu 26.11. 02:30 | 30 h 50 min | 1 | 0 |

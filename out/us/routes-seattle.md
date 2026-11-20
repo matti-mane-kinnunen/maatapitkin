@@ -9,7 +9,7 @@ _leave Seattle Tue 24.11.2026 from 06:00 · generated 20.11.2026. Change 60 min 
 | Salem | Tue 24.11. 07:10 | Wed 25.11. 12:20 | 29 h 10 min | 0 | 1 | 0 |  |
 | Sacramento | Tue 24.11. 09:55 | Thu 26.11. 06:28 | 44 h 33 min | 0 | 1 | 0 |  |
 | Saint Paul | Tue 24.11. 16:55 | Thu 26.11. 08:33 | 37 h 38 min | 0 | 1 | 0 |  |
-| Madison | Tue 24.11. 16:55 | Thu 26.11. 18:50 | 47 h 55 min | 1 | 1 | 0 |  |
+| Madison | Tue 24.11. 16:55 | Thu 26.11. 18:40 | 47 h 45 min | 1 | 1 | 0 |  |
 | Springfield | Tue 24.11. 16:55 | Thu 26.11. 22:16 | 51 h 21 min | 1 | 1 | 0 |  |
 | Indianapolis | Tue 24.11. 16:55 | Thu 26.11. 23:49 | 51 h 54 min | 1 | 1 | 0 |  |
 | Columbus | Tue 24.11. 16:55 | Fri 27.11. 03:40 | 55 h 45 min | 1 | 2 | 0 |  |
@@ -76,7 +76,7 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Salem | Wed 25.11. 07:10 | Thu 26.11. 12:20 | 29 h 10 min | arrives 24 h 00 min later |
 | Sacramento | Wed 25.11. 09:55 | Fri 27.11. 06:28 | 44 h 33 min | arrives 24 h 00 min later |
 | Saint Paul | Tue 24.11. 16:55 | Thu 26.11. 08:33 | 37 h 38 min | same arrival |
-| Madison | Tue 24.11. 16:55 | Thu 26.11. 18:50 | 47 h 55 min | same arrival |
+| Madison | Tue 24.11. 16:55 | Thu 26.11. 18:40 | 47 h 45 min | same arrival |
 | Springfield | Tue 24.11. 16:55 | Thu 26.11. 22:16 | 51 h 21 min | same arrival |
 | Indianapolis | Tue 24.11. 16:55 | Thu 26.11. 23:49 | 51 h 54 min | same arrival |
 | Columbus | Tue 24.11. 16:55 | Fri 27.11. 03:40 | 55 h 45 min | same arrival |
@@ -138,13 +138,16 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Quincy | Thu 26.11. 22:17 | 51 h 22 min | 1 | 0 |
 | Grand Rapids | Thu 26.11. 23:34 | 51 h 39 min | 1 | 0 |
 | Los Angeles | Thu 26.11. 21:11 | 59 h 16 min | 0 | 0 |
+| Detroit | Fri 27.11. 00:15 | 52 h 20 min | 1 | 0 |
 | St. Louis | Fri 27.11. 00:09 | 53 h 14 min | 1 | 0 |
 | Pontiac | Fri 27.11. 01:11 | 53 h 16 min | 1 | 0 |
 | Carbondale | Fri 27.11. 01:49 | 54 h 54 min | 1 | 0 |
 | Pittsburgh | Fri 27.11. 05:05 | 57 h 10 min | 1 | 0 |
 | San Diego | Fri 27.11. 05:35 | 67 h 40 min | 1 | 0 |
+| Buffalo | Fri 27.11. 08:53 | 60 h 58 min | 1 | 0 |
 | Philadelphia | Fri 27.11. 14:37 | 66 h 42 min | 2 | 0 |
 | Kansas City | Fri 27.11. 13:50 | 66 h 55 min | 2 | 1 |
+| Niagara Falls | Fri 27.11. 16:42 | 68 h 47 min | 2 | 0 |
 | New York | Fri 27.11. 16:43 | 68 h 48 min | 2 | 0 |
 | New Orleans | Fri 27.11. 15:47 | 68 h 52 min | 1 | 0 |
 | Springfield, MA | Fri 27.11. 17:49 | 69 h 54 min | 1 | 0 |
@@ -154,7 +157,6 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Burlington | Fri 27.11. 21:26 | 73 h 31 min | 2 | 0 |
 | Roanoke | Fri 27.11. 22:13 | 74 h 18 min | 2 | 0 |
 | Mobile | Fri 27.11. 21:14 | 74 h 19 min | 2 | 0 |
-| Niagara Falls | Fri 27.11. 22:28 | 74 h 33 min | 2 | 0 |
 | Port Huron | Fri 27.11. 23:31 | 75 h 36 min | 1 | 1 |
 | Charlotte | Sat 28.11. 02:30 | 78 h 35 min | 2 | 0 |
 | Brunswick | Sat 28.11. 02:40 | 78 h 45 min | 2 | 0 |
@@ -208,11 +210,11 @@ _Fastest: 37 h 38 min, arrive Thu 26.11. 08:33, 0 changes, 0 hotel nights_
 - Tue 24.11. 16:55 → Thu 26.11. 08:33  **Seattle → Saint Paul**  Empire Builder 8  (night)
 
 ### Madison
-_Fastest: 47 h 55 min, arrive Thu 26.11. 18:50, 1 changes, 0 hotel nights_
+_Fastest: 47 h 45 min, arrive Thu 26.11. 18:40, 1 changes, 0 hotel nights_
 
-- Tue 24.11. 16:55 → Thu 26.11. 08:33  **Seattle → Saint Paul**  Empire Builder 8  (night)
-- Wait 5 h 22 min in Saint Paul
-- Thu 26.11. 13:55 → Thu 26.11. 18:50  **Saint Paul → Madison**  Greyhound US0150
+- Tue 24.11. 16:55 → Thu 26.11. 14:57  **Seattle → Milwaukee**  Empire Builder 8  (night)
+- Wait 2 h 13 min in Milwaukee
+- Thu 26.11. 17:10 → Thu 26.11. 18:40  **Milwaukee → Madison**  Greyhound US0150
 
 ### Springfield
 _Fastest: 51 h 21 min, arrive Thu 26.11. 22:16, 1 changes, 0 hotel nights_

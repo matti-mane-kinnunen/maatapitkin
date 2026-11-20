@@ -81,9 +81,13 @@ _Night trains and night buses left out; night ferries still used._
 | Ottawa | Fri 27.11. 08:05 | 73 h 00 min | 3 | 3 (Savannah, New York, Montreal) | same |
 | Québec City | Fri 27.11. 09:25 | 74 h 20 min | 3 | 3 (Savannah, New York, Montreal) | same |
 | Toronto | Fri 27.11. 12:03 | 76 h 58 min | 3 | 3 (Savannah, New York, Montreal) | +16 h 20 min |
+| Nashville | Fri 27.11. 19:55 | 85 h 50 min | 3 | 3 (Savannah, Washington, Roanoke) | +29 h 50 min |
 | Charleston | Fri 27.11. 21:09 | 86 h 04 min | 2 | 3 (Savannah, Washington) | +48 h 00 min |
+| Montgomery | Sat 28.11. 15:10 | 105 h 05 min | 4 | 4 (Savannah, Washington, Roanoke, Nashville) | +44 h 50 min |
+| Tallahassee | Sat 28.11. 20:15 | 109 h 10 min | 4 | 4 (Savannah, Washington, Roanoke, Nashville) | +51 h 55 min |
+| Baton Rouge | Sun 29.11. 19:40 | 133 h 35 min | 5 | 5 (Savannah, Washington, Roanoke, Nashville, Montgomery) | +67 h 25 min |
 
-Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Montgomery, Little Rock, Phoenix, Sacramento, Denver, Tallahassee, Atlanta, Des Moines, Boise, Springfield, Indianapolis, Topeka, Baton Rouge, Lansing, Saint Paul, Jefferson City, Jackson, Lincoln, Santa Fe, Oklahoma City, Salem, Nashville, Austin, Salt Lake City, Olympia, Madison, Cheyenne
+Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Little Rock, Phoenix, Sacramento, Denver, Atlanta, Des Moines, Boise, Springfield, Indianapolis, Topeka, Lansing, Saint Paul, Jefferson City, Jackson, Lincoln, Santa Fe, Oklahoma City, Salem, Austin, Salt Lake City, Olympia, Madison, Cheyenne
 
 ## Leaving from 10:00 instead of 06:00
 
@@ -156,6 +160,7 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Montgom
 | Newport News | Wed 25.11. 20:09 | 33 h 04 min | 1 | 0 |
 | Brunswick | Wed 25.11. 20:35 | 37 h 30 min | 2 | 0 |
 | St. Albans | Wed 25.11. 20:50 | 37 h 45 min | 1 | 0 |
+| Buffalo | Wed 25.11. 21:21 | 38 h 16 min | 1 | 0 |
 | Burlington | Wed 25.11. 21:26 | 38 h 21 min | 1 | 0 |
 | Pittsburgh | Wed 25.11. 21:54 | 38 h 49 min | 1 | 0 |
 | Niagara Falls | Wed 25.11. 22:28 | 39 h 23 min | 1 | 0 |
@@ -163,6 +168,7 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Montgom
 | Milwaukee | Thu 26.11. 12:42 | 50 h 37 min | 1 | 0 |
 | St. Louis | Thu 26.11. 14:51 | 52 h 46 min | 1 | 0 |
 | Montreal | Thu 26.11. 20:16 | 61 h 11 min | 1 | 1 |
+| Detroit | Thu 26.11. 20:45 | 57 h 40 min | 1 | 0 |
 | Pontiac | Thu 26.11. 21:39 | 58 h 34 min | 1 | 0 |
 | Kansas City | Thu 26.11. 20:51 | 58 h 46 min | 1 | 0 |
 | New Orleans | Thu 26.11. 21:12 | 63 h 07 min | 1 | 0 |

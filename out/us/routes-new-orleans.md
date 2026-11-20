@@ -145,6 +145,7 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | New Haven | Wed 25.11. 19:42 | 33 h 32 min | 1 | 0 |
 | Newport News | Wed 25.11. 20:09 | 33 h 59 min | 1 | 0 |
 | St. Louis | Wed 25.11. 19:25 | 29 h 40 min | 1 | 0 |
+| Detroit | Wed 25.11. 20:45 | 30 h 00 min | 1 | 0 |
 | Pontiac | Wed 25.11. 21:39 | 30 h 54 min | 1 | 0 |
 | Kansas City | Wed 25.11. 20:53 | 31 h 08 min | 1 | 0 |
 | Roanoke | Wed 25.11. 22:13 | 36 h 03 min | 1 | 0 |
@@ -155,6 +156,7 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Pittsburgh | Wed 25.11. 23:40 | 37 h 30 min | 1 | 0 |
 | San Antonio | Thu 26.11. 00:05 | 15 h 05 min | 0 | 0 |
 | Savannah | Thu 26.11. 03:18 | 41 h 08 min | 2 | 0 |
+| Buffalo | Thu 26.11. 08:53 | 42 h 08 min | 1 | 0 |
 | Brunswick | Thu 26.11. 12:10 | 50 h 00 min | 2 | 1 |
 | Fort Worth | Thu 26.11. 13:45 | 48 h 00 min | 1 | 0 |
 | Lamy | Thu 26.11. 12:49 | 48 h 04 min | 1 | 0 |
