@@ -177,7 +177,7 @@ jobs:
   # build data/us -> out/site/us/, check it like the other maps. Runs beside the lookup.
   us:
     runs-on: ubuntu-latest
-    timeout-minutes: 240           # five maps (Chicago, New York, Seattle, New Orleans, Miami) in one job
+    timeout-minutes: 120           # five maps in one job; ~1 h before the search only took legs that can run (20.11.)
     name: map (USA)
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -222,6 +222,8 @@ jobs:
         run: python3 gtfs_import.py --start "$(date +%F)" --days 120 | tee us-import.log
 
       - name: Build the map
+        env:
+          PYTHONUNBUFFERED: "1"          # show the progress in the log as it happens
         run: |
           mkdir -p out/us/parts
           python3 build.py network=us "date=${{ steps.dates.outputs.tue }}" "dates=${{ steps.dates.outputs.dates }}" | tee out/us/parts/build-usa.log

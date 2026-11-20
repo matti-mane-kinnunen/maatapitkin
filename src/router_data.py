@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from journeys import TZ
 
-ROUTER_KEYS = ("min_transfer", "bus_transfer", "ferry_checkin", "eurostar_checkin", "night_point", "morning_departure",
+ROUTER_KEYS = ("min_transfer", "bus_transfer", "search_days", "ferry_checkin", "eurostar_checkin", "night_point", "morning_departure",
                "min_hotel_stay", "quiet_hours", "max_stay_nights", "alternative_max_extra_hours", "co2")
 PLACE_KEYS = ("lat", "lon", "country", "capital", "min_transfer", "bus_transfer", "ferry_checkin", "morning_departure", "no_flights", "tz")
 

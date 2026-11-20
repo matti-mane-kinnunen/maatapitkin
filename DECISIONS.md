@@ -1529,6 +1529,13 @@ is in the footer and the guide. VIA trains have no booking link (VIA's feed has 
 Chicago → Toronto 45 h by rail (via New York); Winnipeg 126 h (via Vancouver) – buses would be faster, but
 Flix/Greyhound legs go only to places without trains.
 
+**Search speed (20.11.2026).** With Canada the US job ran over 2 h (Matti). Not a loop: every search went through all
+~15,000 departures of the 120-day import, most of them date-bound entries that cannot run in the travel week. The
+routers (journeys.py and router.js) now take only departures that can run within `search_days` (default 14) of the
+travel date: a search from Chicago 49 s → 5.5 s, Miami 40 → 5.5 s, same journeys (checked against all departures
+for Chicago, Miami, Seattle, Helsinki; the longest journey ends on day 8). A whole Chicago map (4 days × 2 starts)
+builds in 83 s on the Mac; both routers agree (1,648 journeys). Europe is unchanged (its legs have no dates).
+
 ---
 
 ## Template for a new decision

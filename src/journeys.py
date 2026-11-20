@@ -223,8 +223,13 @@ class Router:
         q0, q1 = str(s.get("quiet_hours", "00:00-05:00")).replace("–", "-").split("-")
         self.quiet = (hm(q0), hm(q1))
         self.out: dict[str, list[Leg]] = {}
+        # only departures that can run in the next `search_days` days (14): a GTFS import holds months of
+        # timetable in date-bound entries, and the search skipping them one by one was 9x slower (US, D-67)
+        last = start_date + dt.timedelta(days=int(s.get("search_days", 14)))
         for leg in net.legs:
             if not night_trains and leg.night and leg.mode != "ferry":
+                continue
+            if (leg.valid_to and leg.valid_to < start_date) or (leg.valid_from and leg.valid_from > last):
                 continue
             self.out.setdefault(leg.frm, []).append(leg)
 

@@ -122,8 +122,11 @@ class Router {
     this.quiet = [hm(q0), hm(q1)];
     const avoid = new Set(opt.avoid || []);
     this.out = new Map();
+    // only departures that can run in the next search_days days (as journeys.py; US, D-67)
+    const last = this.startDay + parseInt(s.search_days ?? 14, 10);
     for (const leg of net.legs) {
       if (!this.nightTrains && leg.night && leg.mode !== "ferry") continue;
+      if ((leg.vt != null && leg.vt < this.startDay) || (leg.vf != null && leg.vf > last)) continue;
       if (avoid.has(leg.mode)) continue;
       if (!this.out.has(leg.frm)) this.out.set(leg.frm, []);
       this.out.get(leg.frm).push(leg);
