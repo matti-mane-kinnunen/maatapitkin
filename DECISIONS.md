@@ -1536,6 +1536,32 @@ travel date: a search from Chicago 49 s → 5.5 s, Miami 40 → 5.5 s, same jour
 for Chicago, Miami, Seattle, Helsinki; the longest journey ends on day 8). A whole Chicago map (4 days × 2 starts)
 builds in 83 s on the Mac; both routers agree (1,648 journeys). Europe is unchanged (its legs have no dates).
 
+## D-68 Faster buses: an option, off by default
+**Date:** 20.11.2026 · **Status:** Accepted
+
+**Context.** The US map leaves out Greyhound/FlixBus where a train goes (D-67), so Chicago → Toronto takes until
+day 3 by train when a train and an overnight bus arrive the next morning. Europe has the same case (Tallinn → Warsaw
+by Lux Express). Matti: "Faster buses should be off by default."
+
+**Decision.** A leg can be marked `alternative: true` in legs.yaml. Both routers leave such legs out unless asked
+(journeys.py `Router(..., alternatives=True)`, router.js `opt.alternatives`), so the built maps are unchanged. Under
+**Other date or time** the visitor can tick **Faster buses**; the browser then works the journeys out with them
+(link: `.../fastbus`). "No buses" wins over it. The checkbox shows only on a network that has such legs (Europe: not yet).
+gtfs_import.py now keeps the Flix/Greyhound legs to train-served places and marks them `alternative` instead of
+dropping them. Alternative legs are not among "All connections"; a journey that uses one draws it.
+
+**Why.** Trains are what the map is about, and buses everywhere turn small capitals into bus hubs (D-67, Columbus);
+but a visitor who just wants to get there fast should be able to see the bus. Worked out in the browser, so no
+extra maps to build.
+
+**Consequences.** To make buses useful, Flix/Greyhound stops were added to 22 places (Toronto, Montreal, Ottawa,
+Vancouver, Milwaukee, Charlotte, San Antonio …) and Detroit and Buffalo became hubs (Flix's Toronto buses start in
+Detroit). With faster buses from Chicago 06:00 on Tue 24.11.: Toronto Wed 06:15 instead of Thu 19:43, Montreal and
+Ottawa a day earlier, Washington Wed 00:50 instead of 13:10. The default maps: 508 of 510 capital journeys (5
+origins × 2 starts) identical; Seattle → Madison 6 min faster by a new Milwaukee – Madison bus (a bus-only
+capital, so an ordinary leg). The browser's timetable file grows ~121 → ~170 KB gzipped; the map page does not.
+Next: mark European hand-entered buses (e.g. Tallinn – Riga – Vilnius – Warsaw) with `alternative: true`.
+
 ---
 
 ## Template for a new decision

@@ -297,6 +297,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <label>{{own_transfer}} <select id="own-transfer"></select></label>
         <label id="own-noferry-l"><input type="checkbox" id="own-noferry"> {{own_noferry}}</label>
         <label><input type="checkbox" id="own-nobus"> {{own_nobus}}</label>
+        <label id="own-fastbus-l" title="{{own_fastbus_title}}"><input type="checkbox" id="own-fastbus"> {{own_fastbus}}</label>
         <button type="button" id="own-go">{{own_apply}}</button>
         <span id="own-status" role="status" aria-live="polite"></span>
       </div>
@@ -506,6 +507,8 @@ if (NET.rail) el("path", { d: NET.rail }, document.getElementById("rail"));
 // a network without ferries or local legs (US): no ferry line in the legend, no "No ferries" option
 if (!(NET.legs || []).some(l => l.mode === "ferry" || l.mode === "local") && !(NET.other_pairs || []).some(p => p[2] === "ferry" || p[2] === "local"))
   for (const id of ["lg-ferry", "own-noferry-l"]) document.getElementById(id).style.display = "none";   // (the legend's CSS overrides `hidden`)
+// faster buses where a train also goes (D-68): an option only where the network has such legs
+if (!NET.alternatives) document.getElementById("own-fastbus-l").style.display = "none";
 const stationsG = document.getElementById("stations"), stnDots = [];
 for (const [n, x, y] of NET.stations || []) stnDots.push(el("circle", { cx: x, cy: y, r: 1.6 }, stationsG));
 const base = document.getElementById("base"), routeG = document.getElementById("route");
@@ -1248,6 +1251,7 @@ function hashFor(cap, opt) {
     parts.push(OWN_Q.date, OWN_Q.start.replace(":", ""));
     if (OWN_Q.transfer !== S.min_transfer) parts.push("t" + OWN_Q.transfer);
     for (const m of OWN_Q.avoid) parts.push("no" + m);
+    if (OWN_Q.fastbus) parts.push("fastbus");
     if (F.nightTrains === false && V.no) parts.push("no-night");
     const r1 = routeOf(cap), o1 = opt > 0 && r1 && r1.alternatives && r1.alternatives[opt - 1];
     if (o1) parts.push(slug(o1.label));
@@ -1276,6 +1280,7 @@ function parseHash() {
     }
     else if (/^t\d{1,3}$/.test(x)) want.transfer = Math.min(180, +x.slice(1));
     else if (x === "noferry" || x === "nobus") (want.avoid = want.avoid || []).push(x.slice(2));
+    else if (x === "fastbus") want.fastbus = true;
     else want.opt = x;
   }
   return want;
@@ -1283,10 +1288,10 @@ function parseHash() {
 function fromHash(first = false) {
   const want = parseHash();
   const night = want.night ?? (want.place ? true : F.nightTrains !== false);   // a link describes the whole view
-  if (want.ownDate || want.ownStart || want.transfer != null || want.avoid) {   // own settings: worked out here
+  if (want.ownDate || want.ownStart || want.transfer != null || want.avoid || want.fastbus) {   // own settings: worked out here
     F.nightTrains = night;
     runOwn({ date: want.ownDate || want.date || curDate, start: want.ownStart || want.start || DEF_START || "00:00",
-             transfer: want.transfer ?? S.min_transfer, avoid: want.avoid || [] }, want.place, want.opt);
+             transfer: want.transfer ?? S.min_transfer, avoid: want.avoid || [], fastbus: !!want.fastbus }, want.place, want.opt);
     return;
   }
   const wasOwn = !!OWN_Q;                // a link without own settings leaves them
@@ -1439,7 +1444,7 @@ function computeOwn(q) {
   return loadRouterData().then(data => {
     if (!OWN.net) OWN.net = MPRouter.loadNetwork(data);
     const job = { date: q.date, start: MPRouter.hm(q.start), def: MPRouter.hm(DEF_START || "00:00"), origin: NET.origin,
-                  opt: { minTransfer: q.transfer, avoid: q.avoid } };
+                  opt: { minTransfer: q.transfer, avoid: q.avoid, alternatives: !!q.fastbus } };
     const w = ownWorker(data);
     if (!w) return ownHere(job);
     return new Promise((res, rej) => {
@@ -1481,6 +1486,7 @@ function ownText(q) {
   if (q.transfer !== S.min_transfer) parts.push(T("own_note_transfer", { n: q.transfer }));
   if (q.avoid.includes("ferry")) parts.push(T("own_note_noferry"));
   if (q.avoid.includes("bus")) parts.push(T("own_note_nobus"));
+  else if (q.fastbus) parts.push(T("own_note_fastbus"));
   return T("own_note", { what: parts.join(", ") }) + (NET.valid_until && q.date > NET.valid_until ? " " + T("own_after_valid") : "");
 }
 function applyOwn(q, v) {
@@ -1505,7 +1511,7 @@ function leaveOwn() {
 // a link with own settings that cannot be shown: open the map's usual journey instead of nothing
 function showSomething() { if (!curRoute) { if (F.nightTrains === false && V.no) showVariant(false); select(routeOf("Paris") ? "Paris" : NET.routes[0].capital); } }
 function ownStatus(txt) { ownEl("own-status").textContent = txt; }
-// work out and show the journeys for q = {date, start "HH:MM", transfer, avoid: ["ferry", "bus"]};
+// work out and show the journeys for q = {date, start "HH:MM", transfer, avoid: ["ferry", "bus"], fastbus};
 // then open `place` (a link's place) or keep the journey on screen
 function runOwn(q, place = null, optWanted = null) {
   const go = ownEl("own-go");
@@ -1537,14 +1543,16 @@ function runOwn(q, place = null, optWanted = null) {
     xEl.value = String(OWN_Q ? OWN_Q.transfer : S.min_transfer);
     ownEl("own-noferry").checked = !!OWN_Q && OWN_Q.avoid.includes("ferry");
     ownEl("own-nobus").checked = !!OWN_Q && OWN_Q.avoid.includes("bus");
+    ownEl("own-fastbus").checked = !!OWN_Q && !!OWN_Q.fastbus;
   };
   ownEl("own").addEventListener("toggle", () => { if (ownEl("own").open) { fill(); loadRouterData().catch(() => {}); } });
   ownEl("own-go").addEventListener("click", () => {
     if (!dEl.value || !/^\d\d:\d\d$/.test(tEl.value)) { ownStatus(T("own_missing")); return; }
     const avoid = [...(ownEl("own-noferry").checked ? ["ferry"] : []), ...(ownEl("own-nobus").checked ? ["bus"] : [])];
-    const q = { date: dEl.value, start: tEl.value, transfer: +xEl.value, avoid };
+    const fastbus = NET.alternatives && ownEl("own-fastbus").checked && !avoid.includes("bus");
+    const q = { date: dEl.value, start: tEl.value, transfer: +xEl.value, avoid, fastbus };
     // the build's own variant: show it as it is, no need to work it out
-    if (VARS && VARS[q.date] && (q.start === DEF_START || STARTS.includes(q.start)) && q.transfer === S.min_transfer && !avoid.length) {
+    if (VARS && VARS[q.date] && (q.start === DEF_START || STARTS.includes(q.start)) && q.transfer === S.min_transfer && !avoid.length && !fastbus) {
       setVariant(q.date, F.nightTrains !== false, q.start); ownStatus(""); return;
     }
     runOwn(q);

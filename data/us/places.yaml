@@ -86,43 +86,45 @@ places:
   # --- Ends of Amtrak lines (Matti 19.11.2026): the trains' first and last stops, so every line is used ---
   # (left out: short runs - Wells, Saco, Goleta, Auburn, Greenfield, Oakland -, the Auto Train, the Winter Park ski train)
   Miami:            {lat: 25.850, lon: -80.258, country: US, tz: America/New_York, amtrak: [MIA]}  # end of line: Silver Meteor, Floridian
-  San Antonio:      {lat: 29.419, lon: -98.478, country: US, tz: America/Chicago, amtrak: [SAS]}  # end of line: Texas Eagle / Sunset Limited
+  San Antonio:      {lat: 29.419, lon: -98.478, country: US, tz: America/Chicago, amtrak: [SAS], flix: [049a9447-2544-4f5a-b4dd-3470eb261c59]}  # end of line: Texas Eagle / Sunset Limited Flix/Greyhound stop added for faster buses (D-68)
   Savannah:         {lat: 32.083, lon: -81.148, country: US, tz: America/New_York, amtrak: [SAV]}  # end of line: Palmetto
-  Charlotte:        {lat: 35.241, lon: -80.823, country: US, tz: America/New_York, amtrak: [CLT]}  # end of line: Piedmont, Carolinian
+  Charlotte:        {lat: 35.241, lon: -80.823, country: US, tz: America/New_York, amtrak: [CLT], flix: [5361ea13-751f-4177-b0ee-fddc25e94fd1]}  # end of line: Piedmont, Carolinian Flix/Greyhound stop added for faster buses (D-68)
   Norfolk:          {lat: 36.844, lon: -76.276, country: US, tz: America/New_York, amtrak: [NFK]}  # end of line: Northeast Regional
   Newport News:     {lat: 37.122, lon: -76.517, country: US, tz: America/New_York, amtrak: [NPN]}  # end of line: Northeast Regional
-  Roanoke:          {lat: 37.273, lon: -79.942, country: US, tz: America/New_York, amtrak: [RNK]}  # end of line: Northeast Regional
-  "Springfield, MA": {lat: 42.106, lon: -72.593, country: US, tz: America/New_York, amtrak: [SPG]}  # end of line: Hartford Line, Valley Flyer, Northeast Regional
-  St. Albans:       {lat: 44.812, lon: -73.086, country: US, tz: America/New_York, amtrak: [SAB]}  # end of line: Vermonter
-  Burlington:       {lat: 44.476, lon: -73.219, country: US, tz: America/New_York, amtrak: [BTN]}  # end of line: Ethan Allen Express
-  Brunswick:        {lat: 43.911, lon: -69.966, country: US, tz: America/New_York, amtrak: [BRK]}  # end of line: Downeaster
-  Niagara Falls:    {lat: 43.110, lon: -79.055, country: US, tz: America/New_York, amtrak: [NFL], via: ["403"]}  # end of line: Empire Service
-  Montreal:         {lat: 45.500, lon: -73.566, country: CA, tz: America/Toronto, aliases: [Montréal], amtrak: [MTR], via: ["226"]}  # end of line: Adirondack; VIA hub
-  Toronto:          {lat: 43.645, lon: -79.381, country: CA, tz: America/Toronto, capital: true, note: capital of Ontario, amtrak: [TWO], via: ["119"]}  # end of line: Maple Leaf; VIA hub
+  Roanoke:          {lat: 37.273, lon: -79.942, country: US, tz: America/New_York, amtrak: [RNK], flix: [7c194093-3b58-4d4b-a65b-13691cd30bb9]}  # end of line: Northeast Regional Flix/Greyhound stop added for faster buses (D-68)
+  "Springfield, MA": {lat: 42.106, lon: -72.593, country: US, tz: America/New_York, amtrak: [SPG], flix: [49c0149b-fe6e-46c1-8c73-d3f9c997c507]}  # end of line: Hartford Line, Valley Flyer, Northeast Regional Flix/Greyhound stop added for faster buses (D-68)
+  St. Albans:       {lat: 44.812, lon: -73.086, country: US, tz: America/New_York, amtrak: [SAB], flix: [29141570-c078-4818-8e26-1bd2bbace074]}  # end of line: Vermonter Flix/Greyhound stop added for faster buses (D-68)
+  Burlington:       {lat: 44.476, lon: -73.219, country: US, tz: America/New_York, amtrak: [BTN], flix: [5202fef1-aac3-4cba-b1ef-5cb28aae539b]}  # end of line: Ethan Allen Express Flix/Greyhound stop added for faster buses (D-68)
+  Brunswick:        {lat: 43.911, lon: -69.966, country: US, tz: America/New_York, amtrak: [BRK], flix: [90d4741b-f590-4f4d-8d41-1a56218f0f31]}  # end of line: Downeaster Flix/Greyhound stop added for faster buses (D-68)
+  Niagara Falls:    {lat: 43.110, lon: -79.055, country: US, tz: America/New_York, amtrak: [NFL], via: ["403"], flix: [c5c76d7b-781e-4300-bb52-129604f6c290]}  # end of line: Empire Service Flix/Greyhound stop added for faster buses (D-68)
+  Montreal:         {lat: 45.500, lon: -73.566, country: CA, tz: America/Toronto, aliases: [Montréal], amtrak: [MTR], via: ["226"], flix: [d3acc9d6-cc18-4512-abe6-635e698c5281]}  # end of line: Adirondack; VIA hub Flix/Greyhound stop added for faster buses (D-68)
+  Toronto:          {lat: 43.645, lon: -79.381, country: CA, tz: America/Toronto, capital: true, note: capital of Ontario, amtrak: [TWO], via: ["119"], flix: [aafae0fb-8d4d-4c26-bd2b-ad3963ee0045]}  # end of line: Maple Leaf; VIA hub Flix/Greyhound stop added for faster buses (D-68)
+  Detroit:          {lat: 42.368, lon: -83.073, country: US, tz: America/New_York, amtrak: [DET], flix: [2949ff9e-29ad-40cc-b6a7-daf1d10f5aab]}  # hub for faster buses (D-68): Chicago - Detroit - Toronto by Flix/Greyhound
+  Buffalo:          {lat: 42.878, lon: -78.874, country: US, tz: America/New_York, amtrak: [BFX, BUF], flix: [9a1b39b7-d723-4cf7-85dd-a34e3521568c]}  # hub for faster buses (D-68): buses to Toronto; Lake Shore Limited, Maple Leaf
   Pontiac:          {lat: 42.633, lon: -83.292, country: US, tz: America/New_York, amtrak: [PNT]}  # end of line: Wolverine
   Port Huron:       {lat: 42.960, lon: -82.444, country: US, tz: America/New_York, amtrak: [PTH]}  # end of line: Blue Water
   Grand Rapids:     {lat: 42.956, lon: -85.672, country: US, tz: America/New_York, amtrak: [GRR]}  # end of line: Pere Marquette
-  Milwaukee:        {lat: 43.035, lon: -87.917, country: US, tz: America/Chicago, amtrak: [MKE]}  # end of line: Hiawatha
+  Milwaukee:        {lat: 43.035, lon: -87.917, country: US, tz: America/Chicago, amtrak: [MKE], flix: [ab06606b-233e-46be-974b-ca45c6dee1d7]}  # end of line: Hiawatha Flix/Greyhound stop added for faster buses (D-68)
   Quincy:           {lat: 39.957, lon: -91.369, country: US, tz: America/Chicago, amtrak: [QCY]}  # end of line: Illinois Zephyr, Carl Sandburg
-  Carbondale:       {lat: 37.724, lon: -89.217, country: US, tz: America/Chicago, amtrak: [CDL]}  # end of line: Illini, Saluki
+  Carbondale:       {lat: 37.724, lon: -89.217, country: US, tz: America/Chicago, amtrak: [CDL], flix: [f64480af-97fa-4270-a02b-bfd25f1a6b8c]}  # end of line: Illini, Saluki Flix/Greyhound stop added for faster buses (D-68)
   Mobile:           {lat: 30.691, lon: -88.038, country: US, tz: America/Chicago, amtrak: [MOE]}  # end of line: Mardi Gras Service; Central time (Amtrak's stop_timezone says New_York, as for Arizona the clock is read through it)
-  San Diego:        {lat: 32.716, lon: -117.170, country: US, tz: America/Los_Angeles, amtrak: [SAN]}  # end of line: Pacific Surfliner
-  San Luis Obispo:  {lat: 35.276, lon: -120.655, country: US, tz: America/Los_Angeles, amtrak: [SLO]}  # end of line: Pacific Surfliner
-  San Jose:         {lat: 37.330, lon: -121.902, country: US, tz: America/Los_Angeles, amtrak: [SJC]}  # end of line: Capitol Corridor
-  Eugene:           {lat: 44.055, lon: -123.092, country: US, tz: America/Los_Angeles, amtrak: [EUG]}  # end of line: Cascades
-  Vancouver:        {lat: 49.274, lon: -123.098, country: CA, tz: America/Vancouver, amtrak: [VAC], via: ["8"]}  # end of line: Cascades; The Canadian
+  San Diego:        {lat: 32.716, lon: -117.170, country: US, tz: America/Los_Angeles, amtrak: [SAN], flix: [263cbe57-d960-4567-9182-b8c18395a464]}  # end of line: Pacific Surfliner Flix/Greyhound stop added for faster buses (D-68)
+  San Luis Obispo:  {lat: 35.276, lon: -120.655, country: US, tz: America/Los_Angeles, amtrak: [SLO], flix: [48b96d1a-f75c-47a3-90f1-aef2e5211cf7]}  # end of line: Pacific Surfliner Flix/Greyhound stop added for faster buses (D-68)
+  San Jose:         {lat: 37.330, lon: -121.902, country: US, tz: America/Los_Angeles, amtrak: [SJC], flix: [229b2dc8-6a3d-4659-9e9a-80b25561f5a0]}  # end of line: Capitol Corridor Flix/Greyhound stop added for faster buses (D-68)
+  Eugene:           {lat: 44.055, lon: -123.092, country: US, tz: America/Los_Angeles, amtrak: [EUG], flix: [a13f6ea7-5e16-40a5-bf96-e0b4b4386e68]}  # end of line: Cascades Flix/Greyhound stop added for faster buses (D-68)
+  Vancouver:        {lat: 49.274, lon: -123.098, country: CA, tz: America/Vancouver, amtrak: [VAC], via: ["8"], flix: [0e880928-b37e-44ed-828b-039512e66259]}  # end of line: Cascades; The Canadian Flix/Greyhound stop added for faster buses (D-68)
 
   # --- Canada (VIA Rail's GTFS, Matti 20.11.2026): Ottawa and the provincial capitals count as capitals ---
-  Ottawa:           {lat: 45.416, lon: -75.652, country: CA, tz: America/Toronto, capital: true, note: capital of Canada, via: ["617"]}
+  Ottawa:           {lat: 45.416, lon: -75.652, country: CA, tz: America/Toronto, capital: true, note: capital of Canada, via: ["617"], flix: [48cbf369-0bbb-4a35-a37c-bd66445823f3, 0a76f578-6518-44d8-9346-36189284e33b]}  # Flix/Greyhound stop added for faster buses (D-68)
   Québec City:      {lat: 46.819, lon: -71.215, country: CA, tz: America/Toronto, capital: true, note: capital of Quebec, aliases: [Québec, Quebec City, Quebec], via: ["628", "629"]}  # Gare du Palais, Sainte-Foy
   Winnipeg:         {lat: 49.889, lon: -97.134, country: CA, tz: America/Winnipeg, capital: true, note: capital of Manitoba, via: ["388"], flix: [9b6b4ac2-3ecb-11ea-8017-02437075395e]}  # Flix/Greyhound: Winnipeg (Grey Wolf Terminal)
   Edmonton:         {lat: 53.579, lon: -113.531, country: CA, tz: America/Edmonton, capital: true, note: capital of Alberta, via: ["449"], flix: [22ddf170-3b41-4d92-8642-36274aa1a925]}  # Flix/Greyhound: Edmonton (Downtown - Jasper Ave)
   Halifax:          {lat: 44.639, lon: -63.568, country: CA, tz: America/Halifax, capital: true, note: capital of Nova Scotia, via: ["620"]}
   Regina:           {lat: 50.446, lon: -104.550, country: CA, tz: America/Regina, capital: true, note: capital of Saskatchewan, flix: [d989f884-acc5-4be3-9298-8e7b9ae2e069]}  # no train; Flix/Greyhound: Regina (Victoria Square Mall)
-  Kingston:         {lat: 44.257, lon: -76.537, country: CA, tz: America/Toronto, via: ["58"]}
-  London:           {lat: 42.981, lon: -81.247, country: CA, tz: America/Toronto, aliases: [London ON], via: ["93"]}  # end of line: Toronto - London
-  Windsor:          {lat: 42.325, lon: -83.007, country: CA, tz: America/Toronto, via: ["618"]}  # end of line; across the river from Detroit
-  Sarnia:           {lat: 42.957, lon: -82.389, country: CA, tz: America/Toronto, via: ["341"]}  # end of line: Toronto - Sarnia
+  Kingston:         {lat: 44.257, lon: -76.537, country: CA, tz: America/Toronto, via: ["58"], flix: [881a98ec-e908-46a4-9b90-93e29f0aff39, c798d370-bc08-4ad0-b26a-255a4d228541]}  # Flix/Greyhound stop added for faster buses (D-68)
+  London:           {lat: 42.981, lon: -81.247, country: CA, tz: America/Toronto, aliases: [London ON], via: ["93"], flix: [131ffb41-a46e-4b1a-8eaf-c4ec332d692b]}  # end of line: Toronto - London Flix/Greyhound stop added for faster buses (D-68)
+  Windsor:          {lat: 42.325, lon: -83.007, country: CA, tz: America/Toronto, via: ["618"], flix: [985f5ded-077c-44f2-840a-09873a0bdf07]}  # end of line; across the river from Detroit; Flix/Greyhound stop added for faster buses (D-68)
+  Sarnia:           {lat: 42.957, lon: -82.389, country: CA, tz: America/Toronto, via: ["341"], flix: [04ceba4d-55bb-42c6-8f88-07ce99a9fd21]}  # end of line: Toronto - Sarnia Flix/Greyhound stop added for faster buses (D-68)
   Sudbury:          {lat: 46.487, lon: -80.992, country: CA, tz: America/Toronto, via: ["621", "4"]}  # Sudbury and Sudbury Jct (The Canadian), 8 km apart
   White River:      {lat: 48.590, lon: -85.278, country: CA, tz: America/Toronto, via: ["116"]}  # end of line: Sudbury - White River
   Jonquière:        {lat: 48.412, lon: -71.254, country: CA, tz: America/Toronto, aliases: [Jonquiere], via: ["444"]}  # end of line

@@ -9,7 +9,7 @@ const clock = t => `day ${Math.floor(t / R.DAY) + 1} ${String(Math.floor((t % R.
 const cases = JSON.parse(readFileSync(0, "utf8"));
 const out = cases.map(c => {
   const net = R.loadNetwork(c.data);
-  const r = new R.Router(net, c.date, { nightTrains: c.night_trains, minTransfer: c.min_transfer ?? undefined, avoid: c.avoid });
+  const r = new R.Router(net, c.date, { nightTrains: c.night_trains, minTransfer: c.min_transfer ?? undefined, avoid: c.avoid, alternatives: c.alternatives });
   const start = R.hm(c.start);
   r.search("A", start, c.objective);
   const ans = { expect: null, departures: null, stays: null };

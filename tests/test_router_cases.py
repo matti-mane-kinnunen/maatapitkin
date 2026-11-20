@@ -60,7 +60,8 @@ def python_answer(case: dict) -> dict:
     net = network(case)
     if case.get("min_transfer") is not None:                 # the visitor's own change time = transfer=N
         net.settings["min_transfer"] = case["min_transfer"]
-    r = Router(net, dt.date.fromisoformat(str(case.get("date", TUESDAY))), night_trains=case.get("night_trains", True))
+    r = Router(net, dt.date.fromisoformat(str(case.get("date", TUESDAY))), night_trains=case.get("night_trains", True),
+               alternatives=bool(case.get("alternatives")))
     for mode in case.get("avoid") or []:                     # avoid ferries / buses: those legs left out
         r.out = {p: [l for l in ls if l.mode != mode] for p, ls in r.out.items()}
     start, to = hm(case.get("start", "06:00")), case.get("to", "C")
@@ -87,7 +88,8 @@ def javascript_answers() -> list[dict] | None:
         payload.append({"data": export(network(case)), "date": str(case.get("date", TUESDAY)),
                         "start": case.get("start", "06:00"), "to": case.get("to", "C"),
                         "objective": case.get("objective", "fastest"), "night_trains": case.get("night_trains", True),
-                        "min_transfer": case.get("min_transfer"), "avoid": case.get("avoid") or []})
+                        "min_transfer": case.get("min_transfer"), "avoid": case.get("avoid") or [],
+                        "alternatives": bool(case.get("alternatives"))})
     p = subprocess.run([node, str(HERE / "router_cases.mjs")], input=json.dumps(payload),
                        capture_output=True, text=True, timeout=120)
     if p.returncode:

@@ -16,7 +16,7 @@ PLACE_KEYS = ("lat", "lon", "country", "capital", "min_transfer", "bus_transfer"
 
 def export(net) -> dict:
     """{places, settings, tz, legs: [group, ...]}; a group is one legs.yaml entry:
-    {f, t, s, m?, w?, vf?, vt?, h?, n?, is?, c?, x: [[dep, arr, duration, night], ...]}
+    {f, t, s, m?, a?, w?, vf?, vt?, h?, n?, is?, c?, x: [[dep, arr, duration, night], ...]}
     (dep/arr None for a leg without a timetable). Expanding the groups in order gives
     the legs with the same index as net.legs."""
     groups: list[dict] = []
@@ -26,6 +26,8 @@ def export(net) -> dict:
             g = {"f": l.frm, "t": l.to, "s": l.service, "x": []}
             if l.mode != "train":
                 g["m"] = l.mode
+            if l.alternative:
+                g["a"] = 1
             if l.weekdays is not None:
                 g["w"] = sorted(l.weekdays)
             for k, v in (("vf", l.valid_from), ("vt", l.valid_to)):

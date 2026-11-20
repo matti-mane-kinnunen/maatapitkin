@@ -4,7 +4,7 @@
     python3 gtfs_import.py                       # both feeds -> data/us/legs.yaml, print a report
     python3 gtfs_import.py --dry-run             # report only, write nothing
     python3 gtfs_import.py --start 2026-12-01 --days 120
-    python3 gtfs_import.py --all-bus-legs        # every Flix/Greyhound leg between two places
+    python3 gtfs_import.py --all-bus-legs        # no Flix/Greyhound leg marked `alternative`
 
 Which stops belong to which place is set in data/us/places.yaml: `amtrak: [codes]` (Amtrak
 stop_id = station code) and `flix: [stop ids]`. Every trip gives a leg between every pair of
@@ -28,9 +28,11 @@ Days. calendar.txt and calendar_dates.txt are read for the window --start .. --s
 `valid_to`; a missing date (a holiday) splits the period, a date on an odd weekday becomes an
 entry of its own. Entries that differ only in their times are merged into `times: [...]`.
 
-Buses. Amtrak Thruway buses are always kept. Flix/Greyhound legs are kept only if they go *to*
-a place no Amtrak train serves (the bus-only capitals, D-67), unless --all-bus-legs: otherwise a
-bus-only capital becomes a bus hub and Chicago -> Washington goes by Greyhound via Columbus.
+Buses. Amtrak Thruway buses are always kept. Flix/Greyhound legs *to* a place no train serves
+(the bus-only capitals, D-67) are ordinary legs. Those to a place trains serve too are marked
+`alternative: true`: the maps leave them out - otherwise a bus-only capital becomes a bus hub and
+Chicago -> Washington goes by Greyhound via Columbus - and the page uses them only when the
+visitor asks for faster buses (D-68). --all-bus-legs makes them all ordinary legs.
 Commuter rail in Amtrak's feed (MARC, Shore Line East) is left out.
 """
 from __future__ import annotations
@@ -331,14 +333,15 @@ def build_legs(places: dict, first: dt.date, last: dt.date, all_bus: bool, feeds
         report.setdefault("clock_backwards", []).append(f"{k[0]} -> {k[1]} ({k[2]}): {n} departures")
     train_places = {k[0] for k in groups if k[3] == "train"} | {k[1] for k in groups if k[3] == "train"}
     entries: dict[tuple, list[tuple[str, str]]] = defaultdict(list)
-    dropped_bus = 0
+    alt_bus = 0
     for (pa, pb, service, mode, name, dep, arr, days), dates in groups.items():
-        if name == "flix" and not all_bus and pb in train_places:
-            dropped_bus += 1
-            continue
+        # a bus to a place trains also serve: kept, but marked `alternative` - the maps leave it out
+        # unless the visitor asks for faster buses (D-68; before that these were dropped)
+        alt = name == "flix" and not all_bus and pb in train_places
+        alt_bus += alt
         for runs, a, b in compress(dates):
-            entries[(pa, pb, service, mode, days, runs, a, b)].append((dep, arr))
-    report["bus_legs_left_out"] = dropped_bus
+            entries[(pa, pb, service, mode, days, runs, a, b, alt)].append((dep, arr))
+    report["bus_legs_alternative"] = alt_bus
     report["train_places"] = sorted(train_places)
     return entries, report
 
@@ -362,7 +365,7 @@ def to_yaml(entries: dict, origin: str, header: str) -> str:
     lines = [header, "legs:"]
     last_from = None
     for k in sorted(entries, key=order):
-        pa, pb, service, mode, days, runs, a, b = k
+        pa, pb, service, mode, days, runs, a, b, alt = k
         if pa != last_from:
             lines.append(f"\n  # --- from {pa} ---")
             last_from = pa
@@ -378,6 +381,8 @@ def to_yaml(entries: dict, origin: str, header: str) -> str:
         if runs:
             f.append(f"runs: {q(runs)}")
         f += [f"valid_from: {a.isoformat()}", f"valid_to: {b.isoformat()}"]
+        if alt:
+            f.append("alternative: true")
         lines.append("  - {" + ", ".join(f) + "}")
     return "\n".join(lines) + "\n"
 
@@ -594,7 +599,7 @@ def main(argv=None):
     ap.add_argument("--data", default=str(ROOT / "data" / "us"), help="network folder (places.yaml; legs.yaml is written here)")
     ap.add_argument("--start", default=dt.date.today().isoformat(), help="first travel date (default today)")
     ap.add_argument("--days", type=int, default=120, help="how many days of timetable to import (default 120)")
-    ap.add_argument("--all-bus-legs", action="store_true", help="keep Flix/Greyhound legs to places that have trains too")
+    ap.add_argument("--all-bus-legs", action="store_true", help="Flix/Greyhound legs to places that have trains too as ordinary legs, not `alternative`")
     ap.add_argument("--dry-run", action="store_true", help="print the report, write nothing")
     args = ap.parse_args(argv)
 
@@ -625,7 +630,7 @@ def main(argv=None):
               f"{r.get('no_dates', 0)} of them do not run in the window")
         if r.get("unused_stops"):
             print(f"    stops in places.yaml no trip calls at: {', '.join(r['unused_stops'])}")
-    print(f"  Flix/Greyhound legs to places with trains left out: {report['bus_legs_left_out']}")
+    print(f"  Flix/Greyhound legs to places with trains, marked alternative: {report['bus_legs_alternative']}")
     for line in report.get("clock_backwards", []):
         print(f"  left out (arrives earlier by the clock than it leaves): {line}")
     reached = {k[1] for k in entries} | {k[0] for k in entries}

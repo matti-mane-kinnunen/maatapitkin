@@ -101,6 +101,7 @@ class Leg:
     weekdays: set[int] | None = None
     valid_from: dt.date | None = None
     valid_to: dt.date | None = None
+    alternative: bool = False       # a faster bus where a train also goes: only when asked (D-68)
 
     @property
     def timed(self) -> bool:
@@ -172,6 +173,7 @@ def load(data_dir: Path) -> tuple[Network, list[str]]:
                       highlight=r.get("highlight"), note=r.get("note"), issue=r.get("issue"),
                       checked=str(r.get("checked", "")), weekdays=parse_weekdays(r.get("runs")),
                       valid_from=_date(r.get("valid_from")), valid_to=_date(r.get("valid_to")),
+                      alternative=bool(r.get("alternative")),
                       group=i, group_size=len(slots))
             if slot is None:
                 leg.duration = hm(r["duration"])
@@ -206,8 +208,9 @@ class Router:
         hotel night too
     """
 
-    def __init__(self, net: Network, start_date: dt.date, night_trains: bool = True):
+    def __init__(self, net: Network, start_date: dt.date, night_trains: bool = True, alternatives: bool = False):
         self.net = net
+        self.alternatives = alternatives      # True: faster buses where a train also goes (legs marked `alternative`)
         self.night_trains = night_trains      # False: no night trains or night buses (night ferries stay)
         self.start_date = start_date
         s = net.settings
@@ -228,6 +231,8 @@ class Router:
         last = start_date + dt.timedelta(days=int(s.get("search_days", 14)))
         for leg in net.legs:
             if not night_trains and leg.night and leg.mode != "ferry":
+                continue
+            if leg.alternative and not alternatives:
                 continue
             if (leg.valid_to and leg.valid_to < start_date) or (leg.valid_from and leg.valid_from > last):
                 continue

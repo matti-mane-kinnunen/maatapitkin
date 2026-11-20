@@ -84,7 +84,7 @@ function loadNetwork(data) {
   for (const g of data.legs) for (const [dep, arr, duration, night] of g.x)
     legs.push({ idx: legs.length, frm: g.f, to: g.t, service: g.s, mode: g.m || "train", dep, arr, duration,
                 night: !!night, timed: dep != null, weekdays: g.w ? new Set(g.w) : null,
-                vf: g.vf ? dayNum(g.vf) : null, vt: g.vt ? dayNum(g.vt) : null,
+                alternative: !!g.a, vf: g.vf ? dayNum(g.vf) : null, vt: g.vt ? dayNum(g.vt) : null,
                 highlight: g.h || null, note: g.n || null, issue: g.is || null, checked: g.c || "" });
   for (const l of legs) {                        // worked out once: the router asks for these all the time
     l.ns = normService(l.service);
@@ -103,11 +103,13 @@ const OBJECTIVES = {
 
 /* --- journeys.Router -------------------------------------------------------------------
    opt: nightTrains (default true), minTransfer (replaces the general change time; stations
-   with their own keep it, as build.py transfer=N), avoid: ["ferry", "bus"]. */
+   with their own keep it, as build.py transfer=N), avoid: ["ferry", "bus"], alternatives (true: also
+   the legs marked `alternative`, faster buses where a train goes too; D-68). */
 class Router {
   constructor(net, startDate, opt = {}) {
     this.net = net;
     this.nightTrains = opt.nightTrains !== false;
+    this.alternatives = !!opt.alternatives;
     this.startDay = typeof startDate === "number" ? startDate : dayNum(startDate);
     const s = net.settings;
     this.minTransfer = parseInt(opt.minTransfer ?? s.min_transfer ?? 10, 10);
@@ -126,6 +128,7 @@ class Router {
     const last = this.startDay + parseInt(s.search_days ?? 14, 10);
     for (const leg of net.legs) {
       if (!this.nightTrains && leg.night && leg.mode !== "ferry") continue;
+      if (leg.alternative && !this.alternatives) continue;   // faster buses: only when asked (D-68)
       if ((leg.vt != null && leg.vt < this.startDay) || (leg.vf != null && leg.vf > last)) continue;
       if (avoid.has(leg.mode)) continue;
       if (!this.out.has(leg.frm)) this.out.set(leg.frm, []);
@@ -353,7 +356,7 @@ const ALTERNATIVES = [["Fewest changes", "changes", (c, h, t) => [c, t, h]],
 
 class Journeys {
   constructor(net, origin, opt = {}) {
-    this.net = net; this.origin = origin; this.opt = opt;      // opt: minTransfer, avoid (Router options)
+    this.net = net; this.origin = origin; this.opt = opt;      // opt: minTransfer, avoid, alternatives (Router options)
     this.maxExtra = Math.trunc(parseFloat(net.settings.alternative_max_extra_hours ?? 12) * 60);
     this.loops = new Set();
   }

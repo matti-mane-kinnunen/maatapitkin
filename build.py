@@ -671,8 +671,9 @@ def map_legs(net, variants: dict, start_date: dt.date):
     by_idx = {l.idx: l for l in net.legs}
     used_pairs = {(by_idx[i].frm, by_idx[i].to) for i in used if i in by_idx}
     drawn = [l for l in net.legs if (l.frm, l.to) in used_pairs]
-    other_pairs = sorted({(l.frm, l.to, l.mode, bool(l.night)) for l in net.legs
-                          if (l.frm, l.to) not in used_pairs and l.frm in net.places and l.to in net.places})
+    # (faster buses, `alternative`, are not among "all connections": only a journey that uses one draws it, D-68)
+    other_pairs = sorted({(l.frm, l.to, l.mode, bool(l.night)) for l in net.legs if not l.alternative
+                          and (l.frm, l.to) not in used_pairs and l.frm in net.places and l.to in net.places})
     other_pairs = [list(x) for x in {(a, b): (a, b, m, n) for a, b, m, n in other_pairs}.values()]
     legs_json = [{"i": l.idx, "from": l.frm, "to": l.to, "service": l.service, "mode": l.mode,
                   "night": l.night, "highlight": l.highlight, "issue": l.issue, "note": l.note,
@@ -692,7 +693,8 @@ def network_json(net, warnings: list, origin: str, cfg: dict, pages: list, s: di
     """Everything the map page needs (make_map.py puts it into the page)."""
     return {
         "origin": origin, "title": cfg.get("title") or "Maata pitkin", "draft": bool(cfg.get("draft")), "pages": pages,
-        "other_pairs": other_pairs, "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"),
+        "other_pairs": other_pairs, "alternatives": any(l.alternative for l in net.legs),   # the faster-buses option (D-68)
+        "co2": s.get("co2"), "site_url": s.get("site_url"), "goatcounter": s.get("goatcounter"),
         # a network's own texts over the language's (US: Amtrak and Greyhound instead of Transitous and ferries),
         # links to the maps of other networks, and a booking link where bahn.de has no station numbers (D-67)
         "texts": s.get("texts") or {}, "other_maps": other_maps(s, cfg.get("lang", "en")), "booking": s.get("booking"),

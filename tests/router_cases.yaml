@@ -7,7 +7,8 @@
 # A case: legs (legs.yaml format), places (A, B, C in Germany unless given), settings (overrides
 # of the defaults below), start (default 06:00), date (default Tue 17.11.2026), to (default C),
 # objective (fastest / fewest_changes / fewest_hotels), night_trains (default true),
-# min_transfer (the visitor's own change time), avoid (modes left out, e.g. [ferry]).
+# min_transfer (the visitor's own change time), avoid (modes left out, e.g. [ferry]),
+# alternatives (true: also the legs marked `alternative: true` - faster buses, D-68).
 # expect: [arrival, changes, hotel nights] with the arrival as "day N HH:MM", or null if
 # unreachable; departures: the departure of every leg of the journey.
 
@@ -69,6 +70,27 @@
   settings: {min_transfer: 60, bus_transfer: 45}
   places: {B: {bus_transfer: 10}}
   expect: ["day 1 10:40", 1, 0]
+
+- name: alternative - a faster bus where a train goes is left out by default (D-68)
+  legs:
+    - {from: A, to: C, dep: "08:00", arr: "14:00", service: T1}
+    - {from: A, to: C, dep: "08:30", arr: "12:00", service: F1, mode: bus, alternative: true}
+  expect: ["day 1 14:00", 0, 0]
+
+- name: alternative - and used when asked
+  legs:
+    - {from: A, to: C, dep: "08:00", arr: "14:00", service: T1}
+    - {from: A, to: C, dep: "08:30", arr: "12:00", service: F1, mode: bus, alternative: true}
+  alternatives: true
+  expect: ["day 1 12:00", 0, 0]
+
+- name: alternative - avoiding buses wins over asking for faster buses
+  legs:
+    - {from: A, to: C, dep: "08:00", arr: "14:00", service: T1}
+    - {from: A, to: C, dep: "08:30", arr: "12:00", service: F1, mode: bus, alternative: true}
+  alternatives: true
+  avoid: [bus]
+  expect: ["day 1 14:00", 0, 0]
 
 - name: Eurostar check-in 60 min
   legs:
