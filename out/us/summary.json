@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19",
+ "generated": "2026-11-20",
  "dates": [
   "2026-11-24",
   "2026-11-27",
@@ -7,31 +7,31 @@
   "2026-11-29"
  ],
  "draft": false,
- "departures": 14934,
+ "departures": 17785,
  "warnings": 0,
  "capitals": {
   "2026-11-24": {
-   "with_night_trains": 44,
+   "with_night_trains": 51,
    "without": 14
   },
   "2026-11-27": {
-   "with_night_trains": 44,
+   "with_night_trains": 51,
    "without": 14
   },
   "2026-11-28": {
-   "with_night_trains": 44,
+   "with_night_trains": 51,
    "without": 14
   },
   "2026-11-29": {
-   "with_night_trains": 44,
+   "with_night_trains": 51,
    "without": 14
   }
  },
  "places_reached": {
-  "2026-11-24": 83,
-  "2026-11-27": 83,
-  "2026-11-28": 83,
-  "2026-11-29": 83
+  "2026-11-24": 103,
+  "2026-11-27": 103,
+  "2026-11-28": 103,
+  "2026-11-29": 103
  },
  "reached": {
   "capitals": [
@@ -51,6 +51,8 @@
    "Denver",
    "Des Moines",
    "Dover",
+   "Edmonton",
+   "Halifax",
    "Harrisburg",
    "Hartford",
    "Indianapolis",
@@ -65,9 +67,12 @@
    "Nashville",
    "Oklahoma City",
    "Olympia",
+   "Ottawa",
    "Phoenix",
    "Providence",
+   "Qu\u00e9bec City",
    "Raleigh",
+   "Regina",
    "Richmond",
    "Sacramento",
    "Saint Paul",
@@ -77,8 +82,10 @@
    "Springfield",
    "Tallahassee",
    "Topeka",
+   "Toronto",
    "Trenton",
-   "Washington"
+   "Washington",
+   "Winnipeg"
   ],
   "capitals_without_night_trains": [
    "Baton Rouge",
@@ -111,32 +118,40 @@
    "Charleston",
    "Charlotte",
    "Cheyenne",
+   "Churchill",
    "Columbia",
    "Columbus",
    "Concord",
    "Denver",
    "Des Moines",
    "Dover",
+   "Edmonton",
    "Emeryville",
    "Eugene",
    "Fort Worth",
    "Grand Rapids",
+   "Halifax",
    "Harrisburg",
    "Hartford",
    "Indianapolis",
    "Jackson",
+   "Jasper",
    "Jefferson City",
+   "Jonqui\u00e8re",
    "Kansas City",
+   "Kingston",
    "Lamy",
    "Lansing",
    "Lincoln",
    "Little Rock",
+   "London",
    "Los Angeles",
    "Madison",
    "Maricopa",
    "Miami",
    "Milwaukee",
    "Mobile",
+   "Moncton",
    "Montgomery",
    "Montpelier",
    "Montreal",
@@ -149,15 +164,19 @@
    "Norfolk",
    "Oklahoma City",
    "Olympia",
+   "Ottawa",
    "Philadelphia",
    "Phoenix",
    "Pittsburgh",
    "Pontiac",
    "Port Huron",
    "Portland",
+   "Prince Rupert",
    "Providence",
    "Quincy",
+   "Qu\u00e9bec City",
    "Raleigh",
+   "Regina",
    "Richmond",
    "Roanoke",
    "Sacramento",
@@ -169,22 +188,30 @@
    "San Jose",
    "San Luis Obispo",
    "Santa Fe",
+   "Sarnia",
+   "Saskatoon",
    "Savannah",
    "Seattle",
+   "Senneterre",
    "Springfield",
    "Springfield, MA",
    "St. Albans",
    "St. Louis",
+   "Sudbury",
    "Tallahassee",
    "Topeka",
+   "Toronto",
    "Trenton",
    "Vancouver",
-   "Washington"
+   "Washington",
+   "White River",
+   "Windsor",
+   "Winnipeg"
   ]
  },
  "origins": {
   "New York": {
-   "generated": "2026-11-19",
+   "generated": "2026-11-20",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -192,31 +219,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 14934,
+   "departures": 17785,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     },
     "2026-11-27": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     },
     "2026-11-28": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     },
     "2026-11-29": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     }
    },
    "places_reached": {
-    "2026-11-24": 83,
-    "2026-11-27": 83,
-    "2026-11-28": 83,
-    "2026-11-29": 83
+    "2026-11-24": 103,
+    "2026-11-27": 103,
+    "2026-11-28": 103,
+    "2026-11-29": 103
    },
    "reached": {
     "capitals": [
@@ -236,6 +263,8 @@
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
@@ -250,9 +279,12 @@
      "Nashville",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Phoenix",
      "Providence",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Sacramento",
      "Saint Paul",
@@ -262,8 +294,10 @@
      "Springfield",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
-     "Washington"
+     "Washington",
+     "Winnipeg"
     ],
     "capitals_without_night_trains": [
      "Albany",
@@ -278,9 +312,12 @@
      "Harrisburg",
      "Hartford",
      "Montpelier",
+     "Ottawa",
      "Providence",
+     "Qu\u00e9bec City",
      "Raleigh",
      "Richmond",
+     "Toronto",
      "Trenton",
      "Washington"
     ],
@@ -300,32 +337,40 @@
      "Charlotte",
      "Cheyenne",
      "Chicago",
+     "Churchill",
      "Columbia",
      "Columbus",
      "Concord",
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
      "Emeryville",
      "Eugene",
      "Fort Worth",
      "Grand Rapids",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
      "Jackson",
+     "Jasper",
      "Jefferson City",
+     "Jonqui\u00e8re",
      "Kansas City",
+     "Kingston",
      "Lamy",
      "Lansing",
      "Lincoln",
      "Little Rock",
+     "London",
      "Los Angeles",
      "Madison",
      "Maricopa",
      "Miami",
      "Milwaukee",
      "Mobile",
+     "Moncton",
      "Montgomery",
      "Montpelier",
      "Montreal",
@@ -337,15 +382,19 @@
      "Norfolk",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Philadelphia",
      "Phoenix",
      "Pittsburgh",
      "Pontiac",
      "Port Huron",
      "Portland",
+     "Prince Rupert",
      "Providence",
      "Quincy",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Roanoke",
      "Sacramento",
@@ -357,22 +406,30 @@
      "San Jose",
      "San Luis Obispo",
      "Santa Fe",
+     "Sarnia",
+     "Saskatoon",
      "Savannah",
      "Seattle",
+     "Senneterre",
      "Springfield",
      "Springfield, MA",
      "St. Albans",
      "St. Louis",
+     "Sudbury",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
      "Vancouver",
-     "Washington"
+     "Washington",
+     "White River",
+     "Windsor",
+     "Winnipeg"
     ]
    }
   },
   "Seattle": {
-   "generated": "2026-11-19",
+   "generated": "2026-11-20",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -380,31 +437,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 14934,
+   "departures": 17785,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
-     "with_night_trains": 44,
-     "without": 3
+     "with_night_trains": 51,
+     "without": 2
     },
     "2026-11-27": {
-     "with_night_trains": 44,
-     "without": 3
+     "with_night_trains": 51,
+     "without": 2
     },
     "2026-11-28": {
-     "with_night_trains": 44,
-     "without": 3
+     "with_night_trains": 51,
+     "without": 2
     },
     "2026-11-29": {
-     "with_night_trains": 44,
-     "without": 3
+     "with_night_trains": 51,
+     "without": 2
     }
    },
    "places_reached": {
-    "2026-11-24": 83,
-    "2026-11-27": 83,
-    "2026-11-28": 83,
-    "2026-11-29": 83
+    "2026-11-24": 103,
+    "2026-11-27": 103,
+    "2026-11-28": 103,
+    "2026-11-29": 103
    },
    "reached": {
     "capitals": [
@@ -424,6 +481,8 @@
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
@@ -438,9 +497,12 @@
      "Nashville",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Phoenix",
      "Providence",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Sacramento",
      "Saint Paul",
@@ -450,13 +512,14 @@
      "Springfield",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
-     "Washington"
+     "Washington",
+     "Winnipeg"
     ],
     "capitals_without_night_trains": [
      "Boise",
-     "Olympia",
-     "Salem"
+     "Olympia"
     ],
     "places": [
      "Albany",
@@ -474,32 +537,40 @@
      "Charlotte",
      "Cheyenne",
      "Chicago",
+     "Churchill",
      "Columbia",
      "Columbus",
      "Concord",
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
      "Emeryville",
      "Eugene",
      "Fort Worth",
      "Grand Rapids",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
      "Jackson",
+     "Jasper",
      "Jefferson City",
+     "Jonqui\u00e8re",
      "Kansas City",
+     "Kingston",
      "Lamy",
      "Lansing",
      "Lincoln",
      "Little Rock",
+     "London",
      "Los Angeles",
      "Madison",
      "Maricopa",
      "Miami",
      "Milwaukee",
      "Mobile",
+     "Moncton",
      "Montgomery",
      "Montpelier",
      "Montreal",
@@ -512,15 +583,19 @@
      "Norfolk",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Philadelphia",
      "Phoenix",
      "Pittsburgh",
      "Pontiac",
      "Port Huron",
      "Portland",
+     "Prince Rupert",
      "Providence",
      "Quincy",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Roanoke",
      "Sacramento",
@@ -532,21 +607,29 @@
      "San Jose",
      "San Luis Obispo",
      "Santa Fe",
+     "Sarnia",
+     "Saskatoon",
      "Savannah",
+     "Senneterre",
      "Springfield",
      "Springfield, MA",
      "St. Albans",
      "St. Louis",
+     "Sudbury",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
      "Vancouver",
-     "Washington"
+     "Washington",
+     "White River",
+     "Windsor",
+     "Winnipeg"
     ]
    }
   },
   "New Orleans": {
-   "generated": "2026-11-19",
+   "generated": "2026-11-20",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -554,31 +637,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 14934,
+   "departures": 17785,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
-     "with_night_trains": 44,
+     "with_night_trains": 51,
      "without": 9
     },
     "2026-11-27": {
-     "with_night_trains": 44,
+     "with_night_trains": 51,
      "without": 9
     },
     "2026-11-28": {
-     "with_night_trains": 44,
+     "with_night_trains": 51,
      "without": 9
     },
     "2026-11-29": {
-     "with_night_trains": 44,
+     "with_night_trains": 51,
      "without": 9
     }
    },
    "places_reached": {
-    "2026-11-24": 83,
-    "2026-11-27": 83,
-    "2026-11-28": 83,
-    "2026-11-29": 83
+    "2026-11-24": 103,
+    "2026-11-27": 103,
+    "2026-11-28": 103,
+    "2026-11-29": 103
    },
    "reached": {
     "capitals": [
@@ -598,6 +681,8 @@
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
@@ -612,9 +697,12 @@
      "Nashville",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Phoenix",
      "Providence",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Sacramento",
      "Saint Paul",
@@ -624,8 +712,10 @@
      "Springfield",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
-     "Washington"
+     "Washington",
+     "Winnipeg"
     ],
     "capitals_without_night_trains": [
      "Atlanta",
@@ -654,32 +744,40 @@
      "Charlotte",
      "Cheyenne",
      "Chicago",
+     "Churchill",
      "Columbia",
      "Columbus",
      "Concord",
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
      "Emeryville",
      "Eugene",
      "Fort Worth",
      "Grand Rapids",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
      "Jackson",
+     "Jasper",
      "Jefferson City",
+     "Jonqui\u00e8re",
      "Kansas City",
+     "Kingston",
      "Lamy",
      "Lansing",
      "Lincoln",
      "Little Rock",
+     "London",
      "Los Angeles",
      "Madison",
      "Maricopa",
      "Miami",
      "Milwaukee",
      "Mobile",
+     "Moncton",
      "Montgomery",
      "Montpelier",
      "Montreal",
@@ -691,15 +789,19 @@
      "Norfolk",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Philadelphia",
      "Phoenix",
      "Pittsburgh",
      "Pontiac",
      "Port Huron",
      "Portland",
+     "Prince Rupert",
      "Providence",
      "Quincy",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Roanoke",
      "Sacramento",
@@ -711,22 +813,30 @@
      "San Jose",
      "San Luis Obispo",
      "Santa Fe",
+     "Sarnia",
+     "Saskatoon",
      "Savannah",
      "Seattle",
+     "Senneterre",
      "Springfield",
      "Springfield, MA",
      "St. Albans",
      "St. Louis",
+     "Sudbury",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
      "Vancouver",
-     "Washington"
+     "Washington",
+     "White River",
+     "Windsor",
+     "Winnipeg"
     ]
    }
   },
   "Miami": {
-   "generated": "2026-11-19",
+   "generated": "2026-11-20",
    "dates": [
     "2026-11-24",
     "2026-11-27",
@@ -734,31 +844,31 @@
     "2026-11-29"
    ],
    "draft": false,
-   "departures": 14934,
+   "departures": 17785,
    "warnings": 0,
    "capitals": {
     "2026-11-24": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     },
     "2026-11-27": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     },
     "2026-11-28": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     },
     "2026-11-29": {
-     "with_night_trains": 44,
-     "without": 17
+     "with_night_trains": 51,
+     "without": 20
     }
    },
    "places_reached": {
-    "2026-11-24": 83,
-    "2026-11-27": 83,
-    "2026-11-28": 83,
-    "2026-11-29": 83
+    "2026-11-24": 103,
+    "2026-11-27": 103,
+    "2026-11-28": 103,
+    "2026-11-29": 103
    },
    "reached": {
     "capitals": [
@@ -778,6 +888,8 @@
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
@@ -792,9 +904,12 @@
      "Nashville",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Phoenix",
      "Providence",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Sacramento",
      "Saint Paul",
@@ -804,8 +919,10 @@
      "Springfield",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
-     "Washington"
+     "Washington",
+     "Winnipeg"
     ],
     "capitals_without_night_trains": [
      "Albany",
@@ -820,9 +937,12 @@
      "Harrisburg",
      "Hartford",
      "Montpelier",
+     "Ottawa",
      "Providence",
+     "Qu\u00e9bec City",
      "Raleigh",
      "Richmond",
+     "Toronto",
      "Trenton",
      "Washington"
     ],
@@ -842,31 +962,39 @@
      "Charlotte",
      "Cheyenne",
      "Chicago",
+     "Churchill",
      "Columbia",
      "Columbus",
      "Concord",
      "Denver",
      "Des Moines",
      "Dover",
+     "Edmonton",
      "Emeryville",
      "Eugene",
      "Fort Worth",
      "Grand Rapids",
+     "Halifax",
      "Harrisburg",
      "Hartford",
      "Indianapolis",
      "Jackson",
+     "Jasper",
      "Jefferson City",
+     "Jonqui\u00e8re",
      "Kansas City",
+     "Kingston",
      "Lamy",
      "Lansing",
      "Lincoln",
      "Little Rock",
+     "London",
      "Los Angeles",
      "Madison",
      "Maricopa",
      "Milwaukee",
      "Mobile",
+     "Moncton",
      "Montgomery",
      "Montpelier",
      "Montreal",
@@ -879,15 +1007,19 @@
      "Norfolk",
      "Oklahoma City",
      "Olympia",
+     "Ottawa",
      "Philadelphia",
      "Phoenix",
      "Pittsburgh",
      "Pontiac",
      "Port Huron",
      "Portland",
+     "Prince Rupert",
      "Providence",
      "Quincy",
+     "Qu\u00e9bec City",
      "Raleigh",
+     "Regina",
      "Richmond",
      "Roanoke",
      "Sacramento",
@@ -899,17 +1031,25 @@
      "San Jose",
      "San Luis Obispo",
      "Santa Fe",
+     "Sarnia",
+     "Saskatoon",
      "Savannah",
      "Seattle",
+     "Senneterre",
      "Springfield",
      "Springfield, MA",
      "St. Albans",
      "St. Louis",
+     "Sudbury",
      "Tallahassee",
      "Topeka",
+     "Toronto",
      "Trenton",
      "Vancouver",
-     "Washington"
+     "Washington",
+     "White River",
+     "Windsor",
+     "Winnipeg"
     ]
    }
   }

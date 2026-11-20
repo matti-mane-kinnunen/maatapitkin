@@ -1,6 +1,6 @@
 # Journeys from Chicago
 
-_leave Chicago Tue 24.11.2026 from 06:00 · generated 19.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Chicago Tue 24.11.2026 from 06:00 · generated 20.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -48,6 +48,13 @@ _leave Chicago Tue 24.11.2026 from 06:00 · generated 19.11.2026. Change 60 min 
 | Salem | Tue 24.11. 15:05 | Thu 26.11. 15:36 | 50 h 31 min | 1 | 1 | 0 |  |
 | Olympia | Tue 24.11. 15:05 | Thu 26.11. 15:39 | 50 h 34 min | 1 | 1 | 0 |  |
 | Montpelier | Tue 24.11. 18:40 | Thu 26.11. 19:34 | 47 h 54 min | 1 | 1 | 1 (Washington) | fewest hotel nights: 45 h 04 min, 2 ch., 0 hotel |
+| Toronto | Tue 24.11. 21:30 | Thu 26.11. 19:43 | 45 h 13 min | 1 | 1 | 1 (Albany) | fewest hotel nights: 48 h 03 min, 2 ch., 0 hotel |
+| Ottawa | Tue 24.11. 21:30 | Fri 27.11. 08:05 | 57 h 35 min | 2 | 1 | 2 (Albany, Montreal) | fewest hotel nights: 60 h 25 min, 3 ch., 1 hotel |
+| Québec City | Tue 24.11. 21:30 | Fri 27.11. 09:25 | 58 h 55 min | 2 | 1 | 2 (Albany, Montreal) | fewest hotel nights: 61 h 45 min, 3 ch., 1 hotel |
+| Halifax | Tue 24.11. 21:30 | Sat 28.11. 18:36 | 91 h 06 min | 2 | 2 | 2 (Albany, Montreal) | fewest hotel nights: 93 h 56 min, 3 ch., 1 hotel |
+| Edmonton | Tue 24.11. 15:05 | Sat 28.11. 18:50 | 99 h 45 min | 2 | 2 | 1 (Vancouver) |  |
+| Regina | Tue 24.11. 15:05 | Sun 29.11. 20:40 | 125 h 35 min | 3 | 2 | 1 (Vancouver) |  |
+| Winnipeg | Tue 24.11. 15:05 | Sun 29.11. 22:00 | 125 h 55 min | 2 | 2 | 1 (Vancouver) |  |
 
 ## Without night trains
 
@@ -70,7 +77,7 @@ _Night trains and night buses left out; night ferries still used._
 | Tallahassee | Wed 25.11. 20:15 | 37 h 05 min | 1 | 1 (Nashville) | same |
 | Baton Rouge | Thu 26.11. 19:40 | 61 h 30 min | 2 | 2 (Nashville, Montgomery) | +39 h 30 min |
 
-Not reachable without night trains: Washington, Little Rock, Phoenix, Sacramento, Denver, Hartford, Dover, Atlanta, Boise, Boston, Annapolis, Augusta, Jackson, Raleigh, Concord, Trenton, Santa Fe, Albany, Oklahoma City, Salem, Harrisburg, Providence, Columbia, Austin, Salt Lake City, Richmond, Montpelier, Olympia, Charleston, Cheyenne
+Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, Winnipeg, Edmonton, Halifax, Regina, Little Rock, Phoenix, Sacramento, Denver, Hartford, Dover, Atlanta, Boise, Boston, Annapolis, Augusta, Jackson, Raleigh, Concord, Trenton, Santa Fe, Albany, Oklahoma City, Salem, Harrisburg, Providence, Columbia, Austin, Salt Lake City, Richmond, Montpelier, Olympia, Charleston, Cheyenne
 
 ## Leaving from 13:00 instead of 06:00
 
@@ -120,6 +127,13 @@ Not reachable without night trains: Washington, Little Rock, Phoenix, Sacramento
 | Salem | Tue 24.11. 15:05 | Thu 26.11. 15:36 | 50 h 31 min | same arrival |
 | Olympia | Tue 24.11. 15:05 | Thu 26.11. 15:39 | 50 h 34 min | same arrival |
 | Montpelier | Tue 24.11. 18:40 | Thu 26.11. 19:34 | 47 h 54 min | same arrival |
+| Toronto | Tue 24.11. 21:30 | Thu 26.11. 19:43 | 45 h 13 min | same arrival |
+| Ottawa | Tue 24.11. 21:30 | Fri 27.11. 08:05 | 57 h 35 min | same arrival |
+| Québec City | Tue 24.11. 21:30 | Fri 27.11. 09:25 | 58 h 55 min | same arrival |
+| Halifax | Tue 24.11. 21:30 | Sat 28.11. 18:36 | 91 h 06 min | same arrival |
+| Edmonton | Tue 24.11. 15:05 | Sat 28.11. 18:50 | 99 h 45 min | same arrival |
+| Regina | Tue 24.11. 15:05 | Sun 29.11. 20:40 | 125 h 35 min | same arrival |
+| Winnipeg | Tue 24.11. 15:05 | Sun 29.11. 22:00 | 125 h 55 min | same arrival |
 
 ## Other cities
 
@@ -162,8 +176,21 @@ Not reachable without night trains: Washington, Little Rock, Phoenix, Sacramento
 | Montreal | Thu 26.11. 20:16 | 45 h 46 min | 1 | 1 |
 | St. Albans | Thu 26.11. 20:50 | 49 h 10 min | 1 | 1 |
 | San Jose | Thu 26.11. 19:46 | 56 h 16 min | 1 | 0 |
-| Maricopa | Thu 26.11. 22:30 | 64 h 15 min | 2 | 0 |
+| Maricopa | Thu 26.11. 21:30 | 63 h 15 min | 2 | 0 |
 | Vancouver | Thu 26.11. 23:00 | 56 h 55 min | 1 | 0 |
+| Kingston | Fri 27.11. 08:57 | 58 h 27 min | 2 | 2 |
+| London | Fri 27.11. 09:06 | 58 h 36 min | 2 | 2 |
+| Windsor | Fri 27.11. 11:08 | 60 h 38 min | 2 | 2 |
+| Jonquière | Fri 27.11. 18:37 | 68 h 07 min | 2 | 2 |
+| Senneterre | Fri 27.11. 20:47 | 70 h 17 min | 2 | 2 |
+| Sarnia | Fri 27.11. 22:49 | 72 h 19 min | 2 | 2 |
+| Jasper | Sat 28.11. 11:00 | 91 h 55 min | 2 | 1 |
+| Moncton | Sat 28.11. 13:30 | 86 h 00 min | 2 | 2 |
+| Saskatoon | Sun 29.11. 05:57 | 110 h 52 min | 2 | 1 |
+| Sudbury | Sun 29.11. 16:57 | 114 h 27 min | 2 | 4 |
+| Prince Rupert | Mon 30.11. 20:25 | 150 h 20 min | 3 | 2 |
+| White River | Tue 1.12. 17:05 | 162 h 35 min | 3 | 6 |
+| Churchill | Thu 3.12. 09:00 | 208 h 55 min | 3 | 3 |
 
 ## Itineraries
 
@@ -465,6 +492,111 @@ _Fewest hotel nights: 45 h 04 min, arrive Thu 26.11. 19:34, 2 changes, 0 hotel n
 - Wed 25.11. 23:23 → Thu 26.11. 06:29  **New York → Washington**  Northeast Regional 65  (night)
 - Thu 26.11. 07:30 → Thu 26.11. 19:34  **Washington → Montpelier**  Vermonter 54
 
+### Toronto
+_Fastest: 45 h 13 min, arrive Thu 26.11. 19:43, 1 changes, 1 hotel nights_
+
+- Tue 24.11. 21:30 → Wed 25.11. 14:53  **Chicago → Albany**  Lake Shore Limited 448 / Lake Shore Limited 48  (night)
+- 🛏 Overnight in Albany (Wed 25.11. 14:53 → Thu 26.11. 10:10)
+- Thu 26.11. 10:10 → Thu 26.11. 19:43  **Albany → Toronto**  VIA 98-63
+
+### Toronto — fewest hotel nights
+_Fewest hotel nights: 48 h 03 min, arrive Thu 26.11. 19:43, 2 changes, 0 hotel nights_
+
+- Tue 24.11. 18:40 → Wed 25.11. 13:10  **Chicago → Washington**  Floridian 41  (night)
+- Wait 8 h 50 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 2 h 05 min in New York
+- Thu 26.11. 07:16 → Thu 26.11. 19:43  **New York → Toronto**  VIA 98-63
+
+### Ottawa
+_Fastest: 57 h 35 min, arrive Fri 27.11. 08:05, 2 changes, 2 hotel nights_
+
+- Tue 24.11. 21:30 → Wed 25.11. 14:53  **Chicago → Albany**  Lake Shore Limited 448 / Lake Shore Limited 48  (night)
+- 🛏 Overnight in Albany (Wed 25.11. 14:53 → Thu 26.11. 11:45)
+- Thu 26.11. 11:45 → Thu 26.11. 20:16  **Albany → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:00)
+- Fri 27.11. 06:00 → Fri 27.11. 08:05  **Montreal → Ottawa**  VIA 31
+
+### Ottawa — fewest hotel nights
+_Fewest hotel nights: 60 h 25 min, arrive Fri 27.11. 08:05, 3 changes, 1 hotel nights_
+
+- Tue 24.11. 18:40 → Wed 25.11. 13:10  **Chicago → Washington**  Floridian 41  (night)
+- Wait 8 h 50 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:00)
+- Fri 27.11. 06:00 → Fri 27.11. 08:05  **Montreal → Ottawa**  VIA 31
+
+### Québec City
+_Fastest: 58 h 55 min, arrive Fri 27.11. 09:25, 2 changes, 2 hotel nights_
+
+- Tue 24.11. 21:30 → Wed 25.11. 14:53  **Chicago → Albany**  Lake Shore Limited 448 / Lake Shore Limited 48  (night)
+- 🛏 Overnight in Albany (Wed 25.11. 14:53 → Thu 26.11. 11:45)
+- Thu 26.11. 11:45 → Thu 26.11. 20:16  **Albany → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:25)
+- Fri 27.11. 06:25 → Fri 27.11. 09:25  **Montreal → Québec City**  VIA 20
+
+### Québec City — fewest hotel nights
+_Fewest hotel nights: 61 h 45 min, arrive Fri 27.11. 09:25, 3 changes, 1 hotel nights_
+
+- Tue 24.11. 18:40 → Wed 25.11. 13:10  **Chicago → Washington**  Floridian 41  (night)
+- Wait 8 h 50 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:25)
+- Fri 27.11. 06:25 → Fri 27.11. 09:25  **Montreal → Québec City**  VIA 20
+
+### Halifax
+_Fastest: 91 h 06 min, arrive Sat 28.11. 18:36, 2 changes, 2 hotel nights_
+
+- Tue 24.11. 21:30 → Wed 25.11. 14:53  **Chicago → Albany**  Lake Shore Limited 448 / Lake Shore Limited 48  (night)
+- 🛏 Overnight in Albany (Wed 25.11. 14:53 → Thu 26.11. 11:45)
+- Thu 26.11. 11:45 → Thu 26.11. 20:16  **Albany → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 18:30)
+- Fri 27.11. 18:30 → Sat 28.11. 18:36  **Montreal → Halifax**  VIA 14 Ocean  (night)
+
+### Halifax — fewest hotel nights
+_Fewest hotel nights: 93 h 56 min, arrive Sat 28.11. 18:36, 3 changes, 1 hotel nights_
+
+- Tue 24.11. 18:40 → Wed 25.11. 13:10  **Chicago → Washington**  Floridian 41  (night)
+- Wait 8 h 50 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 18:30)
+- Fri 27.11. 18:30 → Sat 28.11. 18:36  **Montreal → Halifax**  VIA 14 Ocean  (night)
+
+### Edmonton
+_Fastest: 99 h 45 min, arrive Sat 28.11. 18:50, 2 changes, 1 hotel nights_
+
+- Tue 24.11. 15:05 → Thu 26.11. 11:29  **Chicago → Seattle**  Empire Builder 7  (night)
+- Wait 6 h 31 min in Seattle
+- Thu 26.11. 18:00 → Thu 26.11. 23:00  **Seattle → Vancouver**  Amtrak Cascades 518
+- 🛏 Overnight in Vancouver (Thu 26.11. 23:00 → Fri 27.11. 15:00)
+- Fri 27.11. 15:00 → Sat 28.11. 18:50  **Vancouver → Edmonton**  VIA 2 The Canadian  (night)
+
+### Regina
+_Fastest: 125 h 35 min, arrive Sun 29.11. 20:40, 3 changes, 1 hotel nights_
+
+- Tue 24.11. 15:05 → Thu 26.11. 11:29  **Chicago → Seattle**  Empire Builder 7  (night)
+- Wait 6 h 31 min in Seattle
+- Thu 26.11. 18:00 → Thu 26.11. 23:00  **Seattle → Vancouver**  Amtrak Cascades 518
+- 🛏 Overnight in Vancouver (Thu 26.11. 23:00 → Fri 27.11. 15:00)
+- Fri 27.11. 15:00 → Sun 29.11. 05:57  **Vancouver → Saskatoon**  VIA 2 The Canadian  (night)
+- Wait 12 h 03 min in Saskatoon
+- Sun 29.11. 18:00 → Sun 29.11. 20:40  **Saskatoon → Regina**  FlixBus 2722
+
+### Winnipeg
+_Fastest: 125 h 55 min, arrive Sun 29.11. 22:00, 2 changes, 1 hotel nights_
+
+- Tue 24.11. 15:05 → Thu 26.11. 11:29  **Chicago → Seattle**  Empire Builder 7  (night)
+- Wait 6 h 31 min in Seattle
+- Thu 26.11. 18:00 → Thu 26.11. 23:00  **Seattle → Vancouver**  Amtrak Cascades 518
+- 🛏 Overnight in Vancouver (Thu 26.11. 23:00 → Fri 27.11. 15:00)
+- Fri 27.11. 15:00 → Sun 29.11. 22:00  **Vancouver → Winnipeg**  VIA 2 The Canadian  (night)
+
 ## Capitals not reachable with the current legs
 
 - Juneau
@@ -474,6 +606,13 @@ _Fewest hotel nights: 45 h 04 min, arrive Thu 26.11. 19:34, 2 changes, 0 hotel n
 - Helena
 - Bismarck
 - Pierre
+- Victoria
+- Fredericton
+- Charlottetown
+- St. John's
+- Whitehorse
+- Yellowknife
+- Iqaluit
 
 ## Data issues
 

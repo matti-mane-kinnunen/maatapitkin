@@ -1,6 +1,6 @@
 # Journeys from New Orleans
 
-_leave New Orleans Tue 24.11.2026 from 06:00 · generated 19.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
+_leave New Orleans Tue 24.11.2026 from 06:00 · generated 20.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -38,16 +38,23 @@ _leave New Orleans Tue 24.11.2026 from 06:00 · generated 19.11.2026. Change 60 
 | Concord | Tue 24.11. 09:10 | Thu 26.11. 14:50 | 52 h 40 min | 2 | 2 | 0 |  |
 | Santa Fe | Tue 24.11. 13:45 | Thu 26.11. 13:40 | 48 h 55 min | 2 | 2 | 0 |  |
 | Montpelier | Tue 24.11. 09:10 | Thu 26.11. 19:34 | 57 h 24 min | 1 | 1 | 1 (Washington) | fewest hotel nights: 57 h 24 min, 2 ch., 0 hotel |
+| Toronto | Tue 24.11. 09:10 | Thu 26.11. 19:43 | 57 h 33 min | 1 | 1 | 1 (New York) | fewest hotel nights: 57 h 33 min, 2 ch., 0 hotel |
 | Austin | Tue 24.11. 13:45 | Thu 26.11. 19:07 | 53 h 22 min | 1 | 2 | 0 |  |
 | Oklahoma City | Tue 24.11. 13:45 | Thu 26.11. 21:27 | 55 h 42 min | 2 | 2 | 0 |  |
 | Indianapolis | Tue 24.11. 13:45 | Thu 26.11. 23:49 | 57 h 04 min | 1 | 1 | 1 (Chicago) | fewest hotel nights: 61 h 39 min, 2 ch., 0 hotel |
+| Phoenix | Wed 25.11. 09:00 | Thu 26.11. 23:15 | 39 h 15 min | 1 | 1 | 0 |  |
 | Salt Lake City | Tue 24.11. 13:45 | Thu 26.11. 23:15 | 58 h 30 min | 1 | 2 | 0 |  |
+| Ottawa | Tue 24.11. 09:10 | Fri 27.11. 08:05 | 69 h 55 min | 2 | 1 | 2 (New York, Montreal) | fewest hotel nights: 69 h 55 min, 3 ch., 1 hotel |
 | Charleston | Tue 24.11. 13:45 | Fri 27.11. 08:31 | 65 h 46 min | 1 | 2 | 1 (Chicago) | fewest hotel nights: 70 h 21 min, 2 ch., 0 hotel |
-| Phoenix | Tue 24.11. 13:45 | Fri 27.11. 07:10 | 66 h 25 min | 2 | 2 | 0 | fewest changes: 57 h 15 min, 1 ch., 0 hotel |
+| Québec City | Tue 24.11. 09:10 | Fri 27.11. 09:25 | 71 h 15 min | 2 | 1 | 2 (New York, Montreal) | fewest hotel nights: 71 h 15 min, 3 ch., 1 hotel |
 | Boise | Tue 24.11. 13:45 | Fri 27.11. 09:30 | 68 h 45 min | 2 | 3 | 0 |  |
 | Sacramento | Tue 24.11. 13:45 | Fri 27.11. 15:05 | 75 h 20 min | 1 | 2 | 0 |  |
 | Salem | Tue 24.11. 13:45 | Fri 27.11. 15:36 | 75 h 51 min | 2 | 2 | 0 |  |
 | Olympia | Tue 24.11. 13:45 | Fri 27.11. 15:39 | 75 h 54 min | 2 | 2 | 0 |  |
+| Halifax | Tue 24.11. 09:10 | Sat 28.11. 18:36 | 103 h 26 min | 2 | 2 | 2 (New York, Montreal) | fewest hotel nights: 103 h 26 min, 3 ch., 1 hotel |
+| Winnipeg | Tue 24.11. 09:10 | Mon 30.11. 20:30 | 154 h 20 min | 2 | 2 | 4 (New York, Toronto) | fewest hotel nights: 154 h 20 min, 5 ch., 2 hotel |
+| Regina | Tue 24.11. 09:10 | Tue 1.12. 06:00 | 164 h 50 min | 3 | 3 | 4 (New York, Toronto) | fewest hotel nights: 164 h 50 min, 6 ch., 2 hotel |
+| Edmonton | Tue 24.11. 13:45 | Tue 1.12. 18:50 | 173 h 05 min | 3 | 4 | 2 (Vancouver) | fewest changes: 180 h 40 min, 2 ch., 4 hotel |
 
 ## Without night trains
 
@@ -65,7 +72,7 @@ _Night trains and night buses left out; night ferries still used._
 | Oklahoma City | Fri 27.11. 21:27 | 60 h 27 min | 2 | 2 (San Antonio) | +4 h 45 min |
 | Little Rock | Fri 27.11. 23:32 | 62 h 32 min | 1 | 2 (San Antonio) | +25 h 00 min |
 
-Not reachable without night trains: Washington, Phoenix, Sacramento, Denver, Hartford, Dover, Des Moines, Boise, Springfield, Indianapolis, Topeka, Boston, Annapolis, Augusta, Lansing, Saint Paul, Jefferson City, Raleigh, Lincoln, Concord, Trenton, Santa Fe, Albany, Columbus, Salem, Harrisburg, Providence, Columbia, Salt Lake City, Richmond, Montpelier, Olympia, Madison, Charleston, Cheyenne
+Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, Winnipeg, Edmonton, Halifax, Regina, Phoenix, Sacramento, Denver, Hartford, Dover, Des Moines, Boise, Springfield, Indianapolis, Topeka, Boston, Annapolis, Augusta, Lansing, Saint Paul, Jefferson City, Raleigh, Lincoln, Concord, Trenton, Santa Fe, Albany, Columbus, Salem, Harrisburg, Providence, Columbia, Salt Lake City, Richmond, Montpelier, Olympia, Madison, Charleston, Cheyenne
 
 ## Leaving from 12:00 instead of 06:00
 
@@ -105,16 +112,23 @@ Not reachable without night trains: Washington, Phoenix, Sacramento, Denver, Har
 | Concord | Wed 25.11. 09:10 | Fri 27.11. 14:50 | 52 h 40 min | arrives 24 h 00 min later |
 | Santa Fe | Tue 24.11. 13:45 | Thu 26.11. 13:40 | 48 h 55 min | same arrival |
 | Montpelier | Wed 25.11. 09:10 | Fri 27.11. 19:34 | 57 h 24 min | arrives 24 h 00 min later |
+| Toronto | Wed 25.11. 09:10 | Fri 27.11. 19:43 | 57 h 33 min | arrives 24 h 00 min later |
 | Austin | Tue 24.11. 13:45 | Thu 26.11. 19:07 | 53 h 22 min | same arrival |
 | Oklahoma City | Tue 24.11. 13:45 | Thu 26.11. 21:27 | 55 h 42 min | same arrival |
 | Indianapolis | Tue 24.11. 13:45 | Thu 26.11. 23:49 | 57 h 04 min | same arrival |
+| Phoenix | Wed 25.11. 09:00 | Thu 26.11. 23:15 | 39 h 15 min | same arrival |
 | Salt Lake City | Tue 24.11. 13:45 | Thu 26.11. 23:15 | 58 h 30 min | same arrival |
+| Ottawa | Wed 25.11. 09:10 | Sat 28.11. 11:05 | 72 h 55 min | arrives 27 h 00 min later |
 | Charleston | Tue 24.11. 13:45 | Fri 27.11. 08:31 | 65 h 46 min | same arrival |
-| Phoenix | Tue 24.11. 13:45 | Fri 27.11. 07:10 | 66 h 25 min | same arrival |
+| Québec City | Wed 25.11. 09:10 | Sat 28.11. 10:51 | 72 h 41 min | arrives 25 h 26 min later |
 | Boise | Tue 24.11. 13:45 | Fri 27.11. 09:30 | 68 h 45 min | same arrival |
 | Sacramento | Tue 24.11. 13:45 | Fri 27.11. 15:05 | 75 h 20 min | same arrival |
 | Salem | Tue 24.11. 13:45 | Fri 27.11. 15:36 | 75 h 51 min | same arrival |
 | Olympia | Tue 24.11. 13:45 | Fri 27.11. 15:39 | 75 h 54 min | same arrival |
+| Halifax | Wed 25.11. 09:10 | Mon 30.11. 18:36 | 127 h 26 min | arrives 48 h 00 min later |
+| Winnipeg | Wed 25.11. 09:10 | Mon 30.11. 20:30 | 130 h 20 min | same arrival |
+| Regina | Wed 25.11. 09:10 | Tue 1.12. 06:00 | 140 h 50 min | same arrival |
+| Edmonton | Tue 24.11. 13:45 | Tue 1.12. 18:50 | 173 h 05 min | same arrival |
 
 ## Other cities
 
@@ -149,16 +163,29 @@ Not reachable without night trains: Washington, Phoenix, Sacramento, Denver, Har
 | Montreal | Thu 26.11. 20:16 | 58 h 06 min | 1 | 1 |
 | St. Albans | Thu 26.11. 20:50 | 58 h 40 min | 1 | 1 |
 | Burlington | Thu 26.11. 21:26 | 59 h 16 min | 1 | 1 |
-| Maricopa | Thu 26.11. 22:32 | 38 h 32 min | 0 | 0 |
+| Maricopa | Thu 26.11. 21:32 | 37 h 32 min | 0 | 0 |
 | Los Angeles | Fri 27.11. 05:35 | 46 h 35 min | 0 | 0 |
+| Kingston | Fri 27.11. 08:57 | 70 h 47 min | 2 | 2 |
+| London | Fri 27.11. 09:06 | 70 h 56 min | 2 | 2 |
+| Windsor | Fri 27.11. 11:08 | 72 h 58 min | 2 | 2 |
 | San Diego | Fri 27.11. 10:07 | 51 h 07 min | 1 | 0 |
 | Portland | Fri 27.11. 11:17 | 71 h 32 min | 1 | 0 |
 | Seattle | Fri 27.11. 11:29 | 71 h 44 min | 1 | 0 |
 | San Luis Obispo | Fri 27.11. 14:37 | 55 h 37 min | 1 | 0 |
+| Jonquière | Fri 27.11. 18:37 | 80 h 27 min | 2 | 2 |
 | Emeryville | Fri 27.11. 16:57 | 77 h 12 min | 1 | 0 |
 | Eugene | Fri 27.11. 17:08 | 77 h 23 min | 2 | 0 |
+| Senneterre | Fri 27.11. 20:47 | 82 h 37 min | 2 | 2 |
 | San Jose | Fri 27.11. 19:46 | 60 h 46 min | 1 | 0 |
+| Sarnia | Fri 27.11. 22:49 | 84 h 39 min | 2 | 2 |
 | Vancouver | Fri 27.11. 23:00 | 82 h 15 min | 2 | 0 |
+| Moncton | Sat 28.11. 13:30 | 98 h 20 min | 2 | 2 |
+| Sudbury | Sun 29.11. 16:57 | 126 h 47 min | 2 | 4 |
+| Saskatoon | Tue 1.12. 10:50 | 169 h 40 min | 2 | 4 |
+| Jasper | Tue 1.12. 11:00 | 165 h 15 min | 3 | 2 |
+| White River | Tue 1.12. 17:05 | 174 h 55 min | 3 | 6 |
+| Churchill | Thu 3.12. 09:00 | 214 h 50 min | 3 | 5 |
+| Prince Rupert | Thu 3.12. 20:25 | 228 h 15 min | 3 | 4 |
 
 ## Itineraries
 
@@ -446,6 +473,22 @@ _Fewest hotel nights: 57 h 24 min, arrive Thu 26.11. 19:34, 2 changes, 0 hotel n
 - Thu 26.11. 00:22 → Thu 26.11. 06:29  **Trenton → Washington**  Northeast Regional 65  (night)
 - Thu 26.11. 07:30 → Thu 26.11. 19:34  **Washington → Montpelier**  Vermonter 54
 
+### Toronto
+_Fastest: 57 h 33 min, arrive Thu 26.11. 19:43, 1 changes, 1 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 07:16)
+- Thu 26.11. 07:16 → Thu 26.11. 19:43  **New York → Toronto**  VIA 98-63
+
+### Toronto — fewest hotel nights
+_Fewest hotel nights: 57 h 33 min, arrive Thu 26.11. 19:43, 2 changes, 0 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 13:47  **New Orleans → Washington**  Crescent 20  (night)
+- Wait 8 h 13 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 2 h 05 min in New York
+- Thu 26.11. 07:16 → Thu 26.11. 19:43  **New York → Toronto**  VIA 98-63
+
 ### Austin
 _Fastest: 53 h 22 min, arrive Thu 26.11. 19:07, 1 changes, 0 hotel nights_
 
@@ -478,12 +521,38 @@ _Fewest hotel nights: 61 h 39 min, arrive Thu 26.11. 23:49, 2 changes, 0 hotel n
 - Wait 9 h 10 min in Chicago
 - Thu 26.11. 17:55 → Thu 26.11. 23:49  **Chicago → Indianapolis**  Cardinal 50
 
+### Phoenix
+_Fastest: 39 h 15 min, arrive Thu 26.11. 23:15, 1 changes, 0 hotel nights_
+
+- Wed 25.11. 09:00 → Thu 26.11. 21:32  **New Orleans → Maricopa**  Sunset Limited 1  (night)
+- Thu 26.11. 22:15 → Thu 26.11. 23:15  **Maricopa → Phoenix**  Amtrak Thruway 8901
+
 ### Salt Lake City
 _Fastest: 58 h 30 min, arrive Thu 26.11. 23:15, 1 changes, 0 hotel nights_
 
 - Tue 24.11. 13:45 → Wed 25.11. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
 - Wait 4 h 45 min in Chicago
 - Wed 25.11. 14:00 → Thu 26.11. 23:15  **Chicago → Salt Lake City**  California Zephyr 5  (night)
+
+### Ottawa
+_Fastest: 69 h 55 min, arrive Fri 27.11. 08:05, 2 changes, 2 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 08:15)
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:00)
+- Fri 27.11. 06:00 → Fri 27.11. 08:05  **Montreal → Ottawa**  VIA 31
+
+### Ottawa — fewest hotel nights
+_Fewest hotel nights: 69 h 55 min, arrive Fri 27.11. 08:05, 3 changes, 1 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 13:47  **New Orleans → Washington**  Crescent 20  (night)
+- Wait 8 h 13 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:00)
+- Fri 27.11. 06:00 → Fri 27.11. 08:05  **Montreal → Ottawa**  VIA 31
 
 ### Charleston
 _Fastest: 65 h 46 min, arrive Fri 27.11. 08:31, 1 changes, 1 hotel nights_
@@ -501,21 +570,25 @@ _Fewest hotel nights: 70 h 21 min, arrive Fri 27.11. 08:31, 2 changes, 0 hotel n
 - Wait 9 h 10 min in Chicago
 - Thu 26.11. 17:55 → Fri 27.11. 08:31  **Chicago → Charleston**  Cardinal 50  (night)
 
-### Phoenix
-_Fastest: 66 h 25 min, arrive Fri 27.11. 07:10, 2 changes, 0 hotel nights_
+### Québec City
+_Fastest: 71 h 15 min, arrive Fri 27.11. 09:25, 2 changes, 2 hotel nights_
 
-- Tue 24.11. 13:45 → Wed 25.11. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
-- Wait 4 h 55 min in Chicago
-- Wed 25.11. 14:10 → Wed 25.11. 19:25  **Chicago → St. Louis**  Texas Eagle 21
-- Wait 5 h 55 min in St. Louis
-- Thu 26.11. 01:20 → Fri 27.11. 07:10  **St. Louis → Phoenix**  Greyhound US1210  (night)
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 08:15)
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:25)
+- Fri 27.11. 06:25 → Fri 27.11. 09:25  **Montreal → Québec City**  VIA 20
 
-### Phoenix — fewest changes
-_Fewest changes: 57 h 15 min, arrive Fri 27.11. 17:15, 1 changes, 0 hotel nights_
+### Québec City — fewest hotel nights
+_Fewest hotel nights: 71 h 15 min, arrive Fri 27.11. 09:25, 3 changes, 1 hotel nights_
 
-- Wed 25.11. 09:00 → Fri 27.11. 05:35  **New Orleans → Los Angeles**  Sunset Limited 1  (night)
-- Wait 3 h 00 min in Los Angeles
-- Fri 27.11. 08:35 → Fri 27.11. 17:15  **Los Angeles → Phoenix**  Greyhound US1000
+- Tue 24.11. 09:10 → Wed 25.11. 13:47  **New Orleans → Washington**  Crescent 20  (night)
+- Wait 8 h 13 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:25)
+- Fri 27.11. 06:25 → Fri 27.11. 09:25  **Montreal → Québec City**  VIA 20
 
 ### Boise
 _Fastest: 68 h 45 min, arrive Fri 27.11. 09:30, 2 changes, 0 hotel nights_
@@ -551,6 +624,99 @@ _Fastest: 75 h 54 min, arrive Fri 27.11. 15:39, 2 changes, 0 hotel nights_
 - Wait 2 h 51 min in Seattle
 - Fri 27.11. 14:20 → Fri 27.11. 15:39  **Seattle → Olympia**  Amtrak Cascades 507
 
+### Halifax
+_Fastest: 103 h 26 min, arrive Sat 28.11. 18:36, 2 changes, 2 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 08:15)
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 18:30)
+- Fri 27.11. 18:30 → Sat 28.11. 18:36  **Montreal → Halifax**  VIA 14 Ocean  (night)
+
+### Halifax — fewest hotel nights
+_Fewest hotel nights: 103 h 26 min, arrive Sat 28.11. 18:36, 3 changes, 1 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 13:47  **New Orleans → Washington**  Crescent 20  (night)
+- Wait 8 h 13 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 18:30)
+- Fri 27.11. 18:30 → Sat 28.11. 18:36  **Montreal → Halifax**  VIA 14 Ocean  (night)
+
+### Winnipeg
+_Fastest: 154 h 20 min, arrive Mon 30.11. 20:30, 2 changes, 4 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 07:16)
+- Thu 26.11. 07:16 → Thu 26.11. 19:43  **New York → Toronto**  VIA 98-63
+- 🛏 Overnight in Toronto (Thu 26.11. 19:43 → Sun 29.11. 09:55)
+- Sun 29.11. 09:55 → Mon 30.11. 20:30  **Toronto → Winnipeg**  VIA 1 The Canadian  (night)
+
+### Winnipeg — fewest hotel nights
+_Fewest hotel nights: 154 h 20 min, arrive Mon 30.11. 20:30, 5 changes, 2 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 13:47  **New Orleans → Washington**  Crescent 20  (night)
+- Wait 8 h 13 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:00)
+- Fri 27.11. 06:00 → Fri 27.11. 08:05  **Montreal → Ottawa**  VIA 31
+- Wait 20 h 51 min in Ottawa
+- Sat 28.11. 04:56 → Sat 28.11. 09:37  **Ottawa → Toronto**  VIA 41  (night)
+- 🛏 Overnight in Toronto (Sat 28.11. 09:37 → Sun 29.11. 09:55)
+- Sun 29.11. 09:55 → Mon 30.11. 20:30  **Toronto → Winnipeg**  VIA 1 The Canadian  (night)
+
+### Regina
+_Fastest: 164 h 50 min, arrive Tue 1.12. 06:00, 3 changes, 4 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 07:16)
+- Thu 26.11. 07:16 → Thu 26.11. 19:43  **New York → Toronto**  VIA 98-63
+- 🛏 Overnight in Toronto (Thu 26.11. 19:43 → Sun 29.11. 09:55)
+- Sun 29.11. 09:55 → Sun 29.11. 16:57  **Toronto → Sudbury**  VIA 1 The Canadian
+- Sun 29.11. 16:57 → Mon 30.11. 20:30  **Sudbury → Winnipeg**  VIA 1 The Canadian  (night)
+- Wait 3 h 29 min in Winnipeg
+- Mon 30.11. 23:59 → Tue 1.12. 06:00  **Winnipeg → Regina**  FlixBus 2723  (night)
+
+### Regina — fewest hotel nights
+_Fewest hotel nights: 164 h 50 min, arrive Tue 1.12. 06:00, 6 changes, 2 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 13:47  **New Orleans → Washington**  Crescent 20  (night)
+- Wait 8 h 13 min in Washington
+- Wed 25.11. 22:00 → Thu 26.11. 05:11  **Washington → New York**  Northeast Regional 66  (night)
+- Wait 3 h 04 min in New York
+- Thu 26.11. 08:15 → Thu 26.11. 20:16  **New York → Montreal**  Adirondack 69
+- 🛏 Overnight in Montreal (Thu 26.11. 20:16 → Fri 27.11. 06:00)
+- Fri 27.11. 06:00 → Fri 27.11. 08:05  **Montreal → Ottawa**  VIA 31
+- Wait 20 h 51 min in Ottawa
+- Sat 28.11. 04:56 → Sat 28.11. 09:37  **Ottawa → Toronto**  VIA 41  (night)
+- 🛏 Overnight in Toronto (Sat 28.11. 09:37 → Sun 29.11. 09:55)
+- Sun 29.11. 09:55 → Mon 30.11. 20:30  **Toronto → Winnipeg**  VIA 1 The Canadian  (night)
+- Wait 3 h 29 min in Winnipeg
+- Mon 30.11. 23:59 → Tue 1.12. 06:00  **Winnipeg → Regina**  FlixBus 2723  (night)
+
+### Edmonton
+_Fastest: 173 h 05 min, arrive Tue 1.12. 18:50, 3 changes, 2 hotel nights_
+
+- Tue 24.11. 13:45 → Wed 25.11. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
+- Wait 5 h 50 min in Chicago
+- Wed 25.11. 15:05 → Fri 27.11. 11:17  **Chicago → Portland**  Empire Builder 27  (night)
+- Wait 2 h 53 min in Portland
+- Fri 27.11. 14:10 → Sat 28.11. 23:00  **Portland → Vancouver**  Amtrak Cascades 518  (night)
+- 🛏 Overnight in Vancouver (Sat 28.11. 23:00 → Mon 30.11. 15:00)
+- Mon 30.11. 15:00 → Tue 1.12. 18:50  **Vancouver → Edmonton**  VIA 2 The Canadian  (night)
+
+### Edmonton — fewest changes
+_Fewest changes: 180 h 40 min, arrive Tue 1.12. 21:50, 2 changes, 4 hotel nights_
+
+- Tue 24.11. 09:10 → Wed 25.11. 18:42  **New Orleans → New York**  Crescent 20  (night)
+- 🛏 Overnight in New York (Wed 25.11. 18:42 → Thu 26.11. 07:16)
+- Thu 26.11. 07:16 → Thu 26.11. 19:43  **New York → Toronto**  VIA 98-63
+- 🛏 Overnight in Toronto (Thu 26.11. 19:43 → Sun 29.11. 09:55)
+- Sun 29.11. 09:55 → Tue 1.12. 21:50  **Toronto → Edmonton**  VIA 1 The Canadian  (night)
+
 ## Capitals not reachable with the current legs
 
 - Juneau
@@ -560,6 +726,13 @@ _Fastest: 75 h 54 min, arrive Fri 27.11. 15:39, 2 changes, 0 hotel nights_
 - Helena
 - Bismarck
 - Pierre
+- Victoria
+- Fredericton
+- Charlottetown
+- St. John's
+- Whitehorse
+- Yellowknife
+- Iqaluit
 
 ## Data issues
 
