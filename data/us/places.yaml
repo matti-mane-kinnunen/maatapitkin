@@ -2,6 +2,7 @@
 # ~/Code/amtrak-experiments/output/amtrak_stations.csv; else set by hand), time zone (tz:, D-63),
 # capital flag and note, and amtrak: the GTFS stop codes gtfs_import.py maps to this place.
 # flix: Flix/Greyhound GTFS stop_ids (gtfs_generic_us, 2026-11-15): stops with service within ~6 km (8 if none).
+# via: VIA Rail GTFS stop_ids (viarail.zip, 2026-11-02) for the Canadian places.
 settings:
   origin: Chicago
   origins:                   # one map page per origin
@@ -29,23 +30,23 @@ settings:
     - {name: "Europe (from Helsinki and 7 other cities)", url: "../index.html"}
   booking: {site: amtrak.com, url: "https://www.amtrak.com/", key: amtrak}   # no documented deep link: station codes to type in
   texts:                     # English page texts for this network, over data/i18n/en.yaml
-    subtitle: "{origin} to the US state capitals by train and bus — fastest connection from Amtrak's and Greyhound's timetables"
-    valid_until: "Timetables imported until {date}. For later dates, check with Amtrak and Greyhound."
-    map_aria: "Map of rail and bus legs across the United States"
-    legend_arrives: "State capital, arrives on"
+    subtitle: "{origin} to the capitals of the US states and of Canada and its provinces by train and bus — fastest connection from Amtrak's, VIA Rail's and Greyhound's timetables"
+    valid_until: "Timetables imported until {date}. For later dates, check with Amtrak, VIA Rail and Greyhound."
+    map_aria: "Map of rail and bus legs across the United States and Canada"
+    legend_arrives: "Capital, arrives on"
     calendar_title: "Download this journey as a calendar file (.ics): every train, bus and hotel night, in local times"
-    co2_how_2: "Trains: the US EPA's figures for Amtrak – the electrified Northeast Corridor, and all other routes, which run on diesel and emit about six times as much per kilometre. Bus and flight: the same Swedish figures as on the Europe maps (the flight figure includes the effect of flying high up)."
+    co2_how_2: "Trains: the US EPA's figures for Amtrak – the electrified Northeast Corridor, and all other routes (used for VIA Rail too), which run on diesel and emit about six times as much per kilometre. Bus and flight: the same Swedish figures as on the Europe maps (the flight figure includes the effect of flying high up)."
     co2_factors: "US EPA 2025 for trains, {src} {yr} for bus and flight (Northeast Corridor train {rail}"
     co2_diesel: ", other Amtrak trains {diesel}"
     co2_factors_end: ", bus {bus}, flight {flight} CO₂e per person-km)"
     co2_how_1: "A rough estimate, rounded on purpose. Each train or bus leg: distance between the two places\n          (+20&nbsp;% for the real route) \xD7 the average emissions per person-km for that kind of transport.\n          The flight: a direct flight between the same two cities, including the extra warming effect of\n          emissions at high altitude."
-    search_missing: "Capital with no Amtrak train or Greyhound / FlixBus bus in the timetable data"
-    foot_sources: "Timetables from Amtrak's and FlixBus / Greyhound's own GTFS feeds, imported weekly, applied to the travel date above. "
+    search_missing: "Capital with no train or Greyhound / FlixBus bus in the timetable data"
+    foot_sources: "Timetables from Amtrak's, VIA Rail's and FlixBus / Greyhound's own GTFS feeds, imported weekly, applied to the travel date above. Contains information licensed under the Open Government Licence – Canada. "
     foot_changes: "Changes take at least {min} min between trains and {bus} min to or from a bus (Greyhound stops can be a few km from the station). "
     foot_quiet: "between {quiet} only night trains and night buses run. "
-    og_title: "{title} – {origin} to {n} US state capitals by train"
-    og_desc: "{origin} to {n} US state capitals by train and bus: door to door, how long it really takes, day by day, with every change and hotel night."
-    og_alt: "Map of train journeys from {origin} to US state capitals"
+    og_title: "{title} – {origin} to {n} capitals in the US and Canada by train"
+    og_desc: "{origin} to {n} capitals in the US and Canada by train and bus: door to door, how long it really takes, day by day, with every change and hotel night."
+    og_alt: "Map of train journeys from {origin} to capitals in the US and Canada"
   co2:                       # D-67: diesel trains outside the electrified NEC / Keystone
     source: "Klimatsmart semester (Chalmers), Jörgen Larsson, method report v5.1, factors for 2026"
     source_url: "https://klimatsmartsemester.se/sa-har-vi-raknat"
@@ -68,7 +69,7 @@ places:
   # --- Origin and hubs (ordinary places) ---
   Chicago:        {lat: 41.879, lon: -87.639, country: US, tz: America/Chicago, amtrak: [CHI], flix: [35b86845-c364-4f30-8bcb-45fe201e4c3d, 8ed3df18-fd69-4af7-88f3-5560ab941da7]}  # Chicago, IL - Union Station (CHI); origin; Flix/Greyhound: Chicago Train Station (CHK6); Chicago Bus Station (CHD6)
   Washington:     {lat: 38.897, lon: -77.006, country: US, tz: America/New_York, capital: true, note: capital of the United States, aliases: [Washington DC, "Washington, D.C."], amtrak: [WAS], flix: [71914082-fe6c-40ff-902e-c84e5c227f8d, 9b6b5071-3ecb-11ea-8017-02437075395e, ac2e2ef8-a490-4650-ad4a-7f7c92bca5fe]}  # Washington, DC - Union Station (WAS); Flix/Greyhound: Washington Union Station (DCD6); Washington DC (Dupont Circle) (6DU); Arlington (Rosslyn) (6RL)
-  New York:       {lat: 40.750, lon: -73.994, country: US, tz: America/New_York, amtrak: [NYP], flix: [ddf85f3f-f4ac-45e7-b439-1c31ed733ce1, 88a7af55-1ff7-4ae0-997f-b277d16625e1, e204bb66-8ab9-4437-8d0d-2b603cdf0c43, cd63ad2d-c640-4c79-8bf2-d3f42cf2547d, 31219358-9f98-450c-bf2e-cd3133dbf825, 84c0077c-ed3a-48af-9f30-1aad7c8b3fa2, 12a4404f-02c5-4e0a-b37b-875593e6bf01]}  # New York, NY - Moynihan Train Hall (NYP); Flix/Greyhound: New York Midtown (31st St & 8th Ave) (6MT); New York Midtown West (NWY6); New York Port Authority (NYD6); New York (Hudson Yards) (6NYY); NYC Downtown (Canal St / Lucky Star) (6CLS); New York City Chinatown (28 Allen St) (6NY); Union City, NJ (733 32nd St - La Cubana) (UNC6)
+  New York:       {lat: 40.750, lon: -73.994, country: US, tz: America/New_York, amtrak: [NYP], flix: [ddf85f3f-f4ac-45e7-b439-1c31ed733ce1, 88a7af55-1ff7-4ae0-997f-b277d16625e1, e204bb66-8ab9-4437-8d0d-2b603cdf0c43, cd63ad2d-c640-4c79-8bf2-d3f42cf2547d, 31219358-9f98-450c-bf2e-cd3133dbf825, 84c0077c-ed3a-48af-9f30-1aad7c8b3fa2, 12a4404f-02c5-4e0a-b37b-875593e6bf01], via: ["120"]}  # New York, NY - Moynihan Train Hall (NYP); Flix/Greyhound: New York Midtown (31st St & 8th Ave) (6MT); New York Midtown West (NWY6); New York Port Authority (NYD6); New York (Hudson Yards) (6NYY); NYC Downtown (Canal St / Lucky Star) (6CLS); New York City Chinatown (28 Allen St) (6NY); Union City, NJ (733 32nd St - La Cubana) (UNC6)
   Philadelphia:   {lat: 39.956, lon: -75.181, country: US, tz: America/New_York, amtrak: [PHL], flix: [8acd6a7d-3aa4-4ca0-bb72-a36fe6b68d4b, 2a9747a9-710b-4372-9a54-b018e1892baf]}  # Philadelphia, PA - William H. Gray III 30th St. Station (PHL); Flix/Greyhound: Philadelphia Bus Station (PHL6); Camden Walter Rand Trans Center (CDN6)
   Pittsburgh:     {lat: 40.445, lon: -79.992, country: US, tz: America/New_York, amtrak: [PGH], flix: [d3470c22-f12b-4553-bff6-a4003895558a]}  # Pittsburgh, PA - Union Station (PGH); Floridian -> Pennsylvanian for Harrisburg; Flix/Greyhound: Pittsburgh Intermodal Station (PGH6)
   New Haven:      {lat: 41.298, lon: -72.927, country: US, tz: America/New_York, amtrak: [NHV], flix: [1b3a311b-3f9a-47da-900e-ea41472736d4, 9b6aaed4-3ecb-11ea-8017-02437075395e]}  # New Haven, CT - Union Station (NHV); NEC -> Hartford Line; Flix/Greyhound: New Haven Bus Stop (NHV6); New Haven (6NH)
@@ -95,9 +96,9 @@ places:
   St. Albans:       {lat: 44.812, lon: -73.086, country: US, tz: America/New_York, amtrak: [SAB]}  # end of line: Vermonter
   Burlington:       {lat: 44.476, lon: -73.219, country: US, tz: America/New_York, amtrak: [BTN]}  # end of line: Ethan Allen Express
   Brunswick:        {lat: 43.911, lon: -69.966, country: US, tz: America/New_York, amtrak: [BRK]}  # end of line: Downeaster
-  Niagara Falls:    {lat: 43.110, lon: -79.055, country: US, tz: America/New_York, amtrak: [NFL]}  # end of line: Empire Service
-  Montreal:         {lat: 45.500, lon: -73.566, country: CA, tz: America/Toronto, amtrak: [MTR]}  # end of line: Adirondack
-  Toronto:          {lat: 43.645, lon: -79.381, country: CA, tz: America/Toronto, amtrak: [TWO]}  # end of line: Maple Leaf
+  Niagara Falls:    {lat: 43.110, lon: -79.055, country: US, tz: America/New_York, amtrak: [NFL], via: ["403"]}  # end of line: Empire Service
+  Montreal:         {lat: 45.500, lon: -73.566, country: CA, tz: America/Toronto, aliases: [Montréal], amtrak: [MTR], via: ["226"]}  # end of line: Adirondack; VIA hub
+  Toronto:          {lat: 43.645, lon: -79.381, country: CA, tz: America/Toronto, capital: true, note: capital of Ontario, amtrak: [TWO], via: ["119"]}  # end of line: Maple Leaf; VIA hub
   Pontiac:          {lat: 42.633, lon: -83.292, country: US, tz: America/New_York, amtrak: [PNT]}  # end of line: Wolverine
   Port Huron:       {lat: 42.960, lon: -82.444, country: US, tz: America/New_York, amtrak: [PTH]}  # end of line: Blue Water
   Grand Rapids:     {lat: 42.956, lon: -85.672, country: US, tz: America/New_York, amtrak: [GRR]}  # end of line: Pere Marquette
@@ -109,7 +110,28 @@ places:
   San Luis Obispo:  {lat: 35.276, lon: -120.655, country: US, tz: America/Los_Angeles, amtrak: [SLO]}  # end of line: Pacific Surfliner
   San Jose:         {lat: 37.330, lon: -121.902, country: US, tz: America/Los_Angeles, amtrak: [SJC]}  # end of line: Capitol Corridor
   Eugene:           {lat: 44.055, lon: -123.092, country: US, tz: America/Los_Angeles, amtrak: [EUG]}  # end of line: Cascades
-  Vancouver:        {lat: 49.274, lon: -123.098, country: CA, tz: America/Vancouver, amtrak: [VAC]}  # end of line: Cascades
+  Vancouver:        {lat: 49.274, lon: -123.098, country: CA, tz: America/Vancouver, amtrak: [VAC], via: ["8"]}  # end of line: Cascades; The Canadian
+
+  # --- Canada (VIA Rail's GTFS, Matti 20.11.2026): Ottawa and the provincial capitals count as capitals ---
+  Ottawa:           {lat: 45.416, lon: -75.652, country: CA, tz: America/Toronto, capital: true, note: capital of Canada, via: ["617"]}
+  Québec City:      {lat: 46.819, lon: -71.215, country: CA, tz: America/Toronto, capital: true, note: capital of Quebec, aliases: [Québec, Quebec City, Quebec], via: ["628", "629"]}  # Gare du Palais, Sainte-Foy
+  Winnipeg:         {lat: 49.889, lon: -97.134, country: CA, tz: America/Winnipeg, capital: true, note: capital of Manitoba, via: ["388"], flix: [9b6b4ac2-3ecb-11ea-8017-02437075395e]}  # Flix/Greyhound: Winnipeg (Grey Wolf Terminal)
+  Edmonton:         {lat: 53.579, lon: -113.531, country: CA, tz: America/Edmonton, capital: true, note: capital of Alberta, via: ["449"], flix: [22ddf170-3b41-4d92-8642-36274aa1a925]}  # Flix/Greyhound: Edmonton (Downtown - Jasper Ave)
+  Halifax:          {lat: 44.639, lon: -63.568, country: CA, tz: America/Halifax, capital: true, note: capital of Nova Scotia, via: ["620"]}
+  Regina:           {lat: 50.446, lon: -104.550, country: CA, tz: America/Regina, capital: true, note: capital of Saskatchewan, flix: [d989f884-acc5-4be3-9298-8e7b9ae2e069]}  # no train; Flix/Greyhound: Regina (Victoria Square Mall)
+  Kingston:         {lat: 44.257, lon: -76.537, country: CA, tz: America/Toronto, via: ["58"]}
+  London:           {lat: 42.981, lon: -81.247, country: CA, tz: America/Toronto, aliases: [London ON], via: ["93"]}  # end of line: Toronto - London
+  Windsor:          {lat: 42.325, lon: -83.007, country: CA, tz: America/Toronto, via: ["618"]}  # end of line; across the river from Detroit
+  Sarnia:           {lat: 42.957, lon: -82.389, country: CA, tz: America/Toronto, via: ["341"]}  # end of line: Toronto - Sarnia
+  Sudbury:          {lat: 46.487, lon: -80.992, country: CA, tz: America/Toronto, via: ["621", "4"]}  # Sudbury and Sudbury Jct (The Canadian), 8 km apart
+  White River:      {lat: 48.590, lon: -85.278, country: CA, tz: America/Toronto, via: ["116"]}  # end of line: Sudbury - White River
+  Jonquière:        {lat: 48.412, lon: -71.254, country: CA, tz: America/Toronto, aliases: [Jonquiere], via: ["444"]}  # end of line
+  Senneterre:       {lat: 48.392, lon: -77.244, country: CA, tz: America/Toronto, via: ["460"]}  # end of line
+  Moncton:          {lat: 46.083, lon: -64.786, country: CA, tz: America/Moncton, via: ["12"]}  # the Ocean
+  Saskatoon:        {lat: 52.105, lon: -106.738, country: CA, tz: America/Regina, via: ["118"], flix: [25157bf7-dea0-4ae7-820a-f4e0d15d2670]}  # The Canadian; Flix/Greyhound: Saskatoon (Lawson Heights)
+  Jasper:           {lat: 52.876, lon: -118.079, country: CA, tz: America/Edmonton, via: ["21"]}  # The Canadian -> Prince Rupert
+  Prince Rupert:    {lat: 54.296, lon: -130.352, country: CA, tz: America/Vancouver, via: ["458"]}  # end of line (the train stops overnight in Prince George; passengers find a hotel there)
+  Churchill:        {lat: 58.768, lon: -94.175, country: CA, tz: America/Winnipeg, via: ["435"]}  # end of line: Winnipeg - Churchill
 
   # --- State capitals (43; the other 7 are in not_yet_covered) ---
   Montgomery:     {lat: 32.380, lon: -86.315, country: US, tz: America/Chicago, capital: true, note: capital of Alabama, flix: [573a36c2-824b-48be-a7ad-7c6fda585712]}  # Flix/Greyhound: Montgomery Intermodal Center (MRY6)
@@ -139,7 +161,7 @@ places:
   Concord:        {lat: 43.213, lon: -71.535, country: US, tz: America/New_York, capital: true, note: capital of New Hampshire, aliases: ["Concord, NH"], flix: [775c212f-7a8b-46e7-93cf-162d9976c8a0]}  # Flix/Greyhound: Concord (Concord Coach Lines) (CNH6)
   Trenton:        {lat: 40.219, lon: -74.754, country: US, tz: America/New_York, capital: true, note: capital of New Jersey, amtrak: [TRE]}  # Trenton, NJ (TRE)
   Santa Fe:       {lat: 35.684, lon: -105.947, country: US, tz: America/Denver, capital: true, note: capital of New Mexico, amtrak: [SAF, SAE]}  # Santa Fe, NM - Central Area (SAF) - Amtrak Thruway bus only
-  Albany:         {lat: 42.641, lon: -73.741, country: US, tz: America/New_York, capital: true, note: capital of New York, aliases: [Albany-Rensselaer, Rensselaer], amtrak: [ALB], flix: [e610e851-1daf-4fc5-a236-0cb200f82fba]}  # Albany-Rensselaer, NY (ALB); Flix/Greyhound: Albany Bus Terminal, NY (ALB6)
+  Albany:         {lat: 42.641, lon: -73.741, country: US, tz: America/New_York, capital: true, note: capital of New York, aliases: [Albany-Rensselaer, Rensselaer], amtrak: [ALB], flix: [e610e851-1daf-4fc5-a236-0cb200f82fba], via: ["189"]}  # Albany-Rensselaer, NY (ALB); Flix/Greyhound: Albany Bus Terminal, NY (ALB6)
   Columbus:       {lat: 39.958, lon: -82.997, country: US, tz: America/New_York, capital: true, note: capital of Ohio, aliases: ["Columbus, OH"], flix: [eb7000c4-992a-4b42-b9c5-d2e5f9f3b807, bb05a3f7-5a2c-44cb-8388-2ea394a21c02]}  # Flix/Greyhound: Columbus (E Rich St) (5CO); Columbus (E Mound St) (CUS6)
   Oklahoma City:  {lat: 35.465, lon: -97.513, country: US, tz: America/Chicago, capital: true, note: capital of Oklahoma, amtrak: [OKC], flix: [c8105fb0-c920-4bbc-8673-c84b4f357cfb]}  # Oklahoma City, OK (OKC); Flix/Greyhound: Oklahoma City Bus Station (OKL6)
   Salem:          {lat: 44.932, lon: -123.028, country: US, tz: America/Los_Angeles, capital: true, note: capital of Oregon, aliases: ["Salem, OR"], amtrak: [SLM], flix: [f6efd76d-14a3-4db6-85aa-446716adf2c8]}  # Salem, OR - Amtrak Station (SLM); Flix/Greyhound: Salem (Chemeketa & Liberty) (1SA)
@@ -165,3 +187,11 @@ not_yet_covered:
   Helena:         {lat: 46.586, lon: -112.018, country: US, tz: America/Denver, capital: true, note: capital of Montana}  # no Amtrak and no Flix/Greyhound service (nearest stop 350 km); approx. city centre set by hand
   Bismarck:       {lat: 46.821, lon: -100.783, country: US, tz: America/Chicago, capital: true, note: capital of North Dakota}  # no Amtrak and no Flix/Greyhound service (nearest stop 346 km); approx. city centre set by hand
   Pierre:         {lat: 44.367, lon: -100.346, country: US, tz: America/Chicago, capital: true, note: capital of South Dakota}  # no Amtrak and no Flix/Greyhound service (nearest stop 364 km); approx. city centre set by hand
+  # Canadian capitals with no VIA train and no Flix/Greyhound bus
+  Victoria:       {lat: 48.428, lon: -123.365, country: CA, tz: America/Vancouver, capital: true, note: capital of British Columbia}
+  Fredericton:    {lat: 45.964, lon: -66.643, country: CA, tz: America/Moncton, capital: true, note: capital of New Brunswick}
+  Charlottetown:  {lat: 46.238, lon: -63.131, country: CA, tz: America/Halifax, capital: true, note: capital of Prince Edward Island}
+  "St. John's":   {lat: 47.561, lon: -52.713, country: CA, tz: America/St_Johns, capital: true, note: capital of Newfoundland and Labrador}
+  Whitehorse:     {lat: 60.721, lon: -135.057, country: CA, tz: America/Whitehorse, capital: true, note: capital of Yukon}
+  Yellowknife:    {lat: 62.454, lon: -114.372, country: CA, tz: America/Yellowknife, capital: true, note: capital of the Northwest Territories}
+  Iqaluit:        {lat: 63.749, lon: -68.522, country: CA, tz: America/Iqaluit, capital: true, note: capital of Nunavut}

@@ -1517,6 +1517,18 @@ Network 59 → 85 places, 428 → 689 place pairs, departures +17 %. Mobile is C
 says New_York; its clock comes out right (Mardi Gras Service 07:35 → 11:18, as Amtrak's timetable). A network may have
 its own user guide (data/us/guide/en.html). The US job builds five maps: timeout 240 min.
 
+**Canada (Matti 20.11.2026).** VIA Rail's GTFS (viarail.zip, Open Government Licence – Canada; feed 2.11.2026–3.3.2027,
+83 trips) is the third feed: times in Toronto time as GTFS says (checked: The Canadian at Sioux Lookout, Winnipeg,
+Edmonton match the published timetable), read through each place's tz. Ottawa and the provincial capitals count as
+capitals: Toronto, Ottawa, Québec City, Winnipeg, Edmonton, Halifax by VIA, Regina by Flix/Greyhound – 51 capitals
+from Chicago; Victoria, Fredericton, Charlottetown, St. John's and the territorial capitals are not_yet_covered.
+Also Kingston, London, Windsor, Sarnia, Sudbury, White River, Jonquière, Senneterre, Moncton, Saskatoon, Jasper,
+Prince Rupert, Churchill. The Maple Leaf into Toronto comes from VIA (Amtrak's feed sells no ride into Toronto);
+VIA legs need a Canadian end (`needs_country`). Basemap extended to lat 60 / lon −57 (provinces). The credit line
+is in the footer and the guide. VIA trains have no booking link (VIA's feed has Google-style ticketing links, untested).
+Chicago → Toronto 45 h by rail (via New York); Winnipeg 126 h (via Vancouver) – buses would be faster, but
+Flix/Greyhound legs go only to places without trains.
+
 ---
 
 ## Template for a new decision

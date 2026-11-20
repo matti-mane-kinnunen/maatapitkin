@@ -59,6 +59,12 @@ FEEDS = [
      "skip_routes": set()},
     {"name": "flix", "path": FEEDS_DIR / "gtfs_generic_us", "key": "flix", "clock_tz": "place",
      "skip_agencies": set(), "skip_routes": set()},
+    # VIA Rail Canada (Open Government Licence - Canada): times in Toronto time, the agency's zone, as GTFS says
+    # (checked against The Canadian's timetable at Sioux Lookout, Winnipeg, Edmonton). AC is the Montreal airport
+    # shuttle bus. Toronto - New York (the Maple Leaf) is in Amtrak's feed too, but there Amtrak sells no ride into
+    # Toronto (pickup/drop-off 1), so it comes from VIA - only legs with a Canadian end, the US part is Amtrak's.
+    {"name": "via", "path": FEEDS_DIR / "viarail", "key": "via", "clock_tz": "place",
+     "skip_agencies": set(), "skip_routes": {"AC"}, "needs_country": "CA"},
 ]
 
 
@@ -215,6 +221,10 @@ def service_name(feed: str, route: dict, trip: dict) -> str:
             name = "Amtrak Thruway"
         num = (trip.get("trip_short_name") or "").strip()
         return f"{name} {num}".strip()
+    if feed == "via":
+        num = (trip.get("trip_short_name") or "").strip()
+        named = {"1": "The Canadian", "2": "The Canadian", "14": "Ocean", "15": "Ocean"}.get(num)
+        return f"VIA {num}" + (f" {named}" if named else "")
     return route.get("route_short_name") or route.get("route_long_name") or feed
 
 
@@ -267,6 +277,9 @@ def import_feed(cfg: dict, places: dict, first: dt.date, last: dt.date, report: 
             for b in sts[i + 1:]:
                 pb = stops[b["stop_id"]]
                 if pb == pa or b.get("drop_off_type") == "1":
+                    continue
+                need = cfg.get("needs_country")
+                if need and need not in (places[pa].get("country"), places[pb].get("country")):
                     continue
                 dep_s, arr_s = gtfs_secs(a["departure_time"]), gtfs_secs(b["arrival_time"])
                 cand = (arr_s - dep_s, arr_s, a["stop_id"], b["stop_id"], dep_s)
@@ -432,7 +445,8 @@ ABBR = {"Alabama": "AL", "Arizona": "AZ", "Arkansas": "AR", "California": "CA", 
         "North Carolina": "NC", "North Dakota": "ND", "Ohio": "OH", "Oklahoma": "OK", "Oregon": "OR", "Pennsylvania": "PA",
         "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT",
         "Vermont": "VT", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY",
-        "British Columbia": "BC", "Ontario": "ON", "Québec": "QC", "Manitoba": "MB", "Alberta": "AB"}
+        "British Columbia": "BC", "Ontario": "ON", "Québec": "QC", "Manitoba": "MB", "Alberta": "AB", "Saskatchewan": "SK",
+        "New Brunswick": "NB", "Nova Scotia": "NS", "Prince Edward Island": "PE", "Newfoundland and Labrador": "NL"}
 
 
 # stations right on a state line, where the simplified outlines give the wrong side (Amtrak stop_id -> state)
@@ -495,19 +509,39 @@ def map_layers(places: dict, report: dict, feeds=FEEDS, tol: float = 0.01, basem
             if len(part) >= 2:
                 out["geom"][f"{pa}>{pb}"] = r3(simplify(part, tol))
                 break
-    # the whole Amtrak train network
-    am = Feed(by_feed["amtrak"]["path"])
-    routes = {r["route_id"]: r for r in am.rows("routes.txt")
-              if r["route_type"] == "2" and r.get("agency_id") not in by_feed["amtrak"]["skip_agencies"]}
-    trips = {t["trip_id"]: t for t in am.rows("trips.txt") if t["route_id"] in routes}
-    sids = {t["shape_id"] for t in trips.values() if t.get("shape_id")}
+    # the whole train network (Amtrak, VIA Rail) and its stations, from every feed that has trains
     grid = lambda p: (round(p[0] * 100), round(p[1] * 100))
     edges: set = set()
-    for pts in read_shapes(am, sids).values():
-        g = [grid(p) for p in pts]
-        g = [q for k, q in enumerate(g) if k == 0 or q != g[k - 1]]
-        for u, v in zip(g, g[1:]):
-            edges.add((u, v) if u < v else (v, u))
+    calls = defaultdict(int)
+    stn_rows = []
+    for fname in ("amtrak", "via"):
+        if fname not in by_feed or not Feed(by_feed[fname]["path"]).has("stop_times.txt"):
+            continue
+        cfg = by_feed[fname]
+        fd = Feed(cfg["path"])
+        routes = {r["route_id"]: r for r in fd.rows("routes.txt")
+                  if r["route_type"] == "2" and r.get("agency_id", "") not in cfg["skip_agencies"]
+                  and r["route_id"] not in cfg["skip_routes"]}
+        trips = {t["trip_id"]: t for t in fd.rows("trips.txt") if t["route_id"] in routes}
+        sids = {t["shape_id"] for t in trips.values() if t.get("shape_id")}
+        for pts in read_shapes(fd, sids).values():
+            g = [grid(p) for p in pts]
+            g = [q for k, q in enumerate(g) if k == 0 or q != g[k - 1]]
+            for u, v in zip(g, g[1:]):
+                edges.add((u, v) if u < v else (v, u))
+        taken = {str(c) for v in places.values() for c in v.get(cfg["key"]) or []}
+        fcalls = defaultdict(int)
+        for st in fd.rows("stop_times.txt"):
+            if st["trip_id"] in trips:
+                fcalls[st["stop_id"]] += 1
+        for s in fd.rows("stops.txt"):
+            if s["stop_id"] in fcalls and s["stop_id"] not in taken and "Border" not in s["stop_name"]:
+                name = s["stop_name"]
+                for suffix in (" Amtrak Station", " Amtrak Bus Stop", " Amtrak", " Union Station", " Station"):
+                    if name.endswith(suffix):
+                        name = name[: -len(suffix)]
+                stn_rows.append([name.strip(), round(float(s["stop_lon"]), 3), round(float(s["stop_lat"]), 3),
+                                 fcalls[s["stop_id"]], s["stop_id"] if fname == "amtrak" else f"{fname}:{s['stop_id']}"])
     adj = defaultdict(set)
     for u, v in edges:
         adj[u].add(v)
@@ -530,20 +564,7 @@ def map_layers(places: dict, report: dict, feeds=FEEDS, tol: float = 0.01, basem
             if ((u, v) if u < v else (v, u)) not in used:
                 line = walk(u, v)
                 out["rail"].append(r3(simplify([[x / 100, y / 100] for x, y in line], tol)))
-    # stations: Amtrak stops that trains call at, not already a place
-    taken = {str(c) for v in places.values() for c in v.get("amtrak") or []}
-    calls = defaultdict(int)
-    for st in am.rows("stop_times.txt"):
-        if st["trip_id"] in trips:
-            calls[st["stop_id"]] += 1
-    for s in am.rows("stops.txt"):
-        if s["stop_id"] in calls and s["stop_id"] not in taken and "Border" not in s["stop_name"]:
-            name = s["stop_name"]
-            for suffix in (" Amtrak Station", " Amtrak Bus Stop", " Amtrak", " Union Station", " Station"):
-                if name.endswith(suffix):
-                    name = name[: -len(suffix)]
-            out["stations"].append([name.strip(), round(float(s["stop_lon"]), 3), round(float(s["stop_lat"]), 3), calls[s["stop_id"]],
-                                    s["stop_id"]])
+    out["stations"] = stn_rows
     # a station whose name is also a place's (Lincoln IL / Lincoln NE) or another station's (Springfield MA /
     # Springfield VA) gets its state: "Lincoln, IL"
     taken_names = {n.lower() for n, v in places.items()} | {a.lower() for v in places.values() for a in v.get("aliases") or []}
@@ -595,7 +616,7 @@ def main(argv=None):
 
     n_dep = sum(len(set(v)) for v in entries.values())
     print(f"window {first} .. {last}: {len(entries)} legs.yaml entries, {n_dep} departures")
-    for name in ("amtrak", "flix"):
+    for name in ("amtrak", "flix", "via"):
         r = report.get(name, {})
         if "missing" in r:
             print(f"  {name}: feed not found at {r['missing']}")

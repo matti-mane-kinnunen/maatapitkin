@@ -207,7 +207,8 @@ jobs:
           get() { curl -fsSL --retry 3 --retry-delay 20 --max-time 300 -o "$2" "$1"; }
           get https://content.amtrak.com/content/gtfs/GTFS.zip amtrak.zip
           get https://gtfs.gis.flix.tech/gtfs_generic_us.zip flix.zip || get http://gtfs.gis.flix.tech/gtfs_generic_us.zip flix.zip
-          for pair in "amtrak.zip GTFS" "flix.zip gtfs_generic_us"; do
+          get https://www.viarail.ca/sites/all/files/gtfs/viarail.zip via.zip     # Open Government Licence - Canada
+          for pair in "amtrak.zip GTFS" "flix.zip gtfs_generic_us" "via.zip viarail"; do
             set -- $pair
             mkdir -p "$d/$2"
             unzip -oq "$1" -d "$d/$2"
