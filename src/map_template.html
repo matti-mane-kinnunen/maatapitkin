@@ -383,7 +383,10 @@ let curStart = DEF_START;
 let OWN_Q = null;            // own settings worked out in the browser (IDEA-21): {date, start, transfer, avoid}
 const varOf = (date, t) => { const b = VARS[date]; return (t && t !== DEF_START && b.starts && b.starts[t]) || b; };
 const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";   // link word
-const partLabel = t => T("part_" + partOfDay(t));                                        // shown word
+// two start times in the same part of the day (Miami 06:00 and 10:00): the clock time tells them apart
+const partShared = t => STARTS.filter(s => partOfDay(s) === partOfDay(t)).length > 1;
+const partLabel = t => T("part_" + partOfDay(t)) + (partShared(t) ? " " + t : "");     // shown word
+const partLink = t => partShared(t) ? t.replace(":", "") : partOfDay(t);                // link word, unique
 const OPT_KEY = { "Fastest": "opt_fastest", "Fewest changes": "opt_fewest_changes", "Fewest hotel nights": "opt_fewest_hotels" };
 const optLabel = l => OPT_KEY[l] ? T(OPT_KEY[l]) : l;   // labels stay English in the data and in links
 // journeys are stored compactly (build.py compact_route): rebuild the full steps from the timetable
@@ -1259,7 +1262,7 @@ function hashFor(cap, opt) {
   }
   if (VARS && NET.dates.length > 1) parts.push(weekdayOf(curDate));
   if (F.nightTrains === false && V.no) parts.push("no-night");
-  if (curStart && curStart !== DEF_START) parts.push(partOfDay(curStart));
+  if (curStart && curStart !== DEF_START) parts.push(partLink(curStart));
   const r0 = routeOf(cap), o = opt > 0 && r0 && r0.alternatives && r0.alternatives[opt - 1];
   if (o) parts.push(slug(o.label));
   return "#" + parts.join("/");
