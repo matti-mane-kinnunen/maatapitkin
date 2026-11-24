@@ -273,6 +273,8 @@ jobs:
       ok: ${{ steps.check.outputs.ok }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0            # whats_changed.py compares with last week's route tables (IDEA-08)
 
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
@@ -328,6 +330,9 @@ jobs:
           elif [ "${{ inputs.force }}" = "true" ] && [ -f out/summary.json ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; echo "_Published anyway (force)._" >> check.md
           else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
           cat check.md >> "$GITHUB_STEP_SUMMARY"
+          # what changed since last week (IDEA-08) - for interest only, never holds the update back
+          if python3 whats_changed.py > out/changes.md 2> changes.err; then { echo; cat out/changes.md; } >> "$GITHUB_STEP_SUMMARY"
+          else rm -f out/changes.md; { echo; echo "_What changed: the comparison failed – $(tail -1 changes.err)_"; } >> "$GITHUB_STEP_SUMMARY"; fi
           { echo; echo "## Build"; echo '```'; cat out/parts/build-*.log out/us/parts/build-usa.log 2>/dev/null | grep -E "^From .*(main journeys|WARNING)"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           if [ -f us-import.log ]; then { echo; echo "## USA timetables"; echo '```'; cat us-import.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"; fi
           { echo; echo "## Lookup"; echo '```'; sed -n '/^=====/,$p' lookup.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
@@ -339,6 +344,7 @@ jobs:
           git config user.name "maatapitkin-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/ out/summary.json out/routes*.md out/us/summary.json out/us/routes*.md
+          if [ -f out/changes.md ]; then git add out/changes.md; fi
           git commit -m "Weekly update: trains for the week of ${{ needs.lookup.outputs.tue }}" || echo "nothing to commit"
           git pull --rebase
           git push

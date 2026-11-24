@@ -40,6 +40,7 @@ fill_db_ids.py        adds missing DB station numbers to places.yaml (one-off; a
 tidy_legs.py          legs.yaml entries that no pairs.txt line looks after any more; --apply removes them
 lookup_report.py      from the lookup log, only what needs a person (the weekly issue)
 check_build.py        is the new map at least as good as last week's? (holds the update back if not)
+whats_changed.py      which capitals got faster, slower, reachable or unreachable since last week (IDEA-08)
 routes_to_pairs.py    route lists ('Madrid – Zaragoza – Barcelona') -> pairs.txt lines
 check_timetables.py   re-checks the legs against Transitous and writes a report
 coverage_check.py     which European countries, links and ferries Transitous has timetables for
@@ -136,6 +137,9 @@ been shared; to refresh it, paste the link into the
   looks up only the new lines, and the map is updated when it finishes (lookup, build and page check).
 - Run it now: Actions → *Update map* → *Run workflow*.
 - If an update looks broken (far fewer trains), it is not published and an issue is opened.
+- What changed since last week (capitals 30 min or more faster/slower, newly reached or lost, from
+  each map's route tables) is in the run summary and in `out/changes.md` (IDEA-08). Any two weeks:
+  `python3 whats_changed.py --base <commit> --new <commit>`, e.g. around the December timetable change.
 - Before publishing, a real browser opens every map and every journey in it – each travel day,
   start time, with and without night trains, the alternatives – and checks that the timetable
   shows, every bahn.de link starts at a departure of that journey, the controls work and there
