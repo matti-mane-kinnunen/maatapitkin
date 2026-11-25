@@ -1,6 +1,6 @@
 # Journeys from New Orleans
 
-_leave New Orleans Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
+_leave New Orleans Tue 1.12.2026 from 06:00 · generated 25.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -9,7 +9,7 @@ _leave New Orleans Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 m
 | Jackson | Tue 1.12. 13:45 | Tue 1.12. 17:24 | 3 h 39 min | 0 | 0 | 0 |  |
 | Atlanta | Tue 1.12. 09:10 | Tue 1.12. 23:00 | 12 h 50 min | 0 | 0 | 0 |  |
 | Nashville | Tue 1.12. 08:05 | Tue 1.12. 22:35 | 14 h 30 min | 1 | 0 | 0 |  |
-| Raleigh | Tue 1.12. 09:10 | Wed 2.12. 10:05 | 23 h 55 min | 1 | 1 | 0 |  |
+| Raleigh | Tue 1.12. 09:10 | Wed 2.12. 09:40 | 23 h 30 min | 1 | 1 | 0 |  |
 | Tallahassee | Tue 1.12. 09:10 | Wed 2.12. 10:50 | 24 h 40 min | 1 | 1 | 0 |  |
 | Washington | Tue 1.12. 09:10 | Wed 2.12. 13:47 | 27 h 37 min | 0 | 1 | 0 |  |
 | Richmond | Tue 1.12. 09:10 | Wed 2.12. 13:57 | 27 h 47 min | 1 | 1 | 0 |  |
@@ -18,6 +18,7 @@ _leave New Orleans Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 m
 | Harrisburg | Tue 1.12. 09:10 | Wed 2.12. 19:25 | 33 h 15 min | 2 | 1 | 0 | fewest changes: 34 h 19 min, 1 ch., 0 hotel |
 | Madison | Tue 1.12. 13:45 | Wed 2.12. 18:40 | 28 h 55 min | 1 | 1 | 0 |  |
 | Saint Paul | Tue 1.12. 13:45 | Wed 2.12. 18:41 | 28 h 56 min | 1 | 1 | 0 |  |
+| Des Moines | Tue 1.12. 13:45 | Wed 2.12. 18:55 | 29 h 10 min | 1 | 1 | 0 |  |
 | Dover | Tue 1.12. 09:10 | Wed 2.12. 20:20 | 34 h 10 min | 1 | 1 | 0 |  |
 | Lansing | Tue 1.12. 13:45 | Wed 2.12. 20:55 | 30 h 10 min | 1 | 1 | 0 |  |
 | Providence | Tue 1.12. 09:10 | Wed 2.12. 21:10 | 35 h 00 min | 1 | 1 | 0 |  |
@@ -29,7 +30,6 @@ _leave New Orleans Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 m
 | Lincoln | Tue 1.12. 13:45 | Thu 3.12. 00:36 | 34 h 51 min | 1 | 1 | 0 |  |
 | Little Rock | Tue 1.12. 13:45 | Thu 3.12. 03:17 | 37 h 32 min | 1 | 2 | 0 |  |
 | Columbus | Tue 1.12. 09:10 | Thu 3.12. 04:35 | 42 h 25 min | 1 | 2 | 0 |  |
-| Des Moines | Tue 1.12. 13:45 | Thu 3.12. 05:05 | 39 h 20 min | 2 | 2 | 0 | fewest changes: 48 h 50 min, 1 ch., 1 hotel |
 | Denver | Tue 1.12. 13:45 | Thu 3.12. 07:56 | 43 h 11 min | 1 | 2 | 0 |  |
 | Annapolis | Tue 1.12. 09:10 | Thu 3.12. 10:20 | 48 h 10 min | 1 | 1 | 1 (Washington) | fewest hotel nights: 48 h 10 min, 2 ch., 0 hotel |
 | Jefferson City | Tue 1.12. 13:45 | Thu 3.12. 10:35 | 44 h 50 min | 2 | 1 | 1 (St. Louis) | fewest changes: 51 h 51 min, 1 ch., 1 hotel; fewest hotel nights: 56 h 26 min, 2 ch., 0 hotel |
@@ -83,7 +83,7 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Jackson | Tue 1.12. 13:45 | Tue 1.12. 17:24 | 3 h 39 min | same arrival |
 | Atlanta | Wed 2.12. 09:10 | Wed 2.12. 23:00 | 12 h 50 min | arrives 24 h 00 min later |
 | Nashville | Tue 1.12. 13:45 | Wed 2.12. 20:25 | 30 h 40 min | arrives 21 h 50 min later |
-| Raleigh | Wed 2.12. 09:10 | Thu 3.12. 10:05 | 23 h 55 min | arrives 24 h 00 min later |
+| Raleigh | Wed 2.12. 09:10 | Thu 3.12. 09:40 | 23 h 30 min | arrives 24 h 00 min later |
 | Tallahassee | Tue 1.12. 12:40 | Wed 2.12. 11:00 | 21 h 20 min | arrives 0 h 10 min later |
 | Washington | Tue 1.12. 13:45 | Thu 3.12. 13:10 | 46 h 25 min | arrives 23 h 23 min later |
 | Richmond | Wed 2.12. 09:10 | Thu 3.12. 13:57 | 27 h 47 min | arrives 24 h 00 min later |
@@ -92,18 +92,18 @@ Not reachable without night trains: Washington, Toronto, Ottawa, Québec City, W
 | Harrisburg | Tue 1.12. 13:45 | Thu 3.12. 12:35 | 45 h 50 min | arrives 17 h 10 min later |
 | Madison | Tue 1.12. 13:45 | Wed 2.12. 18:40 | 28 h 55 min | same arrival |
 | Saint Paul | Tue 1.12. 13:45 | Wed 2.12. 18:41 | 28 h 56 min | same arrival |
+| Des Moines | Tue 1.12. 13:45 | Wed 2.12. 18:55 | 29 h 10 min | same arrival |
 | Dover | Wed 2.12. 09:10 | Thu 3.12. 20:20 | 34 h 10 min | arrives 24 h 00 min later |
 | Lansing | Tue 1.12. 13:45 | Wed 2.12. 20:55 | 30 h 10 min | same arrival |
 | Providence | Wed 2.12. 09:10 | Thu 3.12. 21:10 | 35 h 00 min | arrives 24 h 00 min later |
 | Albany | Tue 1.12. 13:45 | Thu 3.12. 14:53 | 48 h 08 min | arrives 17 h 38 min later |
-| Hartford | Tue 1.12. 13:45 | Thu 3.12. 20:11 | 53 h 26 min | arrives 22 h 23 min later |
-| Boston | Tue 1.12. 13:45 | Thu 3.12. 20:24 | 53 h 39 min | arrives 22 h 34 min later |
+| Hartford | Wed 2.12. 09:10 | Thu 3.12. 21:48 | 35 h 38 min | arrives 24 h 00 min later |
+| Boston | Wed 2.12. 09:10 | Thu 3.12. 21:50 | 35 h 40 min | arrives 24 h 00 min later |
 | Topeka | Tue 1.12. 13:45 | Wed 2.12. 23:21 | 33 h 36 min | same arrival |
 | Columbia | Tue 1.12. 13:45 | Fri 4.12. 00:25 | 57 h 40 min | arrives 24 h 00 min later |
 | Lincoln | Tue 1.12. 13:45 | Thu 3.12. 00:36 | 34 h 51 min | same arrival |
 | Little Rock | Tue 1.12. 13:45 | Thu 3.12. 03:17 | 37 h 32 min | same arrival |
 | Columbus | Tue 1.12. 13:45 | Thu 3.12. 07:45 | 41 h 00 min | arrives 3 h 10 min later |
-| Des Moines | Tue 1.12. 13:45 | Thu 3.12. 05:05 | 39 h 20 min | same arrival |
 | Denver | Tue 1.12. 13:45 | Thu 3.12. 07:56 | 43 h 11 min | same arrival |
 | Annapolis | Wed 2.12. 09:10 | Fri 4.12. 10:20 | 48 h 10 min | arrives 24 h 00 min later |
 | Jefferson City | Tue 1.12. 13:45 | Thu 3.12. 10:35 | 44 h 50 min | same arrival |
@@ -219,11 +219,10 @@ _Fastest: 14 h 30 min, arrive Tue 1.12. 22:35, 1 changes, 0 hotel nights_
 - Tue 1.12. 16:45 → Tue 1.12. 22:35  **Montgomery → Nashville**  Greyhound US0115
 
 ### Raleigh
-_Fastest: 23 h 55 min, arrive Wed 2.12. 10:05, 1 changes, 0 hotel nights_
+_Fastest: 23 h 30 min, arrive Wed 2.12. 09:40, 1 changes, 0 hotel nights_
 
 - Tue 1.12. 09:10 → Wed 2.12. 05:06  **New Orleans → Charlotte**  Crescent 20  (night)
-- Wait 1 h 39 min in Charlotte
-- Wed 2.12. 06:45 → Wed 2.12. 10:05  **Charlotte → Raleigh**  Carolinian 80
+- Wed 2.12. 06:15 → Wed 2.12. 09:40  **Charlotte → Raleigh**  Carolinian 80
 
 ### Tallahassee
 _Fastest: 24 h 40 min, arrive Wed 2.12. 10:50, 1 changes, 0 hotel nights_
@@ -241,8 +240,7 @@ _Fastest: 27 h 37 min, arrive Wed 2.12. 13:47, 0 changes, 0 hotel nights_
 _Fastest: 27 h 47 min, arrive Wed 2.12. 13:57, 1 changes, 0 hotel nights_
 
 - Tue 1.12. 09:10 → Wed 2.12. 05:06  **New Orleans → Charlotte**  Crescent 20  (night)
-- Wait 1 h 39 min in Charlotte
-- Wed 2.12. 06:45 → Wed 2.12. 13:57  **Charlotte → Richmond**  Carolinian 80
+- Wed 2.12. 06:15 → Wed 2.12. 13:57  **Charlotte → Richmond**  Carolinian 80
 
 ### Trenton
 _Fastest: 31 h 12 min, arrive Wed 2.12. 17:22, 1 changes, 0 hotel nights_
@@ -289,6 +287,13 @@ _Fastest: 28 h 56 min, arrive Wed 2.12. 18:41, 1 changes, 0 hotel nights_
 - Tue 1.12. 13:45 → Wed 2.12. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
 - Wait 1 h 55 min in Chicago
 - Wed 2.12. 11:10 → Wed 2.12. 18:41  **Chicago → Saint Paul**  Borealis 1333
+
+### Des Moines
+_Fastest: 29 h 10 min, arrive Wed 2.12. 18:55, 1 changes, 0 hotel nights_
+
+- Tue 1.12. 13:45 → Wed 2.12. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
+- Wait 3 h 10 min in Chicago
+- Wed 2.12. 12:25 → Wed 2.12. 18:55  **Chicago → Des Moines**  Greyhound US0123S
 
 ### Dover
 _Fastest: 34 h 10 min, arrive Wed 2.12. 20:20, 1 changes, 0 hotel nights_
@@ -347,9 +352,8 @@ _Fastest: 33 h 36 min, arrive Wed 2.12. 23:21, 1 changes, 0 hotel nights_
 _Fastest: 38 h 15 min, arrive Thu 3.12. 00:25, 2 changes, 0 hotel nights_
 
 - Tue 1.12. 09:10 → Wed 2.12. 05:06  **New Orleans → Charlotte**  Crescent 20  (night)
-- Wait 1 h 39 min in Charlotte
-- Wed 2.12. 06:45 → Wed 2.12. 10:05  **Charlotte → Raleigh**  Carolinian 80
-- Wait 9 h 49 min in Raleigh
+- Wed 2.12. 06:15 → Wed 2.12. 09:40  **Charlotte → Raleigh**  Carolinian 80
+- Wait 10 h 14 min in Raleigh
 - Wed 2.12. 19:54 → Thu 3.12. 00:25  **Raleigh → Columbia**  Floridian 41
 
 ### Lincoln
@@ -371,22 +375,6 @@ _Fastest: 42 h 25 min, arrive Thu 3.12. 04:35, 1 changes, 0 hotel nights_
 
 - Tue 1.12. 09:10 → Wed 2.12. 16:42  **New Orleans → Philadelphia**  Crescent 20  (night)
 - Wed 2.12. 17:35 → Thu 3.12. 04:35  **Philadelphia → Columbus**  Greyhound US0421  (night)
-
-### Des Moines
-_Fastest: 39 h 20 min, arrive Thu 3.12. 05:05, 2 changes, 0 hotel nights_
-
-- Tue 1.12. 13:45 → Wed 2.12. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
-- Wait 1 h 55 min in Chicago
-- Wed 2.12. 11:10 → Wed 2.12. 18:41  **Chicago → Saint Paul**  Borealis 1333
-- Wait 5 h 54 min in Saint Paul
-- Thu 3.12. 00:35 → Thu 3.12. 05:05  **Saint Paul → Des Moines**  Greyhound US0156  (night)
-
-### Des Moines — fewest changes
-_Fewest changes: 48 h 50 min, arrive Thu 3.12. 14:35, 1 changes, 1 hotel nights_
-
-- Tue 1.12. 13:45 → Wed 2.12. 09:15  **New Orleans → Chicago**  City of New Orleans 58  (night)
-- 🛏 Overnight in Chicago (Wed 2.12. 09:15 → Thu 3.12. 06:10)
-- Thu 3.12. 06:10 → Thu 3.12. 14:35  **Chicago → Des Moines**  Greyhound US0155S
 
 ### Denver
 _Fastest: 43 h 11 min, arrive Thu 3.12. 07:56, 1 changes, 0 hotel nights_

@@ -1,6 +1,6 @@
 # Journeys from Seattle
 
-_leave Seattle Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Seattle Tue 1.12.2026 from 06:00 · generated 25.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|

@@ -1,6 +1,6 @@
 # Journeys from New York
 
-_leave New York Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
+_leave New York Tue 1.12.2026 from 06:00 · generated 25.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -30,6 +30,7 @@ _leave New York Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min 
 | Montgomery | Tue 1.12. 14:00 | Wed 2.12. 18:20 | 29 h 20 min | 1 | 1 | 0 |  |
 | Madison | Tue 1.12. 15:40 | Wed 2.12. 18:40 | 28 h 00 min | 1 | 1 | 0 |  |
 | Saint Paul | Tue 1.12. 12:25 | Wed 2.12. 18:41 | 31 h 16 min | 2 | 1 | 0 | fewest changes: 32 h 16 min, 1 ch., 0 hotel |
+| Des Moines | Tue 1.12. 15:40 | Wed 2.12. 18:55 | 28 h 15 min | 1 | 1 | 0 |  |
 | Lansing | Tue 1.12. 15:40 | Wed 2.12. 20:55 | 29 h 15 min | 1 | 1 | 0 |  |
 | Charleston | Wed 2.12. 06:40 | Wed 2.12. 21:09 | 14 h 29 min | 0 | 0 | 0 |  |
 | Topeka | Tue 1.12. 15:40 | Wed 2.12. 23:21 | 32 h 41 min | 1 | 1 | 0 |  |
@@ -37,7 +38,6 @@ _leave New York Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min 
 | Baton Rouge | Tue 1.12. 14:00 | Thu 3.12. 01:45 | 36 h 45 min | 1 | 2 | 0 |  |
 | Little Rock | Tue 1.12. 15:40 | Thu 3.12. 03:17 | 36 h 37 min | 1 | 2 | 0 |  |
 | Indianapolis | Wed 2.12. 06:40 | Thu 3.12. 05:55 | 23 h 15 min | 0 | 1 | 0 |  |
-| Des Moines | Tue 1.12. 15:40 | Thu 3.12. 05:05 | 38 h 25 min | 2 | 2 | 0 | fewest changes: 47 h 55 min, 1 ch., 1 hotel |
 | Denver | Tue 1.12. 15:40 | Thu 3.12. 07:56 | 42 h 16 min | 1 | 2 | 0 |  |
 | Tallahassee | Tue 1.12. 14:00 | Thu 3.12. 10:50 | 44 h 50 min | 1 | 2 | 0 |  |
 | Jackson | Tue 1.12. 15:40 | Thu 3.12. 11:40 | 45 h 00 min | 1 | 2 | 0 |  |
@@ -119,6 +119,7 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Little 
 | Montgomery | Tue 1.12. 14:00 | Wed 2.12. 18:20 | 29 h 20 min | same arrival |
 | Madison | Tue 1.12. 15:40 | Wed 2.12. 18:40 | 28 h 00 min | same arrival |
 | Saint Paul | Tue 1.12. 15:40 | Wed 2.12. 22:56 | 32 h 16 min | arrives 4 h 15 min later |
+| Des Moines | Tue 1.12. 15:40 | Wed 2.12. 18:55 | 28 h 15 min | same arrival |
 | Lansing | Tue 1.12. 15:40 | Wed 2.12. 20:55 | 29 h 15 min | same arrival |
 | Charleston | Wed 2.12. 06:40 | Wed 2.12. 21:09 | 14 h 29 min | same arrival |
 | Topeka | Tue 1.12. 15:40 | Wed 2.12. 23:21 | 32 h 41 min | same arrival |
@@ -126,7 +127,6 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Little 
 | Baton Rouge | Tue 1.12. 14:00 | Thu 3.12. 01:45 | 36 h 45 min | same arrival |
 | Little Rock | Tue 1.12. 15:40 | Thu 3.12. 03:17 | 36 h 37 min | same arrival |
 | Indianapolis | Wed 2.12. 06:40 | Thu 3.12. 05:55 | 23 h 15 min | same arrival |
-| Des Moines | Tue 1.12. 15:40 | Thu 3.12. 05:05 | 38 h 25 min | same arrival |
 | Denver | Tue 1.12. 15:40 | Thu 3.12. 07:56 | 42 h 16 min | same arrival |
 | Tallahassee | Tue 1.12. 14:00 | Thu 3.12. 10:50 | 44 h 50 min | same arrival |
 | Jackson | Tue 1.12. 15:40 | Thu 3.12. 11:40 | 45 h 00 min | same arrival |
@@ -381,6 +381,13 @@ _Fewest changes: 32 h 16 min, arrive Wed 2.12. 22:56, 1 changes, 0 hotel nights_
 - Wait 4 h 53 min in Chicago
 - Wed 2.12. 15:05 → Wed 2.12. 22:56  **Chicago → Saint Paul**  Empire Builder 27 / Empire Builder 7
 
+### Des Moines
+_Fastest: 28 h 15 min, arrive Wed 2.12. 18:55, 1 changes, 0 hotel nights_
+
+- Tue 1.12. 15:40 → Wed 2.12. 10:12  **New York → Chicago**  Lake Shore Limited 49  (night)
+- Wait 2 h 13 min in Chicago
+- Wed 2.12. 12:25 → Wed 2.12. 18:55  **Chicago → Des Moines**  Greyhound US0123S
+
 ### Lansing
 _Fastest: 29 h 15 min, arrive Wed 2.12. 20:55, 1 changes, 0 hotel nights_
 
@@ -425,22 +432,6 @@ _Fastest: 36 h 37 min, arrive Thu 3.12. 03:17, 1 changes, 0 hotel nights_
 _Fastest: 23 h 15 min, arrive Thu 3.12. 05:55, 0 changes, 0 hotel nights_
 
 - Wed 2.12. 06:40 → Thu 3.12. 05:55  **New York → Indianapolis**  Cardinal 51  (night)
-
-### Des Moines
-_Fastest: 38 h 25 min, arrive Thu 3.12. 05:05, 2 changes, 0 hotel nights_
-
-- Tue 1.12. 15:40 → Wed 2.12. 10:12  **New York → Chicago**  Lake Shore Limited 49  (night)
-- Wait 4 h 53 min in Chicago
-- Wed 2.12. 15:05 → Wed 2.12. 22:56  **Chicago → Saint Paul**  Empire Builder 27 / Empire Builder 7
-- Wait 1 h 39 min in Saint Paul
-- Thu 3.12. 00:35 → Thu 3.12. 05:05  **Saint Paul → Des Moines**  Greyhound US0156  (night)
-
-### Des Moines — fewest changes
-_Fewest changes: 47 h 55 min, arrive Thu 3.12. 14:35, 1 changes, 1 hotel nights_
-
-- Tue 1.12. 15:40 → Wed 2.12. 10:12  **New York → Chicago**  Lake Shore Limited 49  (night)
-- 🛏 Overnight in Chicago (Wed 2.12. 10:12 → Thu 3.12. 06:10)
-- Thu 3.12. 06:10 → Thu 3.12. 14:35  **Chicago → Des Moines**  Greyhound US0155S
 
 ### Denver
 _Fastest: 42 h 16 min, arrive Thu 3.12. 07:56, 1 changes, 0 hotel nights_

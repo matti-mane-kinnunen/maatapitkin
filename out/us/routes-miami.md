@@ -1,6 +1,6 @@
 # Journeys from Miami
 
-_leave Miami Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
+_leave Miami Tue 1.12.2026 from 06:00 · generated 25.11.2026. Change 60 min (more at some stations), to or from a bus 45 min. A wait past 01:00 is a hotel stay; no departures before 06:00 after a hotel night. Between 00:00 and 05:00 only night trains and night buses run. Clock times are local; door-to-door times are corrected for time zones._
 
 | Capital | Depart | Arrive | Door to door | Changes | Night trains/ferries | Hotel nights (where) | Alternatives |
 |---|---|---|---|---|---|---|---|
@@ -31,8 +31,8 @@ _leave Miami Tue 1.12.2026 from 06:00 · generated 23.11.2026. Change 60 min (mo
 | Montgomery | Tue 1.12. 07:05 | Thu 3.12. 18:20 | 60 h 15 min | 2 | 2 | 0 |  |
 | Saint Paul | Tue 1.12. 11:05 | Thu 3.12. 18:41 | 56 h 36 min | 1 | 1 | 0 |  |
 | Toronto | Tue 1.12. 07:05 | Thu 3.12. 19:43 | 60 h 38 min | 1 | 1 | 1 (New York) | fewest hotel nights: 60 h 38 min, 2 ch., 0 hotel |
+| Des Moines | Tue 1.12. 11:05 | Thu 3.12. 18:55 | 56 h 50 min | 1 | 1 | 0 |  |
 | Lansing | Tue 1.12. 11:05 | Thu 3.12. 20:55 | 57 h 50 min | 1 | 1 | 0 |  |
-| Des Moines | Tue 1.12. 07:05 | Thu 3.12. 21:45 | 63 h 40 min | 2 | 2 | 0 |  |
 | Topeka | Tue 1.12. 11:05 | Thu 3.12. 23:21 | 61 h 16 min | 1 | 1 | 0 |  |
 | Baton Rouge | Tue 1.12. 07:05 | Fri 4.12. 00:15 | 66 h 10 min | 2 | 2 | 0 |  |
 | Lincoln | Tue 1.12. 11:05 | Fri 4.12. 00:36 | 62 h 31 min | 1 | 1 | 0 |  |
@@ -120,8 +120,8 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Little 
 | Montgomery | Tue 1.12. 11:05 | Thu 3.12. 18:20 | 56 h 15 min | same arrival |
 | Saint Paul | Tue 1.12. 11:05 | Thu 3.12. 18:41 | 56 h 36 min | same arrival |
 | Toronto | Tue 1.12. 11:05 | Thu 3.12. 19:43 | 56 h 38 min | same arrival |
+| Des Moines | Tue 1.12. 11:05 | Thu 3.12. 18:55 | 56 h 50 min | same arrival |
 | Lansing | Tue 1.12. 11:05 | Thu 3.12. 20:55 | 57 h 50 min | same arrival |
-| Des Moines | Tue 1.12. 11:05 | Fri 4.12. 05:05 | 67 h 00 min | arrives 7 h 20 min later |
 | Topeka | Tue 1.12. 11:05 | Thu 3.12. 23:21 | 61 h 16 min | same arrival |
 | Baton Rouge | Tue 1.12. 11:05 | Fri 4.12. 00:15 | 62 h 10 min | same arrival |
 | Lincoln | Tue 1.12. 11:05 | Fri 4.12. 00:36 | 62 h 31 min | same arrival |
@@ -155,11 +155,11 @@ Not reachable without night trains: Winnipeg, Edmonton, Halifax, Regina, Little 
 | Roanoke | Wed 2.12. 12:40 | 29 h 35 min | 1 | 0 |
 | New Haven | Wed 2.12. 13:11 | 30 h 06 min | 1 | 0 |
 | Springfield, MA | Wed 2.12. 15:01 | 31 h 56 min | 1 | 0 |
-| Charlotte | Wed 2.12. 15:55 | 28 h 50 min | 1 | 0 |
 | Norfolk | Wed 2.12. 19:09 | 32 h 04 min | 1 | 0 |
 | Newport News | Wed 2.12. 20:09 | 33 h 04 min | 1 | 0 |
 | Brunswick | Wed 2.12. 20:35 | 37 h 30 min | 2 | 0 |
 | St. Albans | Wed 2.12. 20:50 | 37 h 45 min | 1 | 0 |
+| Charlotte | Wed 2.12. 21:01 | 37 h 56 min | 1 | 0 |
 | Buffalo | Wed 2.12. 21:21 | 38 h 16 min | 1 | 0 |
 | Burlington | Wed 2.12. 21:26 | 38 h 21 min | 1 | 0 |
 | Pittsburgh | Wed 2.12. 21:54 | 38 h 49 min | 1 | 0 |
@@ -418,22 +418,19 @@ _Fewest hotel nights: 60 h 38 min, arrive Thu 3.12. 19:43, 2 changes, 0 hotel ni
 - Wait 2 h 05 min in New York
 - Thu 3.12. 07:16 → Thu 3.12. 19:43  **New York → Toronto**  VIA 98-63
 
+### Des Moines
+_Fastest: 56 h 50 min, arrive Thu 3.12. 18:55, 1 changes, 0 hotel nights_
+
+- Tue 1.12. 11:05 → Thu 3.12. 08:45  **Miami → Chicago**  Floridian 40  (night)
+- Wait 3 h 40 min in Chicago
+- Thu 3.12. 12:25 → Thu 3.12. 18:55  **Chicago → Des Moines**  Greyhound US0123S
+
 ### Lansing
 _Fastest: 57 h 50 min, arrive Thu 3.12. 20:55, 1 changes, 0 hotel nights_
 
 - Tue 1.12. 11:05 → Thu 3.12. 08:45  **Miami → Chicago**  Floridian 40  (night)
 - Wait 7 h 15 min in Chicago
 - Thu 3.12. 16:00 → Thu 3.12. 20:55  **Chicago → Lansing**  Blue Water 364
-
-### Des Moines
-_Fastest: 63 h 40 min, arrive Thu 3.12. 21:45, 2 changes, 0 hotel nights_
-
-- Tue 1.12. 07:05 → Wed 2.12. 06:25  **Miami → Washington**  Silver Meteor 98  (night)
-- Wait 5 h 14 min in Washington
-- Wed 2.12. 11:39 → Wed 2.12. 21:09  **Washington → Charleston**  Cardinal 51
-- Wed 2.12. 21:09 → Thu 3.12. 05:55  **Charleston → Indianapolis**  Cardinal 51  (night)
-- Wait 7 h 00 min in Indianapolis
-- Thu 3.12. 12:55 → Thu 3.12. 21:45  **Indianapolis → Des Moines**  Greyhound US0157S
 
 ### Topeka
 _Fastest: 61 h 16 min, arrive Thu 3.12. 23:21, 1 changes, 0 hotel nights_

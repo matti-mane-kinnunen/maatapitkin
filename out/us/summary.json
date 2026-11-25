@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23",
+ "generated": "2026-11-25",
  "dates": [
   "2026-12-01",
   "2026-12-04",
@@ -7,7 +7,7 @@
   "2026-12-06"
  ],
  "draft": false,
- "departures": 27448,
+ "departures": 27458,
  "warnings": 0,
  "capitals": {
   "2026-12-01": {
@@ -213,7 +213,7 @@
  },
  "origins": {
   "New York": {
-   "generated": "2026-11-23",
+   "generated": "2026-11-25",
    "dates": [
     "2026-12-01",
     "2026-12-04",
@@ -221,7 +221,7 @@
     "2026-12-06"
    ],
    "draft": false,
-   "departures": 27448,
+   "departures": 27458,
    "warnings": 0,
    "capitals": {
     "2026-12-01": {
@@ -437,7 +437,7 @@
    }
   },
   "Seattle": {
-   "generated": "2026-11-23",
+   "generated": "2026-11-25",
    "dates": [
     "2026-12-01",
     "2026-12-04",
@@ -445,7 +445,7 @@
     "2026-12-06"
    ],
    "draft": false,
-   "departures": 27448,
+   "departures": 27458,
    "warnings": 0,
    "capitals": {
     "2026-12-01": {
@@ -639,7 +639,7 @@
    }
   },
   "New Orleans": {
-   "generated": "2026-11-23",
+   "generated": "2026-11-25",
    "dates": [
     "2026-12-01",
     "2026-12-04",
@@ -647,7 +647,7 @@
     "2026-12-06"
    ],
    "draft": false,
-   "departures": 27448,
+   "departures": 27458,
    "warnings": 0,
    "capitals": {
     "2026-12-01": {
@@ -848,7 +848,7 @@
    }
   },
   "Miami": {
-   "generated": "2026-11-23",
+   "generated": "2026-11-25",
    "dates": [
     "2026-12-01",
     "2026-12-04",
@@ -856,7 +856,7 @@
     "2026-12-06"
    ],
    "draft": false,
-   "departures": 27448,
+   "departures": 27458,
    "warnings": 0,
    "capitals": {
     "2026-12-01": {

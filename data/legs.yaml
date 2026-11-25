@@ -3361,3 +3361,5 @@ legs:
   - {from: Sevilla, to: Cádiz, service: "Regional", mode: train, runs: "mon-fri,sat", times: ["07:45-09:23"], query: "*", checked: 2026-11-17, source: transitous}
   - {from: Cádiz, to: Las Palmas, dep: "16:00", arr: "02:30", days: 1, service: "Baleària Tue", mode: ferry, night: true, runs: "tue", checked: 2026-11-18, source: manual}
   - {from: Cádiz, to: Santa Cruz de Tenerife, dep: "12:00", arr: "20:00", days: 1, service: "Baleària Sat", mode: ferry, night: true, runs: "sat", checked: 2026-11-18, source: manual}
+  - {from: Tallinn, to: Valga, service: "E35 Tallinn", mode: train, times: ["07:15-11:13", "10:22-14:14", "13:27-17:12", "14:31-18:32", "18:25-22:07"], query: "*", checked: 2026-11-25, source: transitous}
+  - {from: Valga, to: Tallinn, service: "E35 Valga", mode: train, times: ["06:12-10:47", "09:40-14:02", "12:50-16:56", "14:33-18:15"], query: "*", checked: 2026-11-25, source: transitous}
