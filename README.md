@@ -160,6 +160,8 @@ map's *Copy link* button gives the link for whatever is on screen.
 With own settings (*Other date or time …*, D-62) the link carries them instead of the weekday:
 `#rome/2026-12-03/1430/t30/noferry/nobus` – date, start time, change time, no ferries, no buses;
 the browser works the journey out when the link is opened.
+A stopover (*Stop over on the way …* under the itinerary, D-69) adds `/via-vienna/n2` – the place and
+the nights – and `/l0900` when the journey goes on at another time than the morning.
 
 ## Safety net before each commit
 
@@ -187,7 +189,8 @@ its test too.
 
 **Two routers** (IDEA-21, D-62): the map can also work journeys out in the visitor's browser
 (*Other date or time …*), with `src/router.js`, a JavaScript port of `src/journeys.py` and of the
-`Journeys` class in build.py. Python stays the reference; two checks keep them together:
+`Journeys` class in build.py; the same router also adds a stopover to one journey (*Stop over on
+the way …*, D-69, `Router.stopover` in both). Python stays the reference; two checks keep them together:
 
 - `tests/router_cases.yaml` – small cases run through **both** routers by `tests/test_router_cases.py`
   (the JavaScript half needs Node; without it only Python is checked). Change a rule → change it in

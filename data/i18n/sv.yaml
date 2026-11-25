@@ -220,3 +220,25 @@ nearby_every: ", var {n}:e minut"
 nearby_every_h: {one: ", varje timme", other: ", var {n}:e timme"}
 nearby_daily: {one: ", en gång om dagen", other: ", {n} gånger om dagen"}
 search_nearby: "{hub} → {dur} {by}"
+
+# ett uppehåll på vägen (IDEA-21 steg 3, D-69)
+stop_summary: "Uppehåll på vägen …"
+stop_place: "Stanna i"
+stop_nights: "Nätter"
+stop_leave: "Vidare från"
+stop_apply: "Visa resan"
+stop_hint: "Räknas ut i din webbläsare: snabbaste resan till uppehållet, nätterna där, sedan vidare på morgonen (eller din egen tid) – med inställningarna på skärmen."
+stop_reset: "Ta bort uppehållet"
+stop_in: {one: "{n} natt i {place}", other: "{n} nätter i {place}"}
+chip_stop: "Uppehåll"
+mark_stop: {one: "Uppehåll i {place}, {n} natt: ankomst {from}, avresa {to}", other: "Uppehåll i {place}, {n} nätter: ankomst {from}, avresa {to}"}
+stop_note: {one: "Ditt uppehåll: {n} natt i {place} på vägen till {dest}.", other: "Ditt uppehåll: {n} nätter i {place} på vägen till {dest}."}
+stop_working: "Räknar ut resan …"
+stop_no_stop: "{place} går inte att nå med de här inställningarna."
+stop_no_dest: "{dest} går inte att nå från {place} med de här inställningarna."
+stop_unknown: "Välj en plats i listan."
+stop_is_dest: "Där slutar resan – välj en plats på vägen."
+cmp_stop: "{dur} längre än direkt ({straight})."
+cmp_longer: "{dur} längre än kartans resa ({map})."
+cmp_shorter: "{dur} snabbare än kartans resa ({map})."
+cmp_same: "Lika snabb som kartans resa ({map})."

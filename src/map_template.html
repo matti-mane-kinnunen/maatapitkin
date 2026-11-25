@@ -267,6 +267,10 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 .own .hint { margin: 6px 0 0; color: var(--muted) }
 .own-note { flex-basis: 100%; margin: 0; font-size: 12px; padding: 6px 10px; border-left: 3px solid var(--accent); background: var(--panel) }
 .own-note button { all: unset; cursor: pointer; color: var(--accent); text-decoration: underline; margin-left: 6px }
+/* a stopover of the visitor's own (IDEA-21 step 3, D-69) */
+.itin .own.stopf { padding: 6px 14px 0; flex-basis: auto }
+.itin .own-note { margin: 6px 14px 0 }
+.chip.stop { background: var(--accent); color: var(--panel) }
 </style>
 
 <div class="wrap">
@@ -334,6 +338,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <section class="itin" aria-live="polite">
         <h2><span id="itin-title">{{itinerary}}</span><span id="itin-sum"></span></h2>
         <div class="opts" id="opts" role="tablist" aria-label="{{options_aria}}"></div>
+        <p class="co2" id="cmp" hidden></p>
         <p class="co2" id="co2" hidden></p>
         <div class="co2-how" id="co2-how" hidden>
           <p>{{co2_how_1}}</p>
@@ -343,6 +348,19 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <div class="wiki" id="wiki" hidden></div>
         <p class="nearby" id="nearby" hidden></p>
         <div class="share"><button type="button" id="share">{{copy_link}}</button><button type="button" id="ics" title="{{calendar_title}}">{{add_calendar}}</button><span id="share-msg" role="status"></span></div>
+        <details class="own stopf" id="stop">
+          <summary>{{stop_summary}}</summary>
+          <div class="row">
+            <label>{{stop_place}} <input type="text" id="stop-place" list="stop-places" autocomplete="off" spellcheck="false" size="14"></label>
+            <datalist id="stop-places"></datalist>
+            <label>{{stop_nights}} <select id="stop-nights"></select></label>
+            <label>{{stop_leave}} <input type="time" id="stop-leave" step="300"></label>
+            <button type="button" id="stop-go">{{stop_apply}}</button>
+            <span id="stop-status" role="status" aria-live="polite"></span>
+          </div>
+          <p class="hint">{{stop_hint}}</p>
+        </details>
+        <p class="own-note" id="stop-note" hidden><span></span><button type="button" id="stop-reset">{{stop_reset}}</button></p>
         <ol class="steps" id="steps"></ol>
       </section>
   </div>
@@ -381,6 +399,7 @@ let curDate = NET.dates ? NET.dates[0] : null;
 const DEF_START = NET.default_start || null, STARTS = NET.starts || [];
 let curStart = DEF_START;
 let OWN_Q = null;            // own settings worked out in the browser (IDEA-21): {date, start, transfer, avoid}
+let STOP = null;             // a stopover on the journey on screen (IDEA-21 step 3): {cap, place, nights, leave, r}
 const varOf = (date, t) => { const b = VARS[date]; return (t && t !== DEF_START && b.starts && b.starts[t]) || b; };
 const partOfDay = t => t < "12:00" ? "morning" : t < "17:00" ? "afternoon" : "evening";   // link word
 // two start times in the same part of the day (Miami 06:00 and 10:00): the clock time tells them apart
@@ -406,7 +425,7 @@ function expandRoute(r, date) {
                dep: x[2], arr: x[3], dep_txt: whenTxt(date, x[2]), arr_txt: whenTxt(date, x[3]),
                timed: l.dep != null, issue: l.issue, note: l.note };
     }
-    return { kind: x[0] === "s" ? "stay" : "change", place: x[1], from_t: whenTxt(date, x[2]), to_t: whenTxt(date, x[3]),
+    return { kind: x[0] === "s" ? "stay" : x[0] === "o" ? "stopover" : "change", place: x[1], from_t: whenTxt(date, x[2]), to_t: whenTxt(date, x[3]),
              minutes: x[3] - x[2], nights: x[4] };
   });
   r.depart_txt = whenTxt(date, r.depart); r.arrive_txt = whenTxt(date, r.arrive);
@@ -642,6 +661,7 @@ function routeMarks(r) {
   const legs = r.steps.filter(s => s.kind === "leg"), marks = [];
   for (const st of r.steps)            // hotel nights exactly as the router counted them
     if (st.kind === "stay") marks.push({ kind: "hotel", place: st.place, title: T("mark_hotel", { place: LN(st.place), from: st.from_t, to: st.to_t }) });
+    else if (st.kind === "stopover") marks.push({ kind: "hotel", place: st.place, title: T("mark_stop", { n: st.nights, place: LN(st.place), from: st.from_t, to: st.to_t }) });
   legs.forEach((s, i) => {
     for (let m = (Math.floor(s.dep / 1440) + 1) * 1440; m < s.arr; m += 1440) {   // midnight on board
       const d = m / 1440 + 1, t = (m - s.dep) / Math.max(1, s.arr - s.dep);
@@ -994,6 +1014,7 @@ function showVariant(allowed) {
   NET.routes = v.routes; NET.city_routes = v.city_routes || []; NET.unreached = v.unreached || [];
   ALL_ROUTES = [...NET.routes, ...NET.city_routes];
   buildRows(); updateNodeDays(); updateSummary(); placeHits(); applyFilters(); updateReach();
+  clearStop();                                     // worked out for the view before
   const cur = curRoute && curRoute.capital;
   select(cur && routeOf(cur) ? cur : routeOf("Paris") ? "Paris" : NET.routes[0].capital);
 }
@@ -1075,7 +1096,8 @@ function showCO2(r) {
 
 function select(cap, opt = 0, fromMap = false, fromList = false) {
   const r0 = routeOf(cap); if (!r0) return;
-  const options = [r0, ...(r0.alternatives || [])];
+  if (STOP && STOP.cap !== cap) clearStop();
+  const options = STOP ? [STOP.r] : [r0, ...(r0.alternatives || [])];
   const r = options[Math.min(opt, options.length - 1)];
   const optsEl = document.getElementById("opts"); optsEl.replaceChildren();
   if (options.length > 1) options.forEach((o, i) => {
@@ -1111,7 +1133,7 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
   document.getElementById("itin-sum").textContent = T("sum_arrive", { dur: dur(r.door_to_door_min), when: r.arrive_txt }) +
     (typeof F !== "undefined" && F.nightTrains === false ? T("sum_no_night") : "") +
     (curStart !== DEF_START ? (r0.same_as_default ? T("sum_same", { part: partLabel(DEF_START) }) : T("sum_from", { t: curStart })) : "");
-  showCO2(r); showWiki(cap); showNearby(cap);
+  showCO2(r); showCmp(r, r0); showWiki(cap); showNearby(cap); stopForm(cap);
   const ol = document.getElementById("steps"); ol.replaceChildren();
   let shownDay = 0, lastArr = r.steps.find(s => s.kind === "leg").dep;
   const stretches = railStretches(r.steps);
@@ -1126,6 +1148,12 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       ol.appendChild(h); shownDay = day;
     }
     const li = document.createElement("li");
+    if (s.kind === "stopover") {
+      li.className = "stay stopover";
+      li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>${T("stop_in", { n: s.nights, place: LN(s.place) })}</b><span class="chip stop">${T("chip_stop")}</span><div class="svc">${T("between_trains", { dur: dur(s.minutes) })}</div></div>`;
+      const w = wikiBox(s.place, true); if (w) li.querySelector(".what").appendChild(w);
+      ol.appendChild(li); return;
+    }
     if (s.kind === "stay") {
       li.className = "stay";
       li.innerHTML = `<div class="t">${s.from_t}<br>${s.to_t}</div><div class="what"><b>${T("overnight_in", { place: LN(s.place) })}</b><span class="chip hotel">${T("chip_hotel")}</span><div class="svc">${T("between_trains", { dur: dur(s.minutes) })}</div></div>`;
@@ -1170,6 +1198,29 @@ function select(cap, opt = 0, fromMap = false, fromList = false) {
       itinEl.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
   }
   try { const h = hashFor(cap, options.indexOf(r)); if (location.hash !== h) history.replaceState(null, "", h); } catch (e) {}
+}
+// how this journey compares (IDEA-21 step 3): a stopover with going straight on the same settings,
+// own settings with the map's own journey (the build's, same weekday where it has one)
+function buildRoute(cap) {
+  if (!VARS) return null;
+  const wd = weekdayOf(OWN_Q.date), d = VARS[OWN_Q.date] ? OWN_Q.date : NET.dates.find(x => weekdayOf(x) === wd) || NET.dates[0];
+  const v = VARS[d], b = F.nightTrains === false && v.no ? v.no : v.yes;
+  return [...b.routes, ...(b.city_routes || [])].find(x => x.capital === cap) || null;
+}
+function showCmp(r, r0) {
+  const el = document.getElementById("cmp");
+  let txt = "";
+  if (r.stopover) {
+    const d = r.door_to_door_min - r0.door_to_door_min;
+    txt = T("cmp_stop", { dur: dur(Math.abs(d)), straight: dur(r0.door_to_door_min) });
+  } else if (OWN_Q) {
+    const b = buildRoute(r.capital);
+    if (b) {
+      const d = r.door_to_door_min - b.door_to_door_min;
+      txt = T(d > 0 ? "cmp_longer" : d < 0 ? "cmp_shorter" : "cmp_same", { dur: dur(Math.abs(d)), map: dur(b.door_to_door_min) });
+    }
+  }
+  el.textContent = txt; el.hidden = !txt;
 }
 
 // City texts (IDEA-22): Wikivoyage, else Wikipedia, fetched weekly by fetch_wiki.py into the data.
@@ -1233,7 +1284,7 @@ function railStretches(steps) {          // index of each stretch's last leg -> 
   const out = new Map(); let cur = null;
   const close = () => { if (cur && cur.trains) out.set(cur.last, cur); cur = null; };
   steps.forEach((s, i) => {
-    if (s.kind === "stay") return close();
+    if (s.kind === "stay" || s.kind === "stopover") return close();
     if (s.kind !== "leg") return;
     if (s.mode === "ferry" || s.mode === "bus") return close();
     if (!cur) cur = { from: s.from, dep: s.dep, trains: 0 };
@@ -1256,16 +1307,16 @@ function hashFor(cap, opt) {
     for (const m of OWN_Q.avoid) parts.push("no" + m);
     if (OWN_Q.fastbus) parts.push("fastbus");
     if (F.nightTrains === false && V.no) parts.push("no-night");
-    const r1 = routeOf(cap), o1 = opt > 0 && r1 && r1.alternatives && r1.alternatives[opt - 1];
+    const r1 = routeOf(cap), o1 = !STOP && opt > 0 && r1 && r1.alternatives && r1.alternatives[opt - 1];
     if (o1) parts.push(slug(o1.label));
-    return "#" + parts.join("/");
+    return "#" + parts.join("/") + stopHash(cap);
   }
   if (VARS && NET.dates.length > 1) parts.push(weekdayOf(curDate));
   if (F.nightTrains === false && V.no) parts.push("no-night");
   if (curStart && curStart !== DEF_START) parts.push(partLink(curStart));
-  const r0 = routeOf(cap), o = opt > 0 && r0 && r0.alternatives && r0.alternatives[opt - 1];
+  const r0 = routeOf(cap), o = !STOP && opt > 0 && r0 && r0.alternatives && r0.alternatives[opt - 1];
   if (o) parts.push(slug(o.label));
-  return "#" + parts.join("/");
+  return "#" + parts.join("/") + stopHash(cap);
 }
 function parseHash() {
   const [place, ...rest] = location.hash.slice(1).split("/").map(x => decodeURIComponent(x).toLowerCase());
@@ -1284,6 +1335,9 @@ function parseHash() {
     else if (/^t\d{1,3}$/.test(x)) want.transfer = Math.min(180, +x.slice(1));
     else if (x === "noferry" || x === "nobus") (want.avoid = want.avoid || []).push(x.slice(2));
     else if (x === "fastbus") want.fastbus = true;
+    else if (x.startsWith("via-")) want.via = x.slice(4);                    // a stopover (IDEA-21 step 3)
+    else if (/^n\d{1,2}$/.test(x)) want.nights = Math.min(stopMax(), Math.max(1, +x.slice(1)));
+    else if (/^l([01]\d|2[0-3])[0-5]\d$/.test(x)) want.leave = x.slice(1, 3) + ":" + x.slice(3);
     else want.opt = x;
   }
   return want;
@@ -1294,7 +1348,8 @@ function fromHash(first = false) {
   if (want.ownDate || want.ownStart || want.transfer != null || want.avoid || want.fastbus) {   // own settings: worked out here
     F.nightTrains = night;
     runOwn({ date: want.ownDate || want.date || curDate, start: want.ownStart || want.start || DEF_START || "00:00",
-             transfer: want.transfer ?? S.min_transfer, avoid: want.avoid || [], fastbus: !!want.fastbus }, want.place, want.opt);
+             transfer: want.transfer ?? S.min_transfer, avoid: want.avoid || [], fastbus: !!want.fastbus }, want.place, want.opt)
+      .then(() => { if (want.via) stopFromLink(want); });
     return;
   }
   const wasOwn = !!OWN_Q;                // a link without own settings leaves them
@@ -1308,7 +1363,9 @@ function fromHash(first = false) {
   let opt = 0;
   if (r && want.opt) { const i = (r.alternatives || []).findIndex(a => slug(a.label) === want.opt); if (i >= 0) opt = i + 1; }
   else if (r) opt = pickOption(r);
+  if (STOP && !(want.via && STOP.cap === cap && slug(STOP.place) === want.via)) clearStop();
   select(cap, opt);
+  if (want.via && r && !(STOP && STOP.cap === cap && slug(STOP.place) === want.via)) stopFromLink(want);
 }
 window.addEventListener("hashchange", () => fromHash());
 document.getElementById("arrivals-link").addEventListener("click", e => {   // keep the journey link in the address bar
@@ -1378,9 +1435,10 @@ function icsFor(r, cap) {
       add(utcAt(s.dep, s.from), utcAt(s.arr, s.to), `${s.service ? s.service + " " : ""}${LN(s.from)} → ${LN(s.to)}`, LN(s.from),
           `${kind ? kind + " · " : ""}${s.dep_txt} → ${s.arr_txt}${s.timed ? "" : " (" + T("est") + ")"}\n${note}`);
       lastArr = s.arr; lastPlace = s.to;
-    } else if (s.kind === "stay" && lastArr != null) {
+    } else if ((s.kind === "stay" || s.kind === "stopover") && lastArr != null) {
       const next = r.steps[r.steps.indexOf(s) + 1], until = next && next.kind === "leg" ? next.dep : lastArr + s.minutes;
-      add(utcAt(lastArr, lastPlace), utcAt(until, lastPlace), T("overnight_in", { place: LN(s.place) }), LN(s.place), note);
+      add(utcAt(lastArr, lastPlace), utcAt(until, lastPlace),
+          s.kind === "stopover" ? T("stop_in", { n: s.nights, place: LN(s.place) }) : T("overnight_in", { place: LN(s.place) }), LN(s.place), note);
     }
   }
   return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Maata pitkin//Train map//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
@@ -1425,18 +1483,20 @@ function loadRouterData() {
     document.head.appendChild(sc);
   });
 }
+// a job: {origin, opt, call: "variant" | "stopover", args}
+const ownCall = (net, m) => { const J = new MPRouter.Journeys(net, m.origin, m.opt); return m.call === "stopover" ? J.stopover(...m.args) : J.variant(...m.args); };
 function ownHere(job) {                            // without a worker: on the page itself
   return new Promise((res, rej) => setTimeout(() => {
-    try { res(new MPRouter.Journeys(OWN.net, NET.origin, job.opt).variant(job.date, job.start, job.def)); }
+    try { res(ownCall(OWN.net, job)); }
     catch (e) { rej(e); }
   }, 30));
 }
 function ownWorker(data) {
   if (OWN.worker || OWN.noWorker) return OWN.worker;
   try {
-    const src = ownEl("router-src").textContent +
+    const src = ownEl("router-src").textContent + "\nconst ownCall = " + ownCall.toString() + ";" +
       "\nlet NETW = null;\nonmessage = e => { const m = e.data; if (m.data) { NETW = MPRouter.loadNetwork(m.data); return; }\n" +
-      "  try { postMessage({ id: m.id, v: new MPRouter.Journeys(NETW, m.origin, m.opt).variant(m.date, m.start, m.def) }); }\n" +
+      "  try { postMessage({ id: m.id, v: ownCall(NETW, m) }); }\n" +
       "  catch (err) { postMessage({ id: m.id, error: String(err && err.message || err) }); } };\n";
     OWN.worker = new Worker(URL.createObjectURL(new Blob([src], { type: "text/javascript" })));
     OWN.worker.postMessage({ data });
@@ -1444,10 +1504,12 @@ function ownWorker(data) {
   return OWN.worker;
 }
 function computeOwn(q) {
+  return runJob({ origin: NET.origin, opt: { minTransfer: q.transfer, avoid: q.avoid, alternatives: !!q.fastbus },
+                  call: "variant", args: [q.date, MPRouter.hm(q.start), MPRouter.hm(DEF_START || "00:00")] });
+}
+function runJob(job) {
   return loadRouterData().then(data => {
     if (!OWN.net) OWN.net = MPRouter.loadNetwork(data);
-    const job = { date: q.date, start: MPRouter.hm(q.start), def: MPRouter.hm(DEF_START || "00:00"), origin: NET.origin,
-                  opt: { minTransfer: q.transfer, avoid: q.avoid, alternatives: !!q.fastbus } };
     const w = ownWorker(data);
     if (!w) return ownHere(job);
     return new Promise((res, rej) => {
@@ -1563,6 +1625,101 @@ function runOwn(q, place = null, optWanted = null) {
   ownEl("own-reset").addEventListener("click", () => {
     leaveOwn(); setVariant(curDate, F.nightTrains !== false, curStart);
     if (ownEl("own").open) fill();
+  });
+})();
+// --- A stopover on the way (IDEA-21 step 3, D-69) -------------------------------------------------
+// "2 nights in Vienna": the journey on screen is worked out again in the browser as the fastest
+// journey to the stop, the nights there, and the fastest journey on from the stop's morning (or the
+// visitor's own time), with the settings on screen. Only that journey changes; the map stays.
+function stopMax() { return 7; }              // nights at a stopover: up to a week
+function stopStatus(txt) { document.getElementById("stop-status").textContent = txt; }
+function stopHash(cap) {
+  if (!STOP || STOP.cap !== cap) return "";
+  return `/via-${slug(STOP.place)}/n${STOP.nights}` + (STOP.leave ? "/l" + STOP.leave.replace(":", "") : "");
+}
+function clearStop() {
+  if (!STOP) return;
+  STOP = null; stopStatus("");
+  const n = document.getElementById("stop-note"); if (n) n.hidden = true;
+}
+function stopPlaces() {                              // every place in the network, in the map's language
+  const ps = OWN.net ? Object.keys(OWN.net.places) : Object.keys(P);
+  return ps.filter(n => n !== NET.origin).sort((a, b) => LN(a).localeCompare(LN(b)));
+}
+function stopPlaceOf(txt) {                          // what was typed -> a place name, or null
+  const t = String(txt || "").trim().toLowerCase(); if (!t) return null;
+  const ps = stopPlaces();
+  return ps.find(n => LN(n).toLowerCase() === t || n.toLowerCase() === t || slug(n) === slug(t)) || null;
+}
+function fillStopPlaces() {
+  const dl = document.getElementById("stop-places");
+  dl.replaceChildren(...stopPlaces().map(n => { const o = document.createElement("option"); o.value = LN(n); return o; }));
+}
+function stopForm(cap) {                             // the form and the note follow the journey on screen
+  const sel = document.getElementById("stop-nights");
+  if (!sel.options.length) for (let n = 1; n <= stopMax(); n++) {
+    const o = document.createElement("option"); o.value = n; o.textContent = String(n); sel.appendChild(o);
+  }
+  const note = document.getElementById("stop-note");
+  if (STOP && STOP.cap === cap) {
+    note.firstChild.textContent = T("stop_note", { n: STOP.r.stopover.nights, place: LN(STOP.place), dest: LN(cap) });
+    note.hidden = false;
+  } else note.hidden = true;
+}
+function runStop(cap, place, nights, leave) {
+  const go = document.getElementById("stop-go");
+  go.disabled = true; stopStatus(T("stop_working"));
+  const date = OWN_Q ? OWN_Q.date : (curDate || NET.start_date);
+  const start = OWN_Q ? OWN_Q.start : (curStart || DEF_START || "00:00");
+  const opt = OWN_Q ? { minTransfer: OWN_Q.transfer, avoid: OWN_Q.avoid, alternatives: !!OWN_Q.fastbus } : {};
+  return runJob({ origin: NET.origin, opt, call: "stopover",
+                  args: [F.nightTrains !== false, date, MPRouter.hm(start), cap, place, nights, leave ? MPRouter.hm(leave) : null] })
+    .then(r => {
+      if (r.fail) { stopStatus(T(r.fail === "stop" ? "stop_no_stop" : "stop_no_dest", { place: LN(place), dest: LN(cap) })); return false; }
+      addOwnLegs(new Set(r.steps.filter(x => x[0] === "l").map(x => x[1])), date);
+      expandRoute(r, date);
+      STOP = { cap, place, nights, leave, r };
+      stopStatus("");
+      select(cap, 0);
+      return true;
+    })
+    .catch(e => { stopStatus(T("own_failed")); console.warn("stopover:", e); return false; })
+    .finally(() => { go.disabled = false; });
+}
+function stopFromLink(want) {                        // #rome/via-vienna/n2/l0900
+  const cap = curRoute && curRoute.capital;
+  if (!cap) return;
+  return loadRouterData().then(data => {
+    if (!OWN.net) OWN.net = MPRouter.loadNetwork(data);
+    const place = stopPlaces().find(n => slug(n) === want.via);
+    if (!place) return;
+    return runStop(cap, place, want.nights || 1, want.leave || null);
+  }).catch(() => {});
+}
+(function stopFormSetup() {
+  const det = document.getElementById("stop"), pEl = document.getElementById("stop-place"),
+        nEl = document.getElementById("stop-nights"), lEl = document.getElementById("stop-leave");
+  det.addEventListener("toggle", () => {
+    if (!det.open) return;
+    fillStopPlaces();
+    if (STOP) { pEl.value = LN(STOP.place); nEl.value = String(STOP.nights); lEl.value = STOP.leave || ""; }
+    loadRouterData().then(data => { if (!OWN.net) OWN.net = MPRouter.loadNetwork(data); fillStopPlaces(); }).catch(() => {});
+  });
+  document.getElementById("stop-go").addEventListener("click", () => {
+    const cap = curRoute && curRoute.capital; if (!cap) return;
+    loadRouterData().then(data => {
+      if (!OWN.net) OWN.net = MPRouter.loadNetwork(data);
+      const place = stopPlaceOf(pEl.value);
+      if (!place) { stopStatus(T("stop_unknown")); return; }
+      if (place === cap) { stopStatus(T("stop_is_dest")); return; }
+      const leave = /^\d\d:\d\d$/.test(lEl.value) ? lEl.value : null;
+      runStop(cap, place, +nEl.value || 1, leave);
+    }).catch(() => stopStatus(T("own_failed")));
+  });
+  document.getElementById("stop-reset").addEventListener("click", () => {
+    const cap = curRoute && curRoute.capital;
+    clearStop();
+    if (cap) select(cap, routeOf(cap) ? pickOption(routeOf(cap)) : 0);
   });
 })();
 fromHash(true);

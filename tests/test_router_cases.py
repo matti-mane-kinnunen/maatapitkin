@@ -65,6 +65,10 @@ def python_answer(case: dict) -> dict:
     for mode in case.get("avoid") or []:                     # avoid ferries / buses: those legs left out
         r.out = {p: [l for l in ls if l.mode != mode] for p, ls in r.out.items()}
     start, to = hm(case.get("start", "06:00")), case.get("to", "C")
+    if case.get("via"):                                      # a stopover (IDEA-21 step 3, D-69)
+        res = r.stopover("A", case["via"], to, start, int(case.get("nights", 1)),
+                         hm(case["leave"]) if case.get("leave") else None)
+        return stopover_answer(res, clock)
     best = r.search("A", start, case.get("objective", "fastest"))
     out: dict = {"expect": None, "departures": None, "stays": None}
     if to in best:
@@ -78,6 +82,20 @@ def python_answer(case: dict) -> dict:
     return out
 
 
+def stopover_answer(res: dict, clk) -> dict:
+    """The answer fields for a stopover case; the same in tests/router_cases.mjs."""
+    if "fail" in res:
+        return {"expect": None, "fail": res["fail"]}
+    j = res["steps"]
+    legs = [s for s in j if s["kind"] == "leg"]
+    so = next(s for s in j if s["kind"] == "stopover")
+    return {"expect": [clk(legs[-1]["arr"]), sum(s["kind"] in ("change", "stay") for s in j),
+                       sum(s["nights"] for s in j if s["kind"] == "stay")],
+            "departures": [clk(s["dep"]) for s in legs],
+            "stays": [[s["place"], s["nights"]] for s in j if s["kind"] == "stay"],
+            "stopover": [so["place"], so["nights"], clk(so["from"]), clk(so["to"])], "fail": None}
+
+
 def javascript_answers() -> list[dict] | None:
     """What router.js says for every case (None without Node)."""
     node = shutil.which("node")
@@ -89,7 +107,8 @@ def javascript_answers() -> list[dict] | None:
                         "start": case.get("start", "06:00"), "to": case.get("to", "C"),
                         "objective": case.get("objective", "fastest"), "night_trains": case.get("night_trains", True),
                         "min_transfer": case.get("min_transfer"), "avoid": case.get("avoid") or [],
-                        "alternatives": bool(case.get("alternatives"))})
+                        "alternatives": bool(case.get("alternatives")),
+                        "via": case.get("via"), "nights": case.get("nights", 1), "leave": case.get("leave")})
     p = subprocess.run([node, str(HERE / "router_cases.mjs")], input=json.dumps(payload),
                        capture_output=True, text=True, timeout=120)
     if p.returncode:
@@ -109,7 +128,7 @@ class BothRouters(unittest.TestCase):
             if ans is None:
                 continue
             with self.subTest(router=who):
-                for field in ("expect", "departures", "stays", "pareto"):
+                for field in ("expect", "departures", "stays", "pareto", "stopover", "fail"):
                     if field in case:
                         want = case[field]
                         got = sorted(ans[field]) if field == "pareto" else ans[field]

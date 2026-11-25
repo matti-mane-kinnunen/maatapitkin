@@ -219,3 +219,25 @@ nearby_every: ", every {n} min"
 nearby_every_h: {one: ", hourly", other: ", every {n} hours"}
 nearby_daily: {one: ", once a day", other: ", {n} a day"}
 search_nearby: "{hub} → {dur} {by}"
+
+# a stopover on the way (IDEA-21 step 3, D-69)
+stop_summary: "Stop over on the way …"
+stop_place: "Stop in"
+stop_nights: "Nights"
+stop_leave: "Go on from"
+stop_apply: "Show journey"
+stop_hint: "Worked out in your browser: the fastest journey to the stop, the nights there, then on from the morning (or your own time) – with the settings on screen."
+stop_reset: "Remove the stopover"
+stop_in: {one: "{n} night in {place}", other: "{n} nights in {place}"}
+chip_stop: "Stopover"
+mark_stop: {one: "Stopover in {place}, {n} night: arrive {from}, leave {to}", other: "Stopover in {place}, {n} nights: arrive {from}, leave {to}"}
+stop_note: {one: "Your stopover: {n} night in {place} on the way to {dest}.", other: "Your stopover: {n} nights in {place} on the way to {dest}."}
+stop_working: "Working out the journey …"
+stop_no_stop: "{place} cannot be reached with these settings."
+stop_no_dest: "{dest} cannot be reached from {place} with these settings."
+stop_unknown: "Choose a place from the list."
+stop_is_dest: "That is where the journey ends – choose a place on the way."
+cmp_stop: "{dur} longer than going straight ({straight})."
+cmp_longer: "{dur} longer than the map's journey ({map})."
+cmp_shorter: "{dur} quicker than the map's journey ({map})."
+cmp_same: "As quick as the map's journey ({map})."

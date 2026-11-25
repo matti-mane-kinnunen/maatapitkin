@@ -9,6 +9,9 @@
 # objective (fastest / fewest_changes / fewest_hotels), night_trains (default true),
 # min_transfer (the visitor's own change time), avoid (modes left out, e.g. [ferry]),
 # alternatives (true: also the legs marked `alternative: true` - faster buses, D-68).
+# A stopover (IDEA-21 step 3, D-69): via (the place), nights (default 1), leave (default the
+# place's morning departure); answers also stopover: [place, nights, from, to] and fail
+# (null, or "stop" / "dest" for the half that cannot be reached).
 # expect: [arrival, changes, hotel nights] with the arrival as "day N HH:MM", or null if
 # unreachable; departures: the departure of every leg of the journey.
 
@@ -273,3 +276,76 @@
     - {from: A, to: C, dep: "09:00", arr: "12:00", service: T}
   avoid: [bus]
   expect: ["day 1 12:00", 0, 0]
+
+# --- stopovers (IDEA-21 step 3, D-69) --------------------------------------------------------
+- name: stopover - 2 nights in B, on at the morning departure (06:00) of day 3
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "05:30", arr: "07:00", service: T2}
+    - {from: B, to: C, dep: "06:30", arr: "08:00", service: T3}
+  via: B
+  nights: 2
+  expect: ["day 3 08:00", 0, 0]
+  departures: ["day 1 08:00", "day 3 06:30"]
+  stopover: [B, 2, "day 1 10:00", "day 3 06:30"]
+
+- name: stopover - own leaving time 10:00 skips the 06:30
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "06:30", arr: "08:00", service: T2}
+    - {from: B, to: C, dep: "11:00", arr: "12:30", service: T3}
+  via: B
+  nights: 1
+  leave: "10:00"
+  expect: ["day 2 12:30", 0, 0]
+  stopover: [B, 1, "day 1 10:00", "day 2 11:00"]
+
+- name: stopover - arriving at 00:30 the night under way counts (night_point 01:00)
+  legs:
+    - {from: A, to: B, dep: "22:00", arr: "00:30", service: T1}
+    - {from: B, to: C, dep: "07:00", arr: "08:00", service: T2}
+  start: "20:00"
+  via: B
+  nights: 1
+  expect: ["day 2 08:00", 0, 0]
+  stopover: [B, 1, "day 2 00:30", "day 2 07:00"]
+
+- name: stopover - a place's own morning departure (Budapest 05:00)
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "05:05", arr: "07:00", service: T2}
+  places: {B: {morning_departure: "05:00"}}
+  via: B
+  expect: ["day 2 07:00", 0, 0]
+
+- name: stopover - no train on the morning after; one more night (counted as the stopover)
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: C, dep: "09:00", arr: "10:00", service: T2, runs: thu}
+  via: B
+  nights: 1
+  expect: ["day 3 10:00", 0, 0]
+  stopover: [B, 2, "day 1 10:00", "day 3 09:00"]
+
+- name: stopover - the second half has its own hotel night
+  legs:
+    - {from: A, to: B, dep: "08:00", arr: "10:00", service: T1}
+    - {from: B, to: D, dep: "16:00", arr: "22:00", service: T2}
+    - {from: D, to: C, dep: "07:00", arr: "09:00", service: T3}
+  places: {D: {}}
+  via: B
+  expect: ["day 3 09:00", 1, 1]
+  stays: [[D, 1]]
+  stopover: [B, 1, "day 1 10:00", "day 2 16:00"]
+
+- name: stopover - the stop cannot be reached
+  legs: [{from: A, to: C, dep: "08:00", arr: "10:00", service: T}, {from: B, to: C, dep: "08:00", arr: "10:00", service: T2}]
+  via: B
+  expect: null
+  fail: stop
+
+- name: stopover - the destination cannot be reached from the stop
+  legs: [{from: A, to: B, dep: "08:00", arr: "10:00", service: T}, {from: A, to: C, dep: "08:00", arr: "10:00", service: T2}]
+  via: B
+  expect: null
+  fail: dest

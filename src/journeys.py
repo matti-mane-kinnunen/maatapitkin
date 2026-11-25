@@ -392,6 +392,35 @@ class Router:
         legs.reverse()
         return self._steps(legs)
 
+    # -- a stopover of the visitor's own choosing (IDEA-21 step 3, D-69) ---------
+    def stopover(self, origin: str, stop: str, dest: str, start: int, nights: int,
+                 leave_at: int | None = None) -> dict:
+        """Fastest journey origin -> stop, `nights` nights there, then the fastest stop -> dest.
+
+        The stay ends on the morning `nights` nights after arriving: the night is counted from
+        `night_point`, so arriving at 00:30 the first night is the one already under way. The
+        journey goes on from `leave_at` (default: the place's morning departure); the first
+        departure after that is boarded as from home (no hotel-night rule). Returns
+        {"steps": [...]} with a step {"kind": "stopover", place, from, to, nights}, or
+        {"fail": "stop"} / {"fail": "dest"} when that half cannot be reached."""
+        if stop in (origin, dest):
+            return {"fail": "stop"}
+        self.search(origin, start, "fastest")
+        a = self.journey(stop)
+        if not a:
+            return {"fail": "stop"}
+        arr = a[-1]["arr"]
+        leave = leave_at if leave_at is not None else self.morning_at(stop)
+        t = max(((arr - self.night_point) // DAY + nights) * DAY + leave, arr)
+        self.search(stop, t, "fastest")
+        b = self.journey(dest)
+        if not b:
+            return {"fail": "dest"}
+        dep = b[0]["dep"]
+        stay = {"kind": "stopover", "place": stop, "from": arr, "to": dep,
+                "nights": self.nights_between(arr, dep)}
+        return {"steps": a + [stay] + b}
+
     # -- all sensible trade-offs ------------------------------------------------
     def pareto(self, origin: str, start: int = 0, horizon_days: int = 10):
         """Keep every journey that is not beaten on all three of arrival time, changes

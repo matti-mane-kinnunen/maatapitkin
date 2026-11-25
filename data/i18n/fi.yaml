@@ -222,3 +222,25 @@ nearby_every: ", {n} min välein"
 nearby_every_h: {one: ", tunnin välein", other: ", {n} tunnin välein"}
 nearby_daily: {one: ", kerran päivässä", other: ", {n} kertaa päivässä"}
 search_nearby: "{hub} → {dur} {by}"
+
+# välipysähdys matkan varrella (IDEA-21 vaihe 3, D-69)
+stop_summary: "Välipysähdys matkalla …"
+stop_place: "Pysähdys"
+stop_nights: "Öitä"
+stop_leave: "Jatko aikaisintaan"
+stop_apply: "Näytä matka"
+stop_hint: "Lasketaan selaimessasi: nopein matka pysähdyspaikkaan, yöt siellä ja jatko aamulla (tai valitsemaasi aikaan) – näytöllä olevin asetuksin."
+stop_reset: "Poista välipysähdys"
+stop_in: {one: "Välipysähdys · {place}, {n} yö", other: "Välipysähdys · {place}, {n} yötä"}
+chip_stop: "Välipysähdys"
+mark_stop: {one: "Välipysähdys · {place}, {n} yö: saapuminen {from}, lähtö {to}", other: "Välipysähdys · {place}, {n} yötä: saapuminen {from}, lähtö {to}"}
+stop_note: {one: "Oma välipysähdys: {place}, {n} yö (matkalla: {dest}).", other: "Oma välipysähdys: {place}, {n} yötä (matkalla: {dest})."}
+stop_working: "Lasketaan matkaa …"
+stop_no_stop: "Pysähdyspaikkaan ei pääse näillä asetuksilla ({place})."
+stop_no_dest: "Määränpäähän ei pääse pysähdyspaikasta näillä asetuksilla ({place} → {dest})."
+stop_unknown: "Valitse paikka listasta."
+stop_is_dest: "Se on matkan määränpää – valitse paikka matkan varrelta."
+cmp_stop: "{dur} pidempi kuin suoraan ({straight})."
+cmp_longer: "{dur} pidempi kuin kartan matka ({map})."
+cmp_shorter: "{dur} nopeampi kuin kartan matka ({map})."
+cmp_same: "Yhtä nopea kuin kartan matka ({map})."

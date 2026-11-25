@@ -216,3 +216,25 @@ nearby_every: ", toutes les {n} min"
 nearby_every_h: {one: ", toutes les heures", other: ", toutes les {n} heures"}
 nearby_daily: {one: ", une fois par jour", other: ", {n} fois par jour"}
 search_nearby: "{hub} → {dur} {by}"
+
+# une étape en route (IDEA-21 étape 3, D-69)
+stop_summary: "Faire étape en route …"
+stop_place: "Étape à"
+stop_nights: "Nuits"
+stop_leave: "Repartir à partir de"
+stop_apply: "Afficher le voyage"
+stop_hint: "Calculé dans ton navigateur : le voyage le plus rapide jusqu’à l’étape, les nuits sur place, puis la suite le matin (ou à ton heure) – avec les réglages à l’écran."
+stop_reset: "Supprimer l’étape"
+stop_in: {one: "{n} nuit à {place}", other: "{n} nuits à {place}"}
+chip_stop: "Étape"
+mark_stop: {one: "Étape à {place}, {n} nuit : arrivée {from}, départ {to}", other: "Étape à {place}, {n} nuits : arrivée {from}, départ {to}"}
+stop_note: {one: "Ton étape : {n} nuit à {place} en route vers {dest}.", other: "Ton étape : {n} nuits à {place} en route vers {dest}."}
+stop_working: "Calcul du voyage …"
+stop_no_stop: "{place} n’est pas accessible avec ces réglages."
+stop_no_dest: "{dest} n’est pas accessible depuis {place} avec ces réglages."
+stop_unknown: "Choisis un lieu dans la liste."
+stop_is_dest: "C’est la fin du voyage – choisis un lieu en route."
+cmp_stop: "{dur} de plus que sans étape ({straight})."
+cmp_longer: "{dur} de plus que le voyage de la carte ({map})."
+cmp_shorter: "{dur} de moins que le voyage de la carte ({map})."
+cmp_same: "Aussi rapide que le voyage de la carte ({map})."

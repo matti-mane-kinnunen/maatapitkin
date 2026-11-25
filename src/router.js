@@ -259,6 +259,24 @@ class Router {
     return this._steps(legs);
   }
 
+  /* A stopover of the visitor's own choosing (Router.stopover, IDEA-21 step 3, D-69): fastest
+     origin -> stop, `nights` nights there, then fastest stop -> dest from `leaveAt` (minutes;
+     default the place's morning departure). {steps} or {fail: "stop" | "dest"}. */
+  stopover(origin, stop, dest, start, nights, leaveAt = null) {
+    if (stop === origin || stop === dest) return { fail: "stop" };
+    this.search(origin, start, "fastest");
+    const a = this.journey(stop);
+    if (!a || !a.length) return { fail: "stop" };
+    const arr = a[a.length - 1].arr;
+    const leave = leaveAt != null ? leaveAt : this.morningAt(stop);
+    const t = Math.max((fdiv(arr - this.nightPoint, DAY) + nights) * DAY + leave, arr);
+    this.search(stop, t, "fastest");
+    const b = this.journey(dest);
+    if (!b || !b.length) return { fail: "dest" };
+    const dep = b[0].dep;
+    return { steps: [...a, { kind: "stopover", place: stop, from: arr, to: dep, nights: this.nightsBetween(arr, dep) }, ...b] };
+  }
+
   /* Every journey not beaten on all of arrival, changes and hotel nights (Router.pareto).
      Returns Map place -> [[c, h, t, label id], ...]. */
   pareto(origin, start = 0, horizonDays = 10) {
@@ -354,6 +372,8 @@ function co2(net, legs, origin, dest) {
 const ALTERNATIVES = [["Fewest changes", "changes", (c, h, t) => [c, t, h]],
                       ["Fewest hotel nights", "hotel_nights", (c, h, t) => [h, t, c]]];
 
+const STEP_LETTER = { stay: "s", change: "c", stopover: "o" };
+
 class Journeys {
   constructor(net, origin, opt = {}) {
     this.net = net; this.origin = origin; this.opt = opt;      // opt: minTransfer, avoid, alternatives (Router options)
@@ -373,7 +393,7 @@ class Journeys {
     const shift = utcOffset(net, cap, router.dayOf(arr), mod(arr, DAY))
                 - utcOffset(net, origin, router.dayOf(firstDep), mod(firstDep, DAY));
     const steps = j.map(st => st.kind === "leg" ? ["l", st.leg.idx, st.dep, st.arr]
-                                                : [st.kind[0], st.place, st.from, st.to, st.nights || 0]);
+                                                : [STEP_LETTER[st.kind], st.place, st.from, st.to, st.nights || 0]);
     const r = { capital: cap, depart: firstDep, arrive: arr, door_to_door_min: arr - firstDep - shift,
       arrive_abs: arr - shift, tz_shift: shift,
       changes: j.filter(x => x.kind === "change" || x.kind === "stay").length,
@@ -382,6 +402,8 @@ class Journeys {
       stays: j.filter(x => x.kind === "stay").map(x => x.place),
       has_issue: legs.some(x => !!x.leg.issue),
       ...(co2(net, legs.map(x => x.leg), origin, cap) || {}), steps };
+    const so = j.find(x => x.kind === "stopover");
+    if (so) r.stopover = { place: so.place, nights: so.nights };
     Object.defineProperty(r, "signature", { value: legs.map(x => x.leg.idx + "@" + x.dep).join(","), enumerable: false });
     return r;
   }
@@ -475,6 +497,17 @@ class Journeys {
     routes.sort((a, b) => a.arrive_abs - b.arrive_abs);
     cityRoutes.sort((a, b) => a.arrive_abs - b.arrive_abs);
     return { routes, city_routes: cityRoutes, unreached, unreached_cities: unreachedCities };
+  }
+
+  /* One journey to `dest` with a stopover (IDEA-21 step 3): the route in the page's compact form,
+     or {fail: "stop" | "dest"}. */
+  stopover(nightTrains, date, start, dest, stop, nights, leaveAt = null) {
+    const router = this.router(date, nightTrains);
+    const res = router.stopover(this.origin, stop, dest, start, nights, leaveAt);
+    if (res.fail) return res;
+    const r = this.route(router, dest, res.steps);
+    r.label = "Fastest"; r.capital = dest; r.is_capital = !!(this.net.places[dest] || {}).capital; r.alternatives = [];
+    return r;
   }
 
   /* Journeys with and without night trains for a date and start, as one map variant

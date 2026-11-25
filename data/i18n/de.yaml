@@ -220,3 +220,25 @@ nearby_every: ", alle {n} Min."
 nearby_every_h: {one: ", stündlich", other: ", alle {n} Stunden"}
 nearby_daily: {one: ", einmal täglich", other: ", {n}-mal täglich"}
 search_nearby: "{hub} → {dur} {by}"
+
+# ein Zwischenhalt unterwegs (IDEA-21 Schritt 3, D-69)
+stop_summary: "Zwischenhalt unterwegs …"
+stop_place: "Halt in"
+stop_nights: "Nächte"
+stop_leave: "Weiter ab"
+stop_apply: "Reise zeigen"
+stop_hint: "Wird in deinem Browser berechnet: die schnellste Reise zum Halt, die Nächte dort, dann weiter am Morgen (oder zu deiner Zeit) – mit den Einstellungen auf dem Bildschirm."
+stop_reset: "Zwischenhalt entfernen"
+stop_in: {one: "{n} Nacht in {place}", other: "{n} Nächte in {place}"}
+chip_stop: "Zwischenhalt"
+mark_stop: {one: "Zwischenhalt in {place}, {n} Nacht: Ankunft {from}, Abfahrt {to}", other: "Zwischenhalt in {place}, {n} Nächte: Ankunft {from}, Abfahrt {to}"}
+stop_note: {one: "Dein Zwischenhalt: {n} Nacht in {place} auf dem Weg nach {dest}.", other: "Dein Zwischenhalt: {n} Nächte in {place} auf dem Weg nach {dest}."}
+stop_working: "Reise wird berechnet …"
+stop_no_stop: "{place} ist mit diesen Einstellungen nicht erreichbar."
+stop_no_dest: "{dest} ist von {place} aus mit diesen Einstellungen nicht erreichbar."
+stop_unknown: "Wähle einen Ort aus der Liste."
+stop_is_dest: "Dort endet die Reise – wähle einen Ort unterwegs."
+cmp_stop: "{dur} länger als direkt ({straight})."
+cmp_longer: "{dur} länger als die Reise der Karte ({map})."
+cmp_shorter: "{dur} schneller als die Reise der Karte ({map})."
+cmp_same: "So schnell wie die Reise der Karte ({map})."

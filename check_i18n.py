@@ -27,6 +27,7 @@ for f in ["src/map_template.html", "src/make_map.py", "build.py"]:
 used.discard("key")                                                # the word in comments: {{key}}
 used |= {"weekdays_short", "_locale", "part_morning", "part_afternoon", "part_evening",
          "opt_fastest", "opt_fewest_changes", "opt_fewest_hotels",      # looked up indirectly
+         "stop_no_stop", "stop_no_dest", "cmp_longer", "cmp_shorter", "cmp_same",
          "veh_train", "veh_night_train", "veh_ferry", "veh_night_ferry", "veh_bus", "veh_metro",
          "chip_metro", "chip_ferry", "chip_night_ferry", "co2_no_flight", "co2_less", "co2_same", "co2_more"}
 problems = 0

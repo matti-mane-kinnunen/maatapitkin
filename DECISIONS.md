@@ -75,6 +75,8 @@ add a new one and mark the old one **Superseded by D-xx**.
 | D-65 | Build and check each map in a job of its own | 17.11.2026 | Accepted |
 | D-66 | Keep the network about its present size | 18.11.2026 | Accepted |
 | D-67 | A USA map from Amtrak's and Greyhound's GTFS, as a network of its own | 19.11.2026 | Accepted (live 19.11.2026) |
+| D-68 | Faster buses: an option, off by default | 20.11.2026 | Accepted |
+| D-69 | A stopover on one journey, worked out in the browser | 25.11.2026 | Accepted |
 
 ---
 
@@ -1561,6 +1563,44 @@ Ottawa a day earlier, Washington Wed 00:50 instead of 13:10. The default maps: 5
 origins × 2 starts) identical; Seattle → Madison 6 min faster by a new Milwaukee – Madison bus (a bus-only
 capital, so an ordinary leg). The browser's timetable file grows ~121 → ~170 KB gzipped; the map page does not.
 Next: mark European hand-entered buses (e.g. Tallinn – Riga – Vilnius – Warsaw) with `alternative: true`.
+
+## D-69 A stopover on one journey, worked out in the browser
+**Date:** 25.11.2026 · **Status:** Accepted
+
+**Context.** IDEA-21 step 3: visitors plan Interrail trips with stops ("2 nights in Vienna on the
+way to Rome"). D-62 left stopovers out. Two ways were weighed: a stopover for the whole map (every
+capital routed via the place – odd detours for capitals behind it, Helsinki → Tallinn via Vienna) or
+for the one journey on screen.
+
+**Decision (Matti, 25.11.2026).**
+- *Stop over on the way …* under the itinerary: any place in the network (a search box over all
+  ~200 places, not only the stops of the journey shown), 1–7 nights, and optionally when to go on;
+  then *Show journey*. Only that journey changes; the map and the list stay.
+- The rule (`Router.stopover` in journeys.py and router.js): the fastest journey to the stop with the
+  settings on screen (date, start, change time, no ferries/buses, faster buses, night trains); the
+  stay ends on the morning `nights` nights after arriving – the night counted from `night_point`,
+  so arriving at 00:30 the night under way is the first; then the fastest journey on from the
+  visitor's time, or the stop's morning departure (06:00, Budapest 05:00), boarded as from home.
+  If nothing runs that morning, the wait just gets longer (the stopover shows the real number of
+  nights). No alternatives (fewest changes / hotel nights) for a stopover journey.
+- In the timetable a stopover row ("2 nights in Vienna", chip *Stopover*), the city text, a hotel
+  mark on the map, a calendar entry; not counted as a change or a hotel night.
+- A line above the itinerary compares: a stopover with going straight on the same settings
+  ("45 h 40 longer than going straight (17 h 29)"); own settings (D-62) with the map's own journey
+  of the same weekday ("7 h 12 longer than the map's journey"). The "+X h" line of the handover.
+- The link keeps it: `#rome/via-vienna/n2/l0900` (place, nights, leaving time if not the morning),
+  also after own settings (`#rome/2026-12-03/0900/via-vienna/n1`).
+
+**Why.** One journey keeps the map honest (D-37: encourage, don't plan) and needs no new map
+variant; the visitor asks a question about a trip they already have in mind. Any place, not only the
+journey's stops, because a stopover often is the reason to go another way (Rome via Vienna, not via
+Munich). Both routers carry the rule, so the shared cases (tests/router_cases.yaml, 8 new) keep
+them together, although only the browser uses it.
+
+**Consequences.** tests/check_pages.py stops over one night at the middle stop of a journey and checks
+the row, the compare line, the link and *Remove the stopover*. 20 new texts × 7 languages
+(Claude's translations, native check still open) and a guide bullet per language. Possible later: two
+or more stopovers, a stopover for the whole map.
 
 ---
 

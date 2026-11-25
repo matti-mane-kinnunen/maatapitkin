@@ -141,6 +141,42 @@ def check_own(page) -> list[str]:
     return out
 
 
+def check_stop(page) -> list[str]:
+    """A stopover (IDEA-21 step 3): on the journey on screen, one night at its middle stop. The
+    stopover row, the note, the "+X h" line and the link must appear; removing it brings the
+    map's journey back."""
+    if page.query_selector("#stop") is None:
+        return []
+    out = []
+    page.evaluate("() => { const r = routeOf(Object.keys(buttons).find(c => routeOf(c) && routeOf(c).steps.filter(s => s.kind === 'leg').length > 2)); select(r.capital, 0); }")
+    cap, stop = page.evaluate("() => { const l = curRoute.steps.filter(s => s.kind === 'leg'); return [curRoute.capital, l[Math.floor(l.length / 2)].from]; }")
+    page.evaluate("() => { document.getElementById('stop').open = true; }")
+    page.fill("#stop-place", page.evaluate("n => LN(n)", stop))
+    page.select_option("#stop-nights", "1")
+    page.click("#stop-go")
+    what = f"stopover ({stop} on the way to {cap})"
+    try:
+        page.wait_for_selector("#stop-note:not([hidden])", timeout=60000)
+    except Exception:  # noqa: BLE001
+        return [f"{what}: nothing after 60 s - {page.inner_text('#stop-status')!r}"]
+    text = page.inner_text(".itin")
+    if not page.query_selector("#steps li.stopover"):
+        out.append(f"{what}: no stopover row in the timetable")
+    if page.is_hidden("#cmp"):
+        out.append(f"{what}: no line comparing it with going straight")
+    for bad in ("undefined", "NaN", "[object"):
+        if bad in text:
+            out.append(f"{what}: the timetable shows '{bad}'")
+    link = page.evaluate("() => location.hash")
+    if "/via-" not in link or "/n1" not in link:
+        out.append(f"{what}: link {link!r} does not keep it")
+    page.click("#stop-reset")
+    page.wait_for_timeout(200)
+    if page.is_visible("#stop-note") or page.query_selector("#steps li.stopover"):
+        out.append(f"{what}: 'remove the stopover' left it on screen")
+    return out
+
+
 def check_page(browser, path: Path) -> tuple[list[str], str]:
     problems: list[str] = []
     ctx = browser.new_context(viewport={"width": 1440, "height": 1000}, locale="en-GB")
@@ -178,6 +214,7 @@ def check_page(browser, path: Path) -> tuple[list[str], str]:
             problems.append(f"control '{what}': {str(e).splitlines()[0]}")
     page.fill("#q", "zzzz")
     page.fill("#q", "")
+    problems += check_stop(page)
     problems += check_own(page)
     problems += [f"JavaScript error: {e}" for e in dict.fromkeys(errors)]
     ctx.close()

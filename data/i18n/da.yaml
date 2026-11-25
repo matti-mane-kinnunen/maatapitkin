@@ -220,3 +220,25 @@ nearby_every: ", hvert {n}. minut"
 nearby_every_h: {one: ", hver time", other: ", hver {n}. time"}
 nearby_daily: {one: ", én gang om dagen", other: ", {n} gange om dagen"}
 search_nearby: "{hub} → {dur} {by}"
+
+# et ophold på vejen (IDEA-21 trin 3, D-69)
+stop_summary: "Ophold på vejen …"
+stop_place: "Stop i"
+stop_nights: "Nætter"
+stop_leave: "Videre fra"
+stop_apply: "Vis rejsen"
+stop_hint: "Regnes ud i din browser: hurtigste rejse til opholdet, nætterne der, så videre om morgenen (eller din egen tid) – med indstillingerne på skærmen."
+stop_reset: "Fjern opholdet"
+stop_in: {one: "{n} nat i {place}", other: "{n} nætter i {place}"}
+chip_stop: "Ophold"
+mark_stop: {one: "Ophold i {place}, {n} nat: ankomst {from}, afgang {to}", other: "Ophold i {place}, {n} nætter: ankomst {from}, afgang {to}"}
+stop_note: {one: "Dit ophold: {n} nat i {place} på vej til {dest}.", other: "Dit ophold: {n} nætter i {place} på vej til {dest}."}
+stop_working: "Regner rejsen ud …"
+stop_no_stop: "{place} kan ikke nås med disse indstillinger."
+stop_no_dest: "{dest} kan ikke nås fra {place} med disse indstillinger."
+stop_unknown: "Vælg et sted på listen."
+stop_is_dest: "Der slutter rejsen – vælg et sted på vejen."
+cmp_stop: "{dur} længere end direkte ({straight})."
+cmp_longer: "{dur} længere end kortets rejse ({map})."
+cmp_shorter: "{dur} hurtigere end kortets rejse ({map})."
+cmp_same: "Lige så hurtig som kortets rejse ({map})."
